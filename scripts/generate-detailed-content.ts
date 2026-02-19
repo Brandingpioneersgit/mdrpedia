@@ -7,7 +7,7 @@ import { glob } from 'glob';
 // dotenv.config();
 
 const DOCTORS_DIR = path.join(process.cwd(), 'src/content/doctors');
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 
 // Rate limiting and state tracking
 const STATUS_FILE = path.join(process.cwd(), 'generation_status.json');
@@ -24,10 +24,13 @@ async function loadStatus() {
 }
 
 async function generateBio(doctor: any): Promise<string | null> {
-    if (!OPENAI_API_KEY) {
-        console.error('MISSING_KEY: No OpenAI API Key found.');
+    if (!OPENROUTER_API_KEY) {
+        console.error('MISSING_KEY: No OpenRouter API Key found.');
         return null;
     }
+
+    // Using a powerful free model from OpenRouter
+    const MODEL = "google/gemini-2.0-flash-lite-preview-02-05:free";
 
     const prompt = `
     You are an expert medical biographer. Write a comprehensive, 1500-word biography for Dr. ${doctor.fullName}.
@@ -40,34 +43,37 @@ async function generateBio(doctor: any): Promise<string | null> {
     - Known for: ${doctor.bio || 'General medical excellence'}
     
     Structure the biography with the following markdown H2 sections:
-    1. **Early Life and Education**: Academic background, early influences.
-    2. **Medical Philosophy**: Approach to patient care.
-    3. **Key Procedures & Expertise**: Technical skills (${doctor.specialty} focus).
-    4. **Research & Contributions**: Any academic work (infer common practices for this tier if specific data missing).
-    5. **Patient Impact**: Testimonials style or general impact on the community.
-    6. **Legacy**: Summary of their career standing.
+    1. **Early Life and Education**: Academic background, early influences, and medical training.
+    2. **Medical Philosophy**: Their approach to patient care, innovative thinking, and practice ethics.
+    3. **Key Procedures & Clinical Expertise**: Detailed exploration of their technical skills and specialization in ${doctor.specialty}.
+    4. **Academic Contributions & Research**: Key publications, research focus areas, and impact on medical science.
+    5. **Patient Impact & Community Work**: Notable achievements in patient outcomes and social/community contributions.
+    6. **Legacy and Future Outlook**: Overall standing in the medical community and their lasting influence.
 
-    Tone: Professional, authoritative, yet accessible to patients. 
+    Tone: Professional, authoritative, yet accessible. Avoid generic AI fluff; focus on factual-sounding clinical and academic depth.
     Format: Markdown.
-    Length: Approximately 1000-1500 words.
+    Length: Aim for 1200-1500 words. Expand deeply on each section.
     `;
 
     try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENAI_API_KEY}`
+                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+                'HTTP-Referer': 'https://mdrpedia.com', // Optional, for OpenRouter tracking
+                'X-Title': 'MDRPedia Content Generator'
             },
             body: JSON.stringify({
-                model: 'gpt-4o', // or gpt-4-turbo
+                model: MODEL,
                 messages: [{ role: 'user', content: prompt }],
                 temperature: 0.7,
             })
         });
 
         if (!response.ok) {
-            console.error(`API Error: ${response.statusText}`);
+            const error = await response.text();
+            console.error(`API Error (${response.status}): ${error}`);
             return null;
         }
 
@@ -81,41 +87,43 @@ async function generateBio(doctor: any): Promise<string | null> {
 }
 
 async function main() {
-    console.log('Starting detailed content generation...');
+    console.log('--- STARTING DETAILED CONTENT GENERATION (OPENROUTER) ---');
 
-    if (!OPENAI_API_KEY) {
-        console.log('⚠️  NO OPENAI API KEY DETECTED. SKIPPING GENERATION.');
+    if (!OPENROUTER_API_KEY) {
+        console.log('⚠️  NO OPENROUTER API KEY DETECTED. SKIPPING GENERATION.');
         return;
     }
 
     const files = await glob(`${DOCTORS_DIR}/*.json`);
     const status = await loadStatus();
 
-    // Process in chunks to avoid rate limits
+    console.log(`Found ${files.length} profiles. Checking priority...`);
+
     let count = 0;
     for (const file of files) {
         if (status.processed.includes(file)) {
             continue;
         }
 
-        const content = JSON.parse(fs.readFileSync(file, 'utf-8'));
+        const rawData = fs.readFileSync(file, 'utf-8');
+        const content = JSON.parse(rawData);
 
-        // Skip if already has long bio (simple heuristic: length > 2000 chars)
-        if (content.bio && content.bio.length > 2000) {
-            console.log(`Skipping ${content.fullName} (already detailed)`);
+        // Skip if already has long bio (length > 4000 chars for ~1000+ words)
+        if (content.bio && content.bio.length > 4000) {
+            console.log(`Skipping ${content.fullName} (already has long bio)`);
             status.processed.push(file);
             await saveStatus(status);
             continue;
         }
 
-        console.log(`Generating bio for ${content.fullName}...`);
+        console.log(`[${count + 1}] Generating bio for ${content.fullName}...`);
         const longBio = await generateBio(content);
 
         if (longBio) {
             content.bio = longBio;
             content.bioGenerated = true;
             fs.writeFileSync(file, JSON.stringify(content, null, 2));
-            console.log(`✅ Updated ${content.fullName}`);
+            console.log(`✅ Updated ${content.fullName} (${longBio.length} chars)`);
             status.processed.push(file);
         } else {
             console.log(`❌ Failed to generate for ${content.fullName}`);
@@ -124,14 +132,13 @@ async function main() {
 
         await saveStatus(status);
 
-        // Polite delay
-        await new Promise(r => setTimeout(r, 1000));
+        // Polite delay for rate limits on free models
+        await new Promise(r => setTimeout(r, 2000));
 
         count++;
-        // Optional: break after N runs if needed
     }
 
-    console.log('Generation pass complete.');
+    console.log('--- GENERATION PASS COMPLETE ---');
 }
 
 main();
