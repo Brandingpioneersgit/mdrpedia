@@ -4,6 +4,7 @@
  * Wraps all pages with global styles, meta, and navigation
  */
 import "../styles/global.css";
+import GlobalSearchModal from "../components/GlobalSearchModal";
 
 interface Props {
 	title: string;
@@ -32,6 +33,17 @@ const canonicalURL = new URL(
 		<meta name="description" content={description} />
 		<meta name="robots" content="index, follow" />
 
+		<!-- Performance: Preconnect to critical third-party origins -->
+		<link rel="preconnect" href="https://logo.clearbit.com" />
+		<link rel="preconnect" href="https://orcid.org" />
+		<link rel="preconnect" href="https://doi.org" />
+		<link rel="dns-prefetch" href="https://pubmed.ncbi.nlm.nih.gov" />
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+		<!-- Prefetch critical pages for instant navigation -->
+		<link rel="prefetch" href="/doctors" />
+		<link rel="prefetch" href="/rankings" />
+
 		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
@@ -48,6 +60,15 @@ const canonicalURL = new URL(
 
 		<link rel="canonical" href={canonicalURL.href} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- PWA Support -->
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#8b5cf6" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="MDRPedia" />
+		<link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
 		<title>{title}</title>
 	</head>
 	<body class={tier === "TITAN" ? "titan-theme" : ""}>
@@ -76,10 +97,18 @@ const canonicalURL = new URL(
 					<div class="site-nav__links">
 						<a href="/doctors" class="nav-link">Browse</a>
 						<a href="/rankings" class="nav-link">Rankings</a>
+						<a href="/rare-diseases" class="nav-link">Rare Diseases</a>
 						<a href="/hospitals" class="nav-link">Hospitals</a>
 						<a href="/prizes" class="nav-link">Awards</a>
-						<a href="/communities" class="nav-link">Communities</a>
 						<a href="/news" class="nav-link">News</a>
+						<button id="search-trigger" class="nav-search-btn" title="Search (⌘K)">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<circle cx="11" cy="11" r="8"></circle>
+								<path d="m21 21-4.3-4.3"></path>
+							</svg>
+							<span class="nav-search-text">Search</span>
+							<kbd class="nav-search-kbd">⌘K</kbd>
+						</button>
 						<a href="/doctor/claim" class="nav-link nav-link--cta"
 							>Claim Profile</a
 						>
@@ -126,6 +155,7 @@ const canonicalURL = new URL(
 						<a href="/about">About Us</a>
 						<a href="/rankings">Rankings</a>
 						<a href="/doctors">Browse Doctors</a>
+						<a href="/rare-diseases">Rare Diseases</a>
 						<a href="/communities">Communities</a>
 					</div>
 
@@ -156,6 +186,35 @@ const canonicalURL = new URL(
 				</div>
 			</div>
 		</footer>
+
+		<!-- Global Search Modal -->
+		<GlobalSearchModal client:load />
+
+		<!-- Service Worker Registration -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('/sw.js')
+						.then(reg => console.log('SW registered:', reg.scope))
+						.catch(err => console.log('SW registration failed:', err));
+				});
+			}
+		</script>
+
+		<!-- Search Trigger Script -->
+		<script>
+			document.getElementById('search-trigger')?.addEventListener('click', () => {
+				// Simulate Cmd+K keypress to open search modal
+				const event = new KeyboardEvent('keydown', {
+					key: 'k',
+					code: 'KeyK',
+					metaKey: true,
+					ctrlKey: false,
+					bubbles: true
+				});
+				document.dispatchEvent(event);
+			});
+		</script>
 	</body>
 </html>
 
@@ -217,6 +276,51 @@ const canonicalURL = new URL(
 	}
 	.nav-link--cta:hover {
 		color: var(--accent-purple-light, #a78bfa);
+	}
+
+	/* Search Button */
+	.nav-search-btn {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 6px 12px;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 8px;
+		color: var(--text-muted);
+		font-size: 0.85rem;
+		cursor: pointer;
+		transition: all 0.15s;
+	}
+
+	.nav-search-btn:hover {
+		background: rgba(255, 255, 255, 0.08);
+		border-color: rgba(255, 255, 255, 0.2);
+		color: var(--text-primary);
+	}
+
+	.nav-search-text {
+		display: none;
+	}
+
+	.nav-search-kbd {
+		display: none;
+		padding: 2px 6px;
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 4px;
+		font-size: 0.7rem;
+		font-family: inherit;
+		color: var(--text-muted);
+	}
+
+	@media (min-width: 768px) {
+		.nav-search-text {
+			display: inline;
+		}
+		.nav-search-kbd {
+			display: inline;
+		}
 	}
 
 	.site-footer {

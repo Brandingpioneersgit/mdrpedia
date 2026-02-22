@@ -1,0 +1,1204 @@
+---
+/**
+ * MDRPedia — Admin Institutions Management
+ * Manage hospitals and medical institutions
+ */
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { prisma } from "../../lib/prisma";
+import { requireSuperAdmin } from "../../lib/rbac";
+
+export const prerender = false;
+
+if (!import.meta.env.ADMIN_ACCESS_KEY) {
+    return new Response("ADMIN_ACCESS_KEY not configured", { status: 500 });
+}
+
+if (!requireSuperAdmin(Astro.request)) {
+    return Astro.redirect("/login");
+}
+
+const url = new URL(Astro.request.url);
+const adminKey = url.searchParams.get("key") || "";
+
+// Fetch doctors to aggregate institution data
+const doctors = await getCollection("doctors");
+
+// Aggregate institutions from doctor affiliations
+interface InstitutionData {
+    name: string;
+    slug: string;
+    doctorCount: number;
+    titanCount: number;
+    eliteCount: number;
+    countries: Set<string>;
+    specialties: Set<string>;
+}
+
+const institutionMap = new Map<string, InstitutionData>();
+
+doctors.forEach((doc) => {
+    const d = doc.data;
+    if (d.affiliations && d.affiliations.length > 0) {
+        d.affiliations.forEach((aff) => {
+            const name = aff.hospitalName.trim();
+            const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+            if (!institutionMap.has(slug)) {
+                institutionMap.set(slug, {
+                    name,
+                    slug,
+                    doctorCount: 0,
+                    titanCount: 0,
+                    eliteCount: 0,
+                    countries: new Set(),
+                    specialties: new Set(),
+                });
+            }
+
+            const inst = institutionMap.get(slug)!;
+            inst.doctorCount++;
+            if (d.tier === 'TITAN') inst.titanCount++;
+            else if (d.tier === 'ELITE') inst.eliteCount++;
+            if (d.geography?.country) inst.countries.add(d.geography.country);
+            if (d.specialty) inst.specialties.add(d.specialty);
+        });
+    }
+});
+
+const institutions = Array.from(institutionMap.values())
+    .sort((a, b) => b.titanCount - a.titanCount || b.doctorCount - a.doctorCount);
+
+// Get unique countries
+const allCountries = [...new Set(institutions.flatMap(i => [...i.countries]))].sort();
+
+// Fetch hospitals from database
+let dbHospitals: any[] = [];
+try {
+    dbHospitals = await prisma.hospital.findMany({
+        include: {
+            geography: true,
+            _count: {
+                select: { affiliations: true }
+            }
+        },
+        orderBy: { name: 'asc' }
+    });
+} catch (e) {
+    // Table may not exist or be empty
+}
+
+// Stats
+const stats = {
+    total: institutions.length,
+    inDatabase: dbHospitals.length,
+    withTitans: institutions.filter(i => i.titanCount > 0).length,
+    countries: allCountries.length,
+};
+---
+
+<Layout title="Institutions Management — MDRPedia Admin">
+    <div class="admin-page">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <a href={`/admin?key=${adminKey}`}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path>
+                    </svg>
+                    MDRPedia
+                </a>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href={`/admin?key=${adminKey}`} class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href={`/admin/doctors?key=${adminKey}`} class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Doctors
+                </a>
+                <a href={`/admin/news?key=${adminKey}`} class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path>
+                    </svg>
+                    News
+                </a>
+                <a href={`/admin/institutions?key=${adminKey}`} class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    Institutions
+                </a>
+                <a href={`/admin/edits?key=${adminKey}`} class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Pending Edits
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="page-header">
+                <div class="header-info">
+                    <h1>Institutions Management</h1>
+                    <p>Manage hospitals and medical centers</p>
+                </div>
+                <div class="header-actions">
+                    <button id="syncInstitutionsBtn" class="btn btn--outline">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M23 4v6h-6M1 20v-6h6"></path>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Sync to Database
+                    </button>
+                    <button id="addInstitutionBtn" class="btn btn--primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Add Institution
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <span class="stat-value">{stats.total}</span>
+                    <span class="stat-label">From Affiliations</span>
+                </div>
+                <div class="stat-card stat-info">
+                    <span class="stat-value">{stats.inDatabase}</span>
+                    <span class="stat-label">In Database</span>
+                </div>
+                <div class="stat-card stat-success">
+                    <span class="stat-value">{stats.withTitans}</span>
+                    <span class="stat-label">With TITANs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">{stats.countries}</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="aggregated">From Affiliations</button>
+                <button class="tab-btn" data-tab="database">Database Records</button>
+            </div>
+
+            <!-- Aggregated Institutions Tab -->
+            <div class="tab-content active" id="aggregated-tab">
+                <div class="filter-bar">
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="searchInstitutions" placeholder="Search institutions..." />
+                    </div>
+                    <select id="countryFilter">
+                        <option value="">All Countries</option>
+                        {allCountries.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table" id="institutionsTable">
+                        <thead>
+                            <tr>
+                                <th>Institution</th>
+                                <th>Doctors</th>
+                                <th>TITANs</th>
+                                <th>ELITEs</th>
+                                <th>Countries</th>
+                                <th>Specialties</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {institutions.map(inst => (
+                                <tr data-name={inst.name.toLowerCase()} data-countries={[...inst.countries].join(',').toLowerCase()}>
+                                    <td class="cell-institution">
+                                        <div class="institution-name">{inst.name}</div>
+                                        <div class="institution-slug">{inst.slug}</div>
+                                    </td>
+                                    <td class="cell-mono">{inst.doctorCount}</td>
+                                    <td>
+                                        {inst.titanCount > 0 ? (
+                                            <span class="count-badge count-titan">{inst.titanCount}</span>
+                                        ) : (
+                                            <span class="count-muted">0</span>
+                                        )}
+                                    </td>
+                                    <td>
+                                        {inst.eliteCount > 0 ? (
+                                            <span class="count-badge count-elite">{inst.eliteCount}</span>
+                                        ) : (
+                                            <span class="count-muted">0</span>
+                                        )}
+                                    </td>
+                                    <td>
+                                        <div class="country-tags">
+                                            {[...inst.countries].slice(0, 2).map(c => (
+                                                <span class="country-tag">{c}</span>
+                                            ))}
+                                            {inst.countries.size > 2 && (
+                                                <span class="country-tag more">+{inst.countries.size - 2}</span>
+                                            )}
+                                        </div>
+                                    </td>
+                                    <td class="cell-mono">{inst.specialties.size}</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href={`/hospitals#${inst.slug}`} target="_blank" class="btn-icon" title="View">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                    <circle cx="12" cy="12" r="3"></circle>
+                                                </svg>
+                                            </a>
+                                            <button class="btn-icon edit-institution" data-name={inst.name} data-slug={inst.slug} title="Edit">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon add-to-db" data-name={inst.name} data-slug={inst.slug} title="Add to Database">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Database Records Tab -->
+            <div class="tab-content" id="database-tab">
+                {dbHospitals.length > 0 ? (
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Institution</th>
+                                    <th>Sector</th>
+                                    <th>Location</th>
+                                    <th>Affiliations</th>
+                                    <th>Website</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {dbHospitals.map(hospital => (
+                                    <tr>
+                                        <td class="cell-institution">
+                                            <div class="institution-name">{hospital.name}</div>
+                                            <div class="institution-slug">{hospital.slug}</div>
+                                        </td>
+                                        <td>
+                                            <span class={`sector-badge sector-${hospital.sector.toLowerCase()}`}>
+                                                {hospital.sector}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            {hospital.geography ? (
+                                                <span>{hospital.geography.city}, {hospital.geography.country}</span>
+                                            ) : (
+                                                <span class="text-muted">—</span>
+                                            )}
+                                        </td>
+                                        <td class="cell-mono">{hospital._count.affiliations}</td>
+                                        <td>
+                                            {hospital.website ? (
+                                                <a href={hospital.website} target="_blank" class="link-external">
+                                                    Visit
+                                                </a>
+                                            ) : (
+                                                <span class="text-muted">—</span>
+                                            )}
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-icon edit-db-institution" data-id={hospital.id} title="Edit">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                    </svg>
+                                                </button>
+                                                <button class="btn-icon btn-icon--danger delete-institution" data-id={hospital.id} title="Delete">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : (
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                        <h3>No institutions in database</h3>
+                        <p>Sync institutions from affiliations or add them manually.</p>
+                        <button id="syncEmptyBtn" class="btn btn--primary">Sync Now</button>
+                    </div>
+                )}
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Institution Modal -->
+    <div class="modal" id="institutionModal" hidden>
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Institution</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="institutionForm">
+                    <input type="hidden" name="id" id="institutionId" />
+
+                    <div class="form-group">
+                        <label for="institutionName">Name *</label>
+                        <input type="text" id="institutionName" name="name" required placeholder="Institution name" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="institutionSector">Sector</label>
+                            <select id="institutionSector" name="sector">
+                                <option value="PUBLIC">Public</option>
+                                <option value="PRIVATE">Private</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="institutionRanking">Ranking Position</label>
+                            <input type="number" id="institutionRanking" name="ranking_position" placeholder="e.g., 1" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="institutionCountry">Country *</label>
+                            <input type="text" id="institutionCountry" name="country" required placeholder="Country" />
+                        </div>
+                        <div class="form-group">
+                            <label for="institutionCity">City</label>
+                            <input type="text" id="institutionCity" name="city" placeholder="City" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institutionWebsite">Website</label>
+                        <input type="url" id="institutionWebsite" name="website" placeholder="https://..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institutionDescription">Description</label>
+                        <textarea id="institutionDescription" name="description" rows="3" placeholder="Brief description..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institutionExcellence">Center of Excellence</label>
+                        <input type="text" id="institutionExcellence" name="center_of_excellence" placeholder="e.g., Cardiology, Oncology" />
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" onclick="document.getElementById('institutionModal').hidden = true">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn--primary">
+                            Save Institution
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script define:vars={{ adminKey }}>
+    const modal = document.getElementById('institutionModal');
+    const form = document.getElementById('institutionForm');
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(`${btn.dataset.tab}-tab`)?.classList.add('active');
+        });
+    });
+
+    // Add institution modal
+    document.getElementById('addInstitutionBtn')?.addEventListener('click', () => {
+        document.getElementById('modalTitle').textContent = 'Add Institution';
+        form.reset();
+        document.getElementById('institutionId').value = '';
+        modal.hidden = false;
+    });
+
+    // Close modal
+    modal?.querySelector('.modal-backdrop')?.addEventListener('click', () => {
+        modal.hidden = true;
+    });
+
+    modal?.querySelector('.modal-close')?.addEventListener('click', () => {
+        modal.hidden = true;
+    });
+
+    // Edit institution
+    document.querySelectorAll('.edit-institution').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.getElementById('modalTitle').textContent = 'Edit Institution';
+            document.getElementById('institutionName').value = btn.dataset.name;
+            modal.hidden = false;
+        });
+    });
+
+    // Add to database
+    document.querySelectorAll('.add-to-db').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const name = btn.dataset.name;
+            const slug = btn.dataset.slug;
+
+            if (!confirm(`Add "${name}" to the database?`)) return;
+
+            try {
+                const res = await fetch(`/api/admin/institutions?key=${adminKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, slug })
+                });
+
+                if (res.ok) {
+                    alert('Institution added to database!');
+                    location.reload();
+                } else {
+                    const err = await res.json();
+                    alert(err.message || 'Failed to add institution');
+                }
+            } catch (err) {
+                alert('Error adding institution');
+            }
+        });
+    });
+
+    // Submit form
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        try {
+            const res = await fetch(`/api/admin/institutions?key=${adminKey}`, {
+                method: data.id ? 'PUT' : 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (res.ok) {
+                alert('Institution saved!');
+                location.reload();
+            } else {
+                const err = await res.json();
+                alert(err.message || 'Failed to save');
+            }
+        } catch (err) {
+            alert('Error saving institution');
+        }
+    });
+
+    // Search and filter
+    const searchInput = document.getElementById('searchInstitutions');
+    const countryFilter = document.getElementById('countryFilter');
+
+    function filterInstitutions() {
+        const search = searchInput?.value.toLowerCase() || '';
+        const country = countryFilter?.value.toLowerCase() || '';
+
+        document.querySelectorAll('#institutionsTable tbody tr').forEach(row => {
+            const name = row.dataset.name || '';
+            const countries = row.dataset.countries || '';
+
+            let show = true;
+            if (search && !name.includes(search)) show = false;
+            if (country && !countries.includes(country)) show = false;
+
+            row.style.display = show ? '' : 'none';
+        });
+    }
+
+    searchInput?.addEventListener('input', filterInstitutions);
+    countryFilter?.addEventListener('change', filterInstitutions);
+
+    // Sync institutions
+    document.getElementById('syncInstitutionsBtn')?.addEventListener('click', async () => {
+        if (!confirm('Sync all institutions from affiliations to database?')) return;
+
+        try {
+            const res = await fetch(`/api/admin/sync-institutions?key=${adminKey}`, {
+                method: 'POST'
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                alert(`Synced ${data.count} institutions!`);
+                location.reload();
+            } else {
+                alert('Sync failed');
+            }
+        } catch (err) {
+            alert('Error syncing');
+        }
+    });
+
+    document.getElementById('syncEmptyBtn')?.addEventListener('click', () => {
+        document.getElementById('syncInstitutionsBtn')?.click();
+    });
+
+    // Delete institution
+    document.querySelectorAll('.delete-institution').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            if (!confirm('Delete this institution?')) return;
+
+            try {
+                const res = await fetch(`/api/admin/institutions?key=${adminKey}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: btn.dataset.id })
+                });
+
+                if (res.ok) {
+                    btn.closest('tr')?.remove();
+                } else {
+                    alert('Delete failed');
+                }
+            } catch (err) {
+                alert('Error deleting');
+            }
+        });
+    });
+</script>
+
+<style>
+    .admin-page {
+        display: flex;
+        min-height: 100vh;
+        background: var(--bg-primary);
+    }
+
+    .admin-sidebar {
+        width: 240px;
+        background: rgba(15, 15, 25, 0.95);
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        margin-bottom: 16px;
+    }
+
+    .sidebar-brand a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .sidebar-brand svg {
+        width: 24px;
+        height: 24px;
+        color: var(--accent-purple);
+    }
+
+    .admin-badge {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.15s;
+    }
+
+    .nav-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+    }
+
+    .nav-link.active {
+        background: rgba(139, 92, 246, 0.15);
+        color: var(--accent-purple);
+    }
+
+    .admin-main {
+        flex: 1;
+        margin-left: 240px;
+        padding: 24px 32px;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .header-info h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 4px;
+    }
+
+    .header-info p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 12px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .btn--primary {
+        background: linear-gradient(135deg, var(--accent-purple), #7c3aed);
+        color: white;
+    }
+
+    .btn--outline {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-secondary);
+    }
+
+    .stats-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: white;
+        font-family: var(--font-mono);
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .stat-info .stat-value { color: var(--accent-blue); }
+    .stat-success .stat-value { color: #22c55e; }
+
+    .tabs {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 24px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 4px;
+        border-radius: 10px;
+        width: fit-content;
+    }
+
+    .tab-btn {
+        padding: 10px 20px;
+        border: none;
+        background: transparent;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.15s;
+    }
+
+    .tab-btn:hover {
+        color: white;
+    }
+
+    .tab-btn.active {
+        background: rgba(139, 92, 246, 0.15);
+        color: var(--accent-purple);
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .filter-bar {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        flex: 1;
+        max-width: 400px;
+        position: relative;
+    }
+
+    .search-box svg {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        color: var(--text-muted);
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 12px 14px 12px 44px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .filter-bar select {
+        padding: 12px 36px 12px 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: white;
+        font-size: 0.9rem;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+    }
+
+    .table-wrapper {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .data-table th {
+        text-align: left;
+        padding: 14px 16px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .data-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        vertical-align: middle;
+    }
+
+    .cell-institution {
+        min-width: 240px;
+    }
+
+    .institution-name {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 2px;
+    }
+
+    .institution-slug {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+    }
+
+    .cell-mono {
+        font-family: var(--font-mono);
+        color: var(--text-secondary);
+    }
+
+    .count-badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+    }
+
+    .count-titan {
+        background: rgba(255, 215, 0, 0.12);
+        color: #FFD700;
+    }
+
+    .count-elite {
+        background: rgba(0, 170, 255, 0.12);
+        color: #00aaff;
+    }
+
+    .count-muted {
+        color: var(--text-muted);
+    }
+
+    .country-tags {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .country-tag {
+        padding: 2px 8px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 4px;
+        font-size: 0.7rem;
+        color: var(--accent-blue);
+    }
+
+    .country-tag.more {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-muted);
+    }
+
+    .sector-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .sector-public {
+        background: rgba(34, 197, 94, 0.12);
+        color: #22c55e;
+    }
+
+    .sector-private {
+        background: rgba(139, 92, 246, 0.12);
+        color: var(--accent-purple);
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.15s;
+    }
+
+    .btn-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .btn-icon:hover {
+        background: rgba(139, 92, 246, 0.15);
+        border-color: rgba(139, 92, 246, 0.3);
+        color: var(--accent-purple);
+    }
+
+    .btn-icon--danger:hover {
+        background: rgba(239, 68, 68, 0.15);
+        border-color: rgba(239, 68, 68, 0.3);
+        color: #ef4444;
+    }
+
+    .link-external {
+        color: var(--accent-blue);
+        font-size: 0.85rem;
+    }
+
+    .text-muted {
+        color: var(--text-muted);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: var(--text-muted);
+    }
+
+    .empty-state svg {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+
+    .empty-state h3 {
+        font-size: 1.25rem;
+        color: white;
+        margin-bottom: 8px;
+    }
+
+    .empty-state p {
+        margin-bottom: 24px;
+    }
+
+    /* Modal */
+    .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal:not([hidden]) {
+        display: flex;
+    }
+
+    .modal-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 560px;
+        max-height: 90vh;
+        background: var(--bg-card);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .modal-header h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .modal-close {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 14px;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: white;
+        font-size: 0.9rem;
+        font-family: inherit;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    @media (max-width: 1024px) {
+        .admin-sidebar {
+            display: none;
+        }
+
+        .admin-main {
+            margin-left: 0;
+        }
+
+        .stats-cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .admin-main {
+            padding: 16px;
+        }
+
+        .page-header {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .filter-bar {
+            flex-direction: column;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .data-table {
+            min-width: 700px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

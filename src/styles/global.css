@@ -84,6 +84,12 @@
   /* Layout */
   --max-width: 1200px;
   --sidebar-width: 320px;
+
+  /* Premium Medical Tokens */
+  --premium-hero-min-height: 500px;
+  --trust-verified: #10b981;
+  --trust-verified-bg: rgba(16, 185, 129, 0.1);
+  --shadow-premium-titan: 0 0 60px rgba(255, 215, 0, 0.15);
 }
 
 /* ─── Reset & Base ───────────────────────────────────────────────────────── */

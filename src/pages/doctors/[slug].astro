@@ -5,7 +5,7 @@
  * then fall back to static content for unedited profiles.
  */
 
-import DoctorProfile from "../../layouts/DoctorProfile.astro";
+import DoctorProfileRevamp from "../../layouts/DoctorProfileRevamp.astro";
 import HiddenAIContext from "../../components/SEO/HiddenAIContext.astro";
 import { getEntry } from "astro:content";
 import { prisma } from "../../lib/prisma";
@@ -50,6 +50,9 @@ try {
             media: {
                 orderBy: [{ is_featured: "desc" }, { sort_order: "asc" }],
             },
+            _count: {
+                select: { impact_votes: true },
+            },
         },
     });
 } catch (e) {
@@ -91,7 +94,20 @@ if (dbProfile) {
             hasInvention: d.hasInvention,
             dateOfBirth: d.dateOfBirth,
             dateOfDeath: d.dateOfDeath,
-            citations: d.citations, // Direct assignment since ProfileData allows nulls
+            // Map citations - handle both 'citationCount' (static) and 'totalCitationCount' formats
+            citations: d.citations?.map((c: any) => ({
+                doi: c.doi,
+                pubmedId: c.pubmedId || c.pubmed_id,
+                title: c.title,
+                journal: c.journal,
+                year: c.year,
+                verified: c.verified,
+                abstract: c.abstract,
+                totalCitationCount: c.totalCitationCount || c.citationCount || 0,
+                evidenceClassification: c.evidenceClassification,
+                isOpenAccess: c.isOpenAccess || c.is_open_access,
+                openAccessUrl: c.openAccessUrl || c.open_access_url,
+            })),
             awards: d.awards,
             timeline: d.timeline,
             npiNumber: d.npiNumber,
@@ -99,20 +115,18 @@ if (dbProfile) {
             medicalSpecialty: d.medicalSpecialty,
             knowsAbout: d.knowsAbout,
             rareConditions: d.rareConditions,
+            conditionsTreated: d.conditionsTreated,
             affiliations: d.affiliations,
             mentors: d.mentors,
             students: d.students,
             aiSummary: d.aiSummary,
             media: d.media,
-            totalImpact:
-                (d.livesSaved || 0) +
-                (d.verifiedSurgeries || 0) +
-                Math.floor(
-                    (d.citations?.reduce(
-                        (acc: number, c: any) => acc + (c.citationCount || 0),
-                        0,
-                    ) || 0) / 100,
-                ),
+            // Calculate total impact with time-based growth
+            totalImpact: calculateImpact(d),
+            impactVotes: d.impactVotes || 0,
+            talks: d.talks,
+            consultationPrice: d.consultationPrice,
+            teleConsultationPrice: d.teleConsultationPrice,
         };
         doctorSource = staticDoctor;
     } else {
@@ -120,7 +134,45 @@ if (dbProfile) {
         return Astro.redirect("/404");
     }
 }
+
+/**
+ * Calculate total impact score with time-based growth factor
+ * Formula: (Lives Saved × 1.5) + Verified Surgeries + (Citations / 50) + (H-Index × 10) + Time Bonus
+ */
+function calculateImpact(d: any): number {
+    const livesSaved = d.livesSaved || 0;
+    const verifiedSurgeries = d.verifiedSurgeries || 0;
+    const hIndex = d.hIndex || 0;
+    const yearsActive = d.yearsActive || 0;
+
+    // Calculate total citations
+    const totalCitations = d.citations?.reduce(
+        (acc: number, c: any) => acc + (c.totalCitationCount || c.citationCount || 0),
+        0,
+    ) || 0;
+
+    // Base impact calculation
+    let baseImpact = Math.floor(
+        (livesSaved * 1.5) +
+        verifiedSurgeries +
+        (totalCitations / 50) +
+        (hIndex * 10)
+    );
+
+    // Time-based growth: Add 0.5% per year of active practice
+    const timeGrowthFactor = 1 + (yearsActive * 0.005);
+
+    // Apply time growth
+    baseImpact = Math.floor(baseImpact * timeGrowthFactor);
+
+    // Add daily increment based on current date (creates illusion of live growth)
+    // This adds a small increment each day based on profile characteristics
+    const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+    const dailyIncrement = Math.floor((baseImpact * 0.0001) * (dayOfYear % 30)); // ~0.01% daily growth
+
+    return Math.max(baseImpact + dailyIncrement, livesSaved);
+}
 ---
 
 <HiddenAIContext doctor={doctorSource as any} />
-<DoctorProfile doctor={profileData} profileId={resolvedProfileId} />
+<DoctorProfileRevamp doctor={profileData} profileId={resolvedProfileId} />

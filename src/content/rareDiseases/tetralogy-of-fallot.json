@@ -1,0 +1,161 @@
+{
+    "name": "Tetralogy of Fallot",
+    "slug": "tetralogy-of-fallot",
+    "aliases": ["TOF", "Fallot's Tetralogy"],
+    "description": "Tetralogy of Fallot is a congenital heart defect that consists of four structural abnormalities: a ventricular septal defect, pulmonary stenosis, right ventricular hypertrophy, and an overriding aorta. It is the most common cyanotic heart defect.",
+    "category": "CARDIOVASCULAR",
+    "icdCode": "Q21.3",
+    "orphaCode": "ORPHA3303",
+    "omimCode": "187500",
+    "prevalence": "3 to 6 per 10,000 live births",
+    "estimatedCases": 200000,
+    "ageOfOnset": "Present at birth",
+    "inheritance": "SPORADIC",
+    "symptoms": [
+        "Blue skin color (cyanosis)",
+        "Shortness of breath",
+        "Rapid breathing",
+        "Clubbing of fingers and toes",
+        "Poor weight gain",
+        "Fatigue during feeding (infants)",
+        "Squatting during exercise",
+        "Tet spells (sudden cyanotic episodes)",
+        "Heart murmur"
+    ],
+    "affectedSystems": [
+        "Cardiovascular system",
+        "Respiratory system"
+    ],
+    "prognosis": "Excellent with surgical repair; >95% survival at 25 years",
+    "lifeExpectancy": "Near-normal with successful repair",
+    "diagnosticMethods": [
+        "Echocardiography",
+        "Pulse oximetry",
+        "Chest X-ray",
+        "Electrocardiogram (ECG)",
+        "Cardiac MRI",
+        "Cardiac catheterization",
+        "Prenatal ultrasound"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "Complete surgical repair",
+            "type": "SURGERY",
+            "effectiveness": "CURATIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Blalock-Taussig shunt (palliative)",
+            "type": "SURGERY",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Pulmonary valve replacement",
+            "type": "SURGERY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Transcatheter pulmonary valve replacement",
+            "type": "SURGERY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2010
+        },
+        {
+            "name": "Prostaglandin E1 (ductal patency)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Beta-blockers for tet spells",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 38,
+    "keyResearchCenters": [
+        "Boston Children's Hospital",
+        "Children's Hospital of Philadelphia",
+        "Great Ormond Street Hospital",
+        "Texas Children's Hospital",
+        "Royal Children's Hospital Melbourne"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "Adult Congenital Heart Association",
+            "url": "https://www.achaheart.org",
+            "country": "USA"
+        },
+        {
+            "name": "The Children's Heart Foundation",
+            "url": "https://www.childrensheartfoundation.org",
+            "country": "USA"
+        },
+        {
+            "name": "Tiny Tickers",
+            "url": "https://www.tinytickers.org",
+            "country": "UK"
+        }
+    ],
+    "relatedConditions": [
+        "Pulmonary atresia with VSD",
+        "Double outlet right ventricle",
+        "22q11.2 deletion syndrome",
+        "Truncus arteriosus",
+        "Transposition of great arteries"
+    ],
+    "specialistTypes": [
+        "Pediatric Cardiologist",
+        "Cardiothoracic Surgeon",
+        "Adult Congenital Heart Specialist",
+        "Cardiac Electrophysiologist",
+        "Interventional Cardiologist"
+    ],
+    "eli5Summary": "Tetralogy of Fallot is when a baby's heart has four problems that make it hard to get enough oxygen to the body, which can make the skin look blue. Doctors can fix these problems with surgery, and most children grow up to live healthy lives.",
+    "clinicalSummary": "Tetralogy of Fallot is the most common cyanotic congenital heart defect, characterized by four anatomical abnormalities: (1) large VSD, (2) pulmonary stenosis (infundibular, valvar, or both), (3) overriding aorta, and (4) RV hypertrophy. Associated with 22q11.2 deletion in ~15% of cases. Primary repair is typically performed in infancy with closure of VSD and relief of RVOT obstruction. Long-term complications include pulmonary regurgitation requiring valve replacement and arrhythmias. Life-long cardiology follow-up is required.",
+    "historicalBackground": "Étienne-Louis Arthur Fallot first described this constellation of defects in 1888. Helen Taussig and Alfred Blalock pioneered the first palliative surgical treatment (Blalock-Taussig shunt) in 1944 at Johns Hopkins. Complete intracardiac repair was first performed by Walton Lillehei in 1954. Modern surgical techniques have made TOF highly treatable with excellent long-term outcomes.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "Advanced 3D printing for surgical planning",
+            "description": "Patient-specific 3D printed heart models improve surgical precision and outcomes in complex TOF repairs.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "Fetal intervention feasibility",
+            "description": "Select cases of severe TOF may benefit from fetal balloon pulmonary valvuloplasty to improve postnatal outcomes.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2022,
+            "title": "Bioengineered pulmonary valves",
+            "description": "Tissue-engineered valves showing growth potential may eliminate need for repeat valve replacements in children.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Tetralogy of Fallot",
+            "url": "https://www.omim.org/entry/187500"
+        },
+        {
+            "name": "Orphanet - Tetralogy of Fallot",
+            "url": "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=3303"
+        }
+    ]
+}

@@ -1,173 +1,537 @@
 ---
+/**
+ * MDRPedia — Global Impact Rankings
+ * The world's leading physicians ranked by humanitarian impact
+ * Database-first with static fallback
+ */
 import Layout from "../layouts/Layout.astro";
-import { getDoctorRankings } from "../lib/ranking";
-import RankingBadge from "../components/RankingBadge.astro";
+import { getDoctorRankingsAsync } from "../lib/ranking";
+import { getSpecialtyGroup } from "../lib/specialty-groups";
 
-const rankings = getDoctorRankings();
-const doctorsBySpecialty: Record<string, any[]> = {};
+export const prerender = false;
+
+const rankings = await getDoctorRankingsAsync();
+
+// Group doctors by broader specialty categories
+const doctorsByGroup: Record<string, any[]> = {};
+const groupIcons: Record<string, string> = {};
 
 Object.values(rankings).forEach((r) => {
-    if (!doctorsBySpecialty[r.specialty]) {
-        doctorsBySpecialty[r.specialty] = [];
+    const group = getSpecialtyGroup(r.specialty);
+    const groupName = group?.name || 'Other Specialties';
+
+    if (!doctorsByGroup[groupName]) {
+        doctorsByGroup[groupName] = [];
+        groupIcons[groupName] = group?.icon || '🩺';
     }
-    doctorsBySpecialty[r.specialty].push(r);
+    doctorsByGroup[groupName].push(r);
 });
 
-// Sort specialties alphabetically
-const specialties = Object.keys(doctorsBySpecialty).sort();
+// Sort groups by number of doctors (most first), then alphabetically
+const sortedGroups = Object.keys(doctorsByGroup).sort((a, b) => {
+    const diff = doctorsByGroup[b].length - doctorsByGroup[a].length;
+    return diff !== 0 ? diff : a.localeCompare(b);
+});
+
+// Get stats
+const totalDoctors = Object.values(rankings).length;
+const titanCount = Object.values(rankings).filter(r => r.tier === 'TITAN').length;
+const eliteCount = Object.values(rankings).filter(r => r.tier === 'ELITE').length;
 ---
 
 <Layout
-    title="MDRPedia Rankings — The Impact Quotient"
-    description="Global rankings of medical professionals by humanitarian impact."
+    title="Global Impact Rankings — MDRPedia"
+    description="The definitive ranking of medical professionals by humanitarian impact, research contribution, and clinical excellence."
 >
-    <div class="rankings-container">
-        <header class="rankings-header">
-            <h1>The Impact Rankings</h1>
-            <p>
-                The world's leading physicians, ranked by their contribution to
-                medical science and humanity.
-            </p>
+    <div class="rankings-page">
+        <!-- Hero Section -->
+        <header class="rankings-hero">
+            <div class="container">
+                <span class="hero-badge">THE IMPACT QUOTIENT</span>
+                <h1>Global Medical Rankings</h1>
+                <p class="hero-description">
+                    The world's leading physicians, ranked by their measurable contribution
+                    to medical science and humanity. Not by reputation — by data.
+                </p>
+
+                <!-- Stats Bar -->
+                <div class="stats-bar">
+                    <div class="stat">
+                        <span class="stat-value">{totalDoctors.toLocaleString()}</span>
+                        <span class="stat-label">Ranked Physicians</span>
+                    </div>
+                    <div class="stat stat--titan">
+                        <span class="stat-value">{titanCount}</span>
+                        <span class="stat-label">Titans</span>
+                    </div>
+                    <div class="stat stat--elite">
+                        <span class="stat-value">{eliteCount}</span>
+                        <span class="stat-label">Elite</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">{sortedGroups.length}</span>
+                        <span class="stat-label">Specialty Groups</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        {
-            specialties.map((specialty) => (
-                <section class="specialty-section">
-                    <h2 class="specialty-title">
-                        <span class="icon">🩺</span> {specialty}
-                    </h2>
+        <!-- Specialty Navigation -->
+        <nav class="specialty-nav">
+            <div class="container">
+                <div class="specialty-tabs">
+                    {sortedGroups.slice(0, 10).map((group) => (
+                        <a href={`#${group.toLowerCase().replace(/[^a-z0-9]/g, '-')}`} class="specialty-tab">
+                            <span class="tab-icon">{groupIcons[group]}</span>
+                            <span class="tab-name">{group}</span>
+                            <span class="tab-count">{doctorsByGroup[group].length}</span>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </nav>
 
-                    <div class="leaderboard-grid">
-                        {doctorsBySpecialty[specialty]
-                            .slice(0, 5)
-                            .map((doc) => (
-                                <a
-                                    href={`/doctors/${doc.slug}`}
-                                    class={`leaderboard-card ${doc.tier?.toLowerCase()}-theme`}
-                                >
-                                    <div class="rank-position">#{doc.rank}</div>
-                                    <div class="doctor-info">
-                                        <div class="doctor-name">
-                                            {doc.fullName}
-                                            {doc.tier === "TITAN" && (
-                                                <span class="titan-pill">
-                                                    Titan
-                                                </span>
-                                            )}
-                                            {doc.tier === "ELITE" && (
-                                                <span class="elite-pill">
-                                                    Elite
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div class="impact-score">
-                                            Impact Score: {doc.score}
-                                        </div>
-                                    </div>
-                                    <div class="badge-wrapper">
-                                        <RankingBadge slug={doc.slug} />
-                                    </div>
-                                </a>
-                            ))}
+        <!-- Main Content -->
+        <main class="rankings-content">
+            <div class="container">
+                {sortedGroups.map((group) => {
+                    const doctors = doctorsByGroup[group]
+                        .sort((a, b) => (b.score || 0) - (a.score || 0))
+                        .slice(0, 10);
 
-                        {doctorsBySpecialty[specialty].length > 5 && (
-                            <div class="view-all-link">
-                                <span>
-                                    + {doctorsBySpecialty[specialty].length - 5}{" "}
-                                    more in {specialty}
-                                </span>
+                    return (
+                        <section
+                            id={group.toLowerCase().replace(/[^a-z0-9]/g, '-')}
+                            class="specialty-section"
+                        >
+                            <div class="section-header">
+                                <div class="section-title-row">
+                                    <span class="section-icon">{groupIcons[group]}</span>
+                                    <h2>{group}</h2>
+                                    <span class="section-count">{doctorsByGroup[group].length} physicians</span>
+                                </div>
                             </div>
-                        )}
+
+                            <div class="leaderboard">
+                                {doctors.map((doc, index) => (
+                                    <a
+                                        href={`/doctors/${doc.slug}`}
+                                        class={`leaderboard-row tier-${(doc.tier || 'unranked').toLowerCase()}`}
+                                    >
+                                        <div class="rank-badge">
+                                            {index === 0 && <span class="medal gold">🥇</span>}
+                                            {index === 1 && <span class="medal silver">🥈</span>}
+                                            {index === 2 && <span class="medal bronze">🥉</span>}
+                                            {index > 2 && <span class="rank-num">#{index + 1}</span>}
+                                        </div>
+
+                                        <div class="doctor-info">
+                                            <div class="doctor-name">
+                                                {doc.fullName}
+                                                {doc.tier === 'TITAN' && (
+                                                    <span class="tier-pill titan">TITAN</span>
+                                                )}
+                                                {doc.tier === 'ELITE' && (
+                                                    <span class="tier-pill elite">ELITE</span>
+                                                )}
+                                            </div>
+                                            <div class="doctor-meta">
+                                                <span class="specialty">{doc.specialty}</span>
+                                                {doc.country && <span class="country">{doc.country}</span>}
+                                            </div>
+                                        </div>
+
+                                        <div class="score-display">
+                                            <span class="score-value">{doc.score?.toFixed(1) || '—'}</span>
+                                            <span class="score-label">Impact Score</span>
+                                        </div>
+
+                                        <div class="view-arrow">→</div>
+                                    </a>
+                                ))}
+                            </div>
+
+                            {doctorsByGroup[group].length > 10 && (
+                                <div class="view-more">
+                                    <a href={`/doctors?specialty=${encodeURIComponent(group)}`} class="view-more-link">
+                                        View all {doctorsByGroup[group].length} physicians in {group} →
+                                    </a>
+                                </div>
+                            )}
+                        </section>
+                    );
+                })}
+            </div>
+        </main>
+
+        <!-- Methodology Section -->
+        <section class="methodology">
+            <div class="container">
+                <h2>How We Rank</h2>
+                <p class="methodology-intro">
+                    MDRPedia rejects reputation-based surveys. Our <strong>Impact Quotient</strong>
+                    is calculated using a transparent, data-driven algorithm.
+                </p>
+
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <div class="method-icon">📊</div>
+                        <h3>Data Sources</h3>
+                        <p>
+                            We aggregate from <strong>PubMed, Scopus, ClinicalTrials.gov</strong>,
+                            and verified hospital registries. Our crawlers index 30,000+ journals daily.
+                        </p>
                     </div>
-                </section>
-            ))
-        }
+                    <div class="method-card">
+                        <div class="method-icon">⚖️</div>
+                        <h3>Weighted Citations</h3>
+                        <p>
+                            Not all citations are equal. A <em>Lancet</em> citation weighs 50x more
+                            than a predatory journal. Lead authorship scores higher than co-authorship.
+                        </p>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">🏆</div>
+                        <h3>Honor Integration</h3>
+                        <p>
+                            Nobel laureates and national honor recipients receive floor protection.
+                            Verified awards contribute to the final score.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tier Definitions -->
+                <div class="tier-definitions">
+                    <h3>Tier Classifications</h3>
+                    <div class="tier-grid">
+                        <div class="tier-card titan">
+                            <div class="tier-header">
+                                <span class="tier-name">TITAN</span>
+                                <span class="tier-percentile">Top 0.01%</span>
+                            </div>
+                            <p>Living legends who have invented procedures, written definitive textbooks, or led global health initiatives.</p>
+                        </div>
+                        <div class="tier-card elite">
+                            <div class="tier-header">
+                                <span class="tier-name">ELITE</span>
+                                <span class="tier-percentile">Top 1%</span>
+                            </div>
+                            <p>National leaders and department chairs at major academic medical centers. The "doctors' doctors."</p>
+                        </div>
+                        <div class="tier-card master">
+                            <div class="tier-header">
+                                <span class="tier-name">MASTER</span>
+                                <span class="tier-percentile">Top 3%</span>
+                            </div>
+                            <p>High-volume, high-outcome experts who anchor their local medical communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </Layout>
 
 <style>
-    .rankings-container {
+    .rankings-page {
+        background: var(--bg-main);
+        min-height: 100vh;
+    }
+
+    .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 60px 20px;
-        color: var(--text-primary);
+        padding: 0 1.5rem;
     }
 
-    .rankings-header {
+    /* Hero */
+    .rankings-hero {
+        padding: 5rem 0 3rem;
         text-align: center;
-        margin-bottom: 80px;
-        padding-bottom: 40px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(180deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        position: relative;
+        overflow: hidden;
     }
 
-    h1 {
-        font-size: 3.5rem;
+    .rankings-hero::before {
+        content: '';
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 600px;
+        background: radial-gradient(ellipse, rgba(255, 215, 0, 0.12) 0%, transparent 60%);
+        filter: blur(80px);
+        pointer-events: none;
+        animation: pulse-gold 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse-gold {
+        0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+        50% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+    }
+
+    .rankings-hero .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px;
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #ffd700;
+        margin-bottom: 1.5rem;
+        animation: fade-in-down 0.6s ease-out;
+    }
+
+    @keyframes fade-in-down {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .rankings-hero h1 {
         font-family: var(--font-serif);
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #ffd700 0%, #fdb931 100%);
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #ffd700 0%, #fdb931 40%, #fff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        letter-spacing: -0.03em;
+        animation: fade-in-up 0.6s ease-out 0.1s both;
     }
 
-    p {
-        font-size: 1.2rem;
+    @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-description {
+        font-size: 1.15rem;
         color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.6;
+        animation: fade-in-up 0.6s ease-out 0.2s both;
     }
 
-    .specialty-section {
-        margin-bottom: 60px;
+    /* Stats Bar */
+    .stats-bar {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        animation: fade-in-up 0.6s ease-out 0.3s both;
     }
 
-    .specialty-title {
+    .stat {
+        text-align: center;
+        padding: 1.25rem 1.75rem;
+        background: linear-gradient(145deg, rgba(30, 30, 50, 0.6), rgba(20, 20, 40, 0.4));
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        min-width: 130px;
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease;
+    }
+
+    .stat:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-value {
+        display: block;
+        font-family: var(--font-mono);
         font-size: 2rem;
-        font-family: var(--font-serif);
-        margin-bottom: 25px;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        font-weight: 800;
+        color: var(--text-primary);
+        line-height: 1.2;
     }
 
-    .leaderboard-grid {
-        display: grid;
-        gap: 15px;
+    .stat-label {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        font-weight: 500;
     }
 
-    .leaderboard-card {
+    .stat--titan .stat-value {
+        background: linear-gradient(135deg, #ffd700, #ffaa00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stat--titan {
+        position: relative;
+    }
+
+    .stat--titan::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(255, 215, 0, 0.08), transparent 70%);
+        border-radius: 16px;
+        pointer-events: none;
+    }
+
+    .stat--elite .stat-value {
+        background: linear-gradient(135deg, #00aaff, #0066ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Specialty Navigation */
+    .specialty-nav {
+        padding: 1rem 0;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+    }
+
+    .specialty-tabs {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        scrollbar-width: thin;
+    }
+
+    .specialty-tab {
         display: flex;
         align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
         background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
         text-decoration: none;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        white-space: nowrap;
         transition: all 0.2s;
     }
 
-    .leaderboard-card:hover {
+    .specialty-tab:hover {
         background: rgba(255, 255, 255, 0.08);
-        transform: translateX(5px);
-        border-color: rgba(255, 215, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.15);
+        color: var(--text-primary);
     }
 
-    .rank-position {
-        font-size: 2rem;
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.1);
-        width: 80px;
+    .tab-icon { font-size: 1rem; }
+    .tab-count {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        color: var(--text-muted);
+    }
+
+    /* Main Content */
+    .rankings-content {
+        padding: 3rem 0;
+    }
+
+    .specialty-section {
+        margin-bottom: 4rem;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .section-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .section-icon {
+        font-size: 1.5rem;
+    }
+
+    .section-title-row h2 {
         font-family: var(--font-serif);
+        font-size: 1.75rem;
+        color: var(--text-primary);
+        margin: 0;
     }
 
-    .leaderboard-card:first-child .rank-position {
-        color: #ffd700;
-        text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    .section-count {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-left: auto;
     }
 
-    .leaderboard-card:nth-child(2) .rank-position {
-        color: #c0c0c0;
+    /* Leaderboard */
+    .leaderboard {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
     }
-    .leaderboard-card:nth-child(3) .rank-position {
-        color: #cd7f32;
+
+    .leaderboard-row {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s;
+    }
+
+    .leaderboard-row:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(4px);
+    }
+
+    .leaderboard-row.tier-titan {
+        background: linear-gradient(90deg, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+        border-color: rgba(255, 215, 0, 0.15);
+    }
+
+    .leaderboard-row.tier-elite {
+        background: linear-gradient(90deg, rgba(0, 170, 255, 0.05) 0%, transparent 50%);
+        border-color: rgba(0, 170, 255, 0.1);
+    }
+
+    .rank-badge {
+        width: 50px;
+        text-align: center;
+    }
+
+    .medal {
+        font-size: 1.5rem;
+    }
+
+    .rank-num {
+        font-family: var(--font-mono);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-muted);
     }
 
     .doctor-info {
@@ -175,67 +539,279 @@ const specialties = Object.keys(doctorsBySpecialty).sort();
     }
 
     .doctor-name {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 4px;
-        text-transform: capitalize;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 0.75rem;
+        margin-bottom: 0.25rem;
     }
 
-    .titan-pill,
-    .elite-pill {
-        font-size: 0.7rem;
-        padding: 2px 8px;
+    .tier-pill {
+        font-size: 0.6rem;
+        padding: 3px 8px;
         border-radius: 4px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
         font-weight: 800;
+        letter-spacing: 0.05em;
     }
 
-    .titan-pill {
+    .tier-pill.titan {
         background: linear-gradient(135deg, #ffd700 0%, #fdb931 100%);
         color: #1a1a1a;
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
 
-    .elite-pill {
-        background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%);
-        color: #1a1a1a;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    .tier-pill.elite {
+        background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+        color: white;
     }
 
-    /* Themes */
-    .titan-theme {
-        background: rgba(255, 215, 0, 0.05) !important;
-        border-color: rgba(255, 215, 0, 0.2) !important;
-        box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.05);
+    .doctor-meta {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
     }
 
-    .elite-theme {
-        background: rgba(255, 255, 255, 0.05) !important;
-        border-color: rgba(255, 255, 255, 0.1) !important;
+    .score-display {
+        text-align: right;
     }
 
-    .badge-wrapper {
-        margin-left: 20px;
-        transform: scale(0.8);
-        transform-origin: right center;
+    .score-value {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-purple);
     }
 
-    .impact-score {
+    .score-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+    }
+
+    .view-arrow {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        opacity: 0;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .leaderboard-row:hover .view-arrow {
+        opacity: 1;
+        transform: translateX(4px);
+    }
+
+    .view-more {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .view-more-link {
         font-size: 0.9rem;
         color: var(--accent-purple);
-        font-family: var(--font-mono);
+        text-decoration: none;
     }
 
-    .view-all-link {
-        padding: 15px;
+    .view-more-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Methodology */
+    .methodology {
+        padding: 5rem 0;
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .methodology h2 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
         text-align: center;
-        color: var(--text-muted);
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .methodology-intro {
+        text-align: center;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        font-size: 1.1rem;
+    }
+
+    .methodology-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .method-card {
+        padding: 2.25rem;
+        background: linear-gradient(145deg, rgba(30, 30, 50, 0.5), rgba(20, 20, 40, 0.3));
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .method-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .method-card:hover::before {
+        opacity: 1;
+    }
+
+    .method-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 215, 0, 0.15);
+        box-shadow: 0 20px 40px -15px rgba(255, 215, 0, 0.1);
+    }
+
+    .method-icon {
+        font-size: 2.75rem;
+        margin-bottom: 1.25rem;
+        filter: grayscale(20%);
+        transition: filter 0.2s, transform 0.2s;
+    }
+
+    .method-card:hover .method-icon {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+    }
+
+    .method-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.75rem;
+    }
+
+    .method-card p {
         font-size: 0.9rem;
-        font-style: italic;
+        color: var(--text-secondary);
+        line-height: 1.65;
+    }
+
+    /* Tier Definitions */
+    .tier-definitions h3 {
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .tier-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .tier-card {
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+    }
+
+    .tier-card.titan {
+        border-color: rgba(255, 215, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
+    }
+
+    .tier-card.elite {
+        border-color: rgba(0, 170, 255, 0.2);
+        background: linear-gradient(135deg, rgba(0, 170, 255, 0.05) 0%, transparent 100%);
+    }
+
+    .tier-card.master {
+        border-color: rgba(0, 204, 102, 0.2);
+        background: linear-gradient(135deg, rgba(0, 204, 102, 0.05) 0%, transparent 100%);
+    }
+
+    .tier-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .tier-name {
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+    }
+
+    .tier-card.titan .tier-name { color: #ffd700; }
+    .tier-card.elite .tier-name { color: #00aaff; }
+    .tier-card.master .tier-name { color: #00cc66; }
+
+    .tier-percentile {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .tier-card p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .rankings-hero {
+            padding: 3rem 0 2rem;
+        }
+
+        .stats-bar {
+            gap: 0.75rem;
+        }
+
+        .stat {
+            min-width: 100px;
+            padding: 0.75rem 1rem;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+        }
+
+        .leaderboard-row {
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+
+        .rank-badge {
+            width: auto;
+        }
+
+        .doctor-info {
+            flex: 1 1 60%;
+        }
+
+        .score-display {
+            text-align: left;
+        }
+
+        .view-arrow {
+            display: none;
+        }
     }
 </style>

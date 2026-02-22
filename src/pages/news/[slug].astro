@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
     const newsEntries = await getCollection("news");
@@ -11,7 +11,37 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, summary, date, category, source, content } = entry.data;
+const { title, summary, date, category, source, url, content } = entry.data;
+
+// Get all news for related articles
+const allNews = await getCollection("news");
+const relatedArticles = allNews
+    .filter(n => n.id !== entry.id)
+    .filter(n => n.data.category === category || Math.random() > 0.5)
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+    .slice(0, 3);
+
+// Category definitions
+const CATEGORIES: Record<string, { icon: string; color: string; label: string }> = {
+    'breakthrough': { icon: '🔬', color: '#ffd700', label: 'Research Breakthrough' },
+    'clinical-trial': { icon: '💊', color: '#00aaff', label: 'Clinical Trial' },
+    'award': { icon: '🏆', color: '#a78bfa', label: 'Award & Recognition' },
+    'achievement': { icon: '🏆', color: '#a78bfa', label: 'Achievement' },
+    'impact': { icon: '💡', color: '#10b981', label: 'Impact Story' },
+    'registry': { icon: '📋', color: '#f59e0b', label: 'Registry Update' },
+    'technique': { icon: '🔧', color: '#ec4899', label: 'New Technique' },
+    'global-health': { icon: '🌍', color: '#06b6d4', label: 'Global Health' },
+    'research': { icon: '🧬', color: '#8b5cf6', label: 'Research' },
+    'innovation': { icon: '💡', color: '#22d3ee', label: 'Innovation' },
+    'default': { icon: '📰', color: '#888', label: 'News' }
+};
+
+function getCategoryInfo(category: string) {
+    const normalized = category.toLowerCase().replace(/\s+/g, '-');
+    return CATEGORIES[normalized] || CATEGORIES['default'];
+}
+
+const catInfo = getCategoryInfo(category);
 
 function formatDate(dateStr: string) {
     return new Date(dateStr).toLocaleDateString("en-US", {
@@ -20,155 +50,558 @@ function formatDate(dateStr: string) {
         day: "numeric",
     });
 }
+
+function formatShortDate(dateStr: string) {
+    return new Date(dateStr).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+    });
+}
+
+function getReadingTime(text: string) {
+    const wordsPerMinute = 200;
+    const words = (text || '').split(/\s+/).length + (summary || '').split(/\s+/).length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    return minutes < 1 ? '1 min read' : `${minutes} min read`;
+}
+
+function getRelativeTime(dateStr: string) {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    return formatDate(dateStr);
+}
+
+const shareUrl = `https://mdrpedia.com/news/${entry.id}`;
+const shareText = encodeURIComponent(title);
 ---
 
 <Layout title={`${title} — MDRPedia News`} description={summary}>
-    <main class="news-detail">
-        <nav class="breadcrumb">
-            <a href="/news">← Back to News</a>
-        </nav>
+    <div class="article-page">
+        <!-- Animated Background -->
+        <div class="page-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
 
-        <article class="article-container">
-            <header class="article-header">
-                <div class="article-meta">
-                    <span class="category-badge">{category}</span>
-                    <span class="divider">•</span>
-                    <time datetime={date}>{formatDate(date)}</time>
-                </div>
-                <h1 class="article-title">{title}</h1>
-                <div class="article-source">
-                    Source: <strong>{source}</strong>
-                </div>
-            </header>
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/news" class="breadcrumb-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Back to News</span>
+                </a>
+            </nav>
 
-            <div class="article-hero">
-                <div class="hero-placeholder">
-                    <div class="shimmer"></div>
-                    <span class="hero-label"
-                        >MDRPedia Editorial | {category}</span
-                    >
+            <article class="article-container">
+                <!-- Article Header -->
+                <header class="article-header">
+                    <div class="header-glow"></div>
+
+                    <div class="article-meta">
+                        <div class="category-badge" style={`--cat-color: ${catInfo.color}`}>
+                            <span class="badge-icon">{catInfo.icon}</span>
+                            {catInfo.label}
+                        </div>
+                        <span class="meta-divider">•</span>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <time datetime={date}>{formatDate(date)}</time>
+                        </div>
+                        <span class="meta-divider">•</span>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>{getReadingTime(content || '')}</span>
+                        </div>
+                    </div>
+
+                    <h1 class="article-title">{title}</h1>
+
+                    <div class="article-source">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Source:</span>
+                        <strong>{source}</strong>
+                        {url && (
+                            <a href={url} target="_blank" rel="noopener noreferrer" class="source-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                                View Original
+                            </a>
+                        )}
+                    </div>
+                </header>
+
+                <!-- Hero Visual -->
+                <div class="article-hero" style={`--cat-color: ${catInfo.color}`}>
+                    <div class="hero-content">
+                        <div class="hero-icon">
+                            <span>{catInfo.icon}</span>
+                        </div>
+                        <div class="hero-label">{catInfo.label}</div>
+                    </div>
+                    <div class="hero-pattern"></div>
+                    <div class="hero-shimmer"></div>
                 </div>
+
+                <!-- Article Content -->
+                <section class="article-content">
+                    <p class="lead-text">{summary}</p>
+
+                    <div class="content-divider">
+                        <span></span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        <span></span>
+                    </div>
+
+                    <div class="body-text">
+                        {content ? (
+                            content.split('\n\n').map((paragraph: string) => (
+                                <p>{paragraph}</p>
+                            ))
+                        ) : (
+                            <div class="pending-content">
+                                <div class="pending-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <h4>Full Report Coming Soon</h4>
+                                <p>Our editorial team is preparing an in-depth analysis of this story. Check back soon for the complete coverage.</p>
+                            </div>
+                        )}
+                    </div>
+                </section>
+
+                <!-- Share Section -->
+                <div class="share-section">
+                    <div class="share-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="5" r="3"/>
+                            <circle cx="6" cy="12" r="3"/>
+                            <circle cx="18" cy="19" r="3"/>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                        </svg>
+                        Share this article
+                    </div>
+                    <div class="share-buttons">
+                        <a
+                            href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="share-btn twitter"
+                            aria-label="Share on Twitter"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a
+                            href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareText}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="share-btn linkedin"
+                            aria-label="Share on LinkedIn"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <button class="share-btn copy" id="copy-link" aria-label="Copy link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <footer class="article-footer">
+                    <div class="footer-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <polyline points="9 12 12 15 16 10"/>
+                        </svg>
+                        <span>MDRPedia Verified Source</span>
+                    </div>
+                    <p class="footer-text">
+                        This article has been reviewed and verified by the MDRPedia editorial team.
+                        For corrections or updates, please contact our newsroom.
+                    </p>
+                </footer>
+            </article>
+
+            <!-- Related Articles -->
+            {relatedArticles.length > 0 && (
+                <section class="related-section">
+                    <h2 class="related-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                        </svg>
+                        Related Articles
+                    </h2>
+                    <div class="related-grid">
+                        {relatedArticles.map((article) => {
+                            const relCatInfo = getCategoryInfo(article.data.category);
+                            return (
+                                <a href={`/news/${article.id}`} class="related-card" style={`--cat-color: ${relCatInfo.color}`}>
+                                    <div class="related-highlight"></div>
+                                    <div class="related-category">
+                                        <span>{relCatInfo.icon}</span>
+                                        {relCatInfo.label}
+                                    </div>
+                                    <h3 class="related-card-title">{article.data.title}</h3>
+                                    <div class="related-meta">
+                                        <span>{formatShortDate(article.data.date)}</span>
+                                        <span class="related-source">{article.data.source}</span>
+                                    </div>
+                                </a>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
+
+            <!-- Back to News CTA -->
+            <div class="back-cta">
+                <a href="/news" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span>Browse All Articles</span>
+                </a>
             </div>
-
-            <section class="article-content">
-                <p class="lead-text">{summary}</p>
-                <hr />
-                <div class="body-text">
-                    {
-                        content ||
-                            "Detailed report coming soon as the research data is fully indexed."
-                    }
-                </div>
-            </section>
-
-            <footer class="article-footer">
-                <div class="share-box">
-                    <span
-                        >Reference and verification enabled for MDRPedia
-                        Verified Professionals.</span
-                    >
-                </div>
-            </footer>
-        </article>
-    </main>
+        </div>
+    </div>
 </Layout>
 
+<script>
+    const copyBtn = document.getElementById('copy-link');
+
+    copyBtn?.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            copyBtn.classList.add('copied');
+            setTimeout(() => copyBtn.classList.remove('copied'), 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    });
+</script>
+
 <style>
-    .news-detail {
+    .article-page {
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Animated Background */
+    .page-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.3;
+        animation: float 25s ease-in-out infinite;
+    }
+
+    .orb-1 {
+        width: 500px;
+        height: 500px;
+        background: rgba(139, 92, 246, 0.2);
+        top: -150px;
+        left: -100px;
+        animation-delay: 0s;
+    }
+
+    .orb-2 {
+        width: 400px;
+        height: 400px;
+        background: rgba(59, 130, 246, 0.15);
+        bottom: 20%;
+        right: -100px;
+        animation-delay: -10s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(30px, -30px) scale(1.05); }
+        50% { transform: translate(-20px, 20px) scale(0.95); }
+        75% { transform: translate(20px, 30px) scale(1.02); }
+    }
+
+    .grid-overlay {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(139, 92, 246, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    }
+
+    .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 40px 20px 100px;
+        position: relative;
+        z-index: 1;
     }
 
+    /* Breadcrumb */
     .breadcrumb {
         margin-bottom: 32px;
+        animation: fade-in-down 0.5s ease-out;
     }
 
-    .breadcrumb a {
-        color: var(--text-muted);
+    .breadcrumb-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 100px;
+        color: var(--text-secondary);
         text-decoration: none;
         font-size: 0.9rem;
-        transition: color 0.2s;
+        font-weight: 500;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .breadcrumb a:hover {
+    .breadcrumb-link svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s;
+    }
+
+    .breadcrumb-link:hover {
+        background: rgba(139, 92, 246, 0.1);
+        border-color: rgba(139, 92, 246, 0.3);
         color: #a78bfa;
     }
 
-    .article-container {
-        background: var(--bg-card, #16162a);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    .breadcrumb-link:hover svg {
+        transform: translateX(-4px);
     }
 
+    /* Article Container */
+    .article-container {
+        background: linear-gradient(145deg, rgba(30, 30, 50, 0.8), rgba(20, 20, 40, 0.6));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        animation: fade-in-up 0.6s ease-out;
+    }
+
+    /* Article Header */
     .article-header {
         padding: 48px 48px 32px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+    }
+
+    .header-glow {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+        pointer-events: none;
     }
 
     .article-meta {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 12px;
-        margin-bottom: 20px;
-        font-size: 0.85rem;
+        margin-bottom: 24px;
     }
 
     .category-badge {
-        background: rgba(139, 92, 246, 0.15);
-        color: #a78bfa;
-        padding: 4px 12px;
-        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--cat-color, rgba(255, 255, 255, 0.1));
+        border-radius: 100px;
+        font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        color: var(--cat-color, #a78bfa);
     }
 
-    .divider {
-        color: rgba(255, 255, 255, 0.2);
+    .badge-icon {
+        font-size: 0.9rem;
+    }
+
+    .meta-divider {
+        color: rgba(255, 255, 255, 0.15);
+        font-size: 0.8rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .meta-item svg {
+        width: 14px;
+        height: 14px;
+        opacity: 0.6;
     }
 
     .article-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
         font-weight: 800;
         line-height: 1.2;
         color: var(--text-primary);
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
     }
 
     .article-source {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
         color: var(--text-muted);
         font-size: 0.95rem;
     }
 
-    .article-hero {
-        width: 100%;
-        height: 300px;
-        background: #0f172a;
-        position: relative;
-        overflow: hidden;
+    .article-source svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.6;
     }
 
-    .hero-placeholder {
+    .article-source strong {
+        color: var(--text-secondary);
+    }
+
+    .source-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 12px;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 100px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #a78bfa;
+        text-decoration: none;
+        transition: all 0.2s;
+        margin-left: 8px;
+    }
+
+    .source-link svg {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+    }
+
+    .source-link:hover {
+        background: rgba(139, 92, 246, 0.2);
+        transform: translateY(-1px);
+    }
+
+    /* Article Hero */
+    .article-hero {
         width: 100%;
-        height: 100%;
+        height: 280px;
+        background: linear-gradient(135deg,
+            rgba(var(--cat-color-rgb, 139, 92, 246), 0.1) 0%,
+            rgba(15, 23, 42, 0.9) 100%
+        );
+        position: relative;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+    }
+
+    .hero-content {
+        text-align: center;
+        z-index: 1;
+    }
+
+    .hero-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.6;
+        animation: pulse-icon 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-icon {
+        0%, 100% { transform: scale(1); opacity: 0.6; }
+        50% { transform: scale(1.1); opacity: 0.8; }
     }
 
     .hero-label {
-        color: rgba(255, 255, 255, 0.2);
+        font-size: 0.85rem;
         font-weight: 700;
-        font-size: 1.2rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
     }
 
-    .shimmer {
+    .hero-pattern {
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 20% 30%, var(--cat-color, rgba(139, 92, 246, 0.15)) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    }
+
+    .hero-shimmer {
         position: absolute;
         top: 0;
         left: 0;
@@ -180,66 +613,416 @@ function formatDate(dateStr: string) {
             rgba(255, 255, 255, 0.03) 50%,
             rgba(255, 255, 255, 0) 100%
         );
-        animation: shimmer 3s infinite linear;
+        animation: shimmer 4s infinite linear;
     }
 
     @keyframes shimmer {
-        0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(100%);
-        }
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
     }
 
+    /* Article Content */
     .article-content {
         padding: 48px;
     }
 
     .lead-text {
-        font-size: 1.25rem;
-        line-height: 1.6;
+        font-size: 1.3rem;
+        line-height: 1.7;
         color: var(--text-secondary);
         font-weight: 500;
         margin-bottom: 32px;
     }
 
-    hr {
-        border: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    .content-divider {
+        display: flex;
+        align-items: center;
+        gap: 16px;
         margin: 32px 0;
+    }
+
+    .content-divider span {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    }
+
+    .content-divider svg {
+        width: 20px;
+        height: 20px;
+        color: rgba(139, 92, 246, 0.4);
     }
 
     .body-text {
         font-size: 1.1rem;
-        line-height: 1.8;
+        line-height: 1.85;
         color: var(--text-muted);
     }
 
-    .article-footer {
-        padding: 32px 48px;
+    .body-text p {
+        margin-bottom: 1.5rem;
+    }
+
+    .body-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Pending Content */
+    .pending-content {
+        text-align: center;
+        padding: 3rem 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+    }
+
+    .pending-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 16px;
+    }
+
+    .pending-icon svg {
+        width: 28px;
+        height: 28px;
+        color: #a78bfa;
+    }
+
+    .pending-content h4 {
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .pending-content p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    /* Share Section */
+    .share-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 48px;
         background: rgba(0, 0, 0, 0.2);
         border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .share-box {
+    .share-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 0.9rem;
-        color: var(--text-muted);
-        font-style: italic;
+        font-weight: 600;
+        color: var(--text-secondary);
+    }
+
+    .share-label svg {
+        width: 18px;
+        height: 18px;
+        color: #a78bfa;
+    }
+
+    .share-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .share-btn {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .share-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .share-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .share-btn.twitter:hover {
+        background: rgba(29, 161, 242, 0.15);
+        border-color: rgba(29, 161, 242, 0.3);
+        color: #1da1f2;
+    }
+
+    .share-btn.linkedin:hover {
+        background: rgba(0, 119, 181, 0.15);
+        border-color: rgba(0, 119, 181, 0.3);
+        color: #0077b5;
+    }
+
+    .share-btn.copy:hover {
+        background: rgba(139, 92, 246, 0.15);
+        border-color: rgba(139, 92, 246, 0.3);
+        color: #a78bfa;
+    }
+
+    .share-btn.copy.copied {
+        background: rgba(16, 185, 129, 0.15);
+        border-color: rgba(16, 185, 129, 0.3);
+        color: #10b981;
+    }
+
+    /* Article Footer */
+    .article-footer {
+        padding: 32px 48px;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         text-align: center;
     }
 
-    @media (max-width: 600px) {
-        .article-title {
-            font-size: 1.8rem;
+    .footer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 100px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #10b981;
+        margin-bottom: 12px;
+    }
+
+    .footer-badge svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Related Section */
+    .related-section {
+        margin-top: 48px;
+        animation: fade-in-up 0.6s ease-out 0.2s both;
+    }
+
+    .related-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 24px;
+    }
+
+    .related-title svg {
+        width: 22px;
+        height: 22px;
+        color: #a78bfa;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+
+    .related-card {
+        position: relative;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+
+    .related-highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--cat-color, #a78bfa);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+    }
+
+    .related-card:hover {
+        border-color: rgba(139, 92, 246, 0.3);
+        background: rgba(139, 92, 246, 0.05);
+        transform: translateY(-4px);
+    }
+
+    .related-card:hover .related-highlight {
+        transform: scaleX(1);
+    }
+
+    .related-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--cat-color, var(--text-muted));
+        margin-bottom: 10px;
+    }
+
+    .related-card-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+        margin-bottom: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .related-card:hover .related-card-title {
+        color: #a78bfa;
+    }
+
+    .related-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .related-source {
+        font-weight: 600;
+        color: var(--text-secondary);
+    }
+
+    /* Back CTA */
+    .back-cta {
+        margin-top: 48px;
+        text-align: center;
+        animation: fade-in-up 0.6s ease-out 0.3s both;
+    }
+
+    .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        border-radius: 14px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 25px -8px rgba(139, 92, 246, 0.5);
+    }
+
+    .back-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -8px rgba(139, 92, 246, 0.6);
+    }
+
+    /* Animations */
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-down {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .container {
+            padding: 30px 16px 80px;
+        }
+
         .article-header,
         .article-content,
+        .share-section,
         .article-footer {
-            padding: 30px 24px;
+            padding-left: 24px;
+            padding-right: 24px;
         }
+
+        .article-header {
+            padding-top: 32px;
+            padding-bottom: 24px;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+        }
+
+        .article-meta {
+            gap: 8px;
+        }
+
+        .meta-divider {
+            display: none;
+        }
+
         .article-hero {
             height: 200px;
+        }
+
+        .hero-icon {
+            font-size: 3rem;
+        }
+
+        .lead-text {
+            font-size: 1.1rem;
+        }
+
+        .share-section {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .related-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>

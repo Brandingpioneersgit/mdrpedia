@@ -1,0 +1,397 @@
+---
+/**
+ * MedicalLexiconTags - Standardized Medical Terminology Display
+ * ICD-10, SNOMED CT, MeSH, CPT codes
+ */
+
+import type { MedicalLexiconProfile, MedicalLexiconTag } from '../../lib/ai-content-types';
+import { LEXICON_SYSTEM_LABELS } from '../../lib/ai-content-types';
+
+interface Props {
+    lexicon: MedicalLexiconProfile;
+    doctorName: string;
+    tier?: string;
+}
+
+const { lexicon, doctorName, tier = 'UNRANKED' } = Astro.props;
+
+// System configuration
+const systemConfig: Record<MedicalLexiconTag['system'], { color: string; bgColor: string }> = {
+    ICD10: { color: '#ef4444', bgColor: 'rgba(239, 68, 68, 0.1)' },
+    ICD11: { color: '#f97316', bgColor: 'rgba(249, 115, 22, 0.1)' },
+    SNOMED_CT: { color: '#8b5cf6', bgColor: 'rgba(139, 92, 246, 0.1)' },
+    MESH: { color: '#3b82f6', bgColor: 'rgba(59, 130, 246, 0.1)' },
+    LOINC: { color: '#10b981', bgColor: 'rgba(16, 185, 129, 0.1)' },
+    CPT: { color: '#f59e0b', bgColor: 'rgba(245, 158, 11, 0.1)' },
+    HCPCS: { color: '#ec4899', bgColor: 'rgba(236, 72, 153, 0.1)' },
+};
+
+// Lookup URLs
+const systemUrls: Partial<Record<MedicalLexiconTag['system'], (code: string) => string>> = {
+    ICD10: (code) => `https://icd.who.int/browse10/2019/en#/${code}`,
+    SNOMED_CT: (code) => `https://browser.ihtsdotools.org/?perspective=full&conceptId1=${code}`,
+    MESH: (code) => `https://meshb.nlm.nih.gov/record/ui?ui=${code}`,
+    LOINC: (code) => `https://loinc.org/${code}`,
+};
+---
+
+<section class={`lexicon-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            Medical Terminology Profile
+        </h2>
+        <span class="section-subtitle">Standardized codes for interoperability</span>
+    </div>
+
+    <div class="lexicon-grid">
+        <!-- Primary Conditions -->
+        {lexicon.primaryConditions.length > 0 && (
+            <div class="lexicon-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🏥</span>
+                    Primary Conditions Treated
+                </h3>
+                <div class="tags-container">
+                    {lexicon.primaryConditions.map(tag => (
+                        <div
+                            class="tag-chip"
+                            style={`--tag-color: ${systemConfig[tag.system].color}; --tag-bg: ${systemConfig[tag.system].bgColor};`}
+                        >
+                            <span class="tag-system">{LEXICON_SYSTEM_LABELS[tag.system]}</span>
+                            {systemUrls[tag.system] ? (
+                                <a
+                                    href={systemUrls[tag.system]!(tag.code)}
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="tag-code"
+                                >
+                                    {tag.code}
+                                </a>
+                            ) : (
+                                <span class="tag-code">{tag.code}</span>
+                            )}
+                            <span class="tag-display">{tag.display}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+
+        <!-- Procedures -->
+        {lexicon.procedures.length > 0 && (
+            <div class="lexicon-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🔧</span>
+                    Procedures Performed
+                </h3>
+                <div class="tags-container">
+                    {lexicon.procedures.map(tag => (
+                        <div
+                            class="tag-chip"
+                            style={`--tag-color: ${systemConfig[tag.system].color}; --tag-bg: ${systemConfig[tag.system].bgColor};`}
+                        >
+                            <span class="tag-system">{LEXICON_SYSTEM_LABELS[tag.system]}</span>
+                            <span class="tag-code">{tag.code}</span>
+                            <span class="tag-display">{tag.display}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+
+        <!-- Research Topics (MeSH) -->
+        {lexicon.researchTopics.length > 0 && (
+            <div class="lexicon-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🔬</span>
+                    Research Topics
+                </h3>
+                <div class="tags-container compact">
+                    {lexicon.researchTopics.map(tag => (
+                        <div
+                            class="tag-chip compact"
+                            style={`--tag-color: ${systemConfig[tag.system].color}; --tag-bg: ${systemConfig[tag.system].bgColor};`}
+                        >
+                            {systemUrls[tag.system] ? (
+                                <a
+                                    href={systemUrls[tag.system]!(tag.code)}
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="tag-display linked"
+                                >
+                                    {tag.display}
+                                </a>
+                            ) : (
+                                <span class="tag-display">{tag.display}</span>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+
+        <!-- Anatomical Focus -->
+        {lexicon.anatomicalFocus && lexicon.anatomicalFocus.length > 0 && (
+            <div class="lexicon-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🫀</span>
+                    Anatomical Focus
+                </h3>
+                <div class="tags-container compact">
+                    {lexicon.anatomicalFocus.map(tag => (
+                        <div
+                            class="tag-chip compact"
+                            style={`--tag-color: ${systemConfig[tag.system].color}; --tag-bg: ${systemConfig[tag.system].bgColor};`}
+                        >
+                            <span class="tag-display">{tag.display}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+
+        <!-- Subspecialty Terms -->
+        {lexicon.subspecialtyTerms && lexicon.subspecialtyTerms.length > 0 && (
+            <div class="lexicon-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🎯</span>
+                    Subspecialty Terms
+                </h3>
+                <div class="tags-container compact">
+                    {lexicon.subspecialtyTerms.map(tag => (
+                        <div
+                            class="tag-chip compact"
+                            style={`--tag-color: ${systemConfig[tag.system].color}; --tag-bg: ${systemConfig[tag.system].bgColor};`}
+                        >
+                            <span class="tag-display">{tag.display}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+    </div>
+
+    <!-- Legend -->
+    <div class="lexicon-legend">
+        <span class="legend-label">Code Systems:</span>
+        {Object.entries(LEXICON_SYSTEM_LABELS).slice(0, 6).map(([key, label]) => (
+            <span
+                class="legend-item"
+                style={`--legend-color: ${systemConfig[key as MedicalLexiconTag['system']].color};`}
+            >
+                {label}
+            </span>
+        ))}
+    </div>
+
+    <!-- Hidden semantic layer for AI -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Medical Terminology Profile for {doctorName}</h3>
+        <h4>Primary Conditions (ICD-10/SNOMED CT):</h4>
+        <ul>
+            {lexicon.primaryConditions.map(t => (
+                <li>{t.system} {t.code}: {t.display}</li>
+            ))}
+        </ul>
+        <h4>Procedures (CPT/HCPCS):</h4>
+        <ul>
+            {lexicon.procedures.map(t => (
+                <li>{t.system} {t.code}: {t.display}</li>
+            ))}
+        </ul>
+        <h4>Research Topics (MeSH):</h4>
+        <ul>
+            {lexicon.researchTopics.map(t => (
+                <li>{t.system} {t.code}: {t.display}</li>
+            ))}
+        </ul>
+    </div>
+</section>
+
+<style>
+    .lexicon-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #8b5cf6;
+        opacity: 0.9;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+        color: var(--text-muted, #888);
+    }
+
+    .lexicon-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .lexicon-category {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 12px;
+    }
+
+    .category-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        color: var(--text-primary, #fff);
+    }
+
+    .category-icon {
+        font-size: 1rem;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tags-container.compact {
+        gap: 0.35rem;
+    }
+
+    .tag-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 6px 12px;
+        background: var(--tag-bg);
+        border: 1px solid color-mix(in srgb, var(--tag-color) 30%, transparent);
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .tag-chip:hover {
+        border-color: var(--tag-color);
+    }
+
+    .tag-chip.compact {
+        padding: 4px 10px;
+    }
+
+    .tag-system {
+        padding: 2px 6px;
+        background: color-mix(in srgb, var(--tag-color) 20%, transparent);
+        border-radius: 4px;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: var(--tag-color);
+        text-transform: uppercase;
+    }
+
+    .tag-code {
+        font-family: monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--tag-color);
+        text-decoration: none;
+    }
+
+    .tag-code:hover {
+        text-decoration: underline;
+    }
+
+    .tag-display {
+        font-size: 0.8rem;
+        color: var(--text-secondary, #ccc);
+    }
+
+    .tag-display.linked {
+        color: var(--tag-color);
+        text-decoration: none;
+    }
+
+    .tag-display.linked:hover {
+        text-decoration: underline;
+    }
+
+    /* Legend */
+    .lexicon-legend {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .legend-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted, #888);
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.7rem;
+        color: var(--legend-color);
+    }
+
+    .legend-item::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: var(--legend-color);
+        border-radius: 50%;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    @media (max-width: 768px) {
+        .lexicon-section {
+            padding: 1.5rem;
+        }
+
+        .tag-chip {
+            flex-wrap: wrap;
+        }
+
+        .lexicon-legend {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>

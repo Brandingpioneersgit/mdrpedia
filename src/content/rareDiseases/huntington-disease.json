@@ -1,0 +1,154 @@
+{
+    "name": "Huntington's Disease",
+    "slug": "huntington-disease",
+    "aliases": ["Huntington's Chorea", "HD"],
+    "description": "Huntington's disease is a progressive neurodegenerative disorder caused by an inherited defect in a single gene. It causes the progressive breakdown of nerve cells in the brain, affecting movement, cognitive abilities, and behavior.",
+    "category": "NEUROLOGICAL",
+    "icdCode": "G10",
+    "orphaCode": "ORPHA399",
+    "omimCode": "143100",
+    "prevalence": "3 to 7 per 100,000 in Western populations",
+    "estimatedCases": 30000,
+    "ageOfOnset": "Typically 30-50 years (juvenile form can occur before 20)",
+    "inheritance": "AUTOSOMAL_DOMINANT",
+    "symptoms": [
+        "Involuntary jerking movements (chorea)",
+        "Muscle rigidity",
+        "Slow or abnormal eye movements",
+        "Impaired gait and posture",
+        "Difficulty with speech and swallowing",
+        "Memory lapses",
+        "Difficulty concentrating",
+        "Depression and irritability",
+        "Obsessive-compulsive behaviors",
+        "Weight loss"
+    ],
+    "affectedSystems": [
+        "Central nervous system",
+        "Musculoskeletal system",
+        "Psychiatric"
+    ],
+    "prognosis": "Progressive deterioration over 10-25 years after symptom onset",
+    "lifeExpectancy": "15-20 years after symptom onset",
+    "diagnosticMethods": [
+        "Genetic testing for CAG repeat expansion in HTT gene",
+        "Neurological examination",
+        "MRI brain imaging (caudate nucleus atrophy)",
+        "Psychiatric evaluation",
+        "Family history assessment"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "Tetrabenazine (Xenazine)",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2008
+        },
+        {
+            "name": "Deutetrabenazine (Austedo)",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2017
+        },
+        {
+            "name": "Antipsychotics for chorea",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Physical therapy",
+            "type": "THERAPY",
+            "effectiveness": "PALLIATIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Speech therapy",
+            "type": "THERAPY",
+            "effectiveness": "PALLIATIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Gene silencing therapies",
+            "type": "GENE_THERAPY",
+            "effectiveness": "EXPERIMENTAL",
+            "fdaApproved": false,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 89,
+    "keyResearchCenters": [
+        "CHDI Foundation",
+        "Johns Hopkins Huntington's Disease Center",
+        "Massachusetts General Hospital HD Center",
+        "UCL Queen Square Institute of Neurology",
+        "University of British Columbia HD Clinic"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "Huntington's Disease Society of America",
+            "url": "https://www.hdsa.org",
+            "country": "USA"
+        },
+        {
+            "name": "European Huntington's Disease Network",
+            "url": "https://www.euro-hd.net",
+            "country": "Europe"
+        },
+        {
+            "name": "Huntington's Disease Association UK",
+            "url": "https://www.hda.org.uk",
+            "country": "UK"
+        }
+    ],
+    "relatedConditions": [
+        "Huntington's disease-like syndromes",
+        "Spinocerebellar ataxias",
+        "Dentatorubral-pallidoluysian atrophy",
+        "Chorea-acanthocytosis"
+    ],
+    "specialistTypes": [
+        "Neurologist",
+        "Geneticist",
+        "Psychiatrist",
+        "Neuropsychologist",
+        "Physical Therapist"
+    ],
+    "eli5Summary": "Huntington's disease happens when a part of a gene repeats too many times. This causes brain cells to slowly stop working, which makes it hard for people to control their movements, remember things, and manage their feelings. Scientists are working hard to find ways to stop the disease.",
+    "clinicalSummary": "Huntington's disease is an autosomal dominant neurodegenerative disorder caused by CAG trinucleotide repeat expansion in the HTT gene (>36 repeats). The pathology involves progressive neuronal loss primarily in the striatum and cerebral cortex. Clinical features include a triad of motor dysfunction (chorea, dystonia, bradykinesia), cognitive decline, and psychiatric symptoms. Diagnosis is confirmed by genetic testing. Management is symptomatic, with VMAT2 inhibitors for chorea. Emerging therapies include antisense oligonucleotides and gene silencing approaches.",
+    "historicalBackground": "The disease is named after George Huntington, who described it in 1872 based on observations of affected families on Long Island, NY. The genetic cause (HTT gene) was discovered in 1993 after a decade-long collaborative effort. This was one of the first disease genes mapped using genetic linkage analysis and remains a model for understanding trinucleotide repeat disorders.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "Next-generation ASO therapies in trials",
+            "description": "Following setbacks with tominersen, new antisense oligonucleotide approaches with improved selectivity are showing promise in early trials.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "CRISPR gene editing advances",
+            "description": "Researchers demonstrated successful reduction of mutant huntingtin protein using CRISPR-Cas9 in primate models.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Huntington Disease",
+            "url": "https://www.omim.org/entry/143100"
+        },
+        {
+            "name": "GeneReviews - Huntington Disease",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK1305/"
+        }
+    ]
+}

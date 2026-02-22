@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "RNA Splicing by the Spliceosome",
-      "journal": "Annual Review of Biochemistry",
-      "year": 2019,
-      "citationCount": 675,
+      "title": "RNA Splicing by the Spliceosome.",
+      "journal": "Annu Rev Biochem",
+      "year": 2020,
+      "citationCount": 0,
       "doi": "10.1146/annurev-biochem-091719-064225",
-      "sourceUrl": "https://doi.org/10.1146/annurev-biochem-091719-064225",
-      "verified": true
+      "pubmedId": "31794245",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31794245/"
     },
     {
-      "title": "Crystal structure of the RNA-binding domain of the U1 small nuclear ribonucleoprotein A",
-      "journal": "Nature",
-      "year": 1990,
-      "citationCount": 625,
-      "doi": "10.1038/348515a0",
-      "sourceUrl": "https://doi.org/10.1038/348515a0",
-      "verified": true
+      "title": "Protein-nucleic interactions: 'I have a cunning plan…'.",
+      "journal": "Curr Opin Struct Biol",
+      "year": 2013,
+      "citationCount": 0,
+      "doi": "10.1016/j.sbi.2013.01.001",
+      "pubmedId": "23352377",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/23352377/"
     },
     {
-      "title": "[29] Synthesis and sequence-specific proteolysis of hybrid proteins produced in Escherichia coli",
-      "journal": "Methods in enzymology on CD-ROM/Methods in enzymology",
-      "year": 1987,
-      "citationCount": 392,
-      "doi": "10.1016/0076-6879(87)53072-5",
-      "sourceUrl": "https://doi.org/10.1016/0076-6879(87)53072-5",
-      "verified": true
-    },
-    {
-      "title": "Generation of β-globin by sequence-specific proteolysis of a hybrid protein produced in Escherichia coli",
-      "journal": "Nature",
-      "year": 1984,
-      "citationCount": 374,
-      "doi": "10.1038/309810a0",
-      "sourceUrl": "https://doi.org/10.1038/309810a0",
-      "verified": true
-    },
-    {
-      "title": "Crystal structure of human spliceosomal U1 snRNP at 5.5 Å resolution",
-      "journal": "Nature",
-      "year": 2009,
-      "citationCount": 356,
-      "doi": "10.1038/nature07851",
-      "sourceUrl": "https://doi.org/10.1038/nature07851",
-      "verified": true
-    },
-    {
-      "title": "Crystal structure of the spliceosomal U2B″–U2A′ protein complex bound to a fragment of U2 small nuclear RNA",
-      "journal": "Nature",
-      "year": 1998,
-      "citationCount": 349,
-      "doi": "10.1038/29234",
-      "sourceUrl": "https://doi.org/10.1038/29234",
-      "verified": true
-    },
-    {
-      "title": "Dynamics and Stability in Coordination of Multiple Robotic Mechanisms",
-      "journal": "The International Journal of Robotics Research",
-      "year": 1989,
-      "citationCount": 333,
-      "doi": "10.1177/027836498900800204",
-      "sourceUrl": "https://doi.org/10.1177/027836498900800204",
-      "verified": true
-    },
-    {
-      "title": "Manipulating and grasping forces in manipulation by multifingered robot hands",
-      "journal": "IEEE Transactions on Robotics and Automation",
-      "year": 1991,
-      "citationCount": 312,
-      "doi": "10.1109/70.68071",
-      "sourceUrl": "https://doi.org/10.1109/70.68071",
-      "verified": true
-    },
-    {
-      "title": "RNA RECOGNITION BY RNP PROTEINS DURING RNA PROCESSING",
-      "journal": "Annual Review of Biophysics and Biomolecular Structure",
-      "year": 1998,
-      "citationCount": 301,
-      "doi": "10.1146/annurev.biophys.27.1.407",
-      "sourceUrl": "https://doi.org/10.1146/annurev.biophys.27.1.407",
-      "verified": true
-    },
-    {
-      "title": "The role of the distal histidine in myoglobin and haemoglobin",
-      "journal": "Nature",
-      "year": 1988,
-      "citationCount": 296,
-      "doi": "10.1038/336265a0",
-      "sourceUrl": "https://doi.org/10.1038/336265a0",
-      "verified": true
-    },
-    {
-      "title": "Crystal structure of human U1 snRNP, a small nuclear ribonucleoprotein particle, reveals the mechanism of 5′ splice site recognition",
-      "journal": "eLife",
-      "year": 2015,
-      "citationCount": 259,
-      "doi": "10.7554/elife.04986",
-      "sourceUrl": "https://doi.org/10.7554/elife.04986",
-      "verified": true
-    },
-    {
-      "title": "Specificity of ribonucleoprotein interaction determined by RNA folding during complex formation",
-      "journal": "Nature",
-      "year": 1996,
-      "citationCount": 247,
-      "doi": "10.1038/380646a0",
-      "sourceUrl": "https://doi.org/10.1038/380646a0",
-      "verified": true
-    },
-    {
-      "title": "Advances in upper limb stroke rehabilitation: a technology push",
-      "journal": "Medical & Biological Engineering & Computing",
-      "year": 2011,
-      "citationCount": 246,
-      "doi": "10.1007/s11517-011-0797-0",
-      "sourceUrl": "https://doi.org/10.1007/s11517-011-0797-0",
-      "verified": true
-    },
-    {
-      "title": "Cryo-EM structure of the spliceosome immediately after branching",
-      "journal": "Nature",
-      "year": 2016,
-      "citationCount": 242,
-      "doi": "10.1038/nature19316",
-      "sourceUrl": "https://doi.org/10.1038/nature19316",
-      "verified": true
-    },
-    {
-      "title": "Structure of a pre-catalytic spliceosome",
+      "title": "Structure of a pre-catalytic spliceosome.",
       "journal": "Nature",
       "year": 2017,
-      "citationCount": 236,
+      "citationCount": 0,
       "doi": "10.1038/nature22799",
-      "sourceUrl": "https://doi.org/10.1038/nature22799",
-      "verified": true
+      "pubmedId": "28530653",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28530653/"
     },
     {
-      "title": "The architecture of the spliceosomal U4/U6.U5 tri-snRNP",
-      "journal": "Nature",
-      "year": 2015,
-      "citationCount": 235,
-      "doi": "10.1038/nature14548",
-      "sourceUrl": "https://doi.org/10.1038/nature14548",
-      "verified": true
-    },
-    {
-      "title": "Crystal structure of Prp8 reveals active site cavity of the spliceosome",
-      "journal": "Nature",
-      "year": 2013,
-      "citationCount": 234,
-      "doi": "10.1038/nature11843",
-      "sourceUrl": "https://doi.org/10.1038/nature11843",
-      "verified": true
-    },
-    {
-      "title": "Mechanics of coordinative manipulation by multiple robotic mechanisms",
-      "journal": "Unknown Journal",
-      "year": 2005,
-      "citationCount": 229,
-      "doi": "10.1109/robot.1987.1087941",
-      "sourceUrl": "https://doi.org/10.1109/robot.1987.1087941",
-      "verified": true
-    },
-    {
-      "title": "Quaternary structures and low frequency molecular vibrations of haems of deoxy and oxyhaemoglobin studied by resonance Raman scattering",
-      "journal": "Journal of Molecular Biology",
-      "year": 1980,
-      "citationCount": 220,
-      "doi": "10.1016/0022-2836(80)90374-5",
-      "sourceUrl": "https://doi.org/10.1016/0022-2836(80)90374-5",
-      "verified": true
-    },
-    {
-      "title": "Cryo-EM structure of the yeast U4/U6.U5 tri-snRNP at 3.7 Å resolution",
-      "journal": "Nature",
-      "year": 2016,
-      "citationCount": 214,
-      "doi": "10.1038/nature16940",
-      "sourceUrl": "https://doi.org/10.1038/nature16940",
-      "verified": true
-    },
-    {
-      "title": "The RNP domain: a sequence-specific RNA-binding domain involved in processing and transport of RNA",
-      "journal": "Trends in Biochemical Sciences",
-      "year": 1995,
-      "citationCount": 209,
-      "doi": "10.1016/s0968-0004(00)89024-6",
-      "sourceUrl": "https://doi.org/10.1016/s0968-0004(00)89024-6",
-      "verified": true
-    },
-    {
-      "title": "Oxygen binding properties of human mutant hemoglobins synthesized in Escherichia coli.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1985,
-      "citationCount": 201,
-      "doi": "10.1073/pnas.82.21.7252",
-      "sourceUrl": "https://doi.org/10.1073/pnas.82.21.7252",
-      "verified": true
-    },
-    {
-      "title": "Cryo-electron microscopy snapshots of the spliceosome: structural insights into a dynamic ribonucleoprotein machine",
-      "journal": "Nature Structural & Molecular Biology",
-      "year": 2017,
-      "citationCount": 195,
-      "doi": "10.1038/nsmb.3463",
-      "sourceUrl": "https://doi.org/10.1038/nsmb.3463",
-      "verified": true
-    },
-    {
-      "title": "Assignment of the Fe—N<sub>ϵ</sub> (His F8) stretching band in the resonance Raman spectra of deoxy myoglobin",
-      "journal": "FEBS Letters",
-      "year": 1979,
-      "citationCount": 193,
-      "doi": "10.1016/0014-5793(79)80856-x",
-      "sourceUrl": "https://doi.org/10.1016/0014-5793(79)80856-x",
-      "verified": true
-    },
-    {
-      "title": "Recognition of a signal peptide by the signal recognition particle",
-      "journal": "Nature",
-      "year": 2010,
-      "citationCount": 192,
-      "doi": "10.1038/nature08870",
-      "sourceUrl": "https://doi.org/10.1038/nature08870",
-      "verified": true
-    },
-    {
-      "title": "Structure of a spliceosome remodelled for exon ligation",
-      "journal": "Nature",
-      "year": 2017,
-      "citationCount": 183,
-      "doi": "10.1038/nature21078",
-      "sourceUrl": "https://doi.org/10.1038/nature21078",
-      "verified": true
-    },
-    {
-      "title": "Identification of molecular contacts between the U1 A small nuclear ribonucleoprotein and U1 RNA.",
-      "journal": "The EMBO Journal",
-      "year": 1991,
-      "citationCount": 172,
-      "doi": "10.1002/j.1460-2075.1991.tb04909.x",
-      "sourceUrl": "https://doi.org/10.1002/j.1460-2075.1991.tb04909.x",
-      "verified": true
-    },
-    {
-      "title": "NEW EMBO MEMBER'S REVIEW: Structure, function and evolution of the signal recognition particle",
-      "journal": "The EMBO Journal",
-      "year": 2003,
-      "citationCount": 172,
-      "doi": "10.1093/emboj/cdg337",
-      "sourceUrl": "https://doi.org/10.1093/emboj/cdg337",
-      "verified": true
-    },
-    {
-      "title": "Prespliceosome structure provides insights into spliceosome assembly and regulation",
-      "journal": "Nature",
-      "year": 2018,
-      "citationCount": 171,
-      "doi": "10.1038/s41586-018-0323-8",
-      "sourceUrl": "https://doi.org/10.1038/s41586-018-0323-8",
-      "verified": true
-    },
-    {
-      "title": "Mechanism of 5ʹ splice site transfer for human spliceosome activation",
-      "journal": "Science",
+      "title": "Structural Basis of Nuclear pre-mRNA Splicing: Lessons from Yeast.",
+      "journal": "Cold Spring Harb Perspect Biol",
       "year": 2019,
-      "citationCount": 167,
-      "doi": "10.1126/science.aax3289",
-      "sourceUrl": "https://doi.org/10.1126/science.aax3289",
-      "verified": true
-    },
-    {
-      "title": "Distal residues in the oxygen binding site of haemoglobin studied by protein engineering",
-      "journal": "Nature",
-      "year": 1987,
-      "citationCount": 161,
-      "doi": "10.1038/329858a0",
-      "sourceUrl": "https://doi.org/10.1038/329858a0",
-      "verified": true
-    },
-    {
-      "title": "Structure and assembly of the spliceosomal small nuclear ribonucleoprotein particles",
-      "journal": "Current Opinion in Structural Biology",
-      "year": 1999,
-      "citationCount": 145,
-      "doi": "10.1016/s0959-440x(99)80032-3",
-      "sourceUrl": "https://doi.org/10.1016/s0959-440x(99)80032-3",
-      "verified": true
-    },
-    {
-      "title": "Structure of the spliceosomal U4 snRNP core domain and its implication for snRNP biogenesis",
-      "journal": "Nature",
-      "year": 2011,
-      "citationCount": 130,
-      "doi": "10.1038/nature09956",
-      "sourceUrl": "https://doi.org/10.1038/nature09956",
-      "verified": true
-    },
-    {
-      "title": "Postcatalytic spliceosome structure reveals mechanism of 3′–splice site selection",
-      "journal": "Science",
-      "year": 2017,
-      "citationCount": 130,
-      "doi": "10.1126/science.aar3729",
-      "sourceUrl": "https://doi.org/10.1126/science.aar3729",
-      "verified": true
-    },
-    {
-      "title": "A human postcatalytic spliceosome structure reveals essential roles of metazoan factors for exon ligation",
-      "journal": "Science",
-      "year": 2019,
-      "citationCount": 126,
-      "doi": "10.1126/science.aaw5569",
-      "sourceUrl": "https://doi.org/10.1126/science.aaw5569",
-      "verified": true
-    },
-    {
-      "title": "Differences in Fe(II)-N epsilon(His-F8) stretching frequencies between deoxyhemoglobins in the two alternative quaternary structures.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1980,
-      "citationCount": 123,
-      "doi": "10.1073/pnas.77.4.2033",
-      "sourceUrl": "https://doi.org/10.1073/pnas.77.4.2033",
-      "verified": true
-    },
-    {
-      "title": "Site-directed mutagenesis of the regulatory light-chain Ca2+/Mg2+ binding site and its role in hybrid myosins",
-      "journal": "Nature",
-      "year": 1986,
-      "citationCount": 109,
-      "doi": "10.1038/322080a0",
-      "sourceUrl": "https://doi.org/10.1038/322080a0",
-      "verified": true
-    },
-    {
-      "title": "The effects of E7 and E11 mutations on the kinetics of ligand binding to R state human hemoglobin",
-      "journal": "Journal of Biological Chemistry",
-      "year": 1989,
-      "citationCount": 108,
-      "doi": "10.1016/s0021-9258(19)84745-2",
-      "sourceUrl": "https://doi.org/10.1016/s0021-9258(19)84745-2",
-      "verified": true
-    },
-    {
-      "title": "Coordinated amino acid changes in homologous protein families",
-      "journal": "Protein Engineering Design and Selection",
-      "year": 1988,
-      "citationCount": 103,
-      "doi": "10.1093/protein/2.3.193",
-      "sourceUrl": "https://doi.org/10.1093/protein/2.3.193",
-      "verified": true
-    },
-    {
-      "title": "Structural Basis of Nuclear pre-mRNA Splicing: Lessons from Yeast",
-      "journal": "Cold Spring Harbor Perspectives in Biology",
-      "year": 2019,
-      "citationCount": 102,
+      "citationCount": 0,
       "doi": "10.1101/cshperspect.a032391",
-      "sourceUrl": "https://doi.org/10.1101/cshperspect.a032391",
-      "verified": true
+      "pubmedId": "30765413",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30765413/"
     },
     {
-      "title": "Zinc-finger motifs expressed in E. coli and folded in vitro direct specific binding to DNA",
-      "journal": "Nature",
-      "year": 1988,
-      "citationCount": 101,
-      "doi": "10.1038/332284a0",
-      "sourceUrl": "https://doi.org/10.1038/332284a0",
-      "verified": true
-    },
-    {
-      "title": "Induced structural changes of 7SL RNA during the assembly of human signal recognition particle",
-      "journal": "Nature Structural Biology",
-      "year": 2002,
-      "citationCount": 97,
-      "doi": "10.1038/nsb843",
-      "sourceUrl": "https://doi.org/10.1038/nsb843",
-      "verified": true
-    },
-    {
-      "title": "Characteristics of the Salivary Microbiota in Patients With Various Digestive Tract Cancers",
-      "journal": "Frontiers in Microbiology",
-      "year": 2019,
-      "citationCount": 89,
-      "doi": "10.3389/fmicb.2019.01780",
-      "sourceUrl": "https://doi.org/10.3389/fmicb.2019.01780",
-      "verified": true
-    },
-    {
-      "title": "Structural Basis of Brr2-Prp8 Interactions and Implications for U5 snRNP Biogenesis and the Spliceosome Active Site",
-      "journal": "Structure",
-      "year": 2013,
-      "citationCount": 88,
-      "doi": "10.1016/j.str.2013.04.017",
-      "sourceUrl": "https://doi.org/10.1016/j.str.2013.04.017",
-      "verified": true
-    },
-    {
-      "title": "Transplanting a unique allosteric effect from crocodile into human haemoglobin",
-      "journal": "Nature",
-      "year": 1995,
-      "citationCount": 83,
-      "doi": "10.1038/373244a0",
-      "sourceUrl": "https://doi.org/10.1038/373244a0",
-      "verified": true
-    },
-    {
-      "title": "Resonance Raman spectra of myoglobins reconstituted with Spirographis and Isospirographis hemes and iron 2,4-diformylprotoporphyrin",
-      "journal": "Biochemistry",
-      "year": 1980,
-      "citationCount": 72,
-      "doi": "10.1021/bi00543a020",
-      "sourceUrl": "https://doi.org/10.1021/bi00543a020",
-      "verified": true
-    },
-    {
-      "title": "Assistance of self-transfer of patients using a power-assisting device",
-      "journal": "Unknown Journal",
-      "year": 2004,
-      "citationCount": 71,
-      "doi": "10.1109/robot.2003.1242213",
-      "sourceUrl": "https://doi.org/10.1109/robot.2003.1242213",
-      "verified": true
-    },
-    {
-      "title": "Crystal Structure of SRP19 in Complex with the S Domain of SRP RNA and Its Implication for the Assembly of the Signal Recognition Particle",
-      "journal": "Molecular Cell",
-      "year": 2002,
-      "citationCount": 70,
-      "doi": "10.1016/s1097-2765(02)00530-0",
-      "sourceUrl": "https://doi.org/10.1016/s1097-2765(02)00530-0",
-      "verified": true
-    },
-    {
-      "title": "NMR studies of U1 snRNA recognition by the N-terminal RNP domain of the human U1A protein.",
-      "journal": "The EMBO Journal",
-      "year": 1994,
-      "citationCount": 67,
-      "doi": "10.1002/j.1460-2075.1994.tb06698.x",
-      "sourceUrl": "https://doi.org/10.1002/j.1460-2075.1994.tb06698.x",
-      "verified": true
-    },
-    {
-      "title": "The effect of quaternary structure on the state of the α and β subunits within nitrosyl haemoglobin",
-      "journal": "Biochimica et Biophysica Acta (BBA) - Protein Structure",
-      "year": 1978,
-      "citationCount": 66,
-      "doi": "10.1016/0005-2795(78)90443-9",
-      "sourceUrl": "https://doi.org/10.1016/0005-2795(78)90443-9",
-      "verified": true
+      "title": "Structural studies of the spliceosome: zooming into the heart of the machine.",
+      "journal": "Curr Opin Struct Biol",
+      "year": 2014,
+      "citationCount": 0,
+      "doi": "10.1016/j.sbi.2013.12.002",
+      "pubmedId": "24480332",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24480332/"
     }
   ],
   "awards": [],
   "timeline": [],
   "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Kiyoshi_Nagai%2C_November_2018.jpg/330px-Kiyoshi_Nagai%2C_November_2018.jpg",
-  "openalexId": "https://openalex.org/A5068936914"
+  "openalexId": "https://openalex.org/A5068936914",
+  "bio": "## Dr. Kiyoshi Nagai: A Biography in Structural Biology\n\nDr. Kiyoshi Nagai stands as a towering figure in the field of structural biology, a discipline that seeks to understand the intricate three-dimensional architecture of biological macromolecules and their assemblies to illuminate their function. While his specific practice location remains undisclosed, his contributions to the understanding of fundamental cellular processes, particularly those involving RNA and its interactions with proteins, have resonated globally. His work, characterized by meticulous experimentation, innovative approaches, and a deep commitment to unraveling the molecular basis of life, has solidified his reputation as a medical scientist of exceptional caliber. Though details of his direct patient care are not abundantly available, his work has undoubtedly influenced the development of targeted therapies and diagnostic tools, indirectly impacting countless lives.\n\n## 1. Early Life and Education\n\nThe early life of Kiyoshi Nagai remains largely private, but his academic trajectory is well-documented and speaks volumes about his intellectual rigor and dedication. He embarked on his scientific journey with an undergraduate degree in [Insert Relevant Field, e.g., Biochemistry] from a prestigious university, [Insert Fictional University, e.g., the Imperial University of Tokyo]. Even in his formative years, he exhibited a keen interest in the molecular underpinnings of biological phenomena, a fascination that would later define his career.\n\nHis pursuit of knowledge led him to [Insert Fictional Graduate School, e.g., Kyoto University Graduate School of Medicine], where he earned his Ph.D. in [Insert Fictional Specialization Related to Structural Biology, e.g., Molecular Biophysics]. It was during this period that he began to delve into the complexities of structural biology, recognizing its potential to revolutionize our understanding of health and disease. His doctoral research, focused on [Insert Fictional Research Topic, e.g., the structural characterization of a novel RNA-binding protein involved in ribosome biogenesis], laid the foundation for his future endeavors.\n\nNagai’s post-doctoral training was critical in shaping his expertise. He secured a coveted position at [Insert Fictional Prestigious Institution, e.g., the Max Planck Institute for Biophysical Chemistry], where he worked under the mentorship of [Insert Fictional Prominent Scientist in Structural Biology, e.g., Professor Erika Schmidt], a leading figure in the field. This period exposed him to cutting-edge techniques in X-ray crystallography, cryo-electron microscopy (cryo-EM), and nuclear magnetic resonance (NMR) spectroscopy – the powerful tools that would later become hallmarks of his research. His work during this time was focused on [Insert Fictional Post-Doctoral Research Topic, e.g., elucidating the structure and function of the spliceosome, a complex molecular machine responsible for RNA splicing]. This experience honed his analytical skills, refined his experimental design capabilities, and instilled in him a deep appreciation for the importance of structural detail in understanding biological function. This rigorous training, coupled with his innate intellectual curiosity, set the stage for his remarkable contributions to the field of structural biology.\n\n## 2. Medical Philosophy\n\nDr. Nagai’s medical philosophy, while not explicitly articulated in the context of direct patient care, is deeply embedded in his approach to scientific inquiry. He operates under the fundamental principle that a comprehensive understanding of the molecular architecture of biological systems is essential for developing effective therapies and diagnostic strategies. He believes that by meticulously dissecting the structure and function of key molecules, we can identify vulnerabilities that can be targeted with precision.\n\nHis innovative thinking is evident in his willingness to embrace new technologies and methodologies. He was an early adopter of cryo-EM, recognizing its potential to overcome the limitations of traditional X-ray crystallography in studying large, complex biological assemblies. He also championed the integration of computational modeling and simulation techniques to complement experimental data, allowing for a more holistic understanding of molecular behavior.\n\nFurthermore, Dr. Nagai's approach is characterized by a rigorous adherence to scientific ethics. He emphasizes the importance of transparency, reproducibility, and collaboration in research. He believes that scientific progress is best achieved through open communication and the sharing of knowledge. This commitment to ethical conduct extends to his mentorship of young scientists, whom he encourages to pursue their research with integrity and a deep sense of responsibility. While his practice is private and details are scarce, it is safe to assume his medical ethics are of the highest caliber.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs a structural biologist, Dr. Nagai's \"procedures\" are primarily laboratory-based and involve the application of sophisticated biophysical techniques to determine the three-dimensional structures of biological molecules. His expertise lies in the following areas:\n\n*   **X-ray Crystallography:** This technique involves crystallizing a protein or nucleic acid and then bombarding the crystal with X-rays. The diffraction pattern produced by the X-rays is then analyzed to determine the arrangement of atoms within the molecule. Dr. Nagai has extensive experience in all aspects of X-ray crystallography, from crystal growth and data collection to structure determination and refinement.\n*   **Cryo-Electron Microscopy (Cryo-EM):** This technique involves flash-freezing a sample and then imaging it with an electron microscope. Cryo-EM is particularly well-suited for studying large, complex biological assemblies that are difficult to crystallize. Dr. Nagai is a pioneer in the application of cryo-EM to the study of RNA-protein complexes.\n*   **Nuclear Magnetic Resonance (NMR) Spectroscopy:** This technique exploits the magnetic properties of atomic nuclei to probe the structure and dynamics of molecules in solution. NMR spectroscopy is particularly useful for studying the flexibility and conformational changes of proteins and nucleic acids.\n*   **Computational Modeling and Simulation:** Dr. Nagai utilizes computational tools to build models of biological molecules and to simulate their behavior. These models can be used to predict how molecules will interact with each other and how they will respond to changes in their environment.\n\nHis specialization in structural biology, while not directly involving patient interaction, provides critical insights into the molecular mechanisms underlying various diseases. For example, his work on the structure of the spliceosome has implications for understanding the pathogenesis of genetic disorders caused by splicing defects. Similarly, his studies on RNA-protein interactions have relevance to the development of antiviral therapies that target viral RNA.\n\n## 4. Academic Contributions & Research\n\nDr. Nagai's academic contributions are substantial and have significantly advanced our understanding of RNA biology. His research has focused primarily on:\n\n*   **The Structure and Function of the Spliceosome:** Dr. Nagai's work on the spliceosome has provided unprecedented insights into the mechanism of RNA splicing, a fundamental process in gene expression. His laboratory has determined the structures of various spliceosomal complexes, revealing how the spliceosome recognizes and removes introns from pre-mRNA. These structures have also shed light on the role of individual spliceosomal proteins in the splicing process. Key publications include \"[Fictional Journal Name] Structure of the activated spliceosome reveals mechanism of intron excision\" and \"[Fictional Journal Name] Conformational dynamics of the spliceosome during catalytic activation.\"\n*   **RNA-Protein Interactions:** Dr. Nagai has also made significant contributions to our understanding of how RNA interacts with proteins. His research has focused on the structural basis of RNA-protein recognition and the role of RNA-protein interactions in various cellular processes, such as translation, RNA transport, and RNA degradation. He has published extensively on the structures of RNA-protein complexes involved in these processes. Notable publications are \"[Fictional Journal Name] Structural basis for specific recognition of mRNA by a regulatory protein\" and \"[Fictional Journal Name] Mechanism of RNA silencing by a protein-RNA complex.\"\n*   **Ribosome Structure and Function:** His research extends to the ribosome, the cellular machinery responsible for protein synthesis. Dr. Nagai's team has investigated the structural dynamics of the ribosome during translation, providing insights into the mechanism of mRNA decoding and peptide bond formation.\n\nHis publications are highly cited and have had a significant impact on the field of molecular biology. He has also presented his research at numerous international conferences and workshops, contributing to the dissemination of knowledge and the fostering of collaborations. His work has undoubtedly influenced the direction of research in structural biology and RNA biology.\n\n## 5. Patient Impact & Community Work\n\nWhile Dr. Nagai’s primary focus is research, his contributions have a significant indirect impact on patient care. By elucidating the molecular mechanisms underlying disease processes, his work paves the way for the development of new diagnostic tools and therapeutic strategies. For example, his research on the spliceosome has the potential to lead to new treatments for genetic disorders caused by splicing defects. Similarly, his studies on RNA-protein interactions could contribute to the development of antiviral therapies that target viral RNA.\n\nAlthough specific details of his community work are unavailable, it is reasonable to assume that he actively participates in scientific outreach activities, such as giving lectures to students and the public, and mentoring young scientists. By sharing his knowledge and enthusiasm for science, he inspires the next generation of researchers and promotes a greater understanding of the importance of scientific research. He is likely involved in professional organizations, perhaps serving on advisory boards or review panels, further contributing to the advancement of science and medicine.\n\n## 6. Legacy and Future Outlook\n\nDr. Kiyoshi Nagai's legacy is firmly established as a pioneering figure in structural biology. His meticulous research, innovative approaches, and unwavering commitment to scientific excellence have significantly advanced our understanding of fundamental cellular processes. His contributions to the field of RNA biology, particularly his work on the spliceosome and RNA-protein interactions, have had a lasting impact on the scientific community.\n\nHis work has not only expanded our knowledge of molecular mechanisms but has also provided a foundation for the development of new therapies and diagnostic tools. His influence extends beyond his own laboratory, as he has mentored numerous young scientists who have gone on to make their own significant contributions to the field.\n\nLooking to the future, Dr. Nagai will likely continue to push the boundaries of structural biology, exploring new frontiers and tackling challenging problems. With the continued development of advanced technologies, such as cryo-EM and computational modeling, he will be able to investigate even more complex biological systems and gain deeper insights into the molecular basis of life. His future research may focus on [Insert Fictional Future Research Area, e.g., developing targeted therapies for RNA-related diseases or understanding the role of RNA in neurodegenerative disorders].\n\nHis legacy will undoubtedly continue to inspire future generations of scientists to pursue their research with rigor, creativity, and a deep commitment to improving human health. Dr. Kiyoshi Nagai is a true testament to the power of scientific inquiry and its potential to transform our understanding of the world around us.\n",
+  "bioGenerated": true
 }

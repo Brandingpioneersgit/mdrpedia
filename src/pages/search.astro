@@ -1,31 +1,86 @@
 ---
 /**
- * MDRPedia — Search Results Page
- * Displays search results for doctor queries
+ * MDRPedia — Enhanced Search Results Page
+ * Features real-time autocomplete, keyboard navigation, and improved UX
  */
 import Layout from "../layouts/Layout.astro";
 import TierBadge from "../components/TierBadge.astro";
+import EnhancedSearch from "../components/EnhancedSearch";
 import { getCollection } from "astro:content";
 
 const query = Astro.url.searchParams.get("q")?.trim() || "";
+const specialtyFilter = Astro.url.searchParams.get("specialty")?.trim() || "";
+const countryFilter = Astro.url.searchParams.get("country")?.trim() || "";
+
 const allDoctors = await getCollection("doctors");
 
-// Search logic
+// Enhanced search logic with better matching
 let results: typeof allDoctors = [];
+let searchTime = 0;
+
 if (query.length >= 2) {
+    const startTime = performance.now();
     const q = query.toLowerCase();
+    const specialtyQ = specialtyFilter.toLowerCase();
+    const countryQ = countryFilter.toLowerCase();
+
     results = allDoctors
-        .filter((d) => {
-            const searchText = `${d.data.fullName} ${d.data.specialty || ""} ${d.data.geography?.country || ""} ${d.data.geography?.city || ""}`.toLowerCase();
-            return searchText.includes(q);
+        .map((d) => {
+            const data = d.data;
+            const fullNameLower = data.fullName.toLowerCase();
+            const specialtyLower = (data.specialty || "").toLowerCase();
+            const countryLower = (data.geography?.country || "").toLowerCase();
+            const cityLower = (data.geography?.city || "").toLowerCase();
+
+            // Calculate relevance score
+            let score = 0;
+
+            // Name matching
+            if (fullNameLower === q) score += 100;
+            else if (fullNameLower.startsWith(q)) score += 80;
+            else if (fullNameLower.includes(q)) score += 50;
+
+            // First/last name matching
+            const nameParts = fullNameLower.split(' ');
+            if (nameParts.some(part => part === q)) score += 70;
+            else if (nameParts.some(part => part.startsWith(q))) score += 40;
+
+            // Specialty matching
+            if (specialtyLower.includes(q)) score += 30;
+
+            // Location matching
+            if (countryLower.includes(q) || cityLower.includes(q)) score += 20;
+
+            // Apply filters
+            if (specialtyQ && !specialtyLower.includes(specialtyQ)) return null;
+            if (countryQ && !countryLower.includes(countryQ)) return null;
+
+            // Tier bonus
+            const tierBonus: Record<string, number> = { TITAN: 15, ELITE: 10, MASTER: 5, UNRANKED: 0 };
+            score += tierBonus[data.tier] || 0;
+
+            // H-index bonus (up to 10 points)
+            score += Math.min((data.hIndex || 0) / 10, 10);
+
+            return score > 0 ? { doctor: d, score } : null;
         })
-        .sort((a, b) => {
-            // Titans first, then Elite, then Master
-            const tierOrder: Record<string, number> = { TITAN: 0, ELITE: 1, MASTER: 2, UNRANKED: 3 };
-            return (tierOrder[a.data.tier] ?? 3) - (tierOrder[b.data.tier] ?? 3);
-        })
-        .slice(0, 50); // Limit to 50 results
+        .filter((item): item is { doctor: typeof allDoctors[0]; score: number } => item !== null)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 50)
+        .map(item => item.doctor);
+
+    searchTime = Math.round(performance.now() - startTime);
 }
+
+// Get unique specialties and countries for filter suggestions
+const specialties = [...new Set(allDoctors.map(d => d.data.specialty).filter(Boolean))].sort();
+const countries = [...new Set(allDoctors.map(d => d.data.geography?.country).filter(Boolean))].sort();
+
+// Count by tier for stats
+const tierCounts = results.reduce((acc, d) => {
+    acc[d.data.tier] = (acc[d.data.tier] || 0) + 1;
+    return acc;
+}, {} as Record<string, number>);
 ---
 
 <Layout title={query ? `Search: ${query} — MDRPedia` : "Search — MDRPedia"}>
@@ -33,40 +88,99 @@ if (query.length >= 2) {
         <div class="container">
             <!-- Search Header -->
             <div class="search-header">
-                <h1>Search Results</h1>
-                <form action="/search" method="get" class="search-form">
-                    <div class="search-bar">
-                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <h1 class="search-title">
+                    <span class="search-title-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.3-4.3"></path>
                         </svg>
-                        <input
-                            type="text"
-                            name="q"
-                            value={query}
-                            placeholder="Search doctors by name, specialty, or location..."
-                            class="search-input"
-                            autocomplete="off"
-                            autofocus
-                        />
-                        <button type="submit" class="search-submit">Search</button>
-                    </div>
-                </form>
+                    </span>
+                    Search Doctors
+                </h1>
+                <p class="search-subtitle">
+                    Find verified medical professionals from our database of {allDoctors.length.toLocaleString()}+ profiles
+                </p>
             </div>
 
-            <!-- Results -->
+            <!-- Enhanced Search Component (client-side) -->
+            <div class="search-wrapper">
+                <EnhancedSearch
+                    client:load
+                    initialQuery={query}
+                    autoFocus={!query}
+                    showFilters={true}
+                />
+            </div>
+
+            <!-- Active Filters -->
+            {(specialtyFilter || countryFilter) && (
+                <div class="active-filters">
+                    <span class="filters-label">Active filters:</span>
+                    {specialtyFilter && (
+                        <a href={`/search?q=${encodeURIComponent(query)}${countryFilter ? `&country=${encodeURIComponent(countryFilter)}` : ''}`} class="filter-chip">
+                            <span>Specialty: {specialtyFilter}</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 6L6 18M6 6l12 12"/>
+                            </svg>
+                        </a>
+                    )}
+                    {countryFilter && (
+                        <a href={`/search?q=${encodeURIComponent(query)}${specialtyFilter ? `&specialty=${encodeURIComponent(specialtyFilter)}` : ''}`} class="filter-chip">
+                            <span>Country: {countryFilter}</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 6L6 18M6 6l12 12"/>
+                            </svg>
+                        </a>
+                    )}
+                    <a href={`/search?q=${encodeURIComponent(query)}`} class="clear-all">Clear all</a>
+                </div>
+            )}
+
+            <!-- Results Section -->
             {query.length >= 2 ? (
                 <div class="results-section">
-                    <p class="results-count">
-                        {results.length === 0
-                            ? `No results found for "${query}"`
-                            : `Found ${results.length} result${results.length === 1 ? "" : "s"} for "${query}"`
-                        }
-                    </p>
+                    <!-- Results Header -->
+                    <div class="results-header">
+                        <div class="results-meta">
+                            <p class="results-count">
+                                {results.length === 0
+                                    ? `No results found for "${query}"`
+                                    : `Found ${results.length} result${results.length === 1 ? "" : "s"} for "${query}"`
+                                }
+                            </p>
+                            {searchTime > 0 && (
+                                <span class="search-time">({searchTime}ms)</span>
+                            )}
+                        </div>
+
+                        {/* Tier breakdown */}
+                        {results.length > 0 && (
+                            <div class="tier-breakdown">
+                                {tierCounts['TITAN'] > 0 && (
+                                    <span class="tier-count tier-count--titan">
+                                        <span class="tier-dot"></span>
+                                        {tierCounts['TITAN']} Titan{tierCounts['TITAN'] > 1 ? 's' : ''}
+                                    </span>
+                                )}
+                                {tierCounts['ELITE'] > 0 && (
+                                    <span class="tier-count tier-count--elite">
+                                        <span class="tier-dot"></span>
+                                        {tierCounts['ELITE']} Elite
+                                    </span>
+                                )}
+                                {tierCounts['MASTER'] > 0 && (
+                                    <span class="tier-count tier-count--master">
+                                        <span class="tier-dot"></span>
+                                        {tierCounts['MASTER']} Master{tierCounts['MASTER'] > 1 ? 's' : ''}
+                                    </span>
+                                )}
+                            </div>
+                        )}
+                    </div>
 
                     {results.length > 0 && (
                         <div class="results-grid">
-                            {results.map((doctor) => {
+                            {results.map((doctor, index) => {
                                 const d = doctor.data;
                                 const location = [d.geography?.city, d.geography?.country]
                                     .filter(Boolean)
@@ -78,9 +192,15 @@ if (query.length >= 2) {
                                     .join("")
                                     .toUpperCase();
                                 const hasImage = d.portraitUrl && !d.portraitUrl.startsWith("data:");
+                                const totalCitations = d.citations?.reduce((sum: number, c: any) => sum + (c.totalCitationCount || 0), 0) || 0;
 
                                 return (
-                                    <a href={`/doctors/${doctor.id}`} class={`result-card result-card--${d.tier.toLowerCase()}`}>
+                                    <a
+                                        href={`/doctor/${doctor.id}`}
+                                        class={`result-card result-card--${d.tier.toLowerCase()}`}
+                                        style={`--animation-delay: ${index * 30}ms`}
+                                    >
+                                        <div class="result-rank">#{index + 1}</div>
                                         <div class={`result-avatar avatar--${d.tier.toLowerCase()}`}>
                                             {hasImage ? (
                                                 <img src={d.portraitUrl} alt={d.fullName} loading="lazy" />
@@ -94,11 +214,36 @@ if (query.length >= 2) {
                                                 <TierBadge tier={d.tier as "TITAN" | "ELITE" | "MASTER" | "UNRANKED"} size="sm" />
                                             </div>
                                             <p class="result-specialty">{d.specialty}</p>
-                                            {location && <p class="result-location">{location}</p>}
+                                            {location && (
+                                                <p class="result-location">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                                        <circle cx="12" cy="10" r="3"/>
+                                                    </svg>
+                                                    {location}
+                                                </p>
+                                            )}
                                             <div class="result-stats">
-                                                <span>H-Index: <strong>{d.hIndex || "—"}</strong></span>
-                                                <span>Citations: <strong>{d.citations?.length || 0}</strong></span>
+                                                <span class="stat">
+                                                    <span class="stat-label">H-Index</span>
+                                                    <span class="stat-value">{d.hIndex || "—"}</span>
+                                                </span>
+                                                <span class="stat">
+                                                    <span class="stat-label">Publications</span>
+                                                    <span class="stat-value">{d.citations?.length || 0}</span>
+                                                </span>
+                                                {totalCitations > 0 && (
+                                                    <span class="stat">
+                                                        <span class="stat-label">Citations</span>
+                                                        <span class="stat-value">{totalCitations.toLocaleString()}</span>
+                                                    </span>
+                                                )}
                                             </div>
+                                        </div>
+                                        <div class="result-arrow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9 18l6-6-6-6"/>
+                                            </svg>
                                         </div>
                                     </a>
                                 );
@@ -108,28 +253,111 @@ if (query.length >= 2) {
 
                     {results.length === 0 && (
                         <div class="no-results">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.3-4.3"/>
-                            </svg>
+                            <div class="no-results-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="m21 21-4.3-4.3"/>
+                                    <path d="M8 8l6 6M14 8l-6 6"/>
+                                </svg>
+                            </div>
                             <h3>No doctors found</h3>
-                            <p>Try a different search term or browse all profiles</p>
-                            <a href="/doctors" class="btn btn--primary">Browse All Doctors</a>
+                            <p>We couldn't find any doctors matching "{query}"</p>
+                            <div class="no-results-suggestions">
+                                <p class="suggestions-title">Suggestions:</p>
+                                <ul>
+                                    <li>Check the spelling of your search term</li>
+                                    <li>Try searching for a different name or specialty</li>
+                                    <li>Use broader terms (e.g., "cardiology" instead of "interventional cardiology")</li>
+                                </ul>
+                            </div>
+                            <div class="no-results-actions">
+                                <a href="/global-leaders" class="btn btn--secondary">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                    </svg>
+                                    Browse Top Doctors
+                                </a>
+                                <a href="/specialties" class="btn btn--primary">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                    </svg>
+                                    Browse by Specialty
+                                </a>
+                            </div>
                         </div>
                     )}
                 </div>
             ) : query.length > 0 ? (
-                <div class="no-results">
+                <div class="min-chars-notice">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v4M12 16h.01"/>
+                    </svg>
                     <p>Please enter at least 2 characters to search</p>
                 </div>
             ) : (
-                <div class="no-results">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.3-4.3"/>
-                    </svg>
-                    <h3>Search MDRPedia</h3>
-                    <p>Find verified medical professionals by name, specialty, or location</p>
+                <div class="search-landing">
+                    <div class="landing-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.3-4.3"/>
+                        </svg>
+                    </div>
+                    <h3>Find Medical Experts</h3>
+                    <p>Search our comprehensive database of verified medical professionals</p>
+
+                    <!-- Popular Specialties -->
+                    <div class="popular-section">
+                        <h4>Popular Specialties</h4>
+                        <div class="popular-tags">
+                            <a href="/search?q=cardiology" class="popular-tag">❤️ Cardiology</a>
+                            <a href="/search?q=neurology" class="popular-tag">🧠 Neurology</a>
+                            <a href="/search?q=oncology" class="popular-tag">🎗️ Oncology</a>
+                            <a href="/search?q=surgery" class="popular-tag">🔪 Surgery</a>
+                            <a href="/search?q=pediatrics" class="popular-tag">👶 Pediatrics</a>
+                            <a href="/search?q=orthopedics" class="popular-tag">🦴 Orthopedics</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="quick-links">
+                        <a href="/global-leaders" class="quick-link">
+                            <div class="quick-link-icon quick-link-icon--gold">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="quick-link-text">
+                                <span class="quick-link-title">Global Leaders</span>
+                                <span class="quick-link-desc">Top-tier medical experts</span>
+                            </div>
+                        </a>
+                        <a href="/nobel-laureates" class="quick-link">
+                            <div class="quick-link-icon quick-link-icon--purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="6"/>
+                                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                                </svg>
+                            </div>
+                            <div class="quick-link-text">
+                                <span class="quick-link-title">Nobel Laureates</span>
+                                <span class="quick-link-desc">Prize-winning researchers</span>
+                            </div>
+                        </a>
+                        <a href="/specialties" class="quick-link">
+                            <div class="quick-link-icon quick-link-icon--blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <div class="quick-link-text">
+                                <span class="quick-link-title">By Specialty</span>
+                                <span class="quick-link-desc">Browse all specialties</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             )}
         </div>
@@ -143,72 +371,149 @@ if (query.length >= 2) {
     }
 
     .search-header {
-        margin-bottom: 40px;
+        text-align: center;
+        margin-bottom: 32px;
     }
 
-    .search-header h1 {
-        font-size: 1.75rem;
+    .search-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-size: 2rem;
         font-weight: 700;
         color: white;
+        margin-bottom: 8px;
+    }
+
+    .search-title-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, var(--accent-purple), #7c3aed);
+        border-radius: 12px;
+    }
+
+    .search-title-icon svg {
+        width: 24px;
+        height: 24px;
+        color: white;
+    }
+
+    .search-subtitle {
+        color: var(--text-muted);
+        font-size: 1rem;
+    }
+
+    .search-wrapper {
+        max-width: 800px;
+        margin: 0 auto 32px;
+    }
+
+    /* Active Filters */
+    .active-filters {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        padding: 16px;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 12px;
+    }
+
+    .filters-label {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .filter-chip {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: white;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .filter-chip:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .filter-chip svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .clear-all {
+        font-size: 0.85rem;
+        color: var(--accent-purple);
+        text-decoration: none;
+        margin-left: auto;
+    }
+
+    .clear-all:hover {
+        text-decoration: underline;
+    }
+
+    /* Results Header */
+    .results-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
         margin-bottom: 24px;
     }
 
-    .search-form {
-        max-width: 700px;
-    }
-
-    .search-bar {
+    .results-meta {
         display: flex;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .search-icon {
-        width: 20px;
-        height: 20px;
-        margin-left: 16px;
-        color: var(--text-muted);
-        flex-shrink: 0;
-    }
-
-    .search-input {
-        flex: 1;
-        padding: 14px 16px;
-        font-size: 1rem;
-        background: transparent;
-        border: none;
-        color: white;
-        outline: none;
-    }
-
-    .search-input::placeholder {
-        color: var(--text-muted);
-    }
-
-    .search-submit {
-        padding: 14px 24px;
-        background: var(--accent-purple);
-        color: white;
-        border: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: background 0.15s;
-    }
-
-    .search-submit:hover {
-        background: #7c3aed;
+        align-items: baseline;
+        gap: 8px;
     }
 
     .results-count {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 24px;
+        color: var(--text-secondary);
+        font-size: 1rem;
+        margin: 0;
     }
 
+    .search-time {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    .tier-breakdown {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tier-count {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .tier-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .tier-count--titan .tier-dot { background: #ffd700; }
+    .tier-count--elite .tier-dot { background: #00aaff; }
+    .tier-count--master .tier-dot { background: #00cc66; }
+
+    /* Results Grid */
     .results-grid {
         display: flex;
         flex-direction: column;
@@ -222,28 +527,61 @@ if (query.length >= 2) {
         padding: 20px;
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 14px;
+        border-radius: 16px;
         text-decoration: none;
         transition: all 0.2s;
+        animation: slideIn 0.3s ease-out both;
+        animation-delay: var(--animation-delay, 0ms);
+        position: relative;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .result-card:hover {
         background: rgba(255, 255, 255, 0.04);
-        border-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.12);
         transform: translateX(4px);
     }
 
     .result-card--titan:hover {
-        border-color: rgba(255, 215, 0, 0.3);
+        border-color: rgba(255, 215, 0, 0.4);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
     }
 
     .result-card--elite:hover {
-        border-color: rgba(0, 170, 255, 0.3);
+        border-color: rgba(0, 170, 255, 0.4);
+        box-shadow: 0 0 30px rgba(0, 170, 255, 0.1);
+    }
+
+    .result-card--master:hover {
+        border-color: rgba(0, 204, 102, 0.4);
+        box-shadow: 0 0 30px rgba(0, 204, 102, 0.1);
+    }
+
+    .result-rank {
+        position: absolute;
+        top: -8px;
+        left: 12px;
+        padding: 2px 8px;
+        background: rgba(139, 92, 246, 0.9);
+        border-radius: 10px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: white;
     }
 
     .result-avatar {
-        width: 60px;
-        height: 60px;
+        width: 64px;
+        height: 64px;
         border-radius: 14px;
         overflow: hidden;
         flex-shrink: 0;
@@ -255,18 +593,18 @@ if (query.length >= 2) {
     }
 
     .avatar--titan {
-        border-color: rgba(255, 215, 0, 0.4);
-        background: rgba(255, 215, 0, 0.08);
+        border-color: rgba(255, 215, 0, 0.5);
+        background: rgba(255, 215, 0, 0.1);
     }
 
     .avatar--elite {
-        border-color: rgba(0, 170, 255, 0.4);
-        background: rgba(0, 170, 255, 0.08);
+        border-color: rgba(0, 170, 255, 0.5);
+        background: rgba(0, 170, 255, 0.1);
     }
 
     .avatar--master {
-        border-color: rgba(0, 204, 102, 0.4);
-        background: rgba(0, 204, 102, 0.08);
+        border-color: rgba(0, 204, 102, 0.5);
+        background: rgba(0, 204, 102, 0.1);
     }
 
     .result-avatar img {
@@ -277,7 +615,7 @@ if (query.length >= 2) {
 
     .avatar-initials {
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.1rem;
         color: var(--text-muted);
     }
 
@@ -298,7 +636,7 @@ if (query.length >= 2) {
     }
 
     .result-name {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         font-weight: 600;
         color: white;
         margin: 0;
@@ -311,48 +649,327 @@ if (query.length >= 2) {
     .result-specialty {
         font-size: 0.9rem;
         color: var(--text-secondary);
-        margin-bottom: 2px;
+        margin: 0 0 4px;
     }
 
     .result-location {
+        display: flex;
+        align-items: center;
+        gap: 6px;
         font-size: 0.85rem;
         color: var(--text-muted);
-        margin-bottom: 8px;
+        margin: 0 0 12px;
+    }
+
+    .result-location svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
     }
 
     .result-stats {
         display: flex;
         gap: 20px;
-        font-size: 0.8rem;
-        color: var(--text-muted);
     }
 
-    .result-stats strong {
+    .stat {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .stat-value {
+        font-size: 0.95rem;
+        font-weight: 600;
         color: var(--text-secondary);
     }
 
+    .result-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        color: var(--text-muted);
+        transition: all 0.2s;
+    }
+
+    .result-card:hover .result-arrow {
+        background: var(--accent-purple);
+        color: white;
+        transform: translateX(4px);
+    }
+
+    .result-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* No Results */
     .no-results {
         text-align: center;
         padding: 60px 20px;
-        color: var(--text-muted);
     }
 
-    .no-results svg {
-        opacity: 0.3;
-        margin-bottom: 20px;
+    .no-results-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(239, 68, 68, 0.1);
+        border-radius: 20px;
+    }
+
+    .no-results-icon svg {
+        width: 40px;
+        height: 40px;
+        color: #ef4444;
     }
 
     .no-results h3 {
-        font-size: 1.25rem;
-        color: var(--text-secondary);
+        font-size: 1.5rem;
+        color: white;
         margin-bottom: 8px;
     }
 
-    .no-results p {
-        font-size: 0.95rem;
+    .no-results > p {
+        color: var(--text-muted);
+        font-size: 1rem;
         margin-bottom: 24px;
     }
 
+    .no-results-suggestions {
+        max-width: 400px;
+        margin: 0 auto 32px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .suggestions-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .no-results-suggestions ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-results-suggestions li {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        padding: 6px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .no-results-suggestions li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent-purple);
+    }
+
+    .no-results-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Min Chars Notice */
+    .min-chars-notice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 24px;
+        background: rgba(234, 179, 8, 0.1);
+        border: 1px solid rgba(234, 179, 8, 0.2);
+        border-radius: 12px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .min-chars-notice svg {
+        width: 24px;
+        height: 24px;
+        color: #eab308;
+        flex-shrink: 0;
+    }
+
+    .min-chars-notice p {
+        color: #eab308;
+        margin: 0;
+    }
+
+    /* Search Landing */
+    .search-landing {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .landing-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));
+        border-radius: 20px;
+    }
+
+    .landing-icon svg {
+        width: 40px;
+        height: 40px;
+        color: var(--accent-purple);
+    }
+
+    .search-landing h3 {
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 8px;
+    }
+
+    .search-landing > p {
+        color: var(--text-muted);
+        margin-bottom: 32px;
+    }
+
+    /* Popular Section */
+    .popular-section {
+        margin-bottom: 40px;
+    }
+
+    .popular-section h4 {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+    }
+
+    .popular-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .popular-tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .popular-tag:hover {
+        background: rgba(139, 92, 246, 0.15);
+        border-color: rgba(139, 92, 246, 0.3);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Quick Links */
+    .quick-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .quick-link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .quick-link:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .quick-link-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        flex-shrink: 0;
+    }
+
+    .quick-link-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .quick-link-icon--gold {
+        background: rgba(255, 215, 0, 0.15);
+        color: #ffd700;
+    }
+
+    .quick-link-icon--purple {
+        background: rgba(139, 92, 246, 0.15);
+        color: #a78bfa;
+    }
+
+    .quick-link-icon--blue {
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+    }
+
+    .quick-link-text {
+        text-align: left;
+    }
+
+    .quick-link-title {
+        display: block;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 2px;
+    }
+
+    .quick-link-desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    /* Buttons */
     .btn {
         display: inline-flex;
         align-items: center;
@@ -365,6 +982,11 @@ if (query.length >= 2) {
         transition: all 0.15s;
     }
 
+    .btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .btn--primary {
         background: var(--accent-purple);
         color: white;
@@ -372,25 +994,78 @@ if (query.length >= 2) {
 
     .btn--primary:hover {
         background: #7c3aed;
+        transform: translateY(-2px);
     }
 
-    @media (max-width: 640px) {
+    .btn--secondary {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .btn--secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .search-title {
+            font-size: 1.5rem;
+        }
+
+        .search-title-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .search-title-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .results-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .tier-breakdown {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
         .result-card {
             flex-direction: column;
             align-items: flex-start;
-            gap: 12px;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .result-rank {
+            top: 8px;
+            left: 8px;
+        }
+
+        .result-avatar {
+            width: 56px;
+            height: 56px;
         }
 
         .result-header {
             flex-wrap: wrap;
         }
 
-        .search-bar {
+        .result-stats {
             flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .search-submit {
-            width: 100%;
+        .result-arrow {
+            display: none;
+        }
+
+        .quick-links {
+            grid-template-columns: 1fr;
         }
     }
 </style>

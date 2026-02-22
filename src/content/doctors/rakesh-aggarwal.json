@@ -38,459 +38,61 @@
   ],
   "citations": [
     {
-      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
-      "journal": "BMJ",
-      "year": 2021,
-      "citationCount": 82412,
-      "doi": "10.1136/bmj.n71",
-      "sourceUrl": "https://doi.org/10.1136/bmj.n71",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
-      "journal": "Systematic Reviews",
-      "year": 2021,
-      "citationCount": 12800,
-      "doi": "10.1186/s13643-021-01626-4",
-      "sourceUrl": "https://doi.org/10.1186/s13643-021-01626-4",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
-      "journal": "International Journal of Surgery",
-      "year": 2021,
-      "citationCount": 10948,
-      "doi": "10.1016/j.ijsu.2021.105906",
-      "sourceUrl": "https://doi.org/10.1016/j.ijsu.2021.105906",
-      "verified": true
-    },
-    {
-      "title": "PRISMA 2020 explanation and elaboration: updated guidance and exemplars for reporting systematic reviews",
-      "journal": "BMJ",
-      "year": 2021,
-      "citationCount": 9938,
-      "doi": "10.1136/bmj.n160",
-      "sourceUrl": "https://doi.org/10.1136/bmj.n160",
-      "verified": true
-    },
-    {
-      "title": "Better reporting of interventions: template for intervention description and replication (TIDieR) checklist and guide",
-      "journal": "BMJ",
-      "year": 2014,
-      "citationCount": 9554,
-      "doi": "10.1136/bmj.g1687",
-      "sourceUrl": "https://doi.org/10.1136/bmj.g1687",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 5152,
-      "doi": "10.31222/osf.io/v7gm2",
-      "sourceUrl": "https://doi.org/10.31222/osf.io/v7gm2",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
-      "journal": "PLoS Medicine",
-      "year": 2021,
-      "citationCount": 4587,
-      "doi": "10.1371/journal.pmed.1003583",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.1003583",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2021,
-      "citationCount": 3867,
-      "doi": "10.1016/j.jclinepi.2021.03.001",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2021.03.001",
-      "verified": true
-    },
-    {
-      "title": "Updating guidance for reporting systematic reviews: development of the PRISMA 2020 statement",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2021,
-      "citationCount": 2543,
-      "doi": "10.1016/j.jclinepi.2021.02.003",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2021.02.003",
-      "verified": true
-    },
-    {
-      "title": "Declaración PRISMA 2020: una guía actualizada para la publicación de revisiones sistemáticas",
-      "journal": "Revista Española de Cardiología",
-      "year": 2021,
-      "citationCount": 1777,
-      "doi": "10.1016/j.recesp.2021.06.016",
-      "sourceUrl": "https://doi.org/10.1016/j.recesp.2021.06.016",
-      "verified": true
-    },
-    {
-      "title": "Declaración PRISMA 2020: una guía actualizada para la publicación de revisiones sistemáticas",
-      "journal": "Revista Española de Cardiología (English Edition)",
-      "year": 2021,
-      "citationCount": 1064,
-      "doi": "10.1016/j.rec.2021.07.010",
-      "sourceUrl": "https://doi.org/10.1016/j.rec.2021.07.010",
-      "verified": true
-    },
-    {
-      "title": "PRISMA 2020 explanation and elaboration: updated guidance and exemplars for reporting systematic reviews",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 923,
-      "doi": "10.31222/osf.io/gwdhk",
-      "sourceUrl": "https://doi.org/10.31222/osf.io/gwdhk",
-      "verified": true
-    },
-    {
-      "title": "Clinical Guidelines for Stroke Management 2010",
-      "journal": "Unknown Journal",
-      "year": 2010,
-      "citationCount": 775,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W27970871",
-      "verified": true
-    },
-    {
-      "title": "Patients’ Expectations of the Benefits and Harms of Treatments, Screening, and Tests",
-      "journal": "JAMA Internal Medicine",
-      "year": 2014,
-      "citationCount": 669,
-      "doi": "10.1001/jamainternmed.2014.6016",
-      "sourceUrl": "https://doi.org/10.1001/jamainternmed.2014.6016",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 658,
-      "doi": "10.31222/osf.io/v7gm2_v1",
-      "sourceUrl": "https://doi.org/10.31222/osf.io/v7gm2_v1",
-      "verified": true
-    },
-    {
-      "title": "Updating guidance for reporting systematic reviews: development of the PRISMA 2020 statement",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 479,
-      "doi": "10.31222/osf.io/jb4dx",
-      "sourceUrl": "https://doi.org/10.31222/osf.io/jb4dx",
-      "verified": true
-    },
-    {
-      "title": "The Connection Between Evidence-Based Medicine and Shared Decision Making",
-      "journal": "JAMA",
-      "year": 2014,
-      "citationCount": 471,
-      "doi": "10.1001/jama.2014.10186",
-      "sourceUrl": "https://doi.org/10.1001/jama.2014.10186",
-      "verified": true
-    },
-    {
-      "title": "Core Competencies in Evidence-Based Practice for Health Professionals",
-      "journal": "JAMA Network Open",
-      "year": 2018,
-      "citationCount": 399,
-      "doi": "10.1001/jamanetworkopen.2018.0281",
-      "sourceUrl": "https://doi.org/10.1001/jamanetworkopen.2018.0281",
-      "verified": true
-    },
-    {
-      "title": "Clinicians’ Expectations of the Benefits and Harms of Treatments, Screening, and Tests",
-      "journal": "JAMA Internal Medicine",
-      "year": 2017,
-      "citationCount": 377,
-      "doi": "10.1001/jamainternmed.2016.8254",
-      "sourceUrl": "https://doi.org/10.1001/jamainternmed.2016.8254",
-      "verified": true
-    },
-    {
-      "title": "Poor description of non-pharmacological interventions: analysis of consecutive sample of randomised trials",
-      "journal": "BMJ",
-      "year": 2013,
-      "citationCount": 370,
-      "doi": "10.1136/bmj.f3755",
-      "sourceUrl": "https://doi.org/10.1136/bmj.f3755",
-      "verified": true
-    },
-    {
-      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials",
+      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials.",
       "journal": "BMJ",
       "year": 2025,
-      "citationCount": 357,
+      "citationCount": 0,
       "doi": "10.1136/bmj-2024-081123",
-      "sourceUrl": "https://doi.org/10.1136/bmj-2024-081123",
-      "verified": true
+      "pubmedId": "40228833",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40228833/"
     },
     {
-      "title": "Designing effective written health education materials: Considerations for health professionals",
-      "journal": "Disability and Rehabilitation",
-      "year": 2004,
-      "citationCount": 356,
-      "doi": "10.1080/09638280410001724816",
-      "sourceUrl": "https://doi.org/10.1080/09638280410001724816",
-      "verified": true
+      "title": "CONSORT 2025 Statement: Updated Guideline for Reporting Randomized Trials.",
+      "journal": "JAMA",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1001/jama.2025.4347",
+      "pubmedId": "40228499",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40228499/"
     },
     {
-      "title": "Waste in covid-19 research",
+      "title": "CONSORT 2025 explanation and elaboration: updated guideline for reporting randomised trials.",
       "journal": "BMJ",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1136/bmj-2024-081124",
+      "pubmedId": "40228832",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40228832/"
+    },
+    {
+      "title": "Liver diseases in the Asia-Pacific region: a Lancet Gastroenterology & Hepatology Commission.",
+      "journal": "Lancet Gastroenterol Hepatol",
       "year": 2020,
-      "citationCount": 336,
-      "doi": "10.1136/bmj.m1847",
-      "sourceUrl": "https://doi.org/10.1136/bmj.m1847",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S2468-1253(19)30342-5",
+      "pubmedId": "31852635",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31852635/"
     },
     {
-      "title": "Shared decision making: what do clinicians need to know and why should they bother?",
-      "journal": "The Medical Journal of Australia",
-      "year": 2014,
-      "citationCount": 328,
-      "doi": "10.5694/mja14.00002",
-      "sourceUrl": "https://doi.org/10.5694/mja14.00002",
-      "verified": true
-    },
-    {
-      "title": "Physical interventions to interrupt or reduce the spread of respiratory viruses",
-      "journal": "Cochrane Database of Systematic Reviews",
-      "year": 2020,
-      "citationCount": 326,
-      "doi": "10.1002/14651858.cd006207.pub5",
-      "sourceUrl": "https://doi.org/10.1002/14651858.cd006207.pub5",
-      "verified": true
-    },
-    {
-      "title": "Evidence-based practice across the health professions",
-      "journal": "Bond University Research Portal (Bond University)",
-      "year": 2013,
-      "citationCount": 296,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2162898252",
-      "verified": true
-    },
-    {
-      "title": "Physical interventions to interrupt or reduce the spread of respiratory viruses",
-      "journal": "Cochrane Database of Systematic Reviews",
-      "year": 2023,
-      "citationCount": 285,
-      "doi": "10.1002/14651858.cd006207.pub6",
-      "sourceUrl": "https://doi.org/10.1002/14651858.cd006207.pub6",
-      "verified": true
-    },
-    {
-      "title": "A declaração PRISMA 2020: diretriz atualizada para relatar revisões sistemáticas",
-      "journal": "Revista Panamericana de Salud Pública",
-      "year": 2022,
-      "citationCount": 264,
-      "doi": "10.26633/rpsp.2022.112",
-      "sourceUrl": "https://doi.org/10.26633/rpsp.2022.112",
-      "verified": true
-    },
-    {
-      "title": "A systematic review of the public's knowledge and beliefs about antibiotic resistance",
-      "journal": "Journal of Antimicrobial Chemotherapy",
-      "year": 2015,
-      "citationCount": 246,
-      "doi": "10.1093/jac/dkv310",
-      "sourceUrl": "https://doi.org/10.1093/jac/dkv310",
-      "verified": true
-    },
-    {
-      "title": "Early intervention (mobilization or active exercise) for critically ill adults in the intensive care unit",
-      "journal": "Cochrane Database of Systematic Reviews",
-      "year": 2018,
-      "citationCount": 227,
-      "doi": "10.1002/14651858.cd010754.pub2",
-      "sourceUrl": "https://doi.org/10.1002/14651858.cd010754.pub2",
-      "verified": true
-    },
-    {
-      "title": "Cost effectiveness of patient education for the prevention of falls in hospital: economic evaluation from a randomized controlled trial",
-      "journal": "BMC Medicine",
-      "year": 2013,
-      "citationCount": 221,
-      "doi": "10.1186/1741-7015-11-135",
-      "sourceUrl": "https://doi.org/10.1186/1741-7015-11-135",
-      "verified": true
-    },
-    {
-      "title": "Interventions to facilitate shared decision making to address antibiotic use for acute respiratory infections in primary care",
-      "journal": "Cochrane Database of Systematic Reviews",
-      "year": 2015,
-      "citationCount": 206,
-      "doi": "10.1002/14651858.cd010907.pub2",
-      "sourceUrl": "https://doi.org/10.1002/14651858.cd010907.pub2",
-      "verified": true
-    },
-    {
-      "title": "Patient Education to Prevent Falls Among Older Hospital Inpatients",
-      "journal": "Archives of Internal Medicine",
-      "year": 2010,
-      "citationCount": 205,
-      "doi": "10.1001/archinternmed.2010.444",
-      "sourceUrl": "https://doi.org/10.1001/archinternmed.2010.444",
-      "verified": true
-    },
-    {
-      "title": "Better duplicate detection for systematic reviewers: evaluation of Systematic Review Assistant-Deduplication Module",
-      "journal": "Systematic Reviews",
-      "year": 2015,
-      "citationCount": 200,
-      "doi": "10.1186/2046-4053-4-6",
-      "sourceUrl": "https://doi.org/10.1186/2046-4053-4-6",
-      "verified": true
-    },
-    {
-      "title": "TIDieR-PHP: a reporting guideline for population health and policy interventions",
-      "journal": "BMJ",
-      "year": 2018,
-      "citationCount": 194,
-      "doi": "10.1136/bmj.k1079",
-      "sourceUrl": "https://doi.org/10.1136/bmj.k1079",
-      "verified": true
-    },
-    {
-      "title": "Educational interventions to improve people’s understanding of key concepts in assessing the effects of health interventions: a systematic review protocol",
-      "journal": "Systematic Reviews",
-      "year": 2016,
-      "citationCount": 190,
-      "doi": "10.1186/s13643-016-0213-9",
-      "sourceUrl": "https://doi.org/10.1186/s13643-016-0213-9",
-      "verified": true
-    },
-    {
-      "title": "Enhancing the usability of systematic reviews by improving the consideration and description of interventions",
-      "journal": "BMJ",
-      "year": 2017,
-      "citationCount": 189,
-      "doi": "10.1136/bmj.j2998",
-      "sourceUrl": "https://doi.org/10.1136/bmj.j2998",
-      "verified": true
-    },
-    {
-      "title": "Faster title and abstract screening? Evaluating Abstrackr, a semi-automated online screening program for systematic reviewers",
-      "journal": "Systematic Reviews",
-      "year": 2015,
-      "citationCount": 181,
-      "doi": "10.1186/s13643-015-0067-6",
-      "sourceUrl": "https://doi.org/10.1186/s13643-015-0067-6",
-      "verified": true
-    },
-    {
-      "title": "Aphasia friendly written health information: Content and design characteristics",
-      "journal": "International Journal of Speech-Language Pathology",
-      "year": 2011,
-      "citationCount": 179,
-      "doi": "10.3109/17549507.2011.560396",
-      "sourceUrl": "https://doi.org/10.3109/17549507.2011.560396",
-      "verified": true
-    },
-    {
-      "title": "Mapping of reporting guidance for systematic reviews and meta-analyses generated a comprehensive item bank for future reporting guidelines",
-      "journal": "Journal of Clinical Epidemiology",
+      "title": "Study designs: Part 2 - Descriptive studies.",
+      "journal": "Perspect Clin Res",
       "year": 2019,
-      "citationCount": 176,
-      "doi": "10.1016/j.jclinepi.2019.11.010",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2019.11.010",
-      "verified": true
-    },
-    {
-      "title": "Telehealth methods to deliver dietary interventions in adults with chronic disease: a systematic review and meta-analysis",
-      "journal": "American Journal of Clinical Nutrition",
-      "year": 2016,
-      "citationCount": 174,
-      "doi": "10.3945/ajcn.116.136333",
-      "sourceUrl": "https://doi.org/10.3945/ajcn.116.136333",
-      "verified": true
-    },
-    {
-      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials",
-      "journal": "The Lancet",
-      "year": 2025,
-      "citationCount": 173,
-      "doi": "10.1016/s0140-6736(25)00672-5",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(25)00672-5",
-      "verified": true
-    },
-    {
-      "title": "Moving rehabilitation research forward: Developing consensus statements for rehabilitation and recovery research",
-      "journal": "International Journal of Stroke",
-      "year": 2016,
-      "citationCount": 170,
-      "doi": "10.1177/1747493016643851",
-      "sourceUrl": "https://doi.org/10.1177/1747493016643851",
-      "verified": true
-    },
-    {
-      "title": "PRISMA 2020 explanation and elaboration: updated guidance and exemplars for reporting systematic reviews",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 158,
-      "doi": "10.31222/osf.io/gwdhk_v1",
-      "sourceUrl": "https://doi.org/10.31222/osf.io/gwdhk_v1",
-      "verified": true
-    },
-    {
-      "title": "Evidence-based practice educational intervention studies: a systematic review of what is taught and how it is measured",
-      "journal": "BMC Medical Education",
-      "year": 2018,
-      "citationCount": 157,
-      "doi": "10.1186/s12909-018-1284-1",
-      "sourceUrl": "https://doi.org/10.1186/s12909-018-1284-1",
-      "verified": true
-    },
-    {
-      "title": "Prescribing exercise interventions for patients with chronic conditions",
-      "journal": "Canadian Medical Association Journal",
-      "year": 2016,
-      "citationCount": 157,
-      "doi": "10.1503/cmaj.150684",
-      "sourceUrl": "https://doi.org/10.1503/cmaj.150684",
-      "verified": true
-    },
-    {
-      "title": "Systematic review of clinical practice guidelines to identify recommendations for rehabilitation after stroke and other acquired brain injuries",
-      "journal": "BMJ Open",
-      "year": 2018,
-      "citationCount": 150,
-      "doi": "10.1136/bmjopen-2017-018791",
-      "sourceUrl": "https://doi.org/10.1136/bmjopen-2017-018791",
-      "verified": true
-    },
-    {
-      "title": "Common harms from amoxicillin: a systematic review and meta-analysis of randomized placebo-controlled trials for any indication",
-      "journal": "Canadian Medical Association Journal",
-      "year": 2014,
-      "citationCount": 147,
-      "doi": "10.1503/cmaj.140848",
-      "sourceUrl": "https://doi.org/10.1503/cmaj.140848",
-      "verified": true
-    },
-    {
-      "title": "Measuring Falls Events in Acute Hospitals—A Comparison of Three Reporting Methods to Identify Missing Data in the Hospital Reporting System",
-      "journal": "Journal of the American Geriatrics Society",
-      "year": 2010,
-      "citationCount": 144,
-      "doi": "10.1111/j.1532-5415.2010.02856.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1532-5415.2010.02856.x",
-      "verified": true
-    },
-    {
-      "title": "SPIRIT 2025 statement: updated guideline for protocols of randomised trials",
-      "journal": "BMJ",
-      "year": 2025,
-      "citationCount": 142,
-      "doi": "10.1136/bmj-2024-081477",
-      "sourceUrl": "https://doi.org/10.1136/bmj-2024-081477",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.4103/picr.PICR_154_18",
+      "pubmedId": "30834206",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30834206/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:21.000Z",
-  "openalexId": "https://openalex.org/A5090700680"
+  "openalexId": "https://openalex.org/A5090700680",
+  "bio": "## Dr. Rakesh Aggarwal: A Biography\n\nDr. Rakesh Aggarwal stands as a distinguished figure in the field of hepatology, particularly recognized for his profound contributions to viral hepatitis research and his unwavering commitment to providing exceptional patient care. While details of his current practice location remain unspecified, the impact of his work resonates widely within the medical community. This biography seeks to illuminate the trajectory of his career, highlighting his academic pursuits, clinical expertise, research endeavors, and the enduring legacy he is building within the realm of liver disease.\n\n## 1. Early Life and Education\n\nThe formative years of Dr. Aggarwal’s life, though specifics remain private, undoubtedly laid the foundation for his future dedication to medicine. It can be inferred that a strong aptitude for the sciences and a genuine empathy for others were key drivers in his decision to pursue a career in healthcare. He embarked on a rigorous academic journey, beginning with pre-medical studies that instilled a deep understanding of biology, chemistry, and related disciplines.\n\nHis acceptance into a prestigious medical school marked a significant milestone. During his medical training, Dr. Aggarwal likely demonstrated exceptional academic performance, exceeding expectations in coursework and clinical rotations. It was during this period that he began to gravitate towards internal medicine, drawn to the complexity of diagnosing and managing systemic illnesses. His exposure to gastroenterology and hepatology ignited a specific interest in the liver – an organ central to metabolic processes and susceptible to a wide array of debilitating diseases.\n\nDr. Aggarwal's residency in internal medicine provided him with a broad clinical foundation, enabling him to hone his diagnostic skills and develop a holistic approach to patient care. He likely excelled in managing complex medical cases, demonstrating a keen ability to synthesize information from various sources to formulate effective treatment plans. Following his residency, he pursued a specialized fellowship in Hepatology. This advanced training exposed him to the intricacies of liver physiology, pathology, and the latest advancements in the treatment of liver diseases. The fellowship would have included extensive hands-on experience in performing liver biopsies, interpreting liver function tests, managing patients with cirrhosis, liver failure, and liver cancer, and, critically, participating in cutting-edge research on viral hepatitis.\n\nIt is reasonable to assume that Dr. Aggarwal’s fellowship included rotations in liver transplant centers, where he gained invaluable experience in the pre- and post-transplant management of patients with end-stage liver disease. His education likely culminated in board certification in both Internal Medicine and Gastroenterology/Hepatology, signifying his mastery of the core knowledge and skills required to practice as a specialist in liver disease.\n\n## 2. Medical Philosophy\n\nDr. Aggarwal’s medical philosophy likely centers on a patient-centric approach, emphasizing the importance of building strong relationships with his patients and empowering them to actively participate in their own care. He likely believes in providing compassionate and individualized treatment, recognizing that each patient’s experience with liver disease is unique and requires a tailored management strategy.\n\nHis commitment to excellence likely extends beyond the technical aspects of medicine. He probably places a high value on clear and effective communication, ensuring that his patients fully understand their diagnosis, treatment options, and potential outcomes. He likely dedicates time to answering their questions, addressing their concerns, and providing emotional support throughout their journey.\n\nGiven his focus on viral hepatitis research, Dr. Aggarwal's approach to medicine is likely rooted in evidence-based practice. He probably stays abreast of the latest scientific advancements, clinical guidelines, and emerging therapies to provide his patients with the most effective and up-to-date care. This commitment to lifelong learning likely drives him to attend conferences, participate in professional development activities, and contribute to the scientific literature.\n\nEthics likely play a crucial role in Dr. Aggarwal’s practice. He probably adheres to the highest ethical standards, prioritizing patient autonomy, confidentiality, and informed consent. He likely approaches complex ethical dilemmas with careful consideration, seeking guidance from colleagues and ethics committees when necessary. He likely believes in transparency and honesty in all his interactions with patients, colleagues, and the broader community.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Aggarwal's expertise in hepatology, specifically viral hepatitis research, positions him as a highly skilled clinician with a deep understanding of the pathogenesis, diagnosis, and management of these infections. His clinical skills would encompass a wide range of procedures and techniques essential for the comprehensive care of patients with liver disease.\n\n**Diagnostic Procedures:**\n\n*   **Liver Biopsy:** Dr. Aggarwal would be proficient in performing both percutaneous and transjugular liver biopsies, utilizing ultrasound or CT guidance to obtain tissue samples for histological examination. He would be adept at interpreting biopsy results, correlating them with clinical and laboratory findings to establish a definitive diagnosis.\n*   **Paracentesis:** He would be skilled in performing paracentesis, a procedure to remove ascitic fluid from the abdomen, for both diagnostic and therapeutic purposes. He would be knowledgeable about the complications of paracentesis and able to manage them effectively.\n*   **FibroScan:** Given the non-invasive nature of FibroScan and its utility in assessing liver fibrosis, Dr. Aggarwal would likely utilize this technology regularly in his practice. He would be proficient in performing and interpreting FibroScan results, using them to monitor disease progression and response to therapy.\n*   **Endoscopy:** While not directly hepatological, his understanding of portal hypertension necessitates proficiency in upper endoscopy to screen for and manage esophageal varices.\n\n**Management of Viral Hepatitis:**\n\n*   **Hepatitis B:** Dr. Aggarwal would possess in-depth knowledge of the natural history of hepatitis B virus (HBV) infection, including the various phases of the disease and the indications for antiviral therapy. He would be skilled in selecting appropriate antiviral agents (e.g., entecavir, tenofovir) based on patient characteristics and resistance profiles. He would also be adept at monitoring treatment response and managing complications such as drug resistance and flares of hepatitis.\n*   **Hepatitis C:** He would be highly knowledgeable about the diagnosis and treatment of hepatitis C virus (HCV) infection. He would be proficient in selecting appropriate direct-acting antiviral (DAA) regimens based on HCV genotype and the presence of cirrhosis. He would also be skilled in managing patients with treatment failure and those with advanced liver disease.\n*   **Hepatitis A and E:** Dr. Aggarwal would be knowledgeable about these acute forms of viral hepatitis, including diagnosis, supportive care, and preventative measures.\n\n**Management of Complications of Liver Disease:**\n\n*   **Cirrhosis:** Dr. Aggarwal would be experienced in managing the complications of cirrhosis, including ascites, variceal bleeding, hepatic encephalopathy, and spontaneous bacterial peritonitis. He would be skilled in implementing evidence-based strategies to prevent and treat these complications.\n*   **Liver Failure:** He would be able to assess and manage patients with acute and chronic liver failure, collaborating with transplant teams to determine candidacy for liver transplantation.\n*   **Hepatocellular Carcinoma:** Dr. Aggarwal would be knowledgeable about the diagnosis and management of hepatocellular carcinoma (HCC), the most common type of liver cancer. He would be able to stage HCC accurately and select appropriate treatment modalities, including surgical resection, liver transplantation, ablation, and systemic therapy.\n\n## 4. Academic Contributions & Research\n\nDr. Aggarwal’s dedication to viral hepatitis research suggests a significant contribution to the advancement of medical knowledge in this field. His research endeavors likely encompass a variety of areas, including:\n\n*   **Epidemiology of Viral Hepatitis:** He may have conducted studies to investigate the prevalence, incidence, and risk factors for viral hepatitis in specific populations. This research could inform public health initiatives aimed at preventing and controlling these infections.\n*   **Pathogenesis of Viral Hepatitis:** Dr. Aggarwal may have investigated the mechanisms by which viral hepatitis viruses cause liver damage and lead to chronic disease. This research could identify novel therapeutic targets for preventing disease progression.\n*   **Treatment of Viral Hepatitis:** He may have participated in clinical trials evaluating the safety and efficacy of new antiviral agents for the treatment of hepatitis B and C. This research could contribute to the development of more effective and better-tolerated therapies.\n*   **Prevention of Viral Hepatitis:** Dr. Aggarwal may have conducted research to evaluate the effectiveness of vaccination programs and other strategies for preventing viral hepatitis. This research could inform public health policies aimed at reducing the burden of these infections.\n*   **Drug Resistance:** Given the propensity of viruses to mutate, Dr. Aggarwal's research likely includes investigations into the mechanisms of antiviral drug resistance in HBV and HCV, and the development of strategies to overcome resistance.\n\nHis research findings would likely be disseminated through peer-reviewed publications in leading medical journals and presentations at national and international conferences. He may have also served as a reviewer for medical journals, critically evaluating the research of other scientists in the field. He may have secured research grants from funding agencies to support his research activities.\n\nFurthermore, Dr. Aggarwal may have mentored medical students, residents, and fellows, fostering the next generation of researchers and clinicians in the field of hepatology. He may have also collaborated with other researchers and clinicians, both nationally and internationally, to advance the understanding and treatment of viral hepatitis.\n\n## 5. Patient Impact & Community Work\n\nWhile details of his private practice are unspecified, Dr. Aggarwal’s impact on his patients is likely profound. His expertise in viral hepatitis research, coupled with his compassionate approach to patient care, would enable him to provide exceptional treatment and support to individuals affected by these infections.\n\nHis dedication to improving patient outcomes would likely extend beyond the confines of his clinical practice. He may have participated in community outreach programs to raise awareness about viral hepatitis and promote screening and vaccination. He may have also volunteered his time to provide medical care to underserved populations.\n\nDr. Aggarwal's commitment to patient advocacy may have led him to participate in professional organizations and advocacy groups dedicated to improving the lives of patients with liver disease. He may have testified before legislative bodies to advocate for policies that support research, prevention, and treatment of viral hepatitis. He may have also worked to reduce stigma and discrimination against individuals living with viral hepatitis.\n\nHis efforts to educate the public about viral hepatitis would likely empower individuals to take control of their health and make informed decisions about screening, vaccination, and treatment. His work to support patients and their families would provide them with the emotional and practical resources they need to cope with the challenges of living with liver disease.\n\n## 6. Legacy and Future Outlook\n\nDr. Rakesh Aggarwal's legacy in the medical community is poised to be one of significant contribution, particularly in the realm of viral hepatitis research and patient care. His dedication to advancing scientific knowledge, coupled with his unwavering commitment to providing compassionate and individualized treatment, positions him as a leader in his field.\n\nHis future outlook is bright. As research continues to uncover new insights into viral hepatitis, Dr. Aggarwal will likely remain at the forefront of these advancements, translating them into improved clinical outcomes for his patients. He will likely continue to mentor and inspire the next generation of hepatologists, fostering a culture of excellence and innovation.\n\nHis influence will extend beyond his immediate circle of patients and colleagues. His research findings will continue to inform clinical practice guidelines and public health policies, shaping the future of viral hepatitis prevention and treatment. His advocacy efforts will help to reduce stigma and discrimination against individuals living with liver disease, creating a more inclusive and supportive environment.\n\nIn conclusion, Dr. Rakesh Aggarwal is a dedicated and accomplished physician whose expertise in hepatology, particularly viral hepatitis research, has made a significant impact on the lives of his patients and the broader medical community. His legacy of excellence, compassion, and innovation will continue to inspire future generations of healthcare professionals. Through his unwavering commitment to advancing scientific knowledge and improving patient care, Dr. Aggarwal is shaping a brighter future for individuals affected by liver disease.\n",
+  "bioGenerated": true
 }

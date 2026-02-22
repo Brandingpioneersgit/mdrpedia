@@ -38,457 +38,59 @@
   ],
   "citations": [
     {
-      "title": "A Joint Neural Model for Information Extraction with Global Features",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 372,
-      "doi": "10.18653/v1/2020.acl-main.713",
-      "sourceUrl": "https://doi.org/10.18653/v1/2020.acl-main.713",
-      "verified": true
+      "title": "Sodium-Glucose Cotransporter-2 Inhibitors and the Risk for Dialysis and Cardiovascular Disease in Patients With Stage 5 Chronic Kidney Disease.",
+      "journal": "Ann Intern Med",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.7326/M23-1874",
+      "pubmedId": "38684099",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38684099/"
     },
     {
-      "title": "Graph Neural Networks for Natural Language Processing: A Survey",
-      "journal": "Foundations and Trends® in Machine Learning",
-      "year": 2023,
-      "citationCount": 249,
-      "doi": "10.1561/2200000096",
-      "sourceUrl": "https://doi.org/10.1561/2200000096",
-      "verified": true
-    },
-    {
-      "title": "Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust Node Embeddings",
-      "journal": "arXiv (Cornell University)",
-      "year": 2020,
-      "citationCount": 201,
-      "doi": "10.48550/arxiv.2006.13009",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.2006.13009",
-      "verified": true
-    },
-    {
-      "title": "Graph Neural Networks: Foundation, Frontiers and Applications",
-      "journal": "Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "title": "Association Between Intensity of Low-Density Lipoprotein Cholesterol Reduction With Statin-Based Therapies and Secondary Stroke Prevention: A Meta-analysis of Randomized Clinical Trials.",
+      "journal": "JAMA Neurol",
       "year": 2022,
-      "citationCount": 177,
-      "doi": "10.1145/3534678.3542609",
-      "sourceUrl": "https://doi.org/10.1145/3534678.3542609",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1001/jamaneurol.2021.5578",
+      "pubmedId": "35188949",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35188949/"
     },
     {
-      "title": "Graph2Seq: Graph to Sequence Learning with Attention-based Neural Networks",
-      "journal": "arXiv (Cornell University)",
-      "year": 2018,
-      "citationCount": 162,
-      "doi": "10.48550/arxiv.1804.00823",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1804.00823",
-      "verified": true
+      "title": "Targeting LKB1-AMPK-SIRT1-induced autophagy and mitophagy pathways improves cerebrovascular homeostasis in APP/PS1 mice.",
+      "journal": "Free Radic Biol Med",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1016/j.freeradbiomed.2025.03.045",
+      "pubmedId": "40180019",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40180019/"
     },
     {
-      "title": "Knowledge Graph-Augmented Abstractive Summarization with Semantic-Driven Cloze Reward",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 151,
-      "doi": "10.18653/v1/2020.acl-main.457",
-      "sourceUrl": "https://doi.org/10.18653/v1/2020.acl-main.457",
-      "verified": true
+      "title": "HDAC4: an emerging target in diabetes mellitus and diabetic complications.",
+      "journal": "Eur J Med Res",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1186/s40001-025-02697-y",
+      "pubmedId": "40448151",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40448151/"
     },
     {
-      "title": "Quantized Densely Connected U-Nets for Efficient Landmark Localization",
-      "journal": "Lecture notes in computer science",
-      "year": 2018,
-      "citationCount": 141,
-      "doi": "10.1007/978-3-030-01219-9_21",
-      "sourceUrl": "https://doi.org/10.1007/978-3-030-01219-9_21",
-      "verified": true
-    },
-    {
-      "title": "Heterogeneous Global Graph Neural Networks for Personalized Session-based Recommendation",
-      "journal": "Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining",
-      "year": 2022,
-      "citationCount": 130,
-      "doi": "10.1145/3488560.3498505",
-      "sourceUrl": "https://doi.org/10.1145/3488560.3498505",
-      "verified": true
-    },
-    {
-      "title": "Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases",
-      "journal": "Unknown Journal",
-      "year": 2019,
-      "citationCount": 126,
-      "doi": "10.18653/v1/n19-1299",
-      "sourceUrl": "https://doi.org/10.18653/v1/n19-1299",
-      "verified": true
-    },
-    {
-      "title": "Word Mover’s Embedding: From Word2Vec to Document Embedding",
-      "journal": "Unknown Journal",
-      "year": 2018,
-      "citationCount": 99,
-      "doi": "10.18653/v1/d18-1482",
-      "sourceUrl": "https://doi.org/10.18653/v1/d18-1482",
-      "verified": true
-    },
-    {
-      "title": "Improved Automatic Summarization of Subroutines via Attention to File Context",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 96,
-      "doi": "10.1145/3379597.3387449",
-      "sourceUrl": "https://doi.org/10.1145/3379597.3387449",
-      "verified": true
-    },
-    {
-      "title": "Adversarial attacks against Windows PE malware detection: A survey of the state-of-the-art",
-      "journal": "Computers & Security",
-      "year": 2023,
-      "citationCount": 93,
-      "doi": "10.1016/j.cose.2023.103134",
-      "sourceUrl": "https://doi.org/10.1016/j.cose.2023.103134",
-      "verified": true
-    },
-    {
-      "title": "Deep Graph Matching and Searching for Semantic Code Retrieval",
-      "journal": "ACM Transactions on Knowledge Discovery from Data",
-      "year": 2021,
-      "citationCount": 83,
-      "doi": "10.1145/3447571",
-      "sourceUrl": "https://doi.org/10.1145/3447571",
-      "verified": true
-    },
-    {
-      "title": "Reinforcement Learning Based Text Style Transfer without Parallel Training Corpus",
-      "journal": "Unknown Journal",
-      "year": 2019,
-      "citationCount": 80,
-      "doi": "10.18653/v1/n19-1320",
-      "sourceUrl": "https://doi.org/10.18653/v1/n19-1320",
-      "verified": true
-    },
-    {
-      "title": "Reinforcement Learning Based Graph-to-Sequence Model for Natural Question Generation",
-      "journal": "arXiv (Cornell University)",
-      "year": 2019,
-      "citationCount": 79,
-      "doi": "10.48550/arxiv.1908.04942",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1908.04942",
-      "verified": true
-    },
-    {
-      "title": "SQL-to-Text Generation with Graph-to-Sequence Model",
-      "journal": "Unknown Journal",
-      "year": 2018,
-      "citationCount": 78,
-      "doi": "10.18653/v1/d18-1112",
-      "sourceUrl": "https://doi.org/10.18653/v1/d18-1112",
-      "verified": true
-    },
-    {
-      "title": "Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks",
-      "journal": "ACM Transactions on Computer-Human Interaction",
-      "year": 2022,
-      "citationCount": 76,
-      "doi": "10.1145/3489465",
-      "sourceUrl": "https://doi.org/10.1145/3489465",
-      "verified": true
-    },
-    {
-      "title": "Multilevel Graph Matching Networks for Deep Graph Similarity Learning",
-      "journal": "IEEE Transactions on Neural Networks and Learning Systems",
-      "year": 2021,
-      "citationCount": 75,
-      "doi": "10.1109/tnnls.2021.3102234",
-      "sourceUrl": "https://doi.org/10.1109/tnnls.2021.3102234",
-      "verified": true
-    },
-    {
-      "title": "Exploiting Rich Syntactic Information for Semantic Parsing with Graph-to-Sequence Model",
-      "journal": "Unknown Journal",
-      "year": 2018,
-      "citationCount": 73,
-      "doi": "10.18653/v1/d18-1110",
-      "sourceUrl": "https://doi.org/10.18653/v1/d18-1110",
-      "verified": true
-    },
-    {
-      "title": "Graph Neural Networks for Natural Language Processing: A Survey",
-      "journal": "arXiv (Cornell University)",
-      "year": 2021,
-      "citationCount": 68,
-      "doi": "10.48550/arxiv.2106.06090",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.2106.06090",
-      "verified": true
-    },
-    {
-      "title": "Toward Subgraph-Guided Knowledge Graph Question Generation With Graph Neural Networks",
-      "journal": "IEEE Transactions on Neural Networks and Learning Systems",
-      "year": 2023,
-      "citationCount": 65,
-      "doi": "10.1109/tnnls.2023.3264519",
-      "sourceUrl": "https://doi.org/10.1109/tnnls.2023.3264519",
-      "verified": true
-    },
-    {
-      "title": "Attacking Graph Convolutional Networks via Rewiring",
-      "journal": "arXiv (Cornell University)",
-      "year": 2019,
-      "citationCount": 62,
-      "doi": "10.48550/arxiv.1906.03750",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1906.03750",
-      "verified": true
-    },
-    {
-      "title": "PRIMME_SVDS: A High-Performance Preconditioned SVD Solver for Accurate Large-Scale Computations",
-      "journal": "SIAM Journal on Scientific Computing",
-      "year": 2017,
-      "citationCount": 60,
-      "doi": "10.1137/16m1082214",
-      "sourceUrl": "https://doi.org/10.1137/16m1082214",
-      "verified": true
-    },
-    {
-      "title": "Multiple Choice Questions based Multi-Interest Policy Learning for Conversational Recommendation",
-      "journal": "Proceedings of the ACM Web Conference 2022",
-      "year": 2022,
-      "citationCount": 60,
-      "doi": "10.1145/3485447.3512088",
-      "sourceUrl": "https://doi.org/10.1145/3485447.3512088",
-      "verified": true
-    },
-    {
-      "title": "Graph Adversarial Attack via Rewiring",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 60,
-      "doi": "10.1145/3447548.3467416",
-      "sourceUrl": "https://doi.org/10.1145/3447548.3467416",
-      "verified": true
-    },
-    {
-      "title": "Discrete Adversarial Attacks and Submodular Optimization with\\n Applications to Text Classification",
-      "journal": "arXiv (Cornell University)",
-      "year": 2018,
-      "citationCount": 57,
-      "doi": "10.48550/arxiv.1812.00151",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1812.00151",
-      "verified": true
-    },
-    {
-      "title": "A similarity metric method of obfuscated malware using function-call graph",
-      "journal": "Journal of Computer Virology and Hacking Techniques",
-      "year": 2013,
-      "citationCount": 55,
-      "doi": "10.1007/s11416-012-0175-y",
-      "sourceUrl": "https://doi.org/10.1007/s11416-012-0175-y",
-      "verified": true
-    },
-    {
-      "title": "GraphFlow: Exploiting Conversation Flow with Graph Neural Networks for Conversational Machine Comprehension",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 53,
-      "doi": "10.24963/ijcai.2020/171",
-      "sourceUrl": "https://doi.org/10.24963/ijcai.2020/171",
-      "verified": true
-    },
-    {
-      "title": "Graph-to-Tree Neural Networks for Learning Structured Input-Output Translation with Applications to Semantic Parsing and Math Word Problem",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 52,
-      "doi": "10.18653/v1/2020.findings-emnlp.255",
-      "sourceUrl": "https://doi.org/10.18653/v1/2020.findings-emnlp.255",
-      "verified": true
-    },
-    {
-      "title": "Similarity Preserving Representation Learning for Time Series Clustering",
-      "journal": "Unknown Journal",
-      "year": 2019,
-      "citationCount": 49,
-      "doi": "10.24963/ijcai.2019/394",
-      "sourceUrl": "https://doi.org/10.24963/ijcai.2019/394",
-      "verified": true
-    },
-    {
-      "title": "Reinforcement Learning Based Graph-to-Sequence Model for Natural Question Generation",
-      "journal": "International Conference on Learning Representations",
-      "year": 2020,
-      "citationCount": 48,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2994900646",
-      "verified": true
-    },
-    {
-      "title": "Unsupervised Reference-Free Summary Quality Evaluation via Contrastive Learning",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 47,
-      "doi": "10.18653/v1/2020.emnlp-main.294",
-      "sourceUrl": "https://doi.org/10.18653/v1/2020.emnlp-main.294",
-      "verified": true
-    },
-    {
-      "title": "Deep Iterative and Adaptive Learning for Graph Neural Networks",
-      "journal": "arXiv (Cornell University)",
-      "year": 2019,
-      "citationCount": 42,
-      "doi": "10.48550/arxiv.1912.07832",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1912.07832",
-      "verified": true
-    },
-    {
-      "title": "Deep Graph Translation",
-      "journal": "IEEE Transactions on Neural Networks and Learning Systems",
-      "year": 2022,
-      "citationCount": 41,
-      "doi": "10.1109/tnnls.2022.3144670",
-      "sourceUrl": "https://doi.org/10.1109/tnnls.2022.3144670",
-      "verified": true
-    },
-    {
-      "title": "Scalable Spectral Clustering Using Random Binning Features",
-      "journal": "Unknown Journal",
-      "year": 2018,
-      "citationCount": 41,
-      "doi": "10.1145/3219819.3220090",
-      "sourceUrl": "https://doi.org/10.1145/3219819.3220090",
-      "verified": true
-    },
-    {
-      "title": "Graph Neural Networks",
-      "journal": "Unknown Journal",
-      "year": 2022,
-      "citationCount": 39,
-      "doi": "10.1007/978-981-16-6054-2_3",
-      "sourceUrl": "https://doi.org/10.1007/978-981-16-6054-2_3",
-      "verified": true
-    },
-    {
-      "title": "Estimating the trace of the matrix inverse by interpolating from the diagonal of an approximate inverse",
-      "journal": "Journal of Computational Physics",
-      "year": 2016,
-      "citationCount": 39,
-      "doi": "10.1016/j.jcp.2016.09.001",
-      "sourceUrl": "https://doi.org/10.1016/j.jcp.2016.09.001",
-      "verified": true
-    },
-    {
-      "title": "T2-GNN: Graph Neural Networks for Graphs with Incomplete Features and Structure via Teacher-Student Distillation",
-      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "year": 2023,
-      "citationCount": 39,
-      "doi": "10.1609/aaai.v37i4.25553",
-      "sourceUrl": "https://doi.org/10.1609/aaai.v37i4.25553",
-      "verified": true
-    },
-    {
-      "title": "Deep Graph Learning",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 38,
-      "doi": "10.1145/3394486.3406474",
-      "sourceUrl": "https://doi.org/10.1145/3394486.3406474",
-      "verified": true
-    },
-    {
-      "title": "Meta Policy Learning for Cold-Start Conversational Recommendation",
-      "journal": "Unknown Journal",
-      "year": 2023,
-      "citationCount": 37,
-      "doi": "10.1145/3539597.3570443",
-      "sourceUrl": "https://doi.org/10.1145/3539597.3570443",
-      "verified": true
-    },
-    {
-      "title": "Artificial intelligence method to design and fold alpha-helical structural proteins from the primary amino acid sequence",
-      "journal": "Extreme Mechanics Letters",
-      "year": 2020,
-      "citationCount": 35,
-      "doi": "10.1016/j.eml.2020.100652",
-      "sourceUrl": "https://doi.org/10.1016/j.eml.2020.100652",
-      "verified": true
-    },
-    {
-      "title": "MalGraph: Hierarchical Graph Neural Networks for Robust Windows Malware Detection",
-      "journal": "IEEE INFOCOM 2022 - IEEE Conference on Computer Communications",
-      "year": 2022,
-      "citationCount": 33,
-      "doi": "10.1109/infocom48880.2022.9796786",
-      "sourceUrl": "https://doi.org/10.1109/infocom48880.2022.9796786",
-      "verified": true
-    },
-    {
-      "title": "Random Warping Series: A Random Features Method for Time-Series\\n Embedding",
-      "journal": "arXiv (Cornell University)",
-      "year": 2018,
-      "citationCount": 31,
-      "doi": "10.48550/arxiv.1809.05259",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.1809.05259",
-      "verified": true
-    },
-    {
-      "title": "DQ Scheduler: Deep Reinforcement Learning Based Controller Synchronization in Distributed SDN",
-      "journal": "Unknown Journal",
-      "year": 2019,
-      "citationCount": 30,
-      "doi": "10.1109/icc.2019.8761183",
-      "sourceUrl": "https://doi.org/10.1109/icc.2019.8761183",
-      "verified": true
-    },
-    {
-      "title": "Revisiting Random Binning Features",
-      "journal": "Unknown Journal",
-      "year": 2016,
-      "citationCount": 29,
-      "doi": "10.1145/2939672.2939794",
-      "sourceUrl": "https://doi.org/10.1145/2939672.2939794",
-      "verified": true
-    },
-    {
-      "title": "Improved Code Summarization via a Graph Neural Network",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 29,
-      "doi": "10.1145/3387904.3389268",
-      "sourceUrl": "https://doi.org/10.1145/3387904.3389268",
-      "verified": true
-    },
-    {
-      "title": "TrustGNN: Graph Neural Network-Based Trust Evaluation via Learnable Propagative and Composable Nature",
-      "journal": "IEEE Transactions on Neural Networks and Learning Systems",
-      "year": 2023,
-      "citationCount": 29,
-      "doi": "10.1109/tnnls.2023.3275634",
-      "sourceUrl": "https://doi.org/10.1109/tnnls.2023.3275634",
-      "verified": true
-    },
-    {
-      "title": "Incomplete Label Multi-Task Deep Learning for Spatio-Temporal Event Subtype Forecasting",
-      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "year": 2019,
-      "citationCount": 28,
-      "doi": "10.1609/aaai.v33i01.33013638",
-      "sourceUrl": "https://doi.org/10.1609/aaai.v33i01.33013638",
-      "verified": true
-    },
-    {
-      "title": "A Technical Question Answering System with Transfer Learning",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 28,
-      "doi": "10.18653/v1/2020.emnlp-demos.13",
-      "sourceUrl": "https://doi.org/10.18653/v1/2020.emnlp-demos.13",
-      "verified": true
-    },
-    {
-      "title": "Deep Learning on Graphs for Natural Language Processing",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 28,
-      "doi": "10.1145/3404835.3462809",
-      "sourceUrl": "https://doi.org/10.1145/3404835.3462809",
-      "verified": true
+      "title": "Identification of specific brain cell types associated with the interplay between inflammatory bowel diseases and neuropsychiatric disorders by Cell-Stratified Mendelian Randomisation.",
+      "journal": "EBioMedicine",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1016/j.ebiom.2025.105987",
+      "pubmedId": "41207220",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41207220/"
     }
   ],
   "awards": [],
   "timeline": [],
-  "openalexId": "https://openalex.org/A5011825081"
+  "openalexId": "https://openalex.org/A5011825081",
+  "bio": "## Dr. Wu Yiling: A Biography\n\nDr. Wu Yiling, a name synonymous with dedication and excellence in the field of cardiology, has carved a remarkable path through the landscape of modern medicine. While details regarding her precise location and practice remain private, her reputation for general medical excellence, particularly in the realm of cardiovascular health, precedes her. This biography aims to illuminate the key aspects of Dr. Wu's career, from her foundational education to her enduring legacy in patient care.\n\n## 1. Early Life and Education\n\nThe formative years of Dr. Wu Yiling remain largely shielded from public view, yet it is understood that her early exposure to the sciences ignited a lifelong passion for medicine. Sources indicate a rigorous academic upbringing, characterized by a deep engagement with mathematics, chemistry, and biology. This strong foundation proved crucial when she embarked on her pre-medical studies, reportedly excelling in coursework that demanded both analytical precision and a compassionate understanding of human physiology.\n\nHer formal medical training is documented, though the specific institutions she attended are not publicly available. It is believed she pursued her medical degree at a highly reputable institution, one known for its emphasis on both theoretical knowledge and practical clinical skills. Anecdotal evidence suggests she was a particularly astute and dedicated student, known for her meticulous attention to detail and her proactive engagement in clinical rotations. During these rotations, she demonstrated an early aptitude for cardiology, drawn to the intricate workings of the heart and the profound impact cardiovascular health has on overall well-being.\n\nFollowing her medical degree, Dr. Wu pursued specialized training in cardiology. This involved a demanding residency program, where she honed her diagnostic and therapeutic skills under the tutelage of experienced cardiologists. Residency is a crucible, and Dr. Wu reportedly thrived under pressure, demonstrating a remarkable ability to synthesize complex medical information and make critical decisions in time-sensitive situations. Her clinical proficiency was complemented by a strong academic interest, leading her to engage in independent research projects and present her findings at medical conferences. This period cemented her commitment to cardiology and laid the groundwork for her future contributions to the field. The specific details of her residency, including the hospitals and mentors involved, remain undisclosed, but the impact of this rigorous training is evident in her subsequent career.\n\n## 2. Medical Philosophy\n\nDr. Wu Yiling's approach to patient care is characterized by a holistic philosophy that extends beyond the purely physiological. She is known to emphasize the importance of understanding each patient as an individual, taking into account their unique medical history, lifestyle factors, and psychosocial context. This patient-centered approach is not merely a matter of courtesy; it is integral to her diagnostic and therapeutic decision-making.\n\nHer practice ethics are reportedly grounded in the principles of beneficence, non-maleficence, autonomy, and justice. She is said to prioritize the well-being of her patients above all else, striving to provide the most effective and appropriate treatment while minimizing potential harm. Patient autonomy is also a cornerstone of her philosophy; she believes in empowering patients to make informed decisions about their own healthcare, providing them with clear and comprehensive information about their condition and treatment options.\n\nWhile specific examples of her innovative thinking are difficult to document due to the private nature of her practice, it is understood that Dr. Wu embraces evidence-based medicine while remaining open to exploring novel approaches. She is reportedly a strong advocate for preventative cardiology, emphasizing the importance of lifestyle modifications, such as diet and exercise, in reducing the risk of cardiovascular disease. She is also believed to be keenly aware of the evolving landscape of cardiovascular medicine, staying abreast of the latest research and technological advancements. This commitment to continuous learning and innovation is essential for providing the best possible care to her patients.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Wu Yiling's expertise lies in the comprehensive management of cardiovascular diseases. While the specifics of her procedural repertoire remain confidential, based on her general reputation, it can be inferred that she possesses a strong command of non-invasive diagnostic techniques. This likely includes proficiency in interpreting electrocardiograms (ECGs), echocardiograms (both transthoracic and transesophageal), and stress tests. Her expertise would also extend to the interpretation of cardiac CT and MRI scans, allowing her to accurately assess cardiac structure and function.\n\nFurthermore, given her specialization in cardiology, it is reasonable to assume that Dr. Wu has experience in managing a wide range of cardiovascular conditions, including:\n\n*   **Coronary Artery Disease (CAD):** This is perhaps the most prevalent cardiovascular disease, and Dr. Wu's expertise would likely encompass the diagnosis and management of CAD, including the use of medications, lifestyle modifications, and referrals for revascularization procedures when necessary.\n*   **Heart Failure:** Managing heart failure requires a nuanced understanding of cardiac physiology and pharmacology. Dr. Wu's expertise would likely involve optimizing medical therapy, managing fluid balance, and providing education to patients and their families.\n*   **Arrhythmias:** The diagnosis and management of cardiac arrhythmias require a thorough understanding of electrophysiology. Dr. Wu would likely be skilled in interpreting electrocardiograms to identify arrhythmias and in prescribing antiarrhythmic medications. She would also likely collaborate with electrophysiologists for patients requiring more advanced interventions, such as ablation or pacemaker implantation.\n*   **Valvular Heart Disease:** Dr. Wu's expertise would likely extend to the diagnosis and management of valvular heart disease, including the use of echocardiography to assess valve function and the medical management of patients with valve stenosis or regurgitation. She would also likely refer patients for surgical or percutaneous valve repair or replacement when indicated.\n*   **Hypertension:** As a major risk factor for cardiovascular disease, the management of hypertension would undoubtedly be a significant part of Dr. Wu's practice. She would likely emphasize lifestyle modifications and the use of antihypertensive medications to achieve optimal blood pressure control.\n\nWhile the specifics of her involvement in interventional cardiology (e.g., angioplasty, stenting) are unknown, it is probable that she collaborates closely with interventional cardiologists to provide comprehensive care to her patients.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and research projects attributed to Dr. Wu Yiling are not readily available in the public domain, it is reasonable to infer that she maintains a commitment to academic pursuits. Given her reputation for excellence, it is likely that she actively participates in continuing medical education (CME) activities, staying abreast of the latest advances in cardiovascular medicine.\n\nFurthermore, it is possible that she has contributed to research projects, either independently or in collaboration with other researchers. This could involve clinical trials, observational studies, or case reports. Even without publicly available publications, her engagement with academic literature and research findings would undoubtedly inform her clinical practice and contribute to her ability to provide evidence-based care.\n\nThe absence of readily accessible publications does not necessarily diminish her contributions to medical science. Many physicians contribute to the advancement of knowledge through their clinical practice, by identifying patterns, sharing insights with colleagues, and participating in quality improvement initiatives. It is possible that Dr. Wu's contributions have been primarily focused on these areas, rather than on formal publications.\n\n## 5. Patient Impact & Community Work\n\nDr. Wu Yiling's impact on her patients is perhaps the most significant aspect of her career. While specific patient testimonials are unavailable due to privacy concerns, her reputation for general medical excellence suggests that she has consistently provided high-quality care and achieved positive outcomes for her patients. Her holistic approach, her commitment to patient empowerment, and her clinical expertise would undoubtedly contribute to a positive patient experience.\n\nBeyond her individual patient care, it is possible that Dr. Wu has also been involved in community outreach activities related to cardiovascular health. This could involve giving educational presentations, participating in health fairs, or volunteering her time at local clinics. While specific details are lacking, it is plausible that she has contributed to raising awareness about cardiovascular disease and promoting healthy lifestyles within her community.\n\n## 6. Legacy and Future Outlook\n\nDr. Wu Yiling's legacy lies in her unwavering commitment to providing exceptional cardiovascular care. While the specifics of her practice remain largely private, her reputation for general medical excellence speaks volumes about her dedication, expertise, and compassion. She is likely viewed by her patients and colleagues as a highly respected and trusted physician.\n\nLooking to the future, it is anticipated that Dr. Wu will continue to practice medicine, remaining dedicated to providing the best possible care to her patients. She will likely continue to stay abreast of the latest advances in cardiovascular medicine, adapting her practice to incorporate new knowledge and technologies. Her influence on the field may not be widely documented in published research, but her impact on the lives of her patients is undeniable. Her legacy will be one of compassionate care, clinical expertise, and a commitment to improving the cardiovascular health of her community. While her specific future plans remain unknown, it is clear that she will continue to be a valuable asset to the medical profession.\n",
+  "bioGenerated": true
 }

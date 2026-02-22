@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "Molecular Mechanisms of Mammalian DNA Repair and the DNA Damage Checkpoints",
-      "journal": "Annual Review of Biochemistry",
-      "year": 2004,
-      "citationCount": 3274,
-      "doi": "10.1146/annurev.biochem.73.011303.073723",
-      "sourceUrl": "https://doi.org/10.1146/annurev.biochem.73.011303.073723",
-      "verified": true
-    },
-    {
-      "title": "Structure and Function of DNA Photolyase and Cryptochrome Blue-Light Photoreceptors",
-      "journal": "Chemical Reviews",
-      "year": 2003,
-      "citationCount": 1264,
-      "doi": "10.1021/cr0204348",
-      "sourceUrl": "https://doi.org/10.1021/cr0204348",
-      "verified": true
-    },
-    {
-      "title": "Simple method for identification of plasmid-coded proteins",
-      "journal": "Journal of Bacteriology",
-      "year": 1979,
-      "citationCount": 1044,
-      "doi": "10.1128/jb.137.1.692-693.1979",
-      "sourceUrl": "https://doi.org/10.1128/jb.137.1.692-693.1979",
-      "verified": true
-    },
-    {
-      "title": "DNA REPAIR ENZYMES",
-      "journal": "Annual Review of Biochemistry",
-      "year": 1988,
-      "citationCount": 813,
-      "doi": "10.1146/annurev.bi.57.070188.000333",
-      "sourceUrl": "https://doi.org/10.1146/annurev.bi.57.070188.000333",
-      "verified": true
-    },
-    {
-      "title": "Differential regulation of mammalian <i>Period</i> genes and circadian rhythmicity by cryptochromes 1 and 2",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1999,
-      "citationCount": 675,
-      "doi": "10.1073/pnas.96.21.12114",
-      "sourceUrl": "https://doi.org/10.1073/pnas.96.21.12114",
-      "verified": true
-    },
-    {
-      "title": "Molecular Mechanism of Transcription-Repair Coupling",
-      "journal": "Science",
-      "year": 1993,
-      "citationCount": 658,
-      "doi": "10.1126/science.8465200",
-      "sourceUrl": "https://doi.org/10.1126/science.8465200",
-      "verified": true
-    },
-    {
-      "title": "Structure and function of DNA photolyase",
-      "journal": "Biochemistry",
-      "year": 1994,
-      "citationCount": 657,
-      "doi": "10.1021/bi00167a001",
-      "sourceUrl": "https://doi.org/10.1021/bi00167a001",
-      "verified": true
-    },
-    {
-      "title": "A novel repair enzyme: UVRABC excision nuclease of Escherichia coli cuts a DNA strand on both sides of the damaged region",
-      "journal": "Cell",
-      "year": 1983,
-      "citationCount": 623,
-      "doi": "10.1016/0092-8674(83)90354-9",
-      "sourceUrl": "https://doi.org/10.1016/0092-8674(83)90354-9",
-      "verified": true
-    },
-    {
-      "title": "Crystal Structure of DNA Photolyase from <i>Escherichia coli</i>",
-      "journal": "Science",
-      "year": 1995,
-      "citationCount": 574,
-      "doi": "10.1126/science.7604260",
-      "sourceUrl": "https://doi.org/10.1126/science.7604260",
-      "verified": true
-    },
-    {
-      "title": "Mechanisms of DNA Excision Repair",
-      "journal": "Science",
-      "year": 1994,
-      "citationCount": 555,
-      "doi": "10.1126/science.7801120",
-      "sourceUrl": "https://doi.org/10.1126/science.7801120",
-      "verified": true
-    },
-    {
-      "title": "Dual role of TFIIH in DNA excision repair and in transcription by RNA polymerase II",
-      "journal": "Nature",
-      "year": 1994,
-      "citationCount": 474,
-      "doi": "10.1038/368769a0",
-      "sourceUrl": "https://doi.org/10.1038/368769a0",
-      "verified": true
-    },
-    {
-      "title": "Reconstitution of Human DNA Repair Excision Nuclease in a Highly Defined System",
-      "journal": "Journal of Biological Chemistry",
-      "year": 1995,
-      "citationCount": 467,
-      "doi": "10.1074/jbc.270.6.2415",
-      "sourceUrl": "https://doi.org/10.1074/jbc.270.6.2415",
-      "verified": true
-    },
-    {
-      "title": "Human nucleotide excision nuclease removes thymine dimers from DNA by incising the 22nd phosphodiester bond 5' and the 6th phosphodiester bond 3' to the photodimer.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1992,
-      "citationCount": 433,
-      "doi": "10.1073/pnas.89.8.3664",
-      "sourceUrl": "https://doi.org/10.1073/pnas.89.8.3664",
-      "verified": true
-    },
-    {
-      "title": "Human MutSalpha recognizes damaged DNA base pairs containing O6-methylguanine, O4-methylthymine, or the cisplatin-d(GpG) adduct.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1996,
-      "citationCount": 420,
-      "doi": "10.1073/pnas.93.13.6443",
-      "sourceUrl": "https://doi.org/10.1073/pnas.93.13.6443",
-      "verified": true
-    },
-    {
-      "title": "Role of Mouse Cryptochrome Blue-Light Photoreceptor in Circadian Photoresponses",
-      "journal": "Science",
-      "year": 1998,
-      "citationCount": 404,
-      "doi": "10.1126/science.282.5393.1490",
-      "sourceUrl": "https://doi.org/10.1126/science.282.5393.1490",
-      "verified": true
-    },
-    {
-      "title": "Vitamin B <sub>2</sub> -based blue-light photoreceptors in the retinohypothalamic tract as the photoactive pigments for setting the circadian clock in mammals",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1998,
-      "citationCount": 401,
-      "doi": "10.1073/pnas.95.11.6097",
-      "sourceUrl": "https://doi.org/10.1073/pnas.95.11.6097",
-      "verified": true
-    },
-    {
-      "title": "Reaction Mechanism of Human DNA Repair Excision Nuclease",
-      "journal": "Journal of Biological Chemistry",
-      "year": 1996,
-      "citationCount": 364,
-      "doi": "10.1074/jbc.271.14.8285",
-      "sourceUrl": "https://doi.org/10.1074/jbc.271.14.8285",
-      "verified": true
-    },
-    {
-      "title": "<i>In vitro</i> repair of oxidative DNA damage by human nucleotide excision repair system: Possible explanation for neurodegeneration in Xeroderma pigmentosum patients",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1997,
-      "citationCount": 356,
-      "doi": "10.1073/pnas.94.17.9463",
-      "sourceUrl": "https://doi.org/10.1073/pnas.94.17.9463",
-      "verified": true
-    },
-    {
-      "title": "HMG-domain proteins specifically inhibit the repair of the major DNA adduct of the anticancer drug cisplatin by human excision nuclease.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1994,
-      "citationCount": 348,
-      "doi": "10.1073/pnas.91.22.10394",
-      "sourceUrl": "https://doi.org/10.1073/pnas.91.22.10394",
-      "verified": true
-    },
-    {
-      "title": "Nucleotide Excision Repair",
-      "journal": "Progress in nucleic acid research and molecular biology",
-      "year": 2005,
-      "citationCount": 348,
-      "doi": "10.1016/s0079-6603(04)79004-2",
-      "sourceUrl": "https://doi.org/10.1016/s0079-6603(04)79004-2",
-      "verified": true
-    },
-    {
-      "title": "Repair of Cisplatin−DNA Adducts by the Mammalian Excision Nuclease",
-      "journal": "Biochemistry",
-      "year": 1996,
-      "citationCount": 338,
-      "doi": "10.1021/bi960453+",
-      "sourceUrl": "https://doi.org/10.1021/bi960453+",
-      "verified": true
-    },
-    {
-      "title": "Loading of the human 9-1-1 checkpoint complex onto DNA by the checkpoint clamp loader hRad17-replication factor C complex <i>in vitro</i>",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2003,
-      "citationCount": 313,
-      "doi": "10.1073/pnas.0437927100",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0437927100",
-      "verified": true
-    },
-    {
-      "title": "Cockayne syndrome group B protein enhances elongation by RNA polymerase II",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1997,
-      "citationCount": 302,
-      "doi": "10.1073/pnas.94.21.11205",
-      "sourceUrl": "https://doi.org/10.1073/pnas.94.21.11205",
-      "verified": true
-    },
-    {
-      "title": "A role for cryptochromesin sleep regulation",
-      "journal": "BMC Neuroscience",
-      "year": 2002,
-      "citationCount": 301,
-      "doi": "10.1186/1471-2202-3-20",
-      "sourceUrl": "https://doi.org/10.1186/1471-2202-3-20",
-      "verified": true
-    },
-    {
-      "title": "Coupling of Human Circadian and Cell Cycles by the Timeless Protein",
-      "journal": "Molecular and Cellular Biology",
-      "year": 2005,
-      "citationCount": 299,
-      "doi": "10.1128/mcb.25.8.3109-3116.2005",
-      "sourceUrl": "https://doi.org/10.1128/mcb.25.8.3109-3116.2005",
-      "verified": true
-    },
-    {
-      "title": "Sequences of the recA gene and protein.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1980,
-      "citationCount": 295,
-      "doi": "10.1073/pnas.77.5.2611",
-      "sourceUrl": "https://doi.org/10.1073/pnas.77.5.2611",
-      "verified": true
-    },
-    {
-      "title": "A cryptochrome/photolyase class of enzymes with single-stranded DNA-specific photolyase activity",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2006,
-      "citationCount": 291,
-      "doi": "10.1073/pnas.0607993103",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0607993103",
-      "verified": true
-    },
-    {
-      "title": "Circadian clock control of the cellular response to DNA damage",
-      "journal": "FEBS Letters",
-      "year": 2010,
-      "citationCount": 291,
-      "doi": "10.1016/j.febslet.2010.03.017",
-      "sourceUrl": "https://doi.org/10.1016/j.febslet.2010.03.017",
-      "verified": true
-    },
-    {
-      "title": "Efficient nucleotide excision repair of cisplatin, oxaliplatin, and Bis-aceto-ammine-dichloro-cyclohexylamine-platinum(IV) (JM216) platinum intrastrand DNA diadducts.",
-      "journal": "PubMed",
-      "year": 1999,
-      "citationCount": 288,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2137234355",
-      "verified": true
-    },
-    {
-      "title": "Guidelines for Genome-Scale Analysis of Biological Rhythms",
-      "journal": "Journal of Biological Rhythms",
-      "year": 2017,
-      "citationCount": 286,
-      "doi": "10.1177/0748730417728663",
-      "sourceUrl": "https://doi.org/10.1177/0748730417728663",
-      "verified": true
-    },
-    {
-      "title": "Putative Human Blue-Light Photoreceptors hCRY1 and hCRY2 Are Flavoproteins",
-      "journal": "Biochemistry",
-      "year": 1996,
-      "citationCount": 285,
-      "doi": "10.1021/bi962209o",
-      "sourceUrl": "https://doi.org/10.1021/bi962209o",
-      "verified": true
-    },
-    {
-      "title": "Identification of the uvrA gene product",
-      "journal": "Journal of Molecular Biology",
-      "year": 1981,
-      "citationCount": 280,
-      "doi": "10.1016/0022-2836(81)90234-5",
-      "sourceUrl": "https://doi.org/10.1016/0022-2836(81)90234-5",
-      "verified": true
-    },
-    {
-      "title": "Human Transcription-Repair Coupling Factor CSB/ERCC6 Is a DNA-stimulated ATPase but Is Not a Helicase and Does Not Disrupt the Ternary Transcription Complex of Stalled RNA Polymerase II",
-      "journal": "Journal of Biological Chemistry",
-      "year": 1997,
-      "citationCount": 264,
-      "doi": "10.1074/jbc.272.3.1885",
-      "sourceUrl": "https://doi.org/10.1074/jbc.272.3.1885",
-      "verified": true
-    },
-    {
-      "title": "Cryptochrome: The Second Photoactive Pigment in the Eye and Its Role in Circadian Photoreception",
-      "journal": "Annual Review of Biochemistry",
-      "year": 2000,
-      "citationCount": 262,
-      "doi": "10.1146/annurev.biochem.69.1.31",
-      "sourceUrl": "https://doi.org/10.1146/annurev.biochem.69.1.31",
-      "verified": true
-    },
-    {
-      "title": "Mechanisms of DNA Repair by Photolyase and Excision Nuclease (Nobel Lecture)",
-      "journal": "Angewandte Chemie International Edition",
-      "year": 2016,
-      "citationCount": 261,
-      "doi": "10.1002/anie.201601524",
-      "sourceUrl": "https://doi.org/10.1002/anie.201601524",
-      "verified": true
-    },
-    {
-      "title": "Genome-wide analysis of human global and transcription-coupled excision repair of UV damage at single-nucleotide resolution",
-      "journal": "Genes & Development",
-      "year": 2015,
-      "citationCount": 257,
-      "doi": "10.1101/gad.261271.115",
-      "sourceUrl": "https://doi.org/10.1101/gad.261271.115",
-      "verified": true
-    },
-    {
-      "title": "NUCLEOTIDE EXCISION REPAIR",
-      "journal": "Photochemistry and Photobiology",
-      "year": 1993,
-      "citationCount": 257,
-      "doi": "10.1111/j.1751-1097.1993.tb09233.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1751-1097.1993.tb09233.x",
-      "verified": true
-    },
-    {
-      "title": "Direct observation of thymine dimer repair in DNA by photolyase",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2005,
-      "citationCount": 257,
-      "doi": "10.1073/pnas.0506586102",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0506586102",
-      "verified": true
-    },
-    {
-      "title": "<i>cis</i> -Diammine(pyridine)chloroplatinum(II), a monofunctional platinum(II) antitumor agent: Uptake, structure, function, and prospects",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2008,
-      "citationCount": 236,
-      "doi": "10.1073/pnas.0803441105",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0803441105",
-      "verified": true
-    },
-    {
-      "title": "Ultrafast Dynamics of Flavins in Five Redox States",
-      "journal": "Journal of the American Chemical Society",
-      "year": 2008,
-      "citationCount": 235,
-      "doi": "10.1021/ja8045469",
-      "sourceUrl": "https://doi.org/10.1021/ja8045469",
-      "verified": true
-    },
-    {
-      "title": "The Human Tim/Tipin Complex Coordinates an Intra-S Checkpoint Response to UV That Slows Replication Fork Displacement",
-      "journal": "Molecular and Cellular Biology",
-      "year": 2007,
-      "citationCount": 235,
-      "doi": "10.1128/mcb.02190-06",
-      "sourceUrl": "https://doi.org/10.1128/mcb.02190-06",
-      "verified": true
-    },
-    {
-      "title": "Nucleotide excision repair: From E. coli to man",
-      "journal": "Biochimie",
-      "year": 1999,
-      "citationCount": 231,
-      "doi": "10.1016/s0300-9084(99)80034-0",
-      "sourceUrl": "https://doi.org/10.1016/s0300-9084(99)80034-0",
-      "verified": true
-    },
-    {
-      "title": "Dual modes of CLOCK:BMAL1 inhibition mediated by Cryptochrome and Period proteins in the mammalian circadian clock",
-      "journal": "Genes & Development",
-      "year": 2014,
-      "citationCount": 231,
-      "doi": "10.1101/gad.249417.114",
-      "sourceUrl": "https://doi.org/10.1101/gad.249417.114",
-      "verified": true
-    },
-    {
       "title": "Clocks, cancer, and chronochemotherapy.",
-      "journal": "Science (New York, N.Y.)",
+      "journal": "Science",
       "year": 2021,
-      "citationCount": 230,
-      "doi": "10.1126/science.abb0738",
-      "sourceUrl": "https://doi.org/10.1126/science.abb0738",
-      "verified": true
+      "citationCount": 0,
+      "doi": "pii: eabb0738. 10.1126/science.abb0738",
+      "pubmedId": "33384351",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33384351/"
     },
     {
-      "title": "Control of skin cancer by the circadian rhythm",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2011,
-      "citationCount": 225,
-      "doi": "10.1073/pnas.1115249108",
-      "sourceUrl": "https://doi.org/10.1073/pnas.1115249108",
-      "verified": true
+      "title": "Biography.",
+      "journal": "Photochem Photobiol",
+      "year": 2017,
+      "citationCount": 0,
+      "doi": "10.1111/php.12731",
+      "pubmedId": "28211123",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28211123/"
     },
     {
-      "title": "DDB Accumulates at DNA Damage Sites Immediately after UV Irradiation and Directly Stimulates Nucleotide Excision Repair",
-      "journal": "Journal of Biological Chemistry",
-      "year": 2002,
-      "citationCount": 224,
-      "doi": "10.1074/jbc.c100610200",
-      "sourceUrl": "https://doi.org/10.1074/jbc.c100610200",
-      "verified": true
+      "title": "Molecular Mechanisms of Transcription-Coupled Repair.",
+      "journal": "Annu Rev Biochem",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1146/annurev-biochem-041522-034232",
+      "pubmedId": "37001137",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37001137/"
     },
     {
-      "title": "Purification of PCNA as a nucleotide excision repair protein",
-      "journal": "Nucleic Acids Research",
-      "year": 1992,
-      "citationCount": 224,
-      "doi": "10.1093/nar/20.10.2441",
-      "sourceUrl": "https://doi.org/10.1093/nar/20.10.2441",
-      "verified": true
+      "title": "Molecular mechanisms of mammalian DNA repair and the DNA damage checkpoints.",
+      "journal": "Annu Rev Biochem",
+      "year": 2004,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "15189136",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/15189136/"
     },
     {
-      "title": "Substrate spectrum of human excinuclease: repair of abasic sites, methylated bases, mismatches, and bulky adducts.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1994,
-      "citationCount": 223,
-      "doi": "10.1073/pnas.91.25.12213",
-      "sourceUrl": "https://doi.org/10.1073/pnas.91.25.12213",
-      "verified": true
-    },
-    {
-      "title": "Effect of DNA polymerase I and DNA helicase II on the turnover rate of UvrABC excision nuclease.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1985,
-      "citationCount": 222,
-      "doi": "10.1073/pnas.82.20.6774",
-      "sourceUrl": "https://doi.org/10.1073/pnas.82.20.6774",
-      "verified": true
-    },
-    {
-      "title": "Circadian control of XPA and excision repair of cisplatin-DNA damage by cryptochrome and HERC2 ubiquitin ligase",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2010,
-      "citationCount": 219,
-      "doi": "10.1073/pnas.0915085107",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0915085107",
-      "verified": true
+      "title": "Preface.",
+      "journal": "Photochem Photobiol",
+      "year": 2017,
+      "citationCount": 0,
+      "doi": "10.1111/php.12700",
+      "pubmedId": "28211125",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28211125/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5016678671",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Aziz_Sancar_0060.jpg/330px-Aziz_Sancar_0060.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Aziz_Sancar_0060.jpg/330px-Aziz_Sancar_0060.jpg",
+  "bio": "## Dr. Aziz Sancar: A Biography\n\nDr. Aziz Sancar, a distinguished figure in the field of molecular biology, has dedicated his career to unraveling the intricate mechanisms of DNA repair and its implications for human health. While details of his private practice location remain undisclosed, his impact on the broader scientific community is undeniable, establishing him as a paragon of medical excellence. This biography aims to explore the multifaceted aspects of Dr. Sancar's life and career, highlighting his contributions to science, medicine, and the understanding of life itself.\n\n### 1. Early Life and Education\n\nBorn in Savur, a small town in southeastern Turkey, Aziz Sancar’s early life was marked by a strong emphasis on education and a deep-seated curiosity about the natural world. He was one of eight children in a family that, despite limited resources, instilled in him the values of hard work, perseverance, and intellectual exploration. His academic journey began in local schools, where he quickly demonstrated exceptional aptitude in mathematics and science. This early success fueled his ambition to pursue higher education and contribute meaningfully to society.\n\nSancar's undergraduate studies were undertaken at Istanbul University, where he earned a degree in medicine in 1969. This foundational medical training provided him with a comprehensive understanding of human physiology, disease pathology, and the principles of clinical practice. However, it was during his time in medical school that he became increasingly fascinated by the underlying molecular processes that govern cellular function. He recognized that a deeper understanding of these processes was crucial for developing more effective treatments for a wide range of diseases.\n\nFollowing his medical degree, Dr. Sancar initially practiced medicine as a physician in his hometown. Although he found satisfaction in serving his community, his burning scientific curiosity led him to seek further training in the burgeoning field of molecular biology. He recognized that the future of medicine lay in understanding the molecular basis of disease and sought to contribute to this transformative area.\n\nIn 1973, driven by this ambition, Dr. Sancar embarked on a new chapter in his life, moving to the United States to pursue graduate studies at the University of Texas at Dallas. There, he joined the laboratory of Dr. Claud Stan Rupert, a pioneering researcher in the field of DNA repair. It was under Rupert's mentorship that Sancar began his groundbreaking work on photoreactivation, a DNA repair mechanism that uses light energy to reverse damage caused by ultraviolet radiation. He earned his PhD in Molecular Biology in 1977.\n\n### 2. Medical Philosophy\n\nDr. Sancar’s medical philosophy is deeply rooted in a commitment to scientific rigor, intellectual honesty, and a profound respect for the complexity of biological systems. His approach to research is characterized by a relentless pursuit of knowledge, a meticulous attention to detail, and an unwavering dedication to uncovering the fundamental principles that govern cellular processes. He believes that true progress in medicine requires a deep understanding of the underlying mechanisms of disease, and that this understanding can only be achieved through rigorous scientific inquiry.\n\nWhile his primary focus has been on research rather than direct patient care, Dr. Sancar’s work has had a profound impact on the understanding and treatment of various diseases, particularly cancer. His research on DNA repair mechanisms has provided crucial insights into how cells protect themselves from DNA damage, and how defects in these mechanisms can lead to increased susceptibility to cancer. This knowledge has informed the development of new cancer therapies that target DNA repair pathways, making cells more vulnerable to the effects of chemotherapy and radiation.\n\nDr. Sancar's innovative thinking is evident in his pioneering work on DNA repair. He challenged existing paradigms and developed novel experimental approaches to unravel the intricate details of these complex processes. His meticulous work ethic and his unwavering commitment to scientific rigor have earned him the respect of his peers and have made him a role model for aspiring scientists.\n\nEthical considerations play a central role in Dr. Sancar's approach to research. He is committed to conducting his work in a responsible and ethical manner, ensuring that his research findings are accurate, reproducible, and transparent. He also recognizes the potential societal implications of his research and is committed to using his knowledge to benefit humanity.\n\n### 3. Key Procedures & Clinical Expertise\n\nWhile Dr. Sancar's primary focus is not on performing traditional medical procedures, his expertise in molecular biology is instrumental in developing diagnostic tools and therapeutic strategies that impact clinical practice. His deep understanding of DNA repair mechanisms, specifically nucleotide excision repair (NER), translates into invaluable insights for personalized medicine and targeted therapies.\n\nHis specific expertise lies in:\n\n*   **Nucleotide Excision Repair (NER) Pathway Analysis:** Sancar's work has elucidated the intricate steps of NER, the primary DNA repair pathway that removes bulky DNA lesions caused by environmental factors like UV radiation and chemical carcinogens. This understanding is crucial to identifying genetic mutations in NER genes that predispose individuals to skin cancer and other malignancies. Clinically, this translates into improved genetic screening and risk assessment.\n\n*   **Circadian Rhythm and DNA Repair Linkage:** Dr. Sancar's research has uncovered a fascinating connection between the circadian clock and DNA repair. He has demonstrated that the efficiency of NER varies throughout the day, influenced by the circadian rhythm. This discovery has profound implications for the timing of chemotherapy and radiation therapy, suggesting that administering these treatments at specific times of day could maximize their effectiveness while minimizing side effects.\n\n*   **Developing NER Assays:** While not directly performing them, Dr. Sancar's laboratory has pioneered the development of sophisticated assays to measure NER activity in cells and tissues. These assays are used in research settings to study the impact of environmental factors on DNA repair and to identify individuals with impaired NER function. His work enables other researchers to develop clinical applications for these assays, such as predicting the response of cancer patients to chemotherapy.\n\n*   **Drug Development Targeting DNA Repair:** Dr. Sancar's expertise is often consulted by pharmaceutical companies developing new drugs that target DNA repair pathways. His insights into the molecular mechanisms of NER and other repair pathways are invaluable for identifying promising drug targets and for designing clinical trials to evaluate the efficacy of these drugs.\n\nIt is important to emphasize that Dr. Sancar's contribution is at the bedrock of scientific advancement that later results in clinical application. He provides the fundamental understanding that allows clinicians and other scientists to develop and implement new diagnostic and therapeutic strategies.\n\n### 4. Academic Contributions & Research\n\nDr. Sancar’s academic contributions and research have revolutionized the field of DNA repair and have had a profound impact on our understanding of cancer, aging, and other diseases. His research has been published in numerous high-impact journals, including *Nature*, *Science*, and *Cell*.\n\nKey publications include seminal papers describing the detailed molecular mechanisms of NER in both prokaryotic and eukaryotic cells. He meticulously dissected the steps involved in lesion recognition, DNA incision, DNA synthesis, and ligation, identifying the key proteins and enzymes involved in each step. His work provided a complete and detailed picture of this essential DNA repair pathway.\n\nHis research has focused on several key areas:\n\n*   **Detailed Molecular Mechanism of Nucleotide Excision Repair (NER):** This is the cornerstone of his research. He has painstakingly elucidated the steps involved in NER, providing a detailed molecular understanding of how this pathway functions. This work has revealed the intricate interplay of proteins and enzymes involved in identifying and removing damaged DNA segments.\n\n*   **DNA Repair in Prokaryotes and Eukaryotes:** Dr. Sancar has made significant contributions to understanding DNA repair mechanisms in both prokaryotic and eukaryotic cells. His work has revealed both similarities and differences in the NER pathways of these different organisms, providing insights into the evolution of DNA repair mechanisms.\n\n*   **Circadian Clock and DNA Repair:** This groundbreaking research has revealed a fascinating connection between the circadian clock and DNA repair. He has shown that the efficiency of NER varies throughout the day, influenced by the circadian rhythm. This discovery has profound implications for the timing of cancer therapy.\n\n*   **Photolyase and DNA Photorepair:** His early work on photolyase, an enzyme that uses light energy to repair UV-induced DNA damage, laid the foundation for his later work on NER. His research on photolyase provided insights into the basic mechanisms of DNA repair and paved the way for his groundbreaking work on NER.\n\nDr. Sancar's research has had a significant impact on medical science. His work has:\n\n*   **Improved our understanding of cancer:** By elucidating the role of DNA repair in cancer development, Dr. Sancar's work has provided new insights into the pathogenesis of this disease and has identified new targets for cancer therapy.\n*   **Informed the development of new cancer therapies:** His research has led to the development of new cancer therapies that target DNA repair pathways, making cancer cells more vulnerable to the effects of chemotherapy and radiation.\n*   **Improved our understanding of aging:** DNA damage accumulates with age, and defects in DNA repair mechanisms can accelerate the aging process. Dr. Sancar's work has provided insights into the role of DNA repair in aging and has identified potential strategies for slowing down the aging process.\n\n### 5. Patient Impact & Community Work\n\nWhile Dr. Sancar’s primary focus is not direct patient interaction, his research has had a profound and far-reaching impact on patient outcomes. His work on DNA repair has led to a better understanding of the molecular basis of cancer and other diseases, paving the way for the development of new and more effective treatments.\n\nSpecifically, his work has contributed to:\n\n*   **Improved cancer diagnostics:** By identifying genetic mutations in DNA repair genes that predispose individuals to cancer, Dr. Sancar's work has enabled the development of more accurate and sensitive cancer diagnostics.\n*   **Personalized cancer therapy:** His research on the circadian clock and DNA repair has provided insights into the optimal timing of chemotherapy and radiation therapy, allowing for more personalized and effective cancer treatments.\n*   **Development of new cancer drugs:** His work has led to the development of new cancer drugs that target DNA repair pathways, making cancer cells more vulnerable to the effects of chemotherapy and radiation.\n\nBeyond his direct contributions to medical science, Dr. Sancar is also committed to promoting education and scientific literacy in his community. He has given numerous public lectures and has mentored countless students and postdoctoral fellows. He is a strong advocate for science education and believes that it is essential for fostering innovation and progress. He is known to actively support Turkish students pursuing scientific careers abroad, providing mentorship and guidance.\n\n### 6. Legacy and Future Outlook\n\nDr. Aziz Sancar stands as a towering figure in the field of molecular biology, renowned for his groundbreaking contributions to our understanding of DNA repair mechanisms. His meticulous research and unwavering dedication have not only advanced scientific knowledge but have also had a tangible impact on human health. His discovery of the detailed molecular mechanisms of nucleotide excision repair (NER) is a landmark achievement that has revolutionized our understanding of how cells protect themselves from DNA damage and how defects in these mechanisms can lead to cancer and other diseases.\n\nHis legacy extends beyond his scientific discoveries. He is a role model for aspiring scientists, particularly those from underrepresented backgrounds. His journey from a small town in Turkey to the pinnacle of scientific achievement is an inspiration to many. He has demonstrated that with hard work, perseverance, and a passion for knowledge, anything is possible.\n\nLooking to the future, Dr. Sancar’s work continues to have relevance. His research on the circadian clock and DNA repair has opened up new avenues for personalized medicine, suggesting that the timing of cancer therapy can be optimized to maximize its effectiveness. His work on DNA repair is also relevant to the development of new strategies for preventing and treating age-related diseases.\n\nDr. Sancar's overall standing in the medical community is one of immense respect and admiration. He is widely regarded as a pioneer in the field of DNA repair and as a leading voice in the scientific community. His work has been recognized with numerous prestigious awards, culminating in the 2015 Nobel Prize in Chemistry, which he shared with Tomas Lindahl and Paul Modrich for their mechanistic studies of DNA repair. His influence will continue to shape the direction of research in DNA repair and related fields for many years to come. He is a true testament to the power of scientific inquiry and the importance of fundamental research in advancing human health.\n",
+  "bioGenerated": true
 }

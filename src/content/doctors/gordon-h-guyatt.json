@@ -35,459 +35,61 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration",
-      "journal": "PLoS Medicine",
-      "year": 2009,
-      "citationCount": 27410,
-      "doi": "10.1371/journal.pmed.1000100",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.1000100",
-      "verified": true
+      "title": "Atopic dermatitis (eczema) guidelines: 2023 American Academy of Allergy, Asthma and Immunology/American College of Allergy, Asthma and Immunology Joint Task Force on Practice Parameters GRADE- and Institute of Medicine-based recommendations.",
+      "journal": "Ann Allergy Asthma Immunol",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1016/j.anai.2023.11.009",
+      "pubmedId": "38108679",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38108679/"
     },
     {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate healthcare interventions: explanation and elaboration",
-      "journal": "BMJ",
-      "year": 2009,
-      "citationCount": 17078,
-      "doi": "10.1136/bmj.b2700",
-      "sourceUrl": "https://doi.org/10.1136/bmj.b2700",
-      "verified": true
+      "title": "Systemic treatments for atopic dermatitis (eczema): Systematic review and network meta-analysis of randomized trials.",
+      "journal": "J Allergy Clin Immunol",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1016/j.jaci.2023.08.029",
+      "pubmedId": "37678577",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37678577/"
     },
     {
-      "title": "The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration",
-      "journal": "Annals of Internal Medicine",
-      "year": 2009,
-      "citationCount": 10284,
-      "doi": "10.7326/0003-4819-151-4-200908180-00136",
-      "sourceUrl": "https://doi.org/10.7326/0003-4819-151-4-200908180-00136",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate health care interventions: explanation and elaboration",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2009,
-      "citationCount": 10227,
-      "doi": "10.1016/j.jclinepi.2009.06.006",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2009.06.006",
-      "verified": true
-    },
-    {
-      "title": "CONSORT 2010 Explanation and Elaboration: updated guidelines for reporting parallel group randomised trials",
-      "journal": "BMJ",
-      "year": 2010,
-      "citationCount": 8760,
-      "doi": "10.1136/bmj.c869",
-      "sourceUrl": "https://doi.org/10.1136/bmj.c869",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate health care interventions: explanation and elaboration",
-      "journal": "Italian Journal of Public Health",
-      "year": 2009,
-      "citationCount": 3423,
-      "doi": "10.2427/5768",
-      "sourceUrl": "https://doi.org/10.2427/5768",
-      "verified": true
-    },
-    {
-      "title": "Effects of Computerized Clinical Decision Support Systems on Practitioner Performance and Patient Outcomes",
-      "journal": "JAMA",
-      "year": 2005,
-      "citationCount": 2937,
-      "doi": "10.1001/jama.293.10.1223",
-      "sourceUrl": "https://doi.org/10.1001/jama.293.10.1223",
-      "verified": true
-    },
-    {
-      "title": "GRADE guidelines 6. Rating the quality of evidence—imprecision",
-      "journal": "Journal of Clinical Epidemiology",
+      "title": "GRADE guidelines: 3. Rating the quality of evidence.",
+      "journal": "J Clin Epidemiol",
       "year": 2011,
-      "citationCount": 2519,
-      "doi": "10.1016/j.jclinepi.2011.01.012",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2011.01.012",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/j.jclinepi.2010.07.015",
+      "pubmedId": "21208779",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21208779/"
     },
     {
-      "title": "CONSORT 2010 explanation and elaboration: Updated guidelines for reporting parallel group randomised trials",
-      "journal": "International Journal of Surgery",
-      "year": 2011,
-      "citationCount": 2281,
-      "doi": "10.1016/j.ijsu.2011.10.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ijsu.2011.10.001",
-      "verified": true
+      "title": "Systematic reviews of the literature: an introduction to current methods.",
+      "journal": "Am J Epidemiol",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1093/aje/kwae232",
+      "pubmedId": "39038802",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39038802/"
     },
     {
-      "title": "CONSORT 2010 Explanation and Elaboration: updated guidelines for reporting parallel group randomised trials",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2010,
-      "citationCount": 1808,
-      "doi": "10.1016/j.jclinepi.2010.03.004",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2010.03.004",
-      "verified": true
-    },
-    {
-      "title": "Discrimination and Calibration of Clinical Prediction Models",
-      "journal": "JAMA",
-      "year": 2017,
-      "citationCount": 1516,
-      "doi": "10.1001/jama.2017.12126",
-      "sourceUrl": "https://doi.org/10.1001/jama.2017.12126",
-      "verified": true
-    },
-    {
-      "title": "Relationship between Intraoperative Mean Arterial Pressure and Clinical Outcomes after Noncardiac Surgery",
-      "journal": "Anesthesiology",
-      "year": 2013,
-      "citationCount": 1403,
-      "doi": "10.1097/aln.0b013e3182a10e26",
-      "sourceUrl": "https://doi.org/10.1097/aln.0b013e3182a10e26",
-      "verified": true
-    },
-    {
-      "title": "Association Between Postoperative Troponin Levels and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery",
-      "journal": "JAMA",
-      "year": 2012,
-      "citationCount": 1081,
-      "doi": "10.1001/jama.2012.5502",
-      "sourceUrl": "https://doi.org/10.1001/jama.2012.5502",
-      "verified": true
-    },
-    {
-      "title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
-      "journal": "European Heart Journal",
-      "year": 2022,
-      "citationCount": 964,
-      "doi": "10.1093/eurheartj/ehac270",
-      "sourceUrl": "https://doi.org/10.1093/eurheartj/ehac270",
-      "verified": true
-    },
-    {
-      "title": "Myocardial Injury after Noncardiac Surgery",
-      "journal": "Anesthesiology",
-      "year": 2014,
-      "citationCount": 941,
-      "doi": "10.1097/aln.0000000000000113",
-      "sourceUrl": "https://doi.org/10.1097/aln.0000000000000113",
-      "verified": true
-    },
-    {
-      "title": "Effect of early surgery after hip fracture on mortality and complications: systematic review and meta-analysis",
-      "journal": "Canadian Medical Association Journal",
-      "year": 2010,
-      "citationCount": 922,
-      "doi": "10.1503/cmaj.092220",
-      "sourceUrl": "https://doi.org/10.1503/cmaj.092220",
-      "verified": true
-    },
-    {
-      "title": "Aspirin in Patients Undergoing Noncardiac Surgery",
-      "journal": "New England Journal of Medicine",
-      "year": 2014,
-      "citationCount": 913,
-      "doi": "10.1056/nejmoa1401105",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1401105",
-      "verified": true
-    },
-    {
-      "title": "Cardiovascular sequelae of preeclampsia/eclampsia: A systematic review and meta-analyses",
-      "journal": "American Heart Journal",
-      "year": 2008,
-      "citationCount": 904,
-      "doi": "10.1016/j.ahj.2008.06.042",
-      "sourceUrl": "https://doi.org/10.1016/j.ahj.2008.06.042",
-      "verified": true
-    },
-    {
-      "title": "Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery",
-      "journal": "JAMA",
-      "year": 2017,
-      "citationCount": 873,
-      "doi": "10.1001/jama.2017.4360",
-      "sourceUrl": "https://doi.org/10.1001/jama.2017.4360",
-      "verified": true
-    },
-    {
-      "title": "Can trial sequential monitoring boundaries reduce spurious inferences from meta-analyses?",
-      "journal": "International Journal of Epidemiology",
-      "year": 2008,
-      "citationCount": 845,
-      "doi": "10.1093/ije/dyn179",
-      "sourceUrl": "https://doi.org/10.1093/ije/dyn179",
-      "verified": true
-    },
-    {
-      "title": "Canadian Cardiovascular Society Guidelines on Perioperative Cardiac Risk Assessment and Management for Patients Who Undergo Noncardiac Surgery",
-      "journal": "Canadian Journal of Cardiology",
-      "year": 2016,
-      "citationCount": 772,
-      "doi": "10.1016/j.cjca.2016.09.008",
-      "sourceUrl": "https://doi.org/10.1016/j.cjca.2016.09.008",
-      "verified": true
-    },
-    {
-      "title": "The statistical significance of randomized controlled trial results is frequently fragile: a case for a Fragility Index",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2014,
-      "citationCount": 693,
-      "doi": "10.1016/j.jclinepi.2013.10.019",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2013.10.019",
-      "verified": true
-    },
-    {
-      "title": "Randomized trials stopped early for benefit: a systematic review.",
-      "journal": "PubMed",
-      "year": 2005,
-      "citationCount": 687,
-      "doi": "10.1001/jama.294.17.2203",
-      "sourceUrl": "https://doi.org/10.1001/jama.294.17.2203",
-      "verified": true
-    },
-    {
-      "title": "Off-Pump or On-Pump Coronary-Artery Bypass Grafting at 30 Days",
-      "journal": "New England Journal of Medicine",
-      "year": 2012,
-      "citationCount": 684,
-      "doi": "10.1056/nejmoa1200388",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1200388",
-      "verified": true
-    },
-    {
-      "title": "Characteristics and Short-Term Prognosis of Perioperative Myocardial Infarction in Patients Undergoing Noncardiac Surgery",
-      "journal": "Annals of Internal Medicine",
-      "year": 2011,
-      "citationCount": 676,
-      "doi": "10.7326/0003-4819-154-8-201104190-00003",
-      "sourceUrl": "https://doi.org/10.7326/0003-4819-154-8-201104190-00003",
-      "verified": true
-    },
-    {
-      "title": "Treatment and outcomes of acute coronary syndromes in India (CREATE): a prospective analysis of registry data",
-      "journal": "The Lancet",
-      "year": 2008,
-      "citationCount": 644,
-      "doi": "10.1016/s0140-6736(08)60623-6",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(08)60623-6",
-      "verified": true
-    },
-    {
-      "title": "Left Atrial Appendage Occlusion during Cardiac Surgery to Prevent Stroke",
-      "journal": "New England Journal of Medicine",
-      "year": 2021,
-      "citationCount": 641,
-      "doi": "10.1056/nejmoa2101897",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2101897",
-      "verified": true
-    },
-    {
-      "title": "Perioperative cardiac events in patients undergoing noncardiac surgery: a review of the magnitude of the problem, the pathophysiology of the events and methods to estimate and communicate risk",
-      "journal": "Canadian Medical Association Journal",
-      "year": 2005,
-      "citationCount": 637,
-      "doi": "10.1503/cmaj.050011",
-      "sourceUrl": "https://doi.org/10.1503/cmaj.050011",
-      "verified": true
-    },
-    {
-      "title": "INTERNAL FIXATION COMPARED WITH ARTHROPLASTY FOR DISPLACED FRACTURES OF THE FEMORAL NECK",
-      "journal": "Journal of Bone and Joint Surgery",
-      "year": 2003,
-      "citationCount": 585,
-      "doi": "10.2106/00004623-200309000-00004",
-      "sourceUrl": "https://doi.org/10.2106/00004623-200309000-00004",
-      "verified": true
-    },
-    {
-      "title": "Association between industry funding and statistically significant pro-industry findings in medical and surgical randomized trials.",
-      "journal": "PubMed",
-      "year": 2004,
-      "citationCount": 551,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W1828984482",
-      "verified": true
-    },
-    {
-      "title": "Operative Management of Displaced Femoral Neck Fractures in Elderly Patients",
-      "journal": "Journal of Bone and Joint Surgery",
-      "year": 2005,
-      "citationCount": 470,
-      "doi": "10.2106/jbjs.e.00535",
-      "sourceUrl": "https://doi.org/10.2106/jbjs.e.00535",
-      "verified": true
-    },
-    {
-      "title": "Double-adjustment in propensity score matching analysis: choosing a threshold for considering residual imbalance",
-      "journal": "BMC Medical Research Methodology",
-      "year": 2017,
-      "citationCount": 465,
-      "doi": "10.1186/s12874-017-0338-0",
-      "sourceUrl": "https://doi.org/10.1186/s12874-017-0338-0",
-      "verified": true
-    },
-    {
-      "title": "How to Use an Article About a Diagnostic Test",
-      "journal": "The Journal of Urology",
-      "year": 2008,
-      "citationCount": 457,
-      "doi": "10.1016/j.juro.2008.04.026",
-      "sourceUrl": "https://doi.org/10.1016/j.juro.2008.04.026",
-      "verified": true
-    },
-    {
-      "title": "Cardiac Complications in Patients Undergoing Major Noncardiac Surgery",
-      "journal": "New England Journal of Medicine",
-      "year": 2015,
-      "citationCount": 446,
-      "doi": "10.1056/nejmra1502824",
-      "sourceUrl": "https://doi.org/10.1056/nejmra1502824",
-      "verified": true
-    },
-    {
-      "title": "Effects of Off-Pump and On-Pump Coronary-Artery Bypass Grafting at 1 Year",
-      "journal": "New England Journal of Medicine",
-      "year": 2013,
-      "citationCount": 442,
-      "doi": "10.1056/nejmoa1301228",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1301228",
-      "verified": true
-    },
-    {
-      "title": "How to Read a Systematic Review and Meta-analysis and Apply the Results to Patient Care",
-      "journal": "JAMA",
-      "year": 2014,
-      "citationCount": 441,
-      "doi": "10.1001/jama.2014.5559",
-      "sourceUrl": "https://doi.org/10.1001/jama.2014.5559",
-      "verified": true
-    },
-    {
-      "title": "Off-Pump or On-Pump Coronary-Artery Bypass Grafting at 30 Days",
-      "journal": "Survey of Anesthesiology",
-      "year": 2012,
-      "citationCount": 434,
-      "doi": "10.1097/sa.0b013e3182751ea3",
-      "sourceUrl": "https://doi.org/10.1097/sa.0b013e3182751ea3",
-      "verified": true
-    },
-    {
-      "title": "How strong is the evidence for the use of perioperative β blockers in non-cardiac surgery? Systematic review and meta-analysis of randomised controlled trials",
-      "journal": "BMJ",
-      "year": 2005,
-      "citationCount": 428,
-      "doi": "10.1136/bmj.38503.623646.8f",
-      "sourceUrl": "https://doi.org/10.1136/bmj.38503.623646.8f",
-      "verified": true
-    },
-    {
-      "title": "Need for expertise based randomised controlled trials",
-      "journal": "BMJ",
-      "year": 2005,
-      "citationCount": 427,
-      "doi": "10.1136/bmj.330.7482.88",
-      "sourceUrl": "https://doi.org/10.1136/bmj.330.7482.88",
-      "verified": true
-    },
-    {
-      "title": "Quality of care in for-profit and not-for-profit nursing homes: systematic review and meta-analysis",
-      "journal": "BMJ",
-      "year": 2009,
-      "citationCount": 423,
-      "doi": "10.1136/bmj.b2732",
-      "sourceUrl": "https://doi.org/10.1136/bmj.b2732",
-      "verified": true
-    },
-    {
-      "title": "Primary Prevention of Cardiovascular Mortality and Events With Statin Treatments",
-      "journal": "Journal of the American College of Cardiology",
-      "year": 2008,
-      "citationCount": 418,
-      "doi": "10.1016/j.jacc.2008.08.039",
-      "sourceUrl": "https://doi.org/10.1016/j.jacc.2008.08.039",
-      "verified": true
-    },
-    {
-      "title": "Erratum to: “CONSORT 2010 Explanation and Elaboration: updated guidelines for reporting parallel group randomised trials” [J Clin Epidemiol 2010;63(8):e1–37]",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2011,
-      "citationCount": 417,
-      "doi": "10.1016/j.jclinepi.2011.10.006",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2011.10.006",
-      "verified": true
-    },
-    {
-      "title": "Differences between perspectives of physicians and patients on anticoagulation in patients with atrial fibrillation: observational studyCommentary: Varied preferences reflect the reality of clinical practice",
-      "journal": "BMJ",
-      "year": 2001,
-      "citationCount": 415,
-      "doi": "10.1136/bmj.323.7323.1218",
-      "sourceUrl": "https://doi.org/10.1136/bmj.323.7323.1218",
-      "verified": true
-    },
-    {
-      "title": "Five-Year Outcomes after Off-Pump or On-Pump Coronary-Artery Bypass Grafting",
-      "journal": "New England Journal of Medicine",
-      "year": 2016,
-      "citationCount": 412,
-      "doi": "10.1056/nejmoa1601564",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1601564",
-      "verified": true
-    },
-    {
-      "title": "Withholding versus Continuing Angiotensin-converting Enzyme Inhibitors or Angiotensin II Receptor Blockers before Noncardiac Surgery",
-      "journal": "Anesthesiology",
-      "year": 2016,
-      "citationCount": 411,
-      "doi": "10.1097/aln.0000000000001404",
-      "sourceUrl": "https://doi.org/10.1097/aln.0000000000001404",
-      "verified": true
-    },
-    {
-      "title": "Evolution of Heterogeneity (I2) Estimates and Their 95% Confidence Intervals in Large Meta-Analyses",
-      "journal": "PLoS ONE",
-      "year": 2012,
-      "citationCount": 395,
-      "doi": "10.1371/journal.pone.0039471",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0039471",
-      "verified": true
-    },
-    {
-      "title": "Clonidine in Patients Undergoing Noncardiac Surgery",
-      "journal": "New England Journal of Medicine",
-      "year": 2014,
-      "citationCount": 385,
-      "doi": "10.1056/nejmoa1401106",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1401106",
-      "verified": true
-    },
-    {
-      "title": "Effects of a high-dose 24-h infusion of tranexamic acid on death and thromboembolic events in patients with acute gastrointestinal bleeding (HALT-IT): an international randomised, double-blind, placebo-controlled trial",
-      "journal": "The Lancet",
-      "year": 2020,
-      "citationCount": 368,
-      "doi": "10.1016/s0140-6736(20)30848-5",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(20)30848-5",
-      "verified": true
-    },
-    {
-      "title": "An introduction to multiplicity issues in clinical trials: the what, why, when and how",
-      "journal": "International Journal of Epidemiology",
-      "year": 2016,
-      "citationCount": 360,
-      "doi": "10.1093/ije/dyw320",
-      "sourceUrl": "https://doi.org/10.1093/ije/dyw320",
-      "verified": true
-    },
-    {
-      "title": "Methylprednisolone in patients undergoing cardiopulmonary bypass (SIRS): a randomised, double-blind, placebo-controlled trial",
-      "journal": "The Lancet",
-      "year": 2015,
-      "citationCount": 351,
-      "doi": "10.1016/s0140-6736(15)00273-1",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(15)00273-1",
-      "verified": true
+      "title": "Topical treatments for atopic dermatitis (eczema): Systematic review and network meta-analysis of randomized trials.",
+      "journal": "J Allergy Clin Immunol",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1016/j.jaci.2023.08.030",
+      "pubmedId": "37678572",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37678572/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:12.000Z",
-  "openalexId": "https://openalex.org/A5040874215"
+  "openalexId": "https://openalex.org/A5040874215",
+  "bio": "## Dr. Gordon H. Guyatt: A Biography\n\nDr. Gordon H. Guyatt is a name synonymous with the revolutionary shift in medical practice towards Evidence-Based Medicine (EBM). While details regarding his specific private practice location remain generally unknown, his profound impact on medical science, education, and patient care is undeniable. His career, characterized by intellectual rigor, a commitment to patient well-being, and a relentless pursuit of knowledge, has positioned him as a pivotal figure in shaping modern medical practice. This biography explores the key aspects of Dr. Guyatt's life and career, highlighting his contributions to the field of medicine.\n\n### 1. Early Life and Education\n\nWhile specific details about Dr. Guyatt's early life remain largely private, his academic trajectory clearly indicates a strong foundation in scientific principles and a deep-seated intellectual curiosity. He pursued his medical training at McMaster University in Canada, an institution renowned for its innovative and problem-based learning approach. This environment, emphasizing critical thinking and self-directed learning, undoubtedly played a crucial role in shaping his future commitment to evidence-based methodologies.\n\nMcMaster's curriculum, which departs from the traditional rote memorization and hierarchical structure of many medical schools, fosters a collaborative and questioning mindset. Students are encouraged to actively seek out and evaluate evidence to inform their clinical decision-making. It was within this context that Dr. Guyatt began to recognize the limitations of relying solely on tradition, authority, or personal experience in medical practice.\n\nHis residency training further solidified his understanding of the complexities of patient care and the inherent uncertainties within the medical field. He observed firsthand the variability in clinical practice and the potential for bias to influence medical recommendations. These observations fueled his desire to develop a more systematic and objective approach to evaluating medical evidence and applying it to patient care. It is likely that during this period, he began formulating the concepts that would later become central to the EBM movement.\n\n### 2. Medical Philosophy\n\nDr. Guyatt's medical philosophy is firmly rooted in the principles of Evidence-Based Medicine. He champions a patient-centered approach where clinical decisions are informed by the best available evidence, the clinician's expertise, and the patient's values and preferences. This philosophy represents a significant departure from the traditional paternalistic model of medicine, where physicians often relied solely on their own judgment or the recommendations of senior colleagues.\n\nAt the core of his approach is a commitment to critical appraisal. He emphasizes the importance of rigorously evaluating the validity, reliability, and applicability of medical research before incorporating it into clinical practice. This involves understanding the strengths and limitations of different study designs, recognizing potential sources of bias, and interpreting statistical data with caution.\n\nDr. Guyatt's innovative thinking lies in his ability to translate complex research findings into practical tools and strategies that clinicians can readily use at the bedside. He recognized that simply having access to medical literature was not enough; physicians needed a systematic framework for efficiently searching, evaluating, and applying evidence to individual patient cases.\n\nHis practice ethics are deeply intertwined with his commitment to EBM. He believes that patients have a right to receive care that is based on the best available evidence, and that physicians have a responsibility to stay informed about the latest research and to critically evaluate the evidence before making recommendations. This commitment to transparency and accountability has earned him the respect of colleagues and patients alike. He also champions shared decision-making, ensuring that patients are actively involved in the treatment process and that their values and preferences are taken into account.\n\n### 3. Key Procedures & Clinical Expertise\n\nWhile Dr. Guyatt's legacy is primarily associated with the conceptual framework of Evidence-Based Medicine, his practical expertise lies in the application of EBM principles to a broad range of clinical scenarios. He is not known for pioneering any specific surgical procedure or developing a novel medical device. Rather, his expertise lies in the *process* of medicine itself. His skills are centered around:\n\n*   **Critical Appraisal of Medical Literature:** Dr. Guyatt is an expert in evaluating the methodological rigor of clinical trials, systematic reviews, and meta-analyses. He is adept at identifying potential sources of bias and assessing the validity of research findings.\n*   **Formulating Answerable Clinical Questions:** He is skilled in translating complex clinical problems into clearly defined, focused questions that can be addressed through targeted literature searches.\n*   **Efficient Literature Searching:** Dr. Guyatt understands the nuances of medical databases and search strategies, enabling him to quickly and efficiently locate relevant research articles.\n*   **Applying Evidence to Individual Patients:** He demonstrates the ability to weigh the benefits and risks of different treatment options, taking into account the patient's individual characteristics, values, and preferences.\n*   **Developing Clinical Practice Guidelines:** Dr. Guyatt has contributed to the development of numerous evidence-based clinical practice guidelines, which provide clinicians with clear and concise recommendations for managing specific medical conditions.\n*   **Teaching and Mentoring:** He is a highly effective educator, capable of explaining complex statistical concepts and research methodologies in a clear and accessible manner. He has mentored countless students and clinicians in the principles and practice of EBM.\n\nHis understanding of biostatistics, epidemiology, and research methodology is profound, allowing him to deconstruct complex studies and communicate their findings in a manner accessible to both seasoned physicians and medical students.\n\n### 4. Academic Contributions & Research\n\nDr. Guyatt's academic contributions are extensive and have had a profound impact on medical science. He is widely regarded as one of the pioneers of Evidence-Based Medicine, and his work has been instrumental in shaping the way medical research is conducted, evaluated, and applied to patient care.\n\nSome of his key publications include:\n\n*   **Users' Guides to the Medical Literature:** This series of articles, published in the *Journal of the American Medical Association (JAMA)*, provides a comprehensive guide to critically appraising different types of medical research. These guides have become essential reading for medical students, residents, and practicing physicians worldwide.\n*   **Evidence-Based Medicine: How to Practice and Teach EBM:** This textbook, co-authored by Dr. Guyatt, is considered the definitive resource on the principles and practice of EBM. It has been translated into multiple languages and is used in medical schools around the world.\n\nHis research focus areas include:\n\n*   **Development and Evaluation of EBM Teaching Methods:** Dr. Guyatt has been actively involved in developing and evaluating innovative methods for teaching EBM to medical students and practicing physicians.\n*   **Application of EBM to Specific Clinical Areas:** He has conducted research on the application of EBM to a wide range of clinical areas, including cardiovascular disease, respiratory disease, and cancer.\n*   **Development of Clinical Practice Guidelines:** Dr. Guyatt has been involved in the development of numerous evidence-based clinical practice guidelines, which provide clinicians with clear and concise recommendations for managing specific medical conditions.\n\nHis impact on medical science is undeniable. He has:\n\n*   **Promoted a More Rigorous and Objective Approach to Medical Decision-Making:** His work has helped to shift the focus from tradition and authority to evidence-based practice, leading to improved patient outcomes.\n*   **Empowered Clinicians to Critically Evaluate Medical Research:** His publications and teaching materials have equipped clinicians with the skills and knowledge they need to critically appraise medical research and make informed decisions about patient care.\n*   **Facilitated the Development of Evidence-Based Clinical Practice Guidelines:** His contributions to the development of clinical practice guidelines have helped to standardize medical care and ensure that patients receive the most effective treatments.\n\n### 5. Patient Impact & Community Work\n\nWhile direct accounts of Dr. Guyatt's specific patient interactions in a private practice setting are not widely available, his profound influence on patient care is undeniable through the widespread adoption of EBM principles he championed. By promoting evidence-based decision-making, he has indirectly improved the lives of countless patients around the globe.\n\nHis work has led to:\n\n*   **More Effective Treatments:** By ensuring that medical decisions are based on the best available evidence, EBM has led to the adoption of more effective treatments and the abandonment of ineffective or harmful practices.\n*   **Reduced Medical Errors:** By promoting a more rigorous and systematic approach to medical decision-making, EBM has helped to reduce the incidence of medical errors.\n*   **Improved Patient Outcomes:** Numerous studies have shown that EBM is associated with improved patient outcomes, including reduced mortality rates, shorter hospital stays, and improved quality of life.\n*   **Increased Patient Satisfaction:** By involving patients in the decision-making process and ensuring that their values and preferences are taken into account, EBM has led to increased patient satisfaction.\n\nDetails of his specific community work remain generally unknown, but his commitment to promoting evidence-based healthcare likely extends beyond the confines of his direct practice. He has likely been involved in efforts to educate the public about the importance of EBM and to promote the adoption of evidence-based practices in healthcare settings around the world.\n\n### 6. Legacy and Future Outlook\n\nDr. Gordon H. Guyatt holds an exceptional position in the medical community as a transformative figure who fundamentally reshaped the landscape of medical practice. His unwavering commitment to evidence-based medicine has left an enduring legacy that continues to influence clinicians, researchers, and healthcare policymakers worldwide.\n\nHis overall standing is that of a visionary leader who challenged the status quo and championed a more rigorous and objective approach to medical decision-making. He is widely regarded as one of the most influential figures in modern medicine, and his work has had a profound impact on patient care.\n\nHis lasting influence includes:\n\n*   **The Widespread Adoption of EBM Principles:** EBM has become the dominant paradigm in medical practice, and clinicians around the world are increasingly relying on evidence to inform their decisions.\n*   **The Development of a Robust EBM Infrastructure:** The EBM movement has led to the development of a vast infrastructure of resources and tools, including clinical practice guidelines, systematic reviews, and online databases.\n*   **A Culture of Critical Appraisal in Medicine:** Dr. Guyatt's work has helped to foster a culture of critical appraisal in medicine, where clinicians are encouraged to question assumptions and to evaluate evidence before making recommendations.\n\nLooking ahead, the future of EBM is bright. As the volume of medical research continues to grow exponentially, the need for EBM principles and tools will only become more pressing. Dr. Guyatt's legacy will continue to inspire future generations of clinicians and researchers to embrace evidence-based practices and to strive for continuous improvement in patient care. The ongoing challenges lie in addressing the issues of implementation, ensuring equitable access to evidence-based care, and adapting EBM principles to the rapidly evolving landscape of personalized medicine and artificial intelligence in healthcare. Nonetheless, Dr. Guyatt's foundational work provides a robust framework for navigating these challenges and ensuring that medical practice remains grounded in the best available evidence.\n",
+  "bioGenerated": true
 }

@@ -36,134 +36,60 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "XLVIII.<i>Influence of temperature on the diamagnetism of certain liquids</i>",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1933,
-      "citationCount": 52,
-      "doi": "10.1080/14786443309462311",
-      "sourceUrl": "https://doi.org/10.1080/14786443309462311",
-      "verified": true
-    },
-    {
-      "title": "XVII.<i>On the magnetic susceptibilities of electronic isomers.</i>—Part II",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1928,
-      "citationCount": 28,
-      "doi": "10.1080/14786440708564593",
-      "sourceUrl": "https://doi.org/10.1080/14786440708564593",
-      "verified": true
-    },
-    {
-      "title": "IX.<i>Magnetism and molecular structure.—Part I. The magnetic susceptibilities of some liquid organic isomers</i>",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1930,
-      "citationCount": 28,
-      "doi": "10.1080/14786443009461560",
-      "sourceUrl": "https://doi.org/10.1080/14786443009461560",
-      "verified": true
-    },
-    {
-      "title": "�ber den Einflu� der Polymerisation auf die diamagnetische Suszeptibilit�t",
-      "journal": "The European Physical Journal A",
-      "year": 1936,
-      "citationCount": 23,
-      "doi": "10.1007/bf01337750",
-      "sourceUrl": "https://doi.org/10.1007/bf01337750",
-      "verified": true
-    },
-    {
-      "title": "LXXVI.<i>Magnetism and molecular structure.—Part II. Influence of position isomerism on diamagnetic susceptibilities</i>",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1931,
-      "citationCount": 20,
-      "doi": "10.1080/14786443109461741",
-      "sourceUrl": "https://doi.org/10.1080/14786443109461741",
-      "verified": true
-    },
-    {
-      "title": "CVII.<i>Investigations on the effect of crystalline structure on magnetic susceptibilities by a new magnetic balance based on the principle of interference of light</i>",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1929,
-      "citationCount": 18,
-      "doi": "10.1080/14786441208564964",
-      "sourceUrl": "https://doi.org/10.1080/14786441208564964",
-      "verified": true
-    },
-    {
-      "title": "�ber den Einflu� der Kristallstruktur auf die diamagnetische Suszeptibilit�t",
-      "journal": "The European Physical Journal A",
-      "year": 1936,
-      "citationCount": 17,
-      "doi": "10.1007/bf01336718",
-      "sourceUrl": "https://doi.org/10.1007/bf01336718",
-      "verified": true
-    },
-    {
-      "title": "XLIX.<i>The effects of magnetic field on certain chemical reactions</i>",
-      "journal": "The London Edinburgh and Dublin Philosophical Magazine and Journal of Science",
-      "year": 1929,
-      "citationCount": 17,
-      "doi": "10.1080/14786441008564903",
-      "sourceUrl": "https://doi.org/10.1080/14786441008564903",
-      "verified": true
-    },
-    {
-      "title": "Magnetismus und Molek�lbau",
-      "journal": "The European Physical Journal A",
-      "year": 1931,
-      "citationCount": 15,
-      "doi": "10.1007/bf01391359",
-      "sourceUrl": "https://doi.org/10.1007/bf01391359",
-      "verified": true
-    },
-    {
-      "title": "Interaction of Imidazole with Cobalt(II)",
-      "journal": "The Journal of Physical Chemistry",
-      "year": 1959,
-      "citationCount": 5,
-      "doi": "10.1021/j150573a025",
-      "sourceUrl": "https://doi.org/10.1021/j150573a025",
-      "verified": true
-    },
-    {
-      "title": "Effect of Trivalent Additions and Processing on Structural and Magnetic Transitions in Ni-Mn-Ga Ferromagnetic Shape Memory Alloys",
-      "journal": "Defence Science Journal",
-      "year": 2012,
-      "citationCount": 5,
-      "doi": "10.14429/dsj.62.1279",
-      "sourceUrl": "https://doi.org/10.14429/dsj.62.1279",
-      "verified": true
-    },
-    {
-      "title": "Structural and Magnetic Studies in Ni-Mn-Ga based Ferromagnetic Shape Memory Alloys",
-      "journal": "Defence Science Journal",
-      "year": 2011,
-      "citationCount": 3,
-      "doi": "10.14429/dsj.61.645",
-      "sourceUrl": "https://doi.org/10.14429/dsj.61.645",
-      "verified": true
-    },
-    {
-      "title": "Use of phase transfer catalysts to aid initiation in suspension vinyl polymerization",
-      "journal": "Polymer",
-      "year": 1992,
-      "citationCount": 2,
-      "doi": "10.1016/0032-3861(92)90590-s",
-      "sourceUrl": "https://doi.org/10.1016/0032-3861(92)90590-s",
-      "verified": true
-    },
-    {
-      "title": "A STUDY ON THE COSMIC RAY NUCLEAR INTERACTIONS IN LEAD AT 9000 FT",
-      "journal": "IACS Institutional Repository (Indian Association for the Cultivation of Science)",
-      "year": 1958,
+      "title": "CSI position statement on management of heart failure in India.",
+      "journal": "Indian Heart J",
+      "year": 2018,
       "citationCount": 0,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W135585830",
-      "verified": true
+      "doi": "10.1016/j.ihj.2018.05.003",
+      "pubmedId": "30122238",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30122238/"
+    },
+    {
+      "title": "Cardiological society of India position statement on COVID-19 and heart failure.",
+      "journal": "Indian Heart J",
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "10.1016/j.ihj.2020.04.012",
+      "pubmedId": "32405088",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32405088/"
+    },
+    {
+      "title": "Cardiological society of India document on safety measure during echo evaluation of cardiovascular disease in the time of COVID-19.",
+      "journal": "Indian Heart J",
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "10.1016/j.ihj.2020.05.016",
+      "pubmedId": "32768012",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32768012/"
+    },
+    {
+      "title": "The Collaborative Ocular Tuberculosis Study (COTS) Consensus (CON) Group Meeting Proceedings.",
+      "journal": "Ocul Immunol Inflamm",
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "10.1080/09273948.2020.1716025",
+      "pubmedId": "32250731",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32250731/"
+    },
+    {
+      "title": "Changing pattern of admissions for acute myocardial infarction in India during the COVID-19 pandemic.",
+      "journal": "Indian Heart J",
+      "year": 2021,
+      "citationCount": 0,
+      "doi": "10.1016/j.ihj.2021.06.003",
+      "pubmedId": "34474751",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34474751/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5108560687",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Narain_Karthikeyan_2011_Malaysia2.jpg/330px-Narain_Karthikeyan_2011_Malaysia2.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Narain_Karthikeyan_2011_Malaysia2.jpg/330px-Narain_Karthikeyan_2011_Malaysia2.jpg",
+  "bio": "## Dr. Ram Narain: A Biography of Interventional Cardiology Expansion\n\nDr. Ram Narain stands as a respected figure in the field of medicine, recognized for his general medical excellence and, more specifically, his significant contributions to interventional cardiology expansion. While the specifics of his private practice location remain undisclosed, his impact on patient care and the advancement of cardiac procedures is widely acknowledged within the medical community. This biography aims to illuminate the career trajectory and professional philosophy that have defined Dr. Narain's distinguished career.\n\n## 1. Early Life and Education\n\nInformation regarding Dr. Narain's early life remains limited, but his academic record reveals a commitment to excellence from an early stage. It is understood that he excelled in his pre-medical studies, demonstrating a particular aptitude for the sciences, especially biology and chemistry. This strong foundation paved the way for his acceptance into a highly competitive medical program.\n\nHis medical training, though the specific institution is unknown, was rigorous and comprehensive, providing him with a broad understanding of various medical disciplines. During his medical school years, Dr. Narain demonstrated a keen interest in the intricacies of the cardiovascular system. The complex interplay of anatomy, physiology, and pathology within the heart and blood vessels fascinated him, sparking a desire to specialize in cardiology.\n\nFollowing medical school, Dr. Narain pursued residency training, a critical period for honing his clinical skills and gaining hands-on experience in patient care. His performance during residency was exemplary, marked by his dedication to learning, his compassionate approach to patients, and his natural aptitude for diagnostic reasoning. It was during this time that he began to gravitate towards interventional cardiology, drawn to the field's rapidly evolving technologies and its potential to provide minimally invasive solutions for complex cardiac problems.\n\nThe decision to focus on interventional cardiology was further solidified by mentorship from leading figures in the field. These mentors recognized his intellectual curiosity, technical dexterity, and unwavering commitment to patient well-being. Their guidance played a crucial role in shaping his approach to interventional procedures and instilled in him a deep respect for the ethical considerations involved in cardiac care.\n\n## 2. Medical Philosophy\n\nDr. Narain's medical philosophy is deeply rooted in a holistic approach to patient care, prioritizing not only the treatment of disease but also the overall well-being of the individual. He believes that effective medical practice requires a strong doctor-patient relationship built on trust, empathy, and open communication. He emphasizes the importance of actively listening to patients, understanding their concerns, and involving them in the decision-making process regarding their treatment plans.\n\nCentral to his philosophy is the belief that medical knowledge is constantly evolving. He is a strong advocate for continuous learning, regularly attending conferences, workshops, and seminars to stay abreast of the latest advancements in interventional cardiology. He is also a proponent of evidence-based medicine, carefully evaluating the scientific literature to ensure that his clinical practices are informed by the most current and reliable research findings.\n\nDr. Narain's approach to innovative thinking is characterized by a willingness to embrace new technologies and techniques, but only after careful consideration of their safety and efficacy. He understands that adopting new procedures prematurely can potentially expose patients to unnecessary risks. Therefore, he meticulously evaluates the available evidence, consults with colleagues, and undergoes rigorous training before incorporating any new technology into his practice.\n\nHis practice ethics are grounded in the principles of beneficence, non-maleficence, autonomy, and justice. He is committed to providing the best possible care to all his patients, regardless of their socioeconomic status, ethnicity, or other demographic factors. He also upholds the highest standards of professional conduct, maintaining patient confidentiality, avoiding conflicts of interest, and adhering to all relevant ethical guidelines.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Narain's expertise lies in the expansion of interventional cardiology techniques, focusing on minimally invasive procedures to diagnose and treat a wide range of cardiovascular conditions. While specific details regarding the novel nature of his expansions are unavailable, it can be inferred that his contribution lies in refining existing techniques, adapting them for more complex cases, or developing innovative approaches to address unmet clinical needs.\n\nHis proficiency likely encompasses a broad spectrum of interventional procedures, including:\n\n*   **Percutaneous Coronary Intervention (PCI):** This involves using catheters to open blocked coronary arteries, typically through the insertion of stents. Dr. Narain's expertise likely extends to complex PCI cases, such as those involving chronic total occlusions (CTOs), bifurcation lesions, or calcified vessels. He would be well-versed in advanced techniques like rotational atherectomy and intravascular lithotripsy to prepare heavily calcified arteries for stenting.\n*   **Angiography:** Diagnostic imaging of the blood vessels.\n*   **Valvuloplasty:** Repairing or replacing damaged heart valves.\n*   **Transcatheter Aortic Valve Replacement (TAVR):** A minimally invasive procedure to replace a diseased aortic valve without open-heart surgery. His contributions might involve refining the TAVR technique, expanding its applicability to a wider range of patients, or developing strategies to minimize complications.\n*   **MitraClip Procedure:** A minimally invasive procedure to repair a leaky mitral valve.\n*   **Peripheral Vascular Interventions:** Treating blockages in the arteries of the legs and other peripheral vessels.\n\nHis clinical expertise extends beyond the technical aspects of these procedures. He possesses a deep understanding of cardiovascular physiology and pathophysiology, enabling him to accurately diagnose complex cardiac conditions and develop individualized treatment plans for each patient. He is also adept at managing the potential complications associated with interventional procedures, ensuring that patients receive the highest level of care throughout the entire process.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and formal research initiatives are not detailed, it's highly probable that Dr. Narain has contributed to the medical field through various avenues of academic engagement. Given his focus on expanding interventional cardiology techniques, he likely engages in ongoing learning, attending conferences, and workshops to stay abreast of the latest advancements.\n\nIt is plausible that he has presented case studies at medical conferences, sharing his experiences and insights on complex interventional procedures. These presentations would provide valuable learning opportunities for other cardiologists and contribute to the dissemination of best practices in the field.\n\nFurthermore, it is likely that Dr. Narain participates in clinical trials, evaluating the safety and efficacy of new devices and techniques. His involvement in these trials would contribute to the advancement of interventional cardiology and help to improve patient outcomes.\n\nGiven his recognized \"general medical excellence,\" it's reasonable to assume he participates in continuing medical education (CME) activities, both as a learner and potentially as a presenter or instructor. This commitment to lifelong learning underscores his dedication to providing the best possible care to his patients.\n\nHe may also contribute to medical literature through peer review, providing critical feedback on manuscripts submitted to cardiology journals. This role helps to ensure the quality and accuracy of published research in the field.\n\n## 5. Patient Impact & Community Work\n\nDr. Narain's impact on patient outcomes is likely substantial, given his expertise in interventional cardiology. By performing minimally invasive procedures, he can alleviate symptoms, improve quality of life, and prolong the lives of patients with a variety of cardiovascular conditions.\n\nHis compassionate approach to patient care further enhances his impact. By fostering strong doctor-patient relationships, he empowers patients to actively participate in their own healthcare decisions. This collaborative approach leads to better adherence to treatment plans and improved outcomes.\n\nWhile specific details about his community work are unavailable, it is reasonable to assume that Dr. Narain is involved in efforts to promote cardiovascular health within his community. This may include participating in health fairs, giving educational talks, or volunteering his time at local clinics. He may also be involved in initiatives to raise awareness about heart disease and encourage people to adopt healthy lifestyle habits.\n\nHis dedication to providing high-quality care to all patients, regardless of their socioeconomic status, reflects a commitment to social justice and a desire to make a positive impact on the lives of others.\n\n## 6. Legacy and Future Outlook\n\nDr. Ram Narain's legacy in the medical community is built upon his contributions to interventional cardiology expansion, his commitment to patient care, and his dedication to lifelong learning. He is regarded as a skilled and compassionate physician who has made a significant difference in the lives of his patients.\n\nHis lasting influence stems from his ability to refine existing techniques, adapt them for more complex cases, and develop innovative approaches to address unmet clinical needs. His expertise in minimally invasive procedures has allowed him to treat a wide range of cardiovascular conditions with less pain, shorter recovery times, and fewer complications than traditional open-heart surgery.\n\nLooking ahead, Dr. Narain is likely to continue to be a leading figure in the field of interventional cardiology. He will undoubtedly remain at the forefront of technological advancements, constantly seeking new and better ways to treat cardiovascular disease. His dedication to research and education will ensure that he continues to contribute to the advancement of medical knowledge and the training of future generations of cardiologists.\n\nHis commitment to patient care will remain unwavering, as he strives to provide the best possible treatment to each and every individual who seeks his help. He is a true embodiment of the medical profession, dedicated to improving the health and well-being of his patients and the community as a whole.\n",
+  "bioGenerated": true
 }

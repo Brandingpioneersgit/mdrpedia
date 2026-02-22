@@ -1,0 +1,188 @@
+{
+    "name": "Cystic Fibrosis",
+    "slug": "cystic-fibrosis",
+    "aliases": ["CF", "Mucoviscidosis"],
+    "description": "Cystic fibrosis is a progressive genetic disease that causes persistent lung infections and limits the ability to breathe over time. It affects the cells that produce mucus, sweat, and digestive juices, causing these fluids to become thick and sticky.",
+    "category": "GENETIC",
+    "icdCode": "E84",
+    "orphaCode": "ORPHA586",
+    "omimCode": "219700",
+    "prevalence": "1 in 2,500 to 3,500 Caucasian newborns",
+    "estimatedCases": 105000,
+    "ageOfOnset": "Present at birth, often diagnosed in infancy",
+    "inheritance": "AUTOSOMAL_RECESSIVE",
+    "symptoms": [
+        "Persistent cough with thick mucus",
+        "Recurrent lung infections",
+        "Wheezing and breathlessness",
+        "Poor weight gain and growth",
+        "Greasy, bulky stools",
+        "Intestinal blockage (meconium ileus in newborns)",
+        "Salty-tasting skin",
+        "Nasal polyps",
+        "Male infertility",
+        "Clubbing of fingers"
+    ],
+    "affectedSystems": [
+        "Respiratory system",
+        "Digestive system",
+        "Reproductive system",
+        "Pancreas",
+        "Liver"
+    ],
+    "prognosis": "Significantly improved with CFTR modulators; median survival now >50 years",
+    "lifeExpectancy": "53+ years (improved from ~30 years in 2000)",
+    "diagnosticMethods": [
+        "Newborn screening (immunoreactive trypsinogen)",
+        "Sweat chloride test",
+        "Genetic testing for CFTR mutations",
+        "Pulmonary function tests",
+        "Chest X-ray and CT",
+        "Sputum culture",
+        "Fecal elastase test"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "Elexacaftor/Tezacaftor/Ivacaftor (Trikafta)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2019
+        },
+        {
+            "name": "Ivacaftor (Kalydeco)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2012
+        },
+        {
+            "name": "Lumacaftor/Ivacaftor (Orkambi)",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2015
+        },
+        {
+            "name": "Tezacaftor/Ivacaftor (Symdeko)",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2018
+        },
+        {
+            "name": "Dornase alfa (Pulmozyme)",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 1993
+        },
+        {
+            "name": "Airway clearance therapy",
+            "type": "THERAPY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Lung transplantation",
+            "type": "TRANSPLANT",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Gene therapy",
+            "type": "GENE_THERAPY",
+            "effectiveness": "EXPERIMENTAL",
+            "fdaApproved": false,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 156,
+    "keyResearchCenters": [
+        "Cystic Fibrosis Foundation",
+        "Johns Hopkins Cystic Fibrosis Center",
+        "National Jewish Health",
+        "Royal Brompton Hospital",
+        "Children's Hospital Boston CF Center"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "Cystic Fibrosis Foundation",
+            "url": "https://www.cff.org",
+            "country": "USA"
+        },
+        {
+            "name": "Cystic Fibrosis Trust",
+            "url": "https://www.cysticfibrosis.org.uk",
+            "country": "UK"
+        },
+        {
+            "name": "Cystic Fibrosis Canada",
+            "url": "https://www.cysticfibrosis.ca",
+            "country": "Canada"
+        },
+        {
+            "name": "Cystic Fibrosis Europe",
+            "url": "https://www.cf-europe.eu",
+            "country": "Europe"
+        }
+    ],
+    "relatedConditions": [
+        "Primary ciliary dyskinesia",
+        "Bronchiectasis",
+        "CFTR-related metabolic syndrome",
+        "Congenital bilateral absence of vas deferens"
+    ],
+    "specialistTypes": [
+        "Pulmonologist",
+        "Gastroenterologist",
+        "Geneticist",
+        "Infectious Disease Specialist",
+        "Respiratory Therapist",
+        "CF Nurse Specialist"
+    ],
+    "eli5Summary": "Cystic fibrosis makes the body produce thick, sticky mucus that clogs the lungs and makes it hard to breathe. It also affects digestion. New medicines called 'modulators' help fix the problem at its source, and people with CF are living much longer and healthier lives than ever before.",
+    "clinicalSummary": "Cystic fibrosis is an autosomal recessive disorder caused by mutations in the CFTR gene, which encodes a chloride channel. The most common mutation is F508del. Abnormal chloride transport leads to thick, dehydrated secretions affecting multiple organs. Pulmonary manifestations (bronchiectasis, chronic infection) are the primary cause of morbidity and mortality. CFTR modulator therapy (correctors + potentiators) has transformed outcomes for patients with responsive mutations. Multidisciplinary care at specialized CF centers is essential.",
+    "historicalBackground": "CF was first recognized as a distinct clinical entity by Dorothy Andersen in 1938. The sweat test was developed in 1959. The CFTR gene was identified in 1989 by Francis Collins, Lap-Chee Tsui, and John Riordan. The approval of ivacaftor in 2012 marked the beginning of the CFTR modulator era, with Trikafta (2019) representing a breakthrough for approximately 90% of CF patients.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "Trikafta approved for younger children",
+            "description": "FDA approval extended to children as young as 1 year old, enabling earlier intervention.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2024,
+            "title": "mRNA therapy shows promise",
+            "description": "Inhaled mRNA therapy trials demonstrate ability to deliver functional CFTR to lung cells.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "CRISPR gene editing advances",
+            "description": "Successful correction of CFTR mutations in patient-derived cells using base editing approaches.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Cystic Fibrosis",
+            "url": "https://www.omim.org/entry/219700"
+        },
+        {
+            "name": "Cystic Fibrosis Foundation Patient Registry",
+            "url": "https://www.cff.org/medical-professionals/patient-registry"
+        },
+        {
+            "name": "GeneReviews - CFTR-Related Disorders",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK1250/"
+        }
+    ]
+}

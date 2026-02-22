@@ -1,0 +1,515 @@
+---
+/**
+ * MDRPedia — Global Doctors Map
+ * Interactive map showing distribution of medical professionals worldwide
+ */
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { prisma } from "../lib/prisma";
+
+export const prerender = false;
+
+// Try to get doctors from database first, fallback to content collection
+let doctors: any[] = [];
+let dataSource = 'database';
+
+try {
+    // Get aggregated country data from database
+    const dbDoctors = await prisma.profile.findMany({
+        select: {
+            id: true,
+            slug: true,
+            full_name: true,
+            specialty: true,
+            tier: true,
+            portrait_url: true,
+            geography: {
+                select: {
+                    country: true,
+                    city: true,
+                    region: true,
+                }
+            }
+        }
+    });
+
+    if (dbDoctors.length > 0) {
+        doctors = dbDoctors.map(d => ({
+            slug: d.slug,
+            fullName: d.full_name,
+            specialty: d.specialty,
+            tier: d.tier,
+            portraitUrl: d.portrait_url,
+            geography: d.geography || { country: 'Unknown' }
+        }));
+    } else {
+        throw new Error('No profiles in database');
+    }
+} catch (e) {
+    // Fallback to content collection
+    dataSource = 'static';
+    console.log('Map page falling back to static content:', e);
+    const contentDoctors = await getCollection("doctors");
+    doctors = contentDoctors.map(d => ({
+        slug: d.id,
+        fullName: d.data.fullName,
+        specialty: d.data.specialty,
+        tier: d.data.tier,
+        portraitUrl: d.data.portraitUrl,
+        geography: d.data.geography
+    }));
+}
+
+// Aggregate by country
+const countryStats: Record<string, { total: number; titans: number; elites: number; doctors: typeof doctors }> = {};
+
+doctors.forEach(d => {
+    const country = d.geography?.country || 'Unknown';
+    if (!countryStats[country]) {
+        countryStats[country] = { total: 0, titans: 0, elites: 0, doctors: [] };
+    }
+    countryStats[country].total++;
+    countryStats[country].doctors.push(d);
+    if (d.tier === 'TITAN') countryStats[country].titans++;
+    if (d.tier === 'ELITE') countryStats[country].elites++;
+});
+
+// Sort by total count
+const sortedCountries = Object.entries(countryStats)
+    .sort((a, b) => b[1].total - a[1].total);
+
+const totalDoctors = doctors.length;
+const totalTitans = doctors.filter(d => d.tier === 'TITAN').length;
+const totalCountries = Object.keys(countryStats).length;
+
+// Country coordinates for map markers
+const COUNTRY_COORDS: Record<string, { lat: number; lng: number }> = {
+    'United States': { lat: 39.8283, lng: -98.5795 },
+    'USA': { lat: 39.8283, lng: -98.5795 },
+    'United Kingdom': { lat: 55.3781, lng: -3.4360 },
+    'UK': { lat: 55.3781, lng: -3.4360 },
+    'Canada': { lat: 56.1304, lng: -106.3468 },
+    'Germany': { lat: 51.1657, lng: 10.4515 },
+    'France': { lat: 46.2276, lng: 2.2137 },
+    'India': { lat: 20.5937, lng: 78.9629 },
+    'Australia': { lat: -25.2744, lng: 133.7751 },
+    'Japan': { lat: 36.2048, lng: 138.2529 },
+    'China': { lat: 35.8617, lng: 104.1954 },
+    'Brazil': { lat: -14.2350, lng: -51.9253 },
+    'South Korea': { lat: 35.9078, lng: 127.7669 },
+    'Italy': { lat: 41.8719, lng: 12.5674 },
+    'Spain': { lat: 40.4637, lng: -3.7492 },
+    'Netherlands': { lat: 52.1326, lng: 5.2913 },
+    'Switzerland': { lat: 46.8182, lng: 8.2275 },
+    'Sweden': { lat: 60.1282, lng: 18.6435 },
+    'Singapore': { lat: 1.3521, lng: 103.8198 },
+    'Israel': { lat: 31.0461, lng: 34.8516 },
+};
+---
+
+<Layout title="Global Doctors Map — MDRPedia" description="Explore medical professionals worldwide on our interactive global map.">
+    <div class="map-page">
+        <!-- Hero Section -->
+        <header class="page-hero">
+            <div class="container">
+                <span class="hero-badge">GLOBAL NETWORK</span>
+                <h1>World Map of Medical Excellence</h1>
+                <p class="hero-description">
+                    Explore {totalDoctors.toLocaleString()} medical professionals across {totalCountries} countries.
+                    Discover the global distribution of medical expertise.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">{totalDoctors.toLocaleString()}</span>
+                        <span class="stat-label">Doctors</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value stat-titan">{totalTitans}</span>
+                        <span class="stat-label">Titans</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">{totalCountries}</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Map Container -->
+        <section class="map-section">
+            <div class="map-container" id="world-map">
+                <div class="map-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading interactive map...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countries List -->
+        <section class="countries-section">
+            <div class="container">
+                <h2>Medical Professionals by Country</h2>
+
+                <div class="countries-grid">
+                    {sortedCountries.slice(0, 20).map(([country, stats]) => (
+                        <a href={`/doctors?country=${encodeURIComponent(country)}`} class="country-card">
+                            <div class="country-header">
+                                <h3>{country}</h3>
+                                {stats.titans > 0 && (
+                                    <span class="titan-badge">{stats.titans} Titan{stats.titans > 1 ? 's' : ''}</span>
+                                )}
+                            </div>
+                            <div class="country-stats">
+                                <div class="country-stat">
+                                    <span class="value">{stats.total}</span>
+                                    <span class="label">Total</span>
+                                </div>
+                                {stats.elites > 0 && (
+                                    <div class="country-stat elite">
+                                        <span class="value">{stats.elites}</span>
+                                        <span class="label">Elite</span>
+                                    </div>
+                                )}
+                            </div>
+                            <div class="country-preview">
+                                {stats.doctors.slice(0, 4).map((doc, i) => (
+                                    <div class="preview-avatar" style={`z-index: ${4 - i}`}>
+                                        {doc.portraitUrl ? (
+                                            <img src={doc.portraitUrl} alt="" loading="lazy" />
+                                        ) : (
+                                            <span>{doc.fullName?.[0] || '?'}</span>
+                                        )}
+                                    </div>
+                                ))}
+                                {stats.total > 4 && (
+                                    <div class="preview-more">+{stats.total - 4}</div>
+                                )}
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                {sortedCountries.length > 20 && (
+                    <div class="view-all">
+                        <a href="/doctors" class="view-all-btn">View All Countries</a>
+                    </div>
+                )}
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .map-page {
+        background: var(--bg-main);
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Hero */
+    .page-hero {
+        padding: 4rem 0 3rem;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(16, 185, 129, 0.03) 0%, transparent 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: #10b981;
+        margin-bottom: 1.5rem;
+    }
+
+    .page-hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        color: var(--text-primary);
+    }
+
+    .stat-value.stat-titan {
+        color: #ffd700;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+    }
+
+    .stat-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Map Section */
+    .map-section {
+        padding: 2rem 0;
+    }
+
+    .map-container {
+        height: 500px;
+        background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .map-loading {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--text-muted);
+    }
+
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(139, 92, 246, 0.2);
+        border-top-color: #8b5cf6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* Countries Section */
+    .countries-section {
+        padding: 4rem 0;
+    }
+
+    .countries-section h2 {
+        font-family: var(--font-serif);
+        font-size: 1.75rem;
+        color: var(--text-primary);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .countries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .country-card {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.25s;
+    }
+
+    .country-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(139, 92, 246, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .country-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+    }
+
+    .country-header h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .titan-badge {
+        padding: 2px 8px;
+        background: rgba(255, 215, 0, 0.15);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #ffd700;
+    }
+
+    .country-stats {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .country-stat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .country-stat .value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        color: var(--text-primary);
+    }
+
+    .country-stat.elite .value {
+        color: #00aaff;
+    }
+
+    .country-stat .label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .country-preview {
+        display: flex;
+        align-items: center;
+    }
+
+    .preview-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid var(--bg-card);
+        overflow: hidden;
+        margin-left: -8px;
+        background: rgba(139, 92, 246, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: #a78bfa;
+    }
+
+    .preview-avatar:first-child {
+        margin-left: 0;
+    }
+
+    .preview-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .preview-more {
+        padding: 4px 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        margin-left: 4px;
+    }
+
+    .view-all {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .view-all-btn {
+        display: inline-flex;
+        padding: 0.75rem 1.5rem;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #a78bfa;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .view-all-btn:hover {
+        background: rgba(139, 92, 246, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .hero-stats {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .stat-divider {
+            width: 60px;
+            height: 1px;
+        }
+
+        .map-container {
+            height: 350px;
+        }
+
+        .countries-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    // Simple SVG world map visualization
+    const mapContainer = document.getElementById('world-map');
+    if (mapContainer) {
+        // Create a simple placeholder showing country pins
+        const mapHTML = `
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 2rem;">
+                <svg viewBox="0 0 1000 500" style="max-width: 100%; height: auto; opacity: 0.3;">
+                    <path d="M100,200 Q200,100 400,150 T600,200 T800,150 T900,200" stroke="#8b5cf6" fill="none" stroke-width="2"/>
+                    <path d="M100,250 Q250,150 450,200 T650,250 T850,200 T950,250" stroke="#10b981" fill="none" stroke-width="2"/>
+                    <path d="M50,300 Q200,200 400,250 T600,300 T800,250 T950,300" stroke="#8b5cf6" fill="none" stroke-width="2"/>
+                </svg>
+                <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Interactive map coming soon</p>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">Browse doctors by country below</p>
+            </div>
+        `;
+        mapContainer.innerHTML = mapHTML;
+    }
+</script>

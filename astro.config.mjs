@@ -15,4 +15,56 @@ export default defineConfig({
   }),
 
   integrations: [react()],
+
+  // Image optimization settings
+  image: {
+    // Use sharp for local image optimization
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        limitInputPixels: false,
+      },
+    },
+    // Remote image domains that are allowed
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.wikipedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.googleusercontent.com',
+      },
+    ],
+  },
+
+  // Build performance
+  vite: {
+    build: {
+      // Code splitting for better caching
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom'],
+          },
+        },
+      },
+    },
+    // Optimize deps
+    optimizeDeps: {
+      include: ['react', 'react-dom'],
+    },
+  },
 });

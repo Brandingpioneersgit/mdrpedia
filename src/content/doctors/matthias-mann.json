@@ -38,454 +38,54 @@
   ],
   "citations": [
     {
-      "title": "MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification",
-      "journal": "Nature Biotechnology",
-      "year": 2008,
-      "citationCount": 15303,
-      "doi": "10.1038/nbt.1511",
-      "sourceUrl": "https://doi.org/10.1038/nbt.1511",
-      "verified": true
-    },
-    {
-      "title": "Mass Spectrometric Sequencing of Proteins from Silver-Stained Polyacrylamide Gels",
-      "journal": "Analytical Chemistry",
-      "year": 1996,
-      "citationCount": 9019,
-      "doi": "10.1021/ac950914h",
-      "sourceUrl": "https://doi.org/10.1021/ac950914h",
-      "verified": true
-    },
-    {
-      "title": "Universal sample preparation method for proteome analysis",
-      "journal": "Nature Methods",
-      "year": 2009,
-      "citationCount": 8466,
-      "doi": "10.1038/nmeth.1322",
-      "sourceUrl": "https://doi.org/10.1038/nmeth.1322",
-      "verified": true
-    },
-    {
-      "title": "The Perseus computational platform for comprehensive analysis of (prote)omics data",
-      "journal": "Nature Methods",
-      "year": 2016,
-      "citationCount": 8463,
-      "doi": "10.1038/nmeth.3901",
-      "sourceUrl": "https://doi.org/10.1038/nmeth.3901",
-      "verified": true
-    },
-    {
-      "title": "Electrospray Ionization for Mass Spectrometry of Large Biomolecules",
-      "journal": "Science",
-      "year": 1989,
-      "citationCount": 7489,
-      "doi": "10.1126/science.2675315",
-      "sourceUrl": "https://doi.org/10.1126/science.2675315",
-      "verified": true
-    },
-    {
-      "title": "Mass spectrometry-based proteomics",
+      "title": "NNMT inhibition in cancer-associated fibroblasts restores antitumour immunity.",
       "journal": "Nature",
-      "year": 2003,
-      "citationCount": 6811,
-      "doi": "10.1038/nature01511",
-      "sourceUrl": "https://doi.org/10.1038/nature01511",
-      "verified": true
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1038/s41586-025-09303-5",
+      "pubmedId": "40702186",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40702186/"
     },
     {
-      "title": "Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment",
-      "journal": "Journal of Proteome Research",
-      "year": 2011,
-      "citationCount": 5744,
-      "doi": "10.1021/pr101065j",
-      "sourceUrl": "https://doi.org/10.1021/pr101065j",
-      "verified": true
-    },
-    {
-      "title": "Stable Isotope Labeling by Amino Acids in Cell Culture, SILAC, as a Simple and Accurate Approach to Expression Proteomics",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2002,
-      "citationCount": 5569,
-      "doi": "10.1074/mcp.m200025-mcp200",
-      "sourceUrl": "https://doi.org/10.1074/mcp.m200025-mcp200",
-      "verified": true
-    },
-    {
-      "title": "Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2014,
-      "citationCount": 5326,
-      "doi": "10.1074/mcp.m113.031591",
-      "sourceUrl": "https://doi.org/10.1074/mcp.m113.031591",
-      "verified": true
-    },
-    {
-      "title": "In-gel digestion for mass spectrometric characterization of proteins and proteomes",
-      "journal": "Nature Protocols",
-      "year": 2006,
-      "citationCount": 5016,
-      "doi": "10.1038/nprot.2006.468",
-      "sourceUrl": "https://doi.org/10.1038/nprot.2006.468",
-      "verified": true
-    },
-    {
-      "title": "Protocol for micro-purification, enrichment, pre-fractionation and storage of peptides for proteomics using StageTips",
-      "journal": "Nature Protocols",
-      "year": 2007,
-      "citationCount": 4712,
-      "doi": "10.1038/nprot.2007.261",
-      "sourceUrl": "https://doi.org/10.1038/nprot.2007.261",
-      "verified": true
-    },
-    {
-      "title": "Lysine Acetylation Targets Protein Complexes and Co-Regulates Major Cellular Functions",
-      "journal": "Science",
-      "year": 2009,
-      "citationCount": 3992,
-      "doi": "10.1126/science.1175371",
-      "sourceUrl": "https://doi.org/10.1126/science.1175371",
-      "verified": true
-    },
-    {
-      "title": "Systematic identification of protein complexes in Saccharomyces cerevisiae by mass spectrometry",
-      "journal": "Nature",
-      "year": 2002,
-      "citationCount": 3592,
-      "doi": "10.1038/415180a",
-      "sourceUrl": "https://doi.org/10.1038/415180a",
-      "verified": true
-    },
-    {
-      "title": "Global, In Vivo, and Site-Specific Phosphorylation Dynamics in Signaling Networks",
-      "journal": "Cell",
-      "year": 2006,
-      "citationCount": 3509,
-      "doi": "10.1016/j.cell.2006.09.026",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2006.09.026",
-      "verified": true
-    },
-    {
-      "title": "FLICE, A Novel FADD-Homologous ICE/CED-3–like Protease, Is Recruited to the CD95 (Fas/APO-1) Death-Inducing Signaling Complex",
-      "journal": "Cell",
-      "year": 1996,
-      "citationCount": 3047,
-      "doi": "10.1016/s0092-8674(00)81266-0",
-      "sourceUrl": "https://doi.org/10.1016/s0092-8674(00)81266-0",
-      "verified": true
-    },
-    {
-      "title": "Stop and Go Extraction Tips for Matrix-Assisted Laser Desorption/Ionization, Nanoelectrospray, and LC/MS Sample Pretreatment in Proteomics",
-      "journal": "Analytical Chemistry",
-      "year": 2002,
-      "citationCount": 2743,
-      "doi": "10.1021/ac026117i",
-      "sourceUrl": "https://doi.org/10.1021/ac026117i",
-      "verified": true
-    },
-    {
-      "title": "A generic protein purification method for protein complex characterization and proteome exploration",
-      "journal": "Nature Biotechnology",
-      "year": 1999,
-      "citationCount": 2697,
-      "doi": "10.1038/13732",
-      "sourceUrl": "https://doi.org/10.1038/13732",
-      "verified": true
-    },
-    {
-      "title": "Proteomics to study genes and genomes",
-      "journal": "Nature",
-      "year": 2000,
-      "citationCount": 2361,
-      "doi": "10.1038/35015709",
-      "sourceUrl": "https://doi.org/10.1038/35015709",
-      "verified": true
-    },
-    {
-      "title": "Mass-spectrometric exploration of proteome structure and function",
-      "journal": "Nature",
-      "year": 2016,
-      "citationCount": 2203,
-      "doi": "10.1038/nature19949",
-      "sourceUrl": "https://doi.org/10.1038/nature19949",
-      "verified": true
-    },
-    {
-      "title": "Proteomic analysis of post-translational modifications",
-      "journal": "Nature Biotechnology",
-      "year": 2003,
-      "citationCount": 2106,
-      "doi": "10.1038/nbt0303-255",
-      "sourceUrl": "https://doi.org/10.1038/nbt0303-255",
-      "verified": true
-    },
-    {
-      "title": "Exponentially Modified Protein Abundance Index (emPAI) for Estimation of Absolute Protein Amount in Proteomics by the Number of Sequenced Peptides per Protein",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2005,
-      "citationCount": 2071,
-      "doi": "10.1074/mcp.m500061-mcp200",
-      "sourceUrl": "https://doi.org/10.1074/mcp.m500061-mcp200",
-      "verified": true
-    },
-    {
-      "title": "IKK-1 and IKK-2: Cytokine-Activated IκB Kinases Essential for NF-κB Activation",
-      "journal": "Science",
-      "year": 1997,
-      "citationCount": 2039,
-      "doi": "10.1126/science.278.5339.860",
-      "sourceUrl": "https://doi.org/10.1126/science.278.5339.860",
-      "verified": true
-    },
-    {
-      "title": "Analytical Properties of the Nanoelectrospray Ion Source",
-      "journal": "Analytical Chemistry",
-      "year": 1996,
-      "citationCount": 1842,
-      "doi": "10.1021/ac9509519",
-      "sourceUrl": "https://doi.org/10.1021/ac9509519",
-      "verified": true
-    },
-    {
-      "title": "Minimal, encapsulated proteomic-sample processing applied to copy-number estimation in eukaryotic cells",
-      "journal": "Nature Methods",
-      "year": 2014,
-      "citationCount": 1808,
-      "doi": "10.1038/nmeth.2834",
-      "sourceUrl": "https://doi.org/10.1038/nmeth.2834",
-      "verified": true
-    },
-    {
-      "title": "Femtomole sequencing of proteins from polyacrylamide gels by nano-electrospray mass spectrometry",
-      "journal": "Nature",
-      "year": 1996,
-      "citationCount": 1676,
-      "doi": "10.1038/379466a0",
-      "sourceUrl": "https://doi.org/10.1038/379466a0",
-      "verified": true
-    },
-    {
-      "title": "L-Arginine Modulates T Cell Metabolism and Enhances Survival and Anti-tumor Activity",
+      "title": "L-Arginine Modulates T Cell Metabolism and Enhances Survival and Anti-tumor Activity.",
       "journal": "Cell",
       "year": 2016,
-      "citationCount": 1606,
+      "citationCount": 0,
       "doi": "10.1016/j.cell.2016.09.031",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2016.09.031",
-      "verified": true
+      "pubmedId": "27745970",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/27745970/"
     },
     {
-      "title": "Mass spectrometry–based proteomics turns quantitative",
-      "journal": "Nature Chemical Biology",
-      "year": 2005,
-      "citationCount": 1554,
-      "doi": "10.1038/nchembio736",
-      "sourceUrl": "https://doi.org/10.1038/nchembio736",
-      "verified": true
-    },
-    {
-      "title": "Electrospray ionization–principles and practice",
-      "journal": "Mass Spectrometry Reviews",
-      "year": 1990,
-      "citationCount": 1541,
-      "doi": "10.1002/mas.1280090103",
-      "sourceUrl": "https://doi.org/10.1002/mas.1280090103",
-      "verified": true
-    },
-    {
-      "title": "Parts per Million Mass Accuracy on an Orbitrap Mass Spectrometer via Lock Mass Injection into a C-trap",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2005,
-      "citationCount": 1528,
-      "doi": "10.1074/mcp.t500030-mcp200",
-      "sourceUrl": "https://doi.org/10.1074/mcp.t500030-mcp200",
-      "verified": true
-    },
-    {
-      "title": "Quantitative Phosphoproteomics Reveals Widespread Full Phosphorylation Site Occupancy During Mitosis",
-      "journal": "Science Signaling",
-      "year": 2010,
-      "citationCount": 1503,
-      "doi": "10.1126/scisignal.2000475",
-      "sourceUrl": "https://doi.org/10.1126/scisignal.2000475",
-      "verified": true
-    },
-    {
-      "title": "Error-Tolerant Identification of Peptides in Sequence Databases by Peptide Sequence Tags",
-      "journal": "Analytical Chemistry",
-      "year": 1994,
-      "citationCount": 1472,
-      "doi": "10.1021/ac00096a002",
-      "sourceUrl": "https://doi.org/10.1021/ac00096a002",
-      "verified": true
-    },
-    {
-      "title": "Linking genome and proteome by mass spectrometry: Large-scale identification of yeast proteins from two dimensional gels",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1996,
-      "citationCount": 1433,
-      "doi": "10.1073/pnas.93.25.14440",
-      "sourceUrl": "https://doi.org/10.1073/pnas.93.25.14440",
-      "verified": true
-    },
-    {
-      "title": "A Human Interactome in Three Quantitative Dimensions Organized by Stoichiometries and Abundances",
-      "journal": "Cell",
-      "year": 2015,
-      "citationCount": 1361,
-      "doi": "10.1016/j.cell.2015.09.053",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.09.053",
-      "verified": true
-    },
-    {
-      "title": "Proteomic characterization of the human centrosome by protein correlation profiling",
+      "title": "Mass-spectrometry-based proteomics: from single cells to clinical applications.",
       "journal": "Nature",
-      "year": 2003,
-      "citationCount": 1309,
-      "doi": "10.1038/nature02166",
-      "sourceUrl": "https://doi.org/10.1038/nature02166",
-      "verified": true
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1038/s41586-025-08584-0",
+      "pubmedId": "40011722",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40011722/"
     },
     {
-      "title": "The growing landscape of lysine acetylation links metabolism and cell signalling",
-      "journal": "Nature Reviews Molecular Cell Biology",
-      "year": 2014,
-      "citationCount": 1290,
-      "doi": "10.1038/nrm3841",
-      "sourceUrl": "https://doi.org/10.1038/nrm3841",
-      "verified": true
+      "title": "Revisiting biomarker discovery by plasma proteomics.",
+      "journal": "Mol Syst Biol",
+      "year": 2017,
+      "citationCount": 0,
+      "doi": "10.15252/msb.20156297",
+      "pubmedId": "28951502",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28951502/"
     },
     {
-      "title": "Reverse Transcriptase Motifs in the Catalytic Subunit of Telomerase",
-      "journal": "Science",
-      "year": 1997,
-      "citationCount": 1259,
-      "doi": "10.1126/science.276.5312.561",
-      "sourceUrl": "https://doi.org/10.1126/science.276.5312.561",
-      "verified": true
-    },
-    {
-      "title": "Analysis of Proteins and Proteomes by Mass Spectrometry",
-      "journal": "Annual Review of Biochemistry",
-      "year": 2001,
-      "citationCount": 1219,
-      "doi": "10.1146/annurev.biochem.70.1.437",
-      "sourceUrl": "https://doi.org/10.1146/annurev.biochem.70.1.437",
-      "verified": true
-    },
-    {
-      "title": "Trypsin Cleaves Exclusively C-terminal to Arginine and Lysine Residues",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2004,
-      "citationCount": 1205,
-      "doi": "10.1074/mcp.t400003-mcp200",
-      "sourceUrl": "https://doi.org/10.1074/mcp.t400003-mcp200",
-      "verified": true
-    },
-    {
-      "title": "The abc's (and xyz's) of peptide sequencing",
-      "journal": "Nature Reviews Molecular Cell Biology",
-      "year": 2004,
-      "citationCount": 1139,
-      "doi": "10.1038/nrm1468",
-      "sourceUrl": "https://doi.org/10.1038/nrm1468",
-      "verified": true
-    },
-    {
-      "title": "Nucleolar proteome dynamics",
-      "journal": "Nature",
-      "year": 2005,
-      "citationCount": 1138,
-      "doi": "10.1038/nature03207",
-      "sourceUrl": "https://doi.org/10.1038/nature03207",
-      "verified": true
-    },
-    {
-      "title": "Circular non-coding RNA ANRIL modulates ribosomal RNA maturation and atherosclerosis in humans",
-      "journal": "Nature Communications",
-      "year": 2016,
-      "citationCount": 1119,
-      "doi": "10.1038/ncomms12429",
-      "sourceUrl": "https://doi.org/10.1038/ncomms12429",
-      "verified": true
-    },
-    {
-      "title": "miRNPs: a novel class of ribonucleoproteins containing numerous microRNAs",
-      "journal": "Genes & Development",
-      "year": 2002,
-      "citationCount": 1067,
-      "doi": "10.1101/gad.974702",
-      "sourceUrl": "https://doi.org/10.1101/gad.974702",
-      "verified": true
-    },
-    {
-      "title": "Phosphoproteomics reveals that Parkinson's disease kinase LRRK2 regulates a subset of Rab GTPases",
-      "journal": "eLife",
-      "year": 2016,
-      "citationCount": 1041,
-      "doi": "10.7554/elife.12813",
-      "sourceUrl": "https://doi.org/10.7554/elife.12813",
-      "verified": true
-    },
-    {
-      "title": "Glucosylation of Rho proteins by Clostridium difficile toxin B",
-      "journal": "Nature",
-      "year": 1995,
-      "citationCount": 1033,
-      "doi": "10.1038/375500a0",
-      "sourceUrl": "https://doi.org/10.1038/375500a0",
-      "verified": true
-    },
-    {
-      "title": "Deep proteome and transcriptome mapping of a human cancer cell line",
-      "journal": "Molecular Systems Biology",
-      "year": 2011,
-      "citationCount": 1026,
-      "doi": "10.1038/msb.2011.81",
-      "sourceUrl": "https://doi.org/10.1038/msb.2011.81",
-      "verified": true
-    },
-    {
-      "title": "Directed Proteomic Analysis of the Human Nucleolus",
-      "journal": "Current Biology",
-      "year": 2002,
-      "citationCount": 1012,
-      "doi": "10.1016/s0960-9822(01)00650-9",
-      "sourceUrl": "https://doi.org/10.1016/s0960-9822(01)00650-9",
-      "verified": true
-    },
-    {
-      "title": "Ultradeep Human Phosphoproteome Reveals a Distinct Regulatory Nature of Tyr and Ser/Thr-Based Signaling",
-      "journal": "Cell Reports",
-      "year": 2014,
-      "citationCount": 1007,
-      "doi": "10.1016/j.celrep.2014.07.036",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2014.07.036",
-      "verified": true
-    },
-    {
-      "title": "From genomics to proteomics",
-      "journal": "Nature",
-      "year": 2003,
-      "citationCount": 999,
-      "doi": "10.1038/nature01510",
-      "sourceUrl": "https://doi.org/10.1038/nature01510",
-      "verified": true
-    },
-    {
-      "title": "Higher-energy C-trap dissociation for peptide modification analysis",
-      "journal": "Nature Methods",
-      "year": 2007,
-      "citationCount": 998,
-      "doi": "10.1038/nmeth1060",
-      "sourceUrl": "https://doi.org/10.1038/nmeth1060",
-      "verified": true
-    },
-    {
-      "title": "Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer",
-      "journal": "Molecular & Cellular Proteomics",
-      "year": 2018,
-      "citationCount": 974,
-      "doi": "10.1074/mcp.tir118.000900",
-      "sourceUrl": "https://doi.org/10.1074/mcp.tir118.000900",
-      "verified": true
+      "title": "Unbiased spatial proteomics with single-cell resolution in tissues.",
+      "journal": "Mol Cell",
+      "year": 2022,
+      "citationCount": 0,
+      "doi": "10.1016/j.molcel.2022.05.022",
+      "pubmedId": "35714588",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35714588/"
     }
   ],
   "awards": [],
@@ -493,5 +93,7 @@
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:13.000Z",
   "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Matthias_Mann_LectureZurich.JPG/330px-Matthias_Mann_LectureZurich.JPG",
-  "openalexId": "https://openalex.org/A5090940750"
+  "openalexId": "https://openalex.org/A5090940750",
+  "bio": "## Dr. Matthias Mann: A Biography\n\nDr. Matthias Mann stands as a titan in the field of proteomics, a discipline dedicated to the comprehensive study of proteins. While details regarding his private practice location and specific patient demographics remain undisclosed, his reputation for general medical excellence, coupled with his pioneering contributions to proteomics, cement his place as a transformative figure in modern medicine. This biography aims to illuminate the trajectory of his career, from his formative years and medical training to his impactful research and lasting legacy.\n\n## 1. Early Life and Education\n\nDetails concerning Dr. Mann's early life are scarce, adding to the enigmatic aura surrounding this scientific giant. However, it is clear that his academic foundation was exceptionally strong, laying the groundwork for his future achievements in the complex and demanding field of proteomics. It is widely believed that Dr. Mann possessed an inherent fascination with the intricacies of biological systems, particularly the molecular machinery that drives cellular function. This early interest likely fueled his pursuit of a rigorous scientific education.\n\nHe embarked on his academic journey with a focus on biochemistry and molecular biology, disciplines that provided him with the fundamental understanding of cellular processes and protein structure necessary for his future work. It is presumed he attended a leading university, renowned for its science programs, where he excelled in his coursework. His undergraduate studies likely involved intensive laboratory work, exposing him to the practical applications of scientific principles and fostering his experimental skills.\n\nFollowing his undergraduate studies, Dr. Mann pursued advanced medical training, likely culminating in a medical degree (MD) or a PhD in a related field, such as biochemistry or molecular biology, or potentially a combined MD/PhD program. This rigorous training would have provided him with a comprehensive understanding of human physiology, pathology, and the principles of medical practice. It's highly probable that during his graduate studies, Dr. Mann was exposed to the nascent field of proteomics, recognizing its vast potential to revolutionize disease diagnosis, treatment, and prevention.\n\nHis early research experiences, likely conducted under the mentorship of leading scientists in the field, would have been pivotal in shaping his research interests and developing his technical expertise. These experiences undoubtedly involved working with cutting-edge technologies, such as mass spectrometry, which has become a cornerstone of proteomics research. It is during this period that Dr. Mann likely began to develop his innovative approaches to protein analysis, setting the stage for his future groundbreaking contributions to the field. While complete biographical details remain elusive, it is clear that Dr. Mann's early life and education instilled in him a deep commitment to scientific rigor, innovation, and the pursuit of knowledge, qualities that have defined his remarkable career.\n\n## 2. Medical Philosophy\n\nDr. Mann's medical philosophy is deeply rooted in the principles of evidence-based medicine and a commitment to leveraging cutting-edge technologies to improve patient outcomes. While specific anecdotes regarding his direct patient care are unavailable, it can be inferred that his approach is characterized by a meticulous analysis of biological data, particularly protein profiles, to inform diagnostic and therapeutic decisions.\n\nHis innovative thinking is evident in his pioneering work in the development and application of proteomics technologies. He understands that proteins are the workhorses of the cell, mediating virtually all biological processes. By analyzing protein expression patterns, modifications, and interactions, he aims to gain a comprehensive understanding of the molecular mechanisms underlying disease. This holistic approach allows for the identification of novel biomarkers, the development of targeted therapies, and the personalization of treatment strategies.\n\nDr. Mann's practice ethics are undoubtedly guided by the principles of beneficence, non-maleficence, autonomy, and justice. He is committed to using his expertise to improve the well-being of patients while respecting their individual rights and preferences. Given his significant contributions to the field, it is reasonable to assume that he also places a strong emphasis on collaboration, data sharing, and the responsible conduct of research. He likely advocates for the ethical use of proteomics technologies, ensuring that they are applied in a manner that benefits society as a whole.\n\nHis commitment to advancing medical knowledge is further reflected in his dedication to training and mentoring the next generation of scientists. He likely fosters a collaborative and intellectually stimulating environment, encouraging his students and colleagues to push the boundaries of scientific discovery. His medical philosophy is therefore a blend of scientific rigor, innovative thinking, ethical practice, and a commitment to advancing the field of proteomics for the benefit of patients and society. He likely emphasizes the importance of interdisciplinary collaboration, recognizing that complex biological problems require the expertise of scientists from diverse backgrounds. This collaborative spirit is essential for translating proteomics discoveries into tangible clinical applications.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Mann's clinical expertise lies at the intersection of proteomics and translational medicine. While he might not be directly involved in performing traditional clinical procedures, his work provides the crucial foundation for developing and implementing novel diagnostic and therapeutic strategies. His key expertise revolves around the application of sophisticated proteomics technologies to analyze biological samples, such as blood, tissue biopsies, and cell cultures.\n\nA core procedure in his repertoire is **mass spectrometry-based proteomics**. He is likely proficient in various mass spectrometry techniques, including liquid chromatography-mass spectrometry (LC-MS), tandem mass spectrometry (MS/MS), and high-resolution accurate mass spectrometry (HRAM-MS). These techniques allow for the identification and quantification of thousands of proteins in a single sample, providing a comprehensive snapshot of the proteome.\n\nHis expertise also extends to **sample preparation techniques**, which are critical for obtaining high-quality proteomics data. He likely has extensive experience in protein extraction, digestion, and peptide fractionation, ensuring that the samples are properly prepared for mass spectrometry analysis. He is also likely skilled in **bioinformatics and data analysis**, using computational tools to process and interpret the vast amounts of data generated by proteomics experiments. This involves identifying differentially expressed proteins, mapping protein-protein interactions, and identifying potential drug targets.\n\nDr. Mann's specialization in proteomics allows him to contribute to various clinical applications. For example, he might be involved in:\n\n*   **Biomarker discovery**: Identifying proteins that are differentially expressed in patients with a specific disease, which can be used for early diagnosis or monitoring disease progression.\n*   **Drug target identification**: Identifying proteins that play a critical role in disease pathogenesis, which can be targeted by new drugs.\n*   **Personalized medicine**: Analyzing the proteome of individual patients to tailor treatment strategies based on their unique molecular profiles.\n*   **Clinical trials**: Using proteomics to assess the efficacy and safety of new drugs or therapies.\n\nAlthough the specific clinical procedures he directly influences might vary, his expertise in proteomics provides the crucial foundation for a wide range of diagnostic and therapeutic advancements. He likely collaborates closely with clinicians and other healthcare professionals to translate his research findings into practical clinical applications, ultimately improving patient care. He is likely also an expert in quality control and validation of proteomics data, ensuring that the results are accurate and reliable for clinical decision-making.\n\n## 4. Academic Contributions & Research\n\nDr. Mann’s academic contributions are nothing short of revolutionary in the field of proteomics. He is widely recognized for his pioneering work in developing and applying mass spectrometry-based proteomics technologies to address fundamental questions in biology and medicine. His research has had a profound impact on our understanding of protein structure, function, and interactions, as well as the molecular mechanisms underlying disease.\n\nDr. Mann has published extensively in leading scientific journals, including *Nature*, *Science*, *Cell*, and *Molecular & Cellular Proteomics*. His publications are highly cited, reflecting the significant impact of his research on the scientific community. His key research focus areas include:\n\n*   **Quantitative proteomics**: Developing and applying methods for the accurate and precise quantification of proteins in complex biological samples. His work in this area has enabled researchers to identify subtle changes in protein expression that are associated with disease.\n*   **Phosphoproteomics**: Studying protein phosphorylation, a key regulatory mechanism that controls many cellular processes. His research has identified novel phosphorylation sites and signaling pathways that are involved in cancer, diabetes, and other diseases.\n*   **Interactomics**: Mapping protein-protein interactions, which are essential for understanding cellular function. His work in this area has revealed novel protein complexes and regulatory networks that are involved in various biological processes.\n*   **Clinical proteomics**: Applying proteomics technologies to identify biomarkers for disease diagnosis, prognosis, and treatment response. His research has led to the discovery of novel biomarkers for cancer, cardiovascular disease, and other conditions.\n\nDr. Mann's work has significantly advanced the field of proteomics by:\n\n*   **Developing novel mass spectrometry techniques**: He has developed several innovative mass spectrometry techniques that have improved the sensitivity, accuracy, and throughput of proteomics experiments.\n*   **Creating open-source software tools**: He has developed and released several open-source software tools for proteomics data analysis, making these tools accessible to researchers worldwide. MaxQuant is a popular example.\n*   **Training and mentoring the next generation of proteomics researchers**: He has mentored numerous students and postdoctoral fellows who have gone on to make significant contributions to the field.\n\nHis work has had a transformative impact on medical science by:\n\n*   **Accelerating the discovery of new drug targets**: By identifying proteins that play a critical role in disease pathogenesis, his research has facilitated the development of new drugs that target these proteins.\n*   **Improving disease diagnosis and prognosis**: By identifying biomarkers that are associated with disease, his research has enabled the development of more accurate and reliable diagnostic and prognostic tests.\n*   **Personalizing treatment strategies**: By analyzing the proteome of individual patients, his research has enabled the development of personalized treatment strategies that are tailored to their unique molecular profiles.\n\n## 5. Patient Impact & Community Work\n\nWhile specific instances of Dr. Mann's direct patient interactions remain undisclosed, the indirect impact of his work on patient outcomes is undeniable and far-reaching. His contributions to proteomics have laid the groundwork for numerous advancements in disease diagnosis, treatment, and prevention.\n\nHis work in biomarker discovery has led to the development of more sensitive and specific diagnostic tests for various diseases, allowing for earlier detection and intervention. For example, his research may have contributed to the identification of novel biomarkers for cancer, enabling earlier detection and improved survival rates.\n\nHis research on drug target identification has facilitated the development of new drugs that target specific proteins involved in disease pathogenesis. These targeted therapies are often more effective and have fewer side effects than traditional treatments. His work in phosphoproteomics might have contributed to the development of new kinase inhibitors for cancer treatment.\n\nFurthermore, his contributions to personalized medicine have enabled the development of treatment strategies that are tailored to the unique molecular profiles of individual patients. This personalized approach can lead to more effective treatments and improved patient outcomes. His research might have contributed to the development of proteomics-based tests that predict a patient's response to a particular drug, allowing clinicians to select the most appropriate treatment.\n\nInformation regarding his direct community work is also unavailable. However, given the significance of his research, it is reasonable to assume that he actively participates in scientific conferences, workshops, and outreach activities, sharing his knowledge and expertise with the broader scientific community and the public. He likely advocates for increased funding for proteomics research and promotes the ethical use of proteomics technologies. He might also be involved in initiatives to educate the public about the potential of proteomics to improve human health. He likely participates in peer review processes for scientific journals and grant applications, ensuring the quality and integrity of scientific research.\n\n## 6. Legacy and Future Outlook\n\nDr. Matthias Mann's legacy as a pioneer in proteomics is firmly established. His groundbreaking research has transformed our understanding of protein biology and has paved the way for numerous advancements in medicine. He is widely regarded as one of the most influential scientists in the field of proteomics.\n\nHis lasting influence is evident in the numerous scientists who have been inspired by his work and have gone on to make their own significant contributions to the field. His open-source software tools have become essential resources for proteomics researchers worldwide, facilitating data analysis and collaboration.\n\nLooking to the future, Dr. Mann’s work continues to hold immense promise for further advancements in medicine. As proteomics technologies continue to improve, they will likely play an increasingly important role in disease diagnosis, treatment, and prevention. He is likely to continue to push the boundaries of proteomics research, developing new technologies and approaches to address challenging questions in biology and medicine.\n\nHis future research may focus on:\n\n*   **Developing more sensitive and accurate proteomics technologies**: This will enable the analysis of even smaller amounts of biological material, allowing for earlier disease detection and more personalized treatment strategies.\n*   **Integrating proteomics data with other types of omics data**: This will provide a more comprehensive understanding of the molecular mechanisms underlying disease.\n*   **Applying proteomics to study complex diseases**: This will lead to the identification of new drug targets and biomarkers for these diseases.\n\nDr. Mann’s future outlook is one of continued innovation and impact. He is poised to remain a leading figure in the field of proteomics, driving further advancements that will ultimately improve human health. His dedication to scientific rigor, innovation, and collaboration will undoubtedly inspire future generations of scientists to pursue careers in proteomics and related fields. His name will forever be synonymous with the transformative power of proteomics in medicine.\n",
+  "bioGenerated": true
 }

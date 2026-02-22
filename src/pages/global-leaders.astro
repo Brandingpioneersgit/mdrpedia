@@ -14,6 +14,12 @@ const leaders = doctors.filter((doc) =>
         "Atul Gawande",
         "Devi Shetty",
         "Patrick Soon-Shiong",
+        "Vivek Murthy",
+        "Soumya Swaminathan",
+        "Jeremy Farrar",
+        "Didier Pittet",
+        "Christopher J. L. Murray",
+        "Jean-Jacques Muyembe",
     ].includes(doc.data.fullName),
 );
 ---
@@ -42,7 +48,7 @@ const leaders = doctors.filter((doc) =>
             {
                 leaders.map((doc) => (
                     <a
-                        href={`/doctors/${doc.slug}`}
+                        href={`/doctors/${doc.id}`}
                         class="group relative flex flex-col bg-[#0f172a] border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
                     >
                         <div class="aspect-[4/3] overflow-hidden">
@@ -88,7 +94,7 @@ const leaders = doctors.filter((doc) =>
                                 {doc.data.fullName}
                             </h3>
                             <p class="text-gray-400 mb-4 line-clamp-2">
-                                {doc.data.bio}
+                                {doc.data.biography}
                             </p>
 
                             <div class="flex items-center text-sm text-blue-400/80 font-medium">
@@ -102,5 +108,162 @@ const leaders = doctors.filter((doc) =>
                 ))
             }
         </div>
+
+        <!-- Enrichment Content -->
+        <article class="enrichment-content mt-32 text-gray-300">
+            <section class="mb-24">
+                <h2
+                    class="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4"
+                >
+                    Defining Global Medical Leadership
+                </h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-lg leading-relaxed mb-6">
+                        What distinguishes a "Global Leader" from a "Top
+                        Doctor"? While a top doctor excels in the
+                        micro-environment of the operating theater or the
+                        clinic, a Global Leader operates on the macro-scale.
+                        Their patient is not an individual, but a population.
+                        Their instrument is not a scalpel, but policy, advocacy,
+                        and institutional vision.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        The figures listed on this page represent the apex of <strong
+                            >Health Sovereignty</strong
+                        >. These are the individuals who sat at the tables where
+                        the response to COVID-19 was drafted. They are the
+                        architects of the President's Emergency Plan for AIDS
+                        Relief (PEPFAR). They are the minds behind the
+                        eradication of Polio in the Global South. Inclusion in
+                        this registry requires more than just clinical
+                        excellence; it requires <strong
+                            >Geopolitical Impact</strong
+                        >.
+                    </p>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-24">
+                <div
+                    class="bg-blue-900/10 p-8 rounded-2xl border border-blue-500/20"
+                >
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">
+                        The Crisis Response Paradox
+                    </h3>
+                    <p class="leading-relaxed">
+                        True leadership is often invisible during peacetime and
+                        heavily scrutinized during crises. We evaluate our
+                        "Commanders" based on their performance under pressure.
+                        How did they communicate during the initial outbreaks of
+                        Ebola? Did they champion equity in vaccine distribution?
+                        We analyze public statements, policy effectiveness, and
+                        the speed of mobilization.
+                    </p>
+                </div>
+                <div
+                    class="bg-blue-900/10 p-8 rounded-2xl border border-blue-500/20"
+                >
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">
+                        Institutional Architecture
+                    </h3>
+                    <p class="leading-relaxed">
+                        Many of these leaders built the very institutions they
+                        lead. Whether it is Devi Shetty scaling Narayana Health
+                        to provide heart surgery at a fraction of US costs, or
+                        Paul Farmer (historical) establishing Partners In
+                        Health, the ability to build sustainable systems that
+                        outlast the individual is a core metric of our
+                        assessment.
+                    </p>
+                </div>
+            </div>
+
+            <section class="mb-24">
+                <h2
+                    class="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4"
+                >
+                    Criteria for Inclusion
+                </h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    To be listed as a Global Health Commander on MDRPedia, a
+                    professional must meet at least three of the following five
+                    criteria:
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">🏛️</div>
+                        <h4 class="font-bold text-white mb-2">
+                            Policy Authorship
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Authored or co-authored major health legislation or
+                            WHO guidelines.
+                        </p>
+                    </div>
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">📉</div>
+                        <h4 class="font-bold text-white mb-2">
+                            Metric Reduction
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Demonstrable impact on reducing mortality/morbidity
+                            statistics (e.g., "Reduced malaria cases by 40%").
+                        </p>
+                    </div>
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">🕸️</div>
+                        <h4 class="font-bold text-white mb-2">
+                            Network Influence
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Chairs a network or organization with >10,000 active
+                            medical members.
+                        </p>
+                    </div>
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">📢</div>
+                        <h4 class="font-bold text-white mb-2">
+                            Crisis Command
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Served as the primary authority/spokesperson during
+                            a declared national emergency.
+                        </p>
+                    </div>
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">🔬</div>
+                        <h4 class="font-bold text-white mb-2">
+                            Research Allocation
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Controlled/directed research funding exceeding $500M
+                            USD.
+                        </p>
+                    </div>
+                    <div
+                        class="criteria-card p-6 bg-[#0f172a] rounded-xl border border-gray-800"
+                    >
+                        <div class="text-4xl mb-4">🎖️</div>
+                        <h4 class="font-bold text-white mb-2">
+                            State Recognition
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            Recipient of the highest civilian honor from their
+                            home nation (e.g., Medal of Freedom, Bharat Ratna).
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
     </div>
 </Layout>

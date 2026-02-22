@@ -1,0 +1,390 @@
+---
+/**
+ * MDRPedia — Achievements Highlight
+ * A prominent display of awards, talks, CMEs, and other achievements
+ * Shown near the top of the profile page for visibility
+ */
+
+interface Award {
+    name: string;
+    year: number;
+    issuingBody?: string;
+    contribution?: string;
+}
+
+interface Talk {
+    title: string;
+    event: string;
+    year: number;
+    url?: string;
+}
+
+interface Props {
+    awards?: Award[];
+    talks?: Talk[];
+    techniquesInvented?: string[];
+    hIndex?: number;
+    citationCount?: number;
+    tier: string;
+    doctorName: string;
+}
+
+const { awards = [], talks = [], techniquesInvented = [], hIndex = 0, citationCount = 0, tier, doctorName } = Astro.props;
+
+// Determine if we have enough content to show
+const hasAwards = awards.length > 0;
+const hasTalks = talks.length > 0;
+const hasTechniques = techniquesInvented.length > 0;
+const hasContent = hasAwards || hasTalks || hasTechniques;
+
+// Get featured awards (most recent or most prestigious)
+const featuredAwards = awards.slice(0, 3);
+
+// Get recent talks
+const recentTalks = talks.slice(0, 2);
+
+// Prestige indicators
+const prestigeIndicators = [];
+if (tier === 'TITAN') prestigeIndicators.push({ label: 'Top 0.01%', icon: 'crown' });
+if (tier === 'ELITE') prestigeIndicators.push({ label: 'Top 1%', icon: 'star' });
+if (hIndex >= 50) prestigeIndicators.push({ label: `h-index ${hIndex}`, icon: 'chart' });
+if (citationCount >= 1000) prestigeIndicators.push({ label: `${(citationCount / 1000).toFixed(1)}K citations`, icon: 'quote' });
+if (hasTechniques) prestigeIndicators.push({ label: 'Technique Pioneer', icon: 'lightbulb' });
+---
+
+{hasContent && (
+    <section class="achievements-highlight">
+        <div class="achievements-header">
+            <h3 class="achievements-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+                Achievements & Recognition
+            </h3>
+            {prestigeIndicators.length > 0 && (
+                <div class="prestige-badges">
+                    {prestigeIndicators.map(({ label, icon }) => (
+                        <span class="prestige-badge">
+                            {icon === 'crown' && <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5ZM19 19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V18H19V19Z" /></svg>}
+                            {icon === 'star' && <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>}
+                            {icon === 'chart' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6" /></svg>}
+                            {icon === 'quote' && <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z" /></svg>}
+                            {icon === 'lightbulb' && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z" /></svg>}
+                            {label}
+                        </span>
+                    ))}
+                </div>
+            )}
+        </div>
+
+        <div class="achievements-grid">
+            {/* Featured Awards */}
+            {hasAwards && (
+                <div class="achievement-category awards-category">
+                    <div class="category-header">
+                        <span class="category-icon">🏆</span>
+                        <span class="category-title">Awards</span>
+                        <span class="category-count">{awards.length}</span>
+                    </div>
+                    <div class="category-items">
+                        {featuredAwards.map((award) => (
+                            <div class="achievement-item award-item">
+                                <span class="item-year">{award.year}</span>
+                                <div class="item-content">
+                                    <span class="item-name">{award.name}</span>
+                                    {award.issuingBody && (
+                                        <span class="item-detail">{award.issuingBody}</span>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                        {awards.length > 3 && (
+                            <a href="#section-awards" class="see-more">
+                                +{awards.length - 3} more awards
+                            </a>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* Key Talks & CMEs */}
+            {hasTalks && (
+                <div class="achievement-category talks-category">
+                    <div class="category-header">
+                        <span class="category-icon">🎤</span>
+                        <span class="category-title">Talks & CMEs</span>
+                        <span class="category-count">{talks.length}</span>
+                    </div>
+                    <div class="category-items">
+                        {recentTalks.map((talk) => (
+                            <div class="achievement-item talk-item">
+                                <span class="item-year">{talk.year}</span>
+                                <div class="item-content">
+                                    <span class="item-name">{talk.title}</span>
+                                    <span class="item-detail">{talk.event}</span>
+                                </div>
+                            </div>
+                        ))}
+                        {talks.length > 2 && (
+                            <a href="#section-talks" class="see-more">
+                                +{talks.length - 2} more talks
+                            </a>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* Pioneering Techniques */}
+            {hasTechniques && (
+                <div class="achievement-category techniques-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚡</span>
+                        <span class="category-title">Innovations</span>
+                        <span class="category-count">{techniquesInvented.length}</span>
+                    </div>
+                    <div class="category-items techniques-list">
+                        {techniquesInvented.slice(0, 3).map((tech) => (
+                            <div class="technique-chip">
+                                {tech}
+                            </div>
+                        ))}
+                        {techniquesInvented.length > 3 && (
+                            <a href="#section-techniques" class="see-more">
+                                +{techniquesInvented.length - 3} more
+                            </a>
+                        )}
+                    </div>
+                </div>
+            )}
+        </div>
+
+        {/* Summary Stats */}
+        <div class="achievements-stats">
+            {hasAwards && (
+                <div class="stat-item">
+                    <span class="stat-value">{awards.length}</span>
+                    <span class="stat-label">Award{awards.length !== 1 ? 's' : ''}</span>
+                </div>
+            )}
+            {hasTalks && (
+                <div class="stat-item">
+                    <span class="stat-value">{talks.length}</span>
+                    <span class="stat-label">Talk{talks.length !== 1 ? 's' : ''}/CME{talks.length !== 1 ? 's' : ''}</span>
+                </div>
+            )}
+            {hasTechniques && (
+                <div class="stat-item">
+                    <span class="stat-value">{techniquesInvented.length}</span>
+                    <span class="stat-label">Innovation{techniquesInvented.length !== 1 ? 's' : ''}</span>
+                </div>
+            )}
+        </div>
+    </section>
+)}
+
+<style>
+    .achievements-highlight {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.05) 100%);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 32px;
+    }
+
+    .achievements-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .achievements-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .achievements-title .icon {
+        width: 20px;
+        height: 20px;
+        color: #fbbf24;
+    }
+
+    .prestige-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .prestige-badge {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+    }
+
+    .prestige-badge svg {
+        width: 12px;
+        height: 12px;
+        color: #fbbf24;
+    }
+
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .achievement-category {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        padding: 16px;
+    }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .category-icon {
+        font-size: 1.2rem;
+    }
+
+    .category-title {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        flex: 1;
+    }
+
+    .category-count {
+        background: rgba(139, 92, 246, 0.2);
+        color: #a78bfa;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+
+    .category-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .achievement-item {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .item-year {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        min-width: 40px;
+        padding-top: 2px;
+    }
+
+    .item-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .item-name {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        line-height: 1.3;
+    }
+
+    .item-detail {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .techniques-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .technique-chip {
+        padding: 4px 12px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color: #34d399;
+    }
+
+    .see-more {
+        font-size: 0.75rem;
+        color: #8b5cf6;
+        text-decoration: none;
+        margin-top: 4px;
+    }
+
+    .see-more:hover {
+        text-decoration: underline;
+    }
+
+    .achievements-stats {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: var(--font-mono);
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 640px) {
+        .achievements-highlight {
+            padding: 16px;
+        }
+
+        .achievements-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .achievements-stats {
+            gap: 20px;
+        }
+    }
+</style>

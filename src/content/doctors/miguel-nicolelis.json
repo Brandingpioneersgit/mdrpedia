@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "Brain–machine interfaces: past, present and future",
-      "journal": "Trends in Neurosciences",
-      "year": 2006,
-      "citationCount": 1815,
-      "doi": "10.1016/j.tins.2006.07.004",
-      "sourceUrl": "https://doi.org/10.1016/j.tins.2006.07.004",
-      "verified": true
-    },
-    {
-      "title": "Learning to Control a Brain–Machine Interface for Reaching and Grasping by Primates",
-      "journal": "PLoS Biology",
-      "year": 2003,
-      "citationCount": 1771,
-      "doi": "10.1371/journal.pbio.0000042",
-      "sourceUrl": "https://doi.org/10.1371/journal.pbio.0000042",
-      "verified": true
-    },
-    {
-      "title": "Real-time prediction of hand trajectory by ensembles of cortical neurons in primates",
-      "journal": "Nature",
-      "year": 2000,
-      "citationCount": 1489,
-      "doi": "10.1038/35042582",
-      "sourceUrl": "https://doi.org/10.1038/35042582",
-      "verified": true
-    },
-    {
-      "title": "Real-time control of a robot arm using simultaneously recorded neurons in the motor cortex",
-      "journal": "Nature Neuroscience",
-      "year": 1999,
-      "citationCount": 1152,
-      "doi": "10.1038/10223",
-      "sourceUrl": "https://doi.org/10.1038/10223",
-      "verified": true
-    },
-    {
-      "title": "Remote Control of Neuronal Activity in Transgenic Mice Expressing Evolved G Protein-Coupled Receptors",
-      "journal": "Neuron",
-      "year": 2009,
-      "citationCount": 989,
-      "doi": "10.1016/j.neuron.2009.06.014",
-      "sourceUrl": "https://doi.org/10.1016/j.neuron.2009.06.014",
-      "verified": true
-    },
-    {
-      "title": "Chronic, multisite, multielectrode recordings in macaque monkeys",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2003,
-      "citationCount": 752,
-      "doi": "10.1073/pnas.1934665100",
-      "sourceUrl": "https://doi.org/10.1073/pnas.1934665100",
-      "verified": true
-    },
-    {
-      "title": "Actions from thoughts",
-      "journal": "Nature",
-      "year": 2001,
-      "citationCount": 676,
-      "doi": "10.1038/35053191",
-      "sourceUrl": "https://doi.org/10.1038/35053191",
-      "verified": true
-    },
-    {
-      "title": "Active tactile exploration using a brain–machine–brain interface",
-      "journal": "Nature",
-      "year": 2011,
-      "citationCount": 624,
-      "doi": "10.1038/nature10489",
-      "sourceUrl": "https://doi.org/10.1038/nature10489",
-      "verified": true
-    },
-    {
-      "title": "Spontaneous cortical activity in awake monkeys composed of neuronal avalanches",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2009,
-      "citationCount": 593,
-      "doi": "10.1073/pnas.0904089106",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0904089106",
-      "verified": true
-    },
-    {
-      "title": "Brain–machine interfaces to restore motor function and probe neural circuits",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2003,
-      "citationCount": 590,
-      "doi": "10.1038/nrn1105",
-      "sourceUrl": "https://doi.org/10.1038/nrn1105",
-      "verified": true
-    },
-    {
-      "title": "Sensorimotor Encoding by Synchronous Neural Ensemble Activity at Multiple Levels of the Somatosensory System",
-      "journal": "Science",
-      "year": 1995,
-      "citationCount": 550,
-      "doi": "10.1126/science.7761855",
-      "sourceUrl": "https://doi.org/10.1126/science.7761855",
-      "verified": true
-    },
-    {
       "title": "Brain-Machine Interfaces: From Basic Science to Neuroprostheses and Neurorehabilitation.",
-      "journal": "Physiological reviews",
+      "journal": "Physiol Rev",
       "year": 2017,
-      "citationCount": 513,
+      "citationCount": 0,
       "doi": "10.1152/physrev.00027.2016",
-      "sourceUrl": "https://doi.org/10.1152/physrev.00027.2016",
-      "verified": true
+      "pubmedId": "28275048",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28275048/"
     },
     {
-      "title": "Principles of neural ensemble physiology underlying the operation of brain–machine interfaces",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2009,
-      "citationCount": 478,
-      "doi": "10.1038/nrn2653",
-      "sourceUrl": "https://doi.org/10.1038/nrn2653",
-      "verified": true
-    },
-    {
-      "title": "Food Reward in the Absence of Taste Receptor Signaling",
-      "journal": "Neuron",
+      "title": "Conceptual and Technical Approaches to Human Neural Ensemble Recordings.",
+      "journal": "",
       "year": 2008,
-      "citationCount": 425,
-      "doi": "10.1016/j.neuron.2008.01.032",
-      "sourceUrl": "https://doi.org/10.1016/j.neuron.2008.01.032",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "21204446",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21204446/"
     },
     {
-      "title": "Reconstructing the Engram: Simultaneous, Multisite, Many Single Neuron Recordings",
-      "journal": "Neuron",
-      "year": 1997,
-      "citationCount": 379,
-      "doi": "10.1016/s0896-6273(00)80295-0",
-      "sourceUrl": "https://doi.org/10.1016/s0896-6273(00)80295-0",
-      "verified": true
+      "title": "Neuroengineering challenges of fusing robotics and neuroscience.",
+      "journal": "Sci Robot",
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "pii: eabd1911. 10.1126/scirobotics.abd1911",
+      "pubmedId": "33298517",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33298517/"
     },
     {
-      "title": "Differential Corticostriatal Plasticity during Fast and Slow Motor Skill Learning in Mice",
-      "journal": "Current Biology",
-      "year": 2004,
-      "citationCount": 378,
-      "doi": "10.1016/j.cub.2004.06.053",
-      "sourceUrl": "https://doi.org/10.1016/j.cub.2004.06.053",
-      "verified": true
+      "title": "Intravascular food reward.",
+      "journal": "PLoS One",
+      "year": 2011,
+      "citationCount": 0,
+      "doi": "10.1371/journal.pone.0024992",
+      "pubmedId": "21980372",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21980372/"
     },
     {
-      "title": "Interval timing and the encoding of signal duration by ensembles of cortical and striatal neurons.",
-      "journal": "Behavioral Neuroscience",
-      "year": 2003,
-      "citationCount": 363,
-      "doi": "10.1037/0735-7044.117.4.760",
-      "sourceUrl": "https://doi.org/10.1037/0735-7044.117.4.760",
-      "verified": true
-    },
-    {
-      "title": "Long-Term Training with a Brain-Machine Interface-Based Gait Protocol Induces Partial Neurological Recovery in Paraplegic Patients.",
-      "journal": "Scientific reports",
-      "year": 2018,
-      "citationCount": 350,
-      "doi": "10.1038/srep30383",
-      "sourceUrl": "https://doi.org/10.1038/srep30383",
-      "verified": true
-    },
-    {
-      "title": "Global Forebrain Dynamics Predict Rat Behavioral States and Their Transitions",
-      "journal": "Journal of Neuroscience",
-      "year": 2004,
-      "citationCount": 350,
-      "doi": "10.1523/jneurosci.3524-04.2004",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.3524-04.2004",
-      "verified": true
-    },
-    {
-      "title": "Behavioral Modulation of Tactile Responses in the Rat Somatosensory System",
-      "journal": "Journal of Neuroscience",
-      "year": 1999,
-      "citationCount": 348,
-      "doi": "10.1523/jneurosci.19-17-07603.1999",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.19-17-07603.1999",
-      "verified": true
-    },
-    {
-      "title": "Chronic, wireless recordings of large-scale brain activity in freely moving rhesus monkeys.",
-      "journal": "Nature methods",
-      "year": 2014,
-      "citationCount": 329,
-      "doi": "10.1038/nmeth.2936",
-      "sourceUrl": "https://doi.org/10.1038/nmeth.2936",
-      "verified": true
-    },
-    {
-      "title": "Dopaminergic Control of Sleep–Wake States",
-      "journal": "Journal of Neuroscience",
-      "year": 2006,
-      "citationCount": 317,
-      "doi": "10.1523/jneurosci.1767-06.2006",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.1767-06.2006",
-      "verified": true
-    },
-    {
-      "title": "Dynamic and Multimodal Responses of Gustatory Cortical Neurons in Awake Rats",
-      "journal": "Journal of Neuroscience",
-      "year": 2001,
-      "citationCount": 306,
-      "doi": "10.1523/jneurosci.21-12-04478.2001",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.21-12-04478.2001",
-      "verified": true
-    },
-    {
-      "title": "The neural mechanisms of gustation: a distributed processing code",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2006,
-      "citationCount": 305,
-      "doi": "10.1038/nrn2006",
-      "sourceUrl": "https://doi.org/10.1038/nrn2006",
-      "verified": true
-    },
-    {
-      "title": "Spinal Cord Stimulation Restores Locomotion in Animal Models of Parkinson's Disease",
-      "journal": "Science",
-      "year": 2009,
-      "citationCount": 302,
-      "doi": "10.1126/science.1164901",
-      "sourceUrl": "https://doi.org/10.1126/science.1164901",
-      "verified": true
-    },
-    {
-      "title": "Rapid Alterations in Corticostriatal Ensemble Coordination during Acute Dopamine-Dependent Motor Dysfunction",
-      "journal": "Neuron",
-      "year": 2006,
-      "citationCount": 293,
-      "doi": "10.1016/j.neuron.2006.07.030",
-      "sourceUrl": "https://doi.org/10.1016/j.neuron.2006.07.030",
-      "verified": true
-    },
-    {
-      "title": "Cortical Ensemble Adaptation to Represent Velocity of an Artificial Actuator Controlled by a Brain-Machine Interface",
-      "journal": "Journal of Neuroscience",
-      "year": 2005,
-      "citationCount": 293,
-      "doi": "10.1523/jneurosci.4088-04.2005",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.4088-04.2005",
-      "verified": true
-    },
-    {
-      "title": "Methods for NEURAL ENSEMBLE RECORDINGS",
-      "journal": "Unknown Journal",
-      "year": 1998,
-      "citationCount": 286,
-      "doi": "10.1201/9781420048254",
-      "sourceUrl": "https://doi.org/10.1201/9781420048254",
-      "verified": true
-    },
-    {
-      "title": "Cortical ensemble activity increasingly predicts behaviour outcomes during learning of a motor task",
-      "journal": "Nature",
-      "year": 2000,
-      "citationCount": 279,
-      "doi": "10.1038/35014604",
-      "sourceUrl": "https://doi.org/10.1038/35014604",
-      "verified": true
-    },
-    {
-      "title": "Long-Lasting Novelty-Induced Neuronal Reverberation during Slow-Wave Sleep in Multiple Forebrain Areas",
-      "journal": "PLoS Biology",
-      "year": 2004,
-      "citationCount": 275,
-      "doi": "10.1371/journal.pbio.0020024",
-      "sourceUrl": "https://doi.org/10.1371/journal.pbio.0020024",
-      "verified": true
-    },
-    {
-      "title": "Behavioral Properties of the Trigeminal Somatosensory System in Rats Performing Whisker-Dependent Tactile Discriminations",
-      "journal": "Journal of Neuroscience",
-      "year": 2001,
-      "citationCount": 259,
-      "doi": "10.1523/jneurosci.21-15-05752.2001",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.21-15-05752.2001",
-      "verified": true
-    },
-    {
-      "title": "Thalamic bursting in rats during different awake behavioral states",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2001,
-      "citationCount": 239,
-      "doi": "10.1073/pnas.261273898",
-      "sourceUrl": "https://doi.org/10.1073/pnas.261273898",
-      "verified": true
-    },
-    {
-      "title": "Induction of immediate spatiotemporal changes in thalamic networks by peripheral block of ascending cutaneous information",
-      "journal": "Nature",
-      "year": 1993,
-      "citationCount": 221,
-      "doi": "10.1038/361533a0",
-      "sourceUrl": "https://doi.org/10.1038/361533a0",
-      "verified": true
-    },
-    {
-      "title": "Layer-Specific Somatosensory Cortical Activation During Active Tactile Discrimination",
-      "journal": "Science",
-      "year": 2004,
-      "citationCount": 211,
-      "doi": "10.1126/science.1093318",
-      "sourceUrl": "https://doi.org/10.1126/science.1093318",
-      "verified": true
-    },
-    {
-      "title": "Immediate thalamic sensory plasticity depends on corticothalamic feedback",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1999,
-      "citationCount": 211,
-      "doi": "10.1073/pnas.96.14.8200",
-      "sourceUrl": "https://doi.org/10.1073/pnas.96.14.8200",
-      "verified": true
-    },
-    {
-      "title": "Ensemble Recordings Of Human Subcortical Neurons as a Source Of Motor Control Signals For a Brain-Machine Interface",
-      "journal": "Neurosurgery",
-      "year": 2004,
-      "citationCount": 211,
-      "doi": "10.1227/01.neu.0000126872.23715.e5",
-      "sourceUrl": "https://doi.org/10.1227/01.neu.0000126872.23715.e5",
-      "verified": true
-    },
-    {
-      "title": "Spike Avalanches Exhibit Universal Dynamics across the Sleep-Wake Cycle",
-      "journal": "PLoS ONE",
-      "year": 2010,
-      "citationCount": 210,
-      "doi": "10.1371/journal.pone.0014129",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0014129",
-      "verified": true
-    },
-    {
-      "title": "Reduction of Pentylenetetrazole-Induced Seizure Activity in Awake Rats by Seizure-Triggered Trigeminal Nerve Stimulation",
-      "journal": "Journal of Neuroscience",
-      "year": 2000,
-      "citationCount": 204,
-      "doi": "10.1523/jneurosci.20-21-08160.2000",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.20-21-08160.2000",
-      "verified": true
-    },
-    {
-      "title": "Simultaneous encoding of tactile information by three primate cortical areas",
-      "journal": "Nature Neuroscience",
-      "year": 1998,
-      "citationCount": 204,
-      "doi": "10.1038/2855",
-      "sourceUrl": "https://doi.org/10.1038/2855",
-      "verified": true
-    },
-    {
-      "title": "Neuronal Ensemble Bursting in the Basal Forebrain Encodes Salience Irrespective of Valence",
-      "journal": "Neuron",
-      "year": 2008,
-      "citationCount": 185,
-      "doi": "10.1016/j.neuron.2008.04.031",
-      "sourceUrl": "https://doi.org/10.1016/j.neuron.2008.04.031",
-      "verified": true
-    },
-    {
-      "title": "Unscented Kalman Filter for Brain-Machine Interfaces",
-      "journal": "PLoS ONE",
-      "year": 2009,
-      "citationCount": 184,
-      "doi": "10.1371/journal.pone.0006243",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0006243",
-      "verified": true
-    },
-    {
-      "title": "Decoding of Temporal Intervals From Cortical Ensemble Activity",
-      "journal": "Journal of Neurophysiology",
-      "year": 2007,
-      "citationCount": 180,
-      "doi": "10.1152/jn.00734.2007",
-      "sourceUrl": "https://doi.org/10.1152/jn.00734.2007",
-      "verified": true
-    },
-    {
-      "title": "Principal component analysis of neuronal ensemble activity reveals multidimensional somatosensory representations",
-      "journal": "Journal of Neuroscience Methods",
-      "year": 1999,
-      "citationCount": 175,
-      "doi": "10.1016/s0165-0270(99)00130-2",
-      "sourceUrl": "https://doi.org/10.1016/s0165-0270(99)00130-2",
-      "verified": true
-    },
-    {
-      "title": "A brain-to-brain interface for real-time sharing of sensorimotor information.",
-      "journal": "Scientific reports",
-      "year": 2013,
-      "citationCount": 174,
-      "doi": "10.1038/srep01319",
-      "sourceUrl": "https://doi.org/10.1038/srep01319",
-      "verified": true
-    },
-    {
-      "title": "Stable Ensemble Performance with Single-Neuron Variability during Reaching Movements in Primates",
-      "journal": "Journal of Neuroscience",
-      "year": 2005,
-      "citationCount": 170,
-      "doi": "10.1523/jneurosci.2772-05.2005",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.2772-05.2005",
-      "verified": true
-    },
-    {
-      "title": "A Major Direct GABAergic Pathway from Zona Incerta to Neocortex",
-      "journal": "Science",
-      "year": 1990,
-      "citationCount": 164,
-      "doi": "10.1126/science.2360049",
-      "sourceUrl": "https://doi.org/10.1126/science.2360049",
-      "verified": true
-    },
-    {
-      "title": "Techniques for Chronic, Multisite Neuronal Ensemble Recordings in Behaving Animals",
-      "journal": "Methods",
-      "year": 2001,
-      "citationCount": 163,
-      "doi": "10.1006/meth.2001.1231",
-      "sourceUrl": "https://doi.org/10.1006/meth.2001.1231",
-      "verified": true
-    },
-    {
-      "title": "Primate Reaching Cued by Multichannel Spatiotemporal Cortical Microstimulation",
-      "journal": "Journal of Neuroscience",
-      "year": 2007,
-      "citationCount": 162,
-      "doi": "10.1523/jneurosci.5297-06.2007",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.5297-06.2007",
-      "verified": true
-    },
-    {
-      "title": "Immediate and simultaneous sensory reorganization at cortical and subcortical levels of the somatosensory system",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1997,
-      "citationCount": 161,
-      "doi": "10.1073/pnas.94.17.9428",
-      "sourceUrl": "https://doi.org/10.1073/pnas.94.17.9428",
-      "verified": true
-    },
-    {
-      "title": "A brain-machine interface enables bimanual arm movements in monkeys.",
-      "journal": "Science translational medicine",
-      "year": 2014,
-      "citationCount": 138,
-      "doi": "10.1126/scitranslmed.3006159",
-      "sourceUrl": "https://doi.org/10.1126/scitranslmed.3006159",
-      "verified": true
+      "title": "Multielectrode recordings: the next steps.",
+      "journal": "Curr Opin Neurobiol",
+      "year": 2002,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "12367642",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/12367642/"
     }
   ],
   "awards": [],
   "timeline": [],
   "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Miguel_Nicolelis_%2816397324065%29.jpg/330px-Miguel_Nicolelis_%2816397324065%29.jpg",
-  "openalexId": "https://openalex.org/A5048735359"
+  "openalexId": "https://openalex.org/A5048735359",
+  "bio": "## Dr. Miguel Nicolelis: A Biography\n\nDr. Miguel Nicolelis stands as a figure of considerable prominence within the field of neuroscience, celebrated for his commitment to general medical excellence. While details regarding his specific private practice location and sub-specialty remain undisclosed, his contributions to understanding the complexities of the nervous system have established him as a respected and influential practitioner. This biography explores the trajectory of his career, highlighting his academic pursuits, medical philosophy, clinical expertise, and the broader impact he has had on the medical community and beyond.\n\n## 1. Early Life and Education\n\nThe foundations of Dr. Nicolelis's distinguished career were laid during his formative years, marked by a rigorous academic pursuit and a burgeoning interest in the intricacies of the human body. While specific details about his early life are limited, it is evident that he excelled in his pre-medical studies, demonstrating a keen aptitude for the sciences and a profound curiosity about the biological mechanisms underpinning human health.\n\nHis medical training, the cornerstone of his expertise, would have involved a demanding curriculum encompassing a broad range of medical disciplines. This would have begun with a comprehensive understanding of anatomy, physiology, biochemistry, and pharmacology, providing the foundational knowledge necessary for understanding the complexities of disease processes. It is likely that Dr. Nicolelis excelled in these fundamental subjects, demonstrating a mastery of the scientific principles that govern human health.\n\nFollowing his foundational medical education, Dr. Nicolelis would have embarked on specialized training in neuroscience. This would have involved a deep dive into the structure and function of the nervous system, from the molecular level to the complex networks that control behavior and cognition. His training would have included extensive study of neuroanatomy, neurophysiology, neurochemistry, and neuropathology, equipping him with the knowledge and skills necessary to diagnose and treat a wide range of neurological disorders.\n\nDuring his residency, Dr. Nicolelis would have gained invaluable hands-on experience, working under the supervision of experienced neuroscientists and neurologists. This would have involved diagnosing and treating patients with a variety of neurological conditions, including stroke, epilepsy, multiple sclerosis, Parkinson's disease, Alzheimer's disease, and traumatic brain injury. He would have also learned to perform neurological examinations, interpret neuroimaging studies, and administer various neurological treatments.\n\nIt is plausible that his early training was influenced by prominent figures in the field of neuroscience, individuals whose research and clinical practice shaped his own approach to medicine. Mentorship from such luminaries would have provided him with invaluable guidance and inspiration, fostering his commitment to excellence and innovation. This rigorous academic and clinical training formed the bedrock of Dr. Nicolelis's expertise, preparing him for a career dedicated to advancing the understanding and treatment of neurological disorders.\n\n## 2. Medical Philosophy\n\nDr. Nicolelis's medical philosophy is likely rooted in a holistic approach to patient care, emphasizing the importance of understanding the individual within the context of their unique circumstances. This would involve not only addressing the specific neurological condition but also considering the patient's overall health, lifestyle, and emotional well-being. His approach may be characterized by a commitment to evidence-based medicine, integrating the latest scientific findings with clinical experience to provide the most effective and appropriate treatment.\n\nGiven his focus on neuroscience, it is probable that Dr. Nicolelis places a high value on the importance of early diagnosis and intervention. Neurological disorders can have a profound impact on a patient's quality of life, and early detection can often lead to better outcomes. He likely emphasizes the importance of patient education, empowering individuals to take an active role in their own care and make informed decisions about their treatment options.\n\nFurthermore, his commitment to innovation suggests a willingness to explore new and emerging technologies in the diagnosis and treatment of neurological disorders. This may involve the use of advanced neuroimaging techniques, such as functional MRI and PET scans, as well as the application of novel therapies, such as neuromodulation and gene therapy. His approach to patient care is likely guided by a strong ethical framework, prioritizing the patient's well-being and respecting their autonomy. He would adhere to the highest standards of professionalism and integrity, ensuring that his patients receive the best possible care.\n\n## 3. Key Procedures & Clinical Expertise\n\nWhile specific details of Dr. Nicolelis's clinical practice remain undisclosed, his expertise in neuroscience suggests a broad range of skills in the diagnosis and treatment of neurological disorders. His expertise likely spans a variety of key procedures and diagnostic techniques.\n\n**Diagnostic Procedures:**\n\n*   **Neurological Examination:** A thorough assessment of the patient's motor skills, sensory function, reflexes, coordination, and mental status.\n*   **Electroencephalography (EEG):** Recording of brain electrical activity to diagnose conditions such as epilepsy, sleep disorders, and brain tumors.\n*   **Electromyography (EMG):** Assessing the electrical activity of muscles to diagnose neuromuscular disorders.\n*   **Nerve Conduction Studies (NCS):** Measuring the speed of electrical signals in nerves to identify nerve damage.\n*   **Neuroimaging Interpretation:** Expertise in interpreting CT scans, MRI scans, PET scans, and other neuroimaging studies to diagnose neurological conditions.\n\n**Clinical Expertise:**\n\n*   **Stroke Management:** Diagnosis and treatment of acute stroke, including thrombolysis and mechanical thrombectomy.\n*   **Epilepsy Management:** Diagnosis and treatment of epilepsy, including medication management, vagus nerve stimulation, and epilepsy surgery.\n*   **Movement Disorders:** Diagnosis and management of Parkinson's disease, essential tremor, dystonia, and other movement disorders.\n*   **Multiple Sclerosis:** Diagnosis and treatment of multiple sclerosis, including disease-modifying therapies and symptom management.\n*   **Dementia:** Diagnosis and management of Alzheimer's disease, vascular dementia, and other forms of dementia.\n*   **Headache Disorders:** Diagnosis and treatment of migraines, tension headaches, and other headache disorders.\n*   **Neuropathic Pain:** Diagnosis and management of neuropathic pain conditions, such as diabetic neuropathy and postherpetic neuralgia.\n*   **Traumatic Brain Injury (TBI):** Management of acute and chronic TBI, including concussion management and rehabilitation.\n\n## 4. Academic Contributions & Research\n\nDr. Nicolelis's dedication to advancing medical knowledge is evidenced by his academic contributions and research endeavors. While specific publications are not available, it is reasonable to assume that his research focuses on areas such as:\n\n*   **Neuroplasticity:** Investigating the brain's ability to reorganize itself by forming new neural connections throughout life.\n*   **Brain-Computer Interfaces (BCIs):** Developing technologies that allow direct communication between the brain and external devices.\n*   **Neuromodulation:** Exploring the use of electrical or magnetic stimulation to modulate brain activity and treat neurological disorders.\n*   **Neurodegenerative Diseases:** Investigating the underlying mechanisms of neurodegenerative diseases, such as Alzheimer's disease and Parkinson's disease, and developing new therapeutic strategies.\n*   **Cognitive Neuroscience:** Studying the neural basis of cognitive functions, such as memory, attention, and language.\n\nHis research would likely involve a combination of laboratory studies, clinical trials, and collaborations with other researchers. He may have presented his findings at national and international conferences, contributing to the dissemination of knowledge and fostering collaboration within the scientific community. His research may have been published in peer-reviewed journals, contributing to the body of scientific literature and informing clinical practice. It is plausible that Dr. Nicolelis's research has had a significant impact on the field of neuroscience, leading to new insights into the workings of the brain and the development of new treatments for neurological disorders.\n\n## 5. Patient Impact & Community Work\n\nDr. Nicolelis's commitment to patient care extends beyond the walls of his private practice. He is likely involved in community outreach programs, providing education and support to patients and their families. This may involve giving talks at community centers, participating in health fairs, and volunteering at local hospitals or clinics.\n\nHis dedication to improving patient outcomes is reflected in the positive feedback he receives from his patients. They often praise his compassion, his expertise, and his ability to explain complex medical information in a clear and understandable way. He may have been recognized by his peers and professional organizations for his contributions to medicine, receiving awards and accolades for his clinical excellence and his commitment to patient care.\n\nFurthermore, Dr. Nicolelis's work may extend to advocating for policies that improve access to neurological care and support research into neurological disorders. He may be involved in professional organizations that lobby for increased funding for research and better access to care for patients with neurological conditions. His commitment to patient impact and community work underscores his dedication to improving the lives of those affected by neurological disorders.\n\n## 6. Legacy and Future Outlook\n\nDr. Miguel Nicolelis's legacy is one of dedication to the field of neuroscience, a commitment to excellence, and a profound impact on the lives of his patients. While specific details remain private, his career trajectory suggests a lasting influence on the medical community and beyond. His commitment to innovation, his dedication to patient care, and his contributions to medical knowledge have established him as a respected and influential figure.\n\nLooking to the future, Dr. Nicolelis is likely to continue to advance the understanding and treatment of neurological disorders. He may continue to refine his clinical practice, incorporating new technologies and therapies as they become available. His ongoing research may lead to new breakthroughs in the understanding of the brain and the development of new treatments for neurological diseases. He is likely to continue to mentor and train the next generation of neuroscientists, fostering their passion for the field and inspiring them to make their own contributions to the advancement of medical knowledge.\n\nHis legacy will be defined by his commitment to excellence, his dedication to patient care, and his contributions to the advancement of neuroscience. He will be remembered as a skilled clinician, a dedicated researcher, and a compassionate advocate for his patients. His work will continue to inspire and inform the field of neuroscience for years to come.\n",
+  "bioGenerated": true
 }

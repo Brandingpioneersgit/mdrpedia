@@ -1,0 +1,1321 @@
+---
+/**
+ * MDRPedia — Individual Rare Disease Page
+ * Comprehensive information with expert connections
+ */
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const rareDiseases = await getCollection("rareDiseases");
+    return rareDiseases.map((disease) => ({
+        params: { slug: disease.data.slug },
+        props: { disease: disease.data },
+    }));
+}
+
+const { disease } = Astro.props;
+
+// Get all doctors
+const doctors = await getCollection("doctors");
+
+// Find doctors who treat this condition
+const treatingDoctors = doctors.filter(doc => {
+    const rareConditions = doc.data.rareConditions || [];
+    const conditionsTreated = doc.data.conditionsTreated || [];
+    const allConditions = [...rareConditions, ...conditionsTreated].map(c => c.toLowerCase());
+    return allConditions.some(c =>
+        c.includes(disease.name.toLowerCase()) ||
+        disease.aliases?.some((a: string) => c.includes(a.toLowerCase()))
+    );
+}).sort((a, b) => (b.data.rankingScore || 0) - (a.data.rankingScore || 0));
+
+// Get related diseases
+const allDiseases = await getCollection("rareDiseases");
+const relatedDiseases = allDiseases.filter(d =>
+    disease.relatedConditions?.some((rc: string) =>
+        d.data.name.toLowerCase().includes(rc.toLowerCase()) ||
+        d.data.aliases?.some((a: string) => rc.toLowerCase().includes(a.toLowerCase()))
+    ) && d.data.slug !== disease.slug
+).slice(0, 4);
+
+// Category info
+const CATEGORY_INFO: Record<string, { icon: string; color: string; label: string }> = {
+    'GENETIC': { icon: '🧬', color: '#a78bfa', label: 'Genetic Disorder' },
+    'METABOLIC': { icon: '⚗️', color: '#fbbf24', label: 'Metabolic Disorder' },
+    'NEUROLOGICAL': { icon: '🧠', color: '#f472b6', label: 'Neurological Disorder' },
+    'CARDIOVASCULAR': { icon: '❤️', color: '#ef4444', label: 'Cardiovascular Disorder' },
+    'IMMUNOLOGICAL': { icon: '🛡️', color: '#10b981', label: 'Immunological Disorder' },
+    'ONCOLOGICAL': { icon: '🎗️', color: '#8b5cf6', label: 'Oncological Disorder' },
+    'HEMATOLOGICAL': { icon: '🩸', color: '#dc2626', label: 'Hematological Disorder' },
+    'MUSCULOSKELETAL': { icon: '🦴', color: '#78716c', label: 'Musculoskeletal Disorder' },
+    'DERMATOLOGICAL': { icon: '🩹', color: '#f97316', label: 'Dermatological Disorder' },
+    'GASTROINTESTINAL': { icon: '🫁', color: '#84cc16', label: 'Gastrointestinal Disorder' },
+    'RESPIRATORY': { icon: '🌬️', color: '#38bdf8', label: 'Respiratory Disorder' },
+    'ENDOCRINE': { icon: '⚡', color: '#c084fc', label: 'Endocrine Disorder' },
+    'OPHTHALMOLOGICAL': { icon: '👁️', color: '#06b6d4', label: 'Ophthalmological Disorder' },
+    'OTHER': { icon: '🔬', color: '#71717a', label: 'Other' }
+};
+
+const catInfo = CATEGORY_INFO[disease.category] || CATEGORY_INFO['OTHER'];
+
+// Inheritance labels
+const INHERITANCE_LABELS: Record<string, string> = {
+    'AUTOSOMAL_DOMINANT': 'Autosomal Dominant',
+    'AUTOSOMAL_RECESSIVE': 'Autosomal Recessive',
+    'X_LINKED': 'X-Linked',
+    'MITOCHONDRIAL': 'Mitochondrial',
+    'SPORADIC': 'Sporadic',
+    'UNKNOWN': 'Unknown'
+};
+
+// Research status labels
+const RESEARCH_STATUS: Record<string, { label: string; color: string }> = {
+    'ACTIVE_TRIALS': { label: 'Active Clinical Trials', color: '#10b981' },
+    'PRECLINICAL': { label: 'Preclinical Research', color: '#fbbf24' },
+    'LIMITED_RESEARCH': { label: 'Limited Research', color: '#f97316' },
+    'NO_ACTIVE_RESEARCH': { label: 'No Active Research', color: '#71717a' }
+};
+---
+
+<Layout
+    title={`${disease.name} — Rare Disease Profile | MDRPedia`}
+    description={disease.description}
+>
+    <article class="disease-profile" style={`--accent: ${catInfo.color}`}>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="/rare-diseases">Rare Diseases</a>
+                    <span>/</span>
+                    <span>{catInfo.label}</span>
+                </nav>
+
+                <div class="hero-content">
+                    <div class="hero-main">
+                        <span class="category-badge">
+                            <span class="cat-icon">{catInfo.icon}</span>
+                            {catInfo.label}
+                        </span>
+
+                        <h1>{disease.name}</h1>
+
+                        {disease.aliases && disease.aliases.length > 0 && (
+                            <p class="aliases">
+                                Also known as: {disease.aliases.join(', ')}
+                            </p>
+                        )}
+
+                        <p class="description">{disease.description}</p>
+
+                        <div class="codes">
+                            {disease.icdCode && (
+                                <span class="code">
+                                    <strong>ICD-10:</strong> {disease.icdCode}
+                                </span>
+                            )}
+                            {disease.orphaCode && (
+                                <a href={`https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=${disease.orphaCode.replace('ORPHA', '')}`} target="_blank" rel="noopener" class="code code--link">
+                                    <strong>Orphanet:</strong> {disease.orphaCode}
+                                </a>
+                            )}
+                            {disease.omimCode && (
+                                <a href={`https://www.omim.org/entry/${disease.omimCode}`} target="_blank" rel="noopener" class="code code--link">
+                                    <strong>OMIM:</strong> {disease.omimCode}
+                                </a>
+                            )}
+                        </div>
+                    </div>
+
+                    <div class="hero-stats">
+                        {disease.prevalence && (
+                            <div class="stat-card">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-value">{disease.prevalence}</span>
+                                <span class="stat-label">Prevalence</span>
+                            </div>
+                        )}
+                        {disease.clinicalTrialsCount > 0 && (
+                            <div class="stat-card stat-card--active">
+                                <span class="stat-icon">🔬</span>
+                                <span class="stat-value">{disease.clinicalTrialsCount}</span>
+                                <span class="stat-label">Active Trials</span>
+                            </div>
+                        )}
+                        {treatingDoctors.length > 0 && (
+                            <div class="stat-card">
+                                <span class="stat-icon">👨‍⚕️</span>
+                                <span class="stat-value">{treatingDoctors.length}</span>
+                                <span class="stat-label">Expert{treatingDoctors.length !== 1 ? 's' : ''}</span>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Main Column -->
+                    <main class="main-col">
+                        <!-- ELI5 Summary Toggle -->
+                        {(disease.eli5Summary || disease.clinicalSummary) && (
+                            <section class="card summary-card">
+                                <div class="summary-toggle">
+                                    <button class="toggle-btn active" data-view="simple">Simple Explanation</button>
+                                    <button class="toggle-btn" data-view="clinical">Clinical Summary</button>
+                                </div>
+                                <div class="summary-content" id="summary-simple">
+                                    <p>{disease.eli5Summary || disease.description}</p>
+                                </div>
+                                <div class="summary-content hidden" id="summary-clinical">
+                                    <p>{disease.clinicalSummary || disease.description}</p>
+                                </div>
+                            </section>
+                        )}
+
+                        <!-- Symptoms -->
+                        {disease.symptoms && disease.symptoms.length > 0 && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                        <path d="M12 8v4M12 16h.01"/>
+                                    </svg>
+                                    Signs & Symptoms
+                                </h2>
+                                <ul class="symptom-list">
+                                    {disease.symptoms.map((symptom: string) => (
+                                        <li>{symptom}</li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        <!-- Treatment Options -->
+                        {disease.treatmentOptions && disease.treatmentOptions.length > 0 && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                                    </svg>
+                                    Treatment Options
+                                </h2>
+                                <div class="treatments-grid">
+                                    {disease.treatmentOptions.map((treatment: any) => (
+                                        <div class={`treatment-card treatment-card--${treatment.type.toLowerCase()}`}>
+                                            <div class="treatment-header">
+                                                <span class="treatment-type">{treatment.type.replace('_', ' ')}</span>
+                                                {treatment.fdaApproved && (
+                                                    <span class="fda-badge">FDA Approved</span>
+                                                )}
+                                            </div>
+                                            <h4 class="treatment-name">{treatment.name}</h4>
+                                            {treatment.effectiveness && (
+                                                <span class={`effectiveness effectiveness--${treatment.effectiveness.toLowerCase().replace('_', '-')}`}>
+                                                    {treatment.effectiveness.replace('_', ' ')}
+                                                </span>
+                                            )}
+                                            {treatment.approvalYear && (
+                                                <span class="approval-year">Approved {treatment.approvalYear}</span>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+
+                        <!-- Diagnostic Methods -->
+                        {disease.diagnosticMethods && disease.diagnosticMethods.length > 0 && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.35-4.35"/>
+                                    </svg>
+                                    Diagnosis
+                                </h2>
+                                <ul class="diagnostic-list">
+                                    {disease.diagnosticMethods.map((method: string) => (
+                                        <li>{method}</li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        <!-- Historical Background -->
+                        {disease.historicalBackground && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 8v4l3 3"/>
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    History
+                                </h2>
+                                <div class="prose">
+                                    <p>{disease.historicalBackground}</p>
+                                </div>
+                            </section>
+                        )}
+
+                        <!-- Recent Breakthroughs -->
+                        {disease.recentBreakthroughs && disease.recentBreakthroughs.length > 0 && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                    </svg>
+                                    Recent Breakthroughs
+                                </h2>
+                                <div class="breakthroughs-list">
+                                    {disease.recentBreakthroughs.map((breakthrough: any) => (
+                                        <div class="breakthrough-item">
+                                            <span class="breakthrough-year">{breakthrough.year}</span>
+                                            <div class="breakthrough-content">
+                                                <h4>{breakthrough.title}</h4>
+                                                <p>{breakthrough.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+
+                        <!-- Expert Doctors -->
+                        {treatingDoctors.length > 0 && (
+                            <section class="card">
+                                <h2 class="card-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    Expert Physicians
+                                </h2>
+                                <div class="doctors-grid">
+                                    {treatingDoctors.slice(0, 6).map((doctor) => (
+                                        <a href={`/doctor/${doctor.id}`} class="doctor-card">
+                                            <div class="doctor-avatar">
+                                                {doctor.data.portraitUrl ? (
+                                                    <img src={doctor.data.portraitUrl} alt={doctor.data.fullName} />
+                                                ) : (
+                                                    <span class="initials">
+                                                        {doctor.data.fullName.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+                                                    </span>
+                                                )}
+                                                {doctor.data.tier !== 'UNRANKED' && (
+                                                    <span class={`tier-badge tier-badge--${doctor.data.tier.toLowerCase()}`}>
+                                                        {doctor.data.tier}
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div class="doctor-info">
+                                                <h4>{doctor.data.fullName}</h4>
+                                                <p class="specialty">{doctor.data.specialty}</p>
+                                                <p class="location">{doctor.data.geography.city}, {doctor.data.geography.country}</p>
+                                            </div>
+                                        </a>
+                                    ))}
+                                </div>
+                                {treatingDoctors.length > 6 && (
+                                    <a href={`/search?condition=${encodeURIComponent(disease.name)}`} class="view-all-link">
+                                        View all {treatingDoctors.length} specialists →
+                                    </a>
+                                )}
+                            </section>
+                        )}
+                    </main>
+
+                    <!-- Sidebar -->
+                    <aside class="sidebar-col">
+                        <div class="sidebar-sticky">
+                            <!-- Quick Facts -->
+                            <div class="sidebar-card">
+                                <h3 class="sidebar-title">Quick Facts</h3>
+                                <dl class="facts-list">
+                                    {disease.inheritance && (
+                                        <div class="fact-row">
+                                            <dt>Inheritance</dt>
+                                            <dd>{INHERITANCE_LABELS[disease.inheritance] || disease.inheritance}</dd>
+                                        </div>
+                                    )}
+                                    {disease.ageOfOnset && (
+                                        <div class="fact-row">
+                                            <dt>Age of Onset</dt>
+                                            <dd>{disease.ageOfOnset}</dd>
+                                        </div>
+                                    )}
+                                    {disease.lifeExpectancy && (
+                                        <div class="fact-row">
+                                            <dt>Life Expectancy</dt>
+                                            <dd>{disease.lifeExpectancy}</dd>
+                                        </div>
+                                    )}
+                                    {disease.estimatedCases && (
+                                        <div class="fact-row">
+                                            <dt>Est. Cases</dt>
+                                            <dd>{disease.estimatedCases.toLocaleString()}</dd>
+                                        </div>
+                                    )}
+                                </dl>
+                            </div>
+
+                            <!-- Research Status -->
+                            {disease.researchStatus && (
+                                <div class="sidebar-card research-card">
+                                    <h3 class="sidebar-title">Research Status</h3>
+                                    <div class="research-status" style={`--status-color: ${RESEARCH_STATUS[disease.researchStatus]?.color || '#71717a'}`}>
+                                        <span class="status-indicator"></span>
+                                        {RESEARCH_STATUS[disease.researchStatus]?.label || disease.researchStatus}
+                                    </div>
+                                    {disease.keyResearchCenters && disease.keyResearchCenters.length > 0 && (
+                                        <div class="research-centers">
+                                            <h4>Key Research Centers</h4>
+                                            <ul>
+                                                {disease.keyResearchCenters.slice(0, 4).map((center: string) => (
+                                                    <li>{center}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            <!-- Affected Systems -->
+                            {disease.affectedSystems && disease.affectedSystems.length > 0 && (
+                                <div class="sidebar-card">
+                                    <h3 class="sidebar-title">Affected Systems</h3>
+                                    <div class="tags">
+                                        {disease.affectedSystems.map((system: string) => (
+                                            <span class="tag">{system}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <!-- Specialist Types -->
+                            {disease.specialistTypes && disease.specialistTypes.length > 0 && (
+                                <div class="sidebar-card">
+                                    <h3 class="sidebar-title">Specialists</h3>
+                                    <div class="specialist-list">
+                                        {disease.specialistTypes.map((spec: string) => (
+                                            <a href={`/search?specialty=${encodeURIComponent(spec)}`} class="specialist-link">
+                                                {spec}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <!-- Patient Organizations -->
+                            {disease.patientOrganizations && disease.patientOrganizations.length > 0 && (
+                                <div class="sidebar-card">
+                                    <h3 class="sidebar-title">Patient Support</h3>
+                                    <div class="orgs-list">
+                                        {disease.patientOrganizations.map((org: any) => (
+                                            <a href={org.url} target="_blank" rel="noopener" class="org-link">
+                                                <span class="org-name">{org.name}</span>
+                                                {org.country && <span class="org-country">{org.country}</span>}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <!-- Related Conditions -->
+                            {relatedDiseases.length > 0 && (
+                                <div class="sidebar-card">
+                                    <h3 class="sidebar-title">Related Conditions</h3>
+                                    <div class="related-list">
+                                        {relatedDiseases.map((related) => (
+                                            <a href={`/rare-diseases/${related.data.slug}`} class="related-link">
+                                                {related.data.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <!-- Sources -->
+                            {disease.sources && disease.sources.length > 0 && (
+                                <div class="sidebar-card sources-card">
+                                    <h3 class="sidebar-title">Sources</h3>
+                                    <ul class="sources-list">
+                                        {disease.sources.map((source: any) => (
+                                            <li>
+                                                <a href={source.url} target="_blank" rel="noopener">
+                                                    {source.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    {disease.lastUpdated && (
+                                        <p class="last-updated">Last updated: {disease.lastUpdated}</p>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </article>
+</Layout>
+
+<script>
+    // Summary toggle
+    const toggleBtns = document.querySelectorAll<HTMLButtonElement>('.toggle-btn');
+    const simpleContent = document.getElementById('summary-simple');
+    const clinicalContent = document.getElementById('summary-clinical');
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (btn.dataset.view === 'simple') {
+                simpleContent?.classList.remove('hidden');
+                clinicalContent?.classList.add('hidden');
+            } else {
+                simpleContent?.classList.add('hidden');
+                clinicalContent?.classList.remove('hidden');
+            }
+        });
+    });
+</script>
+
+<style>
+    .disease-profile {
+        background: var(--bg-primary, #0a0a12);
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 2rem 0 3rem;
+        background: linear-gradient(180deg, rgba(var(--accent-rgb, 139, 92, 246), 0.08) 0%, transparent 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: #71717a;
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+        color: #a1a1aa;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+        color: var(--accent);
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .category-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--accent);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+
+    .cat-icon {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-weight: 800;
+        color: #fafafa;
+        margin: 0 0 0.75rem;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+
+    .aliases {
+        font-size: 0.9rem;
+        color: #71717a;
+        margin: 0 0 1rem;
+        font-style: italic;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        color: #a1a1aa;
+        line-height: 1.7;
+        margin: 0 0 1.5rem;
+    }
+
+    .codes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .code {
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: #a1a1aa;
+    }
+
+    .code strong {
+        color: #e5e7eb;
+        margin-right: 4px;
+    }
+
+    .code--link {
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .code--link:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--accent);
+    }
+
+    .hero-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+    }
+
+    .stat-card--active {
+        background: rgba(16, 185, 129, 0.08);
+        border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .stat-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-card .stat-value {
+        font-family: var(--font-mono);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fafafa;
+    }
+
+    .stat-card .stat-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #71717a;
+        margin-top: 2px;
+    }
+
+    /* Content */
+    .content-wrapper {
+        padding: 3rem 0;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Cards */
+    .card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fafafa;
+        margin: 0 0 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .card-title svg {
+        color: var(--accent);
+        opacity: 0.8;
+    }
+
+    /* Summary Toggle */
+    .summary-card {
+        padding-top: 1rem;
+    }
+
+    .summary-toggle {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .toggle-btn {
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #71717a;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .toggle-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #a1a1aa;
+    }
+
+    .toggle-btn.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: white;
+    }
+
+    .summary-content {
+        font-size: 1rem;
+        color: #a1a1aa;
+        line-height: 1.75;
+    }
+
+    .summary-content.hidden {
+        display: none;
+    }
+
+    /* Symptoms */
+    .symptom-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .symptom-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        font-size: 0.9rem;
+        color: #e5e7eb;
+    }
+
+    .symptom-list li::before {
+        content: '•';
+        color: var(--accent);
+        font-weight: bold;
+    }
+
+    /* Treatments */
+    .treatments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+
+    .treatment-card {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+    }
+
+    .treatment-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+    }
+
+    .treatment-type {
+        font-size: 0.65rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #71717a;
+    }
+
+    .fda-badge {
+        padding: 3px 8px;
+        background: rgba(16, 185, 129, 0.15);
+        border-radius: 4px;
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: #34d399;
+    }
+
+    .treatment-name {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fafafa;
+        margin: 0 0 0.5rem;
+    }
+
+    .effectiveness {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+
+    .effectiveness--curative {
+        background: rgba(16, 185, 129, 0.15);
+        color: #34d399;
+    }
+
+    .effectiveness--highly-effective {
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+    }
+
+    .effectiveness--moderately-effective {
+        background: rgba(251, 191, 36, 0.15);
+        color: #fbbf24;
+    }
+
+    .effectiveness--palliative {
+        background: rgba(156, 163, 175, 0.15);
+        color: #9ca3af;
+    }
+
+    .effectiveness--experimental {
+        background: rgba(139, 92, 246, 0.15);
+        color: #a78bfa;
+    }
+
+    .approval-year {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: #71717a;
+    }
+
+    /* Diagnostics */
+    .diagnostic-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .diagnostic-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        font-size: 0.9rem;
+        color: #e5e7eb;
+    }
+
+    .diagnostic-list li:last-child {
+        border-bottom: none;
+    }
+
+    .diagnostic-list li::before {
+        content: '✓';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: rgba(16, 185, 129, 0.15);
+        border-radius: 50%;
+        font-size: 0.6rem;
+        color: #34d399;
+    }
+
+    /* Prose */
+    .prose {
+        font-size: 0.95rem;
+        color: #a1a1aa;
+        line-height: 1.75;
+    }
+
+    .prose p {
+        margin: 0;
+    }
+
+    /* Breakthroughs */
+    .breakthroughs-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .breakthrough-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+    }
+
+    .breakthrough-year {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05));
+        border-radius: 10px;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #a78bfa;
+    }
+
+    .breakthrough-content h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fafafa;
+        margin: 0 0 0.35rem;
+    }
+
+    .breakthrough-content p {
+        font-size: 0.85rem;
+        color: #a1a1aa;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Doctors Grid */
+    .doctors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .doctor-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .doctor-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(139, 92, 246, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .doctor-avatar {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 0.75rem;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(139, 92, 246, 0.1));
+    }
+
+    .doctor-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .doctor-avatar .initials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #a78bfa;
+    }
+
+    .tier-badge {
+        position: absolute;
+        bottom: -4px;
+        right: -4px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.55rem;
+        font-weight: 700;
+        color: white;
+    }
+
+    .tier-badge--titan { background: linear-gradient(135deg, #fbbf24, #d97706); }
+    .tier-badge--elite { background: linear-gradient(135deg, #38bdf8, #0284c7); }
+    .tier-badge--master { background: linear-gradient(135deg, #4ade80, #16a34a); }
+
+    .doctor-info h4 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #fafafa;
+        margin: 0 0 0.25rem;
+    }
+
+    .doctor-info .specialty {
+        font-size: 0.75rem;
+        color: #a1a1aa;
+        margin: 0;
+    }
+
+    .doctor-info .location {
+        font-size: 0.7rem;
+        color: #71717a;
+        margin: 0.25rem 0 0;
+    }
+
+    .view-all-link {
+        display: block;
+        text-align: center;
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .view-all-link:hover {
+        color: #c4b5fd;
+    }
+
+    /* Sidebar */
+    .sidebar-col {
+        position: relative;
+    }
+
+    .sidebar-sticky {
+        position: sticky;
+        top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .sidebar-card {
+        background: linear-gradient(145deg, rgba(20, 20, 35, 0.95) 0%, rgba(17, 17, 27, 0.9) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1.25rem;
+    }
+
+    .sidebar-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #71717a;
+        margin: 0 0 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .facts-list {
+        margin: 0;
+    }
+
+    .fact-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        font-size: 0.8rem;
+    }
+
+    .fact-row:last-child {
+        border-bottom: none;
+    }
+
+    .fact-row dt {
+        color: #71717a;
+    }
+
+    .fact-row dd {
+        margin: 0;
+        color: #e5e7eb;
+        font-weight: 500;
+        text-align: right;
+    }
+
+    /* Research Status */
+    .research-status {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 10px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--status-color);
+    }
+
+    .status-indicator {
+        width: 8px;
+        height: 8px;
+        background: var(--status-color);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .research-centers {
+        margin-top: 1rem;
+    }
+
+    .research-centers h4 {
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #71717a;
+        margin: 0 0 0.5rem;
+    }
+
+    .research-centers ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .research-centers li {
+        padding: 0.4rem 0;
+        font-size: 0.8rem;
+        color: #a1a1aa;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .research-centers li:last-child {
+        border-bottom: none;
+    }
+
+    /* Tags */
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tag {
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        color: #a1a1aa;
+    }
+
+    /* Specialist List */
+    .specialist-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .specialist-link {
+        display: block;
+        padding: 0.6rem 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: #a1a1aa;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .specialist-link:hover {
+        background: rgba(139, 92, 246, 0.1);
+        color: #a78bfa;
+    }
+
+    /* Organizations */
+    .orgs-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .org-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.6rem 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .org-link:hover {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .org-name {
+        font-size: 0.8rem;
+        color: #e5e7eb;
+    }
+
+    .org-country {
+        font-size: 0.7rem;
+        color: #71717a;
+    }
+
+    /* Related */
+    .related-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .related-link {
+        display: block;
+        padding: 0.6rem 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: #a1a1aa;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .related-link:hover {
+        background: rgba(139, 92, 246, 0.1);
+        color: #a78bfa;
+    }
+
+    /* Sources */
+    .sources-card {
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .sources-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sources-list li {
+        padding: 0.4rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .sources-list li:last-child {
+        border-bottom: none;
+    }
+
+    .sources-list a {
+        font-size: 0.8rem;
+        color: #60a5fa;
+        text-decoration: none;
+    }
+
+    .sources-list a:hover {
+        text-decoration: underline;
+    }
+
+    .last-updated {
+        margin: 1rem 0 0;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        font-size: 0.7rem;
+        color: #52525b;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar-col {
+            order: -1;
+        }
+
+        .sidebar-sticky {
+            position: static;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero-stats {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .doctors-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .treatments-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

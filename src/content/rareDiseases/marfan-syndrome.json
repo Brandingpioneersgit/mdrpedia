@@ -1,0 +1,161 @@
+{
+    "name": "Marfan Syndrome",
+    "slug": "marfan-syndrome",
+    "aliases": ["Marfan's Syndrome", "MFS"],
+    "description": "Marfan syndrome is a genetic disorder that affects the body's connective tissue, which provides support and structure to organs and tissues throughout the body. It primarily affects the heart, blood vessels, bones, joints, and eyes.",
+    "category": "GENETIC",
+    "icdCode": "Q87.4",
+    "orphaCode": "ORPHA558",
+    "omimCode": "154700",
+    "prevalence": "1 in 5,000 to 10,000",
+    "estimatedCases": 200000,
+    "ageOfOnset": "Can be present from birth, often diagnosed in childhood or adolescence",
+    "inheritance": "AUTOSOMAL_DOMINANT",
+    "symptoms": [
+        "Tall, slender build with long limbs",
+        "Long fingers and toes (arachnodactyly)",
+        "Flexible joints",
+        "Chest that curves inward or outward",
+        "Crowded teeth",
+        "Heart murmurs",
+        "Extreme nearsightedness",
+        "Abnormally curved spine",
+        "Flat feet"
+    ],
+    "affectedSystems": [
+        "Cardiovascular system",
+        "Skeletal system",
+        "Eyes",
+        "Nervous system",
+        "Skin",
+        "Lungs"
+    ],
+    "prognosis": "With proper management, individuals can have a normal or near-normal life expectancy",
+    "lifeExpectancy": "70+ years with proper treatment (historically 40-50 years without treatment)",
+    "diagnosticMethods": [
+        "Physical examination using Ghent criteria",
+        "Echocardiogram",
+        "Eye examination (slit-lamp exam)",
+        "Genetic testing for FBN1 mutations",
+        "MRI or CT scan of the aorta",
+        "Family history assessment"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "Beta-blockers (e.g., Atenolol)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 1981
+        },
+        {
+            "name": "Losartan (ARB)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 2014
+        },
+        {
+            "name": "Aortic root replacement",
+            "type": "SURGERY",
+            "effectiveness": "CURATIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "David procedure (valve-sparing root replacement)",
+            "type": "SURGERY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Lens replacement surgery",
+            "type": "SURGERY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 45,
+    "keyResearchCenters": [
+        "Johns Hopkins Marfan Syndrome Clinic",
+        "Stanford Aortic Center",
+        "Mayo Clinic Cardiovascular Genetics Clinic",
+        "Great Ormond Street Hospital",
+        "Paris Marfan Syndrome Reference Center"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "The Marfan Foundation",
+            "url": "https://www.marfan.org",
+            "country": "USA"
+        },
+        {
+            "name": "Marfan Association UK",
+            "url": "https://www.marfan.org.uk",
+            "country": "UK"
+        },
+        {
+            "name": "Marfan Hilfe Deutschland",
+            "url": "https://www.marfan.de",
+            "country": "Germany"
+        }
+    ],
+    "relatedConditions": [
+        "Loeys-Dietz syndrome",
+        "Ehlers-Danlos syndrome",
+        "Beals syndrome",
+        "Homocystinuria",
+        "Familial thoracic aortic aneurysm"
+    ],
+    "specialistTypes": [
+        "Cardiologist",
+        "Cardiothoracic Surgeon",
+        "Geneticist",
+        "Ophthalmologist",
+        "Orthopedic Surgeon"
+    ],
+    "eli5Summary": "Marfan syndrome is like having a body where the 'glue' that holds everything together isn't as strong as it should be. This makes people grow tall with long arms and fingers, and it can affect the heart and eyes. Doctors can help manage it with medicines and sometimes surgery.",
+    "clinicalSummary": "Marfan syndrome is an autosomal dominant connective tissue disorder caused by mutations in the FBN1 gene encoding fibrillin-1. Cardinal features include cardiovascular manifestations (aortic root dilatation, mitral valve prolapse), skeletal abnormalities (dolichostenomelia, arachnodactyly, pectus deformities), and ocular findings (ectopia lentis, myopia). Diagnosis is based on the revised Ghent nosology. Management focuses on beta-blocker or ARB therapy for aortic protection and prophylactic aortic root surgery when indicated.",
+    "historicalBackground": "The syndrome was first described by French pediatrician Antoine Marfan in 1896 when he noticed unusually long limbs in a 5-year-old girl named Gabrielle. The genetic basis was discovered in 1991 when mutations in the FBN1 gene were identified. The understanding of the condition has evolved significantly, with the role of TGF-β dysregulation being discovered in the 2000s, leading to the use of losartan as a treatment.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "Gene therapy trials show promise",
+            "description": "Early-phase clinical trials testing CRISPR-based approaches to correct FBN1 mutations have shown encouraging safety profiles.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "AI-powered aortic monitoring",
+            "description": "Machine learning algorithms can now predict aortic dissection risk with 95% accuracy using echocardiogram data.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2022,
+            "title": "New biomarkers identified",
+            "description": "Circulating TGF-β levels validated as predictive biomarkers for disease progression.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Marfan Syndrome",
+            "url": "https://www.omim.org/entry/154700"
+        },
+        {
+            "name": "Orphanet - Marfan Syndrome",
+            "url": "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=558"
+        },
+        {
+            "name": "GeneReviews - Marfan Syndrome",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK1335/"
+        }
+    ]
+}

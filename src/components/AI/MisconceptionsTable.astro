@@ -1,0 +1,375 @@
+---
+/**
+ * MisconceptionsTable - Myth vs Reality two-column comparison
+ * Displays common misconceptions with corrections
+ */
+
+import type { MisconceptionData } from '../../lib/types';
+
+interface Props {
+    misconceptions: MisconceptionData[];
+    title?: string;
+    tier?: string;
+}
+
+const { misconceptions, title = "Common Misconceptions", tier = "UNRANKED" } = Astro.props;
+
+// Category labels
+const categoryLabels: Record<MisconceptionData['category'], string> = {
+    TECHNIQUE: 'Technique',
+    CREDENTIALS: 'Credentials',
+    STATISTICS: 'Statistics',
+    HISTORY: 'History',
+    ATTRIBUTION: 'Attribution',
+    GENERAL: 'General',
+};
+
+// Importance badges
+const importanceConfig: Record<MisconceptionData['importance'], { label: string; color: string }> = {
+    HIGH: { label: 'Important', color: '#ef4444' },
+    MEDIUM: { label: 'Notable', color: '#f59e0b' },
+    LOW: { label: 'Minor', color: '#6b7280' },
+};
+
+// Sort by importance
+const sortedMisconceptions = [...misconceptions].sort((a, b) => {
+    const order = { HIGH: 0, MEDIUM: 1, LOW: 2 };
+    return order[a.importance] - order[b.importance];
+});
+---
+
+<section class={`misconceptions-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            {title}
+        </h2>
+        <span class="section-count">{misconceptions.length} corrections</span>
+    </div>
+
+    <div class="table-header">
+        <div class="header-myth">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            Myth
+        </div>
+        <div class="header-reality">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <path d="M22 4L12 14.01l-3-3"/>
+            </svg>
+            Reality
+        </div>
+    </div>
+
+    <div class="misconceptions-list">
+        {sortedMisconceptions.map((item, index) => (
+            <div class="misconception-row" data-index={index}>
+                <div class="row-badges">
+                    <span class="category-badge">{categoryLabels[item.category]}</span>
+                    <span
+                        class="importance-badge"
+                        style={`--badge-color: ${importanceConfig[item.importance].color};`}
+                    >
+                        {importanceConfig[item.importance].label}
+                    </span>
+                </div>
+
+                <div class="comparison-grid">
+                    <div class="myth-cell">
+                        <div class="cell-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="15" y1="9" x2="9" y2="15"/>
+                                <line x1="9" y1="9" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <p class="cell-text">{item.myth}</p>
+                    </div>
+
+                    <div class="arrow-divider">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="reality-cell">
+                        <div class="cell-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <path d="M22 4L12 14.01l-3-3"/>
+                            </svg>
+                        </div>
+                        <p class="cell-text">{item.reality}</p>
+                    </div>
+                </div>
+
+                {item.correctionSources && item.correctionSources.length > 0 && (
+                    <div class="row-sources">
+                        <span class="sources-label">Sources:</span>
+                        {item.correctionSources.map(src => (
+                            <a
+                                href={src.url || (src.type === 'DOI' ? `https://doi.org/${src.identifier}` : src.type === 'PUBMED' ? `https://pubmed.ncbi.nlm.nih.gov/${src.identifier}` : '#')}
+                                target="_blank"
+                                rel="noopener"
+                                class="source-link"
+                            >
+                                {src.type}
+                            </a>
+                        ))}
+                    </div>
+                )}
+            </div>
+        ))}
+    </div>
+
+    <!-- Hidden semantic content for AI crawlers -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Misconception Corrections</h3>
+        {sortedMisconceptions.map(item => (
+            <div>
+                <p><strong>Myth:</strong> {item.myth}</p>
+                <p><strong>Reality:</strong> {item.reality}</p>
+                <p>Category: {item.category}, Importance: {item.importance}</p>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .misconceptions-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #f59e0b;
+        opacity: 0.9;
+    }
+
+    .section-count {
+        font-size: 0.8rem;
+        color: var(--text-muted, #888);
+    }
+
+    /* Table Header */
+    .table-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .header-myth,
+    .header-reality {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .header-myth {
+        color: #ef4444;
+    }
+
+    .header-reality {
+        color: #10b981;
+    }
+
+    /* Misconceptions List */
+    .misconceptions-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .misconception-row {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 12px;
+        padding: 1.25rem;
+        transition: all 0.2s ease;
+    }
+
+    .misconception-row:hover {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .row-badges {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-badge {
+        padding: 3px 10px;
+        background: rgba(139, 92, 246, 0.1);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #a78bfa;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .importance-badge {
+        padding: 3px 10px;
+        background: color-mix(in srgb, var(--badge-color) 15%, transparent);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--badge-color);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .myth-cell,
+    .reality-cell {
+        display: flex;
+        gap: 0.75rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .myth-cell {
+        background: rgba(239, 68, 68, 0.08);
+        border-left: 3px solid #ef4444;
+    }
+
+    .reality-cell {
+        background: rgba(16, 185, 129, 0.08);
+        border-left: 3px solid #10b981;
+    }
+
+    .cell-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .myth-cell .cell-icon {
+        color: #ef4444;
+    }
+
+    .reality-cell .cell-icon {
+        color: #10b981;
+    }
+
+    .cell-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--text-secondary, #ccc);
+        margin: 0;
+    }
+
+    .arrow-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted, #888);
+        padding-top: 1rem;
+    }
+
+    /* Sources */
+    .row-sources {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .sources-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text-muted, #888);
+    }
+
+    .source-link {
+        padding: 2px 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--text-secondary, #ccc);
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .source-link:hover {
+        background: rgba(139, 92, 246, 0.15);
+        color: #a78bfa;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .misconceptions-section {
+            padding: 1.5rem;
+        }
+
+        .table-header {
+            display: none;
+        }
+
+        .comparison-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+
+        .arrow-divider {
+            transform: rotate(90deg);
+            padding: 0;
+        }
+    }
+</style>

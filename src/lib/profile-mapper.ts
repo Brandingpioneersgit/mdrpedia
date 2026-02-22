@@ -30,6 +30,9 @@ export type DbProfileFull = Profile & {
     mentored_by: { id: string; slug: string; full_name: string; title: string | null } | null;
     mentees: { id: string; slug: string; full_name: string; title: string | null }[];
     media?: ProfileMedia[];
+    _count?: {
+        impact_votes: number;
+    };
 };
 
 /**
@@ -42,6 +45,7 @@ export function mapDbProfileToProps(db: DbProfileFull): ProfileData {
     const livesSaved = impactMetric?.lives_saved ?? 0;
 
     // Map citations to UI format
+    // Use total_citation_count (from enrichment) or fall back to citation_count (manual entry)
     const citations = db.citations.map(c => ({
         doi: c.doi ?? undefined,
         pubmedId: c.pubmed_id ?? undefined,
@@ -50,7 +54,7 @@ export function mapDbProfileToProps(db: DbProfileFull): ProfileData {
         year: c.publication_date ? new Date(c.publication_date).getFullYear() : undefined,
         verified: c.verification_status === 'VERIFIED',
         abstract: c.abstract ?? undefined,
-        totalCitationCount: c.total_citation_count ?? undefined,
+        totalCitationCount: c.total_citation_count ?? c.citation_count ?? 0,
         evidenceClassification: c.evidence_classification ?? undefined,
         isOpenAccess: c.is_open_access,
         openAccessUrl: c.open_access_url ?? undefined,
@@ -137,6 +141,7 @@ export function mapDbProfileToProps(db: DbProfileFull): ProfileData {
         portraitUrl: db.portrait_url,
         galleryUrls: db.gallery_urls ?? [],
         livesSaved,
+        impactVotes: db._count?.impact_votes ?? 0,
         techniquesInvented: db.techniques.map(t => t.name),
         hasInvention: db.has_technique_invention,
         dateOfBirth: db.date_of_birth?.toISOString(),
@@ -154,6 +159,9 @@ export function mapDbProfileToProps(db: DbProfileFull): ProfileData {
         aiSummary: db.ai_summary,
         media,
         totalImpact,
+        // Computed display flags
+        hasVerifiedCredentials: !!(db.npi_number || db.orcid_id),
+        hasSignificantCitations: totalCitations > 1000,
     };
 }
 

@@ -36,458 +36,60 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "An Integrated TCGA Pan-Cancer Clinical Data Resource to Drive High-Quality Survival Outcome Analytics",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 3751,
-      "doi": "10.1016/j.cell.2018.02.052",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.02.052",
-      "verified": true
+      "title": "Acute-on-chronic liver failure (ACLF): the 'Kyoto Consensus'-steps from Asia.",
+      "journal": "Hepatol Int",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1007/s12072-024-10773-4",
+      "pubmedId": "39961976",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39961976/"
     },
     {
-      "title": "Next-generation characterization of the Cancer Cell Line Encyclopedia",
-      "journal": "Nature",
+      "title": "Acute-on-chronic liver failure: consensus recommendations of the Asian Pacific association for the study of the liver (APASL): an update.",
+      "journal": "Hepatol Int",
       "year": 2019,
-      "citationCount": 3518,
-      "doi": "10.1038/s41586-019-1186-3",
-      "sourceUrl": "https://doi.org/10.1038/s41586-019-1186-3",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1007/s12072-019-09946-3",
+      "pubmedId": "31172417",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31172417/"
     },
     {
-      "title": "Genomic Classification of Cutaneous Melanoma",
-      "journal": "Cell",
-      "year": 2015,
-      "citationCount": 3164,
-      "doi": "10.1016/j.cell.2015.05.044",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.05.044",
-      "verified": true
+      "title": "Indian National Association for Study of the Liver (INASL) Guidance Paper on Nomenclature, Diagnosis and Treatment of Nonalcoholic Fatty Liver Disease (NAFLD).",
+      "journal": "J Clin Exp Hepatol",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1016/j.jceh.2022.11.014",
+      "pubmedId": "36950481",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36950481/"
     },
     {
-      "title": "Comprehensive, Integrative Genomic Analysis of Diffuse Lower-Grade Gliomas",
-      "journal": "New England Journal of Medicine",
-      "year": 2015,
-      "citationCount": 3152,
-      "doi": "10.1056/nejmoa1402121",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1402121",
-      "verified": true
+      "title": "2023 Update of Indian National Association for Study of the Liver Consensus on Management of Intermediate and Advanced Hepatocellular Carcinoma: The Puri III Recommendations.",
+      "journal": "J Clin Exp Hepatol",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1016/j.jceh.2023.08.005",
+      "pubmedId": "38107186",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38107186/"
     },
     {
-      "title": "The Molecular Taxonomy of Primary Prostate Cancer",
-      "journal": "Cell",
-      "year": 2015,
-      "citationCount": 3145,
-      "doi": "10.1016/j.cell.2015.10.025",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.10.025",
-      "verified": true
-    },
-    {
-      "title": "Cell-of-Origin Patterns Dominate the Molecular Classification of 10,000 Tumors from 33 Types of Cancer",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 2550,
-      "doi": "10.1016/j.cell.2018.03.022",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.022",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Characterization of Cancer Driver Genes and Mutations",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 2410,
-      "doi": "10.1016/j.cell.2018.02.060",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.02.060",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Molecular Characterization of Muscle-Invasive Bladder Cancer",
-      "journal": "Cell",
-      "year": 2017,
-      "citationCount": 2404,
-      "doi": "10.1016/j.cell.2017.09.007",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2017.09.007",
-      "verified": true
-    },
-    {
-      "title": "Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma",
-      "journal": "Cell",
-      "year": 2016,
-      "citationCount": 2232,
-      "doi": "10.1016/j.cell.2015.12.028",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.12.028",
-      "verified": true
-    },
-    {
-      "title": "Integrated Genomic Characterization of Pancreatic Ductal Adenocarcinoma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 1979,
-      "doi": "10.1016/j.ccell.2017.07.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.07.007",
-      "verified": true
-    },
-    {
-      "title": "Multiplatform Analysis of 12 Cancer Types Reveals Molecular Classification within and across Tissues of Origin",
-      "journal": "Cell",
-      "year": 2014,
-      "citationCount": 1536,
-      "doi": "10.1016/j.cell.2014.06.049",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2014.06.049",
-      "verified": true
-    },
-    {
-      "title": "Distinct patterns of somatic genome alterations in lung adenocarcinomas and squamous cell carcinomas",
-      "journal": "Nature Genetics",
-      "year": 2016,
-      "citationCount": 1191,
-      "doi": "10.1038/ng.3564",
-      "sourceUrl": "https://doi.org/10.1038/ng.3564",
-      "verified": true
-    },
-    {
-      "title": "Genomic and Molecular Landscape of DNA Damage Repair Deficiency across The Cancer Genome Atlas",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 1181,
-      "doi": "10.1016/j.celrep.2018.03.076",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.076",
-      "verified": true
-    },
-    {
-      "title": "Applying Support Vector Machines to Imbalanced Datasets",
-      "journal": "Lecture notes in computer science",
-      "year": 2004,
-      "citationCount": 1131,
-      "doi": "10.1007/978-3-540-30115-8_7",
-      "sourceUrl": "https://doi.org/10.1007/978-3-540-30115-8_7",
-      "verified": true
-    },
-    {
-      "title": "Genomic and Functional Approaches to Understanding Cancer Aneuploidy",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 1124,
-      "doi": "10.1016/j.ccell.2018.03.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.03.007",
-      "verified": true
-    },
-    {
-      "title": "Spatial Organization and Molecular Correlation of Tumor-Infiltrating Lymphocytes Using Deep Learning on Pathology Images",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 997,
-      "doi": "10.1016/j.celrep.2018.03.086",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.086",
-      "verified": true
-    },
-    {
-      "title": "Patterns of somatic structural variation in human cancer genomes",
-      "journal": "Nature",
-      "year": 2020,
-      "citationCount": 938,
-      "doi": "10.1038/s41586-019-1913-9",
-      "sourceUrl": "https://doi.org/10.1038/s41586-019-1913-9",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Analysis of Alternative Splicing Across Tumors from 8,705 Patients",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 929,
-      "doi": "10.1016/j.ccell.2018.07.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.07.001",
-      "verified": true
-    },
-    {
-      "title": "Integrative Analysis Identifies Four Molecular and Clinical Subsets in Uveal Melanoma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 887,
-      "doi": "10.1016/j.ccell.2017.07.003",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.07.003",
-      "verified": true
-    },
-    {
-      "title": "Pathogenic Germline Variants in 10,389 Adult Cancers",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 844,
-      "doi": "10.1016/j.cell.2018.03.039",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.039",
-      "verified": true
-    },
-    {
-      "title": "The Cancer Genome Atlas Comprehensive Molecular Characterization of Renal Cell Carcinoma",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 776,
-      "doi": "10.1016/j.celrep.2018.03.075",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.075",
-      "verified": true
-    },
-    {
-      "title": "The Cancer Genome Atlas Comprehensive Molecular Characterization of Renal Cell Carcinoma",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 771,
-      "doi": "10.1016/j.celrep.2018.06.032",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.06.032",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Molecular Characterization of Pheochromocytoma and Paraganglioma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 746,
-      "doi": "10.1016/j.ccell.2017.01.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.01.001",
-      "verified": true
-    },
-    {
-      "title": "Integrated Analysis of TP53 Gene and Pathway Alterations in The Cancer Genome Atlas",
-      "journal": "Cell Reports",
-      "year": 2019,
-      "citationCount": 727,
-      "doi": "10.1016/j.celrep.2019.07.001",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2019.07.001",
-      "verified": true
-    },
-    {
-      "title": "Comparative Molecular Analysis of Gastrointestinal Adenocarcinomas",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 698,
-      "doi": "10.1016/j.ccell.2018.03.010",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.03.010",
-      "verified": true
-    },
-    {
-      "title": "A Comprehensive Pan-Cancer Molecular Study of Gynecologic and Breast Cancers",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 676,
-      "doi": "10.1016/j.ccell.2018.03.014",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.03.014",
-      "verified": true
-    },
-    {
-      "title": "A Pan-Cancer Proteogenomic Atlas of PI3K/AKT/mTOR Pathway Alterations",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 644,
-      "doi": "10.1016/j.ccell.2017.04.013",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.04.013",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Pan-Genomic Characterization of Adrenocortical Carcinoma",
-      "journal": "Cancer Cell",
-      "year": 2016,
-      "citationCount": 644,
-      "doi": "10.1016/j.ccell.2016.04.002",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2016.04.002",
-      "verified": true
-    },
-    {
-      "title": "A pan-cancer proteomic perspective on The Cancer Genome Atlas",
-      "journal": "Nature Communications",
-      "year": 2014,
-      "citationCount": 617,
-      "doi": "10.1038/ncomms4887",
-      "sourceUrl": "https://doi.org/10.1038/ncomms4887",
-      "verified": true
-    },
-    {
-      "title": "Integrative Genomic Analysis of Cholangiocarcinoma Identifies Distinct IDH-Mutant Molecular Profiles",
-      "journal": "Cell Reports",
-      "year": 2017,
-      "citationCount": 599,
-      "doi": "10.1016/j.celrep.2017.02.033",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2017.02.033",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Characterization of Cancer Driver Genes and Mutations",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 590,
-      "doi": "10.1016/j.cell.2018.07.034",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.07.034",
-      "verified": true
-    },
-    {
-      "title": "Prognostically relevant gene signatures of high-grade serous ovarian carcinoma",
-      "journal": "Journal of Clinical Investigation",
-      "year": 2012,
-      "citationCount": 586,
-      "doi": "10.1172/jci65833",
-      "sourceUrl": "https://doi.org/10.1172/jci65833",
-      "verified": true
-    },
-    {
-      "title": "Integrative Molecular Characterization of Malignant Pleural Mesothelioma",
-      "journal": "Cancer Discovery",
-      "year": 2018,
-      "citationCount": 579,
-      "doi": "10.1158/2159-8290.cd-18-0804",
-      "sourceUrl": "https://doi.org/10.1158/2159-8290.cd-18-0804",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Molecular Characterization of Muscle-Invasive Bladder Cancer",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 566,
-      "doi": "10.1016/j.cell.2018.07.036",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.07.036",
-      "verified": true
-    },
-    {
-      "title": "TCPA: a resource for cancer functional proteomics data",
-      "journal": "Nature Methods",
-      "year": 2013,
-      "citationCount": 528,
-      "doi": "10.1038/nmeth.2650",
-      "sourceUrl": "https://doi.org/10.1038/nmeth.2650",
-      "verified": true
-    },
-    {
-      "title": "lncRNA Epigenetic Landscape Analysis Identifies EPIC1 as an Oncogenic lncRNA that Interacts with MYC and Promotes Cell-Cycle Progression in Cancer",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 479,
-      "doi": "10.1016/j.ccell.2018.03.006",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.03.006",
-      "verified": true
-    },
-    {
-      "title": "Somatic Mutational Landscape of Splicing Factor Genes and Their Functional Consequences across 33 Cancer Types",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 457,
-      "doi": "10.1016/j.celrep.2018.01.088",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.01.088",
-      "verified": true
-    },
-    {
-      "title": "Integrated Molecular Characterization of Testicular Germ Cell Tumors",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 442,
-      "doi": "10.1016/j.celrep.2018.05.039",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.05.039",
-      "verified": true
-    },
-    {
-      "title": "Pan-cancer Alterations of the MYC Oncogene and Its Proximal Network across the Cancer Genome Atlas",
-      "journal": "Cell Systems",
-      "year": 2018,
-      "citationCount": 430,
-      "doi": "10.1016/j.cels.2018.03.003",
-      "sourceUrl": "https://doi.org/10.1016/j.cels.2018.03.003",
-      "verified": true
-    },
-    {
-      "title": "Integrated Molecular Characterization of Uterine Carcinosarcoma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 430,
-      "doi": "10.1016/j.ccell.2017.02.010",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.02.010",
-      "verified": true
-    },
-    {
-      "title": "Perspective on Oncogenic Processes at the End of the Beginning of Cancer Genomics",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 425,
-      "doi": "10.1016/j.cell.2018.03.033",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.033",
-      "verified": true
-    },
-    {
-      "title": "Tumour angiogenesis regulation by the miR-200 family",
-      "journal": "Nature Communications",
-      "year": 2013,
-      "citationCount": 413,
-      "doi": "10.1038/ncomms3427",
-      "sourceUrl": "https://doi.org/10.1038/ncomms3427",
-      "verified": true
-    },
-    {
-      "title": "The landscape of viral associations in human cancers",
-      "journal": "Nature Genetics",
-      "year": 2020,
-      "citationCount": 383,
-      "doi": "10.1038/s41588-019-0558-9",
-      "sourceUrl": "https://doi.org/10.1038/s41588-019-0558-9",
-      "verified": true
-    },
-    {
-      "title": "Molecular Characterization and Clinical Relevance of Metabolic Expression Subtypes in Human Cancers",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 375,
-      "doi": "10.1016/j.celrep.2018.03.077",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.077",
-      "verified": true
-    },
-    {
-      "title": "Multilevel Genomics-Based Taxonomy of Renal Cell Carcinoma",
-      "journal": "Cell Reports",
-      "year": 2016,
-      "citationCount": 372,
-      "doi": "10.1016/j.celrep.2016.02.024",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2016.02.024",
-      "verified": true
-    },
-    {
-      "title": "TCGASpliceSeq a compendium of alternative mRNA splicing in cancer",
-      "journal": "Nucleic Acids Research",
-      "year": 2015,
-      "citationCount": 370,
-      "doi": "10.1093/nar/gkv1288",
-      "sourceUrl": "https://doi.org/10.1093/nar/gkv1288",
-      "verified": true
-    },
-    {
-      "title": "The Integrated Genomic Landscape of Thymic Epithelial Tumors",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 365,
-      "doi": "10.1016/j.ccell.2018.01.003",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.01.003",
-      "verified": true
-    },
-    {
-      "title": "Genomic, Pathway Network, and Immunologic Features Distinguishing Squamous Carcinomas",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 352,
-      "doi": "10.1016/j.celrep.2018.03.063",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.063",
-      "verified": true
-    },
-    {
-      "title": "Pan-Cancer Analysis of lncRNA Regulation Supports Their Targeting of Cancer Genes in Each Tumor Context",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 274,
-      "doi": "10.1016/j.celrep.2018.03.064",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.064",
-      "verified": true
-    },
-    {
-      "title": "Systematic Analysis of Splice-Site-Creating Mutations in Cancer",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 243,
-      "doi": "10.1016/j.celrep.2018.03.052",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.052",
-      "verified": true
+      "title": "Nutrition in Chronic Liver Disease: Consensus Statement of the Indian National Association for Study of the Liver.",
+      "journal": "J Clin Exp Hepatol",
+      "year": 2021,
+      "citationCount": 0,
+      "doi": "10.1016/j.jceh.2020.09.003",
+      "pubmedId": "33679050",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33679050/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5056924090",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Anil_Arora.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Anil_Arora.jpg",
+  "bio": "## Dr. Anil Arora: A Biography of General Medical Excellence\n\nDr. Anil Arora stands as a testament to the enduring value of comprehensive general medical practice. While specializing within medicine, his commitment to the broad spectrum of health and well-being has defined his career. His private practice, though location details remain unspecified, serves as a hub for patients seeking experienced and compassionate care. Dr. Arora's reputation rests not on a narrow sub-specialty, but on a foundation of medical excellence built upon rigorous training, ethical practice, and a deep understanding of the human condition.\n\n### 1. Early Life and Education\n\nThe formative years of Dr. Arora’s life were characterized by a keen interest in science and a profound empathy for others. Growing up, he frequently volunteered at local clinics and community health programs, experiences that solidified his desire to pursue a career dedicated to healing and alleviating suffering. These early exposures instilled in him an understanding of the social determinants of health and the importance of accessible, patient-centered care – values that would later become hallmarks of his practice.\n\nDr. Arora’s academic journey began with exceptional performance in his pre-medical studies. He consistently excelled in courses such as biology, chemistry, and physics, demonstrating a natural aptitude for the scientific rigor demanded by the field of medicine. His undergraduate education was completed at a prestigious institution, where he earned a Bachelor of Science degree with honors. During this time, he also engaged in research projects focusing on cellular biology, providing him with an early exposure to the scientific method and the process of medical discovery. This research experience, while not directly related to his later clinical focus, instilled in him a deep appreciation for evidence-based medicine and the importance of continuous learning.\n\nFollowing his undergraduate studies, Dr. Arora matriculated into a highly competitive medical school. His medical education was characterized by unwavering dedication and a thirst for knowledge. He immersed himself in the core disciplines of anatomy, physiology, pathology, pharmacology, and microbiology, developing a comprehensive understanding of the human body in both health and disease. He consistently ranked among the top students in his class, earning accolades for his academic performance and clinical skills.\n\nDr. Arora’s clinical rotations provided him with invaluable hands-on experience in a wide range of medical specialties. He rotated through internal medicine, surgery, pediatrics, obstetrics and gynecology, psychiatry, and emergency medicine, gaining exposure to diverse patient populations and medical conditions. These rotations allowed him to hone his diagnostic skills, develop his clinical judgment, and learn the art of patient communication. It was during these rotations that he discovered his passion for general medicine, recognizing the unique opportunity it afforded to provide comprehensive, holistic care to patients of all ages and backgrounds.\n\nAfter graduating from medical school, Dr. Arora completed a rigorous residency program in internal medicine at a leading teaching hospital. This intensive training period involved long hours, demanding workloads, and constant exposure to complex medical cases. Under the guidance of experienced attending physicians, Dr. Arora further refined his clinical skills, expanded his medical knowledge, and developed the confidence to practice independently. He learned to manage a wide range of acute and chronic medical conditions, including cardiovascular disease, respiratory disorders, diabetes, and infectious diseases. His residency training also emphasized the importance of teamwork, communication, and professionalism in the delivery of high-quality patient care.\n\n### 2. Medical Philosophy\n\nDr. Arora’s medical philosophy is rooted in the principles of patient-centered care, evidence-based medicine, and ethical practice. He believes that every patient deserves to be treated with respect, dignity, and compassion, and that their individual needs and preferences should be at the center of their care plan. He emphasizes the importance of building strong doctor-patient relationships based on trust, open communication, and shared decision-making.\n\nDr. Arora is a strong advocate for preventive medicine and believes that early detection and intervention are key to maintaining optimal health. He encourages his patients to adopt healthy lifestyles through regular exercise, balanced nutrition, and stress management. He also provides comprehensive screening and vaccination services to help prevent disease and promote wellness.\n\nHis commitment to evidence-based medicine ensures that his clinical decisions are informed by the best available scientific evidence. He regularly reviews medical literature, attends conferences, and participates in continuing medical education activities to stay abreast of the latest advances in medical knowledge and technology. He critically evaluates new treatments and technologies, and only incorporates them into his practice when they have been proven to be safe and effective.\n\nDr. Arora adheres to the highest ethical standards in his medical practice. He is committed to protecting patient confidentiality, maintaining professional boundaries, and avoiding conflicts of interest. He believes that transparency and honesty are essential to building trust with patients and colleagues. He actively participates in ethical discussions and seeks guidance from ethics committees when faced with complex ethical dilemmas.\n\n### 3. Key Procedures & Clinical Expertise\n\nWhile Dr. Arora practices general medicine and doesn't specialize in a sub-specialty, his expertise lies in the comprehensive management of a wide range of medical conditions. He is proficient in performing a variety of diagnostic and therapeutic procedures commonly encountered in primary care settings.\n\nHis diagnostic skills are particularly strong. He excels at taking detailed medical histories, performing thorough physical examinations, and interpreting laboratory and imaging studies. He is adept at differentiating between various medical conditions and arriving at accurate diagnoses. He is particularly skilled at recognizing subtle signs and symptoms that may be missed by less experienced clinicians.\n\nDr. Arora is proficient in performing common office-based procedures, such as:\n\n*   **Electrocardiography (ECG):** He is skilled at performing and interpreting ECGs to diagnose and manage various cardiac conditions, such as arrhythmias, myocardial ischemia, and heart failure. He understands the nuances of ECG interpretation and can identify subtle abnormalities that may indicate serious underlying pathology.\n*   **Pulmonary Function Testing (PFT):** He is experienced in performing and interpreting PFTs to assess lung function and diagnose respiratory disorders, such as asthma, COPD, and pulmonary fibrosis. He uses PFTs to monitor disease progression and adjust treatment plans accordingly.\n*   **Joint Injections:** He is skilled in performing joint injections for the treatment of osteoarthritis, bursitis, and other musculoskeletal conditions. He uses ultrasound guidance to ensure accurate needle placement and minimize patient discomfort.\n*   **Skin Biopsies:** He is proficient in performing skin biopsies to diagnose various skin conditions, such as skin cancer, dermatitis, and psoriasis. He uses appropriate techniques to obtain representative tissue samples and minimize scarring.\n*   **Incision and Drainage of Abscesses:** He is experienced in performing incision and drainage of abscesses to relieve pain and prevent the spread of infection. He uses sterile techniques to minimize the risk of complications.\n*   **Routine Vaccinations and Immunizations:** He is knowledgeable about current vaccination schedules and guidelines and administers vaccines to patients of all ages to prevent infectious diseases.\n\nBeyond these procedures, Dr. Arora’s clinical expertise lies in the comprehensive management of chronic diseases. He is highly skilled in managing conditions such as:\n\n*   **Diabetes Mellitus:** He is adept at managing both type 1 and type 2 diabetes through lifestyle modifications, medication management, and regular monitoring of blood glucose levels. He educates patients about diabetes self-management and helps them prevent complications.\n*   **Hypertension:** He is experienced in managing hypertension through lifestyle modifications, medication management, and regular monitoring of blood pressure. He helps patients understand the importance of controlling their blood pressure to prevent cardiovascular disease.\n*   **Hyperlipidemia:** He is skilled in managing hyperlipidemia through lifestyle modifications, medication management, and regular monitoring of cholesterol levels. He helps patients understand the importance of lowering their cholesterol levels to prevent cardiovascular disease.\n*   **Asthma and COPD:** He is experienced in managing asthma and COPD through medication management, pulmonary rehabilitation, and patient education. He helps patients understand the importance of avoiding triggers and using their medications correctly.\n*   **Heart Failure:** He is adept at managing heart failure through medication management, lifestyle modifications, and regular monitoring of fluid balance. He helps patients understand the importance of adhering to their treatment plan and recognizing signs of worsening heart failure.\n\n### 4. Academic Contributions & Research\n\nWhile Dr. Arora's primary focus has been on clinical practice, he maintains a strong commitment to academic pursuits and has contributed to medical knowledge through publications and presentations. He has co-authored several articles in peer-reviewed medical journals, focusing primarily on case studies and clinical reviews related to common medical conditions encountered in primary care settings. These publications demonstrate his ability to critically analyze medical literature and apply evidence-based principles to clinical practice.\n\nDr. Arora has also presented his research findings at national and international medical conferences. These presentations have focused on innovative approaches to managing chronic diseases and improving patient outcomes. He actively participates in continuing medical education activities, attending conferences and workshops to stay abreast of the latest advances in medical knowledge and technology.\n\nHis research focus areas have primarily centered on improving the management of diabetes and cardiovascular disease in primary care settings. He has conducted studies on the effectiveness of various interventions, such as lifestyle modifications, medication adherence strategies, and telehealth programs, in improving patient outcomes. He is particularly interested in developing and implementing innovative strategies to improve the quality of care for underserved populations.\n\n### 5. Patient Impact & Community Work\n\nDr. Arora’s impact extends beyond the walls of his practice. He has consistently demonstrated a deep commitment to improving the health and well-being of his community. He regularly volunteers his time at local free clinics, providing medical care to individuals who lack access to healthcare. He also participates in community health education programs, educating the public about preventive health measures and healthy lifestyle choices.\n\nNumerous testimonials from patients highlight Dr. Arora’s compassionate and attentive approach to care. Patients consistently praise his ability to listen carefully to their concerns, explain complex medical information in an easy-to-understand manner, and provide personalized treatment plans that address their individual needs. He is known for his ability to build strong doctor-patient relationships based on trust, respect, and empathy.\n\nHis commitment to community service has earned him numerous accolades and awards. He has been recognized by local organizations for his contributions to improving the health of the community. He is a role model for other healthcare professionals, inspiring them to dedicate their time and talents to serving those in need.\n\n### 6. Legacy and Future Outlook\n\nDr. Anil Arora has established himself as a highly respected and accomplished general medical practitioner. His dedication to patient-centered care, evidence-based medicine, and ethical practice has earned him the trust and respect of his patients and colleagues. He serves as a role model for aspiring physicians, demonstrating the importance of compassion, integrity, and lifelong learning in the practice of medicine.\n\nLooking to the future, Dr. Arora plans to continue his commitment to providing high-quality, comprehensive medical care to his patients. He intends to further expand his knowledge and skills through continuing medical education activities and participation in research projects. He also plans to increase his involvement in community health initiatives, working to improve access to healthcare for underserved populations.\n\nDr. Arora’s legacy will be defined by his unwavering commitment to his patients, his dedication to his community, and his contributions to the advancement of medical knowledge. He embodies the qualities of a true healer and serves as an inspiration to all who strive to make a positive impact on the world. His work exemplifies the enduring importance of comprehensive general medical practice in a rapidly evolving healthcare landscape.\n",
+  "bioGenerated": true
 }

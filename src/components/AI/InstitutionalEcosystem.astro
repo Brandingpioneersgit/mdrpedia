@@ -1,0 +1,633 @@
+---
+/**
+ * InstitutionalEcosystem - Institutional & Geographic Connections
+ * Visualizes doctor's institutional network and global influence
+ */
+
+import type { InstitutionalEcosystem, InstitutionalConnection, GeographicInfluence } from '../../lib/ai-content-types';
+
+interface Props {
+    ecosystem: InstitutionalEcosystem;
+    doctorName: string;
+    tier?: string;
+}
+
+const { ecosystem, doctorName, tier = 'UNRANKED' } = Astro.props;
+
+// Institution type configuration
+const institutionConfig: Record<InstitutionalConnection['institutionType'], { icon: string; color: string }> = {
+    HOSPITAL: { icon: '🏥', color: '#ef4444' },
+    UNIVERSITY: { icon: '🎓', color: '#3b82f6' },
+    RESEARCH_CENTER: { icon: '🔬', color: '#8b5cf6' },
+    GOVERNMENT: { icon: '🏛️', color: '#6b7280' },
+    NONPROFIT: { icon: '💚', color: '#10b981' },
+    COMPANY: { icon: '🏢', color: '#f59e0b' },
+};
+
+// Impact level configuration
+const impactConfig: Record<GeographicInfluence['impactLevel'], { label: string; color: string }> = {
+    LOCAL: { label: 'Local', color: '#6b7280' },
+    NATIONAL: { label: 'National', color: '#3b82f6' },
+    REGIONAL: { label: 'Regional', color: '#8b5cf6' },
+    GLOBAL: { label: 'Global', color: '#10b981' },
+};
+---
+
+<section class={`ecosystem-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Institutional & Geographic Ecosystem
+        </h2>
+    </div>
+
+    <!-- Global Reach Summary -->
+    {ecosystem.globalReach && (
+        <div class="global-reach-bar">
+            <div class="reach-stat">
+                <span class="reach-value">{ecosystem.globalReach.countriesInfluenced}</span>
+                <span class="reach-label">Countries</span>
+            </div>
+            <div class="reach-divider"></div>
+            <div class="reach-stat">
+                <span class="reach-value">{ecosystem.globalReach.continentsActive.length}</span>
+                <span class="reach-label">Continents</span>
+            </div>
+            <div class="reach-divider"></div>
+            <div class="reach-stat">
+                <span class="reach-value">{ecosystem.globalReach.internationalCollaborations}</span>
+                <span class="reach-label">Int'l Collaborations</span>
+            </div>
+            {ecosystem.globalReach.continentsActive.length > 0 && (
+                <div class="continents-list">
+                    {ecosystem.globalReach.continentsActive.map(continent => (
+                        <span class="continent-badge">{continent}</span>
+                    ))}
+                </div>
+            )}
+        </div>
+    )}
+
+    <!-- Current Affiliations -->
+    {ecosystem.currentAffiliations.length > 0 && (
+        <div class="affiliations-section">
+            <h3 class="subsection-title">
+                <span class="title-dot current"></span>
+                Current Affiliations
+            </h3>
+            <div class="affiliations-grid">
+                {ecosystem.currentAffiliations.map(affiliation => (
+                    <div class="affiliation-card" style={`--inst-color: ${institutionConfig[affiliation.institutionType].color};`}>
+                        <div class="affiliation-header">
+                            <span class="inst-icon">{institutionConfig[affiliation.institutionType].icon}</span>
+                            <div class="inst-info">
+                                {affiliation.institutionSlug ? (
+                                    <a href={`/hospital/${affiliation.institutionSlug}`} class="inst-name linked">
+                                        {affiliation.institutionName}
+                                    </a>
+                                ) : (
+                                    <span class="inst-name">{affiliation.institutionName}</span>
+                                )}
+                                <span class="inst-type">{affiliation.institutionType.replace('_', ' ')}</span>
+                            </div>
+                        </div>
+                        <div class="affiliation-role">{affiliation.role}</div>
+                        <div class="affiliation-location">
+                            📍 {affiliation.location.city ? `${affiliation.location.city}, ` : ''}{affiliation.location.country}
+                        </div>
+                        {affiliation.period && (
+                            <div class="affiliation-period">{affiliation.period}</div>
+                        )}
+                        {affiliation.notableProjects && affiliation.notableProjects.length > 0 && (
+                            <div class="notable-projects">
+                                <span class="projects-label">Projects:</span>
+                                {affiliation.notableProjects.slice(0, 2).map(project => (
+                                    <span class="project-tag">{project}</span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
+    )}
+
+    <!-- Past Affiliations -->
+    {ecosystem.pastAffiliations.length > 0 && (
+        <div class="affiliations-section past">
+            <h3 class="subsection-title">
+                <span class="title-dot past"></span>
+                Past Affiliations
+                <span class="count-badge">{ecosystem.pastAffiliations.length}</span>
+            </h3>
+            <div class="past-affiliations-list">
+                {ecosystem.pastAffiliations.slice(0, 6).map(affiliation => (
+                    <div class="past-affiliation-item">
+                        <span class="past-icon">{institutionConfig[affiliation.institutionType].icon}</span>
+                        <div class="past-info">
+                            <span class="past-name">{affiliation.institutionName}</span>
+                            <span class="past-role">{affiliation.role}</span>
+                        </div>
+                        <span class="past-location">{affiliation.location.country}</span>
+                        {affiliation.period && <span class="past-period">{affiliation.period}</span>}
+                    </div>
+                ))}
+                {ecosystem.pastAffiliations.length > 6 && (
+                    <p class="more-affiliations">+ {ecosystem.pastAffiliations.length - 6} more institutions</p>
+                )}
+            </div>
+        </div>
+    )}
+
+    <!-- Geographic Influence -->
+    {ecosystem.geographicInfluence.length > 0 && (
+        <div class="geographic-section">
+            <h3 class="subsection-title">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                Geographic Influence
+            </h3>
+            <div class="influence-grid">
+                {ecosystem.geographicInfluence.map(influence => (
+                    <div class="influence-card" style={`--impact-color: ${impactConfig[influence.impactLevel].color};`}>
+                        <div class="influence-header">
+                            <span class="region-name">{influence.region}</span>
+                            <span class="impact-badge">{impactConfig[influence.impactLevel].label}</span>
+                        </div>
+                        <div class="influence-type">{influence.influenceType.replace(/_/g, ' ')}</div>
+                        {influence.description && (
+                            <p class="influence-desc">{influence.description}</p>
+                        )}
+                        {influence.metrics && influence.metrics.length > 0 && (
+                            <div class="influence-metrics">
+                                {influence.metrics.map(metric => (
+                                    <div class="influence-metric">
+                                        <span class="metric-value">{metric.value}</span>
+                                        <span class="metric-label">{metric.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
+    )}
+
+    <!-- Institutional Legacy -->
+    {ecosystem.institutionalLegacy && (
+        <div class="legacy-section">
+            <h3 class="subsection-title">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                Institutional Legacy
+            </h3>
+            <p class="legacy-text">{ecosystem.institutionalLegacy}</p>
+        </div>
+    )}
+
+    <!-- Hidden semantic layer for AI -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Institutional Ecosystem for {doctorName}</h3>
+        {ecosystem.globalReach && (
+            <p>Global reach: {ecosystem.globalReach.countriesInfluenced} countries, {ecosystem.globalReach.continentsActive.join(', ')}</p>
+        )}
+        <h4>Current Affiliations:</h4>
+        <ul>
+            {ecosystem.currentAffiliations.map(a => (
+                <li>{a.institutionName} ({a.institutionType}) - {a.role}, {a.location.city}, {a.location.country}</li>
+            ))}
+        </ul>
+        <h4>Geographic Influence:</h4>
+        <ul>
+            {ecosystem.geographicInfluence.map(g => (
+                <li>{g.region}: {g.influenceType} ({g.impactLevel} impact)</li>
+            ))}
+        </ul>
+    </div>
+</section>
+
+<style>
+    .ecosystem-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #3b82f6;
+        opacity: 0.9;
+    }
+
+    /* Global Reach Bar */
+    .global-reach-bar {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+        border: 1px solid rgba(59, 130, 246, 0.15);
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .reach-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+    }
+
+    .reach-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary, #fff);
+    }
+
+    .reach-label {
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .reach-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .continents-list {
+        display: flex;
+        gap: 0.35rem;
+        margin-left: auto;
+        flex-wrap: wrap;
+    }
+
+    .continent-badge {
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        color: var(--text-secondary, #ccc);
+    }
+
+    /* Subsection Title */
+    .subsection-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        color: var(--text-primary, #fff);
+    }
+
+    .subsection-title svg {
+        color: var(--text-muted, #888);
+    }
+
+    .title-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .title-dot.current {
+        background: #10b981;
+    }
+
+    .title-dot.past {
+        background: #6b7280;
+    }
+
+    .count-badge {
+        margin-left: auto;
+        padding: 2px 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: var(--text-muted, #888);
+    }
+
+    /* Affiliations Grid */
+    .affiliations-section {
+        margin-bottom: 2rem;
+    }
+
+    .affiliations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .affiliation-card {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-left: 3px solid var(--inst-color);
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .affiliation-card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .affiliation-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .inst-icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .inst-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+
+    .inst-name {
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+        font-size: 0.95rem;
+    }
+
+    .inst-name.linked {
+        color: #60a5fa;
+        text-decoration: none;
+    }
+
+    .inst-name.linked:hover {
+        text-decoration: underline;
+    }
+
+    .inst-type {
+        font-size: 0.7rem;
+        color: var(--inst-color);
+        text-transform: uppercase;
+    }
+
+    .affiliation-role {
+        font-size: 0.9rem;
+        color: var(--text-secondary, #ccc);
+        margin-bottom: 0.5rem;
+    }
+
+    .affiliation-location {
+        font-size: 0.8rem;
+        color: var(--text-muted, #888);
+        margin-bottom: 0.35rem;
+    }
+
+    .affiliation-period {
+        font-size: 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .notable-projects {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .projects-label {
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+    }
+
+    .project-tag {
+        padding: 2px 8px;
+        background: rgba(139, 92, 246, 0.1);
+        border-radius: 4px;
+        font-size: 0.7rem;
+        color: #a78bfa;
+    }
+
+    /* Past Affiliations */
+    .affiliations-section.past {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+    }
+
+    .past-affiliations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .past-affiliation-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 8px;
+    }
+
+    .past-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .past-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .past-name {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+    }
+
+    .past-role {
+        font-size: 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .past-location {
+        font-size: 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .past-period {
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+    }
+
+    .more-affiliations {
+        font-size: 0.8rem;
+        color: var(--text-muted, #888);
+        text-align: center;
+        margin: 0.5rem 0 0;
+    }
+
+    /* Geographic Influence */
+    .geographic-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .influence-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+
+    .influence-card {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 10px;
+    }
+
+    .influence-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .region-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+    }
+
+    .impact-badge {
+        padding: 3px 8px;
+        background: color-mix(in srgb, var(--impact-color) 15%, transparent);
+        border-radius: 100px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: var(--impact-color);
+        text-transform: uppercase;
+    }
+
+    .influence-type {
+        font-size: 0.8rem;
+        color: var(--text-muted, #888);
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+    }
+
+    .influence-desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.5;
+        margin: 0 0 0.75rem;
+    }
+
+    .influence-metrics {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .influence-metric {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .influence-metric .metric-value {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--impact-color);
+    }
+
+    .influence-metric .metric-label {
+        font-size: 0.65rem;
+        color: var(--text-muted, #888);
+    }
+
+    /* Legacy */
+    .legacy-section {
+        padding: 1.25rem;
+        background: rgba(255, 215, 0, 0.05);
+        border: 1px solid rgba(255, 215, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .legacy-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    @media (max-width: 768px) {
+        .ecosystem-section {
+            padding: 1.5rem;
+        }
+
+        .global-reach-bar {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1rem;
+        }
+
+        .reach-divider {
+            width: 100%;
+            height: 1px;
+        }
+
+        .continents-list {
+            margin-left: 0;
+            justify-content: center;
+        }
+
+        .affiliations-grid,
+        .influence-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

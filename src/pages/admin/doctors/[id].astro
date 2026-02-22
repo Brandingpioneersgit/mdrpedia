@@ -131,6 +131,7 @@ if (Astro.request.method === "POST") {
                             doi: doi || null,
                             pubmed_id: pubmedId || null,
                             citation_count: citationCount,
+                            total_citation_count: citationCount, // Sync both fields
                             profile_id: existingProfile.id,
                         }
                     });
@@ -533,7 +534,7 @@ const formatDate = (date: Date | null) => date ? date.toISOString().split('T')[0
                                             <span class="item-meta">
                                                 {citation.journal && `${citation.journal} `}
                                                 {citation.publication_date && `(${new Date(citation.publication_date).getFullYear()})`}
-                                                {citation.citation_count > 0 && ` · ${citation.citation_count} citations`}
+                                                {((citation.total_citation_count ?? citation.citation_count) > 0) && ` · ${(citation.total_citation_count ?? citation.citation_count).toLocaleString()} citations`}
                                             </span>
                                             {citation.doi && <span class="item-meta">DOI: {citation.doi}</span>}
                                             {citation.pubmed_id && <span class="item-meta">PubMed: {citation.pubmed_id}</span>}

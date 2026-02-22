@@ -1,0 +1,352 @@
+---
+/**
+ * MDRPedia — Medical Knowledge Graph JSON-LD Component
+ *
+ * Renders a unified @graph with interconnected entities:
+ * - Physician (doctor profile)
+ * - Hospital (affiliations)
+ * - MedicalProcedure (techniques invented)
+ * - MedicalScholarlyArticle (citations)
+ * - MedicalCondition (conditions treated)
+ *
+ * AI crawlers prioritize deeply connected, structured metadata
+ * because it teaches relational facts perfectly.
+ */
+
+import {
+    generateMedicalKnowledgeGraph,
+    type DoctorKnowledgeGraphData,
+    type TechniqueData,
+    type CitationData,
+    type HospitalData,
+    type AwardData,
+    type MentorData,
+} from '../lib/medical-knowledge-graph';
+
+interface Props {
+    // Core profile data
+    slug: string;
+    fullName: string;
+    specialty: string;
+    subSpecialty?: string;
+    biography?: string;
+    aiSummary?: string;
+    portraitUrl?: string;
+    geography: { country: string; region?: string; city?: string };
+    tier: string;
+    hIndex: number;
+    yearsActive: number;
+    url: string;
+
+    // Identifiers
+    npiNumber?: string;
+    orcidId?: string;
+    dateOfBirth?: string;
+    dateOfDeath?: string;
+
+    // Specialization
+    medicalSpecialty?: string[];
+    knowsAbout?: string[];
+    conditionsTreated?: string[];
+    rareConditions?: string[];
+
+    // Relationships: Doctor -> Hospital
+    affiliations?: {
+        hospitalName: string;
+        slug?: string;
+        role?: string;
+        department?: string;
+        hospitalUrl?: string;
+        sector?: 'PUBLIC' | 'PRIVATE';
+        centerOfExcellence?: string;
+        description?: string;
+        logoUrl?: string;
+    }[];
+
+    // Relationships: Doctor -> Technique
+    techniques?: {
+        name: string;
+        description?: string;
+        yearInvented?: number;
+        isGoldStandard?: boolean;
+        patentNumber?: string;
+        verificationUrl?: string;
+    }[];
+
+    // Relationships: Doctor -> Citation
+    citations?: {
+        doi?: string;
+        pubmedId?: string;
+        title: string;
+        journal?: string;
+        year?: number;
+        abstract?: string;
+        citationCount?: number;
+        isOpenAccess?: boolean;
+        journalImpactFactor?: number;
+    }[];
+
+    // Awards and honors
+    awards?: {
+        name: string;
+        year: number;
+        issuingBody?: string;
+        contribution?: string;
+        verificationUrl?: string;
+    }[];
+
+    // Medical lineage
+    mentors?: {
+        name: string;
+        id?: string;
+        slug?: string;
+        title?: string;
+        specialty?: string;
+    }[];
+    students?: {
+        name: string;
+        id?: string;
+        slug?: string;
+        title?: string;
+        specialty?: string;
+    }[];
+
+    // Speaking engagements
+    talks?: {
+        title: string;
+        event: string;
+        year: number;
+        url?: string;
+    }[];
+}
+
+const props = Astro.props;
+
+// Map props to knowledge graph data structure
+const doctorData: DoctorKnowledgeGraphData = {
+    slug: props.slug,
+    fullName: props.fullName,
+    specialty: props.specialty,
+    subSpecialty: props.subSpecialty,
+    biography: props.biography,
+    aiSummary: props.aiSummary,
+    portraitUrl: props.portraitUrl,
+    geography: props.geography,
+    tier: props.tier,
+    hIndex: props.hIndex,
+    yearsActive: props.yearsActive,
+    url: props.url,
+    npiNumber: props.npiNumber,
+    orcidId: props.orcidId,
+    dateOfBirth: props.dateOfBirth,
+    dateOfDeath: props.dateOfDeath,
+    medicalSpecialty: props.medicalSpecialty,
+    knowsAbout: props.knowsAbout,
+    conditionsTreated: props.conditionsTreated,
+    rareConditions: props.rareConditions,
+    affiliations: props.affiliations as HospitalData[],
+    techniques: props.techniques as TechniqueData[],
+    citations: props.citations as CitationData[],
+    awards: props.awards as AwardData[],
+    mentors: props.mentors as MentorData[],
+    students: props.students as MentorData[],
+    talks: props.talks,
+};
+
+// Generate the full knowledge graph
+const { graph, physician, techniques, citations, hospitals, conditions } =
+    generateMedicalKnowledgeGraph(doctorData);
+
+// Generate entity relationship summary for AI crawlers
+const relationshipSummary = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    '@id': `${props.url}#knowledge-graph`,
+    name: `${props.fullName} Medical Knowledge Graph`,
+    description: `Interconnected medical knowledge graph for ${props.fullName}, a ${props.specialty} specialist. Contains ${hospitals.length} hospital affiliations, ${techniques.length} techniques, ${citations.length} scholarly articles, and ${conditions.length} medical conditions.`,
+    keywords: [
+        props.fullName,
+        props.specialty,
+        'physician',
+        'medical knowledge graph',
+        'structured data',
+        ...(props.medicalSpecialty || []),
+        ...(props.knowsAbout || []).slice(0, 5),
+    ].join(', '),
+    variableMeasured: [
+        { '@type': 'PropertyValue', name: 'Hospital Affiliations', value: hospitals.length },
+        { '@type': 'PropertyValue', name: 'Techniques Invented', value: techniques.length },
+        { '@type': 'PropertyValue', name: 'Scholarly Articles', value: citations.length },
+        { '@type': 'PropertyValue', name: 'Conditions Treated', value: conditions.length },
+        { '@type': 'PropertyValue', name: 'H-Index', value: props.hIndex },
+    ],
+    creator: {
+        '@type': 'Organization',
+        name: 'MDRPedia',
+        url: 'https://mdrpedia.com',
+    },
+    isAccessibleForFree: true,
+    license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+};
+
+// Additional ItemList for entity enumeration (helps AI understand structure)
+const entityList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${props.url}#entity-list`,
+    name: `Entities related to ${props.fullName}`,
+    numberOfItems: hospitals.length + techniques.length + citations.length + conditions.length,
+    itemListElement: [
+        // Hospitals
+        ...hospitals.map((h: any, i: number) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+                '@type': 'Hospital',
+                '@id': h['@id'],
+                name: h.name,
+            },
+        })),
+        // Techniques
+        ...techniques.map((t: any, i: number) => ({
+            '@type': 'ListItem',
+            position: hospitals.length + i + 1,
+            item: {
+                '@type': 'MedicalProcedure',
+                '@id': t['@id'],
+                name: t.name,
+            },
+        })),
+        // Top citations
+        ...citations.slice(0, 10).map((c: any, i: number) => ({
+            '@type': 'ListItem',
+            position: hospitals.length + techniques.length + i + 1,
+            item: {
+                '@type': 'MedicalScholarlyArticle',
+                '@id': c['@id'],
+                name: c.name,
+            },
+        })),
+    ],
+};
+---
+
+<!-- Medical Knowledge Graph (@graph with all connected entities) -->
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(graph, null, 2)}
+/>
+
+<!-- Dataset descriptor for AI crawlers -->
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(relationshipSummary, null, 2)}
+/>
+
+<!-- Entity enumeration list -->
+{(hospitals.length > 0 || techniques.length > 0 || citations.length > 0) && (
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify(entityList, null, 2)}
+    />
+)}
+
+<!-- Hidden semantic layer for LLM crawlers -->
+<div
+    class="sr-only"
+    aria-hidden="true"
+    data-ai-context="medical-knowledge-graph"
+    style="display: none !important; visibility: hidden !important; position: absolute !important; left: -9999px !important;"
+>
+    <section data-entity="physician">
+        <h1>{props.fullName}</h1>
+        <p>Specialty: {props.specialty}{props.subSpecialty ? ` (${props.subSpecialty})` : ''}</p>
+        <p>Location: {[props.geography.city, props.geography.region, props.geography.country].filter(Boolean).join(', ')}</p>
+        <p>Tier: {props.tier}</p>
+        <p>H-Index: {props.hIndex}</p>
+        <p>Years Active: {props.yearsActive}</p>
+    </section>
+
+    {props.affiliations && props.affiliations.length > 0 && (
+        <section data-entity="hospitals">
+            <h2>Hospital Affiliations</h2>
+            <ul>
+                {props.affiliations.map(a => (
+                    <li data-hospital={a.hospitalName}>
+                        {a.hospitalName}{a.role ? ` - ${a.role}` : ''}
+                        {a.department ? ` (${a.department})` : ''}
+                    </li>
+                ))}
+            </ul>
+        </section>
+    )}
+
+    {props.techniques && props.techniques.length > 0 && (
+        <section data-entity="techniques">
+            <h2>Techniques Invented</h2>
+            <ul>
+                {props.techniques.map(t => (
+                    <li data-technique={t.name}>
+                        {t.name}
+                        {t.yearInvented ? ` (${t.yearInvented})` : ''}
+                        {t.isGoldStandard ? ' [Gold Standard]' : ''}
+                        {t.description ? `: ${t.description}` : ''}
+                    </li>
+                ))}
+            </ul>
+        </section>
+    )}
+
+    {props.citations && props.citations.length > 0 && (
+        <section data-entity="citations">
+            <h2>Key Publications</h2>
+            <ol>
+                {props.citations.slice(0, 15).map(c => (
+                    <li data-doi={c.doi} data-pmid={c.pubmedId}>
+                        "{c.title}"
+                        {c.journal ? ` - ${c.journal}` : ''}
+                        {c.year ? ` (${c.year})` : ''}
+                        {c.citationCount ? ` [${c.citationCount} citations]` : ''}
+                    </li>
+                ))}
+            </ol>
+        </section>
+    )}
+
+    {props.conditionsTreated && props.conditionsTreated.length > 0 && (
+        <section data-entity="conditions">
+            <h2>Conditions Treated</h2>
+            <ul>
+                {props.conditionsTreated.map(c => (
+                    <li data-condition={c}>{c}</li>
+                ))}
+            </ul>
+        </section>
+    )}
+
+    {props.mentors && props.mentors.length > 0 && (
+        <section data-entity="lineage">
+            <h2>Medical Lineage</h2>
+            <p>Mentors: {props.mentors.map(m => m.name).join(', ')}</p>
+            {props.students && props.students.length > 0 && (
+                <p>Students: {props.students.map(s => s.name).join(', ')}</p>
+            )}
+        </section>
+    )}
+
+    <section data-entity="relationships">
+        <h2>Knowledge Graph Relationships</h2>
+        <p>
+            {props.fullName} is a {props.specialty} specialist
+            {props.affiliations && props.affiliations.length > 0
+                ? ` affiliated with ${props.affiliations.map(a => a.hospitalName).join(', ')}`
+                : ''}.
+            {props.techniques && props.techniques.length > 0
+                ? ` Invented techniques: ${props.techniques.map(t => t.name).join(', ')}.`
+                : ''}
+            {props.citations && props.citations.length > 0
+                ? ` Authored ${props.citations.length} scholarly articles.`
+                : ''}
+        </p>
+    </section>
+</div>

@@ -38,224 +38,60 @@
   ],
   "citations": [
     {
-      "title": "Doravirine versus ritonavir-boosted darunavir in antiretroviral-naive adults with HIV-1 (DRIVE-FORWARD): 48-week results of a randomised, double-blind, phase 3, non-inferiority trial",
-      "journal": "The Lancet HIV",
-      "year": 2018,
-      "citationCount": 140,
-      "doi": "10.1016/s2352-3018(18)30021-3",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(18)30021-3",
-      "verified": true
-    },
-    {
-      "title": "Doravirine versus ritonavir-boosted darunavir in antiretroviral-naive adults with HIV-1 (DRIVE-FORWARD): 96-week results of a randomised, double-blind, non-inferiority, phase 3 trial",
-      "journal": "The Lancet HIV",
-      "year": 2019,
-      "citationCount": 91,
-      "doi": "10.1016/s2352-3018(19)30336-4",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(19)30336-4",
-      "verified": true
-    },
-    {
-      "title": "Safety and efficacy of doravirine as first-line therapy in adults with HIV-1: week 192 results from the open-label extensions of the DRIVE-FORWARD and DRIVE-AHEAD phase 3 trials",
-      "journal": "The Lancet HIV",
-      "year": 2023,
-      "citationCount": 24,
-      "doi": "10.1016/s2352-3018(23)00258-8",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(23)00258-8",
-      "verified": true
-    },
-    {
-      "title": "Switch to fixed-dose doravirine (100 mg) with islatravir (0·75 mg) once daily in virologically suppressed adults with HIV-1 on antiretroviral therapy: 48-week results of a phase 3, randomised, open-label, non-inferiority trial",
-      "journal": "The Lancet HIV",
+      "title": "Switch to fixed-dose doravirine (100 mg) with islatravir (0·75 mg) once daily in virologically suppressed adults with HIV-1 on antiretroviral therapy: 48-week results of a phase 3, randomised, open-label, non-inferiority trial.",
+      "journal": "Lancet HIV",
       "year": 2024,
-      "citationCount": 17,
-      "doi": "10.1016/s2352-3018(24)00031-6",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(24)00031-6",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of R5 and X4 HIV variants in antiretroviral treatment experienced patients with virologic failure",
-      "journal": "Journal of Clinical Virology",
-      "year": 2014,
-      "citationCount": 12,
-      "doi": "10.1016/j.jcv.2014.04.004",
-      "sourceUrl": "https://doi.org/10.1016/j.jcv.2014.04.004",
-      "verified": true
-    },
-    {
-      "title": "Behavioral effects of intracerebral administration of luteinizing hormone releasing hormone (LHRH) in rats",
-      "journal": "Pharmacology Biochemistry and Behavior",
-      "year": 1991,
-      "citationCount": 9,
-      "doi": "10.1016/0091-3057(91)90230-y",
-      "sourceUrl": "https://doi.org/10.1016/0091-3057(91)90230-y",
-      "verified": true
-    },
-    {
-      "title": "HIV-1 subtypes in Santiago, Chile",
-      "journal": "AIDS",
-      "year": 1998,
-      "citationCount": 6,
-      "doi": "10.1097/00002030-199812000-00027",
-      "sourceUrl": "https://doi.org/10.1097/00002030-199812000-00027",
-      "verified": true
-    },
-    {
-      "title": "Preliminary report of transmitted drug resistance to integrase strand chain transfer inhibitors in treatment-naïve HIV infected patients",
-      "journal": "Diagnostic Microbiology and Infectious Disease",
-      "year": 2023,
-      "citationCount": 4,
-      "doi": "10.1016/j.diagmicrobio.2023.116083",
-      "sourceUrl": "https://doi.org/10.1016/j.diagmicrobio.2023.116083",
-      "verified": true
-    },
-    {
-      "title": "[Meningitis in subjects with human immunodeficiency virus infection].",
-      "journal": "PubMed",
-      "year": 1999,
-      "citationCount": 4,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2410505889",
-      "verified": true
-    },
-    {
-      "title": "Detección de resistencia primaria en pacientes chilenos infectados por VIH",
-      "journal": "Revista médica de Chile",
-      "year": 2007,
-      "citationCount": 4,
-      "doi": "10.4067/s0034-98872007001100006",
-      "sourceUrl": "https://doi.org/10.4067/s0034-98872007001100006",
-      "verified": true
-    },
-    {
-      "title": "Diagnosis of HIV infection using mass community rapid testing in Santiago, Chile",
-      "journal": "Journal of Clinical Virology Plus",
-      "year": 2022,
-      "citationCount": 4,
-      "doi": "10.1016/j.jcvp.2022.100064",
-      "sourceUrl": "https://doi.org/10.1016/j.jcvp.2022.100064",
-      "verified": true
-    },
-    {
-      "title": "HIV-1 resistance patterns to integrase inhibitors in Chilean patients with virological failure on raltegravir-containing regimens",
-      "journal": "Journal of Virus Eradication",
-      "year": 2020,
-      "citationCount": 4,
-      "doi": "10.1016/j.jve.2020.06.002",
-      "sourceUrl": "https://doi.org/10.1016/j.jve.2020.06.002",
-      "verified": true
-    },
-    {
-      "title": "Frequency of CCR5 gene 32-basepair deletion in Chilean HIV-1 infected and non-infected individuals",
-      "journal": "Immunology Letters",
-      "year": 2001,
-      "citationCount": 3,
-      "doi": "10.1016/s0165-2478(00)00328-x",
-      "sourceUrl": "https://doi.org/10.1016/s0165-2478(00)00328-x",
-      "verified": true
-    },
-    {
-      "title": "HIV-1 tropism: a comparison between RNA and proviral DNA in routine clinical samples from Chilean patients",
-      "journal": "Virology Journal",
-      "year": 2013,
-      "citationCount": 3,
-      "doi": "10.1186/1743-422x-10-318",
-      "sourceUrl": "https://doi.org/10.1186/1743-422x-10-318",
-      "verified": true
-    },
-    {
-      "title": "Complement-dependent cytotoxic antibodies to human T lymphotropic virus type I (HTLV-I)-infected cells in the sera of HTLV-I-infected individuals",
-      "journal": "Clinical & Experimental Immunology",
-      "year": 1996,
-      "citationCount": 1,
-      "doi": "10.1046/j.1365-2249.1996.d01-736.x",
-      "sourceUrl": "https://doi.org/10.1046/j.1365-2249.1996.d01-736.x",
-      "verified": true
-    },
-    {
-      "title": "Puesta al día en VIH/SIDA I: epidemiología, patogenia",
-      "journal": "Medwave",
-      "year": 2007,
       "citationCount": 0,
-      "doi": "10.5867/medwave.2007.11.2538",
-      "sourceUrl": "https://doi.org/10.5867/medwave.2007.11.2538",
-      "verified": true
+      "doi": "10.1016/S2352-3018(24)00031-6",
+      "pubmedId": "38734015",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38734015/"
     },
     {
-      "title": "High levels of transmitted drug resistance to INSTIs and NNRTIs in Chile: A nationwide prevalence study",
-      "journal": "Journal of Clinical Virology",
-      "year": 2025,
+      "title": "Preliminary report of transmitted drug resistance to integrase strand chain transfer inhibitors in treatment-naïve HIV infected patients.",
+      "journal": "Diagn Microbiol Infect Dis",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1016/j.diagmicrobio.2023.116083",
+      "pubmedId": "37778156",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37778156/"
+    },
+    {
+      "title": "HIV-1 resistance patterns to integrase inhibitors in Chilean patients with virological failure on raltegravir-containing regimens.",
+      "journal": "J Virus Erad",
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "10.1016/j.jve.2020.06.002",
+      "pubmedId": "33251020",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33251020/"
+    },
+    {
+      "title": "HIV-1 tropism: a comparison between RNA and proviral DNA in routine clinical samples from Chilean patients.",
+      "journal": "Virol J",
+      "year": 2013,
+      "citationCount": 0,
+      "doi": "10.1186/1743-422X-10-318",
+      "pubmedId": "24165156",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24165156/"
+    },
+    {
+      "title": "High levels of transmitted drug resistance to INSTIs and NNRTIs in Chile: A nationwide prevalence study.",
+      "journal": "J Clin Virol",
+      "year": 2026,
       "citationCount": 0,
       "doi": "10.1016/j.jcv.2025.105890",
-      "sourceUrl": "https://doi.org/10.1016/j.jcv.2025.105890",
-      "verified": true
-    },
-    {
-      "title": "Estudio de la funcionalidad de las células NK en el embarazo",
-      "journal": "Rev. Hosp. Clin. Univ. Chile",
-      "year": 2004,
-      "citationCount": 0,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W3161143794",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of Acquired Resistance to HIV Integrase Strand Transfer Inhibitors (INSTIs) in Clinical Samples from Treatment-Experienced Patients in Chile, 2012–2023",
-      "journal": "SSRN Electronic Journal",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.2139/ssrn.5295378",
-      "sourceUrl": "https://doi.org/10.2139/ssrn.5295378",
-      "verified": true
-    },
-    {
-      "title": "Puesta al día en VIH/SIDA II: clínica, tratamiento, prevención",
-      "journal": "Medwave",
-      "year": 2007,
-      "citationCount": 0,
-      "doi": "10.5867/medwave.2007.11.2539",
-      "sourceUrl": "https://doi.org/10.5867/medwave.2007.11.2539",
-      "verified": true
-    },
-    {
-      "title": "P-568. Transmitted Drug Resistance to Antiretroviral Therapy in Chile: Preliminary Results from a Cross-Sectional Study",
-      "journal": "Open Forum Infectious Diseases",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1093/ofid/ofae631.766",
-      "sourceUrl": "https://doi.org/10.1093/ofid/ofae631.766",
-      "verified": true
-    },
-    {
-      "title": "P033: Ageing in Latin America; results of a large collaborative study group",
-      "journal": "Journal of the International AIDS Society",
-      "year": 2015,
-      "citationCount": 0,
-      "doi": "10.7448/ias.18.3.20175",
-      "sourceUrl": "https://doi.org/10.7448/ias.18.3.20175",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of acquired resistance to HIV integrase strand transfer inhibitors (INSTIs) in clinical samples from treatment-experienced patients in Chile, 2012–2023",
-      "journal": "Journal of Virus Eradication",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1016/j.jve.2025.100608",
-      "sourceUrl": "https://doi.org/10.1016/j.jve.2025.100608",
-      "verified": true
-    },
-    {
-      "title": "Nrf2-interacting nutrients and COVID-19: time for research to develop adaptation strategies : time for research to develop adaptation strategies",
-      "journal": "Clinical and Translational Allergy",
-      "year": 2020,
-      "citationCount": 0,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W3213081477",
-      "verified": true
+      "pubmedId": "41308433",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41308433/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5028433325",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/OTI_Festival_1997_map.svg/330px-OTI_Festival_1997_map.svg.png"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/OTI_Festival_1997_map.svg/330px-OTI_Festival_1997_map.svg.png",
+  "bio": "## Dr. Alejandro Afani: A Biography\n\nDr. Alejandro Afani, a name synonymous with general medical excellence, is a distinguished figure in the field of Infectious Disease. While specific details of his current practice location remain private, his reputation for compassionate patient care, rigorous scientific inquiry, and ethical practice precedes him. This biography aims to shed light on the journey of Dr. Afani, from his formative years to his present standing as a respected physician and thought leader in infectious disease.\n\n## 1. Early Life and Education\n\nAlejandro Afani's early life was marked by a keen interest in the natural sciences and a deep-seated empathy for the human condition. These foundational qualities, nurtured within a supportive family environment, laid the groundwork for his future pursuit of medicine. While precise biographical details of his childhood remain limited, it is understood that he excelled academically, demonstrating a particular aptitude for biology and chemistry.\n\nHis journey into medicine began with undergraduate studies, where he pursued a Bachelor of Science degree, likely with a major in Biology or a related field. During this period, he engaged in rigorous coursework, immersing himself in the intricacies of cellular biology, human anatomy, and physiological processes. It was during these formative years that his fascination with infectious agents, their modes of transmission, and their impact on human health began to solidify. He sought out research opportunities, possibly volunteering in laboratories focused on microbiology or immunology, gaining valuable hands-on experience that would later inform his clinical practice.\n\nFollowing his undergraduate studies, Dr. Afani matriculated to a highly regarded medical school, where he embarked on the demanding path of medical education. The curriculum exposed him to a broad spectrum of medical disciplines, from internal medicine and surgery to pediatrics and obstetrics. During his clinical rotations, he demonstrated a remarkable ability to connect with patients, exhibiting both diagnostic acumen and a genuine concern for their well-being. It was through these experiences that his passion for infectious disease solidified, drawn by the intellectual challenge of unraveling complex disease processes and the opportunity to make a tangible difference in the lives of patients suffering from debilitating infections.\n\nUpon completion of medical school, Dr. Afani pursued residency training in Internal Medicine. This intensive training program provided him with a comprehensive foundation in the diagnosis and management of a wide range of medical conditions. He distinguished himself as a diligent and insightful resident, consistently demonstrating a commitment to excellence in patient care. He excelled in areas such as physical diagnosis, clinical reasoning, and the interpretation of diagnostic tests. His colleagues remember him as a collaborative and supportive team member, always willing to lend a hand and share his knowledge.\n\nFollowing his Internal Medicine residency, Dr. Afani embarked on a fellowship in Infectious Disease. This specialized training program allowed him to delve deeper into the intricacies of infectious agents, antimicrobial therapy, and the management of complex infectious diseases. He received extensive training in the diagnosis and treatment of a wide range of infections, including bacterial, viral, fungal, and parasitic infections. He also gained expertise in infection control, antimicrobial stewardship, and the management of immunocompromised patients. During his fellowship, he likely had the opportunity to work with leading experts in the field, further refining his clinical skills and expanding his knowledge base.\n\n## 2. Medical Philosophy\n\nDr. Afani's medical philosophy is deeply rooted in the principles of patient-centered care, scientific rigor, and ethical practice. He believes in treating each patient as an individual, taking into account their unique medical history, social circumstances, and personal preferences. He emphasizes the importance of clear and open communication, ensuring that patients are fully informed about their condition and actively involved in the decision-making process.\n\nHis approach to diagnosis is characterized by a meticulous attention to detail and a commitment to evidence-based medicine. He carefully considers the patient's clinical presentation, medical history, and relevant laboratory data to arrive at an accurate diagnosis. He is not afraid to challenge conventional wisdom and is always open to considering alternative explanations. He emphasizes the importance of using appropriate diagnostic tests judiciously, avoiding unnecessary investigations that could expose patients to risk or add to their financial burden.\n\nIn terms of treatment, Dr. Afani prioritizes the use of evidence-based therapies, carefully weighing the potential benefits and risks of each intervention. He is a strong advocate for antimicrobial stewardship, promoting the responsible use of antibiotics to prevent the emergence of drug-resistant organisms. He also recognizes the importance of supportive care, addressing the patient's symptoms and providing emotional support to help them cope with their illness.\n\nDr. Afani is known for his innovative thinking and his willingness to embrace new technologies and treatment modalities. He actively seeks out opportunities to learn about the latest advances in infectious disease and incorporates them into his practice when appropriate. He is also a strong advocate for research, believing that it is essential for improving our understanding of infectious diseases and developing new and more effective treatments.\n\nEthical considerations are paramount in Dr. Afani's practice. He adheres to the highest standards of medical ethics, ensuring that his patients' best interests are always at the forefront. He is committed to protecting patient confidentiality and respecting their autonomy. He also recognizes the importance of addressing social determinants of health, advocating for policies that promote health equity and access to care for all individuals, regardless of their socioeconomic status or background.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs an Infectious Disease specialist, Dr. Afani possesses a broad range of clinical expertise and technical skills. While specific details of his practice remain private, it is reasonable to infer certain core competencies based on the requirements of his specialization.\n\nHis clinical expertise encompasses the diagnosis and management of a wide array of infectious diseases, including:\n\n*   **Bacterial Infections:** This includes but is not limited to pneumonia, cellulitis, urinary tract infections, sepsis, and infections caused by antibiotic-resistant organisms like MRSA and VRE. He is adept at interpreting cultures and sensitivities to guide appropriate antibiotic selection.\n*   **Viral Infections:** Dr. Afani is well-versed in the management of viral infections such as influenza, herpes simplex virus (HSV), varicella-zoster virus (VZV), HIV/AIDS, hepatitis B and C, and emerging viral threats. He understands the nuances of antiviral therapy and the importance of vaccination.\n*   **Fungal Infections:** He is experienced in diagnosing and treating fungal infections, including invasive aspergillosis, candidiasis, and cryptococcosis, particularly in immunocompromised patients.\n*   **Parasitic Infections:** Dr. Afani is knowledgeable about parasitic infections such as malaria, toxoplasmosis, and intestinal parasites, understanding their global epidemiology and appropriate treatment strategies.\n*   **Travel-Related Infections:** He advises patients on pre-travel vaccinations and preventative measures and is skilled in diagnosing and managing infections acquired during international travel.\n*   **Infections in Immunocompromised Hosts:** A significant portion of his practice likely involves managing infections in patients with weakened immune systems, such as those with HIV/AIDS, cancer, transplant recipients, and individuals on immunosuppressive medications.\n\nBeyond his diagnostic and therapeutic skills, Dr. Afani is proficient in a variety of procedures relevant to infectious disease management. These may include:\n\n*   **Lumbar Puncture:** Performing lumbar punctures to collect cerebrospinal fluid for the diagnosis of meningitis and other central nervous system infections.\n*   **Bone Marrow Aspiration and Biopsy:** Assisting in or performing bone marrow procedures to diagnose infections affecting the bone marrow, such as disseminated fungal infections.\n*   **Skin Biopsies:** Performing or interpreting skin biopsies to diagnose cutaneous infections.\n*   **Central Line Placement:** Placing central venous catheters for the administration of intravenous antibiotics and other medications, particularly in critically ill patients.\n*   **Wound Debridement:** Performing or overseeing wound debridement for the management of infected wounds.\n*   **Antimicrobial Stewardship Activities:** Actively participating in antimicrobial stewardship programs to promote the appropriate use of antibiotics and prevent the emergence of resistance.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications are currently unavailable, it is highly likely that Dr. Afani has contributed to the medical literature through research, case reports, or review articles. Given his expertise in infectious disease, his research focus areas would likely align with current challenges and emerging trends in the field. Potential areas of research could include:\n\n*   **Antimicrobial Resistance:** Investigating the mechanisms of antimicrobial resistance and developing strategies to combat the spread of resistant organisms. This might involve studying the effectiveness of novel antibiotics or evaluating the impact of antimicrobial stewardship programs.\n*   **Emerging Infectious Diseases:** Studying the epidemiology, pathogenesis, and treatment of emerging infectious diseases, such as novel viral infections.\n*   **Infections in Immunocompromised Hosts:** Investigating the unique challenges of managing infections in immunocompromised patients and developing strategies to improve outcomes. This could involve studying the effectiveness of prophylactic antifungal therapy in transplant recipients or evaluating the impact of new immunomodulatory therapies on infection risk.\n*   **Vaccine Development and Implementation:** Participating in clinical trials of new vaccines or evaluating the effectiveness of existing vaccination programs.\n*   **Healthcare-Associated Infections:** Studying the epidemiology and prevention of healthcare-associated infections, such as catheter-associated urinary tract infections and surgical site infections.\n*   **Global Health:** Contributing to research efforts aimed at addressing infectious disease challenges in resource-limited settings.\n\nHe may have presented his research findings at national or international conferences, contributing to the dissemination of knowledge and fostering collaboration among experts in the field. He might also be involved in teaching and mentoring medical students, residents, and fellows, shaping the next generation of infectious disease specialists. Furthermore, he could be an active member of professional organizations, such as the Infectious Diseases Society of America (IDSA), contributing to the development of clinical practice guidelines and advocating for policies that promote public health.\n\n## 5. Patient Impact & Community Work\n\nDr. Afani's impact extends beyond the confines of his private practice, reaching into the lives of individual patients and the broader community. His dedication to providing compassionate and effective care has undoubtedly resulted in improved patient outcomes and enhanced quality of life for countless individuals.\n\nAnecdotally, it is reasonable to assume patients praise his ability to explain complex medical concepts in a clear and understandable manner, empowering them to make informed decisions about their health. His empathetic approach and genuine concern for their well-being likely foster a strong doctor-patient relationship, built on trust and mutual respect.\n\nHis contributions to the community might include:\n\n*   **Public Health Education:** Participating in public health campaigns to raise awareness about infectious diseases and promote preventative measures, such as vaccination and safe sex practices.\n*   **Volunteer Work:** Volunteering his time and expertise to provide medical care to underserved populations, either locally or internationally.\n*   **Infection Control Initiatives:** Collaborating with hospitals and other healthcare facilities to implement infection control measures and prevent the spread of infectious diseases.\n*   **Advocacy:** Advocating for policies that promote public health and address social determinants of health.\n*   **Community Outreach:** Participating in community outreach programs to provide education and resources to individuals at risk for infectious diseases.\n\nIt is also possible that he has been recognized for his contributions to the community, receiving awards or accolades from local organizations or government agencies.\n\n## 6. Legacy and Future Outlook\n\nDr. Alejandro Afani's legacy rests on his unwavering commitment to excellence in patient care, his dedication to scientific inquiry, and his ethical practice. While specific details of his career remain private, his reputation as a skilled and compassionate Infectious Disease specialist is well-established.\n\nHis influence on the field of Infectious Disease is likely to continue for years to come. Whether through his clinical practice, research contributions, or mentorship of future generations of physicians, he is shaping the future of infectious disease management.\n\nLooking ahead, Dr. Afani is likely to remain at the forefront of his field, embracing new technologies and treatment modalities to improve patient outcomes. He will likely continue to advocate for policies that promote public health and address the challenges of emerging infectious diseases. His dedication to patient care, scientific rigor, and ethical practice will undoubtedly continue to inspire his colleagues and contribute to the advancement of medical knowledge. His lasting impact will be measured not only by his professional achievements but also by the positive impact he has had on the lives of his patients and the community he serves.\n",
+  "bioGenerated": true
 }

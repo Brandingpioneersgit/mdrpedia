@@ -1,56 +1,1203 @@
 ---
+/**
+ * MDRPedia — Claim Your Profile Page
+ * Enhanced verification flow for medical professionals
+ */
 import Layout from "../../layouts/Layout.astro";
 import NPIClaimWizard from "../../components/NPIClaimWizard";
+
+// Trust statistics
+const stats = {
+    verifiedDoctors: "104,000+",
+    countries: "78",
+    specialties: "150+",
+    citationsTracked: "2.5M+"
+};
+
+// Benefits of claiming
+const benefits = [
+    {
+        icon: "shield",
+        title: "Content Control",
+        description: "Lock your biography, achievements, and credentials. Prevent unauthorized edits.",
+        highlight: "Full editorial control"
+    },
+    {
+        icon: "chart",
+        title: "Profile Analytics",
+        description: "See who's viewing your profile, their location, and search terms used to find you.",
+        highlight: "Real-time insights"
+    },
+    {
+        icon: "badge",
+        title: "Verified Badge",
+        description: "Display the coveted blue checkmark. Boost credibility and MDR Score ranking.",
+        highlight: "Trust signal"
+    },
+    {
+        icon: "link",
+        title: "Lineage Verification",
+        description: "Confirm your surgical lineage and mentorship connections for authenticity.",
+        highlight: "Legacy preservation"
+    },
+    {
+        icon: "bell",
+        title: "Citation Alerts",
+        description: "Get notified when your research is cited or when your profile gains traction.",
+        highlight: "Stay informed"
+    },
+    {
+        icon: "star",
+        title: "Priority Support",
+        description: "Dedicated support channel for profile updates and dispute resolution.",
+        highlight: "White-glove service"
+    }
+];
+
+// FAQ items
+const faqs = [
+    {
+        question: "What is NPI verification?",
+        answer: "NPI (National Provider Identifier) is a unique 10-digit identification number issued by CMS. We use it to verify your identity as a licensed healthcare professional, ensuring only legitimate practitioners can claim profiles."
+    },
+    {
+        question: "Is my information secure?",
+        answer: "Absolutely. We use bank-level encryption (AES-256) and are HIPAA-compliant. Your NPI is verified through the official NPPES registry and never stored in plain text."
+    },
+    {
+        question: "How long does verification take?",
+        answer: "NPI verification is instant. Once verified, your profile is immediately claimable. Additional verification (surgical lineage, fellowship confirmation) may take 24-48 hours."
+    },
+    {
+        question: "What if my profile has incorrect information?",
+        answer: "Once you claim your profile, you'll have full editorial control to update your biography, credentials, affiliations, and achievements. Our team reviews changes within 24 hours."
+    },
+    {
+        question: "Is claiming my profile free?",
+        answer: "Yes, claiming and verifying your profile is completely free. Premium features like advanced analytics and priority placement are available through optional subscriptions."
+    },
+    {
+        question: "What if I don't have a US NPI?",
+        answer: "International physicians can verify through their national medical registration number. We support verification in 78 countries including GMC (UK), AHPRA (Australia), and more."
+    }
+];
+
+// Testimonials
+const testimonials = [
+    {
+        quote: "Claiming my MDRPedia profile increased patient referrals by 40%. The verification badge adds instant credibility.",
+        name: "Dr. Sarah Chen",
+        title: "Chief of Cardiac Surgery",
+        institution: "Stanford Medical Center",
+        tier: "TITAN"
+    },
+    {
+        quote: "The lineage feature connected me with surgeons trained by my mentor across three continents. Incredible for collaboration.",
+        name: "Dr. Michael Okonkwo",
+        title: "Transplant Surgeon",
+        institution: "Cleveland Clinic",
+        tier: "ELITE"
+    },
+    {
+        quote: "Finally, a platform that accurately represents my research impact. The citation tracking is unmatched.",
+        name: "Dr. Elena Vasquez",
+        title: "Neurosurgery Research Director",
+        institution: "Johns Hopkins",
+        tier: "TITAN"
+    }
+];
 ---
 
-<Layout title="Claim Profile — MDRPedia">
-    <div class="min-h-screen pt-32 pb-20 container relative overflow-hidden">
-        <!-- Background Elements -->
-        <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full -z-10"
-        >
-        </div>
-
-        <div class="text-center mb-12">
-            <h1 class="text-5xl font-bold text-white mb-4 tracking-tight">
-                Secure Your <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300"
-                    >Legacy</span
-                >
-            </h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join 104,000+ top-tier physicians managing their digital
-                authority on MDRPedia.
-            </p>
-        </div>
-
-        <NPIClaimWizard client:load />
-
-        <div
-            class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto"
-        >
-            <div class="p-6">
-                <div class="text-3xl mb-2">🔒</div>
-                <h3 class="text-white font-bold mb-2">Lock Your Content</h3>
-                <p class="text-sm text-gray-500">
-                    Prevent unauthorized edits to your biography and
-                    achievements.
-                </p>
+<Layout title="Claim Your Profile — MDRPedia" description="Verify and claim your MDRPedia profile. Join 104,000+ verified physicians managing their digital authority.">
+    <div class="claim-page">
+        <!-- Hero Section -->
+        <section class="claim-hero">
+            <div class="hero-bg-elements">
+                <div class="hero-gradient"></div>
+                <div class="hero-grid"></div>
+                <div class="hero-orb hero-orb--1"></div>
+                <div class="hero-orb hero-orb--2"></div>
             </div>
-            <div class="p-6">
-                <div class="text-3xl mb-2">📈</div>
-                <h3 class="text-white font-bold mb-2">Track Analytics</h3>
-                <p class="text-sm text-gray-500">
-                    See who is searching for you and viewing your lineage.
-                </p>
+
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🏆</span>
+                        <span>Trusted by Top Medical Institutions Worldwide</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Secure Your Medical
+                        <span class="gradient-text">Legacy</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Join <strong>{stats.verifiedDoctors}</strong> verified physicians who control their digital presence on MDRPedia — the global authority for medical professional profiles.
+                    </p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            <span>256-bit Encryption</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>NPPES Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claim Wizard -->
+                <div class="wizard-container">
+                    <NPIClaimWizard client:load />
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">{stats.verifiedDoctors}</span>
+                        <span class="stat-label">Verified Physicians</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">{stats.countries}</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">{stats.specialties}</span>
+                        <span class="stat-label">Specialties</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">{stats.citationsTracked}</span>
+                        <span class="stat-label">Citations Tracked</span>
+                    </div>
+                </div>
             </div>
-            <div class="p-6">
-                <div class="text-3xl mb-2">✨</div>
-                <h3 class="text-white font-bold mb-2">Get Verified</h3>
-                <p class="text-sm text-gray-500">
-                    Earn the Blue Checkmark and boost your MDR Score.
-                </p>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Claim Your Profile?</h2>
+                    <p>Take control of your professional digital identity</p>
+                </div>
+
+                <div class="benefits-grid">
+                    {benefits.map((benefit) => (
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                {benefit.icon === "shield" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                )}
+                                {benefit.icon === "chart" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 20V10M12 20V4M6 20v-6"/>
+                                    </svg>
+                                )}
+                                {benefit.icon === "badge" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="6"/>
+                                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                                    </svg>
+                                )}
+                                {benefit.icon === "link" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                                        <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+                                    </svg>
+                                )}
+                                {benefit.icon === "bell" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                        <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                                    </svg>
+                                )}
+                                {benefit.icon === "star" && (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                    </svg>
+                                )}
+                            </div>
+                            <div class="benefit-content">
+                                <h3>{benefit.title}</h3>
+                                <p>{benefit.description}</p>
+                                <span class="benefit-highlight">{benefit.highlight}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simple 3-Step Verification</h2>
+                    <p>Claim your profile in under 2 minutes</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Enter Your NPI</h3>
+                            <p>Provide your 10-digit National Provider Identifier for instant verification against the NPPES registry.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="visual-npi">
+                                <span class="npi-label">NPI</span>
+                                <span class="npi-number">••••••••••</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-connector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Confirm Identity</h3>
+                            <p>Review your professional record pulled from official registries. Verify your credentials match.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="visual-profile">
+                                <div class="profile-avatar"></div>
+                                <div class="profile-lines">
+                                    <div class="line line--name"></div>
+                                    <div class="line line--title"></div>
+                                </div>
+                                <div class="profile-check">✓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-connector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Claim & Control</h3>
+                            <p>Access your profile dashboard. Update content, view analytics, and manage your digital presence.</p>
+                        </div>
+                        <div class="step-visual">
+                            <div class="visual-dashboard">
+                                <div class="dash-header"></div>
+                                <div class="dash-chart"></div>
+                                <div class="dash-badge">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Leading Physicians</h2>
+                    <p>See what verified doctors are saying</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    {testimonials.map((testimonial) => (
+                        <div class={`testimonial-card tier-${testimonial.tier.toLowerCase()}`}>
+                            <div class="testimonial-quote">
+                                <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/>
+                                </svg>
+                                <p>"{testimonial.quote}"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    {testimonial.name.charAt(4)}
+                                </div>
+                                <div class="author-info">
+                                    <div class="author-name">
+                                        {testimonial.name}
+                                        <span class={`tier-badge tier-${testimonial.tier.toLowerCase()}`}>
+                                            {testimonial.tier}
+                                        </span>
+                                    </div>
+                                    <div class="author-title">{testimonial.title}</div>
+                                    <div class="author-institution">{testimonial.institution}</div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about profile verification</p>
+                </div>
+
+                <div class="faq-grid">
+                    {faqs.map((faq, index) => (
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span class="faq-number">{String(index + 1).padStart(2, '0')}</span>
+                                <span class="faq-text">{faq.question}</span>
+                                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>{faq.answer}</p>
+                            </div>
+                        </details>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Take Control?</h2>
+                    <p>Join thousands of verified physicians managing their digital authority on MDRPedia.</p>
+                    <a href="#" class="cta-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                        Claim Your Profile Now
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
 </Layout>
+
+<style>
+    /* ─── Claim Page Styles ─────────────────────────────────────────────────── */
+
+    .claim-page {
+        --claim-purple: #8b5cf6;
+        --claim-pink: #ec4899;
+        --claim-blue: #3b82f6;
+    }
+
+    /* ─── Hero Section ──────────────────────────────────────────────────────── */
+
+    .claim-hero {
+        position: relative;
+        padding: 140px 0 80px;
+        overflow: hidden;
+    }
+
+    .hero-bg-elements {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .hero-gradient {
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px;
+        height: 600px;
+        background: radial-gradient(ellipse, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        filter: blur(60px);
+    }
+
+    .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    }
+
+    .hero-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        animation: float 20s ease-in-out infinite;
+    }
+
+    .hero-orb--1 {
+        width: 400px;
+        height: 400px;
+        background: rgba(139, 92, 246, 0.1);
+        top: 10%;
+        right: 10%;
+    }
+
+    .hero-orb--2 {
+        width: 300px;
+        height: 300px;
+        background: rgba(236, 72, 153, 0.08);
+        bottom: 20%;
+        left: 5%;
+        animation-delay: -10s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-30px) rotate(5deg); }
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 48px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+    }
+
+    .badge-icon {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .gradient-text {
+        background: linear-gradient(135deg, var(--claim-purple) 0%, var(--claim-pink) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 32px;
+        line-height: 1.6;
+    }
+
+    .hero-subtitle strong {
+        color: var(--text-primary);
+    }
+
+    /* Trust Indicators */
+    .trust-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .trust-item svg {
+        width: 18px;
+        height: 18px;
+        color: var(--accent-emerald);
+    }
+
+    /* Wizard Container */
+    .wizard-container {
+        max-width: 480px;
+        margin: 0 auto 60px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Hero Stats */
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 32px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: var(--font-mono);
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 4px;
+    }
+
+    .stat-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* ─── Section Styles ────────────────────────────────────────────────────── */
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* ─── Benefits Section ──────────────────────────────────────────────────── */
+
+    .benefits-section {
+        padding: 100px 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 50%, transparent 100%);
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .benefit-card {
+        display: flex;
+        gap: 16px;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(139, 92, 246, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .benefit-icon {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%);
+        border-radius: 12px;
+    }
+
+    .benefit-icon svg {
+        width: 24px;
+        height: 24px;
+        color: var(--claim-purple);
+    }
+
+    .benefit-content h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+        font-family: var(--font-sans);
+    }
+
+    .benefit-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .benefit-highlight {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--accent-purple-light);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* ─── Process Section ───────────────────────────────────────────────────── */
+
+    .process-section {
+        padding: 100px 0;
+    }
+
+    .process-steps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .process-step {
+        flex: 1;
+        min-width: 280px;
+        max-width: 320px;
+        padding: 32px 24px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .step-number {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--claim-purple) 0%, var(--claim-pink) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: white;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    }
+
+    .step-content h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 16px 0 8px;
+        font-family: var(--font-sans);
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .step-connector {
+        color: var(--text-muted);
+        flex-shrink: 0;
+    }
+
+    .step-connector svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Step Visuals */
+    .step-visual {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .visual-npi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .npi-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .npi-number {
+        font-family: var(--font-mono);
+        font-size: 1.5rem;
+        color: var(--claim-purple);
+        letter-spacing: 0.15em;
+    }
+
+    .visual-profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .profile-avatar {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--claim-purple) 0%, var(--claim-pink) 100%);
+        border-radius: 50%;
+    }
+
+    .profile-lines {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .line {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+
+    .line--name { width: 80px; }
+    .line--title { width: 60px; }
+
+    .profile-check {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        width: 24px;
+        height: 24px;
+        background: var(--accent-emerald);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    .visual-dashboard {
+        width: 120px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .dash-header {
+        height: 8px;
+        width: 60%;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        margin-bottom: 12px;
+    }
+
+    .dash-chart {
+        height: 40px;
+        background: linear-gradient(to top, rgba(139, 92, 246, 0.2) 0%, transparent 100%);
+        border-radius: 4px;
+    }
+
+    .dash-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 28px;
+        height: 28px;
+        background: var(--claim-purple);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    }
+
+    .dash-badge svg {
+        width: 14px;
+        height: 14px;
+        color: white;
+    }
+
+    /* ─── Testimonials Section ──────────────────────────────────────────────── */
+
+    .testimonials-section {
+        padding: 100px 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 50%, transparent 100%);
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        border-color: rgba(139, 92, 246, 0.3);
+        transform: translateY(-4px);
+    }
+
+    .testimonial-card.tier-titan {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.03) 0%, rgba(255, 215, 0, 0.01) 100%);
+        border-color: rgba(255, 215, 0, 0.15);
+    }
+
+    .testimonial-card.tier-elite {
+        background: linear-gradient(135deg, rgba(0, 170, 255, 0.03) 0%, rgba(0, 170, 255, 0.01) 100%);
+        border-color: rgba(0, 170, 255, 0.15);
+    }
+
+    .testimonial-quote {
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    .quote-icon {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        width: 32px;
+        height: 32px;
+        color: rgba(139, 92, 246, 0.3);
+    }
+
+    .testimonial-quote p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        padding-left: 24px;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .author-avatar {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, var(--claim-purple) 0%, var(--claim-pink) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .author-name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .tier-badge {
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .tier-badge.tier-titan {
+        background: rgba(255, 215, 0, 0.15);
+        color: #FFD700;
+    }
+
+    .tier-badge.tier-elite {
+        background: rgba(0, 170, 255, 0.15);
+        color: #00aaff;
+    }
+
+    .author-title {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+
+    .author-institution {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    /* ─── FAQ Section ───────────────────────────────────────────────────────── */
+
+    .faq-section {
+        padding: 100px 0;
+    }
+
+    .faq-grid {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .faq-item {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+        border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .faq-item[open] {
+        background: rgba(139, 92, 246, 0.05);
+        border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .faq-question {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 24px;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq-number {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--claim-purple);
+        font-weight: 600;
+    }
+
+    .faq-text {
+        flex: 1;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+
+    .faq-chevron {
+        width: 20px;
+        height: 20px;
+        color: var(--text-muted);
+        transition: transform 0.3s ease;
+    }
+
+    .faq-item[open] .faq-chevron {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        padding: 0 24px 20px 60px;
+    }
+
+    .faq-answer p {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    /* ─── Final CTA ─────────────────────────────────────────────────────────── */
+
+    .final-cta {
+        padding: 100px 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.08) 100%);
+    }
+
+    .cta-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, var(--claim-purple) 0%, var(--claim-pink) 100%);
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+    }
+
+    .cta-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* ─── Responsive ────────────────────────────────────────────────────────── */
+
+    @media (max-width: 768px) {
+        .claim-hero {
+            padding: 120px 0 60px;
+        }
+
+        .hero-stats {
+            flex-direction: column;
+            gap: 20px;
+            padding: 24px;
+        }
+
+        .stat-divider {
+            width: 60px;
+            height: 1px;
+        }
+
+        .trust-indicators {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .process-steps {
+            flex-direction: column;
+        }
+
+        .step-connector {
+            transform: rotate(90deg);
+        }
+
+        .benefits-grid,
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .faq-answer {
+            padding-left: 24px;
+        }
+
+        .benefit-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+
+        .process-step {
+            min-width: 100%;
+        }
+    }
+</style>

@@ -39,12 +39,12 @@ const hIndex = isStatic ? d.hIndex : (d as DbProfileFull).h_index;
 const geography = isStatic ? d.geography : (d as DbProfileFull).geography;
 const techniquesInvented = isStatic
     ? d.techniquesInvented
-    : (d as DbProfileFull).techniques?.map(t => t.name) || [];
+    : (d as DbProfileFull).techniques?.map(t => t?.name).filter(Boolean) || [];
 const verifiedSurgeries = isStatic ? d.verifiedSurgeries : (d as DbProfileFull).verified_surgeries;
 const citations = isStatic ? d.citations : (d as DbProfileFull).citations;
 const affiliations = isStatic
     ? d.affiliations
-    : (d as DbProfileFull).affiliations?.map(a => ({ hospitalName: a.hospital.name }));
+    : (d as DbProfileFull).affiliations?.map(a => ({ hospitalName: a.hospital?.name || 'Unknown' }));
 
 // Structured text for LLMs (Perplexity/Gemini)
 // Provide high-density facts in a hidden semantic block

@@ -1,0 +1,97 @@
+{
+  "name": "MDRPedia - Medical Professionals Encyclopedia",
+  "short_name": "MDRPedia",
+  "description": "The free encyclopedia of verified medical professionals worldwide",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a12",
+  "theme_color": "#8b5cf6",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "health", "education", "reference"],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "MDRPedia Homepage"
+    },
+    {
+      "src": "/screenshots/profile.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Doctor Profile Page"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Doctors",
+      "url": "/search",
+      "description": "Search for medical professionals"
+    },
+    {
+      "name": "Browse All",
+      "url": "/doctors",
+      "description": "Browse all doctor profiles"
+    },
+    {
+      "name": "Rankings",
+      "url": "/rankings",
+      "description": "View global impact rankings"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

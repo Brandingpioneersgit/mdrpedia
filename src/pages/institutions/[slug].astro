@@ -2,9 +2,11 @@
 /**
  * MDRPedia — Institution Profile Page
  * Display institution details and affiliated doctors
+ * Includes Medical Knowledge Graph schema for AI crawlers
  */
 import Layout from "../../layouts/Layout.astro";
 import { prisma } from "../../lib/prisma";
+import { generateHospitalPageSchema } from "../../lib/medical-knowledge-graph";
 
 export const prerender = false;
 
@@ -70,9 +72,75 @@ const tierColors: Record<string, string> = {
     MASTER: '#00cc66',
     UNRANKED: '#888'
 };
+
+// Generate Hospital Knowledge Graph Schema
+const hospitalSchema = generateHospitalPageSchema(
+    {
+        hospitalName: institution.name,
+        slug: institution.slug,
+        hospitalUrl: institution.website || undefined,
+        sector: institution.sector as 'PUBLIC' | 'PRIVATE',
+        centerOfExcellence: institution.center_of_excellence || undefined,
+        description: institution.description || undefined,
+        logoUrl: institution.logo_url || undefined,
+        geography: institution.geography ? {
+            country: institution.geography.country,
+            region: institution.geography.region || undefined,
+            city: institution.geography.city || undefined,
+        } : undefined,
+    },
+    doctors.map(d => ({
+        fullName: d.full_name || '',
+        slug: d.slug || '',
+        specialty: d.specialty || '',
+        tier: d.tier || 'UNRANKED',
+    }))
+);
+
+// Dataset schema describing the hospital's physician roster
+const hospitalDatasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `${institution.name} - Affiliated Physicians`,
+    description: `Complete roster of ${doctors.length} verified physicians affiliated with ${institution.name}, including ${tierCounts.TITAN} Titans, ${tierCounts.ELITE} Elite, and ${tierCounts.MASTER} Masters.`,
+    keywords: [
+        institution.name,
+        ...specialties.slice(0, 10),
+        institution.geography?.country,
+        institution.geography?.city,
+        'hospital',
+        'medical institution',
+        'physicians',
+    ].filter(Boolean).join(', '),
+    variableMeasured: [
+        { '@type': 'PropertyValue', name: 'Total Physicians', value: doctors.length },
+        { '@type': 'PropertyValue', name: 'Titan Tier', value: tierCounts.TITAN },
+        { '@type': 'PropertyValue', name: 'Elite Tier', value: tierCounts.ELITE },
+        { '@type': 'PropertyValue', name: 'Master Tier', value: tierCounts.MASTER },
+        { '@type': 'PropertyValue', name: 'Specialties', value: specialties.length },
+    ],
+    creator: {
+        '@type': 'Organization',
+        name: 'MDRPedia',
+        url: 'https://mdrpedia.com',
+    },
+    isAccessibleForFree: true,
+};
 ---
 
 <Layout title={`${institution.name} — MDRPedia`}>
+    <!-- Hospital Knowledge Graph Schema -->
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify(hospitalSchema, null, 2)}
+    />
+
+    <!-- Hospital Dataset Schema -->
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify(hospitalDatasetSchema, null, 2)}
+    />
+
     <div class="container institution-profile">
         <!-- Hero Section -->
         <header class="inst-hero">

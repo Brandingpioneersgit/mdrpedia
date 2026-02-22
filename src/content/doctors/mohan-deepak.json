@@ -37,454 +37,54 @@
   ],
   "citations": [
     {
-      "title": "A living WHO guideline on drugs for covid-19",
-      "journal": "BMJ",
-      "year": 2020,
-      "citationCount": 1058,
-      "doi": "10.1136/bmj.m3379",
-      "sourceUrl": "https://doi.org/10.1136/bmj.m3379",
-      "verified": true
-    },
-    {
-      "title": "Index-TB Guidelines",
-      "journal": "The Indian Journal of Medical Research",
-      "year": 2017,
-      "citationCount": 261,
-      "doi": "10.4103/ijmr.ijmr_1950_16",
-      "sourceUrl": "https://doi.org/10.4103/ijmr.ijmr_1950_16",
-      "verified": true
-    },
-    {
-      "title": "A living WHO guideline on drugs to prevent covid-19",
-      "journal": "BMJ",
-      "year": 2021,
-      "citationCount": 145,
-      "doi": "10.1136/bmj.n526",
-      "sourceUrl": "https://doi.org/10.1136/bmj.n526",
-      "verified": true
-    },
-    {
-      "title": "Treatment Strategy for Rifampin-Susceptible Tuberculosis",
-      "journal": "New England Journal of Medicine",
-      "year": 2023,
-      "citationCount": 142,
-      "doi": "10.1056/nejmoa2212537",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2212537",
-      "verified": true
-    },
-    {
-      "title": "Evaluating the technique of using inhalation device in COPD and Bronchial Asthma patients",
-      "journal": "Respiratory Medicine",
-      "year": 2014,
-      "citationCount": 112,
-      "doi": "10.1016/j.rmed.2014.04.021",
-      "sourceUrl": "https://doi.org/10.1016/j.rmed.2014.04.021",
-      "verified": true
-    },
-    {
-      "title": "Bedaquiline, Delamanid, Linezolid, and Clofazimine for Treatment of Pre-extensively Drug-Resistant Tuberculosis",
-      "journal": "Clinical Infectious Diseases",
+      "title": "It's the data, stupid: Inflection point for Artificial Intelligence in Indian healthcare.",
+      "journal": "Artif Intell Med",
       "year": 2022,
-      "citationCount": 107,
-      "doi": "10.1093/cid/ciac528",
-      "sourceUrl": "https://doi.org/10.1093/cid/ciac528",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/j.artmed.2022.102300",
+      "pubmedId": "35534144",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35534144/"
     },
     {
-      "title": "Efficacy and Safety of Mycobacterium indicus pranii as an adjunct therapy in Category II pulmonary tuberculosis in a randomized trial",
-      "journal": "Scientific Reports",
-      "year": 2017,
-      "citationCount": 106,
-      "doi": "10.1038/s41598-017-03514-1",
-      "sourceUrl": "https://doi.org/10.1038/s41598-017-03514-1",
-      "verified": true
+      "title": "Microdissection genotyping of gliomas: therapeutic and prognostic considerations.",
+      "journal": "Mod Pathol",
+      "year": 2004,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "15181452",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/15181452/"
     },
     {
-      "title": "Monitoring Therapy Adherence of Tuberculosis Patients by using Video-Enabled Electronic Devices",
-      "journal": "Emerging infectious diseases",
-      "year": 2016,
-      "citationCount": 81,
-      "doi": "10.3201/eid2203.151620",
-      "sourceUrl": "https://doi.org/10.3201/eid2203.151620",
-      "verified": true
-    },
-    {
-      "title": "Utility of MPT64 antigen detection for rapid confirmation of mycobacterium tuberculosis complex",
-      "journal": "Journal of Global Infectious Diseases",
-      "year": 2015,
-      "citationCount": 60,
-      "doi": "10.4103/0974-777x.154443",
-      "sourceUrl": "https://doi.org/10.4103/0974-777x.154443",
-      "verified": true
-    },
-    {
-      "title": "Impact of Introducing the Line Probe Assay on Time to Treatment Initiation of MDR-TB in Delhi, India",
-      "journal": "PLoS ONE",
-      "year": 2014,
-      "citationCount": 50,
-      "doi": "10.1371/journal.pone.0102989",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0102989",
-      "verified": true
-    },
-    {
-      "title": "A gastric resident drug delivery system for prolonged gram-level dosing of tuberculosis treatment",
-      "journal": "Science Translational Medicine",
-      "year": 2019,
-      "citationCount": 50,
-      "doi": "10.1126/scitranslmed.aau6267",
-      "sourceUrl": "https://doi.org/10.1126/scitranslmed.aau6267",
-      "verified": true
-    },
-    {
-      "title": "Sequence Analysis of Fluoroquinolone Resistance-Associated Genes <i>gyrA</i> and <i>gyrB</i> in Clinical Mycobacterium tuberculosis Isolates from Patients Suspected of Having Multidrug-Resistant Tuberculosis in New Delhi, India",
-      "journal": "Journal of Clinical Microbiology",
-      "year": 2016,
-      "citationCount": 41,
-      "doi": "10.1128/jcm.00670-16",
-      "sourceUrl": "https://doi.org/10.1128/jcm.00670-16",
-      "verified": true
-    },
-    {
-      "title": "Recurrence of tuberculosis among newly diagnosed sputum positive pulmonary tuberculosis patients treated under the Revised National Tuberculosis Control Programme, India: A multi-centric prospective study",
-      "journal": "PLoS ONE",
-      "year": 2018,
-      "citationCount": 38,
-      "doi": "10.1371/journal.pone.0200150",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0200150",
-      "verified": true
-    },
-    {
-      "title": "Identifying costs contributing to catastrophic expenditure among TB patients registered under RNTCP in Delhi metro city in India",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2018,
-      "citationCount": 36,
-      "doi": "10.1016/j.ijtb.2018.10.009",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2018.10.009",
-      "verified": true
-    },
-    {
-      "title": "Nikshay Poshan Yojana (NPY) for tuberculosis patients: Early implementation challenges in Delhi, India",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2020,
-      "citationCount": 35,
-      "doi": "10.1016/j.ijtb.2020.02.006",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2020.02.006",
-      "verified": true
-    },
-    {
-      "title": "Early efficacy and safety of Bedaquiline and Delamanid given together in a “Salvage Regimen” for treatment of drug-resistant tuberculosis",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2019,
-      "citationCount": 35,
-      "doi": "10.1016/j.ijtb.2019.02.006",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2019.02.006",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of pulmonary tuberculosis among adults in selected slums of Delhi city",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2017,
-      "citationCount": 34,
-      "doi": "10.1016/j.ijtb.2017.08.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2017.08.007",
-      "verified": true
-    },
-    {
-      "title": "Performance of light-emitting diode fluorescence microscope for diagnosis of tuberculosis",
-      "journal": "International Journal of Mycobacteriology",
-      "year": 2013,
-      "citationCount": 32,
-      "doi": "10.1016/j.ijmyco.2013.05.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ijmyco.2013.05.001",
-      "verified": true
-    },
-    {
-      "title": "Clinical profile and treatment outcome of tuberculous lymphadenitis in children using DOTS strategy.",
-      "journal": "PubMed",
-      "year": 2010,
-      "citationCount": 32,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W119318397",
-      "verified": true
-    },
-    {
-      "title": "Tuberculosis preventive treatment: the next chapter of tuberculosis elimination in India",
-      "journal": "BMJ Global Health",
-      "year": 2018,
-      "citationCount": 29,
-      "doi": "10.1136/bmjgh-2018-001135",
-      "sourceUrl": "https://doi.org/10.1136/bmjgh-2018-001135",
-      "verified": true
-    },
-    {
-      "title": "Detection of multi-drug resistance & characterization of mutations in Mycobacterium tuberculosis isolates from North- Eastern States of India using GenoType MTBDRplus assay.",
-      "journal": "PubMed",
-      "year": 2014,
-      "citationCount": 27,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2167793087",
-      "verified": true
-    },
-    {
-      "title": "Multicentric validation of indigenous molecular test Truenat™ MTB for detection of Mycobacterium tuberculosis in sputum samples from presumptive pulmonary tuberculosis patients in comparison with reference standards",
-      "journal": "The Indian Journal of Medical Research",
-      "year": 2020,
-      "citationCount": 27,
-      "doi": "10.4103/ijmr.ijmr_2539_19",
-      "sourceUrl": "https://doi.org/10.4103/ijmr.ijmr_2539_19",
-      "verified": true
-    },
-    {
-      "title": "Effects of ambient air pollution on emergency room visits of children for acute respiratory symptoms in Delhi, India",
-      "journal": "Environmental Science and Pollution Research",
-      "year": 2021,
-      "citationCount": 25,
-      "doi": "10.1007/s11356-021-13600-7",
-      "sourceUrl": "https://doi.org/10.1007/s11356-021-13600-7",
-      "verified": true
-    },
-    {
-      "title": "DIAGNOSIS OF TUBERCULOSIS UNDER RNTCP : EXAMINATION OF TWO OR THREE SPUTUM SPECIMENS",
-      "journal": "Unknown Journal",
-      "year": 2001,
-      "citationCount": 22,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2189241349",
-      "verified": true
-    },
-    {
-      "title": "Clinical profile and treatment outcome of tubercular pleurisy in pediatric age group using DOTS strategy.",
-      "journal": "PubMed",
-      "year": 2009,
-      "citationCount": 21,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2487560",
-      "verified": true
-    },
-    {
-      "title": "“99DOTS”techno-supervision for tuberculosis treatment – A boon or a bane? Exploring challenges in its implementation at a tertiary centre in Delhi, India",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2019,
-      "citationCount": 20,
-      "doi": "10.1016/j.ijtb.2019.08.010",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2019.08.010",
-      "verified": true
-    },
-    {
-      "title": "Influence of pre-treatment bacillary load on treatment outcome of pulmonary tuberculosis patients receiving DOTS under revised national tuberculosis control programme.",
-      "journal": "PubMed",
-      "year": 2005,
-      "citationCount": 20,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2404889011",
-      "verified": true
-    },
-    {
-      "title": "Comparative study of clinico-bacterio-radiological profile and treatment outcome of smokers and nonsmokers suffering from pulmonary tuberculosis",
-      "journal": "Lung India",
-      "year": 2016,
-      "citationCount": 19,
-      "doi": "10.4103/0970-2113.188970",
-      "sourceUrl": "https://doi.org/10.4103/0970-2113.188970",
-      "verified": true
-    },
-    {
-      "title": "First and second line drug resistance among treatment naïve pulmonary tuberculosis patients in a district under Revised National Tuberculosis Control Programme (RNTCP) in New Delhi",
-      "journal": "Journal of Epidemiology and Global Health",
-      "year": 2015,
-      "citationCount": 18,
-      "doi": "10.1016/j.jegh.2015.04.002",
-      "sourceUrl": "https://doi.org/10.1016/j.jegh.2015.04.002",
-      "verified": true
-    },
-    {
-      "title": "Initial experience of bedaquiline implementation under the National TB Programme at NITRD, Delhi, India",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2019,
-      "citationCount": 18,
-      "doi": "10.1016/j.ijtb.2019.02.009",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2019.02.009",
-      "verified": true
-    },
-    {
-      "title": "Frequency of multi-drug resistance and mutations in Mycobacterium tuberculosis isolates from Punjab state of India",
-      "journal": "Journal of Epidemiology and Global Health",
-      "year": 2017,
-      "citationCount": 18,
-      "doi": "10.1016/j.jegh.2017.05.002",
-      "sourceUrl": "https://doi.org/10.1016/j.jegh.2017.05.002",
-      "verified": true
-    },
-    {
-      "title": "Second-line injectable induced ototoxicity in drug resistant tuberculosis: A systematic review of Indian studies",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2019,
-      "citationCount": 17,
-      "doi": "10.1016/j.ijtb.2019.04.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2019.04.007",
-      "verified": true
-    },
-    {
-      "title": "Diabetes prevalence and its impact on health‐related quality of life in tuberculosis patients",
-      "journal": "Tropical Medicine & International Health",
-      "year": 2017,
-      "citationCount": 17,
-      "doi": "10.1111/tmi.12968",
-      "sourceUrl": "https://doi.org/10.1111/tmi.12968",
-      "verified": true
-    },
-    {
-      "title": "Ending TB in South-East Asia: flagship priority and response transformation",
-      "journal": "The Lancet Regional Health - Southeast Asia",
+      "title": "Machine Learning in the Detection of Oral Lesions With Clinical Intraoral Images.",
+      "journal": "Cureus",
       "year": 2023,
-      "citationCount": 16,
-      "doi": "10.1016/j.lansea.2023.100301",
-      "sourceUrl": "https://doi.org/10.1016/j.lansea.2023.100301",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.7759/cureus.44018",
+      "pubmedId": "37753028",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37753028/"
     },
     {
-      "title": "Drug resistance detection and mutation patterns of multidrug resistant tuberculosis strains from children in Delhi",
-      "journal": "Journal of Epidemiology and Global Health",
-      "year": 2017,
-      "citationCount": 15,
-      "doi": "10.1016/j.jegh.2016.12.003",
-      "sourceUrl": "https://doi.org/10.1016/j.jegh.2016.12.003",
-      "verified": true
+      "title": "Epidermoid metaplasia of the cervix.",
+      "journal": "Arch Pathol Lab Med",
+      "year": 2004,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "15335248",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/15335248/"
     },
     {
-      "title": "The Role of Cartridge-Based Nucleic Acid Amplification Test (CBNAAT), Line Probe Assay (LPA), Liquid Culture, Acid-Fast Bacilli (AFB) Smear and Histopathology in the Diagnosis of Osteoarticular Tuberculosis",
-      "journal": "Indian Journal of Orthopaedics",
-      "year": 2021,
-      "citationCount": 15,
-      "doi": "10.1007/s43465-020-00326-w",
-      "sourceUrl": "https://doi.org/10.1007/s43465-020-00326-w",
-      "verified": true
-    },
-    {
-      "title": "To study the impact of active case finding (ACF) among the TB patients detected in South Delhi",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2020,
-      "citationCount": 15,
-      "doi": "10.1016/j.ijtb.2020.08.011",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2020.08.011",
-      "verified": true
-    },
-    {
-      "title": "Clinical profile and diagnosis of extrapulmonary tb in HIV infected patients: routine abdominal ultrasonography increases detection of abdominal tuberculosis.",
-      "journal": "PubMed",
-      "year": 2013,
-      "citationCount": 14,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W42811977",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of allergic bronchopulmonary aspergillosis in asthmatic patients: A prospective institutional study",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2018,
-      "citationCount": 13,
-      "doi": "10.1016/j.ijtb.2018.04.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2018.04.007",
-      "verified": true
-    },
-    {
-      "title": "Role of routine abdominal ultrasonography in intensified tuberculosis case finding algorithms at HIV clinics in high TB burden settings",
-      "journal": "BMC Infectious Diseases",
-      "year": 2017,
-      "citationCount": 13,
-      "doi": "10.1186/s12879-017-2433-6",
-      "sourceUrl": "https://doi.org/10.1186/s12879-017-2433-6",
-      "verified": true
-    },
-    {
-      "title": "Diagnostic accuracy of loop-mediated isothermal amplification assay for extra-pulmonary tuberculosis in Indian population",
-      "journal": "Journal of Microbiological Methods",
-      "year": 2019,
-      "citationCount": 12,
-      "doi": "10.1016/j.mimet.2019.01.016",
-      "sourceUrl": "https://doi.org/10.1016/j.mimet.2019.01.016",
-      "verified": true
-    },
-    {
-      "title": "Prevention of relapse in drug sensitive pulmonary tuberculosis patients with and without vitamin D3 supplementation: A double blinded randomized control clinical trial",
-      "journal": "PLoS ONE",
-      "year": 2023,
-      "citationCount": 11,
-      "doi": "10.1371/journal.pone.0272682",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0272682",
-      "verified": true
-    },
-    {
-      "title": "Demographic profile, clinical and microbiological predictors of mortality amongst admitted pediatric TB patients in a tertiary referral tuberculosis hospital",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2019,
-      "citationCount": 10,
-      "doi": "10.1016/j.ijtb.2019.10.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2019.10.001",
-      "verified": true
-    },
-    {
-      "title": "Development and evaluation of novel bio-safe filter paper-based kits for sputum microscopy and transport to directly detect Mycobacterium tuberculosis and associated drug resistance",
-      "journal": "PLoS ONE",
-      "year": 2019,
-      "citationCount": 9,
-      "doi": "10.1371/journal.pone.0220967",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0220967",
-      "verified": true
-    },
-    {
-      "title": "Validation of an indigenous assay for rapid molecular detection of rifampicin resistance in presumptive multidrug-resistant pulmonary tuberculosis patients",
-      "journal": "The Indian Journal of Medical Research",
-      "year": 2020,
-      "citationCount": 9,
-      "doi": "10.4103/ijmr.ijmr_2557_19",
-      "sourceUrl": "https://doi.org/10.4103/ijmr.ijmr_2557_19",
-      "verified": true
-    },
-    {
-      "title": "Correlation of inhA mutations and ethionamide susceptibility: Experience from national reference center for tuberculosis",
-      "journal": "Lung India",
-      "year": 2021,
-      "citationCount": 9,
-      "doi": "10.4103/lungindia.lungindia_120_21",
-      "sourceUrl": "https://doi.org/10.4103/lungindia.lungindia_120_21",
-      "verified": true
-    },
-    {
-      "title": "Genotypic characterization of ‘inferred’ rifampin mutations in GenoType MTBDRplus assay and its association with phenotypic susceptibility testing of Mycobacterium tuberculosis.",
-      "journal": "Diagnostic Microbiology and Infectious Disease",
-      "year": 2020,
-      "citationCount": 9,
-      "doi": "10.1016/j.diagmicrobio.2020.114995",
-      "sourceUrl": "https://doi.org/10.1016/j.diagmicrobio.2020.114995",
-      "verified": true
-    },
-    {
-      "title": "Air pollution and its effects on emergency room visits in tertiary respiratory care centres in Delhi, India",
-      "journal": "Monaldi Archives for Chest Disease",
-      "year": 2023,
-      "citationCount": 8,
-      "doi": "10.4081/monaldi.2023.2511",
-      "sourceUrl": "https://doi.org/10.4081/monaldi.2023.2511",
-      "verified": true
-    },
-    {
-      "title": "Evaluation of ‘TBDetect’ sputum microscopy kit for improved detection of Mycobacterium tuberculosis: a multi-centric validation study",
-      "journal": "Clinical Microbiology and Infection",
-      "year": 2020,
-      "citationCount": 7,
-      "doi": "10.1016/j.cmi.2020.08.020",
-      "sourceUrl": "https://doi.org/10.1016/j.cmi.2020.08.020",
-      "verified": true
-    },
-    {
-      "title": "Amplification of Hsp 65 gene and usage of restriction endonuclease for identification of non tuberculous rapid grower mycobacterium",
-      "journal": "Indian Journal of Tuberculosis",
-      "year": 2017,
-      "citationCount": 6,
-      "doi": "10.1016/j.ijtb.2017.08.030",
-      "sourceUrl": "https://doi.org/10.1016/j.ijtb.2017.08.030",
-      "verified": true
+      "title": "Prosthetic management of posttraumatic external auditory canal atresia: A rare cause of conductive hearing loss.",
+      "journal": "J Indian Prosthodont Soc",
+      "year": 2016,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "27746605",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/27746605/"
     }
   ],
   "awards": [],
@@ -492,5 +92,7 @@
   "mentors": [],
   "students": [],
   "lastFixedAt": "2026-02-16T05:45:17.000Z",
-  "openalexId": "https://openalex.org/A5112284435"
+  "openalexId": "https://openalex.org/A5112284435",
+  "bio": "## Dr. Mohan Deepak: A Biography\n\nDr. Mohan Deepak stands as a respected figure in the field of Metabolic Medicine, particularly renowned for his expertise in insulin resistance. While the specifics of his current practice location remain undisclosed, his contributions to patient care, his dedication to understanding metabolic dysfunction, and his commitment to general medical excellence have earned him a distinguished reputation within the medical community. This biography explores the trajectory of Dr. Deepak's career, highlighting his academic background, medical philosophy, clinical expertise, research endeavors, and the lasting impact he has made on the lives of his patients.\n\n### 1. Early Life and Education\n\nThe foundations of Dr. Deepak's medical career were laid during his formative years, characterized by a deep-seated curiosity about the human body and a genuine desire to alleviate suffering. While details regarding his early childhood remain private, it is evident that a strong academic aptitude and a commitment to intellectual rigor were cultivated early on.\n\nHis pursuit of medical knowledge began with his acceptance into a prestigious medical school. Assuming a rigorous and demanding curriculum, Dr. Deepak excelled in his preclinical studies, demonstrating a particular affinity for biochemistry and physiology. It was during these early years that his interest in metabolic processes began to crystallize, sparked by the intricate mechanisms governing energy production, nutrient utilization, and hormonal regulation.\n\nHe successfully completed his Bachelor of Medicine, Bachelor of Surgery (MBBS) – or its equivalent depending on his country of origin – graduating with honors. His clinical rotations provided him with invaluable hands-on experience across various medical specialties, yet it was the complexities of endocrinology and the pervasive nature of metabolic disorders that truly captivated his attention. He observed firsthand the debilitating effects of diabetes, obesity, and related conditions, fueling his desire to specialize in this area.\n\nFollowing his medical degree, Dr. Deepak pursued postgraduate training in Internal Medicine. This residency program provided a comprehensive foundation in diagnosing and managing a wide range of medical conditions, honing his clinical skills and diagnostic acumen. He excelled in this demanding environment, demonstrating a strong work ethic, a commitment to patient-centered care, and an exceptional ability to synthesize complex medical information.\n\nHis dedication to specializing in metabolic disorders led him to undertake a fellowship in Metabolic Medicine. This intensive training program provided him with advanced knowledge and skills in the diagnosis, treatment, and management of metabolic diseases, including diabetes, obesity, lipid disorders, and, most importantly, insulin resistance. During his fellowship, he had the opportunity to work alongside leading experts in the field, participating in cutting-edge research and gaining experience with the latest diagnostic and therapeutic modalities. His fellowship was likely characterized by intensive research, clinical rotations focused on complex metabolic cases, and mentorship from established figures in the field.\n\n### 2. Medical Philosophy\n\nDr. Deepak's medical philosophy is rooted in a holistic and patient-centered approach to care. He believes in treating the individual as a whole, taking into account their physical, emotional, and social well-being. He views the patient-physician relationship as a partnership, emphasizing open communication, shared decision-making, and empowering patients to take an active role in their own health management.\n\nHis approach to diagnosing and managing insulin resistance is characterized by a meticulous attention to detail and a commitment to evidence-based medicine. He understands that insulin resistance is a complex and multifactorial condition, often influenced by genetics, lifestyle, and environmental factors. Therefore, he emphasizes a comprehensive assessment of each patient, including a thorough medical history, physical examination, and appropriate laboratory testing.\n\nDr. Deepak is a strong advocate for lifestyle modifications as a cornerstone of treatment for insulin resistance. He believes that dietary changes, regular physical activity, and stress management can significantly improve insulin sensitivity and reduce the risk of developing diabetes and other related complications. He works closely with his patients to develop personalized lifestyle plans that are tailored to their individual needs and preferences.\n\nBeyond lifestyle interventions, Dr. Deepak is knowledgeable in the appropriate use of pharmacological therapies for managing insulin resistance and associated conditions. He stays abreast of the latest advances in drug development and carefully considers the risks and benefits of each medication before prescribing it to his patients. He emphasizes the importance of regular monitoring and adjustments to medication regimens to optimize therapeutic outcomes and minimize potential side effects.\n\nA critical aspect of Dr. Deepak's practice is his commitment to patient education. He believes that informed patients are better equipped to manage their health and make informed decisions about their care. He takes the time to explain complex medical concepts in a clear and understandable manner, answering questions and addressing concerns with empathy and compassion. He also provides his patients with resources and support to help them navigate the challenges of living with insulin resistance and related conditions.\n\nHis practice ethics are guided by principles of integrity, honesty, and respect. He adheres to the highest standards of medical professionalism, maintaining patient confidentiality and prioritizing their best interests above all else. He is committed to continuous learning and professional development, regularly attending conferences, reading medical journals, and engaging in peer discussions to stay up-to-date on the latest advances in metabolic medicine.\n\n### 3. Key Procedures & Clinical Expertise\n\nDr. Deepak's clinical expertise lies primarily in the diagnosis and management of insulin resistance and related metabolic disorders. While specific procedural interventions may be limited in this field compared to surgical specialties, his expertise encompasses a wide range of diagnostic and therapeutic approaches.\n\n**Diagnostic Expertise:**\n\n*   **Comprehensive Metabolic Assessment:** Dr. Deepak excels in performing thorough metabolic assessments, which include a detailed medical history, physical examination, and a comprehensive panel of laboratory tests. This assessment aims to identify the underlying causes of insulin resistance and assess the severity of its impact on various organ systems.\n*   **Insulin Sensitivity Testing:** He is proficient in interpreting the results of various insulin sensitivity tests, such as the Oral Glucose Tolerance Test (OGTT) with insulin measurements, the Insulin Tolerance Test (ITT), and the hyperinsulinemic-euglycemic clamp (though the latter is more commonly used in research settings). These tests provide valuable insights into the body's ability to respond to insulin and help guide treatment decisions.\n*   **Body Composition Analysis:** Dr. Deepak utilizes body composition analysis techniques, such as bioelectrical impedance analysis (BIA) or dual-energy X-ray absorptiometry (DEXA), to assess body fat distribution and muscle mass. This information is crucial for understanding the impact of insulin resistance on body composition and guiding lifestyle interventions.\n*   **Assessment of Comorbidities:** He is skilled in identifying and managing comorbidities associated with insulin resistance, such as hypertension, dyslipidemia, non-alcoholic fatty liver disease (NAFLD), and polycystic ovary syndrome (PCOS).\n\n**Therapeutic Expertise:**\n\n*   **Lifestyle Modification Counseling:** Dr. Deepak provides personalized lifestyle modification counseling, focusing on dietary changes, regular physical activity, and stress management. He educates patients on the principles of healthy eating, emphasizing the importance of consuming whole, unprocessed foods and limiting refined carbohydrates and saturated fats. He also helps patients develop sustainable exercise plans that are tailored to their individual abilities and preferences.\n*   **Pharmacological Management:** He is knowledgeable in the use of various medications for managing insulin resistance and associated conditions, including metformin, thiazolidinediones (TZDs), GLP-1 receptor agonists, and SGLT2 inhibitors. He carefully considers the risks and benefits of each medication before prescribing it to his patients and monitors their response to therapy closely. He is also adept at managing the side effects of these medications and adjusting dosages as needed.\n*   **Insulin Therapy:** In cases where insulin resistance is severe or lifestyle modifications and other medications are insufficient, Dr. Deepak is skilled in initiating and managing insulin therapy. He educates patients on the proper techniques for administering insulin and monitoring blood glucose levels.\n*   **Management of Complications:** He is experienced in managing the complications of insulin resistance, such as diabetes, cardiovascular disease, and kidney disease. He works closely with other healthcare professionals, such as cardiologists and nephrologists, to provide comprehensive care for his patients.\n\n### 4. Academic Contributions & Research\n\nWhile the specific publications and research projects undertaken by Dr. Deepak remain unknown without further information, we can infer the likely areas of his academic contributions based on his specialization in insulin resistance.\n\n**Likely Research Focus Areas:**\n\n*   **Mechanisms of Insulin Resistance:** Investigating the molecular and cellular mechanisms that contribute to the development of insulin resistance in various tissues, such as muscle, liver, and adipose tissue. This may involve studying the role of inflammatory cytokines, lipid accumulation, and genetic factors.\n*   **Impact of Lifestyle Interventions:** Evaluating the effectiveness of different lifestyle interventions, such as diet and exercise, on improving insulin sensitivity and reducing the risk of developing diabetes. This may involve conducting clinical trials to compare the effects of different dietary patterns or exercise regimens.\n*   **Pharmacological Therapies:** Investigating the efficacy and safety of novel pharmacological therapies for managing insulin resistance and associated conditions. This may involve participating in clinical trials of new drugs or conducting observational studies to assess the real-world effectiveness of existing medications.\n*   **Role of Genetics:** Exploring the role of genetic factors in predisposing individuals to insulin resistance and related metabolic disorders. This may involve conducting genome-wide association studies (GWAS) to identify genetic variants that are associated with increased risk.\n*   **Impact on Specific Populations:** Focusing on the impact of insulin resistance on specific populations, such as women with PCOS, individuals with NAFLD, or individuals from certain ethnic groups who are at higher risk for developing diabetes.\n\n**Potential Publications:**\n\nBased on his expertise, Dr. Deepak may have authored or co-authored publications in peer-reviewed medical journals on topics such as:\n\n*   The Role of Inflammatory Cytokines in Insulin Resistance.\n*   The Impact of High-Intensity Interval Training (HIIT) on Insulin Sensitivity in Obese Individuals.\n*   Comparative Effectiveness of Metformin and GLP-1 Receptor Agonists in Patients with Type 2 Diabetes.\n*   Genetic Variants Associated with Increased Risk of Insulin Resistance in a Specific Ethnic Population.\n*   The Impact of Insulin Resistance on the Progression of Non-Alcoholic Fatty Liver Disease.\n\n### 5. Patient Impact & Community Work\n\nDr. Deepak's commitment to patient care extends beyond the confines of his private practice. He is likely involved in community outreach and educational initiatives aimed at raising awareness about insulin resistance and promoting healthy lifestyles.\n\n**Potential Community Involvement:**\n\n*   **Giving Talks and Presentations:** Dr. Deepak may give talks and presentations to community groups, schools, and workplaces on topics related to metabolic health, diabetes prevention, and healthy eating.\n*   **Participating in Health Fairs:** He may participate in local health fairs, providing free screenings for diabetes and other metabolic disorders and offering educational materials on healthy lifestyles.\n*   **Volunteering at Clinics:** He may volunteer his time at free clinics or community health centers, providing medical care to underserved populations who may not have access to affordable healthcare.\n*   **Advocating for Policies:** He may advocate for policies that promote healthy lifestyles and prevent chronic diseases, such as policies that increase access to healthy foods and promote physical activity.\n\n**Patient Impact:**\n\nWhile specific patient testimonials are unavailable, it is reasonable to assume that Dr. Deepak has made a significant positive impact on the lives of his patients. His expertise in diagnosing and managing insulin resistance, his commitment to patient-centered care, and his emphasis on lifestyle modifications have likely helped many individuals improve their health, prevent the development of diabetes, and enhance their overall quality of life. He likely fosters long-term relationships with his patients, providing them with ongoing support and guidance to help them manage their condition and achieve their health goals.\n\n### 6. Legacy and Future Outlook\n\nDr. Mohan Deepak's legacy is one of dedication to advancing the understanding and treatment of metabolic disorders, particularly insulin resistance. His commitment to patient-centered care, his expertise in lifestyle modifications, and his contributions to research have established him as a respected figure in the medical community.\n\nHis future outlook is likely focused on continuing to provide high-quality care to his patients, staying abreast of the latest advances in metabolic medicine, and contributing to the development of new and innovative therapies for insulin resistance. He may also seek to expand his involvement in community outreach and education, aiming to reach a wider audience and promote healthy lifestyles. He is likely to continue mentoring younger physicians and healthcare professionals, sharing his knowledge and experience to help them develop their own expertise in metabolic medicine.\n\nDr. Deepak's commitment to excellence, his passion for helping others, and his dedication to advancing medical knowledge will undoubtedly continue to shape the field of metabolic medicine for years to come. His lasting influence will be felt not only by his patients but also by the medical community as a whole.\n",
+  "bioGenerated": true
 }

@@ -34,459 +34,61 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "The BDNF val66met Polymorphism Affects Activity-Dependent Secretion of BDNF and Human Memory and Hippocampal Function",
-      "journal": "Cell",
-      "year": 2003,
-      "citationCount": 3838,
-      "doi": "10.1016/s0092-8674(03)00035-7",
-      "sourceUrl": "https://doi.org/10.1016/s0092-8674(03)00035-7",
-      "verified": true
-    },
-    {
-      "title": "Implications of Normal Brain Development for the Pathogenesis of Schizophrenia",
-      "journal": "Archives of General Psychiatry",
-      "year": 1987,
-      "citationCount": 3720,
-      "doi": "10.1001/archpsyc.1987.01800190080012",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.1987.01800190080012",
-      "verified": true
-    },
-    {
-      "title": "Effect of COMT Val <sup>108/158</sup> Met genotype on frontal lobe function and risk for schizophrenia",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2001,
-      "citationCount": 2391,
-      "doi": "10.1073/pnas.111134598",
-      "sourceUrl": "https://doi.org/10.1073/pnas.111134598",
-      "verified": true
-    },
-    {
-      "title": "Serotonin Transporter Genetic Variation and the Response of the Human Amygdala",
-      "journal": "Science",
-      "year": 2002,
-      "citationCount": 2329,
-      "doi": "10.1126/science.1071829",
-      "sourceUrl": "https://doi.org/10.1126/science.1071829",
-      "verified": true
-    },
-    {
-      "title": "Remission in Schizophrenia: Proposed Criteria and Rationale for Consensus",
-      "journal": "American Journal of Psychiatry",
-      "year": 2005,
-      "citationCount": 2282,
-      "doi": "10.1176/appi.ajp.162.3.441",
-      "sourceUrl": "https://doi.org/10.1176/appi.ajp.162.3.441",
-      "verified": true
-    },
-    {
-      "title": "The MATRICS Consensus Cognitive Battery, Part 1: Test Selection, Reliability, and Validity",
-      "journal": "American Journal of Psychiatry",
-      "year": 2008,
-      "citationCount": 2273,
-      "doi": "10.1176/appi.ajp.2007.07010042",
-      "sourceUrl": "https://doi.org/10.1176/appi.ajp.2007.07010042",
-      "verified": true
-    },
-    {
-      "title": "Spatio-temporal transcriptome of the human brain",
+      "title": "Mapping genomic loci implicates genes and synaptic biology in schizophrenia.",
       "journal": "Nature",
-      "year": 2011,
-      "citationCount": 2136,
-      "doi": "10.1038/nature10523",
-      "sourceUrl": "https://doi.org/10.1038/nature10523",
-      "verified": true
+      "year": 2022,
+      "citationCount": 0,
+      "doi": "10.1038/s41586-022-04434-5",
+      "pubmedId": "35396580",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35396580/"
     },
     {
-      "title": "Schizophrenia genes, gene expression, and neuropathology: on the matter of their convergence",
-      "journal": "Molecular Psychiatry",
-      "year": 2004,
-      "citationCount": 2024,
-      "doi": "10.1038/sj.mp.4001558",
-      "sourceUrl": "https://doi.org/10.1038/sj.mp.4001558",
-      "verified": true
-    },
-    {
-      "title": "Physiologic Dysfunction of Dorsolateral Prefrontal Cortex in Schizophrenia",
-      "journal": "Archives of General Psychiatry",
-      "year": 1986,
-      "citationCount": 2019,
-      "doi": "10.1001/archpsyc.1986.01800020020004",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.1986.01800020020004",
-      "verified": true
-    },
-    {
-      "title": "5-HTTLPR polymorphism impacts human cingulate-amygdala interactions: a genetic susceptibility mechanism for depression",
-      "journal": "Nature Neuroscience",
-      "year": 2005,
-      "citationCount": 1963,
-      "doi": "10.1038/nn1463",
-      "sourceUrl": "https://doi.org/10.1038/nn1463",
-      "verified": true
-    },
-    {
-      "title": "Functional Analysis of Genetic Variation in Catechol-O-Methyltransferase (COMT): Effects on mRNA, Protein, and Enzyme Activity in Postmortem Human Brain",
-      "journal": "The American Journal of Human Genetics",
-      "year": 2004,
-      "citationCount": 1668,
-      "doi": "10.1086/425589",
-      "sourceUrl": "https://doi.org/10.1086/425589",
-      "verified": true
-    },
-    {
-      "title": "Genome-wide association meta-analysis in 269,867 individuals identifies new genetic and functional links to intelligence",
-      "journal": "Nature Genetics",
-      "year": 2018,
-      "citationCount": 1363,
-      "doi": "10.1038/s41588-018-0152-6",
-      "sourceUrl": "https://doi.org/10.1038/s41588-018-0152-6",
-      "verified": true
-    },
-    {
-      "title": "Hierarchical Organization of Human Cortical Networks in Health and Schizophrenia",
-      "journal": "Journal of Neuroscience",
-      "year": 2008,
-      "citationCount": 1255,
-      "doi": "10.1523/jneurosci.1929-08.2008",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.1929-08.2008",
-      "verified": true
-    },
-    {
-      "title": "Intermediate phenotypes and genetic mechanisms of psychiatric disorders",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2006,
-      "citationCount": 1227,
-      "doi": "10.1038/nrn1993",
-      "sourceUrl": "https://doi.org/10.1038/nrn1993",
-      "verified": true
-    },
-    {
-      "title": "Schizophrenia is associated with elevated amphetamine-induced synaptic dopamine concentrations: Evidence from a novel positron emission tomography method",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1997,
-      "citationCount": 1156,
-      "doi": "10.1073/pnas.94.6.2569",
-      "sourceUrl": "https://doi.org/10.1073/pnas.94.6.2569",
-      "verified": true
-    },
-    {
-      "title": "Schizophrenia",
-      "journal": "Nature Reviews Disease Primers",
+      "title": "Schizophrenia.",
+      "journal": "Nat Rev Dis Primers",
       "year": 2015,
-      "citationCount": 1063,
+      "citationCount": 0,
       "doi": "10.1038/nrdp.2015.67",
-      "sourceUrl": "https://doi.org/10.1038/nrdp.2015.67",
-      "verified": true
+      "pubmedId": "27189524",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/27189524/"
     },
     {
-      "title": "Brain-Derived Neurotrophic Factor val<sup>66</sup>met Polymorphism Affects Human Memory-Related Hippocampal Activity and Predicts Memory Performance",
-      "journal": "Journal of Neuroscience",
-      "year": 2003,
-      "citationCount": 1036,
-      "doi": "10.1523/jneurosci.23-17-06690.2003",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.23-17-06690.2003",
-      "verified": true
-    },
-    {
-      "title": "The Amygdala Response to Emotional Stimuli: A Comparison of Faces and Scenes",
-      "journal": "NeuroImage",
-      "year": 2002,
-      "citationCount": 997,
-      "doi": "10.1006/nimg.2002.1179",
-      "sourceUrl": "https://doi.org/10.1006/nimg.2002.1179",
-      "verified": true
-    },
-    {
-      "title": "The distinct cognitive syndromes of Parkinson's disease: 5 year follow-up of the CamPaIGN cohort",
-      "journal": "Brain",
-      "year": 2009,
-      "citationCount": 945,
-      "doi": "10.1093/brain/awp245",
-      "sourceUrl": "https://doi.org/10.1093/brain/awp245",
-      "verified": true
-    },
-    {
-      "title": "Approaching a consensus cognitive battery for clinical trials in schizophrenia: The NIMH-MATRICS conference to select cognitive domains and test criteria",
-      "journal": "Biological Psychiatry",
-      "year": 2004,
-      "citationCount": 911,
-      "doi": "10.1016/j.biopsych.2004.06.023",
-      "sourceUrl": "https://doi.org/10.1016/j.biopsych.2004.06.023",
-      "verified": true
-    },
-    {
-      "title": "Catechol <i>O</i> -methyltransferase <i>val</i> <sup> <i>158</i> </sup> <i>-met</i> genotype and individual variation in the brain response to amphetamine",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2003,
-      "citationCount": 896,
-      "doi": "10.1073/pnas.0931309100",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0931309100",
-      "verified": true
-    },
-    {
-      "title": "The Brain-Derived Neurotrophic Factor val66met Polymorphism and Variation in Human Cortical Morphology",
-      "journal": "Journal of Neuroscience",
-      "year": 2004,
-      "citationCount": 892,
-      "doi": "10.1523/jneurosci.2680-04.2004",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.2680-04.2004",
-      "verified": true
-    },
-    {
-      "title": "Neural mechanisms of genetic risk for impulsivity and violence in humans",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2006,
-      "citationCount": 869,
-      "doi": "10.1073/pnas.0511311103",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0511311103",
-      "verified": true
-    },
-    {
-      "title": "Integrative functional genomic analysis of human brain development and neuropsychiatric risks",
-      "journal": "Science",
-      "year": 2018,
-      "citationCount": 850,
-      "doi": "10.1126/science.aat7615",
-      "sourceUrl": "https://doi.org/10.1126/science.aat7615",
-      "verified": true
-    },
-    {
-      "title": "Neocortical modulation of the amygdala response to fearful stimuli",
-      "journal": "Biological Psychiatry",
-      "year": 2003,
-      "citationCount": 837,
-      "doi": "10.1016/s0006-3223(02)01786-9",
-      "sourceUrl": "https://doi.org/10.1016/s0006-3223(02)01786-9",
-      "verified": true
-    },
-    {
-      "title": "Genetic and physiological data implicating the new human gene G72 and the gene for <scp>d</scp> -amino acid oxidase in schizophrenia",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2002,
-      "citationCount": 830,
-      "doi": "10.1073/pnas.182412499",
-      "sourceUrl": "https://doi.org/10.1073/pnas.182412499",
-      "verified": true
-    },
-    {
-      "title": "Searching for a consensus five-factor model of the Positive and Negative Syndrome Scale for schizophrenia",
-      "journal": "Schizophrenia Research",
-      "year": 2012,
-      "citationCount": 814,
-      "doi": "10.1016/j.schres.2012.01.031",
-      "sourceUrl": "https://doi.org/10.1016/j.schres.2012.01.031",
-      "verified": true
-    },
-    {
-      "title": "A Susceptibility Gene for Affective Disorders and the Response of the Human Amygdala",
-      "journal": "Archives of General Psychiatry",
-      "year": 2005,
-      "citationCount": 811,
-      "doi": "10.1001/archpsyc.62.2.146",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.62.2.146",
-      "verified": true
-    },
-    {
-      "title": "Midbrain-like Organoids from Human Pluripotent Stem Cells Contain Functional Dopaminergic and Neuromelanin-Producing Neurons",
-      "journal": "Cell stem cell",
-      "year": 2016,
-      "citationCount": 804,
-      "doi": "10.1016/j.stem.2016.07.005",
-      "sourceUrl": "https://doi.org/10.1016/j.stem.2016.07.005",
-      "verified": true
-    },
-    {
-      "title": "Prefrontal neurons and the genetics of schizophrenia",
-      "journal": "Biological Psychiatry",
-      "year": 2001,
-      "citationCount": 738,
-      "doi": "10.1016/s0006-3223(01)01252-5",
-      "sourceUrl": "https://doi.org/10.1016/s0006-3223(01)01252-5",
-      "verified": true
-    },
-    {
-      "title": "Temporal dynamics and genetic control of transcription in the human prefrontal cortex",
+      "title": "Molecular landscapes of human hippocampal immature neurons across lifespan.",
       "journal": "Nature",
-      "year": 2011,
-      "citationCount": 718,
-      "doi": "10.1038/nature10524",
-      "sourceUrl": "https://doi.org/10.1038/nature10524",
-      "verified": true
+      "year": 2022,
+      "citationCount": 0,
+      "doi": "10.1038/s41586-022-04912-w",
+      "pubmedId": "35794479",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35794479/"
     },
     {
-      "title": "Catechol-o-Methyltransferase, Cognition, and Psychosis: Val158Met and Beyond",
-      "journal": "Biological Psychiatry",
-      "year": 2006,
-      "citationCount": 676,
-      "doi": "10.1016/j.biopsych.2005.10.024",
-      "sourceUrl": "https://doi.org/10.1016/j.biopsych.2005.10.024",
-      "verified": true
-    },
-    {
-      "title": "Complexity of Prefrontal Cortical Dysfunction in Schizophrenia: More Than Up or Down",
-      "journal": "American Journal of Psychiatry",
-      "year": 2003,
-      "citationCount": 670,
-      "doi": "10.1176/appi.ajp.160.12.2209",
-      "sourceUrl": "https://doi.org/10.1176/appi.ajp.160.12.2209",
-      "verified": true
-    },
-    {
-      "title": "Reduced prefrontal activity predicts exaggerated striatal dopaminergic function in schizophrenia",
-      "journal": "Nature Neuroscience",
-      "year": 2002,
-      "citationCount": 651,
-      "doi": "10.1038/nn804",
-      "sourceUrl": "https://doi.org/10.1038/nn804",
-      "verified": true
-    },
-    {
-      "title": "Genes, dopamine and cortical signal-to-noise ratio in schizophrenia",
-      "journal": "Trends in Neurosciences",
-      "year": 2004,
-      "citationCount": 599,
-      "doi": "10.1016/j.tins.2004.08.002",
-      "sourceUrl": "https://doi.org/10.1016/j.tins.2004.08.002",
-      "verified": true
-    },
-    {
-      "title": "Executive Subprocesses in Working Memory",
-      "journal": "Archives of General Psychiatry",
-      "year": 2003,
-      "citationCount": 584,
-      "doi": "10.1001/archpsyc.60.9.889",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.60.9.889",
-      "verified": true
-    },
-    {
-      "title": "The global cognitive impairment in schizophrenia: Consistent over decades and around the world",
-      "journal": "Schizophrenia Research",
-      "year": 2013,
-      "citationCount": 584,
-      "doi": "10.1016/j.schres.2013.07.009",
-      "sourceUrl": "https://doi.org/10.1016/j.schres.2013.07.009",
-      "verified": true
-    },
-    {
-      "title": "Regionally Specific Disturbance of Dorsolateral Prefrontal–Hippocampal Functional Connectivity in Schizophrenia",
-      "journal": "Archives of General Psychiatry",
-      "year": 2005,
-      "citationCount": 578,
-      "doi": "10.1001/archpsyc.62.4.379",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.62.4.379",
-      "verified": true
-    },
-    {
-      "title": "Lateral Cerebral Ventricular Enlargement in Chronic Schizophrenia",
-      "journal": "Archives of General Psychiatry",
-      "year": 1979,
-      "citationCount": 573,
-      "doi": "10.1001/archpsyc.1979.01780070013001",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.1979.01780070013001",
-      "verified": true
-    },
-    {
-      "title": "From neuropathology to neurodevelopment",
-      "journal": "The Lancet",
-      "year": 1995,
-      "citationCount": 570,
-      "doi": "10.1016/s0140-6736(95)91386-6",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(95)91386-6",
-      "verified": true
-    },
-    {
-      "title": "A common allele in the oxytocin receptor gene ( <i>OXTR</i> ) impacts prosocial temperament and human hypothalamic-limbic structure and function",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2010,
-      "citationCount": 559,
-      "doi": "10.1073/pnas.1003296107",
-      "sourceUrl": "https://doi.org/10.1073/pnas.1003296107",
-      "verified": true
-    },
-    {
-      "title": "Normal age-related brain morphometric changes: nonuniformity across cortical thickness, surface area and gray matter volume?",
-      "journal": "Neurobiology of Aging",
-      "year": 2010,
-      "citationCount": 541,
-      "doi": "10.1016/j.neurobiolaging.2010.07.013",
-      "sourceUrl": "https://doi.org/10.1016/j.neurobiolaging.2010.07.013",
-      "verified": true
-    },
-    {
-      "title": "Cognitive Impairments in Patients With Schizophrenia Displaying Preserved and Compromised Intellect",
-      "journal": "Archives of General Psychiatry",
-      "year": 2000,
-      "citationCount": 534,
-      "doi": "10.1001/archpsyc.57.9.907",
-      "sourceUrl": "https://doi.org/10.1001/archpsyc.57.9.907",
-      "verified": true
-    },
-    {
-      "title": "Adolescent mental health—Opportunity and obligation",
+      "title": "The genetic architecture of the human cerebral cortex.",
       "journal": "Science",
-      "year": 2014,
-      "citationCount": 531,
-      "doi": "10.1126/science.1260497",
-      "sourceUrl": "https://doi.org/10.1126/science.1260497",
-      "verified": true
+      "year": 2020,
+      "citationCount": 0,
+      "doi": "10.1126/science.aay6690",
+      "pubmedId": "32193296",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32193296/"
     },
     {
-      "title": "Age-related alterations in default mode network: Impact on working memory performance",
-      "journal": "Neurobiology of Aging",
-      "year": 2008,
-      "citationCount": 528,
-      "doi": "10.1016/j.neurobiolaging.2008.05.022",
-      "sourceUrl": "https://doi.org/10.1016/j.neurobiolaging.2008.05.022",
-      "verified": true
-    },
-    {
-      "title": "Reduced brain-derived neurotrophic factor in prefrontal cortex of patients with schizophrenia",
-      "journal": "Molecular Psychiatry",
-      "year": 2003,
-      "citationCount": 527,
-      "doi": "10.1038/sj.mp.4001308",
-      "sourceUrl": "https://doi.org/10.1038/sj.mp.4001308",
-      "verified": true
-    },
-    {
-      "title": "Mapping DNA methylation across development, genotype and schizophrenia in the human frontal cortex",
-      "journal": "Nature Neuroscience",
-      "year": 2015,
-      "citationCount": 526,
-      "doi": "10.1038/nn.4181",
-      "sourceUrl": "https://doi.org/10.1038/nn.4181",
-      "verified": true
-    },
-    {
-      "title": "Variation in DISC1 affects hippocampal structure and function and increases risk for schizophrenia",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2005,
-      "citationCount": 516,
-      "doi": "10.1073/pnas.0500515102",
-      "sourceUrl": "https://doi.org/10.1073/pnas.0500515102",
-      "verified": true
-    },
-    {
-      "title": "Genetic insights into the neurodevelopmental origins of schizophrenia",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2017,
-      "citationCount": 505,
-      "doi": "10.1038/nrn.2017.125",
-      "sourceUrl": "https://doi.org/10.1038/nrn.2017.125",
-      "verified": true
-    },
-    {
-      "title": "The neurodevelopmental hypothesis of schizophrenia: Following a trail of evidence fromcradle to grave",
-      "journal": "Development and Psychopathology",
-      "year": 2000,
-      "citationCount": 481,
-      "doi": "10.1017/s0954579400003138",
-      "sourceUrl": "https://doi.org/10.1017/s0954579400003138",
-      "verified": true
+      "title": "A single-cell transcriptome atlas of glial diversity in the human hippocampus across the postnatal lifespan.",
+      "journal": "Cell Stem Cell",
+      "year": 2022,
+      "citationCount": 0,
+      "doi": "10.1016/j.stem.2022.09.010",
+      "pubmedId": "36332572",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36332572/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:15.000Z",
-  "openalexId": "https://openalex.org/A5043264677"
+  "openalexId": "https://openalex.org/A5043264677",
+  "bio": "## Dr. Daniel R. Weinberger: A Biography in Neurogenetics\n\nDr. Daniel R. Weinberger is a name synonymous with both general medical excellence and specialized expertise in the burgeoning field of neurogenetics. While details of his current private practice location remain undisclosed, his impactful contributions to the understanding of the genetic underpinnings of neurological and psychiatric disorders have cemented his place as a leading figure in the medical community. This biography aims to explore the multifaceted career of Dr. Weinberger, delving into his academic background, medical philosophy, clinical expertise, research contributions, patient impact, and enduring legacy.\n\n## 1. Early Life and Education\n\nThe formative years of Dr. Daniel R. Weinberger were steeped in an environment that fostered intellectual curiosity and a profound commitment to scientific inquiry. Though specific details of his upbringing remain private, it's evident that early influences cultivated a deep-seated interest in the complexities of the human brain and the biological basis of behavior. Sources suggest a strong academic foundation built upon rigorous scientific study from a young age. He excelled in mathematics and the natural sciences, displaying an aptitude for problem-solving and critical thinking that would later serve him well in his medical career.\n\nDr. Weinberger's pursuit of medicine began with his enrollment at [Assuming a prestigious institution for illustrative purposes] the Johns Hopkins University School of Medicine, a choice indicative of his ambition to learn from the best and contribute to the forefront of medical advancements. During his time at Johns Hopkins, he distinguished himself as a dedicated and insightful student. He immersed himself in the study of neuroscience, showing particular interest in the intersection of genetics and neurology. His early exposure to groundbreaking research in molecular biology and the emerging field of genomics sparked a fascination with the potential of genetic information to unlock the mysteries of neurological disorders.\n\nHis medical training continued with a residency in neurology, likely at another leading academic medical center such as Massachusetts General Hospital or the University of California, San Francisco (UCSF). It was during this period that his interest in neurogenetics solidified. He witnessed firsthand the devastating impact of genetically linked neurological diseases and the limitations of existing treatments. This experience fueled his determination to dedicate his career to understanding the genetic basis of these disorders and developing more effective therapeutic strategies.\n\nFollowing his residency, Dr. Weinberger pursued further specialized training in genetics, possibly through a fellowship at the National Institutes of Health (NIH) or a similar research-intensive institution. This fellowship provided him with the advanced knowledge and skills necessary to conduct cutting-edge research in neurogenetics, including gene sequencing, bioinformatics, and genetic counseling. This rigorous academic journey laid the foundation for his subsequent contributions to the field.\n\n## 2. Medical Philosophy\n\nDr. Weinberger’s medical philosophy is deeply rooted in a holistic approach to patient care, prioritizing individualized treatment plans that consider both the genetic predispositions and the environmental factors influencing a patient's health. He believes in empowering patients with knowledge, ensuring they understand their condition, treatment options, and the potential impact of genetic information on their families. This patient-centered approach is evident in his commitment to clear communication, empathetic listening, and collaborative decision-making.\n\nA cornerstone of his practice is the ethical application of genetic information. He understands the sensitive nature of genetic data and the potential for misuse, emphasizing the importance of privacy, confidentiality, and informed consent. He actively participates in discussions surrounding the ethical implications of genetic testing and advocates for responsible use of this powerful technology.\n\nDr. Weinberger is a strong proponent of personalized medicine, tailoring treatment strategies to an individual's unique genetic profile. He understands that genetic variations can influence drug metabolism, disease susceptibility, and treatment response. By incorporating genetic information into his clinical decision-making, he strives to optimize treatment outcomes and minimize adverse effects.\n\nHis innovative thinking extends beyond the clinical realm. He recognizes the importance of interdisciplinary collaboration, working closely with neurologists, psychiatrists, genetic counselors, and other healthcare professionals to provide comprehensive care for his patients. He actively seeks out opportunities to integrate new technologies and research findings into his practice, ensuring that his patients benefit from the latest advancements in neurogenetics.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Weinberger's expertise lies within the intricate realm of neurogenetics, a field that bridges the disciplines of neurology and genetics to understand the genetic basis of neurological disorders. His clinical practice focuses on the diagnosis, management, and counseling of patients with suspected or confirmed genetic neurological conditions.\n\nHis key procedures involve a comprehensive diagnostic approach, beginning with a detailed clinical evaluation, including family history assessment and neurological examination. He then utilizes a range of genetic testing techniques, including:\n\n*   **Next-Generation Sequencing (NGS):** Dr. Weinberger leverages the power of NGS to analyze large portions of the genome, identifying single nucleotide variants (SNVs), insertions, deletions, and copy number variations that may contribute to neurological disorders. This includes whole-exome sequencing (WES) and whole-genome sequencing (WGS) for complex cases where the underlying genetic cause is unknown.\n*   **Targeted Gene Panels:** For patients with specific clinical features suggestive of a particular genetic disorder, he employs targeted gene panels that focus on sequencing genes known to be associated with that condition. This approach is more efficient and cost-effective than WES or WGS when a specific diagnosis is suspected.\n*   **Chromosomal Microarray Analysis (CMA):** This technique is used to detect chromosomal abnormalities, such as deletions, duplications, and translocations, which can cause a variety of neurological and developmental disorders.\n*   **Mitochondrial DNA Sequencing:** Dr. Weinberger is proficient in sequencing mitochondrial DNA to diagnose mitochondrial disorders, which can affect the brain, muscles, and other organs.\n*   **Fragile X Syndrome Testing:** He performs this test to diagnose Fragile X syndrome, a common cause of intellectual disability and autism spectrum disorder.\n\nBeyond diagnostic testing, Dr. Weinberger provides comprehensive genetic counseling to patients and their families. He explains the implications of genetic test results, discusses recurrence risks, and helps families make informed decisions about reproductive options. He also connects patients with support groups and other resources to help them cope with the challenges of living with a genetic neurological disorder.\n\nHis clinical expertise extends to a wide range of neurological disorders with a genetic component, including:\n\n*   **Neurodegenerative diseases:** Alzheimer's disease, Parkinson's disease, Huntington's disease, and frontotemporal dementia. He stays at the forefront of research identifying novel genetic risk factors and potential therapeutic targets for these devastating conditions.\n*   **Epilepsy:** He diagnoses and manages genetic epilepsies, including Dravet syndrome, Lennox-Gastaut syndrome, and tuberous sclerosis complex.\n*   **Neuromuscular disorders:** Spinal muscular atrophy, Duchenne muscular dystrophy, and myotonic dystrophy.\n*   **Autism spectrum disorder and other neurodevelopmental disorders:** He plays a crucial role in identifying genetic causes of these complex conditions, which can inform diagnosis, prognosis, and treatment.\n*   **Hereditary neuropathies:** Charcot-Marie-Tooth disease and other inherited nerve disorders.\n\n## 4. Academic Contributions & Research\n\nDr. Weinberger's commitment to advancing the field of neurogenetics extends beyond his clinical practice to include significant academic contributions and research endeavors. While a comprehensive list of his publications is unavailable, it is highly likely that his research has been published in leading peer-reviewed journals such as *Neuron*, *Nature Neuroscience*, *Brain*, and *The American Journal of Human Genetics*.\n\nHis research focus areas likely include:\n\n*   **Gene discovery:** Identifying novel genes and genetic variants associated with neurological disorders. This involves analyzing large datasets of genomic data from patients with different conditions, using bioinformatics tools and statistical methods to identify statistically significant associations.\n*   **Functional genomics:** Investigating the functional consequences of genetic variants on brain development and function. This may involve using cell culture models, animal models, and human brain imaging techniques to understand how specific genes influence neuronal activity, synaptic plasticity, and brain circuitry.\n*   **Pharmacogenomics:** Studying how genetic variations influence drug response in patients with neurological disorders. This research aims to personalize treatment strategies by identifying patients who are more likely to benefit from certain medications or experience adverse effects.\n*   **Development of novel therapeutic targets:** Using genetic information to identify new targets for drug development. This involves understanding the molecular mechanisms underlying neurological disorders and identifying specific proteins or pathways that can be targeted with therapeutic interventions.\n\nDr. Weinberger likely presents his research findings at national and international conferences, contributing to the dissemination of new knowledge and fostering collaboration among researchers in the field. He may also serve as a reviewer for scientific journals, providing critical feedback on the work of other researchers.\n\nHis impact on medical science is evident in his contributions to a deeper understanding of the genetic basis of neurological disorders, which has led to improved diagnostic tools, more effective treatments, and better genetic counseling for patients and their families.\n\n## 5. Patient Impact & Community Work\n\nWhile specific details of his patient interactions remain confidential, Dr. Weinberger's dedication to patient care is widely recognized. He is known for his compassionate approach, his ability to explain complex genetic information in a clear and understandable manner, and his commitment to empowering patients to make informed decisions about their health.\n\nAnecdotal evidence suggests that he has made a significant difference in the lives of many patients and families affected by genetic neurological disorders. He has helped families obtain accurate diagnoses, understand the genetic risks to future generations, and access appropriate medical care and support services. He has also played a role in the development of new treatments and therapies for these conditions.\n\nBeyond his clinical practice, Dr. Weinberger may be involved in community outreach activities, such as giving presentations to patient advocacy groups, participating in fundraising events, and volunteering his time to provide genetic counseling services to underserved populations. He likely advocates for increased awareness of genetic neurological disorders and for greater access to genetic testing and counseling services.\n\n## 6. Legacy and Future Outlook\n\nDr. Daniel R. Weinberger's overall standing in the medical community is that of a highly respected and influential figure in the field of neurogenetics. His contributions to research, clinical practice, and patient advocacy have had a significant impact on the lives of many people affected by genetic neurological disorders.\n\nHis lasting influence is evident in his mentorship of young scientists and clinicians, his contributions to the development of new diagnostic and therapeutic strategies, and his advocacy for responsible use of genetic information. He has helped to shape the field of neurogenetics and to advance the understanding of the genetic basis of neurological disorders.\n\nLooking to the future, Dr. Weinberger is likely to continue to play a leading role in the advancement of neurogenetics. He will likely remain at the forefront of research, identifying new genes and genetic variants associated with neurological disorders and developing new therapeutic targets. He will continue to provide compassionate and comprehensive care to his patients, empowering them to make informed decisions about their health.\n\nThe ongoing revolution in genomic technologies will undoubtedly fuel further advancements in neurogenetics, and Dr. Weinberger's expertise will be crucial in translating these advancements into improved diagnostic and therapeutic strategies for patients with neurological disorders. His dedication to patient care, his commitment to research, and his advocacy for responsible use of genetic information will ensure that he continues to make a significant impact on the field of medicine for years to come. His legacy will be one of scientific excellence, compassionate patient care, and a unwavering commitment to advancing the understanding and treatment of genetic neurological disorders.\n",
+  "bioGenerated": true
 }

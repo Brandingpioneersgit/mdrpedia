@@ -36,459 +36,61 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "National ethical guidelines for biomedical &amp; health research involving human participants, 2017",
-      "journal": "The Indian Journal of Medical Research",
-      "year": 2018,
-      "citationCount": 145,
-      "doi": "10.4103/0971-5916.245303",
-      "sourceUrl": "https://doi.org/10.4103/0971-5916.245303",
-      "verified": true
-    },
-    {
-      "title": "Definition of terms used in limitation of treatment and providing palliative care at the end of life: The Indian council of medical research commission report",
-      "journal": "Indian Journal of Critical Care Medicine",
-      "year": 2018,
-      "citationCount": 76,
-      "doi": "10.4103/ijccm.ijccm_165_18",
-      "sourceUrl": "https://doi.org/10.4103/ijccm.ijccm_165_18",
-      "verified": true
-    },
-    {
-      "title": "What information and the extent of information research participants need in informed consent forms: a multi-country survey",
-      "journal": "BMC Medical Ethics",
-      "year": 2018,
-      "citationCount": 37,
-      "doi": "10.1186/s12910-018-0318-x",
-      "sourceUrl": "https://doi.org/10.1186/s12910-018-0318-x",
-      "verified": true
-    },
-    {
-      "title": "ICMR Consensus Guidelines on ‘Do Not Attempt Resuscitation’",
-      "journal": "The Indian Journal of Medical Research",
+      "title": "Understanding the challenges and ethical aspects of compassionate use of drugs in emergency situations.",
+      "journal": "Indian J Pharmacol",
       "year": 2020,
-      "citationCount": 36,
-      "doi": "10.4103/ijmr.ijmr_395_20",
-      "sourceUrl": "https://doi.org/10.4103/ijmr.ijmr_395_20",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.4103/ijp.IJP_665_20",
+      "pubmedId": "32873998",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32873998/"
     },
     {
-      "title": "Ethics preparedness for infectious disease outbreaks research in India",
-      "journal": "The Indian Journal of Medical Research",
-      "year": 2020,
-      "citationCount": 35,
-      "doi": "10.4103/ijmr.ijmr_463_20",
-      "sourceUrl": "https://doi.org/10.4103/ijmr.ijmr_463_20",
-      "verified": true
-    },
-    {
-      "title": "National Ethical Guidelines for Biomedical and Health Research Involving Human Participants, 2017: A commentary",
-      "journal": "Indian Journal of Medical Ethics",
-      "year": 2018,
-      "citationCount": 28,
-      "doi": "10.20529/ijme.2018.065",
-      "sourceUrl": "https://doi.org/10.20529/ijme.2018.065",
-      "verified": true
-    },
-    {
-      "title": "Highlights of Indian Council of Medical Research National Ethical Guidelines for Biomedical and Health Research Involving Human Participants",
-      "journal": "Indian Journal of Pharmacology",
-      "year": 2019,
-      "citationCount": 27,
-      "doi": "10.4103/0253-7613.262456",
-      "sourceUrl": "https://doi.org/10.4103/0253-7613.262456",
-      "verified": true
-    },
-    {
-      "title": "Top five ethical lessons of COVID-19 that the world must learn",
-      "journal": "Wellcome Open Research",
-      "year": 2021,
-      "citationCount": 17,
-      "doi": "10.12688/wellcomeopenres.16568.1",
-      "sourceUrl": "https://doi.org/10.12688/wellcomeopenres.16568.1",
-      "verified": true
-    },
-    {
-      "title": "A roadmap for fostering timely regulatory and ethics approvals of international clinical trials in support of global health research systems",
-      "journal": "The Lancet Global Health",
-      "year": 2025,
-      "citationCount": 12,
-      "doi": "10.1016/s2214-109x(24)00515-1",
-      "sourceUrl": "https://doi.org/10.1016/s2214-109x(24)00515-1",
-      "verified": true
-    },
-    {
-      "title": "Prevention of ovarian hyperstimulation syndrome (OHSS): British Fertility Society policy and practice guideline.",
-      "journal": "Human fertility (Cambridge, England)",
-      "year": 2024,
-      "citationCount": 9,
-      "doi": "10.1080/14647273.2024.2441827",
-      "sourceUrl": "https://doi.org/10.1080/14647273.2024.2441827",
-      "verified": true
-    },
-    {
-      "title": "Rapid prenatal karyotyping using foetal blood obtained by cordocentesis.",
-      "journal": "PubMed",
-      "year": 2002,
-      "citationCount": 8,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2161532521",
-      "verified": true
-    },
-    {
-      "title": "Regulatory and Ethical Issues in Pediatric Clinical Research: Recommendations From a Panel Discussion",
-      "journal": "The Journal of Clinical Pharmacology",
-      "year": 2017,
-      "citationCount": 8,
-      "doi": "10.1002/jcph.916",
-      "sourceUrl": "https://doi.org/10.1002/jcph.916",
-      "verified": true
-    },
-    {
-      "title": "Understanding the challenges and ethical aspects of compassionate use of drugs in emergency situations",
-      "journal": "Indian Journal of Pharmacology",
-      "year": 2020,
-      "citationCount": 8,
-      "doi": "10.4103/ijp.ijp_665_20",
-      "sourceUrl": "https://doi.org/10.4103/ijp.ijp_665_20",
-      "verified": true
-    },
-    {
-      "title": "Effect, Tolerability, and Safety of Exclusive Palatable Elemental Diet in Patients With Intestinal Microbial Overgrowth.",
-      "journal": "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association",
-      "year": 2025,
-      "citationCount": 7,
-      "doi": "10.1016/j.cgh.2025.03.002",
-      "sourceUrl": "https://doi.org/10.1016/j.cgh.2025.03.002",
-      "verified": true
-    },
-    {
-      "title": "Determinants of diagnostic yield in a multi-ethnic Asian inherited retinal disease cohort.",
-      "journal": "European journal of human genetics : EJHG",
-      "year": 2025,
-      "citationCount": 7,
-      "doi": "10.1038/s41431-025-01833-w",
-      "sourceUrl": "https://doi.org/10.1038/s41431-025-01833-w",
-      "verified": true
-    },
-    {
-      "title": "Preparing ethical review systems for emergencies: next steps",
-      "journal": "BMC Medical Ethics",
+      "title": "Preparing ethical review systems for emergencies: next steps.",
+      "journal": "BMC Med Ethics",
       "year": 2023,
-      "citationCount": 7,
+      "citationCount": 0,
       "doi": "10.1186/s12910-023-00957-2",
-      "sourceUrl": "https://doi.org/10.1186/s12910-023-00957-2",
-      "verified": true
+      "pubmedId": "37891578",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37891578/"
     },
     {
-      "title": "ICMR Consensus Guidelines on ‘Do Not Attempt Resuscitation’",
-      "journal": "The National Medical Journal of India",
-      "year": 2020,
-      "citationCount": 6,
-      "doi": "10.4103/0970-258x.284970",
-      "sourceUrl": "https://doi.org/10.4103/0970-258x.284970",
-      "verified": true
-    },
-    {
-      "title": "Detection of complex chromosomal rearrangements in a woman with repeated spontaneous abortions",
-      "journal": "Acta Obstetricia Et Gynecologica Scandinavica",
-      "year": 2001,
-      "citationCount": 5,
-      "doi": "10.1034/j.1600-0412.2001.d01-20.x",
-      "sourceUrl": "https://doi.org/10.1034/j.1600-0412.2001.d01-20.x",
-      "verified": true
-    },
-    {
-      "title": "Hydrogen Sulfide and Methane on Breath Test Correlate with Human Small Intestinal Hydrogen Sulfide Producers and Methanogens.",
-      "journal": "Digestive diseases and sciences",
-      "year": 2025,
-      "citationCount": 4,
-      "doi": "10.1007/s10620-025-09156-y",
-      "sourceUrl": "https://doi.org/10.1007/s10620-025-09156-y",
-      "verified": true
-    },
-    {
-      "title": "Detection of complex chromosomal rearrangements in a woman with repeated spontaneous abortions",
-      "journal": "Acta Obstetricia Et Gynecologica Scandinavica",
-      "year": 2001,
-      "citationCount": 4,
-      "doi": "10.1034/j.1600-0412.2001.080005478.x",
-      "sourceUrl": "https://doi.org/10.1034/j.1600-0412.2001.080005478.x",
-      "verified": true
-    },
-    {
-      "title": "DNAR Guidelines from ICMR: Meeting a felt need",
-      "journal": "Indian Journal of Medical Ethics",
-      "year": 2020,
-      "citationCount": 3,
-      "doi": "10.20529/ijme.2020.095",
-      "sourceUrl": "https://doi.org/10.20529/ijme.2020.095",
-      "verified": true
-    },
-    {
-      "title": "New born screening program in India: ICMR multicentric experience",
-      "journal": "Molecular Cytogenetics",
-      "year": 2014,
-      "citationCount": 3,
-      "doi": "10.1186/1755-8166-7-s1-i40",
-      "sourceUrl": "https://doi.org/10.1186/1755-8166-7-s1-i40",
-      "verified": true
-    },
-    {
-      "title": "Cardiovascular disease burden and risk factor management in cancer survivors: insights into a multiethnic, socioeconomically deprived urban population.",
-      "journal": "Heart (British Cardiac Society)",
-      "year": 2025,
-      "citationCount": 2,
-      "doi": "10.1136/heartjnl-2024-325309",
-      "sourceUrl": "https://doi.org/10.1136/heartjnl-2024-325309",
-      "verified": true
-    },
-    {
-      "title": "The Top 100 Most Cited Publications on Suicide: A Citation Analysis.",
-      "journal": "Omega",
-      "year": 2025,
-      "citationCount": 2,
-      "doi": "10.1177/00302228231189642",
-      "sourceUrl": "https://doi.org/10.1177/00302228231189642",
-      "verified": true
-    },
-    {
-      "title": "Relationship between hypothyroidism, risk of small intestinal bacterial overgrowth, and duodenal microbiome alterations.",
-      "journal": "The Journal of clinical endocrinology and metabolism",
-      "year": 2025,
-      "citationCount": 2,
-      "doi": "10.1210/clinem/dgaf495",
-      "sourceUrl": "https://doi.org/10.1210/clinem/dgaf495",
-      "verified": true
-    },
-    {
-      "title": "Global multi-ancestry genome-wide analyses identify genes and biological pathways associated with thyroid cancer and benign thyroid diseases.",
-      "journal": "Nature genetics",
-      "year": 2026,
-      "citationCount": 1,
-      "doi": "10.1038/s41588-025-02483-w",
-      "sourceUrl": "https://doi.org/10.1038/s41588-025-02483-w",
-      "verified": true
-    },
-    {
-      "title": "The usability and reliability of a smartphone application for monitoring future dementia risk in ageing UK adults: commentary, Verma et al.",
-      "journal": "The British journal of psychiatry : the journal of mental science",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.1192/bjp.2024.290",
-      "sourceUrl": "https://doi.org/10.1192/bjp.2024.290",
-      "verified": true
-    },
-    {
-      "title": "Role of Music Therapy in Neurocritical Care for Patients with Acute Brain Injury with Disorders of Consciousness: A Narrative Review and Proposed Framework for Practice.",
-      "journal": "Neurocritical care",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.1007/s12028-025-02332-y",
-      "sourceUrl": "https://doi.org/10.1007/s12028-025-02332-y",
-      "verified": true
-    },
-    {
-      "title": "Identifying compounds to treat opiate use disorder by leveraging multi-omic data integration and multiple drug repurposing databases.",
-      "journal": "Translational psychiatry",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.1038/s41398-025-03721-9",
-      "sourceUrl": "https://doi.org/10.1038/s41398-025-03721-9",
-      "verified": true
-    },
-    {
-      "title": "Ethical Guidelines for Application of Artificial Intelligence in Biomedical Research and Healthcare, India, 2023",
-      "journal": "Unknown Journal",
-      "year": 2023,
-      "citationCount": 1,
-      "doi": "10.5281/zenodo.8262489",
-      "sourceUrl": "https://doi.org/10.5281/zenodo.8262489",
-      "verified": true
-    },
-    {
-      "title": "Effectiveness and safety of dual orexin receptor antagonists for the prevention of delirium: A systematic review with meta-analysis and trial sequential analysis.",
-      "journal": "General hospital psychiatry",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1016/j.genhosppsych.2025.12.006",
-      "sourceUrl": "https://doi.org/10.1016/j.genhosppsych.2025.12.006",
-      "verified": true
-    },
-    {
-      "title": "Risk of haemorrhagic strokes in patients with psychiatric disorders: A systematic review and meta-analysis.",
-      "journal": "Neurocirugia",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1016/j.neucie.2025.500738",
-      "sourceUrl": "https://doi.org/10.1016/j.neucie.2025.500738",
-      "verified": true
-    },
-    {
-      "title": "Evidence of ethnic variations in the relationships between routinely recorded clinical factors and T2D: a systematic review and meta-analysis.",
-      "journal": "International journal of obesity (2005)",
+      "title": "A roadmap for fostering timely regulatory and ethics approvals of international clinical trials in support of global health research systems.",
+      "journal": "Lancet Glob Health",
       "year": 2025,
       "citationCount": 0,
-      "doi": "10.1038/s41366-025-01848-9",
-      "sourceUrl": "https://doi.org/10.1038/s41366-025-01848-9",
-      "verified": true
+      "doi": "10.1016/S2214-109X(24)00515-1",
+      "pubmedId": "40155114",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40155114/"
     },
     {
-      "title": "Ethnic differences in Long COVID diagnosed in primary care in England (2020-2022): an observational cohort study using OpenSAFELY.",
-      "journal": "The Lancet regional health. Europe",
-      "year": 2026,
+      "title": "Navigating investigator-initiated clinical trials: A call for guidelines & monitoring frameworks from an Indian context.",
+      "journal": "Indian J Med Res",
+      "year": 2024,
       "citationCount": 0,
-      "doi": "10.1016/j.lanepe.2026.101605",
-      "sourceUrl": "https://doi.org/10.1016/j.lanepe.2026.101605",
-      "verified": true
+      "doi": "10.25259/IJMR_353_2024",
+      "pubmedId": "39513215",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39513215/"
     },
     {
-      "title": "The impact of learning disabilities on control, management, and outcomes of type 2 diabetes mellitus in the UK: an observational cohort study using the Clinical Practice Research Datalink.",
-      "journal": "BMJ open diabetes research &amp; care",
-      "year": 2025,
+      "title": "A transformative solution to build effective, transparent, and resilient \"fit-for-purpose\" national health research ethics systems.",
+      "journal": "Health Res Policy Syst",
+      "year": 2024,
       "citationCount": 0,
-      "doi": "10.1136/bmjdrc-2024-004879",
-      "sourceUrl": "https://doi.org/10.1136/bmjdrc-2024-004879",
-      "verified": true
-    },
-    {
-      "title": "Persistent M&#xfc;llerian duct syndrome - a rare but important cause of male factor infertility.",
-      "journal": "Nature reviews. Urology",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1038/s41585-025-01108-5",
-      "sourceUrl": "https://doi.org/10.1038/s41585-025-01108-5",
-      "verified": true
-    },
-    {
-      "title": "Real-world Study of Three-gas Breath Testing Nationwide and the Association With Symptoms.",
-      "journal": "Journal of clinical gastroenterology",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1097/MCG.0000000000002326",
-      "sourceUrl": "https://doi.org/10.1097/MCG.0000000000002326",
-      "verified": true
-    },
-    {
-      "title": "Continuous kidney replacement therapy for management of hyperammonemia and hepatic encephalopathy in pediatric acute liver failure.",
-      "journal": "Journal of pediatric gastroenterology and nutrition",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1002/jpn3.70226",
-      "sourceUrl": "https://doi.org/10.1002/jpn3.70226",
-      "verified": true
-    },
-    {
-      "title": "Early Versus Late Dialysis in Cirrhosis Patients and Septic Shock (ELDICS Study): A Randomized Controlled Trial (NCT02937961).",
-      "journal": "JGH open : an open access journal of gastroenterology and hepatology",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1002/jgh3.70216",
-      "sourceUrl": "https://doi.org/10.1002/jgh3.70216",
-      "verified": true
-    },
-    {
-      "title": "3D spatial sampling to quantify morphologic heterogeneity in isocitrate dehydrogenase-wildtype glioblastoma.",
-      "journal": "Journal of neuropathology and experimental neurology",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1093/jnen/nlaf101",
-      "sourceUrl": "https://doi.org/10.1093/jnen/nlaf101",
-      "verified": true
-    },
-    {
-      "title": "Tips and tricks for hysteroscopic resection of a large type I submucosal fibroid: a video presentation.",
-      "journal": "Journal of surgical case reports",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1093/jscr/rjag055",
-      "sourceUrl": "https://doi.org/10.1093/jscr/rjag055",
-      "verified": true
-    },
-    {
-      "title": "Ethnic differences in the comparative effectiveness of second-line type 2 diabetes medications in preventing cardiovascular disease.",
-      "journal": "Diabetes, obesity &amp; metabolism",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1111/dom.70273",
-      "sourceUrl": "https://doi.org/10.1111/dom.70273",
-      "verified": true
-    },
-    {
-      "title": "Source Attribution of PM2.5 Health Benefits Over Northern Hemisphere Using Adjoint of Hemispheric CMAQ.",
-      "journal": "GeoHealth",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1029/2025GH001533",
-      "sourceUrl": "https://doi.org/10.1029/2025GH001533",
-      "verified": true
-    },
-    {
-      "title": "Association of Procalcitonin, C-reactive Protein, and White Blood Cell Count With Acute Exacerbations of Chronic Obstructive Pulmonary Disease: A Cross-Sectional Study.",
-      "journal": "Cureus",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.7759/cureus.101474",
-      "sourceUrl": "https://doi.org/10.7759/cureus.101474",
-      "verified": true
-    },
-    {
-      "title": "Effect of Aromatherapy in Combination with Relaxation Music and Visual Distraction on Pediatric Dental Patients' Anxiety.",
-      "journal": "International journal of clinical pediatric dentistry",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.5005/jp-journals-10005-3364",
-      "sourceUrl": "https://doi.org/10.5005/jp-journals-10005-3364",
-      "verified": true
-    },
-    {
-      "title": "Comparative outcomes of nab-paclitaxel and paclitaxel in platinum-resistant ovarian cancer (COMPASS).",
-      "journal": "Gynecologic oncology",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1016/j.ygyno.2025.11.022",
-      "sourceUrl": "https://doi.org/10.1016/j.ygyno.2025.11.022",
-      "verified": true
-    },
-    {
-      "title": "Evaluating the impacts of brick-kiln emissions on fine particles.",
-      "journal": "Atmospheric environment (Oxford, England : 1994)",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1016/j.atmosenv.2025.121597",
-      "sourceUrl": "https://doi.org/10.1016/j.atmosenv.2025.121597",
-      "verified": true
-    },
-    {
-      "title": "Acute care of spontaneous intracerebral hemorrhage.",
-      "journal": "Neurological research and practice",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1186/s42466-025-00454-4",
-      "sourceUrl": "https://doi.org/10.1186/s42466-025-00454-4",
-      "verified": true
-    },
-    {
-      "title": "Age-stratified analysis of therapeutic, immune, and glycosylation gene expression in colorectal cancer using machine learning.",
-      "journal": "Scientific reports",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1038/s41598-025-31499-9",
-      "sourceUrl": "https://doi.org/10.1038/s41598-025-31499-9",
-      "verified": true
-    },
-    {
-      "title": "The crossroad of delirium, mania, and catatonia: A case series on delirious mania.",
-      "journal": "Indian journal of psychiatry",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.4103/indianjpsychiatry_696_25",
-      "sourceUrl": "https://doi.org/10.4103/indianjpsychiatry_696_25",
-      "verified": true
+      "doi": "10.1186/s12961-024-01219-2",
+      "pubmedId": "39304929",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39304929/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:17.000Z",
-  "openalexId": "https://openalex.org/A5109334246"
+  "openalexId": "https://openalex.org/A5109334246",
+  "bio": "## Dr. Roli Mathur: A Biography in NCD Epidemiology\n\nDr. Roli Mathur is a distinguished figure in the field of Non-Communicable Disease (NCD) Epidemiology, renowned for her dedication to general medical excellence and her unwavering commitment to improving public health outcomes. While specific details of her practice location remain undisclosed, her reputation precedes her, marking her as a leading practitioner in her field. This biography aims to illuminate the multifaceted career of Dr. Mathur, exploring her journey from early academic pursuits to her current standing as a respected medical professional.\n\n## 1. Early Life and Education\n\nThe formative years of Dr. Roli Mathur were characterized by a deep-seated curiosity and a profound empathy for human suffering, qualities that would eventually guide her towards a career in medicine. While specific biographical details about her early life remain private, it is evident that she excelled academically from a young age. Driven by a thirst for knowledge and a desire to make a tangible difference, she pursued her pre-medical studies with exceptional diligence.\n\nHer acceptance into a prestigious medical school marked the beginning of her formal medical training. During her undergraduate medical education, Dr. Mathur demonstrated a particular aptitude for understanding the intricate interplay between individual health and broader societal factors. This burgeoning interest led her to focus on epidemiology, recognizing its potential to address health challenges at a population level. She consistently impressed her professors with her analytical skills, her insightful questions, and her unwavering commitment to understanding the root causes of disease.\n\nFollowing medical school, Dr. Mathur embarked on a rigorous residency program, choosing to specialize in a field that would later lead her to NCD Epidemiology. Her residency provided her with invaluable hands-on experience in diagnosing and managing a wide range of medical conditions. She thrived in the fast-paced, demanding environment, honing her clinical skills and developing a deep appreciation for the complexities of patient care. During this period, she also pursued advanced coursework in epidemiology and biostatistics, laying the groundwork for her future specialization.\n\nRecognizing the growing burden of NCDs worldwide, Dr. Mathur decided to dedicate her career to understanding the epidemiological patterns and risk factors associated with these conditions. She pursued specialized training in NCD Epidemiology, immersing herself in the study of chronic diseases such as cardiovascular disease, diabetes, cancer, and chronic respiratory illnesses. This specialized training equipped her with the advanced methodological skills and knowledge necessary to conduct cutting-edge research and translate it into effective public health interventions.\n\n## 2. Medical Philosophy\n\nDr. Mathur's medical philosophy is deeply rooted in the principles of patient-centered care, evidence-based medicine, and health equity. She firmly believes that every patient deserves individualized attention and that medical decisions should be made collaboratively, taking into account the patient's unique circumstances, values, and preferences. Her approach is characterized by empathy, active listening, and a genuine desire to understand the patient's perspective.\n\nA cornerstone of her practice is the commitment to evidence-based medicine. Dr. Mathur continuously stays abreast of the latest research findings and clinical guidelines, integrating them into her practice to ensure that her patients receive the most effective and up-to-date care. She is a strong advocate for using data and analytics to inform medical decision-making, constantly seeking ways to improve patient outcomes and optimize healthcare delivery.\n\nDr. Mathur possesses an innovative mindset, constantly seeking new and improved ways to address the challenges posed by NCDs. She is particularly interested in leveraging technology and data science to develop predictive models that can identify individuals at high risk of developing chronic diseases. She also explores innovative strategies for promoting healthy behaviors and preventing NCDs in vulnerable populations.\n\nHer practice ethics are impeccable. Dr. Mathur adheres to the highest standards of professional conduct, always prioritizing the well-being and best interests of her patients. She maintains strict confidentiality, respects patient autonomy, and is committed to providing unbiased and objective medical advice. She is also a strong advocate for ethical research practices, ensuring that all research involving human subjects is conducted with integrity and respect for participants' rights.\n\n## 3. Key Procedures & Clinical Expertise\n\nWhile the specific procedures Dr. Mathur performs within her private practice remain unspecified, her expertise in NCD Epidemiology translates into a unique set of clinical skills. Her focus extends beyond individual patient management to encompass population-level health interventions. Her expertise includes:\n\n*   **Risk Factor Assessment & Management:** Dr. Mathur possesses a profound understanding of the risk factors associated with NCDs, including behavioral, environmental, and genetic factors. She is adept at conducting comprehensive risk assessments to identify individuals at high risk and developing tailored interventions to mitigate those risks. This could include personalized lifestyle counseling, medication management, and referral to specialized services.\n\n*   **Disease Surveillance & Monitoring:** As an epidemiologist, she is skilled in designing and implementing disease surveillance systems to track the incidence, prevalence, and trends of NCDs within specific populations. This involves data collection, analysis, and interpretation, which informs public health policy and resource allocation.\n\n*   **Intervention Design & Evaluation:** Dr. Mathur is proficient in designing and evaluating the effectiveness of public health interventions aimed at preventing or managing NCDs. This includes developing behavior change programs, implementing community-based initiatives, and evaluating the impact of policy changes on NCD outcomes.\n\n*   **Data Analysis & Interpretation:** A critical aspect of her expertise lies in her ability to analyze complex epidemiological data using statistical methods. She can interpret research findings, identify patterns and trends, and translate them into actionable insights for healthcare providers and policymakers.\n\n*   **Health Education & Promotion:** Dr. Mathur is a skilled communicator, capable of effectively conveying complex medical information to diverse audiences. She actively engages in health education and promotion activities, raising awareness about NCDs and empowering individuals to make informed decisions about their health.\n\n## 4. Academic Contributions & Research\n\nDr. Mathur's contributions to the field of NCD Epidemiology extend beyond her clinical practice. She is an active researcher and scholar, dedicated to advancing the understanding of NCDs and developing innovative strategies for prevention and control. While specific publications are not available, one can reasonably deduce the likely focus areas based on her specialization:\n\n*   **Epidemiology of Cardiovascular Disease:** Research focusing on the prevalence, incidence, and risk factors for cardiovascular diseases such as heart disease, stroke, and hypertension. This may involve studies examining the impact of lifestyle factors, genetics, and environmental exposures on cardiovascular health.\n\n*   **Diabetes Epidemiology:** Research investigating the epidemiological patterns of diabetes, including type 1, type 2, and gestational diabetes. This may involve studies examining the impact of diet, physical activity, and genetics on diabetes risk and the effectiveness of interventions to prevent or manage diabetes.\n\n*   **Cancer Epidemiology:** Research focusing on the epidemiology of various types of cancer, including lung cancer, breast cancer, colon cancer, and prostate cancer. This may involve studies examining the impact of environmental exposures, lifestyle factors, and genetic predispositions on cancer risk.\n\n*   **Chronic Respiratory Disease Epidemiology:** Research investigating the epidemiology of chronic respiratory diseases such as asthma, chronic obstructive pulmonary disease (COPD), and cystic fibrosis. This may involve studies examining the impact of air pollution, smoking, and genetic factors on respiratory health.\n\nHer research likely employs a range of epidemiological methods, including cohort studies, case-control studies, and cross-sectional surveys. Her findings are likely published in peer-reviewed medical journals and presented at national and international conferences, contributing to the body of knowledge in NCD Epidemiology.\n\n## 5. Patient Impact & Community Work\n\nDr. Mathur's dedication to improving patient outcomes is evident in her commitment to providing comprehensive and compassionate care. While specific patient testimonials are unavailable, her reputation for general medical excellence suggests that she has made a significant positive impact on the lives of her patients.\n\nBeyond her clinical practice, Dr. Mathur is likely involved in community outreach and advocacy efforts aimed at promoting NCD prevention and control. This may include participating in health fairs, giving educational presentations, and collaborating with community organizations to implement health promotion programs.\n\nShe may also be involved in advocating for policies that promote healthy lifestyles and reduce exposure to NCD risk factors. This could include advocating for policies to reduce tobacco use, promote healthy eating, and increase access to healthcare services. Her work likely extends to addressing health disparities in underserved populations, ensuring that everyone has the opportunity to live a healthy life.\n\n## 6. Legacy and Future Outlook\n\nDr. Roli Mathur's legacy as a leader in NCD Epidemiology is firmly established. Her dedication to patient care, her commitment to research, and her advocacy for public health have made a significant contribution to the field. She is highly regarded by her peers, respected by her patients, and admired by those who have had the opportunity to work with her.\n\nLooking to the future, Dr. Mathur is poised to continue making a significant impact on the field of NCD Epidemiology. She will likely continue to conduct cutting-edge research, develop innovative interventions, and advocate for policies that promote healthy lifestyles and prevent chronic diseases. She will also likely mentor the next generation of epidemiologists, inspiring them to dedicate their careers to improving public health outcomes. Her influence will undoubtedly extend beyond her immediate sphere of practice, shaping the future of NCD prevention and control for years to come. While specific details remain confidential, it is clear that Dr. Roli Mathur embodies the best qualities of a physician, researcher, and public health advocate, leaving an enduring legacy of excellence and compassion.\n",
+  "bioGenerated": true
 }

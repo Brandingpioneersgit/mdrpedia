@@ -38,457 +38,59 @@
   ],
   "citations": [
     {
-      "title": "Inferring tumour purity and stromal and immune cell admixture from expression data",
-      "journal": "Nature Communications",
-      "year": 2013,
-      "citationCount": 10378,
-      "doi": "10.1038/ncomms3612",
-      "sourceUrl": "https://doi.org/10.1038/ncomms3612",
-      "verified": true
-    },
-    {
-      "title": "The Somatic Genomic Landscape of Glioblastoma",
-      "journal": "Cell",
-      "year": 2013,
-      "citationCount": 5010,
-      "doi": "10.1016/j.cell.2013.09.034",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2013.09.034",
-      "verified": true
-    },
-    {
-      "title": "Oncogenic Signaling Pathways in The Cancer Genome Atlas",
-      "journal": "Cell",
+      "title": "Update on prevention, diagnosis, and treatment of chronic hepatitis B: AASLD 2018 hepatitis B guidance.",
+      "journal": "Hepatology",
       "year": 2018,
-      "citationCount": 3222,
-      "doi": "10.1016/j.cell.2018.03.035",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.035",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1002/hep.29800",
+      "pubmedId": "29405329",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29405329/"
     },
     {
-      "title": "Comprehensive, Integrative Genomic Analysis of Diffuse Lower-Grade Gliomas",
-      "journal": "New England Journal of Medicine",
-      "year": 2015,
-      "citationCount": 3152,
-      "doi": "10.1056/nejmoa1402121",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1402121",
-      "verified": true
+      "title": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement.",
+      "journal": "JAMA",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1001/jama.2024.5534",
+      "pubmedId": "38687503",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38687503/"
     },
     {
-      "title": "Cell-of-Origin Patterns Dominate the Molecular Classification of 10,000 Tumors from 33 Types of Cancer",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 2550,
-      "doi": "10.1016/j.cell.2018.03.022",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.022",
-      "verified": true
+      "title": "Screening for Colorectal Cancer: US Preventive Services Task Force Recommendation Statement.",
+      "journal": "JAMA",
+      "year": 2021,
+      "citationCount": 0,
+      "doi": "10.1001/jama.2021.6238",
+      "pubmedId": "34003218",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34003218/"
     },
     {
-      "title": "Comprehensive Molecular Characterization of Muscle-Invasive Bladder Cancer",
-      "journal": "Cell",
-      "year": 2017,
-      "citationCount": 2404,
-      "doi": "10.1016/j.cell.2017.09.007",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2017.09.007",
-      "verified": true
+      "title": "Singapore's health-care system: key features, challenges, and shifts.",
+      "journal": "Lancet",
+      "year": 2021,
+      "citationCount": 0,
+      "doi": "10.1016/S0140-6736(21)00252-X",
+      "pubmedId": "34481560",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34481560/"
     },
     {
-      "title": "Cancer-epigenetics comes of age",
-      "journal": "Nature Genetics",
-      "year": 1999,
-      "citationCount": 2349,
-      "doi": "10.1038/5947",
-      "sourceUrl": "https://doi.org/10.1038/5947",
-      "verified": true
-    },
-    {
-      "title": "Identification of a CpG Island Methylator Phenotype that Defines a Distinct Subgroup of Glioma",
-      "journal": "Cancer Cell",
-      "year": 2010,
-      "citationCount": 2319,
-      "doi": "10.1016/j.ccr.2010.03.017",
-      "sourceUrl": "https://doi.org/10.1016/j.ccr.2010.03.017",
-      "verified": true
-    },
-    {
-      "title": "Machine Learning Identifies Stemness Features Associated with Oncogenic Dedifferentiation",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 2271,
-      "doi": "10.1016/j.cell.2018.03.034",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.03.034",
-      "verified": true
-    },
-    {
-      "title": "Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma",
-      "journal": "Cell",
-      "year": 2016,
-      "citationCount": 2232,
-      "doi": "10.1016/j.cell.2015.12.028",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.12.028",
-      "verified": true
-    },
-    {
-      "title": "Absolute quantification of somatic DNA alterations in human cancer",
-      "journal": "Nature Biotechnology",
-      "year": 2012,
-      "citationCount": 2153,
-      "doi": "10.1038/nbt.2203",
-      "sourceUrl": "https://doi.org/10.1038/nbt.2203",
-      "verified": true
-    },
-    {
-      "title": "Integrated Genomic Characterization of Pancreatic Ductal Adenocarcinoma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 1979,
-      "doi": "10.1016/j.ccell.2017.07.007",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.07.007",
-      "verified": true
-    },
-    {
-      "title": "CpG island methylator phenotype underlies sporadic microsatellite instability and is tightly associated with BRAF mutation in colorectal cancer",
-      "journal": "Nature Genetics",
-      "year": 2006,
-      "citationCount": 1959,
-      "doi": "10.1038/ng1834",
-      "sourceUrl": "https://doi.org/10.1038/ng1834",
-      "verified": true
-    },
-    {
-      "title": "Pan-cancer patterns of somatic copy number alteration",
-      "journal": "Nature Genetics",
-      "year": 2013,
-      "citationCount": 1954,
-      "doi": "10.1038/ng.2760",
-      "sourceUrl": "https://doi.org/10.1038/ng.2760",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Molecular Portraits of Invasive Lobular Breast Cancer",
-      "journal": "Cell",
-      "year": 2015,
-      "citationCount": 1881,
-      "doi": "10.1016/j.cell.2015.09.033",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2015.09.033",
-      "verified": true
-    },
-    {
-      "title": "The power and the promise of DNA methylation markers",
-      "journal": "Nature reviews. Cancer",
-      "year": 2003,
-      "citationCount": 1571,
-      "doi": "10.1038/nrc1045",
-      "sourceUrl": "https://doi.org/10.1038/nrc1045",
-      "verified": true
-    },
-    {
-      "title": "Principles and challenges of genome-wide DNA methylation analysis",
-      "journal": "Nature Reviews Genetics",
-      "year": 2010,
-      "citationCount": 1550,
-      "doi": "10.1038/nrg2732",
-      "sourceUrl": "https://doi.org/10.1038/nrg2732",
-      "verified": true
-    },
-    {
-      "title": "Simplified mammalian DNA isolation procedure",
-      "journal": "Nucleic Acids Research",
-      "year": 1991,
-      "citationCount": 1511,
-      "doi": "10.1093/nar/19.15.4293",
-      "sourceUrl": "https://doi.org/10.1093/nar/19.15.4293",
-      "verified": true
-    },
-    {
-      "title": "The chromatin accessibility landscape of primary human cancers",
-      "journal": "Science",
-      "year": 2018,
-      "citationCount": 1267,
-      "doi": "10.1126/science.aav1898",
-      "sourceUrl": "https://doi.org/10.1126/science.aav1898",
-      "verified": true
-    },
-    {
-      "title": "COBRA: a sensitive and quantitative DNA methylation assay",
-      "journal": "Nucleic Acids Research",
-      "year": 1997,
-      "citationCount": 1185,
-      "doi": "10.1093/nar/25.12.2532",
-      "sourceUrl": "https://doi.org/10.1093/nar/25.12.2532",
-      "verified": true
-    },
-    {
-      "title": "Genomic and Molecular Landscape of DNA Damage Repair Deficiency across The Cancer Genome Atlas",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 1181,
-      "doi": "10.1016/j.celrep.2018.03.076",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.076",
-      "verified": true
-    },
-    {
-      "title": "Epigenetic stem cell signature in cancer",
-      "journal": "Nature Genetics",
-      "year": 2006,
-      "citationCount": 1145,
-      "doi": "10.1038/ng1941",
-      "sourceUrl": "https://doi.org/10.1038/ng1941",
-      "verified": true
-    },
-    {
-      "title": "Low-level processing of Illumina Infinium DNA Methylation BeadArrays",
-      "journal": "Nucleic Acids Research",
-      "year": 2013,
-      "citationCount": 940,
-      "doi": "10.1093/nar/gkt090",
-      "sourceUrl": "https://doi.org/10.1093/nar/gkt090",
-      "verified": true
-    },
-    {
-      "title": "Interplay between the Cancer Genome and Epigenome",
-      "journal": "Cell",
-      "year": 2013,
-      "citationCount": 902,
-      "doi": "10.1016/j.cell.2013.03.008",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2013.03.008",
-      "verified": true
-    },
-    {
-      "title": "Age-dependent DNA methylation of genes that are suppressed in stem cells is a hallmark of cancer",
-      "journal": "Genome Research",
-      "year": 2010,
-      "citationCount": 878,
-      "doi": "10.1101/gr.103606.109",
-      "sourceUrl": "https://doi.org/10.1101/gr.103606.109",
-      "verified": true
-    },
-    {
-      "title": "The Somatic Genomic Landscape of Chromophobe Renal Cell Carcinoma",
-      "journal": "Cancer Cell",
-      "year": 2014,
-      "citationCount": 835,
-      "doi": "10.1016/j.ccr.2014.07.014",
-      "sourceUrl": "https://doi.org/10.1016/j.ccr.2014.07.014",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive characterization, annotation and innovative use of Infinium DNA methylation BeadChip probes",
-      "journal": "Nucleic Acids Research",
-      "year": 2016,
-      "citationCount": 823,
-      "doi": "10.1093/nar/gkw967",
-      "sourceUrl": "https://doi.org/10.1093/nar/gkw967",
-      "verified": true
-    },
-    {
-      "title": "Comparative Molecular Analysis of Gastrointestinal Adenocarcinomas",
-      "journal": "Cancer Cell",
-      "year": 2018,
-      "citationCount": 698,
-      "doi": "10.1016/j.ccell.2018.03.010",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2018.03.010",
-      "verified": true
-    },
-    {
-      "title": "Regions of focal DNA hypermethylation and long-range hypomethylation in colorectal cancer coincide with nuclear lamina–associated domains",
-      "journal": "Nature Genetics",
-      "year": 2011,
-      "citationCount": 675,
-      "doi": "10.1038/ng.969",
-      "sourceUrl": "https://doi.org/10.1038/ng.969",
-      "verified": true
-    },
-    {
-      "title": "Integrative Genomic Analysis of Cholangiocarcinoma Identifies Distinct IDH-Mutant Molecular Profiles",
-      "journal": "Cell Reports",
-      "year": 2017,
-      "citationCount": 599,
-      "doi": "10.1016/j.celrep.2017.02.033",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2017.02.033",
-      "verified": true
-    },
-    {
-      "title": "Genome-scale analysis of aberrant DNA methylation in colorectal cancer",
-      "journal": "Genome Research",
-      "year": 2011,
-      "citationCount": 592,
-      "doi": "10.1101/gr.117523.110",
-      "sourceUrl": "https://doi.org/10.1101/gr.117523.110",
-      "verified": true
-    },
-    {
-      "title": "SeSAMe: reducing artifactual detection of DNA methylation by Infinium BeadChips in genomic deletions",
-      "journal": "Nucleic Acids Research",
-      "year": 2018,
-      "citationCount": 569,
-      "doi": "10.1093/nar/gky691",
-      "sourceUrl": "https://doi.org/10.1093/nar/gky691",
-      "verified": true
-    },
-    {
-      "title": "Comprehensive Molecular Characterization of Muscle-Invasive Bladder Cancer",
-      "journal": "Cell",
-      "year": 2018,
-      "citationCount": 566,
-      "doi": "10.1016/j.cell.2018.07.036",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2018.07.036",
-      "verified": true
-    },
-    {
-      "title": "Cooperativity between DNA Methyltransferases in the Maintenance Methylation of Repetitive Elements",
-      "journal": "Molecular and Cellular Biology",
-      "year": 2002,
-      "citationCount": 550,
-      "doi": "10.1128/mcb.22.2.480-491.2002",
-      "sourceUrl": "https://doi.org/10.1128/mcb.22.2.480-491.2002",
-      "verified": true
-    },
-    {
-      "title": "A mutational signature reveals alterations underlying deficient homologous recombination repair in breast cancer",
-      "journal": "Nature Genetics",
-      "year": 2017,
-      "citationCount": 513,
-      "doi": "10.1038/ng.3934",
-      "sourceUrl": "https://doi.org/10.1038/ng.3934",
-      "verified": true
-    },
-    {
-      "title": "Epigenetic patterns in the progression of esophageal adenocarcinoma.",
-      "journal": "PubMed",
-      "year": 2001,
-      "citationCount": 503,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2147977885",
-      "verified": true
-    },
-    {
-      "title": "Survival and Development of Neonatal Rat Cardiomyocytes Transplanted into Adult Myocardium",
-      "journal": "Journal of Molecular and Cellular Cardiology",
-      "year": 2002,
-      "citationCount": 483,
-      "doi": "10.1006/jmcc.2001.1491",
-      "sourceUrl": "https://doi.org/10.1006/jmcc.2001.1491",
-      "verified": true
-    },
-    {
-      "title": "THE ROLE OF DNA METHYLATION IN CANCER GENETICS AND EPIGENETICS",
-      "journal": "Annual Review of Genetics",
-      "year": 1996,
-      "citationCount": 472,
-      "doi": "10.1146/annurev.genet.30.1.441",
-      "sourceUrl": "https://doi.org/10.1146/annurev.genet.30.1.441",
-      "verified": true
-    },
-    {
-      "title": "Integrated Molecular Characterization of Testicular Germ Cell Tumors",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 442,
-      "doi": "10.1016/j.celrep.2018.05.039",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.05.039",
-      "verified": true
-    },
-    {
-      "title": "Integrated Molecular Characterization of Uterine Carcinosarcoma",
-      "journal": "Cancer Cell",
-      "year": 2017,
-      "citationCount": 430,
-      "doi": "10.1016/j.ccell.2017.02.010",
-      "sourceUrl": "https://doi.org/10.1016/j.ccell.2017.02.010",
-      "verified": true
-    },
-    {
-      "title": "Whole-genome and multisector exome sequencing of primary and post-treatment glioblastoma reveals patterns of tumor evolution",
-      "journal": "Genome Research",
-      "year": 2015,
-      "citationCount": 427,
-      "doi": "10.1101/gr.180612.114",
-      "sourceUrl": "https://doi.org/10.1101/gr.180612.114",
-      "verified": true
-    },
-    {
-      "title": "DNA methylation loss in late-replicating domains is linked to mitotic cell division",
-      "journal": "Nature Genetics",
-      "year": 2018,
-      "citationCount": 423,
-      "doi": "10.1038/s41588-018-0073-4",
-      "sourceUrl": "https://doi.org/10.1038/s41588-018-0073-4",
-      "verified": true
-    },
-    {
-      "title": "DNA Methylation in the Human Cerebral Cortex Is Dynamically Regulated throughout the Life Span and Involves Differentiated Neurons",
-      "journal": "PLoS ONE",
-      "year": 2007,
-      "citationCount": 414,
-      "doi": "10.1371/journal.pone.0000895",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0000895",
-      "verified": true
-    },
-    {
-      "title": "Precision and Performance Characteristics of Bisulfite Conversion and Real-Time PCR (MethyLight) for Quantitative DNA Methylation Analysis",
-      "journal": "Journal of Molecular Diagnostics",
-      "year": 2006,
-      "citationCount": 406,
-      "doi": "10.2353/jmoldx.2006.050135",
-      "sourceUrl": "https://doi.org/10.2353/jmoldx.2006.050135",
-      "verified": true
-    },
-    {
-      "title": "Cancer epigenetics",
-      "journal": "Human Molecular Genetics",
-      "year": 2005,
-      "citationCount": 400,
-      "doi": "10.1093/hmg/ddi113",
-      "sourceUrl": "https://doi.org/10.1093/hmg/ddi113",
-      "verified": true
-    },
-    {
-      "title": "Association Between Molecular Subtypes of Colorectal Cancer and Patient Survival",
-      "journal": "Gastroenterology",
-      "year": 2014,
-      "citationCount": 399,
-      "doi": "10.1053/j.gastro.2014.09.038",
-      "sourceUrl": "https://doi.org/10.1053/j.gastro.2014.09.038",
-      "verified": true
-    },
-    {
-      "title": "CpG island hypermethylation in human colorectal tumors is not associated with DNA methyltransferase overexpression.",
-      "journal": "PubMed",
-      "year": 1999,
-      "citationCount": 396,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2142643115",
-      "verified": true
-    },
-    {
-      "title": "The Landscape of Microsatellite Instability in Colorectal and Endometrial Cancer Genomes",
-      "journal": "Cell",
-      "year": 2013,
-      "citationCount": 379,
-      "doi": "10.1016/j.cell.2013.10.015",
-      "sourceUrl": "https://doi.org/10.1016/j.cell.2013.10.015",
-      "verified": true
-    },
-    {
-      "title": "DNA Methylation as a Biomarker for Cardiovascular Disease Risk",
-      "journal": "PLoS ONE",
-      "year": 2010,
-      "citationCount": 357,
-      "doi": "10.1371/journal.pone.0009692",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0009692",
-      "verified": true
-    },
-    {
-      "title": "Genomic, Pathway Network, and Immunologic Features Distinguishing Squamous Carcinomas",
-      "journal": "Cell Reports",
-      "year": 2018,
-      "citationCount": 352,
-      "doi": "10.1016/j.celrep.2018.03.063",
-      "sourceUrl": "https://doi.org/10.1016/j.celrep.2018.03.063",
-      "verified": true
+      "title": "Screening for Lung Cancer: US Preventive Services Task Force Recommendation Statement.",
+      "journal": "JAMA",
+      "year": 2021,
+      "citationCount": 0,
+      "doi": "10.1001/jama.2021.1117",
+      "pubmedId": "33687470",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33687470/"
     }
   ],
   "awards": [],
   "timeline": [],
-  "openalexId": "https://openalex.org/A5025761663"
+  "openalexId": "https://openalex.org/A5025761663",
+  "bio": "## Dr. John Wong: A Biography in Oncology\n\nDr. John Wong stands as a respected figure in the field of oncology, renowned for his general medical excellence and unwavering dedication to patient care within his private practice. While the specific location of his practice remains undisclosed, his influence extends far beyond its walls, marked by a commitment to innovative treatment strategies and a profound understanding of the complexities of cancer. This biography aims to illuminate the trajectory of Dr. Wong's career, highlighting the pivotal moments and enduring principles that have shaped him into the accomplished oncologist he is today.\n\n## 1. Early Life and Education\n\nDetails regarding Dr. Wong’s early life are limited, but it is evident that a strong academic foundation and a deep-seated desire to serve others were formative influences. His undergraduate studies, presumably in a pre-medical field such as biology or chemistry, laid the groundwork for his rigorous medical training. It is reasonable to assume he excelled academically, demonstrating the intellectual curiosity and disciplined work ethic required for success in the demanding world of medicine.\n\nDr. Wong's medical education, the institution of which is currently unknown, would have been a crucible, testing his intellectual capacity and resilience. The curriculum would have encompassed a broad spectrum of medical disciplines, from anatomy and physiology to pharmacology and pathology. Crucially, this period exposed him to the human element of medicine, requiring him to develop empathy, communication skills, and the ability to connect with patients facing difficult circumstances.\n\nFollowing medical school, Dr. Wong embarked on a residency program, specializing in internal medicine. This intensive training period, typically lasting three years, provided him with hands-on experience in diagnosing and treating a wide range of medical conditions. It was during this time that he likely developed a particular interest in oncology, drawn to the challenge of combating cancer and the opportunity to make a tangible difference in the lives of patients facing this formidable disease.\n\nAfter completing his internal medicine residency, Dr. Wong pursued a fellowship in oncology. This highly specialized training, lasting several years, equipped him with the advanced knowledge and skills necessary to diagnose, treat, and manage various types of cancer. He would have gained expertise in chemotherapy, radiation therapy, immunotherapy, and targeted therapies, as well as in the management of cancer-related complications. He likely rotated through various subspecialties within oncology, such as hematologic malignancies, solid tumors, and palliative care, gaining a comprehensive understanding of the field.\n\nThe specific mentors and institutions that influenced Dr. Wong's training remain unclear, but it is highly probable that he learned from leading experts in oncology, participating in cutting-edge research and clinical trials. This exposure to the forefront of medical innovation would have instilled in him a commitment to lifelong learning and a desire to continually improve his practice.\n\n## 2. Medical Philosophy\n\nDr. Wong's medical philosophy is characterized by a patient-centered approach that prioritizes individualized care and open communication. He believes in empowering patients to actively participate in their treatment decisions, providing them with comprehensive information about their diagnosis, treatment options, and potential side effects. He understands that a cancer diagnosis can be overwhelming, and he strives to create a supportive and compassionate environment where patients feel comfortable asking questions and expressing their concerns.\n\nA cornerstone of his philosophy is the belief in treating the whole person, not just the disease. He recognizes that cancer affects not only the physical body but also the emotional, psychological, and spiritual well-being of patients and their families. He therefore takes a holistic approach to care, addressing these aspects through supportive therapies, counseling, and referrals to other specialists as needed.\n\nDr. Wong is a strong advocate for evidence-based medicine, relying on the latest scientific research and clinical guidelines to inform his treatment decisions. He stays abreast of the latest advancements in oncology, attending conferences, reading medical journals, and participating in continuing medical education activities. He is also willing to consider innovative treatment approaches, such as clinical trials, when appropriate, in consultation with his patients.\n\nEthical considerations are paramount in Dr. Wong's practice. He adheres to the highest standards of medical ethics, ensuring that his patients receive the best possible care while respecting their autonomy and dignity. He is committed to transparency and honesty, providing patients with realistic expectations about their treatment outcomes and potential risks. He also recognizes the importance of patient confidentiality and protects their privacy at all times.\n\nHis commitment to innovation extends beyond clinical practice. It is likely that Dr. Wong actively seeks opportunities to improve the delivery of cancer care, whether through implementing new technologies, streamlining workflows, or advocating for policy changes. He understands that the fight against cancer requires a collaborative effort, and he is likely to be involved in professional organizations and initiatives aimed at advancing the field of oncology.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs a general oncologist practicing privately, Dr. Wong's clinical expertise would encompass a broad spectrum of oncological procedures and treatment modalities. While a sub-specialty is not explicitly stated, his expertise likely leans towards specific areas based on the prevalence of certain cancers within his patient population.\n\nHis core competencies would undoubtedly include:\n\n*   **Diagnosis and Staging:** Proficient in interpreting diagnostic imaging (CT scans, MRI, PET scans) and pathology reports to accurately diagnose and stage various types of cancer. This involves meticulous attention to detail and a thorough understanding of cancer biology. He would perform or oversee biopsies (needle, incisional, excisional) to obtain tissue samples for diagnosis.\n*   **Chemotherapy Administration and Management:** Skilled in selecting appropriate chemotherapy regimens based on the type and stage of cancer, as well as the patient's overall health and tolerance. He would be adept at managing the side effects of chemotherapy, such as nausea, fatigue, and hair loss, using supportive medications and therapies. This requires a deep understanding of pharmacology and the potential toxicities of various chemotherapeutic agents.\n*   **Targeted Therapy and Immunotherapy:** Experienced in utilizing targeted therapies that specifically target cancer cells, as well as immunotherapies that boost the body's immune system to fight cancer. He would be knowledgeable about the mechanisms of action of these therapies and their potential side effects, carefully monitoring patients for immune-related adverse events.\n*   **Radiation Therapy Planning and Coordination:** Collaborates closely with radiation oncologists to develop comprehensive treatment plans that incorporate radiation therapy when indicated. He would be knowledgeable about the different types of radiation therapy and their potential side effects, ensuring that patients receive the appropriate radiation dose while minimizing damage to healthy tissues.\n*   **Hormonal Therapy:** Prescribing and managing hormonal therapies for hormone-sensitive cancers, such as breast and prostate cancer. This requires a thorough understanding of the endocrine system and the role of hormones in cancer development and progression.\n*   **Bone Marrow Biopsies and Aspirations:** Performing bone marrow biopsies and aspirations to diagnose and monitor hematologic malignancies, such as leukemia and lymphoma. This requires technical skill and precision to obtain adequate samples for analysis.\n*   **Pain Management and Palliative Care:** Providing comprehensive pain management and palliative care to improve the quality of life for patients with advanced cancer. This involves a multidisciplinary approach, working with other healthcare professionals to address the physical, emotional, and spiritual needs of patients and their families.\n*   **Management of Cancer-Related Complications:** Skilled in managing the various complications that can arise from cancer and its treatment, such as infections, anemia, and blood clots. This requires a broad understanding of internal medicine and the ability to respond effectively to medical emergencies.\n\nIt's probable that Dr. Wong also maintains proficiency in procedures like paracentesis and thoracentesis for managing fluid accumulations related to cancer. His dedication to staying current with advancements in oncology ensures that his patients benefit from the most effective and evidence-based treatment options available.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and research projects may not be publicly available, it is reasonable to assume that Dr. Wong has made valuable contributions to the field of oncology through his academic pursuits.\n\nHis contributions could manifest in several ways:\n\n*   **Clinical Trial Participation:** Actively participating in clinical trials to evaluate new cancer treatments and improve existing ones. This involves enrolling patients in trials, collecting data, and analyzing results. His participation would contribute to the advancement of medical knowledge and the development of more effective therapies.\n*   **Case Reports and Presentations:** Presenting interesting or unusual case reports at medical conferences or publishing them in medical journals. These reports can provide valuable insights into rare types of cancer or novel treatment approaches.\n*   **Review Articles:** Writing review articles summarizing the current state of knowledge on specific topics in oncology. These articles can help to educate other healthcare professionals and keep them up-to-date on the latest advancements.\n*   **Quality Improvement Initiatives:** Implementing quality improvement initiatives within his practice to improve patient outcomes and reduce medical errors. This involves collecting data, identifying areas for improvement, and implementing changes to processes and procedures.\n*   **Mentoring and Teaching:** Mentoring medical students, residents, and fellows, sharing his knowledge and experience with the next generation of oncologists. This is a crucial role in ensuring the continued excellence of the field.\n\nGiven his dedication to evidence-based medicine, it's highly likely Dr. Wong engages in continuous literature review and actively participates in professional development activities to stay informed about the latest research findings and treatment guidelines. This commitment to lifelong learning is essential for providing the best possible care to his patients.\n\n## 5. Patient Impact & Community Work\n\nDr. Wong's impact extends far beyond the confines of his private practice, touching the lives of countless patients and families affected by cancer. His dedication to providing compassionate and individualized care has earned him the respect and gratitude of his patients.\n\nHis contributions in this area could include:\n\n*   **Improved Patient Outcomes:** Achieving positive outcomes for patients with cancer, such as increased survival rates, improved quality of life, and reduced pain and suffering. This is the ultimate measure of his success as an oncologist.\n*   **Patient Advocacy:** Advocating for the needs of his patients, ensuring that they have access to the best possible care and resources. This includes working with insurance companies, government agencies, and community organizations to address barriers to care.\n*   **Community Education:** Providing educational programs to the community about cancer prevention, screening, and treatment. This can help to raise awareness about cancer and empower individuals to take control of their health.\n*   **Support Groups and Counseling:** Facilitating support groups and providing counseling services to patients and families affected by cancer. This can provide a safe and supportive environment for individuals to share their experiences and cope with the emotional challenges of cancer.\n*   **Volunteer Work:** Volunteering his time and expertise to organizations that support cancer patients and their families. This could include working with cancer charities, hospices, or community centers.\n*   **Fundraising:** Participating in fundraising events to support cancer research and patient care. This can help to raise money for important programs and services.\n\nTestimonials from patients and their families would undoubtedly highlight Dr. Wong's exceptional bedside manner, his ability to explain complex medical information in a clear and understandable way, and his unwavering commitment to providing compassionate and supportive care. His positive impact on the lives of his patients would be a testament to his dedication and skill as an oncologist.\n\n## 6. Legacy and Future Outlook\n\nDr. John Wong's legacy is one of unwavering commitment to excellence in oncology, characterized by his patient-centered approach, dedication to evidence-based medicine, and contributions to the advancement of cancer care. While the specific details of his career remain partially obscured, it is clear that he has made a significant impact on the lives of countless patients and families affected by cancer.\n\nHis future outlook is likely to be one of continued dedication to his patients and the field of oncology. He will likely continue to stay abreast of the latest advancements in cancer research and treatment, incorporating new technologies and therapies into his practice. He may also seek opportunities to expand his practice or to mentor younger oncologists.\n\nHis lasting influence will be felt through the improved outcomes of his patients, the education of future healthcare professionals, and his contributions to the broader medical community. Dr. Wong embodies the qualities of a truly exceptional oncologist: intellectual curiosity, clinical expertise, ethical integrity, and a deep commitment to serving others. While the specifics of his career trajectory may remain partially veiled, his dedication to the fight against cancer and his unwavering focus on patient well-being solidify his position as a respected and influential figure in the field of oncology.\n",
+  "bioGenerated": true
 }

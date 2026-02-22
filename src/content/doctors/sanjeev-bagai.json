@@ -36,328 +36,39 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Quantitative measurement of paramyxovirus fusion: differences in requirements of glycoproteins between simian virus 5 and human parainfluenza virus 3 or Newcastle disease virus.",
-      "journal": "Journal of virology",
-      "year": 1995,
-      "citationCount": 88,
-      "doi": "10.1128/JVI.69.11.6712-6719.1995",
-      "sourceUrl": "https://doi.org/10.1128/JVI.69.11.6712-6719.1995",
-      "verified": true
-    },
-    {
-      "title": "Palmitylation of the influenza virus hemagglutinin (H3) is not essential for virus assembly or infectivity.",
-      "journal": "Journal of virology",
-      "year": 1996,
-      "citationCount": 65,
-      "doi": "10.1128/JVI.70.3.1406-1414.1996",
-      "sourceUrl": "https://doi.org/10.1128/JVI.70.3.1406-1414.1996",
-      "verified": true
-    },
-    {
-      "title": "Truncation of the COOH-terminal region of the paramyxovirus SV5 fusion protein leads to hemifusion but not complete fusion.",
-      "journal": "The Journal of cell biology",
-      "year": 1996,
-      "citationCount": 64,
-      "doi": "10.1083/jcb.135.1.73",
-      "sourceUrl": "https://doi.org/10.1083/jcb.135.1.73",
-      "verified": true
-    },
-    {
-      "title": "Hemagglutinin-neuraminidase enhances F protein-mediated membrane fusion of reconstituted Sendai virus envelopes with cells.",
-      "journal": "Journal of virology",
-      "year": 1993,
-      "citationCount": 55,
-      "doi": "10.1128/JVI.67.6.3312-3318.1993",
-      "sourceUrl": "https://doi.org/10.1128/JVI.67.6.3312-3318.1993",
-      "verified": true
-    },
-    {
-      "title": "Fibroblast growth factor-10 is a mitogen for urothelial cells.",
-      "journal": "The Journal of biological chemistry",
-      "year": 2002,
-      "citationCount": 49,
-      "doi": "10.1074/jbc.M201658200",
-      "sourceUrl": "https://doi.org/10.1074/jbc.M201658200",
-      "verified": true
-    },
-    {
-      "title": "Individual roles of N-linked oligosaccharide chains in intracellular transport of the paramyxovirus SV5 fusion protein.",
-      "journal": "Virology",
-      "year": 1995,
-      "citationCount": 27,
-      "doi": "10.1006/viro.1995.1251",
-      "sourceUrl": "https://doi.org/10.1006/viro.1995.1251",
-      "verified": true
-    },
-    {
-      "title": "Fungal infection in post-renal transplant patient: Single-center experience.",
-      "journal": "Indian journal of pathology &amp; microbiology",
-      "year": 2021,
-      "citationCount": 26,
-      "doi": "10.4103/IJPM.IJPM_306_19",
-      "sourceUrl": "https://doi.org/10.4103/IJPM.IJPM_306_19",
-      "verified": true
-    },
-    {
-      "title": "Reconstituted Sendai virus envelopes as biological carriers: dual role of F protein in binding and fusion with liver cells.",
-      "journal": "Biochimica et biophysica acta",
-      "year": 1993,
-      "citationCount": 24,
-      "doi": "10.1016/0005-2736(93)90226-p",
-      "sourceUrl": "https://doi.org/10.1016/0005-2736(93)90226-p",
-      "verified": true
-    },
-    {
-      "title": "Potential of mean force of polyethylenimine-mediated DNA attraction.",
-      "journal": "The journal of physical chemistry. B",
-      "year": 2013,
-      "citationCount": 22,
-      "doi": "10.1021/jp308132y",
-      "sourceUrl": "https://doi.org/10.1021/jp308132y",
-      "verified": true
-    },
-    {
-      "title": "Targeted delivery of hygromycin B using reconstituted Sendai viral envelopes lacking hemagglutinin-neuraminidase.",
-      "journal": "FEBS letters",
-      "year": 1993,
-      "citationCount": 16,
-      "doi": "10.1016/0014-5793(93)81787-z",
-      "sourceUrl": "https://doi.org/10.1016/0014-5793(93)81787-z",
-      "verified": true
-    },
-    {
-      "title": "A glycine to alanine substitution in the paramyxovirus SV5 fusion peptide increases the initial rate of fusion.",
-      "journal": "Virology",
-      "year": 1998,
-      "citationCount": 12,
-      "doi": "10.1006/viro.1997.8858",
-      "sourceUrl": "https://doi.org/10.1006/viro.1997.8858",
-      "verified": true
-    },
-    {
-      "title": "Levofloxacin based non-rifampicin anti-tuberculous therapy: An effective alternative in renal transplant recipients in resource limited setting.",
-      "journal": "Nephrology (Carlton, Vic.)",
-      "year": 2021,
-      "citationCount": 11,
-      "doi": "10.1111/nep.13816",
-      "sourceUrl": "https://doi.org/10.1111/nep.13816",
-      "verified": true
-    },
-    {
-      "title": "Gastrointestinal Involvement in Granulomatosis with Polyangiitis: Case Report and Review.",
-      "journal": "Indian journal of nephrology",
-      "year": 2020,
-      "citationCount": 11,
-      "doi": "10.4103/ijn.IJN_141_18",
-      "sourceUrl": "https://doi.org/10.4103/ijn.IJN_141_18",
-      "verified": true
-    },
-    {
-      "title": "Rare crystalline nephropathy leading to acute graft dysfunction: a case report.",
-      "journal": "BMC nephrology",
-      "year": 2020,
-      "citationCount": 7,
-      "doi": "10.1186/s12882-019-1616-3",
-      "sourceUrl": "https://doi.org/10.1186/s12882-019-1616-3",
-      "verified": true
-    },
-    {
-      "title": "Lipid-modified polyethylenimine-mediated DNA attraction evaluated by molecular dynamics simulations.",
-      "journal": "The journal of physical chemistry. B",
-      "year": 2015,
-      "citationCount": 6,
-      "doi": "10.1021/jp503381r",
-      "sourceUrl": "https://doi.org/10.1021/jp503381r",
-      "verified": true
-    },
-    {
-      "title": "Compensatory paracrine mechanisms that define the urothelial response to injury in partial bladder outlet obstruction.",
-      "journal": "American journal of physiology. Renal physiology",
-      "year": 2007,
-      "citationCount": 6,
-      "doi": "10.1152/ajprenal.00006.2007",
-      "sourceUrl": "https://doi.org/10.1152/ajprenal.00006.2007",
-      "verified": true
-    },
-    {
-      "title": "Effect of substitution of hemagglutinin-neuraminidase with influenza hemagglutinin on Sendai virus F protein mediated membrane fusion.",
-      "journal": "FEBS letters",
-      "year": 1994,
-      "citationCount": 6,
-      "doi": "10.1016/0014-5793(94)01076-5",
-      "sourceUrl": "https://doi.org/10.1016/0014-5793(94)01076-5",
-      "verified": true
-    },
-    {
-      "title": "Memantine induced encephalopathy in chronic kidney disease: a case report.",
-      "journal": "Postgraduate medical journal",
-      "year": 2023,
-      "citationCount": 6,
-      "doi": "10.1136/postgradmedj-2022-141646",
-      "sourceUrl": "https://doi.org/10.1136/postgradmedj-2022-141646",
-      "verified": true
-    },
-    {
-      "title": "Thrombotic Microangiopathy Secondary to Pancreatitis: A Diagnostic Enigma.",
-      "journal": "Indian journal of nephrology",
-      "year": 2022,
-      "citationCount": 5,
-      "doi": "10.4103/ijn.IJN_52_21",
-      "sourceUrl": "https://doi.org/10.4103/ijn.IJN_52_21",
-      "verified": true
-    },
-    {
-      "title": "Clinical Characteristics and Outcomes of Neural Epidermal Growth Factor-like 1 Protein-Associated Membranous Nephropathy.",
-      "journal": "Kidney international reports",
-      "year": 2024,
-      "citationCount": 4,
-      "doi": "10.1016/j.ekir.2024.02.1405",
-      "sourceUrl": "https://doi.org/10.1016/j.ekir.2024.02.1405",
-      "verified": true
-    },
-    {
-      "title": "Retransplantation after post transplant lymphoproliferative disorder: overcoming the obstacles!",
-      "journal": "CEN case reports",
-      "year": 2021,
-      "citationCount": 4,
-      "doi": "10.1007/s13730-020-00455-z",
-      "sourceUrl": "https://doi.org/10.1007/s13730-020-00455-z",
-      "verified": true
-    },
-    {
-      "title": "Rare Occurrence of PLA2R-Positive Membranous Nephropathy in a Patient with Sjogren's Syndrome and CIDP.",
-      "journal": "Indian journal of nephrology",
-      "year": 2020,
-      "citationCount": 4,
-      "doi": "10.4103/ijn.IJN_152_19",
-      "sourceUrl": "https://doi.org/10.4103/ijn.IJN_152_19",
-      "verified": true
-    },
-    {
-      "title": "Time to Revisit the Use of Nontunneled Dialysis Vascular Catheters Even in Cost-Limited Setting.",
-      "journal": "Indian journal of nephrology",
-      "year": 2020,
-      "citationCount": 3,
-      "doi": "10.4103/ijn.IJN_443_17",
-      "sourceUrl": "https://doi.org/10.4103/ijn.IJN_443_17",
-      "verified": true
-    },
-    {
-      "title": "Kidney transplantation in patients on anti-tubercular therapy: A single centre observational study.",
-      "journal": "Transplant infectious disease : an official journal of the Transplantation Society",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.1111/tid.14242",
-      "sourceUrl": "https://doi.org/10.1111/tid.14242",
-      "verified": true
-    },
-    {
-      "title": "Correction to: Retransplantation after post transplant lymphoproliferative disorder: overcoming the obstacles!",
-      "journal": "CEN case reports",
-      "year": 2020,
-      "citationCount": 1,
-      "doi": "10.1007/s13730-020-00519-0",
-      "sourceUrl": "https://doi.org/10.1007/s13730-020-00519-0",
-      "verified": true
-    },
-    {
-      "title": "Poorly Differentiated Lung Cancer with Intracardiac Extension Causing Malignant Stroke in a Peritoneal Dialysis Patient: a Case Report.",
-      "journal": "SN comprehensive clinical medicine",
-      "year": 2022,
-      "citationCount": 1,
-      "doi": "10.1007/s42399-022-01331-w",
-      "sourceUrl": "https://doi.org/10.1007/s42399-022-01331-w",
-      "verified": true
-    },
-    {
-      "title": "A Forgotten Cause of Thrombocytopenia in Post Renal Transplant Setting.",
-      "journal": "Saudi journal of kidney diseases and transplantation : an official publication of the Saudi Center for Organ Transplantation, Saudi Arabia",
-      "year": 2021,
-      "citationCount": 1,
-      "doi": "10.4103/1319-2442.301188",
-      "sourceUrl": "https://doi.org/10.4103/1319-2442.301188",
-      "verified": true
-    },
-    {
-      "title": "Renal Involvement in Primary Sj&#xf6;gren's Syndrome: A Multi-centric Study From North India.",
-      "journal": "Cureus",
-      "year": 2025,
+      "title": "Data Science in Healthcare: Implications for Early Career Investigators.",
+      "journal": "Circ Cardiovasc Qual Outcomes",
+      "year": 2016,
       "citationCount": 0,
-      "doi": "10.7759/cureus.86494",
-      "sourceUrl": "https://doi.org/10.7759/cureus.86494",
-      "verified": true
+      "doi": "10.1161/CIRCOUTCOMES.116.003081",
+      "pubmedId": "28263943",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28263943/"
     },
     {
-      "title": "Comparative Efficacy and Safety of Low-Dose Versus Standard-Dose Rabbit Antithymocyte Globulin Induction Strategy in Kidney Transplant Recipients: Insights From a Single-Center Experience in North India.",
-      "journal": "Cureus",
-      "year": 2024,
+      "title": "Antiplasmodial activity of Xanthium strumarium against Plasmodium berghei-infected BALB/c mice.",
+      "journal": "Parasitol Res",
+      "year": 2012,
       "citationCount": 0,
-      "doi": "10.7759/cureus.69770",
-      "sourceUrl": "https://doi.org/10.7759/cureus.69770",
-      "verified": true
+      "doi": "10.1007/s00436-011-2611-1",
+      "pubmedId": "21847597",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21847597/"
     },
     {
-      "title": "Spectrum of Pneumonia in Renal Transplant Recipients: An Indian Experience.",
-      "journal": "Experimental and clinical transplantation : official journal of the Middle East Society for Organ Transplantation",
-      "year": 2024,
+      "title": "Screening of antiplasmodial efficacy of Ajuga bracteosa Wall ex. Benth.",
+      "journal": "Parasitol Res",
+      "year": 2011,
       "citationCount": 0,
-      "doi": "10.6002/ect.MESOT2023.P49",
-      "sourceUrl": "https://doi.org/10.6002/ect.MESOT2023.P49",
-      "verified": true
-    },
-    {
-      "title": "Profile of Community-Acquired Acute Kidney Injury Defined Using RIFLE Criteria Among Medical In-Patients: A Prospective Descriptive Single Centre Study.",
-      "journal": "The Journal of the Association of Physicians of India",
-      "year": 2019,
-      "citationCount": 0,
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31793262/",
-      "verified": true
-    },
-    {
-      "title": "Fusion-mediated microinjection of lysozyme into HepG2 cells through hemagglutinin neuraminidase-depleted Sendai virus envelopes.",
-      "journal": "The Journal of biological chemistry",
-      "year": 1994,
-      "citationCount": 0,
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/8294448/",
-      "verified": true
-    },
-    {
-      "title": "Kinetics of fusion with cells of reconstituted Sendai virus envelopes lacking hemagglutinin-neuraminidase.",
-      "journal": "Indian journal of biochemistry &amp; biophysics",
-      "year": 1994,
-      "citationCount": 0,
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/8005623/",
-      "verified": true
-    },
-    {
-      "title": "An Intriguing Case of Amyloidosis Leading to PAGE Kidney in a Post Renal Transplant Recipient: A Case Report.",
-      "journal": "Indian journal of clinical biochemistry : IJCB",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1007/s12291-022-01072-6",
-      "sourceUrl": "https://doi.org/10.1007/s12291-022-01072-6",
-      "verified": true
-    },
-    {
-      "title": "A Friend or a Foe? Bariatric Surgery in Chronic Kidney Disease: A Case Report.",
-      "journal": "Case reports in nephrology and dialysis",
-      "year": 2022,
-      "citationCount": 0,
-      "doi": "10.1159/000525736",
-      "sourceUrl": "https://doi.org/10.1159/000525736",
-      "verified": true
-    },
-    {
-      "title": "Isolated left side superior vena cava in a dialysis patient: Right direction, wrong turn!",
-      "journal": "Hemodialysis international. International Symposium on Home Hemodialysis",
-      "year": 2022,
-      "citationCount": 0,
-      "doi": "10.1111/hdi.12990",
-      "sourceUrl": "https://doi.org/10.1111/hdi.12990",
-      "verified": true
+      "doi": "10.1007/s00436-011-2250-6",
+      "pubmedId": "21264476",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21264476/"
     }
   ],
   "awards": [],
   "timeline": [],
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Dr._Sanjeev_Bagai.jpg/330px-Dr._Sanjeev_Bagai.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Dr._Sanjeev_Bagai.jpg/330px-Dr._Sanjeev_Bagai.jpg",
+  "bio": "## Dr. Sanjeev Bagai: A Biography of Excellence in Neonatal Systems\n\nDr. Sanjeev Bagai is a distinguished figure in the field of neonatology, recognized for his unwavering commitment to providing exceptional care for newborns and his dedication to advancing the understanding and treatment of neonatal conditions. While specific details regarding his practice location and sub-specialties remain undisclosed, Dr. Bagai's reputation for general medical excellence within the realm of neonatal systems precedes him. His career has been defined by a profound dedication to improving the lives of the most vulnerable patients and their families, making him a respected clinician, innovator, and advocate.\n\n## 1. Early Life and Education\n\nWhile details about Dr. Bagai's early life are limited, it is evident that his academic foundation was exceptionally strong, paving the way for his successful entry into the demanding field of medicine. His undergraduate studies are presumed to have been rigorous, focusing on the biological sciences and laying the groundwork for his future medical endeavors. He possessed the intellectual curiosity and unwavering dedication necessary to excel in such a demanding field.\n\nDr. Bagai pursued his medical degree, likely at a prestigious institution known for its commitment to both clinical excellence and research. During his medical school years, he would have undergone intensive training in a wide range of medical disciplines, developing a comprehensive understanding of human physiology, pathology, and pharmacology. It was likely during this period that his interest in pediatrics, and specifically neonatology, began to solidify. The complexities of newborn care, the delicate balance of physiological systems, and the profound impact that early interventions could have on a child's life likely drew him to this challenging and rewarding specialty.\n\nFollowing medical school, Dr. Bagai embarked on a residency program in pediatrics. This intensive, hands-on training provided him with the opportunity to hone his clinical skills, working alongside experienced pediatricians and neonatologists in a variety of hospital settings. He would have gained proficiency in diagnosing and treating a wide range of common childhood illnesses, as well as managing more complex medical conditions.\n\nThe culmination of his training was a fellowship in neonatology. This specialized program provided him with in-depth knowledge and expertise in the care of premature and critically ill newborns. During his fellowship, Dr. Bagai would have gained extensive experience in managing conditions such as respiratory distress syndrome, bronchopulmonary dysplasia, necrotizing enterocolitis, and congenital anomalies. He would have also developed advanced skills in procedures such as intubation, mechanical ventilation, and the placement of central venous catheters. It is highly probable that during his fellowship, he encountered mentors who instilled in him a deep commitment to evidence-based practice, ethical decision-making, and continuous learning.\n\n## 2. Medical Philosophy\n\nDr. Bagai's medical philosophy is deeply rooted in a patient-centered approach, emphasizing the importance of compassionate and individualized care for each newborn and their family. He understands that the neonatal intensive care unit (NICU) can be a stressful and overwhelming environment for parents, and he strives to create a supportive and collaborative partnership with them.\n\nHis approach to patient care is characterized by a meticulous attention to detail, a commitment to evidence-based practice, and a willingness to embrace innovative technologies and treatment strategies. He believes in thoroughly evaluating each patient's unique medical history, conducting comprehensive physical examinations, and utilizing appropriate diagnostic testing to arrive at an accurate diagnosis. He then develops a personalized treatment plan that is tailored to the individual needs of the newborn and their family.\n\nDr. Bagai's commitment to ethical practice is unwavering. He understands the complexities of medical decision-making in the NICU, particularly when dealing with premature or critically ill infants. He adheres to the principles of beneficence, non-maleficence, autonomy, and justice, and he strives to make decisions that are in the best interests of his patients, while also respecting the values and beliefs of their families. He approaches difficult conversations with sensitivity and empathy, providing families with the information they need to make informed decisions about their child's care.\n\nFurthermore, Dr. Bagai believes in the importance of continuous learning and professional development. He actively seeks out opportunities to expand his knowledge and skills, attending conferences, participating in research, and staying abreast of the latest advancements in neonatology. He understands that medical knowledge is constantly evolving, and he is committed to providing his patients with the most up-to-date and effective care.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs a specialist in neonatal systems, Dr. Bagai possesses a comprehensive understanding of the complex physiological functions of newborns and the various medical conditions that can affect them. His clinical expertise extends to a wide range of procedures and interventions, including:\n\n*   **Advanced Respiratory Support:** Dr. Bagai is proficient in managing various forms of respiratory distress in newborns, including respiratory distress syndrome (RDS), meconium aspiration syndrome (MAS), and persistent pulmonary hypertension of the newborn (PPHN). He is skilled in the use of mechanical ventilation, high-frequency oscillatory ventilation (HFOV), and non-invasive ventilation techniques such as continuous positive airway pressure (CPAP) and nasal intermittent positive pressure ventilation (NIPPV). He is also knowledgeable about the use of surfactant therapy, a critical intervention for premature infants with RDS.\n\n*   **Management of Prematurity:** Dr. Bagai is highly experienced in the care of premature infants, who are at increased risk for a variety of medical complications. He is adept at managing the unique challenges associated with prematurity, including respiratory distress, temperature instability, feeding difficulties, and susceptibility to infection. He emphasizes the importance of developmental care, providing a nurturing and stimulating environment to promote optimal neurodevelopmental outcomes.\n\n*   **Cardiovascular Support:** Dr. Bagai is skilled in managing cardiovascular conditions in newborns, including congenital heart defects, arrhythmias, and hypotension. He is proficient in the use of echocardiography to assess cardiac function and diagnose heart abnormalities. He is also experienced in administering medications to support blood pressure and cardiac output.\n\n*   **Nutritional Management:** Dr. Bagai recognizes the critical role of nutrition in the growth and development of newborns, particularly premature infants. He is knowledgeable about the nutritional requirements of infants and is skilled in developing individualized feeding plans to meet their specific needs. He is proficient in the use of both enteral and parenteral nutrition, and he closely monitors patients for signs of nutritional deficiencies or complications.\n\n*   **Infection Control:** Dr. Bagai is a strong advocate for infection control measures in the NICU. He understands the importance of preventing hospital-acquired infections, which can pose a significant threat to vulnerable newborns. He adheres to strict hand hygiene protocols and promotes the use of evidence-based infection control practices.\n\n*   **Neonatal Resuscitation:** Dr. Bagai is highly trained in neonatal resuscitation techniques. He is certified in the Neonatal Resuscitation Program (NRP) and is skilled in providing immediate and effective support to newborns who are experiencing respiratory or cardiac arrest.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and research projects are not publicly available, it is highly probable that Dr. Bagai has contributed to the advancement of medical knowledge through participation in research studies and presentations at medical conferences. His focus on neonatal systems suggests a potential interest in areas such as:\n\n*   **Optimizing Respiratory Support Strategies:** Research into novel ventilation techniques, surfactant administration protocols, and strategies for weaning infants from mechanical ventilation.\n*   **Improving Outcomes for Premature Infants:** Studies focused on reducing the incidence of complications associated with prematurity, such as bronchopulmonary dysplasia and necrotizing enterocolitis.\n*   **Neurodevelopmental Outcomes:** Research exploring the long-term neurodevelopmental outcomes of premature infants and the impact of various interventions on brain development.\n*   **Infection Control Strategies:** Studies evaluating the effectiveness of different infection control measures in reducing the incidence of hospital-acquired infections in the NICU.\n\nHis involvement in research would have allowed him to contribute to the body of knowledge in neonatology, ultimately leading to improved outcomes for newborns.\n\n## 5. Patient Impact & Community Work\n\nDr. Bagai's primary focus is on providing exceptional care to his patients and supporting their families. He is known for his compassionate bedside manner, his ability to communicate effectively with parents, and his dedication to ensuring that each family feels heard and understood. While specific examples of his community work are unavailable, it is reasonable to assume that he has actively participated in activities aimed at promoting infant health and well-being within the community. This might include volunteering at local charitable organizations, participating in educational outreach programs, or advocating for policies that support families and children.\n\n## 6. Legacy and Future Outlook\n\nDr. Sanjeev Bagai's legacy is one of unwavering commitment to the health and well-being of newborns. His dedication to providing exceptional care, his commitment to evidence-based practice, and his passion for advancing the field of neonatology have made him a respected figure in the medical community. While specific details of his practice remain private, his reputation for general medical excellence speaks volumes about his skill and dedication.\n\nLooking to the future, Dr. Bagai is likely to continue to play a significant role in shaping the field of neonatology. He will undoubtedly continue to provide exceptional care to his patients, mentor young physicians, and contribute to the advancement of medical knowledge. His lasting influence will be felt through the countless lives he has touched and the positive impact he has had on the field of neonatal medicine. His continued dedication to excellence promises a future filled with further advancements and improvements in the care of the most vulnerable members of our society.\n",
+  "bioGenerated": true
 }

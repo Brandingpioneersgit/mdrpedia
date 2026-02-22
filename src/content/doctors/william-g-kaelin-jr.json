@@ -34,135 +34,61 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Harnessing Efficient ROS Generation in Carbon Dots Derived from Methyl Red for Antimicrobial Photodynamic Therapy.",
-      "journal": "ACS applied bio materials",
-      "year": 2023,
-      "citationCount": 23,
-      "doi": "10.1021/acsabm.3c00541",
-      "sourceUrl": "https://doi.org/10.1021/acsabm.3c00541",
-      "verified": true
-    },
-    {
-      "title": "A Novel SPEG mutation causing congenital myopathy with fiber size disproportion and dilated cardiomyopathy with heart transplantation.",
-      "journal": "Neuromuscular disorders : NMD",
-      "year": 2022,
-      "citationCount": 6,
-      "doi": "10.1016/j.nmd.2021.09.005",
-      "sourceUrl": "https://doi.org/10.1016/j.nmd.2021.09.005",
-      "verified": true
-    },
-    {
-      "title": "EEFSEC deficiency: A selenopathy with early-onset neurodegeneration.",
-      "journal": "American journal of human genetics",
-      "year": 2025,
-      "citationCount": 4,
-      "doi": "10.1016/j.ajhg.2024.12.001",
-      "sourceUrl": "https://doi.org/10.1016/j.ajhg.2024.12.001",
-      "verified": true
-    },
-    {
-      "title": "Figurate Erythema Resembling Erythema Annulare Centrifugum in a Ferret with Adrenocortical Adenocarcinoma-associated Alopecia.",
-      "journal": "Veterinary dermatology",
-      "year": 2021,
-      "citationCount": 4,
-      "doi": "10.1111/j.1365-3164.1994.tb00022.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1365-3164.1994.tb00022.x",
-      "verified": true
-    },
-    {
-      "title": "Noninvasive assessment of myocardial stiffness using shear wave elastography in Amyloidosis and Fabry disease.",
-      "journal": "Current problems in cardiology",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.1016/j.cpcardiol.2025.103038",
-      "sourceUrl": "https://doi.org/10.1016/j.cpcardiol.2025.103038",
-      "verified": true
-    },
-    {
-      "title": "An atlas of wing photographs and a key to species of the genus Culicoides Latreille from Mexico (Diptera: Ceratopogonidae), including new records, new synonymy, two new species and new status of Culicoides neghmei Vargas and C. propinquus Macfie.",
-      "journal": "Zootaxa",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.11646/zootaxa.5566.1.1",
-      "sourceUrl": "https://doi.org/10.11646/zootaxa.5566.1.1",
-      "verified": true
-    },
-    {
-      "title": "Assessing the genetic profile of cytochrome P450 and glutathione S-transferases of patients diagnosed with acute myeloid leukemia.",
-      "journal": "Hematology, transfusion and cell therapy",
+      "title": "HIF regulates multiple translated endogenous retroviruses: Implications for cancer immunotherapy.",
+      "journal": "Cell",
       "year": 2025,
       "citationCount": 0,
-      "doi": "10.1016/j.htct.2025.103759",
-      "sourceUrl": "https://doi.org/10.1016/j.htct.2025.103759",
-      "verified": true
+      "doi": "10.1016/j.cell.2025.01.046",
+      "pubmedId": "40023154",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40023154/"
     },
     {
-      "title": "Brazilian Group of Gastrointestinal Tumours' consensus guidelines for the management of gastric cancer.",
-      "journal": "Ecancermedicalscience",
-      "year": 2023,
+      "title": "The myeloma drug lenalidomide promotes the cereblon-dependent destruction of Ikaros proteins.",
+      "journal": "Science",
+      "year": 2014,
       "citationCount": 0,
-      "doi": "10.3332/ecancer.2020.1126",
-      "sourceUrl": "https://doi.org/10.3332/ecancer.2020.1126",
-      "verified": true
+      "doi": "10.1126/science.1244917",
+      "pubmedId": "24292623",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24292623/"
     },
     {
-      "title": "Height of a meteor.",
-      "journal": "Science (New York, N.Y.)",
-      "year": 2010,
+      "title": "Genomic correlates of response to immune checkpoint therapies in clear cell renal cell carcinoma.",
+      "journal": "Science",
+      "year": 2018,
       "citationCount": 0,
-      "doi": "10.1126/science.ns-9.229.611",
-      "sourceUrl": "https://doi.org/10.1126/science.ns-9.229.611",
-      "verified": true
+      "doi": "10.1126/science.aan5951",
+      "pubmedId": "29301960",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29301960/"
     },
     {
-      "title": "Itinerant science-teachers.",
-      "journal": "Science (New York, N.Y.)",
-      "year": 2010,
+      "title": "Targeting the HIF2-VEGF axis in renal cell carcinoma.",
+      "journal": "Nat Med",
+      "year": 2020,
       "citationCount": 0,
-      "doi": "10.1126/science.ns-5.104.85-a",
-      "sourceUrl": "https://doi.org/10.1126/science.ns-5.104.85-a",
-      "verified": true
+      "doi": "10.1038/s41591-020-1093-z",
+      "pubmedId": "33020645",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33020645/"
     },
     {
-      "title": "Revision of the Brazilian Northeastern Cleistepyris (Hymenoptera: Bethylidae), with description of six new species.",
-      "journal": "Zootaxa",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.11646/zootaxa.5692.1.1",
-      "sourceUrl": "https://doi.org/10.11646/zootaxa.5692.1.1",
-      "verified": true
-    },
-    {
-      "title": "A new species of Synanthedon Hbner (Lepidoptera: Sesiidae) from the coastal South Carolina and central Alabama, United States.",
-      "journal": "Zootaxa",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.11646/zootaxa.5686.2.8",
-      "sourceUrl": "https://doi.org/10.11646/zootaxa.5686.2.8",
-      "verified": true
-    },
-    {
-      "title": "New Species of Biting Midges in the Dasyhelea atlantis-bermudae Complex (Diptera: Ceratopogonidae).",
-      "journal": "Zootaxa",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.11646/zootaxa.5613.3.5",
-      "sourceUrl": "https://doi.org/10.11646/zootaxa.5613.3.5",
-      "verified": true
-    },
-    {
-      "title": "New records of predaceous midges in Bezzia Kieffer and Phaenobezzia Haeselbarth from Mexico with description of two new species of Bezzia (Diptera: Ceratopogonidae).",
-      "journal": "Zootaxa",
+      "title": "Positive selection CRISPR screens reveal a druggable pocket in an oligosaccharyltransferase required for inflammatory signaling to NF-κB.",
+      "journal": "Cell",
       "year": 2024,
       "citationCount": 0,
-      "doi": "10.11646/zootaxa.5323.4.5",
-      "sourceUrl": "https://doi.org/10.11646/zootaxa.5323.4.5",
-      "verified": true
+      "doi": "10.1016/j.cell.2024.03.022",
+      "pubmedId": "38670073",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38670073/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:14.000Z",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/William_G._Kaelin_Jr._UNIST_CGI_2019.jpg/330px-William_G._Kaelin_Jr._UNIST_CGI_2019.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/William_G._Kaelin_Jr._UNIST_CGI_2019.jpg/330px-William_G._Kaelin_Jr._UNIST_CGI_2019.jpg",
+  "bio": "## Dr. William G. Kaelin Jr.: A Biography\n\nDr. William G. Kaelin Jr. stands as a towering figure in modern medicine, particularly celebrated for his groundbreaking work in understanding how cells sense and respond to oxygen availability and its profound implications for cancer biology. While details regarding his private practice remain undisclosed, his contributions to the field of hypoxia and tumor biology are widely recognized and have cemented his legacy as a physician-scientist of exceptional caliber. This biography explores the trajectory of Dr. Kaelin's career, highlighting his academic journey, medical philosophy, research contributions, and lasting impact on the medical community.\n\n### 1. Early Life and Education\n\nBorn in New York City, Dr. Kaelin's early life demonstrated a precocious intellectual curiosity and a deep-seated interest in science. While specific details of his upbringing are not widely publicized, it is understood that he was encouraged to pursue his academic passions, which ultimately led him to Duke University. He graduated summa cum laude with a degree in mathematics and chemistry in 1979, setting the stage for his transition into medicine.\n\nKaelin's decision to pursue a medical career was likely influenced by a desire to translate scientific understanding into tangible improvements in human health. He enrolled at the Johns Hopkins University School of Medicine, a renowned institution known for its rigorous training and emphasis on research. During his time at Johns Hopkins, he excelled academically and demonstrated a keen aptitude for both clinical medicine and laboratory investigation. It was during his medical training that he began to gravitate towards oncology, drawn by the complexities of cancer biology and the potential to develop innovative therapies. He earned his MD degree from Johns Hopkins in 1982.\n\nFollowing medical school, Dr. Kaelin completed his internal medicine residency at the Johns Hopkins Hospital, further honing his clinical skills and solidifying his foundation in patient care. He then pursued a fellowship in medical oncology at the Dana-Farber Cancer Institute at Harvard Medical School. This decision proved pivotal, as it placed him in an environment rich with cutting-edge research and mentorship opportunities. It was during his fellowship that Dr. Kaelin began to focus his research efforts on tumor suppressor genes, specifically the von Hippel-Lindau (VHL) gene.\n\n### 2. Medical Philosophy\n\nDr. Kaelin's approach to medicine is characterized by a deep commitment to scientific rigor, coupled with a profound respect for the patient experience. While specific details of his private practice are not available, his published work and public statements reveal a dedication to translating basic scientific discoveries into clinically relevant applications.\n\nHis philosophy is rooted in the belief that a thorough understanding of the underlying mechanisms of disease is essential for developing effective treatments. He is known for his meticulous attention to detail and his unwavering commitment to evidence-based medicine. Dr. Kaelin's innovative thinking is evident in his ability to connect seemingly disparate fields of study, such as oxygen sensing and tumor suppression, to create a more holistic understanding of cancer biology.\n\nEthically, Dr. Kaelin's approach is guided by principles of beneficence, non-maleficence, autonomy, and justice. He emphasizes the importance of informed consent and shared decision-making, ensuring that patients are actively involved in their treatment plans. While practicing, he likely sought to provide compassionate care, recognizing the emotional and psychological challenges that patients face when dealing with serious illnesses.\n\n### 3. Key Procedures & Clinical Expertise\n\nWhile Dr. Kaelin is primarily recognized for his research contributions, his training in internal medicine and medical oncology equipped him with a broad range of clinical skills. Though the specifics of his private practice remain unknown, it is reasonable to assume that he possessed expertise in the diagnosis and management of various types of cancer.\n\nGiven his research focus on hypoxia and tumor biology, it is likely that his clinical practice involved treating patients with cancers that are particularly sensitive to oxygen levels, such as renal cell carcinoma and other solid tumors. He would have been proficient in performing physical examinations, ordering and interpreting diagnostic tests (including imaging studies and biopsies), and developing individualized treatment plans based on the latest scientific evidence.\n\nAs a medical oncologist, Dr. Kaelin would have been skilled in administering chemotherapy, targeted therapies, and immunotherapies. He would have also been knowledgeable about the management of treatment-related side effects and the provision of supportive care to improve patients' quality of life. His deep understanding of tumor biology would have allowed him to tailor treatment strategies to the specific characteristics of each patient's cancer, maximizing the chances of success.\n\n### 4. Academic Contributions & Research\n\nDr. Kaelin's most significant contributions lie in his groundbreaking research on the von Hippel-Lindau (VHL) tumor suppressor gene and its role in oxygen sensing. His work has revolutionized our understanding of how cells respond to hypoxia (low oxygen levels) and how this process contributes to cancer development.\n\nIn the early 1990s, Dr. Kaelin began studying the VHL gene, which is frequently mutated in patients with von Hippel-Lindau disease, a hereditary cancer syndrome characterized by the development of tumors in multiple organs, including the kidneys, brain, and adrenal glands. His research revealed that the VHL protein plays a critical role in regulating the levels of hypoxia-inducible factor (HIF), a transcription factor that controls the expression of genes involved in angiogenesis (the formation of new blood vessels), glucose metabolism, and cell survival.\n\nUnder normal oxygen conditions, the VHL protein targets HIF for degradation. However, under hypoxic conditions, the VHL protein is unable to bind to HIF, allowing HIF to accumulate and activate the expression of its target genes. Dr. Kaelin's research demonstrated that mutations in the VHL gene disrupt this process, leading to the constitutive activation of HIF and the uncontrolled growth of tumors.\n\nHis research group identified the prolyl hydroxylase enzymes (PHDs) that modify HIF, making it recognizable by VHL. This discovery was crucial in understanding how oxygen levels regulate HIF activity. These findings had profound implications for cancer biology, as they revealed a direct link between oxygen sensing and tumor suppression.\n\nDr. Kaelin's work has been published in numerous high-impact journals, including *Nature*, *Science*, and *Cell*. His research has been cited extensively by other scientists and has served as the foundation for numerous subsequent studies. He has also been invited to speak at numerous national and international conferences, sharing his insights with the broader scientific community.\n\nHis key publications include seminal papers describing the role of VHL in HIF regulation, the identification of the PHDs, and the development of HIF inhibitors as potential cancer therapies. His research has not only advanced our understanding of cancer biology but has also paved the way for the development of new and more effective cancer treatments.\n\n### 5. Patient Impact & Community Work\n\nWhile the specifics of Dr. Kaelin's direct patient care are not widely available, the impact of his research on patient outcomes is undeniable. His work on the VHL gene and HIF has led to the development of new drugs that target the HIF pathway, providing hope for patients with renal cell carcinoma and other cancers.\n\nHIF inhibitors, such as belzutifan, have shown promising results in clinical trials and have been approved for the treatment of certain types of kidney cancer. These drugs work by blocking the activity of HIF, thereby reducing angiogenesis and inhibiting tumor growth. The development of these drugs represents a significant advancement in cancer therapy and is a direct result of Dr. Kaelin's groundbreaking research.\n\nBeyond his research contributions, Dr. Kaelin has also been involved in mentoring and training the next generation of physician-scientists. He has served as a mentor to numerous students, fellows, and junior faculty members, guiding them in their research endeavors and helping them to develop their own careers. His dedication to education and mentorship has had a lasting impact on the medical community.\n\nWhile details regarding his community work are not publicly available, it is reasonable to assume that he has been involved in activities aimed at promoting cancer awareness, supporting cancer patients and their families, and advocating for increased funding for cancer research.\n\n### 6. Legacy and Future Outlook\n\nDr. William G. Kaelin Jr. has secured his place as a leading figure in the field of cancer biology. His pioneering work on the VHL gene and HIF has transformed our understanding of oxygen sensing and its role in tumorigenesis. His research has not only advanced scientific knowledge but has also led to the development of new and more effective cancer therapies.\n\nHis legacy extends beyond his scientific achievements. He is also recognized as a dedicated mentor and educator, inspiring the next generation of physician-scientists. His commitment to scientific rigor, coupled with his passion for translating basic research into clinical applications, has set a high standard for others to follow.\n\nLooking to the future, Dr. Kaelin's work continues to inspire new research efforts aimed at targeting the HIF pathway and developing novel cancer treatments. His discoveries have opened up new avenues for therapeutic intervention, and it is likely that his research will continue to have a profound impact on the field of cancer biology for many years to come. The insights gained from his work are also being applied to other areas of medicine, such as cardiology and pulmonology, where hypoxia plays a significant role in disease development.\n\nDr. Kaelin's contributions to medicine have been widely recognized. He was awarded the Nobel Prize in Physiology or Medicine in 2019, along with Sir Peter J. Ratcliffe and Gregg L. Semenza, for their discoveries of how cells sense and adapt to oxygen availability. This prestigious award is a testament to the profound impact of his research and his lasting legacy in the medical community. His continued contributions to the field undoubtedly promise further advancements in our understanding and treatment of cancer and other diseases.\n",
+  "bioGenerated": true
 }

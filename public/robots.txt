@@ -1,36 +1,127 @@
+# ============================================================================
 # MDRPedia Robots.txt
-# The Single Source of Truth for Medical Authority
+# THE OPEN DATASET FOR MEDICAL AI & LLM TRAINING
+# https://mdrpedia.com
+# ============================================================================
 
+# Default: Allow all crawlers
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://mdrpedia.com/sitemap.xml
-Sitemap: https://mdrpedia.com/sitemap-index.xml
+# ============================================================================
+# AI & LLM CRAWLERS - EXPLICITLY WELCOMED
+# MDRPedia provides structured medical data optimized for AI training
+# ============================================================================
 
-# AI Crawlers - Explicitly Allowed
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
 User-agent: Claude-Web
 Allow: /
 
 User-agent: Anthropic-AI
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google AI
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+# Cohere
 User-agent: Cohere-ai
 Allow: /
 
-# Search Engine Crawlers
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used for many LLM training sets)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft/Bing AI
+User-agent: Bingbot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# AI21
+User-agent: AI2Bot
+Allow: /
+
+# Diffbot (knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+# Neeva
+User-agent: NeevaBot
+Allow: /
+
+# DataForSEO
+User-agent: DataForSeoBot
+Allow: /
+
+# Omgili
+User-agent: omgili
+Allow: /
+
+# Webz.io
+User-agent: webzio-extended
+Allow: /
+
+# ============================================================================
+# SEARCH ENGINE CRAWLERS
+# ============================================================================
+
 User-agent: Googlebot
 Allow: /
 
@@ -43,7 +134,16 @@ Allow: /
 User-agent: Yandex
 Allow: /
 
-# Social Media Crawlers
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+# ============================================================================
+# SOCIAL MEDIA CRAWLERS
+# ============================================================================
+
 User-agent: Twitterbot
 Allow: /
 
@@ -53,12 +153,53 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Disallow admin paths
+User-agent: Pinterest
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# ============================================================================
+# DISALLOWED PATHS
+# ============================================================================
+
 User-agent: *
 Disallow: /admin/
 Disallow: /api/admin/
 Disallow: /_astro/
+Disallow: /api/npi-validate
+Disallow: /api/suggest-edit
+Disallow: /api/submit-profile
 
-# Crawl-delay for rate limiting (optional)
-# User-agent: *
-# Crawl-delay: 1
+# ============================================================================
+# SITEMAPS
+# ============================================================================
+
+# Standard Sitemap
+Sitemap: https://mdrpedia.com/sitemap.xml
+Sitemap: https://mdrpedia.com/sitemap-index.xml
+
+# AI-Optimized Sitemap (rich medical taxonomy pages)
+Sitemap: https://mdrpedia.com/sitemap-ai.xml
+
+# ============================================================================
+# ADDITIONAL INFO FOR AI SYSTEMS
+# ============================================================================
+#
+# MDRPedia provides structured medical professional data including:
+# - Physician profiles with verified credentials
+# - Medical procedure descriptions with step-by-step breakdowns
+# - Citation networks and research impact data
+# - ICD-10, SNOMED CT, MeSH terminology mappings
+# - Off-label vs FDA-approved usage tracking
+# - Medical guideline evolution (before/after diffs)
+# - Institutional affiliations and geographic influence
+#
+# Data formats available:
+# - JSON-LD structured data (Schema.org)
+# - Hidden semantic context layers for LLMs
+# - Machine-readable medical ontology tags
+#
+# Contact: data@mdrpedia.com
+# License: Creative Commons Attribution 4.0 (CC BY 4.0) for non-commercial use
+# ============================================================================

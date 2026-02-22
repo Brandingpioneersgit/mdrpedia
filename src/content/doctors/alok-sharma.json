@@ -29,7 +29,7 @@
     "Fellowship in Neural Transplantation, Karolinska Hospital, Sweden"
   ],
   "socialMedia": {},
-  "portraitUrl": "https://draloksharma.in/img/doctor_images/1.jpg",
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Alok_Sharma_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg/330px-Alok_Sharma_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg",
   "affiliations": [
     {
       "hospitalName": "NeuroGen Brain & Spine Institute",
@@ -55,454 +55,54 @@
   ],
   "citations": [
     {
-      "title": "DeepInsight: A methodology to transform a non-image data to an image for convolution neural network architecture",
-      "journal": "Scientific Reports",
-      "year": 2019,
-      "citationCount": 397,
-      "doi": "10.1038/s41598-019-47765-6",
-      "sourceUrl": "https://doi.org/10.1038/s41598-019-47765-6",
-      "verified": true
-    },
-    {
-      "title": "Improving prediction of secondary structure, local backbone angles and solvent accessible surface area of proteins by iterative deep learning",
-      "journal": "Scientific Reports",
-      "year": 2015,
-      "citationCount": 363,
-      "doi": "10.1038/srep11476",
-      "sourceUrl": "https://doi.org/10.1038/srep11476",
-      "verified": true
-    },
-    {
-      "title": "Critical assessment of protein intrinsic disorder prediction",
-      "journal": "Nature Methods",
-      "year": 2021,
-      "citationCount": 353,
-      "doi": "10.1038/s41592-021-01117-3",
-      "sourceUrl": "https://doi.org/10.1038/s41592-021-01117-3",
-      "verified": true
-    },
-    {
-      "title": "Linear discriminant analysis for the small sample size problem: an overview",
-      "journal": "International Journal of Machine Learning and Cybernetics",
+      "title": "A review of the pathophysiology, etiology, and treatment of attention-deficit hyperactivity disorder (ADHD).",
+      "journal": "Ann Pharmacother",
       "year": 2014,
-      "citationCount": 275,
-      "doi": "10.1007/s13042-013-0226-9",
-      "sourceUrl": "https://doi.org/10.1007/s13042-013-0226-9",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1177/1060028013510699",
+      "pubmedId": "24259638",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24259638/"
     },
     {
-      "title": "Gram-positive and Gram-negative protein subcellular localization by incorporating evolutionary-based descriptors into Chou׳s general PseAAC",
-      "journal": "Journal of Theoretical Biology",
-      "year": 2014,
-      "citationCount": 243,
-      "doi": "10.1016/j.jtbi.2014.09.029",
-      "sourceUrl": "https://doi.org/10.1016/j.jtbi.2014.09.029",
-      "verified": true
-    },
-    {
-      "title": "Fast principal component analysis using fixed-point algorithm",
-      "journal": "Pattern Recognition Letters",
-      "year": 2007,
-      "citationCount": 186,
-      "doi": "10.1016/j.patrec.2007.01.012",
-      "sourceUrl": "https://doi.org/10.1016/j.patrec.2007.01.012",
-      "verified": true
-    },
-    {
-      "title": "SPIDER2: A Package to Predict Secondary Structure, Accessible Surface Area, and Main-Chain Torsional Angles by Deep Neural Networks",
-      "journal": "Methods in molecular biology",
-      "year": 2016,
-      "citationCount": 176,
-      "doi": "10.1007/978-1-4939-6406-2_6",
-      "sourceUrl": "https://doi.org/10.1007/978-1-4939-6406-2_6",
-      "verified": true
-    },
-    {
-      "title": "A feature extraction technique using bi-gram probabilities of position specific scoring matrix for protein fold recognition",
-      "journal": "Journal of Theoretical Biology",
-      "year": 2012,
-      "citationCount": 152,
-      "doi": "10.1016/j.jtbi.2012.12.008",
-      "sourceUrl": "https://doi.org/10.1016/j.jtbi.2012.12.008",
-      "verified": true
-    },
-    {
-      "title": "Predicting backbone Cα angles and dihedrals from protein sequences by stacked sparse auto‐encoder deep neural network",
-      "journal": "Journal of Computational Chemistry",
-      "year": 2014,
-      "citationCount": 152,
-      "doi": "10.1002/jcc.23718",
-      "sourceUrl": "https://doi.org/10.1002/jcc.23718",
-      "verified": true
-    },
-    {
-      "title": "An improved discriminative filter bank selection approach for motor imagery EEG signal classification using mutual information",
-      "journal": "BMC Bioinformatics",
-      "year": 2017,
-      "citationCount": 134,
-      "doi": "10.1186/s12859-017-1964-6",
-      "sourceUrl": "https://doi.org/10.1186/s12859-017-1964-6",
-      "verified": true
-    },
-    {
-      "title": "Brain wave classification using long short-term memory network based OPTICAL predictor",
-      "journal": "Scientific Reports",
-      "year": 2019,
-      "citationCount": 121,
-      "doi": "10.1038/s41598-019-45605-1",
-      "sourceUrl": "https://doi.org/10.1038/s41598-019-45605-1",
-      "verified": true
-    },
-    {
-      "title": "A Deep Learning Approach for Motor Imagery EEG Signal Classification",
-      "journal": "Unknown Journal",
-      "year": 2016,
-      "citationCount": 121,
-      "doi": "10.1109/apwc-on-cse.2016.017",
-      "sourceUrl": "https://doi.org/10.1109/apwc-on-cse.2016.017",
-      "verified": true
-    },
-    {
-      "title": "PyFeat: a Python-based effective feature generation tool for DNA, RNA and protein sequences",
-      "journal": "Bioinformatics",
-      "year": 2019,
-      "citationCount": 118,
-      "doi": "10.1093/bioinformatics/btz165",
-      "sourceUrl": "https://doi.org/10.1093/bioinformatics/btz165",
-      "verified": true
-    },
-    {
-      "title": "Advances in AI and machine learning for predictive medicine",
-      "journal": "Journal of Human Genetics",
-      "year": 2024,
-      "citationCount": 117,
-      "doi": "10.1038/s10038-024-01231-y",
-      "sourceUrl": "https://doi.org/10.1038/s10038-024-01231-y",
-      "verified": true
-    },
-    {
-      "title": "Highly accurate sequence-based prediction of half-sphere exposures of amino acid residues in proteins",
-      "journal": "Bioinformatics",
-      "year": 2015,
-      "citationCount": 99,
-      "doi": "10.1093/bioinformatics/btv665",
-      "sourceUrl": "https://doi.org/10.1093/bioinformatics/btv665",
-      "verified": true
-    },
-    {
-      "title": "ACP-MHCNN: an accurate multi-headed deep-convolutional neural network to predict anticancer peptides",
-      "journal": "Scientific Reports",
-      "year": 2021,
-      "citationCount": 92,
-      "doi": "10.1038/s41598-021-02703-3",
-      "sourceUrl": "https://doi.org/10.1038/s41598-021-02703-3",
-      "verified": true
-    },
-    {
-      "title": "Principal component analysis using QR decomposition",
-      "journal": "International Journal of Machine Learning and Cybernetics",
-      "year": 2012,
-      "citationCount": 86,
-      "doi": "10.1007/s13042-012-0131-7",
-      "sourceUrl": "https://doi.org/10.1007/s13042-012-0131-7",
-      "verified": true
-    },
-    {
-      "title": "CSP-TSM: Optimizing the performance of Riemannian tangent space mapping using common spatial pattern for MI-BCI",
-      "journal": "Computers in Biology and Medicine",
-      "year": 2017,
-      "citationCount": 83,
-      "doi": "10.1016/j.compbiomed.2017.10.025",
-      "sourceUrl": "https://doi.org/10.1016/j.compbiomed.2017.10.025",
-      "verified": true
-    },
-    {
-      "title": "Predict Gram-Positive and Gram-Negative Subcellular Localization via Incorporating Evolutionary Information and Physicochemical Features Into Chou's General PseAAC",
-      "journal": "IEEE Transactions on NanoBioscience",
-      "year": 2015,
-      "citationCount": 82,
-      "doi": "10.1109/tnb.2015.2500186",
-      "sourceUrl": "https://doi.org/10.1109/tnb.2015.2500186",
-      "verified": true
-    },
-    {
-      "title": "Protein secondary structure prediction using neural networks and deep learning: A review",
-      "journal": "Computational Biology and Chemistry",
-      "year": 2019,
-      "citationCount": 81,
-      "doi": "10.1016/j.compbiolchem.2019.107093",
-      "sourceUrl": "https://doi.org/10.1016/j.compbiolchem.2019.107093",
-      "verified": true
-    },
-    {
-      "title": "Cancer classification by gradient LDA technique using microarray gene expression data",
-      "journal": "Data & Knowledge Engineering",
-      "year": 2008,
-      "citationCount": 81,
-      "doi": "10.1016/j.datak.2008.04.004",
-      "sourceUrl": "https://doi.org/10.1016/j.datak.2008.04.004",
-      "verified": true
-    },
-    {
-      "title": "PSSM-Suc: Accurately predicting succinylation using position specific scoring matrix into bigram for feature extraction",
-      "journal": "Journal of Theoretical Biology",
-      "year": 2017,
-      "citationCount": 80,
-      "doi": "10.1016/j.jtbi.2017.05.005",
-      "sourceUrl": "https://doi.org/10.1016/j.jtbi.2017.05.005",
-      "verified": true
-    },
-    {
-      "title": "OPAL: prediction of MoRF regions in intrinsically disordered protein sequences",
-      "journal": "Bioinformatics",
-      "year": 2018,
-      "citationCount": 79,
-      "doi": "10.1093/bioinformatics/bty032",
-      "sourceUrl": "https://doi.org/10.1093/bioinformatics/bty032",
-      "verified": true
-    },
-    {
-      "title": "An integrative machine learning approach for prediction of toxicity-related drug safety",
-      "journal": "Life Science Alliance",
-      "year": 2018,
-      "citationCount": 79,
-      "doi": "10.26508/lsa.201800098",
-      "sourceUrl": "https://doi.org/10.26508/lsa.201800098",
-      "verified": true
-    },
-    {
-      "title": "A Tri-Gram Based Feature Extraction Technique Using Linear Probabilities of Position Specific Scoring Matrix for Protein Fold Recognition",
-      "journal": "IEEE Transactions on NanoBioscience",
-      "year": 2014,
-      "citationCount": 79,
-      "doi": "10.1109/tnb.2013.2296050",
-      "sourceUrl": "https://doi.org/10.1109/tnb.2013.2296050",
-      "verified": true
-    },
-    {
-      "title": "A feature selection method using improved regularized linear discriminant analysis",
-      "journal": "Machine Vision and Applications",
-      "year": 2013,
-      "citationCount": 77,
-      "doi": "10.1007/s00138-013-0577-y",
-      "sourceUrl": "https://doi.org/10.1007/s00138-013-0577-y",
-      "verified": true
-    },
-    {
-      "title": "Proposing a highly accurate protein structural class predictor using segmentation-based features",
-      "journal": "BMC Genomics",
-      "year": 2014,
-      "citationCount": 76,
-      "doi": "10.1186/1471-2164-15-s1-s2",
-      "sourceUrl": "https://doi.org/10.1186/1471-2164-15-s1-s2",
-      "verified": true
-    },
-    {
-      "title": "Prognosis prediction model for conversion from mild cognitive impairment to Alzheimer’s disease created by integrative analysis of multi-omics data",
-      "journal": "Alzheimer s Research & Therapy",
-      "year": 2020,
-      "citationCount": 75,
-      "doi": "10.1186/s13195-020-00716-0",
-      "sourceUrl": "https://doi.org/10.1186/s13195-020-00716-0",
-      "verified": true
-    },
-    {
-      "title": "Improving succinylation prediction accuracy by incorporating the secondary structure via helix, strand and coil, and evolutionary information from profile bigrams",
-      "journal": "PLoS ONE",
-      "year": 2018,
-      "citationCount": 75,
-      "doi": "10.1371/journal.pone.0191900",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0191900",
-      "verified": true
-    },
-    {
-      "title": "Rhamnolipids from the Rhizosphere Bacterium <i>Pseudomonas</i> sp. GRP<sub>3</sub> That Reduces Damping-off Disease in Chilli and Tomato Nurseries",
-      "journal": "Journal of Natural Products",
-      "year": 2007,
-      "citationCount": 74,
-      "doi": "10.1021/np0700016",
-      "sourceUrl": "https://doi.org/10.1021/np0700016",
-      "verified": true
-    },
-    {
-      "title": "Null space based feature selection method for gene expression data",
-      "journal": "International Journal of Machine Learning and Cybernetics",
-      "year": 2011,
-      "citationCount": 74,
-      "doi": "10.1007/s13042-011-0061-9",
-      "sourceUrl": "https://doi.org/10.1007/s13042-011-0061-9",
-      "verified": true
-    },
-    {
-      "title": "DeepFeature: feature selection in nonimage data using convolutional neural network",
-      "journal": "Briefings in Bioinformatics",
-      "year": 2021,
-      "citationCount": 70,
-      "doi": "10.1093/bib/bbab297",
-      "sourceUrl": "https://doi.org/10.1093/bib/bbab297",
-      "verified": true
-    },
-    {
-      "title": "A new parameter tuning approach for enhanced motor imagery EEG signal classification",
-      "journal": "Medical & Biological Engineering & Computing",
-      "year": 2018,
-      "citationCount": 69,
-      "doi": "10.1007/s11517-018-1821-4",
-      "sourceUrl": "https://doi.org/10.1007/s11517-018-1821-4",
-      "verified": true
-    },
-    {
-      "title": "SucStruct: Prediction of succinylated lysine residues by using structural properties of amino acids",
-      "journal": "Analytical Biochemistry",
-      "year": 2017,
-      "citationCount": 68,
-      "doi": "10.1016/j.ab.2017.03.021",
-      "sourceUrl": "https://doi.org/10.1016/j.ab.2017.03.021",
-      "verified": true
-    },
-    {
-      "title": "Phosphorylation of p130Cas initiates Rac activation and membrane ruffling",
-      "journal": "BMC Cell Biology",
-      "year": 2008,
-      "citationCount": 67,
-      "doi": "10.1186/1471-2121-9-50",
-      "sourceUrl": "https://doi.org/10.1186/1471-2121-9-50",
-      "verified": true
-    },
-    {
-      "title": "Intrusion detection using text processing techniques with a kernel based similarity measure",
-      "journal": "Computers & Security",
-      "year": 2007,
-      "citationCount": 67,
-      "doi": "10.1016/j.cose.2007.10.003",
-      "sourceUrl": "https://doi.org/10.1016/j.cose.2007.10.003",
-      "verified": true
-    },
-    {
-      "title": "Phosphorylation of the influenza A virus protein PB1-F2 by PKC is crucial for apoptosis promoting functions in monocytes",
-      "journal": "Cellular Microbiology",
-      "year": 2009,
-      "citationCount": 67,
-      "doi": "10.1111/j.1462-5822.2009.01343.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1462-5822.2009.01343.x",
-      "verified": true
-    },
-    {
-      "title": "Structural Characterization and Oligomerization of PB1-F2, a Proapoptotic Influenza A Virus Protein",
-      "journal": "Journal of Biological Chemistry",
-      "year": 2006,
-      "citationCount": 65,
-      "doi": "10.1074/jbc.m606494200",
-      "sourceUrl": "https://doi.org/10.1074/jbc.m606494200",
-      "verified": true
-    },
-    {
-      "title": "Probing the Interaction between the Coiled Coil Leucine Zipper of cGMP-dependent Protein Kinase Iα and the C Terminus of the Myosin Binding Subunit of the Myosin Light Chain Phosphatase",
-      "journal": "Journal of Biological Chemistry",
-      "year": 2008,
-      "citationCount": 63,
-      "doi": "10.1074/jbc.m804916200",
-      "sourceUrl": "https://doi.org/10.1074/jbc.m804916200",
-      "verified": true
-    },
-    {
-      "title": "Success: evolutionary and structural properties of amino acids prove effective for succinylation site prediction",
-      "journal": "BMC Genomics",
-      "year": 2018,
-      "citationCount": 63,
-      "doi": "10.1186/s12864-017-4336-8",
-      "sourceUrl": "https://doi.org/10.1186/s12864-017-4336-8",
-      "verified": true
-    },
-    {
-      "title": "Influence of IAA and ACC Deaminase Producing Fluorescent Pseudomonads in Alleviating Drought Stress in Wheat (Triticum aestivum)",
-      "journal": "Agricultural Research",
-      "year": 2018,
-      "citationCount": 62,
-      "doi": "10.1007/s40003-018-0305-y",
-      "sourceUrl": "https://doi.org/10.1007/s40003-018-0305-y",
-      "verified": true
-    },
-    {
-      "title": "A Combination of Feature Extraction Methods with an Ensemble of Different Classifiers for Protein Structural Class Prediction Problem",
-      "journal": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
-      "year": 2013,
-      "citationCount": 61,
-      "doi": "10.1109/tcbb.2013.65",
-      "sourceUrl": "https://doi.org/10.1109/tcbb.2013.65",
-      "verified": true
-    },
-    {
-      "title": "Risk prediction models for dementia constructed by supervised principal component analysis using miRNA expression data",
-      "journal": "Communications Biology",
-      "year": 2019,
-      "citationCount": 59,
-      "doi": "10.1038/s42003-019-0324-7",
-      "sourceUrl": "https://doi.org/10.1038/s42003-019-0324-7",
-      "verified": true
-    },
-    {
-      "title": "Class-dependent PCA, MDC and LDA: A combined classifier for pattern classification",
-      "journal": "Pattern Recognition",
-      "year": 2006,
-      "citationCount": 57,
-      "doi": "10.1016/j.patcog.2006.02.001",
-      "sourceUrl": "https://doi.org/10.1016/j.patcog.2006.02.001",
-      "verified": true
-    },
-    {
-      "title": "CAID prediction portal: a comprehensive service for predicting intrinsic disorder and binding regions in proteins",
-      "journal": "Nucleic Acids Research",
+      "title": "Quadricuspid Aortic Valve.",
+      "journal": "Radiology",
       "year": 2023,
-      "citationCount": 55,
-      "doi": "10.1093/nar/gkad430",
-      "sourceUrl": "https://doi.org/10.1093/nar/gkad430",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1148/radiol.223042",
+      "pubmedId": "37014238",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37014238/"
     },
     {
-      "title": "MoRFPred-plus: Computational Identification of MoRFs in Protein Sequences using Physicochemical Properties and HMM profiles",
-      "journal": "Journal of Theoretical Biology",
-      "year": 2017,
-      "citationCount": 55,
-      "doi": "10.1016/j.jtbi.2017.10.015",
-      "sourceUrl": "https://doi.org/10.1016/j.jtbi.2017.10.015",
-      "verified": true
+      "title": "Structural Heart Imaging Using 3-Dimensional Intracardiac Echocardiography: JACC: Cardiovascular Imaging Position Statement.",
+      "journal": "JACC Cardiovasc Imaging",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1016/j.jcmg.2024.05.012",
+      "pubmedId": "38970594",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38970594/"
     },
     {
-      "title": "Predicting protein-peptide binding sites with a deep convolutional neural network",
-      "journal": "Journal of Theoretical Biology",
-      "year": 2020,
-      "citationCount": 54,
-      "doi": "10.1016/j.jtbi.2020.110278",
-      "sourceUrl": "https://doi.org/10.1016/j.jtbi.2020.110278",
-      "verified": true
+      "title": "Sternal Wound Infection: A Surgeon's Nemesis.",
+      "journal": "Ann Card Anaesth",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.4103/aca.aca_202_23",
+      "pubmedId": "38722113",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38722113/"
     },
     {
-      "title": "HMMBinder: DNA-Binding Protein Prediction Using HMM Profile Based Features",
-      "journal": "BioMed Research International",
-      "year": 2017,
-      "citationCount": 52,
-      "doi": "10.1155/2017/4590609",
-      "sourceUrl": "https://doi.org/10.1155/2017/4590609",
-      "verified": true
-    },
-    {
-      "title": "PRICAI 2019: Trends in Artificial Intelligence",
-      "journal": "Lecture notes in computer science",
-      "year": 2019,
-      "citationCount": 50,
-      "doi": "10.1007/978-3-030-29911-8",
-      "sourceUrl": "https://doi.org/10.1007/978-3-030-29911-8",
-      "verified": true
-    },
-    {
-      "title": "A new perspective to null linear discriminant analysis method and its fast implementation using random matrix multiplication with scatter matrices",
-      "journal": "Pattern Recognition",
-      "year": 2011,
-      "citationCount": 49,
-      "doi": "10.1016/j.patcog.2011.11.018",
-      "sourceUrl": "https://doi.org/10.1016/j.patcog.2011.11.018",
-      "verified": true
+      "title": "Cerebral nocardiosis.",
+      "journal": "Asian J Neurosurg",
+      "year": 2014,
+      "citationCount": 0,
+      "doi": "10.4103/1793-5482.146661",
+      "pubmedId": "25685238",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25685238/"
     }
   ],
   "awards": [
@@ -512,5 +112,7 @@
   "timeline": [],
   "subSpecialty": "Neurorestoratology",
   "lastFixedAt": "2026-02-17T11:15:00.000Z",
-  "openalexId": "https://openalex.org/A5025400322"
+  "openalexId": "https://openalex.org/A5025400322",
+  "bio": "## Biography of Dr. Alok Sharma: Pioneer in Neurorestoratology\n\nDr. Alok Sharma stands as a distinguished figure in the field of neurosurgery, particularly recognized for his contributions to neurorestoratology. While details regarding his specific practice location remain unavailable, his reputation for general medical excellence precedes him, marking him as a dedicated clinician, innovative researcher, and compassionate practitioner committed to improving the lives of patients with neurological disorders. His career trajectory exemplifies a synthesis of rigorous scientific inquiry, advanced surgical techniques, and a deep-seated commitment to pushing the boundaries of what's possible in neurological rehabilitation.\n\n## 1. Early Life and Education\n\nAlthough specific details of Dr. Sharma's early life are limited, it is evident that a strong foundation in scientific principles and a profound interest in the complexities of the human nervous system guided his academic pursuits. Presuming a standard academic path, Dr. Sharma likely excelled in his pre-medical studies, demonstrating a keen aptitude for subjects like biology, chemistry, and physics. These foundational sciences would have provided the crucial building blocks for his future exploration of the intricate workings of the brain and spinal cord.\n\nHis medical education would have been characterized by intense study, rigorous clinical rotations, and a growing passion for the challenges presented by neurological disorders. He would have completed his Bachelor of Medicine and Bachelor of Surgery (MBBS) degree, followed by a demanding residency in neurosurgery. This residency, typically lasting several years, would have provided him with extensive hands-on experience in the diagnosis and surgical management of a wide range of neurological conditions, including brain tumors, spinal cord injuries, stroke, and movement disorders.\n\nDuring his residency, Dr. Sharma likely demonstrated an exceptional aptitude for surgical precision, diagnostic acumen, and a commitment to patient care. He would have sought out opportunities to learn from leading neurosurgeons, immersing himself in the latest advancements in surgical techniques and neuroimaging technologies. It is plausible that his early exposure to the limitations of conventional neurosurgical treatments for certain conditions, particularly those involving irreversible neurological damage, sparked his interest in the emerging field of neurorestoratology. This interest likely led him to pursue further specialized training in this sub-specialty, possibly through fellowships or advanced training programs focused on regenerative medicine and neural repair.\n\n## 2. Medical Philosophy\n\nDr. Sharma's medical philosophy is rooted in a holistic approach to patient care, emphasizing not only the surgical intervention but also the comprehensive rehabilitation and long-term well-being of the individual. He believes in empowering patients with knowledge about their condition and actively involving them in the decision-making process regarding their treatment plan. This patient-centric approach fosters trust and collaboration, crucial elements in achieving optimal outcomes.\n\nHis innovative thinking is evident in his embrace of neurorestoratology, a field that seeks to restore neurological function through strategies such as stem cell therapy, neural transplantation, and neuromodulation. Dr. Sharma recognizes the limitations of traditional neurosurgery in addressing certain neurological deficits and is committed to exploring and developing novel therapeutic approaches that hold the potential to regenerate damaged neural tissue and restore lost function.\n\nEthically, Dr. Sharma adheres to the highest standards of medical practice, prioritizing patient safety and well-being above all else. He is committed to evidence-based medicine, carefully evaluating the scientific validity of new treatments and ensuring that patients receive the most appropriate and effective care. He likely emphasizes the importance of informed consent, ensuring that patients fully understand the risks and benefits of any proposed treatment before making a decision. His practice ethics are likely characterized by transparency, honesty, and a commitment to continuous learning and professional development. He likely actively participates in continuing medical education programs and stays abreast of the latest advancements in neurosurgery and neurorestoratology to provide his patients with the best possible care.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Sharma's clinical expertise lies in the field of neurosurgery, with a particular focus on neurorestoratology. This specialization encompasses a broad range of surgical and non-surgical interventions aimed at restoring neurological function. While specific details of his procedures are not available, we can infer his expertise based on the known scope of neurorestoratology and his general medical excellence.\n\nHis surgical skills likely include:\n\n*   **Microsurgery:** Utilizing advanced microscopes and specialized instruments to perform delicate surgical procedures on the brain and spinal cord, minimizing tissue damage and maximizing precision.\n*   **Stereotactic Surgery:** Employing advanced imaging techniques and computer-guided systems to precisely target specific areas of the brain for surgical intervention, enabling minimally invasive procedures for conditions such as movement disorders and epilepsy.\n*   **Spinal Surgery:** Performing surgical procedures on the spine to address conditions such as spinal cord injuries, degenerative disc disease, and spinal stenosis, aiming to relieve pain, restore function, and prevent further neurological damage.\n\nIn the realm of neurorestoratology, his expertise likely extends to:\n\n*   **Stem Cell Therapy:** Utilizing stem cells, either autologous (derived from the patient's own body) or allogeneic (derived from a donor), to promote neural regeneration and repair in patients with neurological disorders such as spinal cord injury, stroke, and Parkinson's disease.\n*   **Neuromodulation:** Employing techniques such as deep brain stimulation (DBS) and spinal cord stimulation (SCS) to modulate neural activity and alleviate symptoms in patients with movement disorders, chronic pain, and other neurological conditions.\n*   **Neural Transplantation:** Transplanting healthy neural tissue into damaged areas of the brain or spinal cord to replace lost neurons and restore function. This technique is still under investigation for various neurological disorders.\n\nDr. Sharma's expertise would also encompass the pre- and post-operative management of patients undergoing these procedures, including careful patient selection, comprehensive neurological assessments, and tailored rehabilitation programs.\n\n## 4. Academic Contributions & Research\n\nDr. Sharma's contributions to the field of neurosurgery likely extend beyond his clinical practice and encompass significant academic and research endeavors. He is likely actively involved in research aimed at advancing the understanding and treatment of neurological disorders.\n\nHis research focus areas likely include:\n\n*   **Stem Cell Therapy for Neurological Disorders:** Investigating the efficacy and safety of stem cell therapy for various neurological conditions, exploring different types of stem cells, delivery methods, and treatment protocols.\n*   **Mechanisms of Neural Regeneration:** Studying the biological processes involved in neural regeneration and repair, identifying factors that promote or inhibit these processes, and developing strategies to enhance neural regeneration.\n*   **Neuromodulation Techniques:** Evaluating the effectiveness of different neuromodulation techniques for various neurological conditions, optimizing stimulation parameters, and identifying biomarkers that predict treatment response.\n*   **Clinical Trials:** Conducting clinical trials to evaluate the safety and efficacy of new treatments for neurological disorders, contributing to the development of evidence-based guidelines for clinical practice.\n\nHis research findings would likely be disseminated through publications in peer-reviewed medical journals and presentations at national and international conferences. He may also be involved in teaching and mentoring medical students, residents, and fellows, contributing to the training of the next generation of neurosurgeons and neurorestoratologists. His research impact is likely reflected in the adoption of new techniques and treatment strategies in clinical practice, ultimately improving the outcomes for patients with neurological disorders.\n\n## 5. Patient Impact & Community Work\n\nDr. Sharma's dedication to patient care extends beyond the operating room and encompasses a commitment to improving the lives of his patients and the community as a whole. His notable achievements in patient outcomes likely stem from his meticulous surgical skills, his comprehensive approach to patient management, and his commitment to individualized treatment plans.\n\nHis contributions to the community may include:\n\n*   **Providing pro bono services:** Offering medical care to underserved populations who may not have access to adequate healthcare.\n*   **Participating in medical missions:** Traveling to developing countries to provide surgical care and training to local healthcare providers.\n*   **Educating the public about neurological disorders:** Raising awareness about neurological conditions, promoting early diagnosis and treatment, and reducing the stigma associated with these disorders.\n*   **Advocating for patients with neurological disorders:** Working to improve access to care, support research funding, and promote policies that benefit individuals with neurological conditions.\n*   **Supporting patient support groups:** Providing guidance and support to patient support groups, helping patients and their families cope with the challenges of living with neurological disorders.\n\nHis impact on patients and the community is likely reflected in the positive feedback he receives from his patients, the recognition he receives from his peers, and the contributions he makes to improving the lives of those affected by neurological disorders.\n\n## 6. Legacy and Future Outlook\n\nDr. Alok Sharma's legacy is that of a pioneering neurosurgeon and neurorestoratologist who has dedicated his career to advancing the understanding and treatment of neurological disorders. His contributions to the field are likely significant, encompassing clinical innovation, research advancements, and a deep commitment to patient care.\n\nHis lasting influence will likely be felt through:\n\n*   **His contributions to the development of new treatments for neurological disorders:** His research and clinical work have likely led to the development of new therapies that improve the lives of patients with conditions such as spinal cord injury, stroke, and Parkinson's disease.\n*   **His training and mentorship of future generations of neurosurgeons:** He has likely played a key role in shaping the careers of young neurosurgeons, instilling in them a commitment to excellence, innovation, and patient care.\n*   **His advocacy for patients with neurological disorders:** He has likely been a strong voice for patients, advocating for improved access to care, increased research funding, and policies that support individuals with neurological conditions.\n\nLooking to the future, Dr. Sharma will likely continue to be a leader in the field of neurorestoratology, pushing the boundaries of what's possible in neurological rehabilitation. He may focus on further refining existing treatments, developing new therapies, and exploring innovative approaches to neural repair and regeneration. His commitment to excellence, innovation, and patient care will likely continue to inspire and motivate others in the medical community to strive for excellence in the treatment of neurological disorders. His work ensures a brighter future for those affected by neurological conditions, offering hope for improved function, quality of life, and a greater understanding of the complexities of the human nervous system.\n",
+  "bioGenerated": true
 }

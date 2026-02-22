@@ -1,0 +1,143 @@
+{
+    "name": "Wilson's Disease",
+    "slug": "wilson-disease",
+    "aliases": ["Wilson Disease", "Hepatolenticular Degeneration"],
+    "description": "Wilson's disease is a rare inherited disorder that causes copper to accumulate in the liver, brain, and other vital organs. Most people with Wilson's disease are diagnosed between ages 5 and 35, but it can affect people of all ages.",
+    "category": "METABOLIC",
+    "icdCode": "E83.0",
+    "orphaCode": "ORPHA905",
+    "omimCode": "277900",
+    "prevalence": "1 in 30,000",
+    "estimatedCases": 10000,
+    "ageOfOnset": "Usually between 5 and 35 years",
+    "inheritance": "AUTOSOMAL_RECESSIVE",
+    "symptoms": [
+        "Fatigue and weakness",
+        "Yellowing of skin (jaundice)",
+        "Abdominal swelling",
+        "Tremors",
+        "Difficulty walking and speaking",
+        "Personality changes",
+        "Depression and anxiety",
+        "Kayser-Fleischer rings in eyes",
+        "Drooling",
+        "Muscle stiffness"
+    ],
+    "affectedSystems": [
+        "Hepatic system",
+        "Central nervous system",
+        "Eyes",
+        "Kidneys"
+    ],
+    "prognosis": "Excellent with early treatment; can be fatal if untreated",
+    "lifeExpectancy": "Normal with lifelong treatment",
+    "diagnosticMethods": [
+        "Serum ceruloplasmin level",
+        "24-hour urine copper",
+        "Slit-lamp eye examination for Kayser-Fleischer rings",
+        "Liver biopsy with copper quantification",
+        "Genetic testing for ATP7B mutations",
+        "MRI brain imaging"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "D-penicillamine",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 1956
+        },
+        {
+            "name": "Trientine (Syprine)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 1985
+        },
+        {
+            "name": "Zinc acetate (Galzin)",
+            "type": "MEDICATION",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": 1997
+        },
+        {
+            "name": "Liver transplantation",
+            "type": "TRANSPLANT",
+            "effectiveness": "CURATIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Gene therapy",
+            "type": "GENE_THERAPY",
+            "effectiveness": "EXPERIMENTAL",
+            "fdaApproved": false,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 28,
+    "keyResearchCenters": [
+        "Yale Wilson Disease Clinic",
+        "University of Michigan Liver Center",
+        "King's College Hospital London",
+        "University of Tokyo Hospital"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "Wilson Disease Association",
+            "url": "https://www.wilsondisease.org",
+            "country": "USA"
+        },
+        {
+            "name": "EuroWilson",
+            "url": "http://www.eurowilson.org",
+            "country": "Europe"
+        }
+    ],
+    "relatedConditions": [
+        "Menkes disease",
+        "Non-alcoholic fatty liver disease",
+        "Primary biliary cholangitis",
+        "Hemochromatosis"
+    ],
+    "specialistTypes": [
+        "Hepatologist",
+        "Neurologist",
+        "Geneticist",
+        "Ophthalmologist",
+        "Psychiatrist"
+    ],
+    "eli5Summary": "Wilson's disease happens when the body can't get rid of copper properly, so copper builds up in the liver and brain. This can make people very sick, but taking medicine every day can remove the extra copper and help people live normal, healthy lives.",
+    "clinicalSummary": "Wilson's disease is an autosomal recessive disorder of copper metabolism caused by ATP7B gene mutations affecting hepatic copper excretion. Clinical manifestations include hepatic disease (ranging from asymptomatic elevation of liver enzymes to fulminant hepatic failure), neurological symptoms (movement disorders, dysarthria, dysphagia), and psychiatric manifestations. Kayser-Fleischer rings are pathognomonic. Treatment with chelating agents (penicillamine, trientine) or zinc must be lifelong. Liver transplantation is curative for hepatic disease.",
+    "historicalBackground": "Wilson's disease was first described by Samuel Alexander Kinnier Wilson in 1912. The genetic basis (ATP7B gene) was identified in 1993. The condition became one of the first genetic diseases to have effective medical treatment, with D-penicillamine introduced in 1956 by John Walshe.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "AAV gene therapy trials initiated",
+            "description": "First-in-human gene therapy trials using AAV vectors to deliver functional ATP7B copies show early promise.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "New oral chelator development",
+            "description": "Novel chelating agents with improved side effect profiles enter Phase II trials.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Wilson Disease",
+            "url": "https://www.omim.org/entry/277900"
+        },
+        {
+            "name": "GeneReviews - Wilson Disease",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK1512/"
+        }
+    ]
+}

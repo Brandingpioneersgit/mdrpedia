@@ -46,7 +46,7 @@ const TIER_POINTS: Record<HonorTier, number> = {
 // ─── Master Awards Database ─────────────────────────────────────────────────
 // Comprehensive mapping of 60+ global, national, and professional honors
 
-const GLOBAL_HONORS_DB: GlobalHonor[] = [
+export const GLOBAL_HONORS_DB: GlobalHonor[] = [
     // ═══════════════════════════════════════════════════════════════════════
     // TIER 1 — GLOBAL LANDMARK (+100 pts)
     // Paradigm-defining, civilization-level recognition
@@ -150,6 +150,100 @@ const GLOBAL_HONORS_DB: GlobalHonor[] = [
     { name: 'Copley Medal', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'RoyalSociety' },
     { name: 'King Faisal International Prize', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'International' },
     { name: 'Prince Mahidol Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'International' },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // EXPANDED: Additional Global Medical Awards
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Major Medical Research Awards
+    { name: 'Shaw Prize in Life Science and Medicine', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Shaw' },
+    { name: 'Shaw Prize', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Shaw' },
+    { name: 'Albany Medical Center Prize', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Albany' },
+    { name: 'Kavli Prize in Neuroscience', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Kavli' },
+    { name: 'Warren Alpert Foundation Prize', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'WarrenAlpert' },
+    { name: 'Dr. Paul Janssen Award', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Janssen' },
+
+    // Specialty-Specific Global Awards - Surgery
+    { name: 'Michael E. DeBakey Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Surgery' },
+    { name: 'Jacobson Innovation Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Surgery' },
+    { name: 'American College of Surgeons Distinguished Service Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Surgery' },
+    { name: 'Bigelow Medal', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Surgery' },
+
+    // Cardiology Awards
+    { name: 'Gold Heart Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Cardiology' },
+    { name: 'Distinguished Scientist Award - AHA', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Cardiology' },
+    { name: 'Research Achievement Award - ACC', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Cardiology' },
+    { name: 'Andreas Gruentzig Proctor', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Cardiology' },
+
+    // Oncology Awards
+    { name: 'AACR Award for Outstanding Achievement in Cancer Research', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Oncology' },
+    { name: 'ASCO Distinguished Achievement Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Oncology' },
+    { name: 'Karnofsky Memorial Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Oncology' },
+    { name: 'Bruce F. Cain Memorial Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Oncology' },
+
+    // Neurology & Neurosurgery
+    { name: 'Potamkin Prize', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Neurology' },
+    { name: 'Cushing Medal', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Neurosurgery' },
+    { name: 'Grass Foundation Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Neuroscience' },
+    { name: 'Brain Prize', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Neuroscience' },
+
+    // Pediatrics
+    { name: 'Howland Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Pediatrics' },
+    { name: 'Pollin Prize', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Pediatrics' },
+
+    // Infectious Disease & Public Health
+    { name: 'Bristol-Myers Squibb Award for Distinguished Achievement', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'InfectiousDisease' },
+    { name: 'Maxwell Finland Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'InfectiousDisease' },
+    { name: 'Gates Award for Global Health', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'GlobalHealth' },
+    { name: 'Jimmy and Rosalynn Carter Humanitarian Award', tier: HonorTier.NATIONAL_HONOR, points: 75, category: 'Humanitarian' },
+
+    // Ophthalmology
+    { name: 'Friedenwald Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Ophthalmology' },
+    { name: 'Pisart Vision Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Ophthalmology' },
+    { name: 'Antonio Champalimaud Vision Award', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Ophthalmology' },
+
+    // Orthopedics
+    { name: 'Kappa Delta Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Orthopedics' },
+    { name: 'Nicolas Andry Award', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Orthopedics' },
+
+    // Transplantation
+    { name: 'Medawar Prize', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Transplant' },
+    { name: 'Starzl Prize', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Transplant' },
+
+    // Genetics & Genomics
+    { name: 'Gruber Prize in Genetics', tier: HonorTier.GLOBAL_LANDMARK, points: 100, category: 'Genetics' },
+    { name: 'March of Dimes Prize in Developmental Biology', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Genetics' },
+
+    // Radiology & Imaging
+    { name: 'Gold Medal - RSNA', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Radiology' },
+    { name: 'Gold Medal - ACR', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, category: 'Radiology' },
+
+    // Additional National Awards - More Countries
+    // 🇨🇦 Canada
+    { name: 'Order of Canada', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Canada', category: 'OrderCanada' },
+    { name: 'Companion of the Order of Canada', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Canada', category: 'OrderCanada' },
+
+    // 🇦🇺 Australia
+    { name: 'Order of Australia', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Australia', category: 'OrderAustralia' },
+    { name: 'Companion of the Order of Australia', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Australia', category: 'OrderAustralia' },
+    { name: 'Australia Prize', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Australia', category: 'AustraliaPrize' },
+
+    // 🇸🇬 Singapore
+    { name: 'President\'s Science and Technology Award', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'Singapore', category: 'Singapore' },
+
+    // 🇰🇷 South Korea
+    { name: 'Ho-Am Prize in Medicine', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'South Korea', category: 'HoAm' },
+
+    // 🇨🇳 China
+    { name: 'State Preeminent Science and Technology Award', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'China', category: 'ChinaNational' },
+
+    // Academic Society Fellowships
+    { name: 'Member of the National Academy of Medicine', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'USA', category: 'NAM' },
+    { name: 'National Academy of Medicine', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'USA', category: 'NAM' },
+    { name: 'NAM Member', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'USA', category: 'NAM' },
+    { name: 'Member of the National Academy of Sciences', tier: HonorTier.NATIONAL_HONOR, points: 75, country: 'USA', category: 'NAS' },
+    { name: 'Howard Hughes Medical Institute Investigator', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, country: 'USA', category: 'HHMI' },
+    { name: 'HHMI Investigator', tier: HonorTier.PROFESSIONAL_EXCELLENCE, points: 50, country: 'USA', category: 'HHMI' },
 ];
 
 // ─── Fuzzy Matching ─────────────────────────────────────────────────────────

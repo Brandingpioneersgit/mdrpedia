@@ -1,0 +1,153 @@
+---
+/**
+ * OptimizedImage — Performance-optimized image component
+ * Features:
+ * - Native lazy loading
+ * - Blur placeholder while loading
+ * - Error fallback with initials
+ * - Proper aspect ratio to prevent CLS
+ */
+
+interface Props {
+    src: string | null | undefined;
+    alt: string;
+    width?: number;
+    height?: number;
+    class?: string;
+    fallbackInitials?: string;
+    priority?: boolean;
+    aspectRatio?: "square" | "portrait" | "landscape" | "auto";
+    tier?: "TITAN" | "ELITE" | "MASTER" | "UNRANKED";
+}
+
+const {
+    src,
+    alt,
+    width = 200,
+    height,
+    class: className = "",
+    fallbackInitials,
+    priority = false,
+    aspectRatio = "square",
+    tier = "UNRANKED",
+} = Astro.props;
+
+// Calculate height based on aspect ratio if not provided
+const computedHeight = height || (
+    aspectRatio === "square" ? width :
+    aspectRatio === "portrait" ? Math.round(width * 1.25) :
+    aspectRatio === "landscape" ? Math.round(width * 0.75) :
+    width
+);
+
+// Generate initials from alt text if not provided
+const initials = fallbackInitials || alt
+    .split(" ")
+    .map((w) => w[0])
+    .filter((_, i) => i < 2)
+    .join("")
+    .toUpperCase();
+
+// Check if src is valid (not empty and not a data URL placeholder)
+const hasValidSrc = src && !src.startsWith("data:") && src.length > 0;
+
+// Tier colors for fallback
+const tierColors: Record<string, { bg: string; text: string }> = {
+    TITAN: { bg: "rgba(255, 215, 0, 0.15)", text: "#ffd700" },
+    ELITE: { bg: "rgba(0, 170, 255, 0.15)", text: "#00aaff" },
+    MASTER: { bg: "rgba(0, 204, 102, 0.15)", text: "#00cc66" },
+    UNRANKED: { bg: "rgba(255, 255, 255, 0.08)", text: "#888" },
+};
+
+const colors = tierColors[tier] || tierColors.UNRANKED;
+---
+
+<div
+    class:list={["optimized-image", className]}
+    style={`--img-width: ${width}px; --img-height: ${computedHeight}px; --fallback-bg: ${colors.bg}; --fallback-text: ${colors.text};`}
+    data-loaded="false"
+>
+    {hasValidSrc ? (
+        <img
+            src={src}
+            alt={alt}
+            width={width}
+            height={computedHeight}
+            loading={priority ? "eager" : "lazy"}
+            decoding={priority ? "sync" : "async"}
+            referrerpolicy="no-referrer"
+            class="optimized-image__img"
+            onload="this.parentElement.dataset.loaded='true'"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+        <div class="optimized-image__fallback" style="display: none;">
+            <span class="optimized-image__initials">{initials}</span>
+        </div>
+    ) : (
+        <div class="optimized-image__fallback">
+            <span class="optimized-image__initials">{initials}</span>
+        </div>
+    )}
+    <div class="optimized-image__skeleton"></div>
+</div>
+
+<style>
+    .optimized-image {
+        position: relative;
+        width: var(--img-width);
+        height: var(--img-height);
+        overflow: hidden;
+        background: var(--fallback-bg);
+        border-radius: inherit;
+    }
+
+    .optimized-image__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .optimized-image[data-loaded="true"] .optimized-image__img {
+        opacity: 1;
+    }
+
+    .optimized-image[data-loaded="true"] .optimized-image__skeleton {
+        display: none;
+    }
+
+    .optimized-image__skeleton {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.03) 25%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.03) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
+
+    .optimized-image__fallback {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--fallback-bg);
+    }
+
+    .optimized-image__initials {
+        font-size: calc(var(--img-width) * 0.3);
+        font-weight: 700;
+        color: var(--fallback-text);
+        letter-spacing: 0.05em;
+    }
+</style>

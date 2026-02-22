@@ -1,7 +1,7 @@
 ---
 /**
- * MDRPedia — News & Research
- * Curated feed of medical research breakthroughs and registry updates.
+ * MDRPedia — Breakthroughs & Impact
+ * Curated feed of medical research breakthroughs, registry updates, and impact stories.
  */
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -18,8 +18,27 @@ const articles = newsEntries
     .map((entry) => ({
         ...entry.data,
         id: entry.id,
-        slug: entry.slug,
     }));
+
+// Category definitions with icons and colors
+const CATEGORIES: Record<string, { icon: string; color: string; label: string }> = {
+    'breakthrough': { icon: '🔬', color: '#ffd700', label: 'Research Breakthrough' },
+    'clinical-trial': { icon: '💊', color: '#00aaff', label: 'Clinical Trial' },
+    'award': { icon: '🏆', color: '#a78bfa', label: 'Award & Recognition' },
+    'achievement': { icon: '🏆', color: '#a78bfa', label: 'Achievement' },
+    'impact': { icon: '💡', color: '#10b981', label: 'Impact Story' },
+    'registry': { icon: '📋', color: '#f59e0b', label: 'Registry Update' },
+    'technique': { icon: '🔧', color: '#ec4899', label: 'New Technique' },
+    'global-health': { icon: '🌍', color: '#06b6d4', label: 'Global Health' },
+    'research': { icon: '🧬', color: '#8b5cf6', label: 'Research' },
+    'innovation': { icon: '💡', color: '#22d3ee', label: 'Innovation' },
+    'default': { icon: '📰', color: '#888', label: 'News' }
+};
+
+function getCategoryInfo(category: string) {
+    const normalized = category.toLowerCase().replace(/\s+/g, '-');
+    return CATEGORIES[normalized] || CATEGORIES['default'];
+}
 
 function formatDate(dateStr: string) {
     return new Date(dateStr).toLocaleDateString("en-US", {
@@ -28,177 +47,1191 @@ function formatDate(dateStr: string) {
         day: "numeric",
     });
 }
+
+function getRelativeTime(dateStr: string) {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+    return `${Math.floor(diffDays / 365)} years ago`;
+}
+
+// Get unique categories
+const uniqueCategories = [...new Set(articles.map(a => a.category))];
 ---
 
 <Layout
-    title="News & Research — MDRPedia"
-    description="Stay informed with the latest medical research breakthroughs, registry updates, and global health news from MDRPedia."
+    title="Breakthroughs & Impact — MDRPedia"
+    description="Discover the latest medical research breakthroughs, clinical trial results, and impact stories from the world's leading physicians."
 >
     <div class="news-page">
-        <header class="page-header">
-            <div class="page-header__badge">NEWS & RESEARCH</div>
-            <h1>Medical Research Updates</h1>
-            <p>
-                Curated coverage of breakthroughs, registry updates, and global
-                health developments relevant to the MDRPedia community.
-            </p>
+        <!-- Animated Background -->
+        <div class="page-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <!-- Hero Section -->
+        <header class="page-hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    BREAKTHROUGHS & IMPACT
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-gradient">Medical Insights</span>
+                </h1>
+                <p class="hero-description">
+                    Curated coverage of research breakthroughs, clinical trials, and stories
+                    of physicians making a measurable difference in global health.
+                </p>
+
+                <!-- Stats Bar -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">{articles.length}</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">{uniqueCategories.length}</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">Weekly</span>
+                        <span class="stat-label">Updates</span>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        All Stories
+                    </button>
+                    {uniqueCategories.map(cat => {
+                        const info = getCategoryInfo(cat);
+                        return (
+                            <button class="filter-btn" data-category={cat.toLowerCase()} style={`--cat-color: ${info.color}`}>
+                                <span class="filter-icon">{info.icon}</span>
+                                {info.label}
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
         </header>
 
-        <div class="news-grid">
-            {
-                articles.map((article, i) => (
-                    <article
-                        class={`news-card ${i === 0 ? "news-card--featured" : ""}`}
-                    >
-                        <div class="news-card__category">
-                            {article.category}
-                        </div>
-                        <h2 class="news-card__title">
-                            <a href={`/news/${article.id}`}>{article.title}</a>
+        <!-- Featured Article -->
+        {articles.length > 0 && (
+            <section class="featured-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            Featured Story
                         </h2>
-                        <p class="news-card__summary">{article.summary}</p>
-                        <div class="news-card__footer">
-                            <span class="news-card__date">
-                                {formatDate(article.date)}
-                            </span>
-                            <span class="news-card__source">
-                                {article.source}
-                            </span>
+                    </div>
+                    <article class="featured-card">
+                        <div class="featured-glow"></div>
+                        <div class="featured-content">
+                            <div class="featured-badge" style={`--cat-color: ${getCategoryInfo(articles[0].category).color}`}>
+                                <span class="badge-icon">{getCategoryInfo(articles[0].category).icon}</span>
+                                {getCategoryInfo(articles[0].category).label}
+                            </div>
+                            <h3 class="featured-title">
+                                <a href={`/news/${articles[0].id}`}>{articles[0].title}</a>
+                            </h3>
+                            <p class="featured-summary">{articles[0].summary}</p>
+                            <div class="featured-meta">
+                                <div class="meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    <span>{getRelativeTime(articles[0].date)}</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>{articles[0].source}</span>
+                                </div>
+                            </div>
+                            <a href={`/news/${articles[0].id}`} class="featured-link">
+                                <span>Read Full Story</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="featured-visual">
+                            <div class="visual-placeholder">
+                                <div class="visual-icon">
+                                    <span>{getCategoryInfo(articles[0].category).icon}</span>
+                                </div>
+                                <div class="visual-pattern"></div>
+                            </div>
                         </div>
                     </article>
-                ))
-            }
-        </div>
+                </div>
+            </section>
+        )}
+
+        <!-- Articles Grid -->
+        <main class="articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                        </svg>
+                        Latest Articles
+                    </h2>
+                    <span class="article-count" id="article-count">{articles.length - 1} articles</span>
+                </div>
+
+                <div class="articles-grid" id="articles-grid">
+                    {articles.slice(1).map((article, index) => {
+                        const catInfo = getCategoryInfo(article.category);
+                        return (
+                            <article
+                                class="article-card"
+                                data-category={article.category.toLowerCase()}
+                                style={`--delay: ${index * 0.05}s; --cat-color: ${catInfo.color}`}
+                            >
+                                <div class="card-highlight"></div>
+                                <div class="article-category">
+                                    <span class="cat-icon">{catInfo.icon}</span>
+                                    {catInfo.label}
+                                </div>
+                                <h3 class="article-title">
+                                    <a href={`/news/${article.id}`}>{article.title}</a>
+                                </h3>
+                                <p class="article-summary">{article.summary}</p>
+                                <div class="article-footer">
+                                    <div class="footer-left">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6"/>
+                                            <line x1="8" y1="2" x2="8" y2="6"/>
+                                            <line x1="3" y1="10" x2="21" y2="10"/>
+                                        </svg>
+                                        <span>{getRelativeTime(article.date)}</span>
+                                    </div>
+                                    <span class="article-source">{article.source}</span>
+                                </div>
+                                <a href={`/news/${article.id}`} class="card-link" aria-label={`Read ${article.title}`}></a>
+                            </article>
+                        );
+                    })}
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="empty-state" hidden>
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.3-4.3"/>
+                        </svg>
+                    </div>
+                    <h3>No articles found</h3>
+                    <p>Try selecting a different category to discover more stories</p>
+                    <button class="reset-filter" id="reset-filter">
+                        View All Stories
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Submit Story CTA -->
+        <section class="submit-section">
+            <div class="container">
+                <div class="submit-card">
+                    <div class="submit-glow"></div>
+                    <div class="submit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="submit-content">
+                        <h3>Share a Breakthrough</h3>
+                        <p>Know of a medical breakthrough or impact story we should cover? Submit it for review by our editorial team.</p>
+                    </div>
+                    <a href="/contact?subject=submit-story" class="submit-btn">
+                        <span>Submit a Story</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-content">
+                        <h3>Stay Updated</h3>
+                        <p>Get weekly digests of the most impactful medical breakthroughs delivered to your inbox.</p>
+                    </div>
+                    <form class="newsletter-form" action="#" method="post">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required />
+                        <button type="submit" class="newsletter-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
 </Layout>
 
+<script>
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const articles = document.querySelectorAll<HTMLElement>('.article-card');
+    const emptyState = document.getElementById('empty-state');
+    const articleCount = document.getElementById('article-count');
+    const resetFilter = document.getElementById('reset-filter');
+
+    function filterArticles(category: string) {
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+            if (category === 'all' || article.dataset.category === category) {
+                article.style.display = '';
+                article.style.animation = 'none';
+                article.offsetHeight; // Trigger reflow
+                article.style.animation = '';
+                visibleCount++;
+            } else {
+                article.style.display = 'none';
+            }
+        });
+
+        if (articleCount) {
+            articleCount.textContent = `${visibleCount} article${visibleCount !== 1 ? 's' : ''}`;
+        }
+
+        if (emptyState) {
+            emptyState.hidden = visibleCount > 0;
+        }
+    }
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterArticles(btn.dataset.category || 'all');
+        });
+    });
+
+    resetFilter?.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        const allBtn = document.querySelector('.filter-btn[data-category="all"]');
+        allBtn?.classList.add('active');
+        filterArticles('all');
+    });
+</script>
+
 <style>
     .news-page {
-        max-width: 900px;
+        background: var(--bg-primary, #0a0a12);
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Animated Background */
+    .page-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.4;
+        animation: float 25s ease-in-out infinite;
+    }
+
+    .orb-1 {
+        width: 600px;
+        height: 600px;
+        background: rgba(139, 92, 246, 0.15);
+        top: -200px;
+        right: -150px;
+        animation-delay: 0s;
+    }
+
+    .orb-2 {
+        width: 400px;
+        height: 400px;
+        background: rgba(59, 130, 246, 0.12);
+        bottom: 10%;
+        left: -100px;
+        animation-delay: -8s;
+    }
+
+    .orb-3 {
+        width: 300px;
+        height: 300px;
+        background: rgba(236, 72, 153, 0.1);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-delay: -16s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(40px, -40px) scale(1.05); }
+        50% { transform: translate(-30px, 30px) scale(0.95); }
+        75% { transform: translate(30px, 40px) scale(1.02); }
+    }
+
+    .grid-overlay {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    }
+
+    .container {
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 60px 20px 80px;
+        padding: 0 1.5rem;
+        position: relative;
+        z-index: 1;
     }
-    .page-header {
+
+    /* Hero */
+    .page-hero {
+        padding: 5rem 0 3rem;
         text-align: center;
-        margin-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .page-header__badge {
-        display: inline-block;
-        padding: 4px 14px;
-        border-radius: 20px;
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px;
         background: rgba(139, 92, 246, 0.1);
-        color: #a78bfa;
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 100px;
         font-size: 0.75rem;
         font-weight: 700;
-        letter-spacing: 0.1em;
-        border: 1px solid rgba(139, 92, 246, 0.2);
-        margin-bottom: 16px;
-    }
-    .page-header h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: var(--text-primary);
-        margin-bottom: 12px;
-    }
-    .page-header p {
-        font-size: 1.05rem;
-        color: var(--text-muted);
-        max-width: 560px;
-        margin: 0 auto;
-        line-height: 1.6;
+        letter-spacing: 0.15em;
+        color: #a78bfa;
+        margin-bottom: 1.5rem;
+        animation: fade-in-down 0.6s ease-out;
     }
 
-    .news-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+    .hero-badge svg {
+        width: 14px;
+        height: 14px;
     }
 
-    .news-card {
-        background: var(--bg-card, #16162a);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 12px;
-        padding: 28px 30px;
-        transition:
-            border-color 0.2s,
-            box-shadow 0.2s;
-    }
-    .news-card:hover {
-        border-color: rgba(139, 92, 246, 0.3);
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-    }
-    .news-card--featured {
-        border-color: rgba(139, 92, 246, 0.25);
-        background: linear-gradient(
-            135deg,
-            rgba(139, 92, 246, 0.04) 0%,
-            var(--bg-card, #16162a) 100%
-        );
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        margin-bottom: 1rem;
+        letter-spacing: -0.03em;
+        animation: fade-in-up 0.6s ease-out 0.1s both;
     }
 
-    .news-card__category {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 4px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        background: rgba(255, 255, 255, 0.06);
+    .title-gradient {
+        background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #818cf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-description {
+        font-size: 1.15rem;
         color: var(--text-secondary);
-        margin-bottom: 12px;
-    }
-    .news-card--featured .news-card__category {
-        background: rgba(139, 92, 246, 0.15);
-        color: #a78bfa;
-    }
-
-    .news-card__title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        line-height: 1.4;
-        margin-bottom: 10px;
-    }
-    .news-card__title a {
-        color: var(--text-primary);
-        text-decoration: none;
-        transition: color 0.15s;
-    }
-    .news-card__title a:hover {
-        color: #a78bfa;
-    }
-    .news-card--featured .news-card__title {
-        font-size: 1.4rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+        animation: fade-in-up 0.6s ease-out 0.2s both;
     }
 
-    .news-card__summary {
-        font-size: 0.9rem;
+    /* Hero Stats */
+    .hero-stats {
+        display: inline-flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 100px;
+        margin-bottom: 2rem;
+        animation: fade-in-up 0.6s ease-out 0.3s both;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #a78bfa, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
         color: var(--text-muted);
-        line-height: 1.6;
-        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
     }
 
-    .news-card__footer {
+    .stat-divider {
+        width: 1px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Category Filter */
+    .category-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        animation: fade-in-up 0.6s ease-out 0.4s both;
+    }
+
+    .filter-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 100px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .filter-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .filter-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.15);
+        color: var(--text-primary);
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        border-color: transparent;
+        color: white;
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .filter-icon {
+        font-size: 0.9rem;
+    }
+
+    /* Section Header */
+    .section-header {
         display: flex;
         align-items: center;
-        gap: 16px;
-        font-size: 0.78rem;
-        color: var(--text-muted);
-    }
-    .news-card__source {
-        color: var(--text-secondary);
-        font-weight: 600;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
     }
 
-    @media (max-width: 600px) {
-        .page-header h1 {
-            font-size: 1.8rem;
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+
+    .section-title svg {
+        width: 20px;
+        height: 20px;
+        color: #a78bfa;
+    }
+
+    .article-count {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 100px;
+    }
+
+    /* Featured Section */
+    .featured-section {
+        padding: 3rem 0;
+        background: linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, transparent 100%);
+    }
+
+    .featured-card {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 0;
+        background: linear-gradient(145deg, rgba(30, 30, 50, 0.8), rgba(20, 20, 40, 0.6));
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .featured-card:hover {
+        border-color: rgba(139, 92, 246, 0.4);
+        transform: translateY(-4px);
+        box-shadow: 0 25px 60px -15px rgba(139, 92, 246, 0.2);
+    }
+
+    .featured-glow {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .featured-content {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featured-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--cat-color, rgba(255, 255, 255, 0.1));
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--cat-color, var(--text-secondary));
+        margin-bottom: 1.5rem;
+        width: fit-content;
+    }
+
+    .badge-icon {
+        font-size: 0.9rem;
+    }
+
+    .featured-title {
+        font-size: 1.75rem;
+        font-weight: 800;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    .featured-title a {
+        color: var(--text-primary);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .featured-title a:hover {
+        color: #a78bfa;
+    }
+
+    .featured-summary {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .featured-meta {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .meta-item svg {
+        width: 14px;
+        height: 14px;
+        opacity: 0.6;
+    }
+
+    .featured-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.5rem;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        width: fit-content;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 25px -8px rgba(139, 92, 246, 0.5);
+    }
+
+    .featured-link svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s;
+    }
+
+    .featured-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -8px rgba(139, 92, 246, 0.6);
+    }
+
+    .featured-link:hover svg {
+        transform: translateX(4px);
+    }
+
+    .featured-visual {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(20, 20, 40, 0.8) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .visual-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .visual-icon {
+        font-size: 5rem;
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    .visual-pattern {
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        animation: pulse-pattern 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-pattern {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+
+    /* Articles Grid */
+    .articles-section {
+        padding: 3rem 0 4rem;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .article-card {
+        position: relative;
+        padding: 1.75rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 18px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: fade-in-up 0.5s ease-out var(--delay, 0s) both;
+        overflow: hidden;
+    }
+
+    .card-highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--cat-color, #a78bfa);
+        transform: scaleX(0);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .article-card:hover {
+        border-color: rgba(139, 92, 246, 0.3);
+        background: rgba(139, 92, 246, 0.05);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+    }
+
+    .article-card:hover .card-highlight {
+        transform: scaleX(1);
+    }
+
+    .card-link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .article-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 5px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--cat-color, var(--text-secondary));
+        margin-bottom: 1rem;
+    }
+
+    .cat-icon {
+        font-size: 0.85rem;
+    }
+
+    .article-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+    }
+
+    .article-title a {
+        color: var(--text-primary);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .article-card:hover .article-title a {
+        color: #a78bfa;
+    }
+
+    .article-summary {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .article-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-left svg {
+        width: 12px;
+        height: 12px;
+        opacity: 0.6;
+    }
+
+    .article-source {
+        font-weight: 600;
+        color: var(--text-secondary);
+    }
+
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        padding: 5rem 2rem;
+    }
+
+    .empty-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 20px;
+    }
+
+    .empty-icon svg {
+        width: 32px;
+        height: 32px;
+        color: #a78bfa;
+    }
+
+    .empty-state h3 {
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-state p {
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    .reset-filter {
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        border: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .reset-filter:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.5);
+    }
+
+    /* Submit Section */
+    .submit-section {
+        padding: 3rem 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(16, 185, 129, 0.03) 100%);
+    }
+
+    .submit-card {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2.5rem;
+        background: linear-gradient(145deg, rgba(16, 185, 129, 0.08), rgba(20, 20, 40, 0.6));
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .submit-glow {
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .submit-icon {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 16px;
+    }
+
+    .submit-icon svg {
+        width: 28px;
+        height: 28px;
+        color: #10b981;
+    }
+
+    .submit-content {
+        flex: 1;
+    }
+
+    .submit-content h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .submit-content p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .submit-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.9rem 1.75rem;
+        background: linear-gradient(135deg, #10b981, #059669);
+        border-radius: 12px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 25px -8px rgba(16, 185, 129, 0.4);
+    }
+
+    .submit-btn svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.5);
+    }
+
+    .submit-btn:hover svg {
+        transform: translateX(4px);
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+        padding: 3rem 0 4rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .newsletter-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem 2.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+    }
+
+    .newsletter-content h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+    }
+
+    .newsletter-content p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .newsletter-input {
+        padding: 0.85rem 1.25rem;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        font-size: 0.9rem;
+        color: white;
+        width: 280px;
+        outline: none;
+        transition: all 0.2s;
+    }
+
+    .newsletter-input::placeholder {
+        color: var(--text-muted);
+    }
+
+    .newsletter-input:focus {
+        border-color: rgba(139, 92, 246, 0.5);
+        box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+
+    .newsletter-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.5rem;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        border: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .newsletter-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .newsletter-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
-        .news-card {
-            padding: 20px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .news-card--featured .news-card__title {
-            font-size: 1.15rem;
+    }
+
+    @keyframes fade-in-down {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .featured-card {
+            grid-template-columns: 1fr;
+        }
+
+        .featured-visual {
+            height: 200px;
+            order: -1;
+        }
+
+        .submit-card,
+        .newsletter-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .submit-icon {
+            margin: 0 auto;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .newsletter-input {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 4rem 0 2rem;
+        }
+
+        .hero-stats {
+            padding: 0.75rem 1.25rem;
+            gap: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1rem;
+        }
+
+        .category-filter {
+            gap: 0.4rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 0.9rem;
+            font-size: 0.75rem;
+        }
+
+        .featured-content {
+            padding: 1.75rem;
+        }
+
+        .featured-title {
+            font-size: 1.35rem;
+        }
+
+        .articles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .submit-card {
+            padding: 1.75rem;
         }
     }
 </style>

@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "The end of AIDS: HIV infection as a chronic disease",
-      "journal": "The Lancet",
-      "year": 2013,
-      "citationCount": 2003,
-      "doi": "10.1016/s0140-6736(13)61809-7",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(13)61809-7",
-      "verified": true
-    },
-    {
-      "title": "Dramatic Rise in Plasma Viremia after CD8+ T Cell Depletion in Simian Immunodeficiency Virus–infected Macaques",
-      "journal": "The Journal of Experimental Medicine",
-      "year": 1999,
-      "citationCount": 1407,
-      "doi": "10.1084/jem.189.6.991",
-      "sourceUrl": "https://doi.org/10.1084/jem.189.6.991",
-      "verified": true
-    },
-    {
-      "title": "Breadth of concomitant immune responses prior to patient recovery: a case report of non-severe COVID-19",
-      "journal": "Nature Medicine",
-      "year": 2020,
-      "citationCount": 1099,
-      "doi": "10.1038/s41591-020-0819-2",
-      "sourceUrl": "https://doi.org/10.1038/s41591-020-0819-2",
-      "verified": true
-    },
-    {
-      "title": "Plasma Levels of Soluble CD14 Independently Predict Mortality in HIV Infection",
-      "journal": "The Journal of Infectious Diseases",
-      "year": 2011,
-      "citationCount": 1083,
-      "doi": "10.1093/infdis/jiq118",
-      "sourceUrl": "https://doi.org/10.1093/infdis/jiq118",
-      "verified": true
-    },
-    {
-      "title": "Quantifying Residual HIV-1 Replication in Patients Receiving Combination Antiretroviral Therapy",
-      "journal": "New England Journal of Medicine",
-      "year": 1999,
-      "citationCount": 824,
-      "doi": "10.1056/nejm199905273402101",
-      "sourceUrl": "https://doi.org/10.1056/nejm199905273402101",
-      "verified": true
-    },
-    {
-      "title": "HIV infection: epidemiology, pathogenesis, treatment, and prevention",
-      "journal": "The Lancet",
-      "year": 2014,
-      "citationCount": 800,
-      "doi": "10.1016/s0140-6736(14)60164-1",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(14)60164-1",
-      "verified": true
-    },
-    {
-      "title": "Advancing global health and strengthening the HIV response in the era of the Sustainable Development Goals: the International AIDS Society—Lancet Commission",
-      "journal": "The Lancet",
-      "year": 2018,
-      "citationCount": 735,
-      "doi": "10.1016/s0140-6736(18)31070-5",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(18)31070-5",
-      "verified": true
-    },
-    {
-      "title": "Panobinostat, a histone deacetylase inhibitor, for latent-virus reactivation in HIV-infected patients on suppressive antiretroviral therapy: a phase 1/2, single group, clinical trial",
-      "journal": "The Lancet HIV",
-      "year": 2014,
-      "citationCount": 629,
-      "doi": "10.1016/s2352-3018(14)70014-1",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(14)70014-1",
-      "verified": true
-    },
-    {
-      "title": "Immune checkpoint blockade in infectious diseases",
-      "journal": "Nature reviews. Immunology",
-      "year": 2017,
-      "citationCount": 561,
-      "doi": "10.1038/nri.2017.112",
-      "sourceUrl": "https://doi.org/10.1038/nri.2017.112",
-      "verified": true
-    },
-    {
-      "title": "Activation of HIV Transcription with Short-Course Vorinostat in HIV-Infected Patients on Suppressive Antiretroviral Therapy",
-      "journal": "PLoS Pathogens",
-      "year": 2014,
-      "citationCount": 504,
-      "doi": "10.1371/journal.ppat.1004473",
-      "sourceUrl": "https://doi.org/10.1371/journal.ppat.1004473",
-      "verified": true
-    },
-    {
-      "title": "CXCR5+ follicular cytotoxic T cells control viral infection in B cell follicles",
-      "journal": "Nature Immunology",
-      "year": 2016,
-      "citationCount": 464,
-      "doi": "10.1038/ni.3543",
-      "sourceUrl": "https://doi.org/10.1038/ni.3543",
-      "verified": true
-    },
-    {
-      "title": "CD4+ T Cells Expressing PD-1, TIGIT and LAG-3 Contribute to HIV Persistence during ART",
-      "journal": "PLoS Pathogens",
-      "year": 2016,
-      "citationCount": 416,
-      "doi": "10.1371/journal.ppat.1005761",
-      "sourceUrl": "https://doi.org/10.1371/journal.ppat.1005761",
-      "verified": true
-    },
-    {
-      "title": "An In-Depth Comparison of Latent HIV-1 Reactivation in Multiple Cell Model Systems and Resting CD4+ T Cells from Aviremic Patients",
-      "journal": "PLoS Pathogens",
-      "year": 2013,
-      "citationCount": 413,
-      "doi": "10.1371/journal.ppat.1003834",
-      "sourceUrl": "https://doi.org/10.1371/journal.ppat.1003834",
-      "verified": true
-    },
-    {
-      "title": "International AIDS Society global scientific strategy: towards an HIV cure 2016",
-      "journal": "Nature Medicine",
-      "year": 2016,
-      "citationCount": 412,
-      "doi": "10.1038/nm.4108",
-      "sourceUrl": "https://doi.org/10.1038/nm.4108",
-      "verified": true
-    },
-    {
-      "title": "Serum Hepatitis B Surface Antigen and Hepatitis B E Antigen Titers: Disease Phase Influences Correlation With Viral Load and Intrahepatic Hepatitis B Virus Markers",
-      "journal": "Hepatology",
-      "year": 2010,
-      "citationCount": 408,
-      "doi": "10.1002/hep.23571",
-      "sourceUrl": "https://doi.org/10.1002/hep.23571",
-      "verified": true
-    },
-    {
-      "title": "Getting the “Kill” into “Shock and Kill”: Strategies to Eliminate Latent HIV",
-      "journal": "Cell Host & Microbe",
-      "year": 2018,
-      "citationCount": 404,
-      "doi": "10.1016/j.chom.2017.12.004",
-      "sourceUrl": "https://doi.org/10.1016/j.chom.2017.12.004",
-      "verified": true
-    },
-    {
-      "title": "Isolation and rapid sharing of the 2019 novel coronavirus ( <scp>SARS</scp> ‐CoV‐2) from the first patient diagnosed with <scp>COVID</scp> ‐19 in Australia",
-      "journal": "The Medical Journal of Australia",
-      "year": 2020,
-      "citationCount": 349,
-      "doi": "10.5694/mja2.50569",
-      "sourceUrl": "https://doi.org/10.5694/mja2.50569",
-      "verified": true
-    },
-    {
-      "title": "Measuring Recent Thymic Emigrants in Blood of Normal and HIV-1–Infected Individuals before and after Effective Therapy",
-      "journal": "The Journal of Experimental Medicine",
-      "year": 1999,
-      "citationCount": 346,
-      "doi": "10.1084/jem.190.5.725",
-      "sourceUrl": "https://doi.org/10.1084/jem.190.5.725",
-      "verified": true
-    },
-    {
-      "title": "Research priorities for an HIV cure: International AIDS Society Global Scientific Strategy 2021",
-      "journal": "Nature Medicine",
-      "year": 2021,
-      "citationCount": 340,
-      "doi": "10.1038/s41591-021-01590-5",
-      "sourceUrl": "https://doi.org/10.1038/s41591-021-01590-5",
-      "verified": true
-    },
-    {
-      "title": "The CD16+ Monocyte Subset Is More Permissive to Infection and Preferentially Harbors HIV-1 In Vivo",
-      "journal": "The Journal of Immunology",
-      "year": 2007,
-      "citationCount": 333,
-      "doi": "10.4049/jimmunol.178.10.6581",
-      "sourceUrl": "https://doi.org/10.4049/jimmunol.178.10.6581",
-      "verified": true
-    },
-    {
-      "title": "Regulation of Toll-like receptor-2 expression in chronic hepatitis B by the precore protein",
-      "journal": "Hepatology",
-      "year": 2006,
-      "citationCount": 331,
-      "doi": "10.1002/hep.21482",
-      "sourceUrl": "https://doi.org/10.1002/hep.21482",
-      "verified": true
-    },
-    {
-      "title": "Use of Real-Time PCR and Molecular Beacons To Detect Virus Replication in Human Immunodeficiency Virus Type 1-Infected Individuals on Prolonged Effective Antiretroviral Therapy",
-      "journal": "Journal of Virology",
-      "year": 1999,
-      "citationCount": 253,
-      "doi": "10.1128/jvi.73.7.6099-6103.1999",
-      "sourceUrl": "https://doi.org/10.1128/jvi.73.7.6099-6103.1999",
-      "verified": true
-    },
-    {
-      "title": "Short-term administration of disulfiram for reversal of latent HIV infection: a phase 2 dose-escalation study",
-      "journal": "The Lancet HIV",
-      "year": 2015,
-      "citationCount": 243,
-      "doi": "10.1016/s2352-3018(15)00226-x",
-      "sourceUrl": "https://doi.org/10.1016/s2352-3018(15)00226-x",
-      "verified": true
-    },
-    {
-      "title": "Analysis of hepatitis B viral load decline under potent therapy: Complex decay profiles observed",
-      "journal": "Hepatology",
-      "year": 2001,
-      "citationCount": 242,
-      "doi": "10.1053/jhep.2001.28509",
-      "sourceUrl": "https://doi.org/10.1053/jhep.2001.28509",
-      "verified": true
-    },
-    {
-      "title": "HIV-hepatitis B virus coinfection",
-      "journal": "AIDS",
-      "year": 2017,
-      "citationCount": 240,
-      "doi": "10.1097/qad.0000000000001574",
-      "sourceUrl": "https://doi.org/10.1097/qad.0000000000001574",
-      "verified": true
-    },
-    {
-      "title": "Establishment of HIV-1 latency in resting CD4 <sup>+</sup> T cells depends on chemokine-induced changes in the actin cytoskeleton",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 2010,
-      "citationCount": 227,
-      "doi": "10.1073/pnas.1002894107",
-      "sourceUrl": "https://doi.org/10.1073/pnas.1002894107",
-      "verified": true
-    },
-    {
-      "title": "CCR7 ligands CCL19 and CCL21 increase permissiveness of resting memory CD4+ T cells to HIV-1 infection: a novel model of HIV-1 latency",
-      "journal": "Blood",
-      "year": 2007,
-      "citationCount": 225,
-      "doi": "10.1182/blood-2007-06-097907",
-      "sourceUrl": "https://doi.org/10.1182/blood-2007-06-097907",
-      "verified": true
-    },
-    {
-      "title": "PD-1 blockade potentiates HIV latency reversal ex vivo in CD4+ T cells from ART-suppressed individuals",
-      "journal": "Nature Communications",
-      "year": 2019,
-      "citationCount": 210,
-      "doi": "10.1038/s41467-019-08798-7",
-      "sourceUrl": "https://doi.org/10.1038/s41467-019-08798-7",
-      "verified": true
-    },
-    {
-      "title": "Immunopathogenesis of hepatitis B virus infection",
-      "journal": "Immunology and Cell Biology",
-      "year": 2006,
-      "citationCount": 206,
-      "doi": "10.1038/sj.icb.7100009",
-      "sourceUrl": "https://doi.org/10.1038/sj.icb.7100009",
-      "verified": true
-    },
-    {
-      "title": "Normal T-Cell Turnover in Sooty Mangabeys Harboring Active Simian Immunodeficiency Virus Infection",
-      "journal": "Journal of Virology",
-      "year": 2000,
-      "citationCount": 196,
-      "doi": "10.1128/jvi.74.3.1209-1223.2000",
-      "sourceUrl": "https://doi.org/10.1128/jvi.74.3.1209-1223.2000",
-      "verified": true
-    },
-    {
-      "title": "Comparison of HDAC inhibitors in clinical development",
-      "journal": "Human Vaccines & Immunotherapeutics",
-      "year": 2013,
-      "citationCount": 189,
-      "doi": "10.4161/hv.23800",
-      "sourceUrl": "https://doi.org/10.4161/hv.23800",
-      "verified": true
-    },
-    {
-      "title": "Characteristics of drug resistant HBV in an international collaborative study of HIV-HBV-infected individuals on extended lamivudine therapy",
-      "journal": "AIDS",
-      "year": 2006,
-      "citationCount": 181,
-      "doi": "10.1097/01.aids.0000218550.85081.59",
-      "sourceUrl": "https://doi.org/10.1097/01.aids.0000218550.85081.59",
-      "verified": true
-    },
-    {
-      "title": "HIV infection",
-      "journal": "Nature Reviews Disease Primers",
+      "title": "HIV infection.",
+      "journal": "Nat Rev Dis Primers",
       "year": 2023,
-      "citationCount": 181,
+      "citationCount": 0,
       "doi": "10.1038/s41572-023-00452-3",
-      "sourceUrl": "https://doi.org/10.1038/s41572-023-00452-3",
-      "verified": true
+      "pubmedId": "37591865",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37591865/"
     },
     {
-      "title": "Increased glucose metabolic activity is associated with CD4+ T-cell activation and depletion during chronic HIV infection",
-      "journal": "AIDS",
-      "year": 2013,
-      "citationCount": 174,
-      "doi": "10.1097/qad.0000000000000128",
-      "sourceUrl": "https://doi.org/10.1097/qad.0000000000000128",
-      "verified": true
-    },
-    {
-      "title": "Integrated immune dynamics define correlates of COVID-19 severity and antibody responses",
-      "journal": "Cell Reports Medicine",
-      "year": 2021,
-      "citationCount": 170,
-      "doi": "10.1016/j.xcrm.2021.100208",
-      "sourceUrl": "https://doi.org/10.1016/j.xcrm.2021.100208",
-      "verified": true
-    },
-    {
-      "title": "<scp>HIV</scp>and co‐infections",
-      "journal": "Immunological Reviews",
-      "year": 2013,
-      "citationCount": 162,
-      "doi": "10.1111/imr.12063",
-      "sourceUrl": "https://doi.org/10.1111/imr.12063",
-      "verified": true
-    },
-    {
-      "title": "Direct evidence for new T-cell generation by patients after either T-cell–depleted or unmodified allogeneic hematopoietic stem cell transplantations",
-      "journal": "Blood",
-      "year": 2002,
-      "citationCount": 162,
-      "doi": "10.1182/blood.v100.6.2235.h81802002235_2235_2242",
-      "sourceUrl": "https://doi.org/10.1182/blood.v100.6.2235.h81802002235_2235_2242",
-      "verified": true
-    },
-    {
-      "title": "Programmed cell death-1 contributes to the establishment and maintenance of HIV-1 latency",
-      "journal": "AIDS",
+      "title": "Immune checkpoint blockade in infectious diseases.",
+      "journal": "Nat Rev Immunol",
       "year": 2018,
-      "citationCount": 155,
-      "doi": "10.1097/qad.0000000000001849",
-      "sourceUrl": "https://doi.org/10.1097/qad.0000000000001849",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1038/nri.2017.112",
+      "pubmedId": "28990586",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28990586/"
     },
     {
-      "title": "Consensus statement on the role of health systems in advancing the long-term well-being of people living with HIV",
-      "journal": "Nature Communications",
-      "year": 2021,
-      "citationCount": 150,
-      "doi": "10.1038/s41467-021-24673-w",
-      "sourceUrl": "https://doi.org/10.1038/s41467-021-24673-w",
-      "verified": true
-    },
-    {
-      "title": "Shocking HIV out of hiding",
-      "journal": "Current Opinion in HIV and AIDS",
-      "year": 2016,
-      "citationCount": 147,
-      "doi": "10.1097/coh.0000000000000279",
-      "sourceUrl": "https://doi.org/10.1097/coh.0000000000000279",
-      "verified": true
-    },
-    {
-      "title": "Endosomal NOX2 oxidase exacerbates virus pathogenicity and is a target for antiviral therapy",
-      "journal": "Nature Communications",
-      "year": 2017,
-      "citationCount": 146,
-      "doi": "10.1038/s41467-017-00057-x",
-      "sourceUrl": "https://doi.org/10.1038/s41467-017-00057-x",
-      "verified": true
-    },
-    {
-      "title": "Direct evidence for new T-cell generation by patients after either T-cell–depleted or unmodified allogeneic hematopoietic stem cell transplantations",
-      "journal": "Blood",
-      "year": 2002,
-      "citationCount": 145,
-      "doi": "10.1182/blood.v100.6.2235",
-      "sourceUrl": "https://doi.org/10.1182/blood.v100.6.2235",
-      "verified": true
-    },
-    {
-      "title": "Pharmacy Adherence Measures to Assess Adherence to Antiretroviral Therapy: Review of the Literature and Implications for Treatment Monitoring",
-      "journal": "Clinical Infectious Diseases",
-      "year": 2011,
-      "citationCount": 144,
-      "doi": "10.1093/cid/ciq167",
-      "sourceUrl": "https://doi.org/10.1093/cid/ciq167",
-      "verified": true
-    },
-    {
-      "title": "Effect of ipilimumab on the HIV reservoir in an HIV-infected individual with metastatic melanoma",
-      "journal": "AIDS",
-      "year": 2015,
-      "citationCount": 138,
-      "doi": "10.1097/qad.0000000000000562",
-      "sourceUrl": "https://doi.org/10.1097/qad.0000000000000562",
-      "verified": true
-    },
-    {
-      "title": "A randomized trial of combination hepatitis B therapy in HIV/HBV coinfected antiretroviral naïve individuals in Thailand†",
-      "journal": "Hepatology",
-      "year": 2008,
-      "citationCount": 135,
-      "doi": "10.1002/hep.22462",
-      "sourceUrl": "https://doi.org/10.1002/hep.22462",
-      "verified": true
-    },
-    {
-      "title": "Restoration of Replication Phenotype of Lamivudine-Resistant Hepatitis B Virus Mutants by Compensatory Changes in the “Fingers” Subdomain of the Viral Polymerase Selected as a Consequence of Mutations in the Overlapping S Gene",
-      "journal": "Virology",
-      "year": 2002,
-      "citationCount": 132,
-      "doi": "10.1006/viro.2002.1448",
-      "sourceUrl": "https://doi.org/10.1006/viro.2002.1448",
-      "verified": true
-    },
-    {
-      "title": "Inhibition of Telomerase Activity by Human Immunodeficiency Virus (HIV) Nucleos(t)ide Reverse Transcriptase Inhibitors: A Potential Factor Contributing to HIV-Associated Accelerated Aging",
-      "journal": "The Journal of Infectious Diseases",
+      "title": "The end of AIDS: HIV infection as a chronic disease.",
+      "journal": "Lancet",
       "year": 2013,
-      "citationCount": 131,
-      "doi": "10.1093/infdis/jit006",
-      "sourceUrl": "https://doi.org/10.1093/infdis/jit006",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S0140-6736(13)61809-7",
+      "pubmedId": "24152939",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24152939/"
     },
     {
-      "title": "HDAC inhibitors in HIV",
-      "journal": "Immunology and Cell Biology",
-      "year": 2011,
-      "citationCount": 127,
-      "doi": "10.1038/icb.2011.95",
-      "sourceUrl": "https://doi.org/10.1038/icb.2011.95",
-      "verified": true
+      "title": "HIV infection: epidemiology, pathogenesis, treatment, and prevention.",
+      "journal": "Lancet",
+      "year": 2014,
+      "citationCount": 0,
+      "doi": "10.1016/S0140-6736(14)60164-1",
+      "pubmedId": "24907868",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24907868/"
     },
     {
-      "title": "Naive T cells are maintained by thymic output in early ages but by proliferation without phenotypic change after age twenty",
-      "journal": "Immunology and Cell Biology",
-      "year": 2003,
-      "citationCount": 127,
-      "doi": "10.1046/j.1440-1711.2003.01191.x",
-      "sourceUrl": "https://doi.org/10.1046/j.1440-1711.2003.01191.x",
-      "verified": true
-    },
-    {
-      "title": "Brachiola vesicularum, N. G., N. Sp., a New Microsporidium Associated with AIDS and Myositis",
-      "journal": "Journal of Eukaryotic Microbiology",
-      "year": 1998,
-      "citationCount": 126,
-      "doi": "10.1111/j.1550-7408.1998.tb04532.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1550-7408.1998.tb04532.x",
-      "verified": true
+      "title": "CRISPR-Cas13b-mediated suppression of HBV replication and protein expression.",
+      "journal": "J Hepatol",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1016/j.jhep.2024.05.025",
+      "pubmedId": "38815932",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38815932/"
     }
   ],
   "awards": [],
   "timeline": [],
   "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Professor_Sharon_Lewin.jpg/330px-Professor_Sharon_Lewin.jpg",
-  "openalexId": "https://openalex.org/A5062645957"
+  "openalexId": "https://openalex.org/A5062645957",
+  "bio": "## Dr. Sharon Lewin: A Biography\n\nDr. Sharon Lewin stands as a pivotal figure in the field of virology, recognized for her unwavering commitment to patient care, groundbreaking research, and profound impact on the understanding and management of viral diseases. Though details of her private practice and specific location remain undisclosed, her influence within the medical community extends far beyond geographical boundaries. This biography explores Dr. Lewin's journey, highlighting her contributions and shedding light on the qualities that define her as a distinguished physician and scientist.\n\n## 1. Early Life and Education\n\nWhile specific details about Dr. Lewin's early life are not readily available, it is evident that her academic trajectory reflects a deep-seated intellectual curiosity and a fervent dedication to scientific inquiry. Her foundational education likely encompassed a rigorous curriculum emphasizing biology, chemistry, and mathematics, laying the groundwork for her future specialization in medicine. Driven by a fascination with the intricate mechanisms of infectious diseases, particularly those caused by viruses, she pursued medical studies at a prestigious institution, potentially excelling in coursework related to microbiology, immunology, and pathology.\n\nThe formative years of Dr. Lewin's medical training would have been characterized by long hours of study, intense clinical rotations, and the constant absorption of new knowledge. She likely encountered mentors and role models who instilled in her a strong sense of professional ethics, the importance of evidence-based medicine, and the value of compassion in patient care. These early experiences would have shaped her understanding of the complexities of diagnosing and treating viral infections, fostering her commitment to pursuing advanced training in virology.\n\nSpecialization in virology typically involves completing a residency in internal medicine or infectious diseases, followed by a fellowship focused specifically on the study and management of viral illnesses. During this period, Dr. Lewin would have gained extensive experience in diagnosing and treating a wide range of viral infections, from common illnesses like influenza and herpes to more complex and life-threatening conditions such as HIV/AIDS and viral hepatitis. Her training would have included advanced laboratory techniques for identifying and characterizing viruses, as well as clinical skills for managing the diverse manifestations of viral diseases. This rigorous training would have prepared her to excel in both clinical practice and research, positioning her as a leading expert in the field of virology.\n\n## 2. Medical Philosophy\n\nDr. Lewin's medical philosophy is likely rooted in a patient-centered approach that emphasizes empathy, open communication, and shared decision-making. Given her expertise in virology, she would understand the significant anxiety and uncertainty that often accompany viral infections, particularly those that are chronic or life-threatening. Her approach to patient care would likely involve taking the time to thoroughly explain the nature of the infection, the available treatment options, and the potential risks and benefits of each approach. She would also be attuned to the psychological and social impact of viral diseases, providing support and guidance to patients and their families.\n\nInnovation is likely a key component of Dr. Lewin's medical philosophy. In the rapidly evolving field of virology, new viruses emerge, existing viruses mutate, and new treatments are constantly being developed. She would likely be committed to staying abreast of the latest scientific advances and incorporating them into her clinical practice. This might involve participating in clinical trials, attending conferences, and collaborating with other experts in the field. Her innovative thinking would also extend to developing new strategies for preventing viral infections, such as through vaccination programs and public health initiatives.\n\nEthical considerations would undoubtedly play a central role in Dr. Lewin's practice. As a virologist, she would encounter complex ethical dilemmas related to confidentiality, informed consent, and access to treatment. She would be guided by a strong sense of professional responsibility and a commitment to upholding the highest standards of ethical conduct. This would involve respecting patient autonomy, protecting patient privacy, and advocating for equitable access to care for all individuals, regardless of their socioeconomic status or background. Her dedication to ethical practice would serve as a cornerstone of her reputation as a trusted and respected physician.\n\n## 3. Key Procedures & Clinical Expertise\n\nWhile specific details of Dr. Lewin's practice are not available, her expertise in virology would encompass a wide range of clinical procedures and diagnostic techniques. She would be proficient in obtaining and interpreting viral cultures, polymerase chain reaction (PCR) assays, and other laboratory tests used to identify and characterize viruses. She would also be skilled in performing physical examinations, taking medical histories, and formulating differential diagnoses for patients presenting with suspected viral infections.\n\nHer clinical expertise would likely extend to the management of a diverse array of viral diseases. This could include:\n\n*   **HIV/AIDS:** Management of antiretroviral therapy, prevention of opportunistic infections, and addressing the long-term complications of HIV infection.\n*   **Viral Hepatitis (A, B, C):** Diagnosis, treatment, and prevention of viral hepatitis, including the use of antiviral medications and liver transplantation.\n*   **Influenza and Respiratory Viruses:** Management of influenza, respiratory syncytial virus (RSV), and other respiratory viral infections, including the use of antiviral medications and supportive care.\n*   **Herpesviruses (HSV, VZV, CMV, EBV):** Diagnosis and treatment of herpes simplex virus (HSV) infections, varicella-zoster virus (VZV) infections (chickenpox and shingles), cytomegalovirus (CMV) infections, and Epstein-Barr virus (EBV) infections (mononucleosis).\n*   **Emerging Viral Infections:** Diagnosis, treatment, and prevention of emerging viral infections, such as Zika virus, Ebola virus, and SARS-CoV-2 (the virus that causes COVID-19).\n\nDr. Lewin would also be skilled in providing counseling and education to patients and their families about viral infections, including information on transmission, prevention, and treatment. She would likely collaborate with other healthcare professionals, such as infectious disease specialists, immunologists, and public health officials, to provide comprehensive care to her patients and to address broader public health concerns related to viral diseases.\n\n## 4. Academic Contributions & Research\n\nDr. Lewin's contributions to the field of virology likely extend beyond clinical practice to include significant academic and research endeavors. Her research focus areas would likely be aligned with her clinical expertise and her interests in advancing the understanding and management of viral diseases.\n\nGiven the importance of HIV/AIDS within the field, it's plausible that her research would focus on HIV pathogenesis, the development of new antiretroviral therapies, and strategies for achieving a cure for HIV infection. She might also be involved in research on viral hepatitis, exploring new approaches to preventing liver damage and improving treatment outcomes. Research into emerging viral infections, such as Zika virus and SARS-CoV-2, is another likely area of interest, given the urgent need to develop effective diagnostic tools, treatments, and vaccines for these diseases.\n\nHer research would likely have been published in peer-reviewed medical journals, contributing to the body of scientific knowledge on viral diseases. These publications would have disseminated her findings to other researchers and clinicians, helping to inform clinical practice and guide future research efforts. She would likely have presented her research at national and international conferences, sharing her insights with a broader audience and engaging in discussions with other experts in the field.\n\nDr. Lewin's academic contributions might also include teaching and mentoring medical students, residents, and fellows. She would have played a role in training the next generation of virologists, sharing her knowledge and expertise and inspiring them to pursue careers in this important field. Her commitment to education would have ensured that the field of virology continues to attract talented and dedicated individuals who are committed to advancing the understanding and management of viral diseases.\n\n## 5. Patient Impact & Community Work\n\nThe true measure of a physician's success lies not only in their clinical skills and academic achievements but also in the impact they have on their patients and their community. Dr. Lewin's dedication to patient care would likely have resulted in improved outcomes for many individuals affected by viral diseases. Her compassionate approach, combined with her expertise in virology, would have instilled trust and confidence in her patients, helping them to navigate the challenges of living with viral infections.\n\nShe would likely have been involved in community outreach activities aimed at promoting awareness of viral diseases and preventing their spread. This might involve participating in public health campaigns, giving educational presentations to community groups, and advocating for policies that support access to testing, treatment, and prevention services. Her commitment to community work would reflect her deep understanding of the social determinants of health and her belief that everyone deserves access to high-quality healthcare.\n\nSpecific examples of Dr. Lewin's patient impact and community work may not be publicly available, but it is reasonable to assume that she has made a significant difference in the lives of many individuals and communities affected by viral diseases. Her dedication to patient care, combined with her expertise in virology, would have positioned her as a trusted and respected healthcare provider and a valuable asset to her community.\n\n## 6. Legacy and Future Outlook\n\nDr. Sharon Lewin's legacy in the medical community is likely one of excellence, innovation, and compassion. Her contributions to the field of virology, both in clinical practice and research, would have had a lasting impact on the understanding and management of viral diseases. Her dedication to patient care would have improved the lives of countless individuals, and her commitment to community work would have helped to promote public health and prevent the spread of viral infections.\n\nLooking to the future, Dr. Lewin's expertise and leadership will likely continue to be in high demand. The field of virology is constantly evolving, with new viruses emerging and existing viruses mutating. The development of new diagnostic tools, treatments, and vaccines will remain a critical priority, and Dr. Lewin's contributions in these areas will be invaluable.\n\nHer influence will likely extend beyond her own practice and research, as she mentors and inspires the next generation of virologists. Her legacy will be one of excellence, innovation, and compassion, ensuring that the field of virology continues to advance and that individuals affected by viral diseases receive the best possible care. Dr. Lewin's enduring commitment to advancing medical knowledge and improving patient outcomes solidifies her standing as a pivotal figure in the ongoing fight against viral diseases, shaping the future of virology for years to come.\n",
+  "bioGenerated": true
 }

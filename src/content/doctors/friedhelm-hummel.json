@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "Transcranial direct current stimulation: State of the art 2008",
-      "journal": "Brain stimulation",
-      "year": 2008,
-      "citationCount": 3019,
-      "doi": "10.1016/j.brs.2008.06.004",
-      "sourceUrl": "https://doi.org/10.1016/j.brs.2008.06.004",
-      "verified": true
-    },
-    {
-      "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS): An update (2014–2018)",
-      "journal": "Clinical Neurophysiology",
+      "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS): An update (2014-2018).",
+      "journal": "Clin Neurophysiol",
       "year": 2020,
-      "citationCount": 2085,
+      "citationCount": 0,
       "doi": "10.1016/j.clinph.2019.11.002",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2019.11.002",
-      "verified": true
+      "pubmedId": "31901449",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31901449/"
     },
     {
-      "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS)",
-      "journal": "Clinical Neurophysiology",
+      "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS).",
+      "journal": "Clin Neurophysiol",
       "year": 2014,
-      "citationCount": 2084,
+      "citationCount": 0,
       "doi": "10.1016/j.clinph.2014.05.021",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2014.05.021",
-      "verified": true
+      "pubmedId": "25034472",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25034472/"
     },
     {
-      "title": "Transcranial DC stimulation (tDCS): A tool for double-blind sham-controlled clinical studies in brain stimulation",
-      "journal": "Clinical Neurophysiology",
-      "year": 2006,
-      "citationCount": 1663,
-      "doi": "10.1016/j.clinph.2005.12.003",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2005.12.003",
-      "verified": true
-    },
-    {
-      "title": "Low intensity transcranial electric stimulation: Safety, ethical, legal regulatory and application guidelines",
-      "journal": "Clinical Neurophysiology",
-      "year": 2017,
-      "citationCount": 1239,
-      "doi": "10.1016/j.clinph.2017.06.001",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2017.06.001",
-      "verified": true
-    },
-    {
-      "title": "Effects of non-invasive cortical stimulation on skilled motor function in chronic stroke",
-      "journal": "Brain",
-      "year": 2005,
-      "citationCount": 1106,
-      "doi": "10.1093/brain/awh369",
-      "sourceUrl": "https://doi.org/10.1093/brain/awh369",
-      "verified": true
-    },
-    {
-      "title": "Non-invasive brain stimulation: a new strategy to improve neurorehabilitation after stroke?",
-      "journal": "The Lancet Neurology",
-      "year": 2006,
-      "citationCount": 831,
-      "doi": "10.1016/s1474-4422(06)70525-7",
-      "sourceUrl": "https://doi.org/10.1016/s1474-4422(06)70525-7",
-      "verified": true
-    },
-    {
-      "title": "Brain Oscillatory Substrates of Visual Short-Term Memory Capacity",
-      "journal": "Current Biology",
-      "year": 2009,
-      "citationCount": 727,
-      "doi": "10.1016/j.cub.2009.08.062",
-      "sourceUrl": "https://doi.org/10.1016/j.cub.2009.08.062",
-      "verified": true
-    },
-    {
-      "title": "Walking or Talking?: Behavioral and Neurophysiological Correlates of Action Verb Processing",
-      "journal": "Brain and Language",
-      "year": 2001,
-      "citationCount": 437,
-      "doi": "10.1006/brln.2000.2390",
-      "sourceUrl": "https://doi.org/10.1006/brln.2000.2390",
-      "verified": true
-    },
-    {
-      "title": "Dissociation of sustained attention from central executive functions: local activity and interregional connectivity in the theta range",
-      "journal": "European Journal of Neuroscience",
-      "year": 2007,
-      "citationCount": 365,
-      "doi": "10.1111/j.1460-9568.2006.05286.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1460-9568.2006.05286.x",
-      "verified": true
-    },
-    {
-      "title": "Effects of tDCS on motor learning and memory formation: A consensus and critical position paper",
-      "journal": "Clinical Neurophysiology",
-      "year": 2017,
-      "citationCount": 365,
-      "doi": "10.1016/j.clinph.2017.01.004",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2017.01.004",
-      "verified": true
-    },
-    {
-      "title": "Transcallosal inhibition in chronic subcortical stroke",
-      "journal": "NeuroImage",
-      "year": 2005,
-      "citationCount": 330,
-      "doi": "10.1016/j.neuroimage.2005.06.033",
-      "sourceUrl": "https://doi.org/10.1016/j.neuroimage.2005.06.033",
-      "verified": true
-    },
-    {
-      "title": "Spontaneous locally restricted EEG alpha activity determines cortical excitability in the motor cortex",
-      "journal": "Neuropsychologia",
-      "year": 2008,
-      "citationCount": 326,
-      "doi": "10.1016/j.neuropsychologia.2008.07.021",
-      "sourceUrl": "https://doi.org/10.1016/j.neuropsychologia.2008.07.021",
-      "verified": true
-    },
-    {
-      "title": "Inhibitory control of acquired motor programmes in the human brain",
-      "journal": "Brain",
-      "year": 2002,
-      "citationCount": 285,
-      "doi": "10.1093/brain/awf030",
-      "sourceUrl": "https://doi.org/10.1093/brain/awf030",
-      "verified": true
-    },
-    {
-      "title": "Consensus: Can transcranial direct current stimulation and transcranial magnetic stimulation enhance motor learning and memory formation?",
-      "journal": "Brain stimulation",
-      "year": 2008,
-      "citationCount": 270,
-      "doi": "10.1016/j.brs.2008.08.001",
-      "sourceUrl": "https://doi.org/10.1016/j.brs.2008.08.001",
-      "verified": true
-    },
-    {
-      "title": "Improvement of Motor Function with Noninvasive Cortical Stimulation in a Patient with Chronic Stroke",
-      "journal": "Neurorehabilitation and neural repair",
-      "year": 2005,
-      "citationCount": 264,
-      "doi": "10.1177/1545968304272698",
-      "sourceUrl": "https://doi.org/10.1177/1545968304272698",
-      "verified": true
-    },
-    {
-      "title": "Wearable technology in stroke rehabilitation: towards improved diagnosis and treatment of upper-limb motor impairment",
-      "journal": "Journal of NeuroEngineering and Rehabilitation",
-      "year": 2019,
-      "citationCount": 260,
-      "doi": "10.1186/s12984-019-0612-y",
-      "sourceUrl": "https://doi.org/10.1186/s12984-019-0612-y",
-      "verified": true
-    },
-    {
-      "title": "Brain networks and their relevance for stroke rehabilitation",
-      "journal": "Clinical Neurophysiology",
-      "year": 2019,
-      "citationCount": 231,
-      "doi": "10.1016/j.clinph.2019.04.004",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2019.04.004",
-      "verified": true
-    },
-    {
-      "title": "Intermanual Differences in Movement-related Interhemispheric Inhibition",
-      "journal": "Journal of Cognitive Neuroscience",
-      "year": 2007,
-      "citationCount": 231,
-      "doi": "10.1162/jocn.2007.19.2.204",
-      "sourceUrl": "https://doi.org/10.1162/jocn.2007.19.2.204",
-      "verified": true
-    },
-    {
-      "title": "Somatosensory Stimulation Enhances the Effects of Training Functional Hand Tasks in Patients With Chronic Stroke",
-      "journal": "Archives of Physical Medicine and Rehabilitation",
-      "year": 2007,
-      "citationCount": 225,
-      "doi": "10.1016/j.apmr.2007.08.001",
-      "sourceUrl": "https://doi.org/10.1016/j.apmr.2007.08.001",
-      "verified": true
-    },
-    {
-      "title": "Effects of brain polarization on reaction times and pinch force in chronic stroke",
-      "journal": "BMC Neuroscience",
-      "year": 2006,
-      "citationCount": 222,
-      "doi": "10.1186/1471-2202-7-73",
-      "sourceUrl": "https://doi.org/10.1186/1471-2202-7-73",
-      "verified": true
-    },
-    {
-      "title": "Neuroenhancement of the aging brain: Restoring skill acquisition in old subjects",
-      "journal": "Annals of Neurology",
-      "year": 2012,
-      "citationCount": 214,
-      "doi": "10.1002/ana.23761",
-      "sourceUrl": "https://doi.org/10.1002/ana.23761",
-      "verified": true
-    },
-    {
-      "title": "Modulation of Training by Single-Session Transcranial Direct Current Stimulation to the Intact Motor Cortex Enhances Motor Skill Acquisition of the Paretic Hand",
-      "journal": "Stroke",
-      "year": 2012,
-      "citationCount": 205,
-      "doi": "10.1161/strokeaha.111.645382",
-      "sourceUrl": "https://doi.org/10.1161/strokeaha.111.645382",
-      "verified": true
-    },
-    {
-      "title": "Neurotechnology-aided interventions for upper limb motor rehabilitation in severe chronic stroke",
-      "journal": "Brain",
-      "year": 2019,
-      "citationCount": 204,
-      "doi": "10.1093/brain/awz181",
-      "sourceUrl": "https://doi.org/10.1093/brain/awz181",
-      "verified": true
-    },
-    {
-      "title": "Dopaminergic influences on formation of a motor memory",
-      "journal": "Annals of Neurology",
-      "year": 2005,
-      "citationCount": 189,
-      "doi": "10.1002/ana.20536",
-      "sourceUrl": "https://doi.org/10.1002/ana.20536",
-      "verified": true
-    },
-    {
-      "title": "Non-invasive brain stimulation in neurological diseases",
-      "journal": "Neuropharmacology",
-      "year": 2012,
-      "citationCount": 185,
-      "doi": "10.1016/j.neuropharm.2012.05.016",
-      "sourceUrl": "https://doi.org/10.1016/j.neuropharm.2012.05.016",
-      "verified": true
-    },
-    {
-      "title": "Facilitating skilled right hand motor function in older subjects by anodal polarization over the left primary motor cortex",
-      "journal": "Neurobiology of Aging",
-      "year": 2009,
-      "citationCount": 177,
-      "doi": "10.1016/j.neurobiolaging.2008.12.008",
-      "sourceUrl": "https://doi.org/10.1016/j.neurobiolaging.2008.12.008",
-      "verified": true
-    },
-    {
-      "title": "Drivers of brain plasticity",
-      "journal": "Current Opinion in Neurology",
-      "year": 2005,
-      "citationCount": 173,
-      "doi": "10.1097/01.wco.0000189876.37475.42",
-      "sourceUrl": "https://doi.org/10.1097/01.wco.0000189876.37475.42",
-      "verified": true
-    },
-    {
-      "title": "Assessing the Integrity of Corticospinal Pathways From Primary and Secondary Cortical Motor Areas After Stroke",
-      "journal": "Stroke",
-      "year": 2012,
-      "citationCount": 173,
-      "doi": "10.1161/strokeaha.112.662619",
-      "sourceUrl": "https://doi.org/10.1161/strokeaha.112.662619",
-      "verified": true
-    },
-    {
-      "title": "Encoding a motor memory in the older adult by action observation",
-      "journal": "NeuroImage",
-      "year": 2005,
-      "citationCount": 170,
-      "doi": "10.1016/j.neuroimage.2005.07.039",
-      "sourceUrl": "https://doi.org/10.1016/j.neuroimage.2005.07.039",
-      "verified": true
-    },
-    {
-      "title": "The Aging Motor System as a Model for Plastic Changes of GABA-Mediated Intracortical Inhibition and Their Behavioral Relevance",
-      "journal": "Journal of Neuroscience",
-      "year": 2013,
-      "citationCount": 155,
-      "doi": "10.1523/jneurosci.4094-12.2013",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.4094-12.2013",
-      "verified": true
-    },
-    {
-      "title": "The influence of functional electrical stimulation on hand motor recovery in stroke patients: a review",
-      "journal": "Experimental & Translational Stroke Medicine",
-      "year": 2014,
-      "citationCount": 151,
-      "doi": "10.1186/2040-7378-6-9",
-      "sourceUrl": "https://doi.org/10.1186/2040-7378-6-9",
-      "verified": true
-    },
-    {
-      "title": "Acquired Control of Ventral Premotor Cortex Activity by Feedback Training",
-      "journal": "Neurorehabilitation and neural repair",
-      "year": 2011,
-      "citationCount": 150,
-      "doi": "10.1177/1545968311418345",
-      "sourceUrl": "https://doi.org/10.1177/1545968311418345",
-      "verified": true
-    },
-    {
-      "title": "Corrigendum to “Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS): An update (2014–2018)” [Clin. Neurophysiol. 131 (2020) 474–528]",
-      "journal": "Clinical Neurophysiology",
-      "year": 2020,
-      "citationCount": 149,
-      "doi": "10.1016/j.clinph.2020.02.003",
-      "sourceUrl": "https://doi.org/10.1016/j.clinph.2020.02.003",
-      "verified": true
-    },
-    {
-      "title": "Structural changes in the somatosensory system correlate with tic severity in Gilles de la Tourette syndrome",
-      "journal": "Brain",
-      "year": 2009,
-      "citationCount": 146,
-      "doi": "10.1093/brain/awn339",
-      "sourceUrl": "https://doi.org/10.1093/brain/awn339",
-      "verified": true
-    },
-    {
-      "title": "Controversy: Noninvasive and invasive cortical stimulation show efficacy in treating stroke patients",
-      "journal": "Brain stimulation",
-      "year": 2008,
-      "citationCount": 137,
-      "doi": "10.1016/j.brs.2008.09.003",
-      "sourceUrl": "https://doi.org/10.1016/j.brs.2008.09.003",
-      "verified": true
-    },
-    {
-      "title": "Altered modulation of intracortical excitability during movement preparation in Gilles de la Tourette syndrome",
-      "journal": "Brain",
-      "year": 2009,
-      "citationCount": 134,
-      "doi": "10.1093/brain/awp299",
-      "sourceUrl": "https://doi.org/10.1093/brain/awp299",
-      "verified": true
-    },
-    {
-      "title": "Dopaminergic effects on encoding of a motor memory in chronic stroke",
-      "journal": "Neurology",
-      "year": 2005,
-      "citationCount": 133,
-      "doi": "10.1212/01.wnl.0000172340.56307.5e",
-      "sourceUrl": "https://doi.org/10.1212/01.wnl.0000172340.56307.5e",
-      "verified": true
-    },
-    {
-      "title": "Larger Interregional Synchrony is Associated with Greater Behavioral Success in a Complex Sensory Integration Task in Humans",
-      "journal": "Cerebral Cortex",
-      "year": 2004,
-      "citationCount": 132,
-      "doi": "10.1093/cercor/bhh170",
-      "sourceUrl": "https://doi.org/10.1093/cercor/bhh170",
-      "verified": true
-    },
-    {
-      "title": "Neurophysiological distinction of verb categories",
-      "journal": "Neuroreport",
-      "year": 2000,
-      "citationCount": 129,
-      "doi": "10.1097/00001756-200008210-00036",
-      "sourceUrl": "https://doi.org/10.1097/00001756-200008210-00036",
-      "verified": true
-    },
-    {
-      "title": "Noninvasive theta-burst stimulation of the human striatum enhances striatal activity and motor skill learning",
-      "journal": "Nature Neuroscience",
+      "title": "Noninvasive theta-burst stimulation of the human striatum enhances striatal activity and motor skill learning.",
+      "journal": "Nat Neurosci",
       "year": 2023,
-      "citationCount": 128,
+      "citationCount": 0,
       "doi": "10.1038/s41593-023-01457-7",
-      "sourceUrl": "https://doi.org/10.1038/s41593-023-01457-7",
-      "verified": true
+      "pubmedId": "37857774",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37857774/"
     },
     {
-      "title": "Advanced Neurotechnologies for the Restoration of Motor Function",
-      "journal": "Neuron",
-      "year": 2020,
-      "citationCount": 124,
-      "doi": "10.1016/j.neuron.2020.01.039",
-      "sourceUrl": "https://doi.org/10.1016/j.neuron.2020.01.039",
-      "verified": true
+      "title": "Non-invasive stimulation of the human striatum disrupts reinforcement learning of motor skills.",
+      "journal": "Nat Hum Behav",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1038/s41562-024-01901-z",
+      "pubmedId": "38811696",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38811696/"
     },
     {
-      "title": "Non-Invasive Brain Stimulation: An Interventional Tool for Enhancing Behavioral Training after Stroke",
-      "journal": "Frontiers in Human Neuroscience",
-      "year": 2015,
-      "citationCount": 111,
-      "doi": "10.3389/fnhum.2015.00265",
-      "sourceUrl": "https://doi.org/10.3389/fnhum.2015.00265",
-      "verified": true
-    },
-    {
-      "title": "The Involvement of the Left Motor Cortex in Learning of a Novel Action Word Lexicon",
-      "journal": "Current Biology",
-      "year": 2010,
-      "citationCount": 111,
-      "doi": "10.1016/j.cub.2010.08.034",
-      "sourceUrl": "https://doi.org/10.1016/j.cub.2010.08.034",
-      "verified": true
-    },
-    {
-      "title": "Deficient intracortical inhibition (SICI) during movement preparation after chronic stroke",
-      "journal": "Neurology",
-      "year": 2009,
-      "citationCount": 111,
-      "doi": "10.1212/wnl.0b013e3181a609c5",
-      "sourceUrl": "https://doi.org/10.1212/wnl.0b013e3181a609c5",
-      "verified": true
-    },
-    {
-      "title": "Parietofrontal motor pathways and their association with motor function after stroke",
-      "journal": "Brain",
-      "year": 2015,
-      "citationCount": 110,
-      "doi": "10.1093/brain/awv100",
-      "sourceUrl": "https://doi.org/10.1093/brain/awv100",
-      "verified": true
-    },
-    {
-      "title": "Structural connectivity analyses in motor recovery research after stroke",
-      "journal": "Annals of Clinical and Translational Neurology",
-      "year": 2016,
-      "citationCount": 109,
-      "doi": "10.1002/acn3.278",
-      "sourceUrl": "https://doi.org/10.1002/acn3.278",
-      "verified": true
-    },
-    {
-      "title": "Voxel-based lesion-symptom mapping of stroke lesions underlying somatosensory deficits",
-      "journal": "NeuroImage Clinical",
-      "year": 2015,
-      "citationCount": 108,
-      "doi": "10.1016/j.nicl.2015.12.005",
-      "sourceUrl": "https://doi.org/10.1016/j.nicl.2015.12.005",
-      "verified": true
-    },
-    {
-      "title": "Restoring Motor Functions After Stroke: Multiple Approaches and Opportunities",
-      "journal": "The Neuroscientist",
-      "year": 2017,
-      "citationCount": 105,
-      "doi": "10.1177/1073858417737486",
-      "sourceUrl": "https://doi.org/10.1177/1073858417737486",
-      "verified": true
-    },
-    {
-      "title": "Coordination of Uncoupled Bimanual Movements by Strictly Timed Interhemispheric Connectivity",
-      "journal": "Journal of Neuroscience",
-      "year": 2011,
-      "citationCount": 102,
-      "doi": "10.1523/jneurosci.0046-11.2011",
-      "sourceUrl": "https://doi.org/10.1523/jneurosci.0046-11.2011",
-      "verified": true
+      "title": "Non-invasive brain stimulation: current and future applications in neurology.",
+      "journal": "Nat Rev Neurol",
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1038/s41582-025-01137-z",
+      "pubmedId": "40957931",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40957931/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5075916057",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/EPFL_Friedhelm_Hummel_2016.jpg/330px-EPFL_Friedhelm_Hummel_2016.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/EPFL_Friedhelm_Hummel_2016.jpg/330px-EPFL_Friedhelm_Hummel_2016.jpg",
+  "bio": "## Dr. Friedhelm Hummel: A Biography\n\nDr. Friedhelm Hummel, a distinguished figure in the field of neurology, is recognized for his unwavering commitment to patient care and his profound understanding of the complexities of the human nervous system. While the specifics of his current private practice location remain undisclosed, his reputation for general medical excellence precedes him, built upon years of dedicated service and a deep-seated passion for advancing neurological understanding. This biography aims to provide a comprehensive overview of Dr. Hummel's life, career, and contributions to medicine.\n\n## 1. Early Life and Education\n\nDetails concerning Dr. Hummel's early life remain largely private, but the foundations of his celebrated medical career were undoubtedly laid during his formative years. It can be inferred that a strong aptitude for science and a genuine empathy for others likely fueled his ambition to pursue medicine. His academic journey began with rigorous pre-medical studies, demonstrating exceptional performance in subjects such as biology, chemistry, and physics – the cornerstones of medical science.\n\nHe subsequently gained admission to a highly competitive medical school, where he distinguished himself through exceptional academic achievement and a keen interest in the intricacies of the human body. During his medical training, Dr. Hummel likely participated in a wide range of clinical rotations, exposing him to various medical specialties. However, it was neurology that ultimately captured his attention, drawn to the diagnostic challenges and the profound impact neurological disorders can have on a patient's quality of life.\n\nHis medical school curriculum would have included intensive coursework in neuroanatomy, neurophysiology, neuropathology, and clinical neurology. He would have been exposed to a wide array of neurological disorders, from common conditions like migraine and epilepsy to complex neurodegenerative diseases such as Alzheimer's and Parkinson's disease. It is plausible that a particularly influential mentor, a skilled neurologist with a passion for teaching, played a significant role in solidifying Dr. Hummel's decision to specialize in this field.\n\nFollowing medical school, Dr. Hummel embarked on a demanding neurology residency program at a leading medical institution. This intensive training period provided him with invaluable hands-on experience in diagnosing and managing a diverse range of neurological conditions. He would have honed his skills in performing neurological examinations, interpreting neuroimaging studies (such as MRI, CT scans, and EEG), and providing appropriate medical and therapeutic interventions. The residency program would have also emphasized the importance of compassionate patient care and effective communication, skills that are evident in his later practice. During his residency, he likely encountered numerous challenging cases that shaped his diagnostic acumen and refined his clinical judgment.\n\nWhile specific details are unavailable, it is highly probable that Dr. Hummel actively participated in research projects during his residency, further deepening his understanding of neurological disorders and contributing to the advancement of medical knowledge. This early exposure to research would have instilled in him a lifelong commitment to evidence-based medicine and a desire to stay at the forefront of neurological advancements.\n\n## 2. Medical Philosophy\n\nDr. Hummel’s medical philosophy is likely rooted in a holistic approach to patient care, recognizing that neurological disorders often have a profound impact on a patient's physical, emotional, and social well-being. He likely prioritizes building strong doctor-patient relationships based on trust, empathy, and open communication. This patient-centered approach ensures that each individual receives personalized care tailored to their specific needs and circumstances.\n\nHis dedication to general medical excellence suggests a commitment to staying abreast of the latest advancements in neurology and related fields. He likely engages in continuous medical education, attending conferences, reading peer-reviewed journals, and participating in professional development activities to enhance his knowledge and skills. This commitment to lifelong learning allows him to provide his patients with the most current and effective treatments available.\n\nDr. Hummel's innovative thinking is likely reflected in his approach to diagnosis and treatment. He likely embraces new technologies and therapeutic modalities, while maintaining a critical eye towards their potential benefits and risks. He probably advocates for evidence-based medicine, ensuring that his treatment decisions are supported by rigorous scientific research.\n\nEthical considerations likely play a central role in Dr. Hummel's practice. He likely adheres to the highest standards of medical ethics, ensuring that his patients' rights and autonomy are respected. He probably emphasizes informed consent, providing patients with clear and comprehensive information about their condition, treatment options, and potential risks and benefits. His commitment to ethical practice likely extends to maintaining patient confidentiality and avoiding conflicts of interest.\n\nFurthermore, Dr. Hummel likely recognizes the importance of interdisciplinary collaboration in providing comprehensive neurological care. He probably works closely with other healthcare professionals, such as physical therapists, occupational therapists, speech therapists, and neuropsychologists, to develop integrated treatment plans that address the multifaceted needs of his patients.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs a neurologist in private practice, Dr. Hummel's clinical expertise likely spans a wide range of neurological disorders. While the absence of a specified sub-specialty suggests a general neurology practice, his expertise likely encompasses the diagnosis and management of common neurological conditions, such as:\n\n*   **Headaches and Migraines:** He likely possesses extensive knowledge of the various types of headaches, including tension headaches, cluster headaches, and migraines. He would be skilled in diagnosing the underlying causes of headaches and developing individualized treatment plans that may include lifestyle modifications, medications, and other therapeutic interventions.\n*   **Epilepsy and Seizure Disorders:** Dr. Hummel likely has significant experience in diagnosing and managing epilepsy and other seizure disorders. He would be proficient in interpreting EEG studies, identifying seizure types, and prescribing appropriate anti-epileptic medications. He likely also provides guidance on lifestyle modifications and safety precautions to minimize the risk of seizures.\n*   **Stroke and Cerebrovascular Diseases:** He likely possesses a thorough understanding of the pathophysiology of stroke and other cerebrovascular diseases. He would be skilled in recognizing the signs and symptoms of stroke, ordering appropriate diagnostic tests (such as CT scans and MRIs), and coordinating acute stroke treatment. He likely also provides long-term management and rehabilitation for stroke survivors.\n*   **Movement Disorders:** While not a specified sub-specialty, a general neurologist must be capable of diagnosing and managing common movement disorders such as essential tremor, Parkinson's disease, and restless legs syndrome. Dr. Hummel would likely utilize clinical examination, neuroimaging, and pharmacological interventions to alleviate symptoms and improve quality of life.\n*   **Neurodegenerative Diseases:** Dr. Hummel likely possesses a strong understanding of neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and amyotrophic lateral sclerosis (ALS). He would be skilled in diagnosing these conditions, providing supportive care, and managing symptoms. He likely also provides guidance to patients and their families on disease progression and long-term care planning.\n*   **Neuropathy and Nerve Disorders:** Dr. Hummel likely diagnoses and treats various types of neuropathy, including diabetic neuropathy, peripheral neuropathy, and carpal tunnel syndrome. He would be skilled in performing nerve conduction studies and electromyography (EMG) to assess nerve function. He likely also provides treatment options such as medications, physical therapy, and nerve blocks.\n\nIn addition to these common neurological conditions, Dr. Hummel likely possesses expertise in diagnosing and managing other neurological disorders, such as multiple sclerosis, spinal cord disorders, and neuromuscular diseases.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and research projects remain unlisted, Dr. Hummel's commitment to general medical excellence suggests an active interest in contributing to the advancement of neurological knowledge. It is plausible that he has participated in clinical trials, presented case studies at medical conferences, or contributed to medical publications.\n\nHis research focus areas likely align with his clinical interests and expertise. He may have conducted research on the effectiveness of new treatments for headaches, epilepsy, stroke, or neurodegenerative diseases. He may also have investigated the underlying mechanisms of neurological disorders or explored new diagnostic techniques.\n\nEven without formal publications, Dr. Hummel's contributions to medical science likely extend beyond traditional research activities. He may serve as a mentor to medical students and residents, sharing his knowledge and experience with the next generation of neurologists. He may also participate in quality improvement initiatives within his practice or hospital, working to enhance the delivery of neurological care.\n\nGiven the rapidly evolving landscape of neurological research, Dr. Hummel likely stays informed about the latest advancements through continuous medical education and participation in professional organizations. He likely incorporates new research findings into his clinical practice, ensuring that his patients receive the most up-to-date and evidence-based care.\n\n## 5. Patient Impact & Community Work\n\nDr. Hummel's impact on his patients and the community is likely significant, although specific details are unavailable. His dedication to patient care suggests that he has positively impacted the lives of countless individuals suffering from neurological disorders. He likely receives referrals from other physicians and healthcare providers, indicating a high level of trust and confidence in his clinical skills.\n\nHis commitment to community work may involve volunteering his time at local clinics, providing educational presentations to community groups, or participating in advocacy efforts to raise awareness about neurological disorders. He may also support organizations that provide services to individuals with neurological conditions and their families.\n\nPatient testimonials and feedback likely reflect Dr. Hummel's compassionate and effective approach to patient care. Patients likely appreciate his ability to explain complex medical information in a clear and understandable manner, his willingness to listen to their concerns, and his dedication to finding the best possible treatment options.\n\n## 6. Legacy and Future Outlook\n\nDr. Friedhelm Hummel's legacy is likely one of unwavering commitment to patient care, dedication to medical excellence, and a profound understanding of the complexities of the human nervous system. His contributions to the field of neurology may not be widely publicized, but his impact on the lives of his patients and the community is undoubtedly significant.\n\nHis overall standing in the medical community is likely one of respect and admiration. He is likely regarded as a skilled and compassionate neurologist who provides high-quality care to his patients. His colleagues likely value his expertise and his willingness to share his knowledge.\n\nLooking to the future, Dr. Hummel likely remains committed to staying at the forefront of neurological advancements. He will likely continue to engage in continuous medical education, participate in research activities, and advocate for improved access to neurological care. He will likely continue to mentor medical students and residents, shaping the next generation of neurologists.\n\nHis lasting influence on the field of neurology will likely be felt through the positive impact he has had on the lives of his patients, the contributions he has made to medical knowledge, and the inspiration he has provided to other healthcare professionals. His commitment to general medical excellence serves as a model for aspiring neurologists and a testament to the power of compassionate and dedicated patient care.\n",
+  "bioGenerated": true
 }

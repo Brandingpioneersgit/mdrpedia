@@ -1,0 +1,447 @@
+---
+/**
+ * FutureOutlook - Predictions and Field Evolution
+ * Where the doctor's specialty is heading
+ */
+
+import type { FutureOutlook, FutureOutlookPrediction } from '../../lib/ai-content-types';
+import { TIMEFRAME_LABELS } from '../../lib/ai-content-types';
+
+interface Props {
+    outlook: FutureOutlook;
+    doctorName: string;
+    specialty: string;
+    tier?: string;
+}
+
+const { outlook, doctorName, specialty, tier = 'UNRANKED' } = Astro.props;
+
+// Category config
+const categoryConfig: Record<FutureOutlookPrediction['category'], { icon: string; color: string }> = {
+    TECHNOLOGY: { icon: '🤖', color: '#3b82f6' },
+    TREATMENT: { icon: '💊', color: '#10b981' },
+    RESEARCH: { icon: '🔬', color: '#8b5cf6' },
+    POLICY: { icon: '📋', color: '#f59e0b' },
+    TRAINING: { icon: '🎓', color: '#ec4899' },
+    ACCESSIBILITY: { icon: '🌍', color: '#06b6d4' },
+};
+
+// Confidence config
+const confidenceConfig: Record<FutureOutlookPrediction['confidence'], { label: string; color: string }> = {
+    LOW: { label: 'Speculative', color: '#6b7280' },
+    MEDIUM: { label: 'Likely', color: '#f59e0b' },
+    HIGH: { label: 'Highly Likely', color: '#10b981' },
+};
+---
+
+<section class={`future-outlook-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Future Outlook
+        </h2>
+        <span class="section-subtitle">Predictions for {specialty}</span>
+    </div>
+
+    <!-- Doctor's Perspective Quote -->
+    {outlook.doctorPerspective && (
+        <blockquote class="perspective-quote">
+            <svg class="quote-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/>
+            </svg>
+            <p>{outlook.doctorPerspective}</p>
+            <cite>— {doctorName}</cite>
+        </blockquote>
+    )}
+
+    <!-- Predictions Grid -->
+    <div class="predictions-grid">
+        {outlook.fieldPredictions.map((prediction, index) => (
+            <article class="prediction-card">
+                <div class="prediction-header">
+                    <span class="category-badge" style={`--cat-color: ${categoryConfig[prediction.category].color};`}>
+                        <span class="category-icon">{categoryConfig[prediction.category].icon}</span>
+                        {prediction.category.replace('_', ' ')}
+                    </span>
+                    <div class="prediction-meta">
+                        <span class="timeframe-badge">{TIMEFRAME_LABELS[prediction.timeframe]}</span>
+                        <span class="confidence-badge" style={`--conf-color: ${confidenceConfig[prediction.confidence].color};`}>
+                            {confidenceConfig[prediction.confidence].label}
+                        </span>
+                    </div>
+                </div>
+
+                <p class="prediction-text">{prediction.prediction}</p>
+
+                {prediction.supportingTrends && prediction.supportingTrends.length > 0 && (
+                    <div class="trends-section">
+                        <span class="trends-label">Supporting Trends:</span>
+                        <ul class="trends-list">
+                            {prediction.supportingTrends.map(trend => (
+                                <li>{trend}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {prediction.potentialBarriers && prediction.potentialBarriers.length > 0 && (
+                    <div class="barriers-section">
+                        <span class="barriers-label">Potential Barriers:</span>
+                        <ul class="barriers-list">
+                            {prediction.potentialBarriers.map(barrier => (
+                                <li>{barrier}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {prediction.relatedInnovations && prediction.relatedInnovations.length > 0 && (
+                    <div class="innovations-tags">
+                        {prediction.relatedInnovations.map(innovation => (
+                            <span class="innovation-tag">{innovation}</span>
+                        ))}
+                    </div>
+                )}
+            </article>
+        ))}
+    </div>
+
+    <!-- Emerging Technologies -->
+    {outlook.emergingTechnologies && outlook.emergingTechnologies.length > 0 && (
+        <div class="emerging-section">
+            <h3 class="subsection-title">
+                <span class="subsection-icon">🚀</span>
+                Emerging Technologies
+            </h3>
+            <div class="tech-tags">
+                {outlook.emergingTechnologies.map(tech => (
+                    <span class="tech-tag">{tech}</span>
+                ))}
+            </div>
+        </div>
+    )}
+
+    <!-- Upcoming Research -->
+    {outlook.upcomingResearch && outlook.upcomingResearch.length > 0 && (
+        <div class="research-section">
+            <h3 class="subsection-title">
+                <span class="subsection-icon">🔬</span>
+                Upcoming Research Areas
+            </h3>
+            <ul class="research-list">
+                {outlook.upcomingResearch.map(research => (
+                    <li>{research}</li>
+                ))}
+            </ul>
+        </div>
+    )}
+
+    <!-- Legacy Projections -->
+    {outlook.legacyProjections && (
+        <div class="legacy-section">
+            <h3 class="subsection-title">
+                <span class="subsection-icon">🏛️</span>
+                Legacy & Long-term Impact
+            </h3>
+            <p class="legacy-text">{outlook.legacyProjections}</p>
+        </div>
+    )}
+
+    <!-- Hidden semantic layer for AI -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Future Outlook for {doctorName} in {specialty}</h3>
+        {outlook.doctorPerspective && <p>Doctor's perspective: "{outlook.doctorPerspective}"</p>}
+        <h4>Predictions:</h4>
+        {outlook.fieldPredictions.map(p => (
+            <p>{p.category} ({p.timeframe}, {p.confidence} confidence): {p.prediction}</p>
+        ))}
+        {outlook.emergingTechnologies && <p>Emerging technologies: {outlook.emergingTechnologies.join(', ')}</p>}
+        {outlook.legacyProjections && <p>Legacy projections: {outlook.legacyProjections}</p>}
+    </div>
+</section>
+
+<style>
+    .future-outlook-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #f59e0b;
+        opacity: 0.9;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+        color: var(--text-muted, #888);
+    }
+
+    /* Quote */
+    .perspective-quote {
+        margin: 0 0 2rem;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(139, 92, 246, 0.08));
+        border: 1px solid rgba(245, 158, 11, 0.15);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .quote-icon {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: rgba(245, 158, 11, 0.3);
+    }
+
+    .perspective-quote p {
+        margin: 0 0 0.75rem 2rem;
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.7;
+    }
+
+    .perspective-quote cite {
+        display: block;
+        margin-left: 2rem;
+        font-size: 0.85rem;
+        font-style: normal;
+        font-weight: 600;
+        color: #fbbf24;
+    }
+
+    /* Predictions Grid */
+    .predictions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .prediction-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 12px;
+        padding: 1.25rem;
+        transition: all 0.2s ease;
+    }
+
+    .prediction-card:hover {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .prediction-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 4px 10px;
+        background: color-mix(in srgb, var(--cat-color) 15%, transparent);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--cat-color);
+        text-transform: uppercase;
+    }
+
+    .category-icon {
+        font-size: 0.8rem;
+    }
+
+    .prediction-meta {
+        display: flex;
+        gap: 0.35rem;
+    }
+
+    .timeframe-badge {
+        padding: 3px 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        font-size: 0.65rem;
+        color: var(--text-muted, #888);
+    }
+
+    .confidence-badge {
+        padding: 3px 8px;
+        background: color-mix(in srgb, var(--conf-color) 15%, transparent);
+        border-radius: 4px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: var(--conf-color);
+    }
+
+    .prediction-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.6;
+        margin: 0 0 1rem;
+    }
+
+    .trends-section,
+    .barriers-section {
+        margin-bottom: 0.75rem;
+    }
+
+    .trends-label,
+    .barriers-label {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text-muted, #888);
+        margin-bottom: 0.35rem;
+    }
+
+    .trends-list,
+    .barriers-list {
+        margin: 0;
+        padding-left: 1rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary, #ccc);
+    }
+
+    .trends-list li {
+        margin-bottom: 0.2rem;
+    }
+
+    .trends-list li::marker {
+        color: #10b981;
+    }
+
+    .barriers-list li::marker {
+        color: #f59e0b;
+    }
+
+    .innovations-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .innovation-tag {
+        padding: 2px 8px;
+        background: rgba(139, 92, 246, 0.1);
+        border-radius: 4px;
+        font-size: 0.7rem;
+        color: #a78bfa;
+    }
+
+    /* Subsections */
+    .emerging-section,
+    .research-section,
+    .legacy-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .subsection-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        color: var(--text-primary, #fff);
+    }
+
+    .subsection-icon {
+        font-size: 1rem;
+    }
+
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tech-tag {
+        padding: 6px 12px;
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 100px;
+        font-size: 0.8rem;
+        color: #60a5fa;
+    }
+
+    .research-list {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .research-list li {
+        font-size: 0.9rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+
+    .research-list li::marker {
+        color: #8b5cf6;
+    }
+
+    .legacy-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.7;
+        margin: 0;
+        padding: 1rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-left: 3px solid rgba(255, 215, 0, 0.3);
+        border-radius: 0 8px 8px 0;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    @media (max-width: 768px) {
+        .future-outlook-section {
+            padding: 1.5rem;
+        }
+
+        .predictions-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .prediction-header {
+            flex-direction: column;
+        }
+    }
+</style>

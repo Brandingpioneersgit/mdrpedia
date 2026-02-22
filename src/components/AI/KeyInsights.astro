@@ -1,0 +1,409 @@
+---
+/**
+ * KeyInsights - Bullet Summary of Doctor's Profile
+ * Quick takeaways for AI and readers
+ */
+
+import type { KeyInsightsSummary, KeyInsight } from '../../lib/ai-content-types';
+
+interface Props {
+    insights: KeyInsightsSummary;
+    doctorName: string;
+    tier?: string;
+}
+
+const { insights, doctorName, tier = 'UNRANKED' } = Astro.props;
+
+// Category configuration
+const categoryConfig: Record<KeyInsight['category'], { icon: string; color: string }> = {
+    ACHIEVEMENT: { icon: '🏆', color: '#ffd700' },
+    INNOVATION: { icon: '💡', color: '#f59e0b' },
+    IMPACT: { icon: '🌍', color: '#10b981' },
+    EXPERTISE: { icon: '🎯', color: '#3b82f6' },
+    RECOGNITION: { icon: '⭐', color: '#ec4899' },
+    LEADERSHIP: { icon: '👑', color: '#8b5cf6' },
+};
+---
+
+<section class={`insights-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+            Key Insights
+        </h2>
+        {insights.lastUpdated && (
+            <span class="updated-badge">Updated {insights.lastUpdated}</span>
+        )}
+    </div>
+
+    <!-- One-liner -->
+    <div class="oneliner-card">
+        <blockquote class="oneliner-text">{insights.oneLiner}</blockquote>
+    </div>
+
+    <!-- Quick Stats -->
+    {insights.quickStats.length > 0 && (
+        <div class="stats-row">
+            {insights.quickStats.map(stat => (
+                <div class="stat-card">
+                    {stat.icon && <span class="stat-icon">{stat.icon}</span>}
+                    <span class="stat-value">{stat.value}</span>
+                    <span class="stat-label">{stat.label}</span>
+                </div>
+            ))}
+        </div>
+    )}
+
+    <!-- Notable For -->
+    {insights.notableFor.length > 0 && (
+        <div class="notable-section">
+            <h3 class="notable-title">Known For</h3>
+            <div class="notable-tags">
+                {insights.notableFor.map(item => (
+                    <span class="notable-tag">{item}</span>
+                ))}
+            </div>
+        </div>
+    )}
+
+    <!-- Top Insights -->
+    <div class="insights-list">
+        {insights.topInsights.map((insight, index) => (
+            <div class="insight-card" style={`--insight-color: ${categoryConfig[insight.category].color};`}>
+                <div class="insight-header">
+                    <span class="insight-icon">{categoryConfig[insight.category].icon}</span>
+                    <span class="insight-category">{insight.category.replace('_', ' ')}</span>
+                </div>
+                <p class="insight-text">{insight.insight}</p>
+                {insight.metric && (
+                    <div class="insight-metric">
+                        <span class="metric-value">{insight.metric.value}</span>
+                        <span class="metric-label">{insight.metric.label}</span>
+                    </div>
+                )}
+                {insight.evidence && (
+                    <p class="insight-evidence">{insight.evidence}</p>
+                )}
+                {insight.source && (
+                    <a
+                        href={insight.source.url || (insight.source.type === 'DOI' ? `https://doi.org/${insight.source.identifier}` : '#')}
+                        target="_blank"
+                        rel="noopener"
+                        class="insight-source"
+                    >
+                        {insight.source.type}: {insight.source.identifier}
+                    </a>
+                )}
+            </div>
+        ))}
+    </div>
+
+    <!-- AI-Generated Summary -->
+    {insights.aiGeneratedSummary && (
+        <div class="ai-summary">
+            <div class="ai-summary-header">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 8V4H8"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <path d="M12 8l-4 4"/>
+                    <path d="M12 8l4 4"/>
+                    <path d="M8 16l4-4 4 4"/>
+                </svg>
+                <span>AI-Generated Summary</span>
+            </div>
+            <p class="ai-summary-text">{insights.aiGeneratedSummary}</p>
+        </div>
+    )}
+
+    <!-- Hidden semantic layer for AI -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Key Insights for {doctorName}</h3>
+        <p>Summary: {insights.oneLiner}</p>
+        <h4>Quick Facts:</h4>
+        <ul>
+            {insights.quickStats.map(s => <li>{s.label}: {s.value}</li>)}
+        </ul>
+        <h4>Notable for:</h4>
+        <p>{insights.notableFor.join(', ')}</p>
+        <h4>Key Insights:</h4>
+        <ul>
+            {insights.topInsights.map(i => (
+                <li>[{i.category}] {i.insight} {i.metric ? `(${i.metric.value} ${i.metric.label})` : ''}</li>
+            ))}
+        </ul>
+    </div>
+</section>
+
+<style>
+    .insights-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #f59e0b;
+        opacity: 0.9;
+    }
+
+    .updated-badge {
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+    }
+
+    /* One-liner */
+    .oneliner-card {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+        border: 1px solid rgba(139, 92, 246, 0.15);
+        border-radius: 12px;
+    }
+
+    .oneliner-text {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-primary, #fff);
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* Stats Row */
+    .stats-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+        flex: 1;
+        min-width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .stat-icon {
+        font-size: 1.25rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary, #fff);
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+    }
+
+    /* Notable For */
+    .notable-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .notable-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .notable-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .notable-tag {
+        padding: 6px 14px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        color: #10b981;
+    }
+
+    /* Insights List */
+    .insights-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .insight-card {
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-left: 3px solid var(--insight-color);
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .insight-card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .insight-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .insight-icon {
+        font-size: 1.1rem;
+    }
+
+    .insight-category {
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--insight-color);
+    }
+
+    .insight-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.6;
+        margin: 0 0 0.75rem;
+    }
+
+    .insight-metric {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.35rem;
+        padding: 4px 10px;
+        background: color-mix(in srgb, var(--insight-color) 15%, transparent);
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+    }
+
+    .metric-value {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--insight-color);
+    }
+
+    .metric-label {
+        font-size: 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .insight-evidence {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: var(--text-muted, #888);
+        line-height: 1.5;
+        margin: 0.5rem 0;
+    }
+
+    .insight-source {
+        display: inline-block;
+        padding: 2px 6px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .insight-source:hover {
+        background: rgba(139, 92, 246, 0.15);
+        color: #a78bfa;
+    }
+
+    /* AI Summary */
+    .ai-summary {
+        padding: 1.25rem;
+        background: rgba(139, 92, 246, 0.05);
+        border: 1px solid rgba(139, 92, 246, 0.1);
+        border-radius: 12px;
+    }
+
+    .ai-summary-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #a78bfa;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .ai-summary-header svg {
+        color: #a78bfa;
+    }
+
+    .ai-summary-text {
+        font-size: 0.9rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    @media (max-width: 768px) {
+        .insights-section {
+            padding: 1.5rem;
+        }
+
+        .stats-row {
+            flex-direction: column;
+        }
+
+        .stat-card {
+            flex-direction: row;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .insights-list {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

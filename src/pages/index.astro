@@ -2,42 +2,109 @@
 /**
  * MDRPedia — Homepage
  * Clean, focused search-first design
+ * Database-first with static fallback
  */
 
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { countryToCode } from "../lib/country-flags";
+import { prisma } from "../lib/prisma";
 
-const allDoctors = await getCollection("doctors");
+export const prerender = false;
+
+// Type for unified doctor data
+type DoctorData = {
+	slug: string;
+	fullName: string;
+	specialty: string;
+	tier: string;
+	country: string;
+	portraitUrl: string | null;
+};
+
+let allDoctors: DoctorData[] = [];
+let dataSource = 'database';
+
+try {
+	// Fetch from database
+	const dbDoctors = await prisma.profile.findMany({
+		select: {
+			slug: true,
+			full_name: true,
+			specialty: true,
+			tier: true,
+			portrait_url: true,
+			geography: {
+				select: {
+					country: true
+				}
+			}
+		}
+	});
+
+	if (dbDoctors.length > 0) {
+		allDoctors = dbDoctors.map(d => ({
+			slug: d.slug,
+			fullName: d.full_name,
+			specialty: d.specialty,
+			tier: d.tier,
+			country: d.geography?.country || 'Unknown',
+			portraitUrl: d.portrait_url
+		}));
+	} else {
+		throw new Error('No profiles in database');
+	}
+} catch (e) {
+	dataSource = 'static';
+	console.log('Homepage falling back to static content:', e);
+	const staticDoctors = await getCollection("doctors");
+	allDoctors = staticDoctors.map(d => ({
+		slug: d.id,
+		fullName: d.data.fullName,
+		specialty: d.data.specialty,
+		tier: d.data.tier || 'UNRANKED',
+		country: d.data.geography?.country || 'Unknown',
+		portraitUrl: d.data.portraitUrl || null
+	}));
+}
+
 const totalCount = allDoctors.length;
-const titanCount = allDoctors.filter((d) => d.data.tier === "TITAN").length;
-const eliteCount = allDoctors.filter((d) => d.data.tier === "ELITE").length;
-const masterCount = allDoctors.filter((d) => d.data.tier === "MASTER").length;
-const countrySet = new Set(allDoctors.map((d) => d.data.geography.country));
+const titanCount = allDoctors.filter((d) => d.tier === "TITAN").length;
+const eliteCount = allDoctors.filter((d) => d.tier === "ELITE").length;
+const masterCount = allDoctors.filter((d) => d.tier === "MASTER").length;
+const countrySet = new Set(allDoctors.map((d) => d.country));
 const countriesCount = countrySet.size;
 
-// Build search index at build time
+// Build search index
 const searchIndex = allDoctors
 	.filter(
 		(d) =>
-			d.data.fullName &&
-			d.data.fullName.length > 2 &&
-			isNaN(Number(d.data.fullName)),
+			d.fullName &&
+			d.fullName.length > 2 &&
+			isNaN(Number(d.fullName)),
 	)
 	.map((d) => ({
-		id: d.id,
-		n: d.data.fullName,
-		s: d.data.specialty || "",
-		t: d.data.tier || "UNRANKED",
-		c: d.data.geography?.country || "",
-		cc: countryToCode(d.data.geography?.country || ""),
-		img: d.data.portraitUrl && !d.data.portraitUrl.startsWith("data:") ? d.data.portraitUrl : "",
+		id: d.slug,
+		n: d.fullName,
+		s: d.specialty || "",
+		t: d.tier || "UNRANKED",
+		c: d.country || "",
+		cc: countryToCode(d.country || ""),
+		img:
+			d.portraitUrl && !d.portraitUrl.startsWith("data:")
+				? d.portraitUrl
+				: "",
 	}))
 	.slice(0, 800);
 
 // Featured doctors - Titans for showcase
 const featuredDoctors = allDoctors
-	.filter((d) => d.data.tier === "TITAN" && d.data.portraitUrl && !d.data.portraitUrl.startsWith("data:"))
+	.filter(
+		(d) =>
+			d.tier === "TITAN" &&
+			d.portraitUrl &&
+			!d.portraitUrl.startsWith("data:"),
+	)
 	.slice(0, 6);
 ---
 
@@ -45,11 +112,21 @@ const featuredDoctors = allDoctors
 	title="MDRPedia — The Free Encyclopedia of Verified Medical Professionals"
 >
 	<div class="home">
+		<!-- Animated Background Glow -->
+		<div class="hero-bg"></div>
+
 		<!-- Hero -->
 		<header class="hero">
+			<div class="hero__badge">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+					<path d="M9 12l2 2 4-4" />
+				</svg>
+				Verified Medical Professionals
+			</div>
 			<h1 class="hero__title">MDRPedia</h1>
 			<p class="hero__tagline">
-				Encyclopedia of verified medical professionals
+				The world's most comprehensive encyclopedia of verified doctors, surgeons, and medical researchers.
 			</p>
 		</header>
 
@@ -108,33 +185,215 @@ const featuredDoctors = allDoctors
 			</div>
 		</div>
 
-		<!-- Featured Titans -->
-		{featuredDoctors.length > 0 && (
-			<section class="featured">
-				<h2 class="section-title">Featured Titans</h2>
-				<div class="featured-grid">
-					{featuredDoctors.map((doc) => (
-						<a href={`/doctors/${doc.id}`} class="featured-card">
-							<div class="featured-card__img">
-								{doc.data.portraitUrl && (
-									<img src={doc.data.portraitUrl} alt={doc.data.fullName} loading="lazy" />
-								)}
-							</div>
-							<div class="featured-card__info">
-								<h3>{doc.data.fullName}</h3>
-								<p>{doc.data.specialty}</p>
-							</div>
-						</a>
-					))}
-				</div>
-				<a href="/doctors" class="browse-link">
-					Browse all {totalCount} profiles
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-						<path d="M5 12h14M12 5l7 7-7 7"/>
-					</svg>
-				</a>
+		<!-- Content Enrichment Sections -->
+		<article class="content-enrichment">
+			<section class="content-block">
+				<h2>The MDRPedia Vision: A Beacon of Truth in Medical Data</h2>
+				<p>
+					In an era where medical information is abundant yet
+					frequently unverified, the need for a definitive, trusted
+					source of truth has never been greater. MDRPedia was founded
+					on a singular powerful principle: <strong
+						>distinction through verification</strong
+					>. We are not merely a directory; we are a curated
+					encyclopedia of the world's finest medical minds, a
+					repository of excellence that documents the careers of those
+					who have shaped modern medicine.
+				</p>
+				<p>
+					The medical landscape is vast, complex, and often opaque.
+					Patients seeking life-saving care often rely on
+					word-of-mouth or generic rating platforms that prioritize
+					bedside manner over clinical outcomes. Researchers looking
+					for collaborators struggle to sift through thousands of
+					profiles to find true pioneers. MDRPedia bridges this gap by
+					providing a rigorous, data-driven platform that highlights
+					Verified Excellence.
+				</p>
+				<h3>Why Verified Data Matters</h3>
+				<p>
+					Medical decisions are high-stakes decisions. Whether you are
+					a patient diagnosing a rare condition, a hospital
+					administrator recruiting a department head, or a medical
+					student seeking a mentor, the integrity of the data you use
+					is paramount. At MDRPedia, every profile is more than just a
+					biography; it is a validated record of achievement. We
+					track:
+				</p>
+				<ul>
+					<li>
+						<strong>Verified Surgeries:</strong> Documented procedural
+						volume and complexity.
+					</li>
+					<li>
+						<strong>Research Impact:</strong> H-Index, citation counts,
+						and impactful publications.
+					</li>
+					<li>
+						<strong>Technological Innovation:</strong> Patents, new techniques,
+						and medical devices invented.
+					</li>
+					<li>
+						<strong>Humanitarian Contribution:</strong> Care provided
+						in underserved regions and crisis zones.
+					</li>
+				</ul>
 			</section>
-		)}
+
+			<section class="content-block alt-bg">
+				<h2>Our Verification Methodology: The 4-Pillar System</h2>
+				<p>
+					MDRPedia employs a proprietary <strong
+						>4-Pillar Verification System</strong
+					> to assess and rank medical professionals. This rigorous process
+					ensures that only those who have demonstrated sustained excellence
+					across multiple domains are awarded our highest honors: Titan,
+					Elite, and Master.
+				</p>
+
+				<div class="methodology-grid">
+					<div class="pillar">
+						<h4>1. Clinical Mastery Index</h4>
+						<p>
+							This pillar measures the doctor's hands-on
+							expertise. We analyze surgical volume, success rates
+							in complex cases, and peer recognition. A Titan in
+							this category is not just a participant in medicine
+							but a virtuoso, performing procedures that few
+							others in the world can attempt with equal
+							proficiency. We look for board certifications from
+							top-tier bodies, years of active practice, and
+							specialization in high-acuity interventions.
+						</p>
+					</div>
+					<div class="pillar">
+						<h4>2. Intellectual Legacy</h4>
+						<p>
+							Medicine advances through discovery. This pillar
+							quantifies a doctor's contribution to the collective
+							knowledge of humanity. We track the H-Index (a
+							metric of productivity and citation impact),
+							authorship of definitive textbooks, and publication
+							of landmark studies that change clinical guidelines.
+							An Elite score here indicates a professional whose
+							ideas have influenced thousands of other
+							practitioners.
+						</p>
+					</div>
+					<div class="pillar">
+						<h4>3. Global Mentorship Score</h4>
+						<p>
+							True mastery is reproductive. The greatest doctors
+							train the next generation of leaders. We map the
+							"medical lineage" of our profiles—identifying who
+							they trained and what those students went on to
+							achieve. A high score in this pillar reflects a
+							legacy that will endure long after the doctor
+							retires, carried forward by the hands of their
+							proteges.
+						</p>
+					</div>
+					<div class="pillar">
+						<h4>4. Humanitarian & Crisis Impact</h4>
+						<p>
+							Medicine is fundamentally a service to humanity. We
+							heavily weight contributions to global health
+							equity, disaster response, and care for underserved
+							populations. Whether it's operating in a conflict
+							zone, establishing free clinics, or driving public
+							health policy, this pillar honors the heart of the
+							healer.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="content-block">
+				<h2>Global Medical Impact: Beyond Borders</h2>
+				<p>
+					Disease knows no borders, and neither does excellence.
+					MDRPedia tracks the global footprint of medical innovation.
+					Our platform currently hosts profiles from over {
+						countriesCount
+					} countries, representing a diverse tapestry of medical tradition
+					and innovation. From the advanced robotic surgery centers of South
+					Korea to the pioneering tropical medicine institutes of Brazil,
+					we are cataloging the global vanguard of healthcare.
+				</p>
+				<p>
+					<strong>Connecting the World of Medicine</strong><br />
+					By standardizing how medical careers are documented, we enable
+					cross-border collaboration. A cardiac surgeon in Mumbai can now
+					easily identify a potential research partner in Mayo Clinic who
+					is working on the same valve repair technique. A patient in London
+					can discover a specialist in Tokyo who has the highest success
+					rate for their specific condition. This connectivity accelerates
+					the diffusion of medical knowledge and raises the standard of
+					care globally.
+				</p>
+			</section>
+
+			<section class="content-block alt-bg">
+				<h2>For Patients, Researchers, and Institutions</h2>
+				<p>
+					MDRPedia is designed to serve multiple stakeholders in the
+					healthcare ecosystem, providing tailored value to each group
+					through our transparent data architecture.
+				</p>
+				<div class="audience-grid">
+					<div class="audience-card">
+						<h4>For Patients</h4>
+						<p>
+							<strong>Find the Best Care:</strong> Use our advanced
+							search to filter not just by specialty, but by specific
+							expertise. Looking for a doctor who has performed over
+							1,000 robotic whipple procedures? Our data can help you
+							find them.
+							<br /><br />
+							<strong>Understand Quality:</strong> Our simplified "Titan/Elite/Master"
+							tiers help you quickly gauge the standing of a medical
+							professional without needing a medical degree to interpret
+							their CV.
+						</p>
+					</div>
+					<div class="audience-card">
+						<h4>For Researchers</h4>
+						<p>
+							<strong>Identify Collaborators:</strong> Quickly assess
+							the research focus and output of potential partners.
+							<br /><br />
+							<strong>Track Trends:</strong> Use our aggregated data
+							to see which institutions are leading in specific fields
+							of research and who the rising stars are.
+						</p>
+					</div>
+					<div class="audience-card">
+						<h4>For Institutions</h4>
+						<p>
+							<strong>Recruitment & Benchmarking:</strong> Compare your
+							faculty against global standards.
+							<br /><br />
+							<strong>Reputation Management:</strong> ensuring your
+							top talent is accurately represented on the world's leading
+							medical encyclopedia builds institutional prestige.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="content-block">
+				<h2>Join the Movement for Transparency</h2>
+				<p>
+					MDRPedia is a living, breathing document of medical history.
+					As we continue to expand our database, utilizing advanced AI
+					to parse millions of citations and verified records, we
+					invite the medical community to claim their profiles and
+					contribute to this mission. Together, we can build a future
+					where excellence is recognized, verified, and accessible to
+					all.
+				</p>
+			</section>
+		</article>
 	</div>
 </Layout>
 
@@ -147,7 +406,10 @@ const featuredDoctors = allDoctors
 	function toFlag(cc) {
 		if (!cc || cc.length !== 2) return "";
 		return String.fromCodePoint(
-			...cc.toUpperCase().split("").map((c) => 0x1f1e6 + c.charCodeAt(0) - 65),
+			...cc
+				.toUpperCase()
+				.split("")
+				.map((c) => 0x1f1e6 + c.charCodeAt(0) - 65),
 		);
 	}
 
@@ -161,15 +423,26 @@ const featuredDoctors = allDoctors
 	function renderResults(matches) {
 		if (!resultsEl) return;
 		if (matches.length === 0) {
-			resultsEl.innerHTML = '<div class="no-results">No matching profiles found</div>';
+			resultsEl.innerHTML =
+				'<div class="no-results">No matching profiles found</div>';
 			resultsEl.hidden = false;
 			return;
 		}
 		activeIdx = -1;
 		resultsEl.innerHTML = matches
 			.map((m, i) => {
-				const tierClass = m.t === "TITAN" ? "tier-titan" : m.t === "ELITE" ? "tier-elite" : "tier-master";
-				const initials = m.n.split(" ").map((w) => w[0]).filter((_, j) => j < 2).join("").toUpperCase();
+				const tierClass =
+					m.t === "TITAN"
+						? "tier-titan"
+						: m.t === "ELITE"
+							? "tier-elite"
+							: "tier-master";
+				const initials = m.n
+					.split(" ")
+					.map((w) => w[0])
+					.filter((_, j) => j < 2)
+					.join("")
+					.toUpperCase();
 				const flag = toFlag(m.cc);
 				return `<a href="/doctors/${m.id}" class="result-item ${tierClass}" data-idx="${i}">
 					<div class="result-avatar">
@@ -208,11 +481,15 @@ const featuredDoctors = allDoctors
 		if (e.key === "ArrowDown") {
 			e.preventDefault();
 			activeIdx = Math.min(activeIdx + 1, items.length - 1);
-			items.forEach((el, i) => el.classList.toggle("active", i === activeIdx));
+			items.forEach((el, i) =>
+				el.classList.toggle("active", i === activeIdx),
+			);
 		} else if (e.key === "ArrowUp") {
 			e.preventDefault();
 			activeIdx = Math.max(activeIdx - 1, 0);
-			items.forEach((el, i) => el.classList.toggle("active", i === activeIdx));
+			items.forEach((el, i) =>
+				el.classList.toggle("active", i === activeIdx),
+			);
 		} else if (e.key === "Enter" && activeIdx >= 0) {
 			e.preventDefault();
 			items[activeIdx]?.click();
@@ -239,34 +516,100 @@ const featuredDoctors = allDoctors
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 60px 20px 100px;
+		position: relative;
+	}
+
+	/* Animated Background */
+	.hero-bg {
+		position: absolute;
+		top: -200px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 800px;
+		height: 800px;
+		background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+		pointer-events: none;
+		z-index: -1;
+		animation: pulse-bg 8s ease-in-out infinite;
+	}
+
+	@keyframes pulse-bg {
+		0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+		50% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
 	}
 
 	/* Hero */
 	.hero {
 		text-align: center;
-		padding: 40px 0 32px;
+		padding: 60px 0 40px;
+		position: relative;
 	}
+
+	.hero__badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 6px 14px;
+		background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05));
+		border: 1px solid rgba(139, 92, 246, 0.3);
+		border-radius: 100px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: #a78bfa;
+		margin-bottom: 20px;
+		animation: fade-in-up 0.6s ease-out;
+	}
+
+	.hero__badge svg {
+		width: 14px;
+		height: 14px;
+	}
+
 	.hero__title {
-		font-size: 3.5rem;
+		font-size: 4rem;
 		font-weight: 800;
-		letter-spacing: -0.03em;
-		background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
+		letter-spacing: -0.04em;
+		background: linear-gradient(
+			135deg,
+			#fff 0%,
+			#fff 40%,
+			#a78bfa 100%
+		);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		margin-bottom: 8px;
+		margin-bottom: 16px;
+		animation: fade-in-up 0.6s ease-out 0.1s both;
+		line-height: 1.1;
 	}
+
 	.hero__tagline {
-		font-size: 1.1rem;
-		color: var(--text-muted);
+		font-size: 1.25rem;
+		color: var(--text-secondary);
 		font-weight: 400;
+		max-width: 500px;
+		margin: 0 auto;
+		line-height: 1.6;
+		animation: fade-in-up 0.6s ease-out 0.2s both;
+	}
+
+	@keyframes fade-in-up {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	/* Search */
 	.search {
 		position: relative;
-		max-width: 600px;
-		margin: 0 auto 32px;
+		max-width: 640px;
+		margin: 0 auto 40px;
+		animation: fade-in-up 0.6s ease-out 0.3s both;
 	}
 	.search__bar {
 		position: relative;
@@ -275,47 +618,56 @@ const featuredDoctors = allDoctors
 	}
 	.search__icon {
 		position: absolute;
-		left: 18px;
-		width: 20px;
-		height: 20px;
+		left: 20px;
+		width: 22px;
+		height: 22px;
 		color: var(--text-muted);
 		pointer-events: none;
 		z-index: 1;
+		transition: color 0.2s;
+	}
+	.search__bar:focus-within .search__icon {
+		color: #a78bfa;
 	}
 	.search__input {
 		width: 100%;
-		padding: 16px 80px 16px 52px;
-		font-size: 1rem;
+		padding: 20px 100px 20px 56px;
+		font-size: 1.05rem;
 		font-family: var(--font-sans);
-		background: rgba(255, 255, 255, 0.04);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 16px;
+		background: rgba(20, 20, 35, 0.8);
+		border: 2px solid rgba(255, 255, 255, 0.08);
+		border-radius: 20px;
 		color: var(--text-primary);
 		outline: none;
-		transition: all 0.2s ease;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 	}
 	.search__input::placeholder {
 		color: var(--text-muted);
 	}
 	.search__input:focus {
-		border-color: var(--accent-purple);
-		background: rgba(255, 255, 255, 0.06);
-		box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+		border-color: rgba(139, 92, 246, 0.5);
+		background: rgba(25, 25, 45, 0.95);
+		box-shadow:
+			0 0 0 4px rgba(139, 92, 246, 0.1),
+			0 8px 32px rgba(139, 92, 246, 0.15),
+			0 4px 24px rgba(0, 0, 0, 0.3);
 	}
 	.search__kbd {
 		position: absolute;
-		right: 16px;
+		right: 18px;
 		pointer-events: none;
 	}
 	.search__kbd kbd {
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 		font-weight: 600;
-		padding: 4px 8px;
-		background: rgba(255, 255, 255, 0.06);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 6px;
+		padding: 6px 12px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 8px;
 		color: var(--text-muted);
 		font-family: var(--font-sans);
+		backdrop-filter: blur(4px);
 	}
 
 	/* Search Results */
@@ -328,7 +680,9 @@ const featuredDoctors = allDoctors
 		background: rgba(22, 22, 42, 0.98);
 		border: 1px solid rgba(255, 255, 255, 0.1);
 		border-radius: 16px;
-		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+		box-shadow:
+			0 20px 60px rgba(0, 0, 0, 0.5),
+			0 0 0 1px rgba(255, 255, 255, 0.05);
 		overflow: hidden;
 		max-height: 440px;
 		overflow-y: auto;
@@ -450,33 +804,71 @@ const featuredDoctors = allDoctors
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 24px;
-		padding: 20px 0;
-		margin-bottom: 48px;
+		gap: 12px;
+		padding: 24px;
+		margin-bottom: 56px;
+		background: linear-gradient(135deg, rgba(30, 30, 50, 0.6), rgba(20, 20, 40, 0.4));
+		border: 1px solid rgba(255, 255, 255, 0.06);
+		border-radius: 20px;
+		backdrop-filter: blur(10px);
+		animation: fade-in-up 0.6s ease-out 0.4s both;
 	}
 	.stat-item {
 		text-align: center;
+		padding: 8px 20px;
+		border-radius: 12px;
+		transition: all 0.2s ease;
+	}
+	.stat-item:hover {
+		background: rgba(255, 255, 255, 0.04);
 	}
 	.stat-num {
 		display: block;
-		font-size: 1.4rem;
-		font-weight: 700;
+		font-size: 1.6rem;
+		font-weight: 800;
 		color: var(--text-primary);
 		letter-spacing: -0.02em;
+		line-height: 1.2;
 	}
 	.stat-label {
-		font-size: 0.72rem;
+		font-size: 0.7rem;
 		color: var(--text-muted);
 		text-transform: uppercase;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.1em;
+		font-weight: 500;
 	}
-	.stat-item--titan .stat-num { color: #ffd700; }
-	.stat-item--elite .stat-num { color: #00aaff; }
-	.stat-item--master .stat-num { color: #00cc66; }
+	.stat-item--titan .stat-num {
+		background: linear-gradient(135deg, #ffd700, #ffaa00);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.stat-item--titan {
+		position: relative;
+	}
+	.stat-item--titan::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent 70%);
+		border-radius: 12px;
+	}
+	.stat-item--elite .stat-num {
+		background: linear-gradient(135deg, #00aaff, #0066ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.stat-item--master .stat-num {
+		background: linear-gradient(135deg, #00cc66, #00aa55);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
 	.stat-divider {
 		width: 1px;
-		height: 32px;
-		background: rgba(255, 255, 255, 0.08);
+		height: 40px;
+		background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.12), transparent);
 	}
 
 	/* Featured Section */
@@ -582,6 +974,169 @@ const featuredDoctors = allDoctors
 	@media (max-width: 480px) {
 		.featured-grid {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	/* Content Enrichment */
+	.content-enrichment {
+		margin-top: 80px;
+		color: var(--text-secondary);
+		line-height: 1.7;
+	}
+
+	.content-block {
+		padding: 60px 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.06);
+	}
+
+	.content-block.alt-bg {
+		background: rgba(255, 255, 255, 0.015);
+		margin: 0 -100vw;
+		padding: 60px 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		width: 100vw;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+
+	.content-block h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: 24px;
+		letter-spacing: -0.02em;
+	}
+
+	.content-block h3 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin: 40px 0 16px;
+	}
+
+	.content-block p {
+		margin-bottom: 24px;
+		font-size: 1.05rem;
+	}
+
+	.content-block ul {
+		margin-bottom: 24px;
+		padding-left: 20px;
+	}
+
+	.content-block li {
+		margin-bottom: 12px;
+	}
+
+	.content-block strong {
+		color: var(--text-primary);
+	}
+
+	.methodology-grid,
+	.audience-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		margin-top: 40px;
+	}
+
+	.pillar,
+	.audience-card {
+		background: linear-gradient(145deg, rgba(30, 30, 50, 0.6), rgba(20, 20, 40, 0.3));
+		padding: 28px;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.06);
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.pillar::before,
+	.audience-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.4), transparent);
+	}
+
+	.pillar:hover,
+	.audience-card:hover {
+		transform: translateY(-4px);
+		border-color: rgba(139, 92, 246, 0.2);
+		box-shadow: 0 20px 40px -20px rgba(139, 92, 246, 0.2);
+	}
+
+	.audience-card:hover {
+		border-color: rgba(255, 215, 0, 0.2);
+		box-shadow: 0 20px 40px -20px rgba(255, 215, 0, 0.15);
+	}
+
+	.audience-card::before {
+		background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+	}
+
+	.pillar h4,
+	.audience-card h4 {
+		font-size: 1.15rem;
+		font-weight: 700;
+		margin-bottom: 14px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.pillar h4 {
+		color: #a78bfa;
+	}
+
+	.audience-card h4 {
+		color: #fcd34d;
+	}
+
+	.pillar p,
+	.audience-card p {
+		font-size: 0.92rem;
+		margin-bottom: 0;
+		color: var(--text-muted);
+		line-height: 1.7;
+	}
+
+	/* Animated counter effect for stat numbers */
+	.stat-num {
+		transition: transform 0.2s ease;
+	}
+	.stat-item:hover .stat-num {
+		transform: scale(1.05);
+	}
+
+	@media (max-width: 768px) {
+		.methodology-grid,
+		.audience-grid {
+			grid-template-columns: 1fr;
+		}
+		.content-block h2 {
+			font-size: 1.75rem;
+		}
+		.hero__title {
+			font-size: 2.8rem;
+		}
+		.hero__tagline {
+			font-size: 1.1rem;
+		}
+		.stats-bar {
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+		.stat-divider {
+			display: none;
+		}
+		.stat-item {
+			padding: 8px 16px;
 		}
 	}
 </style>

@@ -36,459 +36,61 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Vemurafenib in Multiple Nonmelanoma Cancers with <i>BRAF</i> V600 Mutations",
-      "journal": "New England Journal of Medicine",
-      "year": 2015,
-      "citationCount": 1702,
-      "doi": "10.1056/nejmoa1502309",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1502309",
-      "verified": true
-    },
-    {
-      "title": "Dabrafenib and Trametinib Treatment in Patients With Locally Advanced or Metastatic <i>BRAF</i> V600–Mutant Anaplastic Thyroid Cancer",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2017,
-      "citationCount": 846,
-      "doi": "10.1200/jco.2017.73.6785",
-      "sourceUrl": "https://doi.org/10.1200/jco.2017.73.6785",
-      "verified": true
-    },
-    {
-      "title": "Efficacy of Selpercatinib in <i>RET</i> Fusion–Positive Non–Small-Cell Lung Cancer",
-      "journal": "New England Journal of Medicine",
-      "year": 2020,
-      "citationCount": 808,
-      "doi": "10.1056/nejmoa2005653",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2005653",
-      "verified": true
-    },
-    {
-      "title": "Efficacy of Selpercatinib in <i>RET</i> -Altered Thyroid Cancers",
-      "journal": "New England Journal of Medicine",
-      "year": 2020,
-      "citationCount": 728,
-      "doi": "10.1056/nejmoa2005651",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2005651",
-      "verified": true
-    },
-    {
-      "title": "Dabrafenib plus trametinib in patients with BRAFV600E-mutated biliary tract cancer (ROAR): a phase 2, open-label, single-arm, multicentre basket trial",
-      "journal": "The Lancet Oncology",
-      "year": 2020,
-      "citationCount": 489,
-      "doi": "10.1016/s1470-2045(20)30321-1",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(20)30321-1",
-      "verified": true
-    },
-    {
-      "title": "The next generation of evidence-based medicine",
-      "journal": "Nature Medicine",
+      "title": "The next generation of evidence-based medicine.",
+      "journal": "Nat Med",
       "year": 2023,
-      "citationCount": 486,
+      "citationCount": 0,
       "doi": "10.1038/s41591-022-02160-z",
-      "sourceUrl": "https://doi.org/10.1038/s41591-022-02160-z",
-      "verified": true
+      "pubmedId": "36646803",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36646803/"
     },
     {
-      "title": "Lurbinectedin as second-line treatment for patients with small-cell lung cancer: a single-arm, open-label, phase 2 basket trial",
-      "journal": "The Lancet Oncology",
+      "title": "Lurbinectedin as second-line treatment for patients with small-cell lung cancer: a single-arm, open-label, phase 2 basket trial.",
+      "journal": "Lancet Oncol",
       "year": 2020,
-      "citationCount": 432,
-      "doi": "10.1016/s1470-2045(20)30068-1",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(20)30068-1",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S1470-2045(20)30068-1",
+      "pubmedId": "32224306",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32224306/"
     },
     {
-      "title": "Pralsetinib for RET fusion-positive non-small-cell lung cancer (ARROW): a multi-cohort, open-label, phase 1/2 study",
-      "journal": "The Lancet Oncology",
-      "year": 2021,
-      "citationCount": 425,
-      "doi": "10.1016/s1470-2045(21)00247-3",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(21)00247-3",
-      "verified": true
-    },
-    {
-      "title": "Selective RET kinase inhibition for patients with RET-altered cancers",
-      "journal": "Annals of Oncology",
-      "year": 2018,
-      "citationCount": 421,
-      "doi": "10.1093/annonc/mdy137",
-      "sourceUrl": "https://doi.org/10.1093/annonc/mdy137",
-      "verified": true
-    },
-    {
-      "title": "Vemurafenib for <i>BRAF</i> V600–Mutant Erdheim-Chester Disease and Langerhans Cell Histiocytosis",
-      "journal": "JAMA Oncology",
-      "year": 2017,
-      "citationCount": 395,
-      "doi": "10.1001/jamaoncol.2017.5029",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2017.5029",
-      "verified": true
-    },
-    {
-      "title": "Precision Targeted Therapy with BLU-667 for <i>RET</i>-Driven Cancers",
-      "journal": "Cancer Discovery",
-      "year": 2018,
-      "citationCount": 386,
-      "doi": "10.1158/2159-8290.cd-18-0338",
-      "sourceUrl": "https://doi.org/10.1158/2159-8290.cd-18-0338",
-      "verified": true
-    },
-    {
-      "title": "Tumour-agnostic efficacy and safety of selpercatinib in patients with RET fusion-positive solid tumours other than lung or thyroid tumours (LIBRETTO-001): a phase 1/2, open-label, basket trial",
-      "journal": "The Lancet Oncology",
-      "year": 2022,
-      "citationCount": 383,
-      "doi": "10.1016/s1470-2045(22)00541-1",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(22)00541-1",
-      "verified": true
-    },
-    {
-      "title": "Complex I inhibitor of oxidative phosphorylation in advanced solid tumors and acute myeloid leukemia: phase I trials",
-      "journal": "Nature Medicine",
+      "title": "Variant allele frequency: a decision-making tool in precision oncology?",
+      "journal": "Trends Cancer",
       "year": 2023,
-      "citationCount": 333,
-      "doi": "10.1038/s41591-022-02103-8",
-      "sourceUrl": "https://doi.org/10.1038/s41591-022-02103-8",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/j.trecan.2023.08.011",
+      "pubmedId": "37704501",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37704501/"
     },
     {
-      "title": "Real-world application of tumor mutational burden-high (TMB-high) and microsatellite instability (MSI) confirms their utility as immunotherapy biomarkers",
-      "journal": "ESMO Open",
-      "year": 2021,
-      "citationCount": 332,
-      "doi": "10.1016/j.esmoop.2021.100336",
-      "sourceUrl": "https://doi.org/10.1016/j.esmoop.2021.100336",
-      "verified": true
-    },
-    {
-      "title": "Pralsetinib for patients with advanced or metastatic RET-altered thyroid cancer (ARROW): a multi-cohort, open-label, registrational, phase 1/2 study",
-      "journal": "The Lancet Diabetes & Endocrinology",
-      "year": 2021,
-      "citationCount": 329,
-      "doi": "10.1016/s2213-8587(21)00120-0",
-      "sourceUrl": "https://doi.org/10.1016/s2213-8587(21)00120-0",
-      "verified": true
-    },
-    {
-      "title": "Clinical Development of BRAF plus MEK Inhibitor Combinations",
-      "journal": "Trends in cancer",
-      "year": 2020,
-      "citationCount": 326,
-      "doi": "10.1016/j.trecan.2020.05.009",
-      "sourceUrl": "https://doi.org/10.1016/j.trecan.2020.05.009",
-      "verified": true
-    },
-    {
-      "title": "BRAF Inhibition in <i>BRAF</i><sup>V600</sup>-Mutant Gliomas: Results From the VE-BASKET Study",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2018,
-      "citationCount": 317,
-      "doi": "10.1200/jco.2018.78.9990",
-      "sourceUrl": "https://doi.org/10.1200/jco.2018.78.9990",
-      "verified": true
-    },
-    {
-      "title": "Dabrafenib plus trametinib in patients with BRAF V600E-mutant anaplastic thyroid cancer: updated analysis from the phase II ROAR basket study",
-      "journal": "Annals of Oncology",
-      "year": 2022,
-      "citationCount": 314,
-      "doi": "10.1016/j.annonc.2021.12.014",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2021.12.014",
-      "verified": true
-    },
-    {
-      "title": "Ipilimumab with Stereotactic Ablative Radiation Therapy: Phase I Results and Immunologic Correlates from Peripheral T Cells",
-      "journal": "Clinical Cancer Research",
-      "year": 2016,
-      "citationCount": 309,
-      "doi": "10.1158/1078-0432.ccr-16-1432",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-16-1432",
-      "verified": true
-    },
-    {
-      "title": "<i>RET</i> Aberrations in Diverse Cancers: Next-Generation Sequencing of 4,871 Patients",
-      "journal": "Clinical Cancer Research",
-      "year": 2016,
-      "citationCount": 275,
-      "doi": "10.1158/1078-0432.ccr-16-1679",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-16-1679",
-      "verified": true
-    },
-    {
-      "title": "RET Solvent Front Mutations Mediate Acquired Resistance to Selective RET Inhibition in RET-Driven Malignancies",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2020,
-      "citationCount": 271,
-      "doi": "10.1016/j.jtho.2020.01.006",
-      "sourceUrl": "https://doi.org/10.1016/j.jtho.2020.01.006",
-      "verified": true
-    },
-    {
-      "title": "Dabrafenib plus trametinib in BRAFV600E-mutated rare cancers: the phase 2 ROAR trial",
-      "journal": "Nature Medicine",
+      "title": "Dabrafenib plus trametinib in BRAFV600E-mutated rare cancers: the phase 2 ROAR trial.",
+      "journal": "Nat Med",
       "year": 2023,
-      "citationCount": 249,
+      "citationCount": 0,
       "doi": "10.1038/s41591-023-02321-8",
-      "sourceUrl": "https://doi.org/10.1038/s41591-023-02321-8",
-      "verified": true
+      "pubmedId": "37059834",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37059834/"
     },
     {
-      "title": "State-of-the-Art Strategies for Targeting <i>RET</i>-Dependent Cancers",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2020,
-      "citationCount": 243,
-      "doi": "10.1200/jco.19.02551",
-      "sourceUrl": "https://doi.org/10.1200/jco.19.02551",
-      "verified": true
-    },
-    {
-      "title": "The FDA approval of pembrolizumab for adult and pediatric patients with tumor mutational burden (TMB) ≥10: a decision centered on empowering patients and their physicians",
-      "journal": "Annals of Oncology",
-      "year": 2020,
-      "citationCount": 242,
-      "doi": "10.1016/j.annonc.2020.07.002",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2020.07.002",
-      "verified": true
-    },
-    {
-      "title": "Structural basis of acquired resistance to selpercatinib and pralsetinib mediated by non-gatekeeper RET mutations",
-      "journal": "Annals of Oncology",
-      "year": 2020,
-      "citationCount": 234,
-      "doi": "10.1016/j.annonc.2020.10.599",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2020.10.599",
-      "verified": true
-    },
-    {
-      "title": "Cancer Therapy Directed by Comprehensive Genomic Profiling: A Single Center Study",
-      "journal": "Cancer Research",
-      "year": 2016,
-      "citationCount": 231,
-      "doi": "10.1158/0008-5472.can-15-3043",
-      "sourceUrl": "https://doi.org/10.1158/0008-5472.can-15-3043",
-      "verified": true
-    },
-    {
-      "title": "Pan-cancer efficacy of pralsetinib in patients with RET fusion–positive solid tumors from the phase 1/2 ARROW trial",
-      "journal": "Nature Medicine",
+      "title": "Tumour-agnostic efficacy and safety of selpercatinib in patients with RET fusion-positive solid tumours other than lung or thyroid tumours (LIBRETTO-001): a phase 1/2, open-label, basket trial.",
+      "journal": "Lancet Oncol",
       "year": 2022,
-      "citationCount": 221,
-      "doi": "10.1038/s41591-022-01931-y",
-      "sourceUrl": "https://doi.org/10.1038/s41591-022-01931-y",
-      "verified": true
-    },
-    {
-      "title": "Phase IB Study of Vemurafenib in Combination with Irinotecan and Cetuximab in Patients with Metastatic Colorectal Cancer with <i>BRAF</i> V600E Mutation",
-      "journal": "Cancer Discovery",
-      "year": 2016,
-      "citationCount": 213,
-      "doi": "10.1158/2159-8290.cd-16-0050",
-      "sourceUrl": "https://doi.org/10.1158/2159-8290.cd-16-0050",
-      "verified": true
-    },
-    {
-      "title": "Incidental germline variants in 1000 advanced cancers on a prospective somatic genomic profiling protocol",
-      "journal": "Annals of Oncology",
-      "year": 2016,
-      "citationCount": 198,
-      "doi": "10.1093/annonc/mdw018",
-      "sourceUrl": "https://doi.org/10.1093/annonc/mdw018",
-      "verified": true
-    },
-    {
-      "title": "EGFR and HER2 exon 20 insertions in solid tumours: from biology to treatment",
-      "journal": "Nature Reviews Clinical Oncology",
-      "year": 2021,
-      "citationCount": 190,
-      "doi": "10.1038/s41571-021-00558-1",
-      "sourceUrl": "https://doi.org/10.1038/s41571-021-00558-1",
-      "verified": true
-    },
-    {
-      "title": "FIGHT-101, a first-in-human study of potent and selective FGFR 1-3 inhibitor pemigatinib in pan-cancer patients with FGF/FGFR alterations and advanced malignancies",
-      "journal": "Annals of Oncology",
-      "year": 2022,
-      "citationCount": 188,
-      "doi": "10.1016/j.annonc.2022.02.001",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2022.02.001",
-      "verified": true
-    },
-    {
-      "title": "Selpercatinib in Patients With <i>RET</i> Fusion–Positive Non–Small-Cell Lung Cancer: Updated Safety and Efficacy From the Registrational LIBRETTO-001 Phase I/II Trial",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2022,
-      "citationCount": 185,
-      "doi": "10.1200/jco.22.00393",
-      "sourceUrl": "https://doi.org/10.1200/jco.22.00393",
-      "verified": true
-    },
-    {
-      "title": "Targeting the PI3K/AKT/mTOR Pathway for the Treatment of Mesenchymal Triple-Negative Breast Cancer",
-      "journal": "JAMA Oncology",
-      "year": 2016,
-      "citationCount": 185,
-      "doi": "10.1001/jamaoncol.2016.5281",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2016.5281",
-      "verified": true
-    },
-    {
-      "title": "Incidence of immune-related adverse events and its association with treatment outcomes: the MD Anderson Cancer Center experience",
-      "journal": "Investigational New Drugs",
-      "year": 2017,
-      "citationCount": 182,
-      "doi": "10.1007/s10637-017-0534-0",
-      "sourceUrl": "https://doi.org/10.1007/s10637-017-0534-0",
-      "verified": true
-    },
-    {
-      "title": "Of mice and men: divergent risks of teriparatide-induced osteosarcoma",
-      "journal": "Osteoporosis International",
-      "year": 2009,
-      "citationCount": 176,
-      "doi": "10.1007/s00198-009-1004-0",
-      "sourceUrl": "https://doi.org/10.1007/s00198-009-1004-0",
-      "verified": true
-    },
-    {
-      "title": "Safety and efficacy of pralsetinib in RET fusion–positive non-small-cell lung cancer including as first-line therapy: update from the ARROW trial",
-      "journal": "Annals of Oncology",
-      "year": 2022,
-      "citationCount": 165,
-      "doi": "10.1016/j.annonc.2022.08.002",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2022.08.002",
-      "verified": true
-    },
-    {
-      "title": "Immune-checkpoint inhibition for resectable non-small-cell lung cancer — opportunities and challenges",
-      "journal": "Nature Reviews Clinical Oncology",
-      "year": 2023,
-      "citationCount": 165,
-      "doi": "10.1038/s41571-023-00794-7",
-      "sourceUrl": "https://doi.org/10.1038/s41571-023-00794-7",
-      "verified": true
-    },
-    {
-      "title": "Liquid Biopsies Using Plasma Exosomal Nucleic Acids and Plasma Cell-Free DNA Compared with Clinical Outcomes of Patients with Advanced Cancers",
-      "journal": "Clinical Cancer Research",
-      "year": 2017,
-      "citationCount": 158,
-      "doi": "10.1158/1078-0432.ccr-17-2007",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-17-2007",
-      "verified": true
-    },
-    {
-      "title": "Precision therapy for RET-altered cancers with RET inhibitors",
-      "journal": "Trends in cancer",
-      "year": 2021,
-      "citationCount": 158,
-      "doi": "10.1016/j.trecan.2021.07.003",
-      "sourceUrl": "https://doi.org/10.1016/j.trecan.2021.07.003",
-      "verified": true
-    },
-    {
-      "title": "Ewing’s Sarcoma: Standard and Experimental Treatment Options",
-      "journal": "Current Treatment Options in Oncology",
-      "year": 2009,
-      "citationCount": 151,
-      "doi": "10.1007/s11864-009-0104-6",
-      "sourceUrl": "https://doi.org/10.1007/s11864-009-0104-6",
-      "verified": true
-    },
-    {
-      "title": "Targeted methylation sequencing of plasma cell-free DNA for cancer detection and classification",
-      "journal": "Annals of Oncology",
-      "year": 2018,
-      "citationCount": 151,
-      "doi": "10.1093/annonc/mdy119",
-      "sourceUrl": "https://doi.org/10.1093/annonc/mdy119",
-      "verified": true
-    },
-    {
-      "title": "Phase II clinical trial of pembrolizumab efficacy and safety in advanced adrenocortical carcinoma",
-      "journal": "Journal for ImmunoTherapy of Cancer",
-      "year": 2019,
-      "citationCount": 149,
-      "doi": "10.1186/s40425-019-0722-x",
-      "sourceUrl": "https://doi.org/10.1186/s40425-019-0722-x",
-      "verified": true
-    },
-    {
-      "title": "Advances in Targeting RET-Dependent Cancers",
-      "journal": "Cancer Discovery",
-      "year": 2020,
-      "citationCount": 147,
-      "doi": "10.1158/2159-8290.cd-19-1116",
-      "sourceUrl": "https://doi.org/10.1158/2159-8290.cd-19-1116",
-      "verified": true
-    },
-    {
-      "title": "Characteristics and outcomes of patients with advanced sarcoma enrolled in early phase immunotherapy trials",
-      "journal": "Journal for ImmunoTherapy of Cancer",
-      "year": 2017,
-      "citationCount": 142,
-      "doi": "10.1186/s40425-017-0301-y",
-      "sourceUrl": "https://doi.org/10.1186/s40425-017-0301-y",
-      "verified": true
-    },
-    {
-      "title": "Phase II Trial of Ipilimumab with Stereotactic Radiation Therapy for Metastatic Disease: Outcomes, Toxicities, and Low-Dose Radiation–Related Abscopal Responses",
-      "journal": "Cancer Immunology Research",
-      "year": 2019,
-      "citationCount": 140,
-      "doi": "10.1158/2326-6066.cir-18-0793",
-      "sourceUrl": "https://doi.org/10.1158/2326-6066.cir-18-0793",
-      "verified": true
-    },
-    {
-      "title": "COVID-19 vaccine guidance for patients with cancer participating in oncology clinical trials",
-      "journal": "Nature Reviews Clinical Oncology",
-      "year": 2021,
-      "citationCount": 139,
-      "doi": "10.1038/s41571-021-00487-z",
-      "sourceUrl": "https://doi.org/10.1038/s41571-021-00487-z",
-      "verified": true
-    },
-    {
-      "title": "Hyperprogression and Immunotherapy: Fact, Fiction, or Alternative Fact?",
-      "journal": "Trends in cancer",
-      "year": 2020,
-      "citationCount": 135,
-      "doi": "10.1016/j.trecan.2020.01.005",
-      "sourceUrl": "https://doi.org/10.1016/j.trecan.2020.01.005",
-      "verified": true
-    },
-    {
-      "title": "Intracranial Efficacy of Selpercatinib in <i>RET</i> Fusion-Positive Non–Small Cell Lung Cancers on the LIBRETTO-001 Trial",
-      "journal": "Clinical Cancer Research",
-      "year": 2021,
-      "citationCount": 132,
-      "doi": "10.1158/1078-0432.ccr-21-0800",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-21-0800",
-      "verified": true
-    },
-    {
-      "title": "Drugging KRAS: current perspectives and state-of-art review",
-      "journal": "Journal of Hematology & Oncology",
-      "year": 2022,
-      "citationCount": 131,
-      "doi": "10.1186/s13045-022-01375-4",
-      "sourceUrl": "https://doi.org/10.1186/s13045-022-01375-4",
-      "verified": true
-    },
-    {
-      "title": "Phase 2 study of pembrolizumab in patients with advanced rare cancers",
-      "journal": "Journal for ImmunoTherapy of Cancer",
-      "year": 2020,
-      "citationCount": 126,
-      "doi": "10.1136/jitc-2019-000347",
-      "sourceUrl": "https://doi.org/10.1136/jitc-2019-000347",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S1470-2045(22)00541-1",
+      "pubmedId": "36108661",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36108661/"
     }
   ],
   "awards": [],
   "timeline": [],
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:17.000Z",
-  "openalexId": "https://openalex.org/A5043675371"
+  "openalexId": "https://openalex.org/A5043675371",
+  "bio": "## Dr. Vivek Subbiah: A Biography in Precision Oncology\n\nDr. Vivek Subbiah stands as a prominent figure in the rapidly evolving field of precision oncology, particularly renowned for his dedication to rare cancer trials. While details of his current practice location remain unspecified, his expertise and contributions resonate widely within the medical community. This biography delves into his journey, exploring his academic foundations, medical philosophy, clinical expertise, research endeavors, and the significant impact he has made on patients and the broader scientific landscape.\n\n### 1. Early Life and Education\n\nThe formative years of Dr. Subbiah likely instilled within him a deep-seated curiosity and a commitment to rigorous scientific inquiry. Although specific details regarding his early life remain private, it is reasonable to infer that his academic path was marked by exceptional performance in science and mathematics, leading him to pursue a career in medicine. His undergraduate education likely focused on pre-medical studies, providing a strong foundation in biology, chemistry, and physics.\n\nThe next crucial step involved acceptance into a highly competitive medical school, where he would have undergone extensive training in basic medical sciences like anatomy, physiology, pathology, and pharmacology. During this period, he would have been exposed to various medical specialties, potentially sparking his initial interest in oncology. The complex and often devastating nature of cancer, coupled with the emerging possibilities of targeted therapies, likely resonated with his desire to make a meaningful difference in patients' lives.\n\nFollowing medical school, Dr. Subbiah would have embarked on a residency program, most likely in internal medicine or a related field. This rigorous, hands-on training would have provided him with a broad understanding of medical diagnosis and treatment, preparing him for a subsequent fellowship in medical oncology. During his oncology fellowship, he would have received specialized training in the diagnosis, treatment, and management of various types of cancer. This period would have been critical in shaping his understanding of cancer biology, chemotherapy, radiation therapy, and other treatment modalities.\n\nIt is during his fellowship that Dr. Subbiah likely developed a particular interest in precision oncology and rare cancer trials. He may have been drawn to the challenge of treating cancers that are often understudied and lack established treatment protocols. This specialization would have required him to acquire expertise in molecular profiling, genomics, and targeted therapies. He likely sought out mentorship from leading experts in the field, further honing his skills and knowledge. His academic background, complemented by rigorous medical training, laid the groundwork for his future contributions to precision oncology.\n\n### 2. Medical Philosophy\n\nDr. Subbiah's medical philosophy is likely rooted in a patient-centric approach, emphasizing individualized treatment plans based on a comprehensive understanding of each patient's unique cancer biology. In the realm of precision oncology, this translates to a deep commitment to molecular profiling, identifying specific genetic alterations that drive tumor growth and development. His approach is likely characterized by the following key principles:\n\n*   **Personalized Medicine:** He likely believes that cancer treatment should be tailored to the individual patient, taking into account the specific characteristics of their tumor, their genetic makeup, and their overall health status. This requires a thorough understanding of molecular profiling and the ability to interpret complex genomic data.\n\n*   **Data-Driven Decision Making:** Dr. Subbiah likely emphasizes the importance of using data from clinical trials, genomic analyses, and other sources to inform treatment decisions. He likely stays abreast of the latest research findings and incorporates them into his clinical practice.\n\n*   **Ethical Considerations:** Given the complexities of precision oncology and rare cancer trials, he likely adheres to the highest ethical standards, ensuring that patients are fully informed about the potential risks and benefits of treatment options. He probably prioritizes patient autonomy and shared decision-making.\n\n*   **Innovation and Collaboration:** He likely fosters a culture of innovation, constantly seeking new ways to improve cancer treatment. He likely collaborates with other researchers, clinicians, and pharmaceutical companies to advance the field of precision oncology.\n\n*   **Hope and Empathy:** Despite the challenges of treating rare cancers, Dr. Subbiah likely offers his patients hope and support. He likely understands the emotional toll that cancer takes on patients and their families and strives to provide compassionate care.\n\nHis commitment to ethical practice extends to ensuring equitable access to advanced diagnostics and therapies, regardless of a patient's socioeconomic background. He likely advocates for policies that promote broader access to precision oncology services.\n\n### 3. Key Procedures & Clinical Expertise\n\nDr. Subbiah's clinical expertise lies primarily in the realm of precision oncology, with a specific focus on rare cancer trials. This specialization requires a deep understanding of various procedures and techniques, including:\n\n*   **Molecular Profiling:** This involves analyzing tumor tissue or blood samples to identify specific genetic mutations, gene amplifications, and other molecular alterations that are driving the cancer's growth. He likely utilizes various molecular profiling techniques, such as next-generation sequencing (NGS), immunohistochemistry (IHC), and fluorescence in situ hybridization (FISH).\n\n*   **Clinical Trial Design and Implementation:** Given his focus on rare cancer trials, Dr. Subbiah likely possesses expertise in designing and implementing clinical trials that are tailored to the specific needs of patients with rare cancers. This involves identifying appropriate patient populations, developing treatment protocols, and managing data collection and analysis.\n\n*   **Targeted Therapy Administration and Management:** Based on the results of molecular profiling, Dr. Subbiah likely prescribes targeted therapies that are designed to specifically attack the identified genetic alterations. He likely has extensive experience in managing the side effects of these therapies and adjusting dosages as needed.\n\n*   **Immunotherapy:** In addition to targeted therapies, he probably utilizes immunotherapy agents that stimulate the patient's own immune system to fight the cancer. He likely understands the mechanisms of action of these agents and can effectively manage immune-related adverse events.\n\n*   **Radiological Interpretation:** He likely possesses a strong understanding of radiological imaging techniques, such as CT scans, MRI scans, and PET scans, and can interpret these images to assess the extent of the cancer and monitor its response to treatment.\n\n*   **Multidisciplinary Team Collaboration:** Treating rare cancers often requires a multidisciplinary approach, involving collaboration with surgeons, radiation oncologists, pathologists, and other specialists. Dr. Subbiah likely excels at leading and coordinating these teams to provide comprehensive care to his patients.\n\nHis expertise extends to the application of cutting-edge technologies, such as liquid biopsies for real-time monitoring of treatment response and minimal residual disease. He likely embraces innovative approaches to drug development, including basket trials that evaluate the efficacy of targeted therapies across multiple cancer types with the same genetic alteration.\n\n### 4. Academic Contributions & Research\n\nDr. Subbiah's contributions to medical science likely extend beyond his clinical practice, encompassing significant academic and research endeavors. His research focus likely centers on identifying novel therapeutic targets in rare cancers and developing new strategies for personalizing cancer treatment.\n\n*   **Publications in Peer-Reviewed Journals:** He probably has authored or co-authored numerous articles in leading medical journals, disseminating his research findings to the broader scientific community. These publications likely cover topics such as the molecular characterization of rare cancers, the development of new targeted therapies, and the results of clinical trials.\n\n*   **Presentations at National and International Conferences:** He likely presents his research findings at major medical conferences, sharing his expertise with other clinicians and researchers. These presentations provide a platform for him to engage in discussions with colleagues and stay abreast of the latest advances in the field.\n\n*   **Participation in Clinical Trials:** As a specialist in rare cancer trials, he likely actively participates in clinical trials, both as a principal investigator and as a co-investigator. He likely contributes to the design of these trials and helps to enroll patients and collect data.\n\n*   **Grant Funding:** He likely secures grant funding from government agencies, foundations, and pharmaceutical companies to support his research efforts. This funding enables him to conduct innovative studies and develop new therapies for rare cancers.\n\n*   **Mentorship of Students and Fellows:** He likely mentors medical students, residents, and fellows, training the next generation of oncologists and researchers. He likely provides guidance and support to these trainees, helping them to develop their skills and knowledge.\n\nHis research likely involves the use of advanced technologies, such as genomics, proteomics, and bioinformatics, to understand the complex biology of rare cancers. He probably collaborates with researchers in other disciplines, such as genetics, immunology, and pharmacology, to accelerate the development of new therapies. His work is likely driven by a desire to translate basic research findings into clinical applications, ultimately improving the lives of patients with rare cancers.\n\n### 5. Patient Impact & Community Work\n\nDr. Subbiah's impact extends beyond the scientific realm, profoundly affecting the lives of his patients and the broader community. His dedication to providing compassionate and personalized care likely earns him the trust and respect of his patients.\n\n*   **Improved Patient Outcomes:** His expertise in precision oncology and rare cancer trials likely translates to improved outcomes for his patients. By tailoring treatment plans to the specific characteristics of each patient's tumor, he likely increases the chances of achieving remission or prolonging survival.\n\n*   **Enhanced Quality of Life:** He likely focuses not only on treating the cancer but also on improving the quality of life for his patients. He likely works with patients to manage side effects, address emotional concerns, and maintain their overall well-being.\n\n*   **Patient Advocacy:** He likely advocates for his patients, ensuring that they have access to the best possible care and that their voices are heard. He likely works with patient advocacy groups to raise awareness of rare cancers and promote research funding.\n\n*   **Community Outreach:** He likely participates in community outreach activities, educating the public about cancer prevention, early detection, and treatment. He likely speaks at community events, writes articles for local publications, and participates in fundraising activities.\n\n*   **Philanthropy:** He may support charitable organizations that are dedicated to cancer research and patient care. He likely donates his time and resources to these organizations, helping them to achieve their missions.\n\nHis commitment to patient care likely extends to providing support to families and caregivers. He probably recognizes the emotional challenges that families face when a loved one is diagnosed with cancer and strives to provide them with resources and guidance.\n\n### 6. Legacy and Future Outlook\n\nDr. Vivek Subbiah’s legacy is likely one of unwavering dedication to precision oncology, particularly in the challenging landscape of rare cancers. His contributions to research, clinical practice, and patient advocacy position him as a leader in the field.\n\nHis future outlook is promising, with the potential for continued advancements in personalized cancer treatment. He will likely remain at the forefront of these developments, contributing to the discovery of new therapeutic targets, the development of innovative clinical trials, and the improvement of patient outcomes.\n\nHis lasting influence will likely be seen in the growing number of patients with rare cancers who are able to benefit from precision oncology approaches. His work will likely inspire future generations of oncologists and researchers to pursue careers in this field, further accelerating the pace of progress. He will likely be remembered as a compassionate physician, a skilled researcher, and a tireless advocate for patients with cancer. His dedication to advancing the field of precision oncology is likely to have a lasting impact on the lives of countless individuals.\n",
+  "bioGenerated": true
 }

@@ -1,12 +1,14 @@
 ---
 /**
  * MDRPedia — Super Admin Dashboard
- * Modern, professional admin interface
+ * Modern, professional admin interface with cached statistics
  */
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { prisma } from "../../lib/prisma";
 import { requireSuperAdmin } from "../../lib/rbac";
+import { getPlatformStats, getTopDoctors } from "../../lib/cached-stats";
+import { cache } from "../../lib/cache";
 
 export const prerender = false;
 
@@ -43,21 +45,39 @@ const url = new URL(request.url);
 const adminKey =
     url.searchParams.get("key") || import.meta.env.ADMIN_ACCESS_KEY || "";
 
-// Fetch all doctors
-const doctors = await getCollection("doctors");
-const sortedDoctors = doctors.sort(
-    (a, b) => (b.data.rankingScore || 0) - (a.data.rankingScore || 0),
-);
+// Use cached stats for faster dashboard loading
+let titanCount = 0;
+let eliteCount = 0;
+let masterCount = 0;
+let historicalCount = 0;
+let totalProfiles = 0;
+let totalCitations = 0;
+let dataSource = 'database (cached)';
+let cacheStats = cache.getStats();
 
-// Stats
-const titanDoctors = doctors.filter((d) => d.data.tier === "TITAN");
-const eliteDoctors = doctors.filter((d) => d.data.tier === "ELITE");
-const masterDoctors = doctors.filter((d) => d.data.tier === "MASTER");
-const historicalDoctors = doctors.filter((d) => d.data.status === "HISTORICAL");
-const totalCitations = doctors.reduce(
-    (acc, d) => acc + (d.data.citations?.length || 0),
-    0,
-);
+try {
+    // Get all stats from cache (with automatic refresh)
+    const stats = await getPlatformStats();
+
+    totalProfiles = stats.totalProfiles;
+    totalCitations = stats.totalCitations;
+    titanCount = stats.tierCounts.titan;
+    eliteCount = stats.tierCounts.elite;
+    masterCount = stats.tierCounts.master;
+    historicalCount = stats.historicalCount;
+    cacheStats = cache.getStats();
+
+} catch (e) {
+    console.error('Cache/Database error for admin stats:', e);
+    dataSource = 'fallback';
+    // Fallback to static content if database fails
+    const staticDoctors = await getCollection("doctors");
+    totalProfiles = staticDoctors.length;
+    titanCount = staticDoctors.filter(d => d.data.tier === 'TITAN').length;
+    eliteCount = staticDoctors.filter(d => d.data.tier === 'ELITE').length;
+    masterCount = staticDoctors.filter(d => d.data.tier === 'MASTER').length;
+    historicalCount = staticDoctors.filter(d => d.data.status === 'HISTORICAL').length;
+}
 
 // Top Searches
 let topSearches: any[] = [];
@@ -86,6 +106,14 @@ try {
     totalPages = await prisma.contentPage.count();
 } catch (e) {
     console.error("CMS Stats Error:", e);
+}
+
+// Top Doctors for the table (use cached function)
+let topDoctors: any[] = [];
+try {
+    topDoctors = await getTopDoctors(15);
+} catch (e) {
+    console.error("Top Doctors Error:", e);
 }
 ---
 
@@ -165,6 +193,17 @@ try {
                         ></path>
                     </svg>
                     News
+                </a>
+                <a href={`/admin/institutions?key=${adminKey}`} class="nav-item">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path>
+                    </svg>
+                    Institutions
                 </a>
                 <a href={`/admin/claims?key=${adminKey}`} class="nav-item">
                     <svg
@@ -364,6 +403,9 @@ try {
                 <div class="header__title">
                     <h1>Dashboard</h1>
                     <p>Overview of MDRPedia platform</p>
+                    <span class={`data-source-badge ${dataSource === 'database' ? 'data-source-badge--live' : 'data-source-badge--fallback'}`}>
+                        {dataSource === 'database' ? 'Live Database' : 'Static Fallback'}
+                    </span>
                 </div>
                 <div class="header__actions">
                     <button id="syncCitationsBtn" class="btn btn--info">
@@ -453,7 +495,7 @@ try {
                         </div>
                         <div class="stat-card__content">
                             <span class="stat-card__value"
-                                >{doctors.length}</span
+                                >{totalProfiles}</span
                             >
                             <span class="stat-card__label">Total Profiles</span>
                         </div>
@@ -473,7 +515,7 @@ try {
                         </div>
                         <div class="stat-card__content">
                             <span class="stat-card__value"
-                                >{titanDoctors.length}</span
+                                >{titanCount}</span
                             >
                             <span class="stat-card__label">Titans</span>
                         </div>
@@ -494,7 +536,7 @@ try {
                         </div>
                         <div class="stat-card__content">
                             <span class="stat-card__value"
-                                >{eliteDoctors.length}</span
+                                >{eliteCount}</span
                             >
                             <span class="stat-card__label">Elite</span>
                         </div>
@@ -515,7 +557,7 @@ try {
                         </div>
                         <div class="stat-card__content">
                             <span class="stat-card__value"
-                                >{masterDoctors.length}</span
+                                >{masterCount}</span
                             >
                             <span class="stat-card__label">Master</span>
                         </div>
@@ -556,7 +598,7 @@ try {
                         </div>
                         <div class="stat-card__content">
                             <span class="stat-card__value"
-                                >{historicalDoctors.length}</span
+                                >{historicalCount}</span
                             >
                             <span class="stat-card__label">Historical</span>
                         </div>
@@ -624,35 +666,50 @@ try {
                         </div>
                         <span class="action-card__label">New Submissions</span>
                     </a>
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    <a
+                        href={`/admin/pages?key=${adminKey}`}
+                        class="action-card"
                     >
-                    <path
-                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                    ></path>
-                    <path d="M14 2v6h6"></path>
+                        <div class="action-card__badge action-card__badge--neutral">
+                            {totalPages}
+                        </div>
+                        <div class="action-card__icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <path d="M14 2v6h6"></path>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <span class="action-card__label">Content Pages</span>
+                    </a>
+                    <a href={`/admin/doctors?key=${adminKey}`} class="action-card">
+                        <div class="action-card__badge action-card__badge--success">
+                            {titanCount + eliteCount + masterCount}
+                        </div>
+                        <div class="action-card__icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                                <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                <path d="M21 21v-2a4 4 0 0 0-3-3.85"></path>
+                            </svg>
+                        </div>
+                        <span class="action-card__label">Verified Doctors</span>
+                    </a>
                 </div>
             </section>
-            <span class="action-card__label">Content Pages</span>
         </main>
-        <a href={`/admin/doctors?key=${adminKey}`} class="action-card">
-            <div class="action-card__badge action-card__badge--success">
-                {doctors.filter((d) => d.data.tier !== "UNRANKED").length}
-            </div>
-            <div class="action-card__icon">
-                <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
-                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    <path d="M21 21v-2a4 4 0 0 0-3-3.85"></path>
-                </svg>
-            </div>
-            <span class="action-card__label">Verified Doctors</span>
-        </a>
     </div>
 </Layout>
 
@@ -759,49 +816,45 @@ try {
             </thead>
             <tbody>
                 {
-                    sortedDoctors.slice(0, 15).map((doctor) => (
+                    topDoctors.map((doctor) => (
                         <tr>
                             <td class="cell-doctor">
                                 <a
-                                    href={`/doctors/${doctor.id}`}
+                                    href={`/doctors/${doctor.slug}`}
                                     target="_blank"
                                     class="doctor-link"
                                 >
                                     <span class="doctor-name">
-                                        {doctor.data.fullName}
+                                        {doctor.full_name}
                                     </span>
                                     <span class="doctor-specialty">
-                                        {doctor.data.specialty}
+                                        {doctor.specialty}
                                     </span>
                                 </a>
                             </td>
                             <td>
                                 <span
-                                    class={`tier-pill tier-pill--${doctor.data.tier.toLowerCase()}`}
+                                    class={`tier-pill tier-pill--${doctor.tier.toLowerCase()}`}
                                 >
-                                    {doctor.data.tier}
+                                    {doctor.tier}
                                 </span>
                             </td>
                             <td class="cell-mono">
-                                {doctor.data.hIndex || "-"}
+                                {doctor.h_index || "-"}
                             </td>
                             <td class="cell-mono">
-                                {doctor.data.citations?.length || 0}
+                                {doctor.ranking_score?.toFixed(1) || "-"}
                             </td>
                             <td>
-                                <span
-                                    class={`status-pill status-pill--${doctor.data.status.toLowerCase()}`}
-                                >
-                                    {doctor.data.status === "HISTORICAL"
-                                        ? "Legacy"
-                                        : "Active"}
+                                <span class="status-pill">
+                                    {doctor.geography?.country || "Unknown"}
                                 </span>
                             </td>
                             <td>
-                                <button
-                                    class="btn-icon sync-btn"
-                                    data-slug={doctor.id}
-                                    title="Sync"
+                                <a
+                                    href={`/admin/doctors/edit?slug=${doctor.slug}&key=${adminKey}`}
+                                    class="btn-icon"
+                                    title="Edit"
                                 >
                                     <svg
                                         viewBox="0 0 24 24"
@@ -811,10 +864,10 @@ try {
                                         width="14"
                                         height="14"
                                     >
-                                        <path d="M23 4v6h-6M1 20v-6h6" />
-                                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
                                     </svg>
-                                </button>
+                                </a>
                             </td>
                         </tr>
                     ))
@@ -1220,6 +1273,45 @@ try {
 </script>
 
 <style>
+    /* Data Source Badge */
+    .data-source-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin-top: 8px;
+    }
+
+    .data-source-badge--live {
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #10b981;
+    }
+
+    .data-source-badge--live::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #10b981;
+        margin-right: 6px;
+        animation: pulse 2s infinite;
+    }
+
+    .data-source-badge--fallback {
+        background: rgba(245, 158, 11, 0.15);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        color: #f59e0b;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
     /* UI/UX Improvements */
     /* Toast Notification */
     .toast-container {

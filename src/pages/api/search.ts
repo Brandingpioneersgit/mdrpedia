@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import { prisma } from '../../lib/prisma';
 import { searchCache, searchCacheKey } from '../../lib/cache';
 import { API_CONFIG } from '../../lib/config';
+import { fuzzyMatch } from '../../lib/fuzzy-search';
 
 export const prerender = false; // Server-side only
 
@@ -13,20 +14,25 @@ export const prerender = false; // Server-side only
 interface SearchableDoctor {
     id: string;
     fullName: string;
+    fullNameLower: string;
     specialty: string;
-    subSpecialty?: string;
+    subSpecialty?: string | null;
     tier: string;
     hIndex: number;
-    portraitUrl?: string;
-    city?: string;
+    portraitUrl?: string | null;
+    city?: string | null;
     country: string;
     countryLower: string;
-    title?: string;
+    title?: string | null;
     // Pre-computed search fields
     searchText: string;
     specialtyLower: string;
     isSurgeon: boolean;
     isResearcher: boolean;
+    // Pre-computed name parts for better matching
+    nameParts: string[];
+    firstNameLower: string;
+    lastNameLower: string;
 }
 
 let searchIndex: SearchableDoctor[] | null = null;
@@ -44,7 +50,7 @@ async function getSearchIndex(): Promise<SearchableDoctor[]> {
     // Build new index
     const doctors = await getCollection('doctors');
 
-    searchIndex = doctors.map(doc => {
+    const newIndex: SearchableDoctor[] = doctors.map(doc => {
         const d = doc.data;
         const specialtyLower = d.specialty.toLowerCase();
         const isSurgeon = specialtyLower.includes('surgery') ||
@@ -56,9 +62,15 @@ async function getSearchIndex(): Promise<SearchableDoctor[]> {
                 a.role?.toLowerCase().includes('scientist')
             );
 
+        // Pre-compute name parts for better matching
+        const nameParts = d.fullName.toLowerCase().split(/\s+/);
+        const firstNameLower = nameParts[0] || '';
+        const lastNameLower = nameParts[nameParts.length - 1] || '';
+
         return {
             id: doc.id,
             fullName: d.fullName,
+            fullNameLower: d.fullName.toLowerCase(),
             specialty: d.specialty,
             subSpecialty: d.subSpecialty,
             tier: d.tier,
@@ -73,30 +85,90 @@ async function getSearchIndex(): Promise<SearchableDoctor[]> {
             specialtyLower,
             isSurgeon,
             isResearcher,
+            nameParts,
+            firstNameLower,
+            lastNameLower,
         };
     });
 
     // Pre-sort by tier and h-index for faster slicing
-    searchIndex.sort((a, b) => {
+    newIndex.sort((a, b) => {
         if (a.tier === 'TITAN' && b.tier !== 'TITAN') return -1;
         if (b.tier === 'TITAN' && a.tier !== 'TITAN') return 1;
         return b.hIndex - a.hIndex;
     });
 
+    // Cache the index
+    searchIndex = newIndex;
     searchIndexTimestamp = now;
-    return searchIndex;
+    return newIndex;
+}
+
+// Calculate relevance score for search results
+function calculateRelevanceScore(doctor: SearchableDoctor, query: string): number {
+    let score = 0;
+    const queryLower = query.toLowerCase();
+
+    // Exact name match - highest priority
+    if (doctor.fullNameLower === queryLower) {
+        score += 100;
+    }
+    // Name starts with query
+    else if (doctor.fullNameLower.startsWith(queryLower)) {
+        score += 90;
+    }
+    // First name or last name exact match
+    else if (doctor.firstNameLower === queryLower || doctor.lastNameLower === queryLower) {
+        score += 85;
+    }
+    // First or last name starts with query
+    else if (doctor.firstNameLower.startsWith(queryLower) || doctor.lastNameLower.startsWith(queryLower)) {
+        score += 75;
+    }
+    // Name contains query
+    else if (doctor.fullNameLower.includes(queryLower)) {
+        score += 60;
+    }
+    // Fuzzy match on name
+    else {
+        const fuzzyResult = fuzzyMatch(doctor.fullName, query);
+        if (fuzzyResult.matches) {
+            score += fuzzyResult.score * 0.5; // Scale fuzzy scores
+        }
+    }
+
+    // Specialty match bonus
+    if (doctor.specialtyLower.includes(queryLower)) {
+        score += 20;
+    }
+
+    // City/Country match bonus
+    if (doctor.city?.toLowerCase().includes(queryLower) || doctor.countryLower.includes(queryLower)) {
+        score += 15;
+    }
+
+    // Tier bonus - prioritize verified experts
+    const tierBonus: Record<string, number> = { TITAN: 15, ELITE: 10, MASTER: 5, UNRANKED: 0 };
+    score += tierBonus[doctor.tier] || 0;
+
+    // H-index bonus (scaled)
+    score += Math.min(doctor.hIndex / 10, 10);
+
+    return score;
 }
 
 export const GET: APIRoute = async ({ request, clientAddress }) => {
     const url = new URL(request.url);
-    const query = url.searchParams.get('q')?.toLowerCase() || '';
+    const query = url.searchParams.get('q')?.trim() || '';
+    const queryLower = query.toLowerCase();
     const country = url.searchParams.get('country')?.toLowerCase();
     const role = url.searchParams.get('role')?.toLowerCase();
     const specialty = url.searchParams.get('specialty')?.toLowerCase();
+    const fuzzyEnabled = url.searchParams.get('fuzzy') !== 'false'; // Enable fuzzy by default
 
     try {
         // Check cache first
-        const cacheKey = searchCacheKey(query, { country: country || '', role: role || '', specialty: specialty || '' });
+        const cacheKey = searchCacheKey(query, { country: country || '', role: role || '', specialty: specialty || '', fuzzy: String(fuzzyEnabled) });
         const cached = searchCache.get(cacheKey);
         if (cached) {
             return new Response(JSON.stringify(cached), {
@@ -111,58 +183,83 @@ export const GET: APIRoute = async ({ request, clientAddress }) => {
         // Get pre-computed search index
         const doctors = await getSearchIndex();
 
-        // Filter using pre-computed fields (much faster)
-        const results = doctors.filter(d => {
-            // Text Search - use pre-computed searchText
-            if (query && query.length >= 2) {
-                if (!d.searchText.includes(query)) return false;
-            }
+        // Filter and score results
+        const scoredResults: { doctor: SearchableDoctor; score: number }[] = [];
 
-            // Country Filter - use pre-computed lowercase
-            if (country && d.countryLower !== country) {
-                return false;
-            }
-
-            // Specialty Filter - use pre-computed lowercase
-            if (specialty && !d.specialtyLower.includes(specialty)) {
-                return false;
-            }
-
-            // Role Filter - use pre-computed flags
+        for (const d of doctors) {
+            // Apply filters first (fast elimination)
+            if (country && d.countryLower !== country) continue;
+            if (specialty && !d.specialtyLower.includes(specialty)) continue;
             if (role) {
-                if (role === 'surgeon' && !d.isSurgeon) return false;
-                if (role === 'researcher' && !d.isResearcher) return false;
-                if (role === 'physician' && (d.isSurgeon || d.isResearcher)) return false;
+                if (role === 'surgeon' && !d.isSurgeon) continue;
+                if (role === 'researcher' && !d.isResearcher) continue;
+                if (role === 'physician' && (d.isSurgeon || d.isResearcher)) continue;
             }
 
-            return true;
-        });
+            // Text Search with fuzzy matching
+            if (query && query.length >= 2) {
+                // Try exact substring match first (fastest)
+                if (d.searchText.includes(queryLower)) {
+                    const score = calculateRelevanceScore(d, query);
+                    scoredResults.push({ doctor: d, score });
+                    continue;
+                }
 
-        // Already sorted in index, just slice
-        const sortedResults = results.slice(0, API_CONFIG.search.maxResults);
+                // Try fuzzy matching if enabled
+                if (fuzzyEnabled && query.length >= 3) {
+                    // Check name with fuzzy matching
+                    const nameMatch = fuzzyMatch(d.fullName, query);
+                    if (nameMatch.matches && nameMatch.score >= 30) {
+                        // Apply fuzzy penalty to score
+                        const score = calculateRelevanceScore(d, query) * 0.8;
+                        scoredResults.push({ doctor: d, score });
+                        continue;
+                    }
 
-        // 3. Log to Database (Fire & Forget - non-blocking)
+                    // Check specialty with fuzzy matching
+                    const specialtyMatch = fuzzyMatch(d.specialty, query);
+                    if (specialtyMatch.matches && specialtyMatch.score >= 40) {
+                        const score = calculateRelevanceScore(d, query) * 0.6;
+                        scoredResults.push({ doctor: d, score });
+                        continue;
+                    }
+                }
+            } else if (!query || query.length < 2) {
+                // No query - return all (filtered) results with base score
+                const score = calculateRelevanceScore(d, '');
+                scoredResults.push({ doctor: d, score });
+            }
+        }
+
+        // Sort by relevance score (descending) and limit
+        scoredResults.sort((a, b) => b.score - a.score);
+        const topResults = scoredResults.slice(0, API_CONFIG.search.maxResults);
+
+        // Log to Database (Fire & Forget - non-blocking)
         if (query.length > 2) {
-            // Don't await - true fire-and-forget to avoid blocking response
             prisma.searchLog.create({
                 data: {
                     queryText: query,
-                    resultsCount: sortedResults.length,
+                    resultsCount: topResults.length,
                     ipAddress: clientAddress || 'unknown',
                 }
             }).catch(() => { /* Silent fail for analytics */ });
         }
 
-        // 4. Return simplified results (use pre-computed role)
-        const responseData = sortedResults.map(d => ({
+        // Return results with match info for highlighting
+        const responseData = topResults.map(({ doctor: d, score }) => ({
             slug: d.id,
             fullName: d.fullName,
             specialty: d.specialty,
+            subSpecialty: d.subSpecialty,
             tier: d.tier,
             portraitUrl: d.portraitUrl,
             city: d.city,
             country: d.country,
-            role: d.isSurgeon ? 'Surgeon' : (d.isResearcher ? 'Researcher' : 'Physician')
+            role: d.isSurgeon ? 'Surgeon' : (d.isResearcher ? 'Researcher' : 'Physician'),
+            hIndex: d.hIndex,
+            relevanceScore: Math.round(score), // For debugging/display
+            matchedQuery: query // For highlighting on client
         }));
 
         // Cache the results
@@ -172,12 +269,12 @@ export const GET: APIRoute = async ({ request, clientAddress }) => {
             status: 200,
             headers: {
                 'Content-Type': 'application/json',
-                'X-Cache': 'MISS'
+                'X-Cache': 'MISS',
+                'X-Results-Count': String(responseData.length)
             }
         });
 
     } catch (error) {
-        // Log error in production monitoring, not console
         if (import.meta.env.DEV) {
             console.error('Search API Error:', error);
         }

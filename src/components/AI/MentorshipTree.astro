@@ -1,0 +1,421 @@
+---
+/**
+ * MentorshipTree - Medical Genealogy Visualization
+ * Displays mentor-mentee relationships and academic lineage
+ */
+
+import type { MedicalMentorshipTree, MentorLink } from '../../lib/ai-content-types';
+
+interface Props {
+    tree: MedicalMentorshipTree;
+    tier?: string;
+}
+
+const { tree, tier = 'UNRANKED' } = Astro.props;
+
+// Role configuration
+const roleConfig: Record<MentorLink['role'], { label: string; icon: string; color: string }> = {
+    MENTOR: { label: 'Mentor', icon: '👨‍🏫', color: '#8b5cf6' },
+    MENTEE: { label: 'Mentee', icon: '🎓', color: '#10b981' },
+    COLLABORATOR: { label: 'Collaborator', icon: '🤝', color: '#3b82f6' },
+    CO_INVENTOR: { label: 'Co-Inventor', icon: '💡', color: '#f59e0b' },
+};
+---
+
+<section class={`mentorship-section tier-${tier.toLowerCase()}`}>
+    <div class="section-header">
+        <h2 class="section-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Medical Genealogy
+        </h2>
+        {tree.generationsInfluenced && (
+            <span class="generations-badge">
+                {tree.generationsInfluenced} Generations Influenced
+            </span>
+        )}
+    </div>
+
+    <div class="tree-container">
+        <!-- Mentors Section -->
+        {tree.mentors.length > 0 && (
+            <div class="tree-section mentors-section">
+                <h3 class="tree-section-title">
+                    <span class="section-icon">👨‍🏫</span>
+                    Mentors & Training
+                </h3>
+                <div class="links-grid">
+                    {tree.mentors.map(mentor => (
+                        <div class="link-card">
+                            <div class="link-header">
+                                {mentor.isOnMDRPedia && mentor.slug ? (
+                                    <a href={`/doctor/${mentor.slug}`} class="link-name linked">
+                                        {mentor.name}
+                                    </a>
+                                ) : (
+                                    <span class="link-name">{mentor.name}</span>
+                                )}
+                                <span class="role-badge" style={`--role-color: ${roleConfig[mentor.role].color};`}>
+                                    {mentor.relationship}
+                                </span>
+                            </div>
+                            {mentor.institution && (
+                                <div class="link-institution">{mentor.institution}</div>
+                            )}
+                            {mentor.period && (
+                                <div class="link-period">{mentor.period}</div>
+                            )}
+                            {mentor.notableContributions && mentor.notableContributions.length > 0 && (
+                                <ul class="contributions-list">
+                                    {mentor.notableContributions.map(contribution => (
+                                        <li>{contribution}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+
+        <!-- Academic Lineage -->
+        {tree.academicLineage && tree.academicLineage.length > 0 && (
+            <div class="lineage-section">
+                <h3 class="tree-section-title">
+                    <span class="section-icon">📜</span>
+                    Academic Lineage
+                </h3>
+                <div class="lineage-chain">
+                    {tree.academicLineage.map((name, index) => (
+                        <>
+                            <span class="lineage-name">{name}</span>
+                            {index < tree.academicLineage!.length - 1 && (
+                                <span class="lineage-arrow">→</span>
+                            )}
+                        </>
+                    ))}
+                    <span class="lineage-name current">{tree.subject}</span>
+                </div>
+            </div>
+        )}
+
+        <!-- Mentees Section -->
+        {tree.mentees.length > 0 && (
+            <div class="tree-section mentees-section">
+                <h3 class="tree-section-title">
+                    <span class="section-icon">🎓</span>
+                    Mentees & Trainees
+                    {tree.totalMenteesCount && (
+                        <span class="count-badge">{tree.totalMenteesCount} total</span>
+                    )}
+                </h3>
+                <div class="links-grid">
+                    {tree.mentees.slice(0, 6).map(mentee => (
+                        <div class="link-card">
+                            <div class="link-header">
+                                {mentee.isOnMDRPedia && mentee.slug ? (
+                                    <a href={`/doctor/${mentee.slug}`} class="link-name linked">
+                                        {mentee.name}
+                                    </a>
+                                ) : (
+                                    <span class="link-name">{mentee.name}</span>
+                                )}
+                                <span class="role-badge" style={`--role-color: ${roleConfig[mentee.role].color};`}>
+                                    {mentee.relationship}
+                                </span>
+                            </div>
+                            {mentee.institution && (
+                                <div class="link-institution">{mentee.institution}</div>
+                            )}
+                            {mentee.notableContributions && mentee.notableContributions.length > 0 && (
+                                <ul class="contributions-list">
+                                    {mentee.notableContributions.slice(0, 2).map(contribution => (
+                                        <li>{contribution}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    ))}
+                </div>
+                {tree.mentees.length > 6 && (
+                    <p class="more-link">+ {tree.mentees.length - 6} more mentees</p>
+                )}
+            </div>
+        )}
+
+        <!-- Collaborators Section -->
+        {tree.collaborativeNetwork && tree.collaborativeNetwork.length > 0 && (
+            <div class="tree-section collaborators-section">
+                <h3 class="tree-section-title">
+                    <span class="section-icon">🤝</span>
+                    Key Collaborators
+                </h3>
+                <div class="collaborators-list">
+                    {tree.collaborativeNetwork.slice(0, 8).map(collab => (
+                        <div class="collaborator-chip">
+                            {collab.isOnMDRPedia && collab.slug ? (
+                                <a href={`/doctor/${collab.slug}`}>{collab.name}</a>
+                            ) : (
+                                <span>{collab.name}</span>
+                            )}
+                            {collab.institution && (
+                                <span class="collab-inst">({collab.institution})</span>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )}
+    </div>
+
+    <!-- Hidden semantic layer for AI -->
+    <div class="ai-semantic-layer" aria-hidden="true" style="display:none;">
+        <h3>Medical Genealogy for {tree.subject}</h3>
+        <p>Mentors: {tree.mentors.map(m => `${m.name} (${m.relationship})`).join(', ')}</p>
+        <p>Mentees: {tree.mentees.map(m => `${m.name} (${m.relationship})`).join(', ')}</p>
+        {tree.academicLineage && <p>Academic Lineage: {tree.academicLineage.join(' → ')} → {tree.subject}</p>}
+        {tree.generationsInfluenced && <p>Generations of physicians influenced: {tree.generationsInfluenced}</p>}
+    </div>
+</section>
+
+<style>
+    .mentorship-section {
+        background: var(--card-bg, rgba(20, 20, 35, 0.8));
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-title svg {
+        color: #8b5cf6;
+        opacity: 0.9;
+    }
+
+    .generations-badge {
+        padding: 4px 12px;
+        background: rgba(139, 92, 246, 0.15);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #a78bfa;
+    }
+
+    .tree-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tree-section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        color: var(--text-primary, #fff);
+    }
+
+    .section-icon {
+        font-size: 1.1rem;
+    }
+
+    .count-badge {
+        margin-left: auto;
+        padding: 2px 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        color: var(--text-muted, #888);
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .link-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 10px;
+        padding: 1rem;
+        transition: all 0.2s ease;
+    }
+
+    .link-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .link-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .link-name {
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+        font-size: 0.95rem;
+    }
+
+    .link-name.linked {
+        color: #a78bfa;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .link-name.linked:hover {
+        color: #c4b5fd;
+        text-decoration: underline;
+    }
+
+    .role-badge {
+        padding: 2px 8px;
+        background: color-mix(in srgb, var(--role-color) 15%, transparent);
+        border-radius: 100px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: var(--role-color);
+        white-space: nowrap;
+    }
+
+    .link-institution {
+        font-size: 0.8rem;
+        color: var(--text-secondary, #ccc);
+        margin-bottom: 0.25rem;
+    }
+
+    .link-period {
+        font-size: 0.75rem;
+        color: var(--text-muted, #888);
+    }
+
+    .contributions-list {
+        margin: 0.75rem 0 0;
+        padding-left: 1rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary, #ccc);
+    }
+
+    .contributions-list li {
+        margin-bottom: 0.25rem;
+    }
+
+    /* Academic Lineage Chain */
+    .lineage-section {
+        background: rgba(139, 92, 246, 0.05);
+        border: 1px solid rgba(139, 92, 246, 0.1);
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+
+    .lineage-chain {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .lineage-name {
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+        color: var(--text-secondary, #ccc);
+    }
+
+    .lineage-name.current {
+        background: rgba(139, 92, 246, 0.2);
+        color: #a78bfa;
+        font-weight: 600;
+    }
+
+    .lineage-arrow {
+        color: var(--text-muted, #888);
+    }
+
+    /* Collaborators */
+    .collaborators-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .collaborator-chip {
+        padding: 6px 12px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 100px;
+        font-size: 0.8rem;
+        color: var(--text-secondary, #ccc);
+    }
+
+    .collaborator-chip a {
+        color: #60a5fa;
+        text-decoration: none;
+    }
+
+    .collaborator-chip a:hover {
+        text-decoration: underline;
+    }
+
+    .collab-inst {
+        color: var(--text-muted, #888);
+        font-size: 0.75rem;
+    }
+
+    .more-link {
+        margin: 1rem 0 0;
+        font-size: 0.85rem;
+        color: var(--text-muted, #888);
+        text-align: center;
+    }
+
+    /* Tier colors */
+    .tier-titan .section-title svg { color: #ffd700; }
+    .tier-elite .section-title svg { color: #00aaff; }
+    .tier-master .section-title svg { color: #00cc66; }
+
+    @media (max-width: 768px) {
+        .mentorship-section {
+            padding: 1.5rem;
+        }
+
+        .links-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .lineage-chain {
+            font-size: 0.8rem;
+        }
+    }
+</style>

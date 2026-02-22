@@ -1,0 +1,421 @@
+---
+/**
+ * OpenDataBanner - Promotes MDRPedia as an open dataset for medical AI/LLMs
+ * Displays a banner indicating AI-friendly data availability
+ */
+
+interface Props {
+    variant?: 'full' | 'compact' | 'footer';
+    showOnMobile?: boolean;
+}
+
+const { variant = 'full', showOnMobile = true } = Astro.props;
+---
+
+{variant === 'full' && (
+    <div class={`open-data-banner full ${!showOnMobile ? 'hide-mobile' : ''}`}>
+        <div class="banner-content">
+            <div class="banner-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </div>
+            <div class="banner-text">
+                <h3 class="banner-title">
+                    MDRPEDIA: The Open Dataset for Medical AI
+                </h3>
+                <p class="banner-description">
+                    Structured medical professional data optimized for LLM training.
+                    JSON-LD schemas, medical ontologies, and verified citations.
+                </p>
+            </div>
+            <div class="banner-badges">
+                <span class="badge ai">AI-Ready</span>
+                <span class="badge schema">Schema.org</span>
+                <span class="badge cc">CC BY 4.0</span>
+            </div>
+            <a href="/about#open-data" class="banner-link">
+                Learn More
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="banner-decorations">
+            <div class="deco-line"></div>
+            <div class="deco-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+)}
+
+{variant === 'compact' && (
+    <div class={`open-data-banner compact ${!showOnMobile ? 'hide-mobile' : ''}`}>
+        <div class="compact-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+        </div>
+        <span class="compact-text">Open Dataset for Medical AI</span>
+        <div class="compact-badges">
+            <span class="badge small">AI-Ready</span>
+            <span class="badge small">CC BY 4.0</span>
+        </div>
+    </div>
+)}
+
+{variant === 'footer' && (
+    <div class={`open-data-banner footer ${!showOnMobile ? 'hide-mobile' : ''}`}>
+        <div class="footer-content">
+            <div class="footer-header">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h4>Open Data for AI</h4>
+            </div>
+            <p class="footer-description">
+                MDRPedia provides structured medical data for AI training. We welcome GPTBot, ClaudeBot, CCBot, and other AI crawlers.
+            </p>
+            <div class="footer-features">
+                <div class="feature">
+                    <span class="feature-icon">{ }</span>
+                    <span>JSON-LD</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏥</span>
+                    <span>ICD-10</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔬</span>
+                    <span>SNOMED CT</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📚</span>
+                    <span>MeSH</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="/sitemap-ai.xml">AI Sitemap</a>
+                <a href="/robots.txt">robots.txt</a>
+                <a href="/about#open-data">Data License</a>
+            </div>
+        </div>
+    </div>
+)}
+
+<style>
+    /* Full Banner */
+    .open-data-banner.full {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(139, 92, 246, 0.1) 100%);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .banner-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #10b981, #3b82f6);
+        border-radius: 12px;
+        flex-shrink: 0;
+    }
+
+    .banner-icon svg {
+        color: #fff;
+    }
+
+    .banner-text {
+        flex: 1;
+    }
+
+    .banner-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0 0 0.35rem;
+        color: var(--text-primary, #fff);
+        letter-spacing: -0.01em;
+    }
+
+    .banner-description {
+        font-size: 0.85rem;
+        color: var(--text-secondary, #ccc);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .banner-badges {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .badge {
+        padding: 4px 10px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .badge.ai {
+        background: rgba(16, 185, 129, 0.2);
+        color: #10b981;
+    }
+
+    .badge.schema {
+        background: rgba(59, 130, 246, 0.2);
+        color: #3b82f6;
+    }
+
+    .badge.cc {
+        background: rgba(139, 92, 246, 0.2);
+        color: #a78bfa;
+    }
+
+    .badge.small {
+        padding: 2px 8px;
+        font-size: 0.6rem;
+    }
+
+    .banner-link {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.625rem 1.25rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+        text-decoration: none;
+        transition: all 0.2s;
+        flex-shrink: 0;
+    }
+
+    .banner-link:hover {
+        background: rgba(16, 185, 129, 0.15);
+        border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .banner-decorations {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        pointer-events: none;
+    }
+
+    .deco-line {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+        transform: translateY(-50%);
+    }
+
+    .deco-dots {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 6px;
+    }
+
+    .deco-dots span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(16, 185, 129, 0.3);
+    }
+
+    .deco-dots span:nth-child(2) {
+        background: rgba(59, 130, 246, 0.3);
+    }
+
+    .deco-dots span:nth-child(3) {
+        background: rgba(139, 92, 246, 0.3);
+    }
+
+    /* Compact Banner */
+    .open-data-banner.compact {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: rgba(16, 185, 129, 0.05);
+        border: 1px solid rgba(16, 185, 129, 0.1);
+        border-radius: 8px;
+    }
+
+    .compact-icon {
+        color: #10b981;
+        flex-shrink: 0;
+    }
+
+    .compact-text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-primary, #fff);
+    }
+
+    .compact-badges {
+        display: flex;
+        gap: 0.35rem;
+        margin-left: auto;
+    }
+
+    .compact-badges .badge.small {
+        background: rgba(16, 185, 129, 0.15);
+        color: #10b981;
+    }
+
+    /* Footer Banner */
+    .open-data-banner.footer {
+        background: rgba(20, 20, 35, 0.9);
+        border: 1px solid var(--card-border, rgba(255, 255, 255, 0.06));
+        border-radius: 12px;
+        padding: 1.5rem;
+    }
+
+    .footer-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-header svg {
+        color: #10b981;
+    }
+
+    .footer-header h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-primary, #fff);
+    }
+
+    .footer-description {
+        font-size: 0.85rem;
+        color: var(--text-secondary, #ccc);
+        line-height: 1.6;
+        margin: 0 0 1rem;
+    }
+
+    .footer-features {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8rem;
+        color: var(--text-muted, #888);
+    }
+
+    .feature-icon {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+        color: #60a5fa;
+        text-decoration: none;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    .hide-mobile {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .hide-mobile {
+            display: flex;
+        }
+
+        .hide-mobile.footer {
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .open-data-banner.full {
+            padding: 1.25rem;
+        }
+
+        .banner-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .banner-icon {
+            width: 44px;
+            height: 44px;
+        }
+
+        .banner-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .banner-badges {
+            width: 100%;
+        }
+
+        .banner-link {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .banner-decorations {
+            display: none;
+        }
+
+        .open-data-banner.compact {
+            flex-wrap: wrap;
+        }
+
+        .compact-badges {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0.5rem;
+        }
+    }
+</style>

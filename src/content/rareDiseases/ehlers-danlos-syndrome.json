@@ -1,0 +1,137 @@
+{
+    "name": "Ehlers-Danlos Syndrome",
+    "slug": "ehlers-danlos-syndrome",
+    "aliases": ["EDS", "Ehlers-Danlos Syndromes"],
+    "description": "Ehlers-Danlos syndromes are a group of inherited connective tissue disorders caused by abnormalities in the structure, production, or processing of collagen. They are characterized by joint hypermobility, skin hyperextensibility, and tissue fragility.",
+    "category": "GENETIC",
+    "icdCode": "Q79.6",
+    "orphaCode": "ORPHA98249",
+    "omimCode": "130000",
+    "prevalence": "1 in 5,000 (all types combined)",
+    "estimatedCases": 150000,
+    "ageOfOnset": "Present at birth, often diagnosed in childhood or adulthood",
+    "inheritance": "AUTOSOMAL_DOMINANT",
+    "symptoms": [
+        "Hypermobile joints",
+        "Stretchy, fragile skin",
+        "Easy bruising",
+        "Chronic pain",
+        "Fatigue",
+        "Digestive problems",
+        "Dizziness and fainting",
+        "Poor wound healing",
+        "Joint dislocations",
+        "Heart valve problems"
+    ],
+    "affectedSystems": [
+        "Musculoskeletal system",
+        "Skin",
+        "Cardiovascular system",
+        "Gastrointestinal system",
+        "Autonomic nervous system"
+    ],
+    "prognosis": "Variable depending on type; most forms have normal lifespan",
+    "lifeExpectancy": "Normal for most types; vascular EDS can be life-threatening",
+    "diagnosticMethods": [
+        "Clinical examination using diagnostic criteria",
+        "Beighton score for hypermobility",
+        "Genetic testing",
+        "Skin biopsy",
+        "Echocardiogram",
+        "Family history assessment"
+    ],
+    "treatmentOptions": [
+        {
+            "name": "Physical therapy",
+            "type": "THERAPY",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Pain management",
+            "type": "MEDICATION",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Joint stabilization surgery",
+            "type": "SURGERY",
+            "effectiveness": "MODERATELY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        },
+        {
+            "name": "Cardiovascular monitoring (vascular EDS)",
+            "type": "SUPPORTIVE",
+            "effectiveness": "HIGHLY_EFFECTIVE",
+            "fdaApproved": true,
+            "approvalYear": null
+        }
+    ],
+    "researchStatus": "ACTIVE_TRIALS",
+    "clinicalTrialsCount": 42,
+    "keyResearchCenters": [
+        "NIH Clinical Center",
+        "Johns Hopkins EDS Clinic",
+        "Ehlers-Danlos Society",
+        "Great Ormond Street Hospital"
+    ],
+    "patientOrganizations": [
+        {
+            "name": "The Ehlers-Danlos Society",
+            "url": "https://www.ehlers-danlos.com",
+            "country": "USA"
+        },
+        {
+            "name": "Ehlers-Danlos Support UK",
+            "url": "https://www.ehlers-danlos.org",
+            "country": "UK"
+        }
+    ],
+    "relatedConditions": [
+        "Marfan syndrome",
+        "Loeys-Dietz syndrome",
+        "Osteogenesis imperfecta",
+        "Hypermobility spectrum disorders"
+    ],
+    "specialistTypes": [
+        "Geneticist",
+        "Rheumatologist",
+        "Cardiologist",
+        "Physical Therapist",
+        "Pain Specialist"
+    ],
+    "eli5Summary": "Ehlers-Danlos syndrome happens when the 'glue' (collagen) that holds our body together doesn't work properly. This makes joints extra bendy and skin extra stretchy. While there's no cure, doctors can help manage symptoms and prevent injuries.",
+    "clinicalSummary": "Ehlers-Danlos syndromes comprise 13 subtypes with distinct genetic etiologies and clinical presentations. The hypermobile type (hEDS) is most common but lacks a known genetic marker. Vascular EDS (COL3A1 mutations) carries risk of arterial rupture and organ perforation. Classical EDS involves COL5A1/COL5A2 mutations. Management is multidisciplinary, focusing on joint protection, pain management, and surveillance for complications.",
+    "historicalBackground": "EDS is named after Edvard Ehlers and Henri-Alexandre Danlos who independently described the condition in the early 1900s. The classification has evolved significantly, with the current 2017 nosology recognizing 13 subtypes based on clinical features and genetic findings.",
+    "recentBreakthroughs": [
+        {
+            "year": 2024,
+            "title": "Gene therapy research advances",
+            "description": "Early-stage research into gene therapy approaches for vascular EDS shows promising safety profiles.",
+            "sourceUrl": null
+        },
+        {
+            "year": 2023,
+            "title": "hEDS genetic research",
+            "description": "Large-scale genomic studies identify potential genetic contributors to hypermobile EDS.",
+            "sourceUrl": null
+        }
+    ],
+    "heroImage": null,
+    "diagrams": [],
+    "lastUpdated": "2024-12-01",
+    "reviewedBy": "MDRPedia Medical Team",
+    "sources": [
+        {
+            "name": "OMIM - Ehlers-Danlos Syndrome",
+            "url": "https://www.omim.org/entry/130000"
+        },
+        {
+            "name": "GeneReviews - Ehlers-Danlos Syndrome",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK1279/"
+        }
+    ]
+}

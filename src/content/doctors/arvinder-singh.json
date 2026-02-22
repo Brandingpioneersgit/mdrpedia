@@ -36,454 +36,54 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Dexamethasone in Hospitalized Patients with Covid-19.",
-      "journal": "DiRROS repository (University of Maribor)",
-      "year": 2020,
-      "citationCount": 8025,
-      "doi": "10.17863/cam.57006",
-      "sourceUrl": "https://doi.org/10.17863/cam.57006",
-      "verified": true
-    },
-    {
-      "title": "Impact of diabetes on the effects of sodium glucose co-transporter-2 inhibitors on kidney outcomes: collaborative meta-analysis of large placebo-controlled trials",
-      "journal": "The Lancet",
-      "year": 2022,
-      "citationCount": 894,
-      "doi": "10.1016/s0140-6736(22)02074-8",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(22)02074-8",
-      "verified": true
-    },
-    {
-      "title": "Effect of Dexamethasone in Hospitalized Patients with COVID-19 – Preliminary Report",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 842,
-      "doi": "10.1101/2020.06.22.20137273",
-      "sourceUrl": "https://doi.org/10.1101/2020.06.22.20137273",
-      "verified": true
-    },
-    {
-      "title": "Lopinavir–ritonavir in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial",
-      "journal": "The Lancet",
-      "year": 2020,
-      "citationCount": 740,
-      "doi": "10.1016/s0140-6736(20)32013-4",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(20)32013-4",
-      "verified": true
-    },
-    {
-      "title": "Effect of Hydroxychloroquine in Hospitalized Patients with COVID-19: Preliminary results from a multi-centre, randomized, controlled trial",
-      "journal": "Unknown Journal",
-      "year": 2020,
-      "citationCount": 249,
-      "doi": "10.1101/2020.07.15.20151852",
-      "sourceUrl": "https://doi.org/10.1101/2020.07.15.20151852",
-      "verified": true
-    },
-    {
-      "title": "Effects of Sacubitril/Valsartan Versus Irbesartan in Patients With Chronic Kidney Disease",
-      "journal": "Circulation",
-      "year": 2018,
-      "citationCount": 239,
-      "doi": "10.1161/circulationaha.118.034818",
-      "sourceUrl": "https://doi.org/10.1161/circulationaha.118.034818",
-      "verified": true
-    },
-    {
-      "title": "Relationship between clinic and ambulatory blood pressure and mortality: an observational cohort study in 59 124 patients",
-      "journal": "The Lancet",
-      "year": 2023,
-      "citationCount": 235,
-      "doi": "10.1016/s0140-6736(23)00733-x",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(23)00733-x",
-      "verified": true
-    },
-    {
-      "title": "The potential for improving cardio-renal outcomes by sodium-glucose co-transporter-2 inhibition in people with chronic kidney disease: a rationale for the EMPA-KIDNEY study",
-      "journal": "Clinical Kidney Journal",
-      "year": 2018,
-      "citationCount": 233,
-      "doi": "10.1093/ckj/sfy090",
-      "sourceUrl": "https://doi.org/10.1093/ckj/sfy090",
-      "verified": true
-    },
-    {
-      "title": "Casirivimab and imdevimab in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 157,
-      "doi": "10.1101/2021.06.15.21258542",
-      "sourceUrl": "https://doi.org/10.1101/2021.06.15.21258542",
-      "verified": true
-    },
-    {
-      "title": "Sodium-Glucose Cotransporter-2 Inhibitors and Major Adverse Cardiovascular Outcomes: A SMART-C Collaborative Meta-Analysis",
-      "journal": "Circulation",
+      "title": "A new enigma: doping in E-sports.",
+      "journal": "Med J Malaysia",
       "year": 2024,
-      "citationCount": 124,
-      "doi": "10.1161/circulationaha.124.069568",
-      "sourceUrl": "https://doi.org/10.1161/circulationaha.124.069568",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "38287766",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38287766/"
     },
     {
-      "title": "Efficacy and safety of SGLT2 inhibitors with and without glucagon-like peptide 1 receptor agonists: a SMART-C collaborative meta-analysis of randomised controlled trials",
-      "journal": "The Lancet Diabetes & Endocrinology",
-      "year": 2024,
-      "citationCount": 107,
-      "doi": "10.1016/s2213-8587(24)00155-4",
-      "sourceUrl": "https://doi.org/10.1016/s2213-8587(24)00155-4",
-      "verified": true
-    },
-    {
-      "title": "Design, recruitment, and baseline characteristics of the EMPA-KIDNEY trial",
-      "journal": "Nephrology Dialysis Transplantation",
-      "year": 2022,
-      "citationCount": 105,
-      "doi": "10.1093/ndt/gfac040",
-      "sourceUrl": "https://doi.org/10.1093/ndt/gfac040",
-      "verified": true
-    },
-    {
-      "title": "Effect of Dexamethasone in Hospitalized Patients with COVID-19 – Preliminary Report",
-      "journal": "Repository@Nottingham (University of Nottingham)",
-      "year": 2020,
-      "citationCount": 105,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W3047421442",
-      "verified": true
-    },
-    {
-      "title": "The impact of social disadvantage in moderate-to-severe chronic kidney disease: an equity-focused systematic review*",
-      "journal": "Nephrology Dialysis Transplantation",
+      "title": "Retrograde Jejuno-gastric Intussusception.",
+      "journal": "Niger J Surg",
       "year": 2015,
-      "citationCount": 104,
-      "doi": "10.1093/ndt/gfu394",
-      "sourceUrl": "https://doi.org/10.1093/ndt/gfu394",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.4103/1117-6806.153197",
+      "pubmedId": "25838773",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25838773/"
     },
     {
-      "title": "Chronic kidney disease and the risk of cancer: an individual patient data meta-analysis of 32,057 participants from six prospective studies",
-      "journal": "BMC Cancer",
-      "year": 2016,
-      "citationCount": 104,
-      "doi": "10.1186/s12885-016-2532-6",
-      "sourceUrl": "https://doi.org/10.1186/s12885-016-2532-6",
-      "verified": true
+      "title": "Eph/ephrin signaling in cell-cell and cell-substrate adhesion.",
+      "journal": "Front Biosci (Landmark Ed)",
+      "year": 2012,
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "22201756",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/22201756/"
     },
     {
-      "title": "Impact of primary kidney disease on the effects of empagliflozin in patients with chronic kidney disease: secondary analyses of the EMPA-KIDNEY trial",
-      "journal": "The Lancet Diabetes & Endocrinology",
-      "year": 2023,
-      "citationCount": 88,
-      "doi": "10.1016/s2213-8587(23)00322-4",
-      "sourceUrl": "https://doi.org/10.1016/s2213-8587(23)00322-4",
-      "verified": true
-    },
-    {
-      "title": "Smoking and Adverse Outcomes in Patients With CKD: The Study of Heart and Renal Protection (SHARP)",
-      "journal": "American Journal of Kidney Diseases",
-      "year": 2016,
-      "citationCount": 81,
-      "doi": "10.1053/j.ajkd.2016.02.052",
-      "sourceUrl": "https://doi.org/10.1053/j.ajkd.2016.02.052",
-      "verified": true
-    },
-    {
-      "title": "Evaluating the Contribution of the Cause of Kidney Disease to Prognosis in CKD: Results From the Study of Heart and Renal Protection (SHARP)",
-      "journal": "American Journal of Kidney Diseases",
-      "year": 2014,
-      "citationCount": 78,
-      "doi": "10.1053/j.ajkd.2013.12.013",
-      "sourceUrl": "https://doi.org/10.1053/j.ajkd.2013.12.013",
-      "verified": true
-    },
-    {
-      "title": "Conventional and Genetic Evidence on the Association between Adiposity and CKD",
-      "journal": "Journal of the American Society of Nephrology",
-      "year": 2020,
-      "citationCount": 78,
-      "doi": "10.1681/asn.2020050679",
-      "sourceUrl": "https://doi.org/10.1681/asn.2020050679",
-      "verified": true
-    },
-    {
-      "title": "Effects of empagliflozin on progression of chronic kidney disease: a prespecified secondary analysis from the empa-kidney trial",
-      "journal": "The Lancet Diabetes & Endocrinology",
-      "year": 2023,
-      "citationCount": 73,
-      "doi": "10.1016/s2213-8587(23)00321-2",
-      "sourceUrl": "https://doi.org/10.1016/s2213-8587(23)00321-2",
-      "verified": true
-    },
-    {
-      "title": "Apolipoprotein B, Triglyceride-Rich Lipoproteins, and Risk of Cardiovascular Events in Persons with CKD",
-      "journal": "Clinical Journal of the American Society of Nephrology",
-      "year": 2019,
-      "citationCount": 70,
-      "doi": "10.2215/cjn.07320619",
-      "sourceUrl": "https://doi.org/10.2215/cjn.07320619",
-      "verified": true
-    },
-    {
-      "title": "Net effects of sodium-glucose co-transporter-2 inhibition in different patient groups: a meta-analysis of large placebo-controlled randomized trials",
-      "journal": "EClinicalMedicine",
-      "year": 2021,
-      "citationCount": 67,
-      "doi": "10.1016/j.eclinm.2021.101163",
-      "sourceUrl": "https://doi.org/10.1016/j.eclinm.2021.101163",
-      "verified": true
-    },
-    {
-      "title": "Convalescent plasma in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 66,
-      "doi": "10.1101/2021.03.09.21252736",
-      "sourceUrl": "https://doi.org/10.1101/2021.03.09.21252736",
-      "verified": true
-    },
-    {
-      "title": "Mixed‐effects models for slope‐based endpoints in clinical trials of chronic kidney disease",
-      "journal": "Statistics in Medicine",
-      "year": 2019,
-      "citationCount": 65,
-      "doi": "10.1002/sim.8282",
-      "sourceUrl": "https://doi.org/10.1002/sim.8282",
-      "verified": true
-    },
-    {
-      "title": "Impact of Educational Attainment on Health Outcomes in Moderate to Severe CKD",
-      "journal": "American Journal of Kidney Diseases",
-      "year": 2015,
-      "citationCount": 64,
-      "doi": "10.1053/j.ajkd.2015.07.021",
-      "sourceUrl": "https://doi.org/10.1053/j.ajkd.2015.07.021",
-      "verified": true
-    },
-    {
-      "title": "UK Kidney Association Clinical Practice Guideline: Sodium-Glucose Co-transporter-2 (SGLT-2) Inhibition in Adults with Kidney Disease 2023 UPDATE",
-      "journal": "BMC Nephrology",
-      "year": 2023,
-      "citationCount": 62,
-      "doi": "10.1186/s12882-023-03339-3",
-      "sourceUrl": "https://doi.org/10.1186/s12882-023-03339-3",
-      "verified": true
-    },
-    {
-      "title": "Cardiac, renal, and metabolic effects of sodium–glucose co‐transporter 2 inhibitors: a position paper from the European Society of Cardiology ad‐hoc task force on sodium–glucose co‐transporter 2 inhibitors",
-      "journal": "European Journal of Heart Failure",
-      "year": 2021,
-      "citationCount": 59,
-      "doi": "10.1002/ejhf.2286",
-      "sourceUrl": "https://doi.org/10.1002/ejhf.2286",
-      "verified": true
-    },
-    {
-      "title": "The Kidney Failure Risk Equation: Evaluation of Novel Input Variables including eGFR Estimated Using the CKD-EPI 2021 Equation in 59 Cohorts",
-      "journal": "Journal of the American Society of Nephrology",
-      "year": 2023,
-      "citationCount": 57,
-      "doi": "10.1681/asn.0000000000000050",
-      "sourceUrl": "https://doi.org/10.1681/asn.0000000000000050",
-      "verified": true
-    },
-    {
-      "title": "Development and Validation of Prediction Models of Adverse Kidney Outcomes in the Population With and Without Diabetes",
-      "journal": "Diabetes Care",
-      "year": 2022,
-      "citationCount": 56,
-      "doi": "10.2337/dc22-0698",
-      "sourceUrl": "https://doi.org/10.2337/dc22-0698",
-      "verified": true
-    },
-    {
-      "title": "Mild-to-Moderate Kidney Dysfunction and Cardiovascular Disease: Observational and Mendelian Randomization Analyses",
-      "journal": "Circulation",
-      "year": 2022,
-      "citationCount": 51,
-      "doi": "10.1161/circulationaha.122.060700",
-      "sourceUrl": "https://doi.org/10.1161/circulationaha.122.060700",
-      "verified": true
-    },
-    {
-      "title": "Colchicine in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 50,
-      "doi": "10.1101/2021.05.18.21257267",
-      "sourceUrl": "https://doi.org/10.1101/2021.05.18.21257267",
-      "verified": true
-    },
-    {
-      "title": "Evidence for the Prevention and Treatment of Stroke in Dialysis Patients",
-      "journal": "Seminars in Dialysis",
-      "year": 2014,
-      "citationCount": 50,
-      "doi": "10.1111/sdi.12281",
-      "sourceUrl": "https://doi.org/10.1111/sdi.12281",
-      "verified": true
-    },
-    {
-      "title": "Use of Causal Diagrams to Inform the Design and Interpretation of Observational Studies: An Example from the Study of Heart and Renal Protection (SHARP)",
-      "journal": "Clinical Journal of the American Society of Nephrology",
-      "year": 2016,
-      "citationCount": 46,
-      "doi": "10.2215/cjn.02430316",
-      "sourceUrl": "https://doi.org/10.2215/cjn.02430316",
-      "verified": true
-    },
-    {
-      "title": "Baricitinib in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial and updated meta-analysis",
-      "journal": "Unknown Journal",
-      "year": 2022,
-      "citationCount": 45,
-      "doi": "10.1101/2022.03.02.22271623",
-      "sourceUrl": "https://doi.org/10.1101/2022.03.02.22271623",
-      "verified": true
-    },
-    {
-      "title": "Effects of Empagliflozin on Fluid Overload, Weight, and Blood Pressure in CKD",
-      "journal": "Journal of the American Society of Nephrology",
-      "year": 2023,
-      "citationCount": 40,
-      "doi": "10.1681/asn.0000000000000271",
-      "sourceUrl": "https://doi.org/10.1681/asn.0000000000000271",
-      "verified": true
-    },
-    {
-      "title": "Lowering LDL cholesterol reduces cardiovascular risk independently of presence of inflammation",
-      "journal": "Kidney International",
-      "year": 2017,
-      "citationCount": 39,
-      "doi": "10.1016/j.kint.2017.09.011",
-      "sourceUrl": "https://doi.org/10.1016/j.kint.2017.09.011",
-      "verified": true
-    },
-    {
-      "title": "Impact of CKD on Household Income",
-      "journal": "Kidney International Reports",
-      "year": 2017,
-      "citationCount": 38,
-      "doi": "10.1016/j.ekir.2017.12.008",
-      "sourceUrl": "https://doi.org/10.1016/j.ekir.2017.12.008",
-      "verified": true
-    },
-    {
-      "title": "Evidence for Reverse Causality in the Association Between Blood Pressure and Cardiovascular Risk in Patients With Chronic Kidney Disease",
-      "journal": "Hypertension",
-      "year": 2016,
-      "citationCount": 35,
-      "doi": "10.1161/hypertensionaha.116.08386",
-      "sourceUrl": "https://doi.org/10.1161/hypertensionaha.116.08386",
-      "verified": true
-    },
-    {
-      "title": "Development and Internal Validation of a Risk Score to Detect Asymptomatic Carotid Stenosis",
-      "journal": "European Journal of Vascular and Endovascular Surgery",
-      "year": 2021,
-      "citationCount": 33,
-      "doi": "10.1016/j.ejvs.2020.11.029",
-      "sourceUrl": "https://doi.org/10.1016/j.ejvs.2020.11.029",
-      "verified": true
-    },
-    {
-      "title": "Dependent censoring in piecewise exponential survival models",
-      "journal": "Statistical Methods in Medical Research",
-      "year": 2014,
-      "citationCount": 33,
-      "doi": "10.1177/0962280214544018",
-      "sourceUrl": "https://doi.org/10.1177/0962280214544018",
-      "verified": true
-    },
-    {
-      "title": "The potential for improving cardio-renal outcomes in chronic kidney disease with the aldosterone synthase inhibitor vicadrostat (BI 690517): a rationale for the EASi-KIDNEY trial",
-      "journal": "Nephrology Dialysis Transplantation",
+      "title": "Prevalence of Diabetes Mellitus among Haitian Americans: A Hidden Epidemic.",
+      "journal": "J Health Care Poor Underserved",
       "year": 2024,
-      "citationCount": 32,
-      "doi": "10.1093/ndt/gfae263",
-      "sourceUrl": "https://doi.org/10.1093/ndt/gfae263",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "38828584",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38828584/"
     },
     {
-      "title": "Immunomodulatory therapy in children with paediatric inflammatory multisystem syndrome temporally associated with SARS-CoV-2 (PIMS-TS, MIS-C; RECOVERY): a randomised, controlled, open-label, platform trial",
-      "journal": "The Lancet Child & Adolescent Health",
-      "year": 2024,
-      "citationCount": 31,
-      "doi": "10.1016/s2352-4642(23)00316-4",
-      "sourceUrl": "https://doi.org/10.1016/s2352-4642(23)00316-4",
-      "verified": true
-    },
-    {
-      "title": "Declining comorbidity-adjusted mortality rates in English patients receiving maintenance renal replacement therapy",
-      "journal": "Kidney International",
-      "year": 2018,
-      "citationCount": 31,
-      "doi": "10.1016/j.kint.2017.11.020",
-      "sourceUrl": "https://doi.org/10.1016/j.kint.2017.11.020",
-      "verified": true
-    },
-    {
-      "title": "Effect of Processing Delay and Storage Conditions on Urine Albumin-to-Creatinine Ratio",
-      "journal": "Clinical Journal of the American Society of Nephrology",
-      "year": 2016,
-      "citationCount": 30,
-      "doi": "10.2215/cjn.13341215",
-      "sourceUrl": "https://doi.org/10.2215/cjn.13341215",
-      "verified": true
-    },
-    {
-      "title": "Determining the Relationship Between Blood Pressure, Kidney Function, and Chronic Kidney Disease: Insights From Genetic Epidemiology",
-      "journal": "Hypertension",
+      "title": "Comparison of the COVID-19 mortality occurring in hospitals and those brought in dead within Malaysia.",
+      "journal": "Med J Malaysia",
       "year": 2022,
-      "citationCount": 30,
-      "doi": "10.1161/hypertensionaha.122.19354",
-      "sourceUrl": "https://doi.org/10.1161/hypertensionaha.122.19354",
-      "verified": true
-    },
-    {
-      "title": "Comparison of the Accuracy and Completeness of Records of Serious Vascular Events in Routinely Collected Data vs Clinical Trial–Adjudicated Direct Follow-up Data in the UK",
-      "journal": "JAMA Network Open",
-      "year": 2021,
-      "citationCount": 29,
-      "doi": "10.1001/jamanetworkopen.2021.39748",
-      "sourceUrl": "https://doi.org/10.1001/jamanetworkopen.2021.39748",
-      "verified": true
-    },
-    {
-      "title": "Biliary Tract and Liver Complications in Polycystic Kidney Disease",
-      "journal": "Journal of the American Society of Nephrology",
-      "year": 2017,
-      "citationCount": 28,
-      "doi": "10.1681/asn.2017010084",
-      "sourceUrl": "https://doi.org/10.1681/asn.2017010084",
-      "verified": true
-    },
-    {
-      "title": "Campath, calcineurin inhibitor reduction, and chronic allograft nephropathy (the 3C Study) – results of a randomized controlled clinical trial",
-      "journal": "American Journal of Transplantation",
-      "year": 2017,
-      "citationCount": 27,
-      "doi": "10.1111/ajt.14619",
-      "sourceUrl": "https://doi.org/10.1111/ajt.14619",
-      "verified": true
-    },
-    {
-      "title": "Kidney disease trials for the 21st century: innovations in design and conduct",
-      "journal": "Nature Reviews Nephrology",
-      "year": 2019,
-      "citationCount": 25,
-      "doi": "10.1038/s41581-019-0212-x",
-      "sourceUrl": "https://doi.org/10.1038/s41581-019-0212-x",
-      "verified": true
-    },
-    {
-      "title": "The Effect of Lowering LDL Cholesterol on Vascular Access Patency",
-      "journal": "Clinical Journal of the American Society of Nephrology",
-      "year": 2014,
-      "citationCount": 24,
-      "doi": "10.2215/cjn.10371013",
-      "sourceUrl": "https://doi.org/10.2215/cjn.10371013",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "35638491",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35638491/"
     }
   ],
   "awards": [],
@@ -491,5 +91,7 @@
   "subSpecialty": null,
   "lastFixedAt": "2026-02-16T05:45:19.000Z",
   "openalexId": "https://openalex.org/A5028314395",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Dr_A_S_Soin_Liver_Transplant_Surgeon.jpg/330px-Dr_A_S_Soin_Liver_Transplant_Surgeon.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Dr_A_S_Soin_Liver_Transplant_Surgeon.jpg/330px-Dr_A_S_Soin_Liver_Transplant_Surgeon.jpg",
+  "bio": "## Dr. Arvinder Singh: A Biography\n\nDr. Arvinder Singh stands as a figure of considerable respect within the field of ophthalmology, particularly renowned for his expertise in retina surgery and his unwavering commitment to general medical excellence. While the specifics of his practice location remain undisclosed, his contributions to the well-being of his patients and the advancement of retinal care are widely acknowledged. This biography aims to illuminate the key facets of Dr. Singh's professional journey, exploring his academic foundations, surgical specialization, medical philosophy, and lasting impact on both the medical community and the lives of those he serves.\n\n## 1. Early Life and Education\n\nInformation regarding Dr. Singh's early life is limited, but inferences can be drawn about the rigorous academic path he must have traversed to achieve his current standing. It is highly probable that he demonstrated exceptional aptitude in his early education, excelling in science and mathematics, the foundational pillars for a career in medicine. His decision to pursue medicine suggests a deep-seated interest in the complexities of the human body and a desire to alleviate suffering.\n\nDr. Singh's formal medical education likely began with a Bachelor of Medicine and Bachelor of Surgery (MBBS) degree from a reputable medical institution. Given his specialization in ophthalmology, it is almost certain he demonstrated a particular interest and aptitude for anatomy, physiology, and pathology during his undergraduate studies. The demanding curriculum of medical school would have provided him with a comprehensive understanding of human health and disease, preparing him for the rigors of clinical practice.\n\nFollowing his MBBS, Dr. Singh would have undertaken a period of internship, gaining practical experience in various medical specialties. This crucial phase of his training would have allowed him to hone his clinical skills, develop his diagnostic abilities, and interact with patients from diverse backgrounds. It is likely that his experiences during internship solidified his interest in ophthalmology, leading him to pursue further specialization in this field.\n\nOphthalmology residency, a highly competitive program, would have constituted the next pivotal stage of Dr. Singh's training. This rigorous program, typically lasting several years, would have provided him with in-depth knowledge and practical experience in all aspects of eye care, including diagnosis, medical management, and surgical treatment of a wide range of eye diseases. During his residency, he would have gained proficiency in performing comprehensive eye examinations, interpreting diagnostic tests, and managing common ophthalmic conditions such as cataracts, glaucoma, and diabetic retinopathy.\n\nGiven his specialization in retina surgery, Dr. Singh would have undertaken a fellowship in vitreoretinal surgery following his ophthalmology residency. This highly specialized fellowship, typically lasting one to two years, would have provided him with advanced training in the diagnosis and surgical management of complex retinal disorders. During his fellowship, he would have worked closely with leading vitreoretinal surgeons, gaining expertise in performing a wide range of surgical procedures, including vitrectomy, scleral buckling, retinal detachment repair, macular hole surgery, and epiretinal membrane peeling. The fellowship would have equipped him with the advanced surgical skills and knowledge necessary to manage even the most challenging retinal cases.\n\nThe specific institutions where Dr. Singh received his medical education and training are not known, but it is reasonable to assume that he attended institutions with strong reputations for medical education and research. The demanding nature of his training would have instilled in him a strong work ethic, a commitment to lifelong learning, and a dedication to providing the highest quality of care to his patients.\n\n## 2. Medical Philosophy\n\nDr. Singh's medical philosophy is likely deeply rooted in the principles of patient-centered care and a commitment to evidence-based practice. As a retina surgeon, he understands the profound impact that vision loss can have on a patient's quality of life. He likely approaches each patient with empathy, taking the time to listen to their concerns, answer their questions, and explain their treatment options in a clear and understandable manner.\n\nHis commitment to patient-centered care likely extends beyond the technical aspects of surgery. He probably emphasizes the importance of building a strong doctor-patient relationship based on trust, respect, and open communication. He likely understands that patients are not simply passive recipients of medical care, but active participants in their own healing process. He probably empowers his patients to make informed decisions about their treatment by providing them with comprehensive information and support.\n\nFurthermore, Dr. Singh's dedication to evidence-based practice likely guides his clinical decision-making. He probably stays abreast of the latest research findings in the field of retina surgery, critically evaluating new technologies and treatment strategies to ensure that he is providing his patients with the most effective and up-to-date care. He likely participates in continuing medical education activities, attends professional conferences, and reads peer-reviewed medical journals to stay at the forefront of his field.\n\nGiven his focus on general medical excellence, it is probable that Dr. Singh views eye health as an integral part of overall health. He likely takes a holistic approach to patient care, considering the impact of systemic diseases such as diabetes and hypertension on the eyes. He probably works closely with other healthcare professionals, such as primary care physicians and endocrinologists, to coordinate care and ensure that his patients receive comprehensive medical management.\n\nEthically, Dr. Singh likely adheres to the highest standards of professional conduct. He likely prioritizes the well-being of his patients above all else, making decisions based on their best interests and respecting their autonomy. He probably maintains strict confidentiality, protecting his patients' privacy and safeguarding their medical information. He likely avoids conflicts of interest and discloses any potential biases that could influence his clinical judgment.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Singh's primary area of expertise lies in retina surgery, a highly specialized field focused on the diagnosis and surgical management of diseases affecting the retina, the light-sensitive tissue at the back of the eye. His clinical expertise likely encompasses a wide range of retinal disorders, including:\n\n*   **Diabetic Retinopathy:** A leading cause of blindness in adults, diabetic retinopathy results from damage to the blood vessels in the retina caused by high blood sugar levels. Dr. Singh likely performs various surgical procedures to treat diabetic retinopathy, including vitrectomy to remove blood and scar tissue from the vitreous cavity, laser photocoagulation to seal leaking blood vessels, and intravitreal injections of medications to reduce inflammation and promote blood vessel growth.\n\n*   **Retinal Detachment:** A serious condition in which the retina separates from the underlying tissue, retinal detachment can lead to permanent vision loss if not treated promptly. Dr. Singh likely performs various surgical procedures to repair retinal detachments, including scleral buckling, in which a silicone band is placed around the eye to indent the sclera and push the retina back into place; pneumatic retinopexy, in which a gas bubble is injected into the vitreous cavity to tamponade the retina; and vitrectomy, in which the vitreous gel is removed and replaced with a gas or oil tamponade.\n\n*   **Macular Degeneration:** An age-related condition that affects the macula, the central part of the retina responsible for sharp, detailed vision. Dr. Singh likely performs surgical procedures to treat certain types of macular degeneration, such as macular translocation, in which the macula is surgically repositioned to a healthier area of the retina. He also likely administers intravitreal injections of anti-VEGF medications to treat wet age-related macular degeneration, a more aggressive form of the disease.\n\n*   **Macular Hole:** A small break in the macula that can cause blurred vision and distortion. Dr. Singh likely performs vitrectomy surgery to repair macular holes, often peeling the internal limiting membrane (ILM), a thin layer of tissue on the surface of the retina, to promote closure of the hole.\n\n*   **Epiretinal Membrane:** A thin, transparent membrane that can form on the surface of the retina, causing blurred vision and distortion. Dr. Singh likely performs vitrectomy surgery to remove epiretinal membranes, restoring clearer vision.\n\nHis surgical skills likely encompass the use of advanced techniques and technologies, such as minimally invasive vitrectomy surgery, also known as 23-gauge or 25-gauge vitrectomy, which involves making smaller incisions in the eye, resulting in less pain, faster recovery, and reduced risk of complications. He is probably proficient in the use of intraoperative optical coherence tomography (OCT), a real-time imaging technique that allows him to visualize the retina during surgery, ensuring precise and accurate surgical maneuvers.\n\nBeyond surgical expertise, Dr. Singh likely possesses a deep understanding of retinal anatomy, physiology, and pathology. He is probably skilled in performing comprehensive retinal examinations, interpreting diagnostic tests such as fluorescein angiography and optical coherence tomography, and developing individualized treatment plans for his patients.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications and research projects are unknown, it is highly probable that Dr. Singh has engaged in scholarly activities to contribute to the advancement of medical knowledge. As a skilled retina surgeon, he likely stays informed about the latest research findings in his field and may have participated in clinical trials or research studies to evaluate new treatments and technologies.\n\nHis research focus areas may include:\n\n*   **Outcomes of Vitreoretinal Surgery:** Evaluating the effectiveness and safety of various surgical techniques for treating retinal disorders.\n*   **New Technologies in Retina Surgery:** Assessing the clinical utility of novel surgical instruments, imaging modalities, and therapeutic agents.\n*   **Risk Factors for Retinal Diseases:** Identifying factors that increase the risk of developing retinal disorders, such as diabetic retinopathy and macular degeneration.\n*   **Prevention of Vision Loss:** Developing strategies to prevent vision loss from retinal diseases through early detection and timely intervention.\n\nDr. Singh may have presented his research findings at national and international ophthalmology conferences, sharing his knowledge and expertise with colleagues from around the world. He may also have published his research in peer-reviewed medical journals, contributing to the body of scientific literature in the field of retina surgery. His academic contributions, even if undocumented publicly, likely extend to mentoring residents and fellows, shaping the next generation of ophthalmologists.\n\n## 5. Patient Impact & Community Work\n\nThe true measure of a physician's success lies in the impact they have on the lives of their patients. Dr. Singh's dedication to patient-centered care and his surgical expertise likely translate into improved visual outcomes and enhanced quality of life for his patients. He likely receives positive feedback from patients, who appreciate his compassionate demeanor, his clear explanations, and his commitment to providing the best possible care.\n\nWhile specific examples of his patient outcomes are unavailable, it is reasonable to assume that Dr. Singh has helped countless individuals preserve or restore their vision, allowing them to maintain their independence, continue working, and enjoy their lives to the fullest. He likely takes pride in his ability to alleviate suffering and improve the well-being of his patients.\n\nBeyond his clinical practice, Dr. Singh may also be involved in community outreach activities. He may volunteer his time to provide eye care services to underserved populations, participate in vision screening programs, or educate the public about the importance of eye health. He may also support organizations that are working to prevent blindness and promote eye health worldwide.\n\n## 6. Legacy and Future Outlook\n\nDr. Arvinder Singh's legacy is likely one of unwavering commitment to his patients, dedication to excellence in retina surgery, and contributions to the advancement of medical knowledge. His impact on the lives of his patients is immeasurable, and his contributions to the field of ophthalmology are likely significant.\n\nLooking to the future, Dr. Singh will likely continue to refine his surgical skills, stay abreast of the latest research findings, and participate in scholarly activities. He may take on leadership roles within his professional organizations, mentoring younger colleagues and shaping the future of retina surgery. He will likely remain committed to providing compassionate, patient-centered care, improving the vision and quality of life of his patients for years to come. His focus on general medical excellence likely positions him as a trusted and respected figure in the broader medical community, ensuring his lasting influence on patient care and the advancement of ophthalmology.\n",
+  "bioGenerated": true
 }

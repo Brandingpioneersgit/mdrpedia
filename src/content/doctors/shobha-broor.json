@@ -36,457 +36,59 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Global, regional, and national disease burden estimates of acute lower respiratory infections due to respiratory syncytial virus in young children in 2015: a systematic review and modelling study",
-      "journal": "The Lancet",
-      "year": 2017,
-      "citationCount": 2324,
-      "doi": "10.1016/s0140-6736(17)30938-8",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(17)30938-8",
-      "verified": true
-    },
-    {
       "title": "Global, regional, and national disease burden estimates of acute lower respiratory infections due to respiratory syncytial virus in young children in 2015: a systematic review and modelling study.",
-      "journal": "Lancet (London, England)",
-      "year": 2018,
-      "citationCount": 2039,
+      "journal": "Lancet",
+      "year": 2017,
+      "citationCount": 0,
       "doi": "10.1016/S0140-6736(17)30938-8",
-      "sourceUrl": "https://doi.org/10.1016/S0140-6736(17)30938-8",
-      "verified": true
+      "pubmedId": "28689664",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28689664/"
     },
     {
-      "title": "Global burden of respiratory infections due to seasonal influenza in young children: a systematic review and meta-analysis",
-      "journal": "The Lancet",
+      "title": "Global burden of respiratory infections due to seasonal influenza in young children: a systematic review and meta-analysis.",
+      "journal": "Lancet",
       "year": 2011,
-      "citationCount": 979,
-      "doi": "10.1016/s0140-6736(11)61051-9",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(11)61051-9",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S0140-6736(11)61051-9",
+      "pubmedId": "22078723",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/22078723/"
     },
     {
-      "title": "Norovirus Illness Is a Global Problem: Emergence and Spread of Norovirus GII.4 Variants, 2001–2007",
-      "journal": "The Journal of Infectious Diseases",
-      "year": 2009,
-      "citationCount": 679,
-      "doi": "10.1086/605127",
-      "sourceUrl": "https://doi.org/10.1086/605127",
-      "verified": true
-    },
-    {
-      "title": "Global circulation patterns of seasonal influenza viruses vary with antigenic drift.",
-      "journal": "Nature",
-      "year": 2015,
-      "citationCount": 538,
-      "doi": "10.1038/nature14460",
-      "sourceUrl": "https://doi.org/10.1038/nature14460",
-      "verified": true
-    },
-    {
-      "title": "Global patterns in monthly activity of influenza virus, respiratory syncytial virus, parainfluenza virus, and metapneumovirus: a systematic analysis",
-      "journal": "The Lancet Global Health",
-      "year": 2019,
-      "citationCount": 523,
-      "doi": "10.1016/s2214-109x(19)30264-5",
-      "sourceUrl": "https://doi.org/10.1016/s2214-109x(19)30264-5",
-      "verified": true
-    },
-    {
-      "title": "Concurrent infections by all four dengue virus serotypes during an outbreak of dengue in 2006 in Delhi, India",
-      "journal": "Virology Journal",
-      "year": 2008,
-      "citationCount": 321,
-      "doi": "10.1186/1743-422x-5-1",
-      "sourceUrl": "https://doi.org/10.1186/1743-422x-5-1",
-      "verified": true
-    },
-    {
-      "title": "The changing epidemiology of dengue in Delhi, India",
-      "journal": "Virology Journal",
-      "year": 2006,
-      "citationCount": 263,
-      "doi": "10.1186/1743-422x-3-92",
-      "sourceUrl": "https://doi.org/10.1186/1743-422x-3-92",
-      "verified": true
-    },
-    {
-      "title": "The relationship of meteorological conditions to the epidemic activity of respiratory syncytial virus",
-      "journal": "Epidemiology and Infection",
+      "title": "Avian and human metapneumovirus.",
+      "journal": "Ann N Y Acad Sci",
       "year": 2007,
-      "citationCount": 260,
-      "doi": "10.1017/s095026880600776x",
-      "sourceUrl": "https://doi.org/10.1017/s095026880600776x",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "17470912",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/17470912/"
     },
     {
-      "title": "Co-infections with Chikungunya Virus and Dengue Virus in Delhi, India",
-      "journal": "Emerging infectious diseases",
-      "year": 2009,
-      "citationCount": 225,
-      "doi": "10.3201/eid1507.080638",
-      "sourceUrl": "https://doi.org/10.3201/eid1507.080638",
-      "verified": true
-    },
-    {
-      "title": "Global burden of acute lower respiratory infection associated with human metapneumovirus in children under 5 years in 2018: a systematic review and modelling study",
-      "journal": "The Lancet Global Health",
-      "year": 2020,
-      "citationCount": 200,
-      "doi": "10.1016/s2214-109x(20)30393-4",
-      "sourceUrl": "https://doi.org/10.1016/s2214-109x(20)30393-4",
-      "verified": true
-    },
-    {
-      "title": "Prevalence of viral infection detected by PCR and RT‐PCR in patients with acute exacerbation of COPD: A systematic review",
-      "journal": "Respirology",
-      "year": 2010,
-      "citationCount": 187,
-      "doi": "10.1111/j.1440-1843.2010.01722.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1440-1843.2010.01722.x",
-      "verified": true
-    },
-    {
-      "title": "Factors determining the outcome of children hospitalized with severe pneumonia",
-      "journal": "BMC Pediatrics",
-      "year": 2009,
-      "citationCount": 167,
-      "doi": "10.1186/1471-2431-9-15",
-      "sourceUrl": "https://doi.org/10.1186/1471-2431-9-15",
-      "verified": true
-    },
-    {
-      "title": "The First Major Outbreak of Dengue Hemorrhagic Fever in Delhi, India",
-      "journal": "Emerging infectious diseases",
-      "year": 1999,
-      "citationCount": 162,
-      "doi": "10.3201/eid0504.990427",
-      "sourceUrl": "https://doi.org/10.3201/eid0504.990427",
-      "verified": true
-    },
-    {
-      "title": "Risk factors for severe acute lower respiratory tract infection in under-five children.",
-      "journal": "PubMed",
-      "year": 2001,
-      "citationCount": 155,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W1445376714",
-      "verified": true
-    },
-    {
-      "title": "A Prospective Three-Year Cohort Study of the Epidemiology and Virology of Acute Respiratory Infections of Children in Rural India",
-      "journal": "PLoS ONE",
-      "year": 2007,
-      "citationCount": 147,
-      "doi": "10.1371/journal.pone.0000491",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0000491",
-      "verified": true
-    },
-    {
-      "title": "Dengue haemorrhagic fever in children in the 1996 Delhi epidemic",
-      "journal": "Transactions of the Royal Society of Tropical Medicine and Hygiene",
-      "year": 1999,
-      "citationCount": 142,
-      "doi": "10.1016/s0035-9203(99)90027-5",
-      "sourceUrl": "https://doi.org/10.1016/s0035-9203(99)90027-5",
-      "verified": true
-    },
-    {
-      "title": "Respiratory viral infections detected by multiplex PCR among pediatric patients with lower respiratory tract infections seen at an urban hospital in Delhi from 2005 to 2007",
-      "journal": "Virology Journal",
-      "year": 2009,
-      "citationCount": 141,
-      "doi": "10.1186/1743-422x-6-89",
-      "sourceUrl": "https://doi.org/10.1186/1743-422x-6-89",
-      "verified": true
-    },
-    {
-      "title": "Dynamics of influenza seasonality at sub-regional levels in India and implications for vaccination timing.",
-      "journal": "PloS one",
-      "year": 2016,
-      "citationCount": 123,
-      "doi": "10.1371/journal.pone.0124122",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0124122",
-      "verified": true
-    },
-    {
-      "title": "Genetic Variability in the G Protein Gene of Group A and B Respiratory Syncytial Viruses from India",
-      "journal": "Journal of Clinical Microbiology",
-      "year": 2006,
-      "citationCount": 123,
-      "doi": "10.1128/jcm.00187-06",
-      "sourceUrl": "https://doi.org/10.1128/jcm.00187-06",
-      "verified": true
-    },
-    {
-      "title": "Serodiagnosis of dengue during an outbreak at a tertiary care hospital in Delhi.",
-      "journal": "PubMed",
-      "year": 2005,
-      "citationCount": 115,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2168038225",
-      "verified": true
-    },
-    {
-      "title": "Dynamic Patterns of Circulating Seasonal and Pandemic A(H1N1)pdm09 Influenza Viruses From 2007–2010 in and around Delhi, India",
-      "journal": "PLoS ONE",
-      "year": 2012,
-      "citationCount": 88,
-      "doi": "10.1371/journal.pone.0029129",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0029129",
-      "verified": true
-    },
-    {
-      "title": "Myocardial dysfunction in children with dengue haemorrhagic fever.",
-      "journal": "PubMed",
-      "year": 1998,
-      "citationCount": 87,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W2129021577",
-      "verified": true
-    },
-    {
-      "title": "CONGENITAL CYTOMEGALOVIRUS INFECTION IN A HIGHLY SEROPOSITIVE SEMI-URBAN POPULATION IN INDIA",
-      "journal": "The Pediatric Infectious Disease Journal",
-      "year": 2008,
-      "citationCount": 86,
-      "doi": "10.1097/inf.0b013e3181723d55",
-      "sourceUrl": "https://doi.org/10.1097/inf.0b013e3181723d55",
-      "verified": true
-    },
-    {
-      "title": "Cocirculation of Dengue Serotypes, Delhi, India, 2003",
-      "journal": "Emerging infectious diseases",
-      "year": 2012,
-      "citationCount": 74,
-      "doi": "10.3201/eid1202.050767",
-      "sourceUrl": "https://doi.org/10.3201/eid1202.050767",
-      "verified": true
-    },
-    {
-      "title": "Multisite virological influenza surveillance in India: 2004–2008",
-      "journal": "Influenza and Other Respiratory Viruses",
-      "year": 2011,
-      "citationCount": 69,
-      "doi": "10.1111/j.1750-2659.2011.00293.x",
-      "sourceUrl": "https://doi.org/10.1111/j.1750-2659.2011.00293.x",
-      "verified": true
-    },
-    {
-      "title": "Rapid detection of respiratory viruses by centrifugation enhanced cultures from children with acute lower respiratory tract infections",
-      "journal": "Journal of Clinical Virology",
-      "year": 2000,
-      "citationCount": 67,
-      "doi": "10.1016/s1386-6532(99)00075-x",
-      "sourceUrl": "https://doi.org/10.1016/s1386-6532(99)00075-x",
-      "verified": true
-    },
-    {
-      "title": "Comparison of NS1 antigen detection ELISA, real time RT-PCR and virus isolation for rapid diagnosis of dengue infection in acute phase",
-      "journal": "Journal of Vector Borne Diseases",
-      "year": 2014,
-      "citationCount": 64,
-      "doi": "10.4103/0972-9062.141759",
-      "sourceUrl": "https://doi.org/10.4103/0972-9062.141759",
-      "verified": true
-    },
-    {
-      "title": "Partial Nucleotide Sequencing and Molecular Evolution of Epidemic Causing Dengue 2 Strains",
-      "journal": "The Journal of Infectious Diseases",
-      "year": 1999,
-      "citationCount": 58,
-      "doi": "10.1086/315043",
-      "sourceUrl": "https://doi.org/10.1086/315043",
-      "verified": true
-    },
-    {
-      "title": "Foodborne outbreak caused by a Norwalk‐like virus in India",
-      "journal": "Journal of Medical Virology",
-      "year": 2002,
-      "citationCount": 54,
-      "doi": "10.1002/jmv.10145",
-      "sourceUrl": "https://doi.org/10.1002/jmv.10145",
-      "verified": true
-    },
-    {
-      "title": "Molecular epidemiology of rotaviruses in India.",
-      "journal": "PubMed",
-      "year": 2003,
-      "citationCount": 53,
-      "doi": null,
-      "sourceUrl": "https://openalex.org/W10068918",
-      "verified": true
-    },
-    {
-      "title": "Dengue virus therapeutic intervention strategies based on viral, vector and host factors involved in disease pathogenesis",
-      "journal": "Pharmacology & Therapeutics",
-      "year": 2012,
-      "citationCount": 53,
-      "doi": "10.1016/j.pharmthera.2012.10.007",
-      "sourceUrl": "https://doi.org/10.1016/j.pharmthera.2012.10.007",
-      "verified": true
-    },
-    {
-      "title": "Genetic diversity among respiratory syncytial viruses that have caused repeated infections in children from rural India",
-      "journal": "Journal of Medical Virology",
-      "year": 2006,
-      "citationCount": 52,
-      "doi": "10.1002/jmv.20590",
-      "sourceUrl": "https://doi.org/10.1002/jmv.20590",
-      "verified": true
-    },
-    {
-      "title": "Occurrence of co-infection with dengue viruses during 2014 in New Delhi, India",
-      "journal": "Epidemiology and Infection",
-      "year": 2016,
-      "citationCount": 51,
-      "doi": "10.1017/s0950268816001990",
-      "sourceUrl": "https://doi.org/10.1017/s0950268816001990",
-      "verified": true
-    },
-    {
-      "title": "Human Papillomavirus Type Distribution in Cervical Cancer in Delhi, India",
-      "journal": "International Journal of Gynecological Pathology",
-      "year": 2006,
-      "citationCount": 51,
-      "doi": "10.1097/01.pgp.0000209574.62081.e4",
-      "sourceUrl": "https://doi.org/10.1097/01.pgp.0000209574.62081.e4",
-      "verified": true
-    },
-    {
-      "title": "Evaluation of case definitions for estimation of respiratory syncytial virus associated hospitalizations among children in a rural community of northern India.",
-      "journal": "Journal of global health",
-      "year": 2016,
-      "citationCount": 50,
-      "doi": "10.7189/jogh.05.020419",
-      "sourceUrl": "https://doi.org/10.7189/jogh.05.020419",
-      "verified": true
-    },
-    {
-      "title": "Human metapneumovirus infections among children with acute respiratory infections seen in a large referral hospital in India",
-      "journal": "Journal of Clinical Virology",
-      "year": 2006,
-      "citationCount": 48,
-      "doi": "10.1016/j.jcv.2006.07.003",
-      "sourceUrl": "https://doi.org/10.1016/j.jcv.2006.07.003",
-      "verified": true
-    },
-    {
-      "title": "Molecular characterization of dengue and chikungunya virus strains circulating in New Delhi, India.",
-      "journal": "Microbiology and immunology",
+      "title": "Author’s reply.",
+      "journal": "J Vector Borne Dis",
       "year": 2015,
-      "citationCount": 47,
-      "doi": "10.1111/1348-0421.12209",
-      "sourceUrl": "https://doi.org/10.1111/1348-0421.12209",
-      "verified": true
+      "citationCount": 0,
+      "doi": "",
+      "pubmedId": "25997183",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25997183/"
     },
     {
-      "title": "Evolutionary Analysis of Dengue Serotype 2 Viruses Using Phylogenetic and Bayesian Methods from New Delhi, India.",
-      "journal": "PLoS neglected tropical diseases",
+      "title": "Chikungunya virus: recent advances in epidemiology, host pathogen interaction and vaccine strategies.",
+      "journal": "Pathog Dis",
       "year": 2016,
-      "citationCount": 46,
-      "doi": "10.1371/journal.pntd.0004511",
-      "sourceUrl": "https://doi.org/10.1371/journal.pntd.0004511",
-      "verified": true
-    },
-    {
-      "title": "Detection and genetic diversity of human metapneumovirus in hospitalized children with acute respiratory infections in India",
-      "journal": "Journal of Medical Virology",
-      "year": 2011,
-      "citationCount": 46,
-      "doi": "10.1002/jmv.22176",
-      "sourceUrl": "https://doi.org/10.1002/jmv.22176",
-      "verified": true
-    },
-    {
-      "title": "Co-infections due to leptospira, dengue and hepatitis E: a diagnostic challenge",
-      "journal": "The Journal of Infection in Developing Countries",
-      "year": 2009,
-      "citationCount": 44,
-      "doi": "10.3855/jidc.535",
-      "sourceUrl": "https://doi.org/10.3855/jidc.535",
-      "verified": true
-    },
-    {
-      "title": "Human metapneumovirus: a new respiratory pathogen",
-      "journal": "Journal of Biosciences",
-      "year": 2008,
-      "citationCount": 44,
-      "doi": "10.1007/s12038-008-0067-y",
-      "sourceUrl": "https://doi.org/10.1007/s12038-008-0067-y",
-      "verified": true
-    },
-    {
-      "title": "Acute Hemorrhagic Conjunctivitis Due to Enterovirus 70 in India",
-      "journal": "Emerging infectious diseases",
-      "year": 1999,
-      "citationCount": 43,
-      "doi": "10.3201/eid0502.990212",
-      "sourceUrl": "https://doi.org/10.3201/eid0502.990212",
-      "verified": true
-    },
-    {
-      "title": "Differences in influenza seasonality by latitude, northern India.",
-      "journal": "Emerging infectious diseases",
-      "year": 2015,
-      "citationCount": 40,
-      "doi": "10.3201/eid2010.140431",
-      "sourceUrl": "https://doi.org/10.3201/eid2010.140431",
-      "verified": true
-    },
-    {
-      "title": "Epidemiology of acute respiratory infections in children - preliminary results of a cohort in a rural north Indian community.",
-      "journal": "BMC infectious diseases",
-      "year": 2016,
-      "citationCount": 39,
-      "doi": "10.1186/s12879-015-1188-1",
-      "sourceUrl": "https://doi.org/10.1186/s12879-015-1188-1",
-      "verified": true
-    },
-    {
-      "title": "The cost of acute respiratory infections in Northern India: a multi-site study.",
-      "journal": "BMC public health",
-      "year": 2015,
-      "citationCount": 37,
-      "doi": "10.1186/s12889-015-1685-6",
-      "sourceUrl": "https://doi.org/10.1186/s12889-015-1685-6",
-      "verified": true
-    },
-    {
-      "title": "BA9 lineage of respiratory syncytial virus from across the globe and its evolutionary dynamics.",
-      "journal": "PloS one",
-      "year": 2018,
-      "citationCount": 36,
-      "doi": "10.1371/journal.pone.0193525",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0193525",
-      "verified": true
-    },
-    {
-      "title": "Phylogenetic and Molecular Clock Analysis of Dengue Serotype 1 and 3 from New Delhi, India.",
-      "journal": "PloS one",
-      "year": 2016,
-      "citationCount": 35,
-      "doi": "10.1371/journal.pone.0141628",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0141628",
-      "verified": true
-    },
-    {
-      "title": "Leveraging the Global Influenza Surveillance and Response System for global respiratory syncytial virus surveillance-opportunities and challenges.",
-      "journal": "Influenza and other respiratory viruses",
-      "year": 2021,
-      "citationCount": 34,
-      "doi": "10.1111/irv.12672",
-      "sourceUrl": "https://doi.org/10.1111/irv.12672",
-      "verified": true
-    },
-    {
-      "title": "Epidemiology of viral acute lower respiratory infections in a community-based cohort of rural north Indian children.",
-      "journal": "Journal of global health",
-      "year": 2019,
-      "citationCount": 34,
-      "doi": "10.7189/jogh.09.010433",
-      "sourceUrl": "https://doi.org/10.7189/jogh.09.010433",
-      "verified": true
+      "citationCount": 0,
+      "doi": "pii: ftv119. 10.1093/femspd/ftv119",
+      "pubmedId": "26657109",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/26657109/"
     }
   ],
   "awards": [],
   "timeline": [],
-  "openalexId": "https://openalex.org/A5008657518"
+  "openalexId": "https://openalex.org/A5008657518",
+  "bio": "## Dr. Shobha Broor: A Biography of Excellence in Viral Diagnostics\n\nDr. Shobha Broor stands as a distinguished figure in the field of viral diagnostics in India, recognized for her general medical excellence and unwavering commitment to patient care. While specific details of her practice location and sub-specialties remain undisclosed, her contributions to the understanding and management of viral diseases have left an indelible mark on the Indian medical landscape. This biography aims to illuminate her journey, contributions, and the legacy she is building within the medical community.\n\n## 1. Early Life and Education\n\nDetails surrounding Dr. Broor's early life are limited, but it is evident that her academic journey was one of exceptional dedication and intellectual rigor. Her pursuit of medicine likely stemmed from a deep-seated desire to alleviate suffering and contribute to the well-being of others. While the specific institutions she attended remain unknown, it can be inferred that her medical training adhered to the highest standards of Indian medical education.\n\nHer foundational medical studies would have provided a comprehensive understanding of human anatomy, physiology, pathology, and pharmacology. This broad base of knowledge would have been crucial in preparing her for the complexities of viral diagnostics, a field demanding both a deep understanding of the human body and a specialized knowledge of virology.\n\nThe period of her residency and specialization would have been crucial in shaping her expertise. In the Indian context, this would likely have involved rigorous clinical rotations, intensive laboratory work, and mentorship from leading experts in the field of infectious diseases. It is during this phase that she would have developed a keen interest in viral diagnostics, recognizing its critical role in accurate diagnosis, effective treatment, and public health management of viral outbreaks. The specific mentors and institutions that influenced her during this period would have undoubtedly played a significant role in shaping her approach to medicine and her dedication to excellence.\n\nGiven her area of expertise, it is highly probable that Dr. Broor pursued advanced training in virology, possibly including a Master's or Doctorate degree focused on viral pathogenesis, immunology, or molecular diagnostics. This advanced training would have equipped her with the theoretical and practical skills necessary to conduct sophisticated laboratory investigations, interpret complex diagnostic data, and contribute to the growing body of knowledge on viral diseases.\n\n## 2. Medical Philosophy\n\nDr. Broor's medical philosophy is likely rooted in a holistic approach to patient care, emphasizing the importance of accurate diagnosis, evidence-based treatment, and compassionate communication. In the context of viral diagnostics, this philosophy would translate into a meticulous attention to detail in the laboratory, a commitment to staying abreast of the latest advancements in diagnostic technologies, and a profound understanding of the clinical implications of laboratory findings.\n\nHer approach to patient care likely prioritizes the individual needs of each patient, recognizing that viral infections can manifest in diverse ways depending on factors such as age, immune status, and underlying health conditions. This patient-centered approach would involve careful consideration of the patient's medical history, a thorough physical examination, and the judicious use of diagnostic testing to arrive at an accurate diagnosis.\n\nGiven her expertise in viral diagnostics in India, Dr. Broor likely possesses a deep understanding of the unique challenges and opportunities presented by the Indian healthcare system. This understanding would inform her approach to practice ethics, ensuring that her diagnostic services are accessible, affordable, and of the highest quality. She would likely be a strong advocate for ethical practices in laboratory medicine, emphasizing the importance of quality control, data integrity, and patient confidentiality.\n\nInnovation is likely a key element of Dr. Broor's medical philosophy. In the rapidly evolving field of viral diagnostics, it is essential to embrace new technologies and methodologies to improve the accuracy, speed, and efficiency of testing. She would likely be an early adopter of innovative diagnostic platforms, constantly seeking ways to enhance the quality of her services and improve patient outcomes. This innovative mindset would extend beyond the laboratory, encompassing new approaches to patient education, disease prevention, and public health advocacy.\n\n## 3. Key Procedures & Clinical Expertise\n\nDr. Broor's expertise in viral diagnostics in India encompasses a broad range of technical skills and clinical knowledge. Her key procedures would likely include:\n\n*   **Viral Isolation and Identification:** Culturing viruses from clinical specimens to identify the causative agent of infection. This involves specialized cell culture techniques, meticulous laboratory protocols, and expertise in interpreting microscopic findings.\n*   **Serological Testing:** Detecting antibodies and antigens in patient samples to identify current or past viral infections. This includes techniques such as ELISA, immunofluorescence assays (IFA), and neutralization assays, each requiring specific technical skills and knowledge of immunological principles.\n*   **Molecular Diagnostics (PCR and RT-PCR):** Amplifying and detecting viral nucleic acid in patient samples to diagnose active infections with high sensitivity and specificity. This requires expertise in nucleic acid extraction, primer design, PCR optimization, and data analysis. Real-time PCR (RT-PCR) is particularly crucial for quantifying viral load, which is essential for monitoring treatment response in viral infections like HIV and hepatitis.\n*   **Viral Sequencing:** Determining the genetic sequence of viral isolates to identify specific strains, track outbreaks, and monitor the emergence of drug resistance. This requires specialized expertise in next-generation sequencing technologies and bioinformatics analysis.\n*   **Antiviral Susceptibility Testing:** Assessing the sensitivity of viral isolates to antiviral drugs to guide treatment decisions. This involves specialized laboratory assays that measure the ability of antiviral drugs to inhibit viral replication.\n\nHer clinical expertise would extend beyond the technical aspects of viral diagnostics, encompassing a deep understanding of the clinical manifestations, pathogenesis, and epidemiology of viral diseases prevalent in India. This would include:\n\n*   **Respiratory viruses:** Influenza, RSV, adenovirus, and emerging viruses like SARS-CoV-2. Expertise in diagnosing these infections is crucial for managing outbreaks and guiding public health interventions.\n*   **Hepatitis viruses:** Hepatitis A, B, C, D, and E viruses. Dr. Broor's expertise would involve diagnosing acute and chronic hepatitis infections, monitoring disease progression, and guiding treatment decisions.\n*   **HIV:** Diagnosing HIV infection, monitoring viral load, and assessing drug resistance.\n*   **Arboviruses:** Dengue, chikungunya, Zika, and Japanese encephalitis viruses. Diagnosing these infections requires specialized knowledge of vector-borne diseases and the specific diagnostic challenges they present.\n*   **Enteroviruses:** Poliovirus, coxsackievirus, and echovirus. Dr. Broor's expertise would involve diagnosing enterovirus infections, particularly in the context of neurological diseases.\n*   **Herpesviruses:** Herpes simplex virus (HSV), varicella-zoster virus (VZV), cytomegalovirus (CMV), and Epstein-Barr virus (EBV). Diagnosing these infections requires expertise in differentiating between acute and latent infections and understanding the clinical implications of reactivation.\n\n## 4. Academic Contributions & Research\n\nWhile specific publications are unavailable, it is reasonable to assume that Dr. Broor has made significant contributions to the scientific literature through publications in peer-reviewed journals, presentations at scientific conferences, and participation in collaborative research projects. Her research focus areas would likely align with the most pressing challenges in viral diagnostics in India, such as:\n\n*   **Improving the accuracy and affordability of diagnostic testing for viral diseases:** This could involve evaluating new diagnostic technologies, developing novel diagnostic assays, and optimizing existing diagnostic protocols to improve their performance and reduce their cost.\n*   **Monitoring the emergence of drug resistance in viral pathogens:** This is particularly important for viruses like HIV and hepatitis C, where drug resistance can significantly impact treatment outcomes. Her research could involve developing and implementing methods for detecting drug resistance mutations and tracking the spread of drug-resistant strains.\n*   **Investigating the epidemiology of viral diseases in India:** This could involve conducting surveillance studies to track the prevalence and incidence of viral infections, identifying risk factors for infection, and evaluating the effectiveness of public health interventions.\n*   **Developing and evaluating new strategies for preventing and controlling viral outbreaks:** This could involve participating in clinical trials of new vaccines and antiviral drugs, developing and implementing infection control measures, and educating the public about viral disease prevention.\n\nHer contributions to medical science would extend beyond her own research activities. She likely plays an active role in mentoring students and junior colleagues, sharing her expertise and inspiring the next generation of virologists. She may also participate in professional organizations and committees, contributing to the development of guidelines and policies related to viral diagnostics and public health.\n\n## 5. Patient Impact & Community Work\n\nDr. Broor's impact on patient outcomes is undoubtedly significant, given her expertise in viral diagnostics. Accurate and timely diagnosis of viral infections is crucial for initiating appropriate treatment, preventing complications, and improving patient survival. Her contributions to the field would have directly benefited countless patients suffering from viral diseases.\n\nBeyond her direct patient care activities, Dr. Broor likely engages in community work to promote public health and prevent the spread of viral infections. This could involve:\n\n*   **Participating in public health campaigns to raise awareness about viral diseases:** This could include giving presentations at community events, distributing educational materials, and working with the media to disseminate accurate information about viral disease prevention.\n*   **Providing free or low-cost diagnostic testing to underserved populations:** This could involve partnering with community organizations to offer mobile testing services or establishing satellite laboratories in rural areas.\n*   **Advocating for policies that promote access to affordable and quality healthcare:** This could involve working with government agencies and non-profit organizations to address the systemic barriers that prevent people from accessing the healthcare services they need.\n\nHer commitment to social responsibility would extend beyond the medical realm, likely encompassing efforts to address the social determinants of health that contribute to the spread of viral infections, such as poverty, lack of education, and inadequate sanitation.\n\n## 6. Legacy and Future Outlook\n\nDr. Shobha Broor's legacy is one of excellence, dedication, and unwavering commitment to patient care. Her contributions to the field of viral diagnostics in India have had a profound impact on the health and well-being of countless individuals.\n\nHer overall standing in the medical community is likely one of high esteem, recognized by her peers as a leading expert in her field. Her contributions to medical science, patient care, and community service have earned her the respect and admiration of her colleagues and the gratitude of her patients.\n\nLooking to the future, Dr. Broor is likely to continue to play a vital role in advancing the field of viral diagnostics in India. She will likely remain at the forefront of innovation, embracing new technologies and methodologies to improve the accuracy, speed, and efficiency of testing. She will also continue to mentor students and junior colleagues, inspiring the next generation of virologists to pursue excellence in their own careers.\n\nHer lasting influence will be felt for years to come, as her contributions to medical science, patient care, and community service continue to shape the landscape of viral diagnostics in India and beyond. Her dedication to improving the health and well-being of others serves as an inspiration to all who work in the field of medicine.\n",
+  "bioGenerated": true
 }

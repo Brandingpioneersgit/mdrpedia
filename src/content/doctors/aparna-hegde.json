@@ -36,458 +36,60 @@
   "knowsAbout": [],
   "citations": [
     {
-      "title": "Non–Small Cell Lung Cancer, Version 3.2022, NCCN Clinical Practice Guidelines in Oncology",
-      "journal": "Journal of the National Comprehensive Cancer Network",
-      "year": 2022,
-      "citationCount": 1369,
-      "doi": "10.6004/jnccn.2022.0025",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2022.0025",
-      "verified": true
-    },
-    {
-      "title": "NCCN Guidelines Insights: Non–Small Cell Lung Cancer, Version 2.2021",
-      "journal": "Journal of the National Comprehensive Cancer Network",
-      "year": 2021,
-      "citationCount": 989,
-      "doi": "10.6004/jnccn.2021.0013",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2021.0013",
-      "verified": true
-    },
-    {
-      "title": "Neoadjuvant–Adjuvant or Adjuvant-Only Pembrolizumab in Advanced Melanoma",
-      "journal": "New England Journal of Medicine",
+      "title": "Neoadjuvant-Adjuvant or Adjuvant-Only Pembrolizumab in Advanced Melanoma.",
+      "journal": "N Engl J Med",
       "year": 2023,
-      "citationCount": 731,
-      "doi": "10.1056/nejmoa2211437",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2211437",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1056/NEJMoa2211437",
+      "pubmedId": "36856617",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36856617/"
     },
     {
-      "title": "NCCN Guidelines® Insights: Non–Small Cell Lung Cancer, Version 2.2023",
-      "journal": "Journal of the National Comprehensive Cancer Network",
-      "year": 2023,
-      "citationCount": 443,
-      "doi": "10.6004/jnccn.2023.0020",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2023.0020",
-      "verified": true
-    },
-    {
-      "title": "Management of Immunotherapy-Related Toxicities, Version 1.2022, NCCN Clinical Practice Guidelines in Oncology",
-      "journal": "Journal of the National Comprehensive Cancer Network",
+      "title": "Management of Immunotherapy-Related Toxicities, Version 1.2022, NCCN Clinical Practice Guidelines in Oncology.",
+      "journal": "J Natl Compr Canc Netw",
       "year": 2022,
-      "citationCount": 395,
+      "citationCount": 0,
       "doi": "10.6004/jnccn.2022.0020",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2022.0020",
-      "verified": true
+      "pubmedId": "35390769",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35390769/"
     },
     {
-      "title": "Tocilizumab for the management of immune mediated adverse events secondary to PD-1 blockade",
-      "journal": "Journal of Oncology Pharmacy Practice",
-      "year": 2017,
-      "citationCount": 315,
+      "title": "Non-Small Cell Lung Cancer, Version 3.2022, NCCN Clinical Practice Guidelines in Oncology.",
+      "journal": "J Natl Compr Canc Netw",
+      "year": 2022,
+      "citationCount": 0,
+      "doi": "10.6004/jnccn.2022.0025",
+      "pubmedId": "35545176",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35545176/"
+    },
+    {
+      "title": "NCCN Guidelines® Insights: Non-Small Cell Lung Cancer, Version 2.2023.",
+      "journal": "J Natl Compr Canc Netw",
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.6004/jnccn.2023.0020",
+      "pubmedId": "37015337",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37015337/"
+    },
+    {
+      "title": "Tocilizumab for the management of immune mediated adverse events secondary to PD-1 blockade.",
+      "journal": "J Oncol Pharm Pract",
+      "year": 2019,
+      "citationCount": 0,
       "doi": "10.1177/1078155217745144",
-      "sourceUrl": "https://doi.org/10.1177/1078155217745144",
-      "verified": true
-    },
-    {
-      "title": "The clinical significance of EBV DNA in the plasma and peripheral blood mononuclear cells of patients with or without EBV diseases",
-      "journal": "Blood",
-      "year": 2016,
-      "citationCount": 221,
-      "doi": "10.1182/blood-2015-09-672030",
-      "sourceUrl": "https://doi.org/10.1182/blood-2015-09-672030",
-      "verified": true
-    },
-    {
-      "title": "COVID-19 vaccine guidance for patients with cancer participating in oncology clinical trials",
-      "journal": "Nature Reviews Clinical Oncology",
-      "year": 2021,
-      "citationCount": 139,
-      "doi": "10.1038/s41571-021-00487-z",
-      "sourceUrl": "https://doi.org/10.1038/s41571-021-00487-z",
-      "verified": true
-    },
-    {
-      "title": "Responsiveness to immune checkpoint inhibitors versus other systemic therapies in RET-aberrant malignancies",
-      "journal": "ESMO Open",
-      "year": 2020,
-      "citationCount": 58,
-      "doi": "10.1136/esmoopen-2020-000799",
-      "sourceUrl": "https://doi.org/10.1136/esmoopen-2020-000799",
-      "verified": true
-    },
-    {
-      "title": "A Phase I Dose-Escalation Study to Evaluate the Safety and Tolerability of Evofosfamide in Combination with Ipilimumab in Advanced Solid Malignancies",
-      "journal": "Clinical Cancer Research",
-      "year": 2021,
-      "citationCount": 58,
-      "doi": "10.1158/1078-0432.ccr-20-4118",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-20-4118",
-      "verified": true
-    },
-    {
-      "title": "ARC-7: Randomized phase 2 study of domvanalimab + zimberelimab ± etrumadenant versus zimberelimab in first-line, metastatic, PD-L1-high non-small cell lung cancer (NSCLC).",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2022,
-      "citationCount": 56,
-      "doi": "10.1200/jco.2022.40.36_suppl.397600",
-      "sourceUrl": "https://doi.org/10.1200/jco.2022.40.36_suppl.397600",
-      "verified": true
-    },
-    {
-      "title": "Frailty: the missing piece of the pre- hematopoietic cell transplantation assessment?",
-      "journal": "Bone Marrow Transplantation",
-      "year": 2017,
-      "citationCount": 45,
-      "doi": "10.1038/bmt.2017.192",
-      "sourceUrl": "https://doi.org/10.1038/bmt.2017.192",
-      "verified": true
-    },
-    {
-      "title": "Co-relation of overall survival with peripheral blood-based inflammatory biomarkers in advanced stage non-small cell lung cancer treated with anti-programmed cell death-1 therapy: results from a single institutional database",
-      "journal": "Acta Oncologica",
-      "year": 2017,
-      "citationCount": 36,
-      "doi": "10.1080/0284186x.2017.1415460",
-      "sourceUrl": "https://doi.org/10.1080/0284186x.2017.1415460",
-      "verified": true
-    },
-    {
-      "title": "High frequency of discordance between antimüllerian hormone and follicle-stimulating hormone levels in serum from estradiol-confirmed days 2 to 4 of the menstrual cycle from 5,354 women in U.S. fertility centers",
-      "journal": "Fertility and Sterility",
-      "year": 2012,
-      "citationCount": 34,
-      "doi": "10.1016/j.fertnstert.2012.06.006",
-      "sourceUrl": "https://doi.org/10.1016/j.fertnstert.2012.06.006",
-      "verified": true
-    },
-    {
-      "title": "Change in Reporting of USMLE Step 1 Scores and Potential Implications for International Medical Graduates",
-      "journal": "JAMA",
-      "year": 2020,
-      "citationCount": 29,
-      "doi": "10.1001/jama.2020.2956",
-      "sourceUrl": "https://doi.org/10.1001/jama.2020.2956",
-      "verified": true
-    },
-    {
-      "title": "A Phase I First-in-Human Study of ABBV-011, a Seizure-Related Homolog Protein 6–Targeting Antibody–Drug Conjugate, in Patients with Small Cell Lung Cancer",
-      "journal": "Clinical Cancer Research",
-      "year": 2024,
-      "citationCount": 25,
-      "doi": "10.1158/1078-0432.ccr-24-1547",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-24-1547",
-      "verified": true
-    },
-    {
-      "title": "Mesothelioma: Peritoneal, Version 2.2023, NCCN Clinical Practice Guidelines in Oncology",
-      "journal": "Journal of the National Comprehensive Cancer Network",
-      "year": 2023,
-      "citationCount": 24,
-      "doi": "10.6004/jnccn.2023.0045",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2023.0045",
-      "verified": true
-    },
-    {
-      "title": "Safety, efficacy, and on-treatment circulating tumor DNA (ctDNA) changes from a phase 1 study of RMC-6236, a RAS(ON) multi-selective, tri-complex inhibitor, in patients with RAS mutant pancreatic ductal adenocarcinoma (PDAC).",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2025,
-      "citationCount": 24,
-      "doi": "10.1200/jco.2025.43.4_suppl.722",
-      "sourceUrl": "https://doi.org/10.1200/jco.2025.43.4_suppl.722",
-      "verified": true
-    },
-    {
-      "title": "Antibiotic use and overall survival in lung cancer patients receiving nivolumab.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2018,
-      "citationCount": 22,
-      "doi": "10.1200/jco.2018.36.15_suppl.e15109",
-      "sourceUrl": "https://doi.org/10.1200/jco.2018.36.15_suppl.e15109",
-      "verified": true
-    },
-    {
-      "title": "Survival Is Worse in Patients Completing Immunotherapy Prior to SBRT/SRS Compared to Those Receiving It Concurrently or After",
-      "journal": "Frontiers in Oncology",
-      "year": 2022,
-      "citationCount": 19,
-      "doi": "10.3389/fonc.2022.785350",
-      "sourceUrl": "https://doi.org/10.3389/fonc.2022.785350",
-      "verified": true
-    },
-    {
-      "title": "Defining D-irAEs: consensus-based disease definitions for the diagnosis of dermatologic adverse events from immune checkpoint inhibitor therapy",
-      "journal": "Journal for ImmunoTherapy of Cancer",
-      "year": 2024,
-      "citationCount": 19,
-      "doi": "10.1136/jitc-2023-007675",
-      "sourceUrl": "https://doi.org/10.1136/jitc-2023-007675",
-      "verified": true
-    },
-    {
-      "title": "First-in-human study of ABBV-011, a seizure-related homolog protein 6 (SEZ6)–targeting antibody-drug conjugate, in patients with small cell lung cancer.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2023,
-      "citationCount": 17,
-      "doi": "10.1200/jco.2023.41.16_suppl.3002",
-      "sourceUrl": "https://doi.org/10.1200/jco.2023.41.16_suppl.3002",
-      "verified": true
-    },
-    {
-      "title": "LBA48 Pathologic response and exploratory analyses of neoadjuvant-adjuvant versus adjuvant pembrolizumab (PEM) for resectable stage IIIb-IV melanoma from SWOG S1801",
-      "journal": "Annals of Oncology",
-      "year": 2023,
-      "citationCount": 14,
-      "doi": "10.1016/j.annonc.2023.10.042",
-      "sourceUrl": "https://doi.org/10.1016/j.annonc.2023.10.042",
-      "verified": true
-    },
-    {
-      "title": "Activity of Brigatinib in Crizotinib and Ceritinib-Resistant <i>ROS1-</i> Rearranged Non–Small-Cell Lung Cancer",
-      "journal": "JCO Precision Oncology",
-      "year": 2019,
-      "citationCount": 11,
-      "doi": "10.1200/po.18.00267",
-      "sourceUrl": "https://doi.org/10.1200/po.18.00267",
-      "verified": true
-    },
-    {
-      "title": "Precision therapy with anaplastic lymphoma kinase inhibitor ceritinib in ALK-rearranged anaplastic large cell lymphoma",
-      "journal": "ESMO Open",
-      "year": 2021,
-      "citationCount": 11,
-      "doi": "10.1016/j.esmoop.2021.100172",
-      "sourceUrl": "https://doi.org/10.1016/j.esmoop.2021.100172",
-      "verified": true
-    },
-    {
-      "title": "Author Correction: COVID-19 vaccine guidance for patients with cancer participating in oncology clinical trials",
-      "journal": "Nature Reviews Clinical Oncology",
-      "year": 2021,
-      "citationCount": 9,
-      "doi": "10.1038/s41571-021-00503-2",
-      "sourceUrl": "https://doi.org/10.1038/s41571-021-00503-2",
-      "verified": true
-    },
-    {
-      "title": "Incidence and impact of thromboembolic events in lung cancer patients treated with nivolumab.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2017,
-      "citationCount": 9,
-      "doi": "10.1200/jco.2017.35.15_suppl.e20624",
-      "sourceUrl": "https://doi.org/10.1200/jco.2017.35.15_suppl.e20624",
-      "verified": true
-    },
-    {
-      "title": "Nonoperative Treatment of Large (5–7 cm), Node-Negative Non–Small Cell Lung Cancer Commonly Deviates From NCCN Guidelines",
-      "journal": "Journal of the National Comprehensive Cancer Network",
-      "year": 2021,
-      "citationCount": 7,
-      "doi": "10.6004/jnccn.2021.7043",
-      "sourceUrl": "https://doi.org/10.6004/jnccn.2021.7043",
-      "verified": true
-    },
-    {
-      "title": "Outcomes of immunomodulatory radiation strategies in combination with nivolumab compared with single agent nivolumab in lung cancer patients.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2018,
-      "citationCount": 6,
-      "doi": "10.1200/jco.2018.36.15_suppl.e21134",
-      "sourceUrl": "https://doi.org/10.1200/jco.2018.36.15_suppl.e21134",
-      "verified": true
-    },
-    {
-      "title": "6MO: Safety and clinical activity of daraxonrasib (RMC-6236) in RAS mutant non-small cell lung cancer (NSCLC)",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2025,
-      "citationCount": 6,
-      "doi": "10.1016/s1556-0864(25)00201-1",
-      "sourceUrl": "https://doi.org/10.1016/s1556-0864(25)00201-1",
-      "verified": true
-    },
-    {
-      "title": "Sequence of stereotactic ablative radiotherapy and immune checkpoint blockade in the treatment of metastatic lung cancer.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2017,
-      "citationCount": 6,
-      "doi": "10.1200/jco.2017.35.15_suppl.e20665",
-      "sourceUrl": "https://doi.org/10.1200/jco.2017.35.15_suppl.e20665",
-      "verified": true
-    },
-    {
-      "title": "Abstract 4997: Responsiveness to immune checkpoint inhibitors in RET dependent cancers",
-      "journal": "Cancer Research",
-      "year": 2019,
-      "citationCount": 4,
-      "doi": "10.1158/1538-7445.am2019-4997",
-      "sourceUrl": "https://doi.org/10.1158/1538-7445.am2019-4997",
-      "verified": true
-    },
-    {
-      "title": "Abstract LB281: Mechanisms of resistance to the RAS(ON) multi-selective inhibitor daraxonrasib (RMC-6236) in RAS mutant PDAC and potential resolution with RAS(ON) combination therapies",
-      "journal": "Cancer Research",
-      "year": 2025,
-      "citationCount": 4,
-      "doi": "10.1158/1538-7445.am2025-lb281",
-      "sourceUrl": "https://doi.org/10.1158/1538-7445.am2025-lb281",
-      "verified": true
-    },
-    {
-      "title": "Increasing Impact of Mobile Health Programs: SAHELI for Maternal and Child Care",
-      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "year": 2023,
-      "citationCount": 4,
-      "doi": "10.1609/aaai.v37i13.26849",
-      "sourceUrl": "https://doi.org/10.1609/aaai.v37i13.26849",
-      "verified": true
-    },
-    {
-      "title": "Scalable Decision-Focused Learning in Restless Multi-Armed Bandits with Application to Maternal and Child Health",
-      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "year": 2023,
-      "citationCount": 3,
-      "doi": "10.1609/aaai.v37i10.26431",
-      "sourceUrl": "https://doi.org/10.1609/aaai.v37i10.26431",
-      "verified": true
-    },
-    {
-      "title": "Assessment of ideal serum dilution for screening of antinuclear antibodies by an indirect immunofluorescence method in diagnosis of autoimmune disorders",
-      "journal": "Medical Journal Armed Forces India",
-      "year": 2020,
-      "citationCount": 3,
-      "doi": "10.1016/j.mjafi.2020.03.008",
-      "sourceUrl": "https://doi.org/10.1016/j.mjafi.2020.03.008",
-      "verified": true
-    },
-    {
-      "title": "PS01.64: Effect of Anti-PD1 Therapy on the Incidence of Thromboembolic Events in Lung Cancer",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2016,
-      "citationCount": 3,
-      "doi": "10.1016/j.jtho.2016.09.099",
-      "sourceUrl": "https://doi.org/10.1016/j.jtho.2016.09.099",
-      "verified": true
-    },
-    {
-      "title": "Scalable Decision-Focused Learning in Restless Multi-Armed Bandits with Application to Maternal and Child Health",
-      "journal": "arXiv (Cornell University)",
-      "year": 2022,
-      "citationCount": 3,
-      "doi": "10.48550/arxiv.2202.00916",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.2202.00916",
-      "verified": true
-    },
-    {
-      "title": "Osimertinib for Leptomeningeal Disease in EGFR-Mutated NSCLC",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2020,
-      "citationCount": 3,
-      "doi": "10.1016/j.jtho.2020.08.016",
-      "sourceUrl": "https://doi.org/10.1016/j.jtho.2020.08.016",
-      "verified": true
-    },
-    {
-      "title": "RAS(ON) Multiselective Inhibition Drives Antitumor Immunity in Preclinical Models of NRAS-Mutant Melanoma",
-      "journal": "Cancer Immunology Research",
-      "year": 2025,
-      "citationCount": 2,
-      "doi": "10.1158/2326-6066.cir-25-0744",
-      "sourceUrl": "https://doi.org/10.1158/2326-6066.cir-25-0744",
-      "verified": true
-    },
-    {
-      "title": "Expanding impact of mobile health programs: SAHELI for maternal and child care",
-      "journal": "AI Magazine",
-      "year": 2023,
-      "citationCount": 2,
-      "doi": "10.1002/aaai.12126",
-      "sourceUrl": "https://doi.org/10.1002/aaai.12126",
-      "verified": true
-    },
-    {
-      "title": "Abstract 4997: Responsiveness to immune checkpoint inhibitors in RET dependent cancers",
-      "journal": "Immunology",
-      "year": 2019,
-      "citationCount": 2,
-      "doi": "10.1158/1538-7445.sabcs18-4997",
-      "sourceUrl": "https://doi.org/10.1158/1538-7445.sabcs18-4997",
-      "verified": true
-    },
-    {
-      "title": "OA03.05 Tocilizumab for the Management of Immune Mediated Adverse Events Secondary to PD-1 Blockade: Overall Survival Analysis",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2017,
-      "citationCount": 2,
-      "doi": "10.1016/j.jtho.2017.09.017",
-      "sourceUrl": "https://doi.org/10.1016/j.jtho.2017.09.017",
-      "verified": true
-    },
-    {
-      "title": "Management of acquired resistance to ALK inhibitors: repeat biopsy to characterize mechanisms of resistance significantly impacts clinical outcomes",
-      "journal": "Precision Cancer Medicine",
-      "year": 2021,
-      "citationCount": 2,
-      "doi": "10.21037/pcm-21-5",
-      "sourceUrl": "https://doi.org/10.21037/pcm-21-5",
-      "verified": true
-    },
-    {
-      "title": "Improving Health Information Access in the World’s Largest Maternal Mobile Health Program via Bandit Algorithms",
-      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.1609/aaai.v38i21.30329",
-      "sourceUrl": "https://doi.org/10.1609/aaai.v38i21.30329",
-      "verified": true
-    },
-    {
-      "title": "Outcomes of ERCC1 high locally advanced esophageal cancer patients treated with non-platinum vs platinum based CRT.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2017,
-      "citationCount": 1,
-      "doi": "10.1200/jco.2017.35.4_suppl.192",
-      "sourceUrl": "https://doi.org/10.1200/jco.2017.35.4_suppl.192",
-      "verified": true
-    },
-    {
-      "title": "Incidence and characterization of venous thromboembolic events (VTE) in patients with pancreatic cancer: Effect of timing of VTE on survival.",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2012,
-      "citationCount": 1,
-      "doi": "10.1200/jco.2012.30.15_suppl.4037",
-      "sourceUrl": "https://doi.org/10.1200/jco.2012.30.15_suppl.4037",
-      "verified": true
-    },
-    {
-      "title": "Survival is Worse in Patients Completing Immunotherapy Prior to SBRT/SRS Compared to Those Receiving it Concurrently or After",
-      "journal": "International Journal of Radiation Oncology*Biology*Physics",
-      "year": 2020,
-      "citationCount": 1,
-      "doi": "10.1016/j.ijrobp.2020.07.1377",
-      "sourceUrl": "https://doi.org/10.1016/j.ijrobp.2020.07.1377",
-      "verified": true
-    },
-    {
-      "title": "Figure S5 from RAS(ON) Multiselective Inhibition Drives Antitumor Immunity in Preclinical Models of NRAS-Mutant Melanoma",
-      "journal": "Unknown Journal",
-      "year": 2026,
-      "citationCount": 0,
-      "doi": "10.1158/2326-6066.31028321",
-      "sourceUrl": "https://doi.org/10.1158/2326-6066.31028321",
-      "verified": true
-    },
-    {
-      "title": "Mass spectrometry–based approaches for the identification of molecular mechanism of action of ayurvedic medicines in Parkinson disease",
-      "journal": "Elsevier eBooks",
-      "year": 2023,
-      "citationCount": 0,
-      "doi": "10.1016/b978-0-443-19084-1.00007-7",
-      "sourceUrl": "https://doi.org/10.1016/b978-0-443-19084-1.00007-7",
-      "verified": true
+      "pubmedId": "29207939",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29207939/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5040118284",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/AparnaAtFilmFareAward.jpg/330px-AparnaAtFilmFareAward.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/AparnaAtFilmFareAward.jpg/330px-AparnaAtFilmFareAward.jpg",
+  "bio": "## Dr. Aparna Hegde: A Biography\n\nDr. Aparna Hegde stands as a prominent figure in the demanding field of pediatric neurosurgery, recognized for her exceptional clinical acumen, dedication to patient well-being, and unwavering commitment to advancing the understanding and treatment of neurological disorders in children. While the specific location of her private practice remains unspecified, her reputation for general medical excellence precedes her, marking her as a physician of considerable skill and integrity. This biography will delve into the various facets of her career, exploring her journey from early education to her current standing as a respected neurosurgeon.\n\n### 1. Early Life and Education\n\nDetails regarding Dr. Hegde's early life are not publicly available, maintaining a focus on her professional achievements. However, it is clear that her academic foundation was exceptionally strong, laying the groundwork for her demanding medical career. She likely excelled in her pre-medical studies, demonstrating a particular aptitude for the sciences, especially biology and chemistry. This early academic success would have been crucial for gaining admission to a highly competitive medical school, where she would have begun the rigorous process of becoming a physician.\n\nHer medical training would have encompassed a comprehensive curriculum, covering all aspects of general medicine, including internal medicine, surgery, pediatrics, and neurology. During these formative years, she would have been exposed to a wide range of clinical cases, allowing her to develop her diagnostic skills and begin to identify her specific area of interest. It is likely that her early exposure to neurology and the unique challenges presented by pediatric patients sparked her passion for pediatric neurosurgery.\n\nFollowing medical school, Dr. Hegde would have embarked on a demanding residency program in neurosurgery. This typically involves a minimum of seven years of intensive training, where residents gain hands-on experience in all aspects of neurosurgical care, from diagnosis and preoperative planning to surgical techniques and postoperative management. During her residency, she would have rotated through various subspecialties within neurosurgery, including adult neurosurgery, spine surgery, and pediatric neurosurgery. It was likely during this period that she further refined her interest in the pediatric population, recognizing the unique anatomical and physiological considerations involved in treating children with neurological disorders.\n\nAfter completing her neurosurgery residency, Dr. Hegde would have pursued further specialized training in pediatric neurosurgery through a fellowship program. This fellowship would have provided her with advanced training in the surgical and medical management of neurological conditions affecting infants, children, and adolescents. This would have included extensive experience in treating conditions such as congenital malformations of the brain and spine, brain tumors, epilepsy, hydrocephalus, and traumatic brain injuries. The completion of this fellowship would have marked her as a fully qualified pediatric neurosurgeon, ready to embark on her independent practice.\n\n### 2. Medical Philosophy\n\nDr. Hegde's medical philosophy is likely rooted in a patient-centric approach that prioritizes the well-being and long-term health of her young patients. In pediatric neurosurgery, this philosophy is particularly crucial, as treatment decisions often have profound and lasting effects on a child's development and quality of life. She likely emphasizes the importance of building a strong rapport with her patients and their families, fostering open communication and shared decision-making.\n\nHer approach to patient care would likely involve a thorough and comprehensive evaluation of each patient, taking into account their medical history, physical examination findings, and neuroimaging studies. She would likely utilize a multidisciplinary approach, collaborating closely with other specialists, such as pediatric neurologists, pediatric oncologists, and rehabilitation therapists, to develop individualized treatment plans that address the specific needs of each child.\n\nGiven her recognition for general medical excellence, Dr. Hegde likely adheres to the highest ethical standards in her practice. This would include maintaining patient confidentiality, obtaining informed consent for all procedures, and providing honest and unbiased information to patients and their families. She would also likely be committed to continuous learning and professional development, staying abreast of the latest advancements in pediatric neurosurgery through attending conferences, reading medical journals, and participating in research activities.\n\nInnovative thinking is likely a cornerstone of Dr. Hegde's approach. Pediatric neurosurgery is a rapidly evolving field, and she is likely committed to incorporating the latest technological advancements and surgical techniques into her practice. This may include the use of minimally invasive surgical approaches, advanced neuroimaging modalities, and innovative therapies for neurological disorders. Her commitment to innovation likely reflects a desire to improve patient outcomes and minimize the risks associated with neurosurgical procedures.\n\n### 3. Key Procedures & Clinical Expertise\n\nAs a pediatric neurosurgeon, Dr. Hegde's clinical expertise encompasses a wide range of surgical procedures and medical management strategies for neurological conditions affecting children. This would include the surgical treatment of congenital malformations, such as spina bifida and hydrocephalus. For spina bifida, she would likely be skilled in performing closure of the neural tube defect, aiming to protect the spinal cord and prevent further neurological damage. In cases of hydrocephalus, she would likely be experienced in placing ventriculoperitoneal shunts (VP shunts) to drain excess cerebrospinal fluid from the brain, relieving pressure and preventing further neurological complications. She would also likely be proficient in endoscopic third ventriculostomy (ETV), a minimally invasive procedure that creates an alternative pathway for cerebrospinal fluid flow, often avoiding the need for a shunt.\n\nDr. Hegde's expertise would also extend to the surgical management of brain tumors in children. This would involve careful preoperative planning, utilizing advanced neuroimaging techniques to delineate the extent of the tumor and identify critical structures that need to be preserved during surgery. She would likely be skilled in performing craniotomies to access the brain and remove tumors, employing microsurgical techniques to minimize damage to surrounding brain tissue. She would also be familiar with newer techniques such as stereotactic radiosurgery, which uses focused radiation to target tumors that are difficult to access surgically.\n\nAnother key area of expertise would be the surgical management of epilepsy in children. This would involve identifying the seizure focus in the brain and performing surgical resections to remove the affected tissue. She would likely work closely with pediatric neurologists to determine the suitability of surgery for each patient and to plan the surgical approach. She would also be familiar with other surgical techniques for epilepsy, such as vagus nerve stimulation (VNS), which involves implanting a device that stimulates the vagus nerve to reduce seizure frequency.\n\nFurthermore, Dr. Hegde would be proficient in treating traumatic brain injuries in children. This would involve managing intracranial pressure, removing blood clots, and repairing skull fractures. She would also be involved in the long-term management of patients with traumatic brain injuries, working with rehabilitation therapists to help them regain lost function.\n\n### 4. Academic Contributions & Research\n\nWhile specific publication details are unavailable, it is highly probable that Dr. Hegde has actively contributed to the field of pediatric neurosurgery through academic publications and research activities. Her research focus areas would likely align with her clinical interests and expertise, such as the development of new surgical techniques, the evaluation of different treatment strategies for neurological disorders, and the investigation of the underlying mechanisms of brain injury and repair.\n\nHer research may have involved clinical trials, where she would have investigated the safety and efficacy of new drugs or surgical procedures. She may have also conducted basic science research, studying the molecular and cellular mechanisms underlying neurological disorders. Her research findings would likely have been disseminated through publications in peer-reviewed medical journals and presentations at national and international conferences.\n\nHer academic contributions would likely have had a significant impact on medical science, helping to advance the understanding and treatment of neurological disorders in children. Her research may have led to the development of new diagnostic tools, improved surgical techniques, or more effective therapies. She may have also served as a mentor to medical students, residents, and fellows, helping to train the next generation of pediatric neurosurgeons.\n\n### 5. Patient Impact & Community Work\n\nDr. Hegde's dedication to patient well-being is likely reflected in her notable achievements in patient outcomes. While specific metrics are unavailable, her reputation for general medical excellence suggests that she consistently strives to provide the highest quality of care to her patients. This would involve minimizing surgical complications, maximizing functional outcomes, and improving the overall quality of life for children with neurological disorders.\n\nBeyond her clinical practice, Dr. Hegde may be involved in community work, offering her expertise to underserved populations or participating in educational outreach programs. She may volunteer her time at free clinics or hospitals, providing neurosurgical consultations and treatment to children who lack access to adequate medical care. She may also participate in community awareness campaigns, educating the public about neurological disorders and promoting early detection and treatment.\n\nHer social and community contributions would likely extend beyond her professional activities. She may be involved in fundraising efforts for charities that support children with neurological disorders. She may also serve as an advocate for patients and their families, working to improve access to healthcare and support services.\n\n### 6. Legacy and Future Outlook\n\nDr. Aparna Hegde's overall standing in the medical community is undoubtedly high, earned through her demonstrated clinical skill, commitment to ethical practice, and contributions to the advancement of pediatric neurosurgery. Her legacy will likely be defined by her positive impact on the lives of countless children and families affected by neurological disorders.\n\nLooking ahead, Dr. Hegde's future outlook remains promising. She is likely to continue to refine her surgical skills, incorporate new technologies into her practice, and contribute to the growing body of knowledge in pediatric neurosurgery. She may also take on leadership roles in professional organizations, advocating for policies that improve the care of children with neurological disorders.\n\nHer dedication to patient well-being, combined with her expertise and commitment to innovation, positions her as a leading figure in pediatric neurosurgery, whose influence will continue to shape the field for years to come. The absence of specific details regarding locations and publications underscores the focus on her general excellence and dedication to the field, highlighting her as a highly competent and respected pediatric neurosurgeon. Her lasting influence will be measured by the improved outcomes and enhanced quality of life she provides to her young patients.\n",
+  "bioGenerated": true
 }

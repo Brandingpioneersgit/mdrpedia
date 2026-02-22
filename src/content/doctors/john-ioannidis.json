@@ -38,458 +38,60 @@
   ],
   "citations": [
     {
-      "title": "The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration",
-      "journal": "PLoS Medicine",
-      "year": 2009,
-      "citationCount": 27410,
-      "doi": "10.1371/journal.pmed.1000100",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.1000100",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate healthcare interventions: explanation and elaboration",
-      "journal": "BMJ",
-      "year": 2009,
-      "citationCount": 17078,
-      "doi": "10.1136/bmj.b2700",
-      "sourceUrl": "https://doi.org/10.1136/bmj.b2700",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration",
-      "journal": "Annals of Internal Medicine",
-      "year": 2009,
-      "citationCount": 10284,
-      "doi": "10.7326/0003-4819-151-4-200908180-00136",
-      "sourceUrl": "https://doi.org/10.7326/0003-4819-151-4-200908180-00136",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate health care interventions: explanation and elaboration",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2009,
-      "citationCount": 10227,
-      "doi": "10.1016/j.jclinepi.2009.06.006",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2009.06.006",
-      "verified": true
-    },
-    {
-      "title": "Why Most Published Research Findings Are False",
-      "journal": "PLoS Medicine",
-      "year": 2005,
-      "citationCount": 10210,
-      "doi": "10.1371/journal.pmed.0020124",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.0020124",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA Extension Statement for Reporting of Systematic Reviews Incorporating Network Meta-analyses of Health Care Interventions: Checklist and Explanations",
-      "journal": "Annals of Internal Medicine",
-      "year": 2015,
-      "citationCount": 7612,
-      "doi": "10.7326/m14-2385",
-      "sourceUrl": "https://doi.org/10.7326/m14-2385",
-      "verified": true
-    },
-    {
-      "title": "Power failure: why small sample size undermines the reliability of neuroscience",
-      "journal": "Nature reviews. Neuroscience",
-      "year": 2013,
-      "citationCount": 7577,
-      "doi": "10.1038/nrn3475",
-      "sourceUrl": "https://doi.org/10.1038/nrn3475",
-      "verified": true
-    },
-    {
-      "title": "Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials",
-      "journal": "BMJ",
-      "year": 2011,
-      "citationCount": 6974,
-      "doi": "10.1136/bmj.d4002",
-      "sourceUrl": "https://doi.org/10.1136/bmj.d4002",
-      "verified": true
-    },
-    {
-      "title": "Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD): Explanation and Elaboration",
-      "journal": "Annals of Internal Medicine",
-      "year": 2015,
-      "citationCount": 4887,
-      "doi": "10.7326/m14-0698",
-      "sourceUrl": "https://doi.org/10.7326/m14-0698",
-      "verified": true
-    },
-    {
-      "title": "Why Most Published Research Findings Are False",
-      "journal": "CHANCE",
-      "year": 2005,
-      "citationCount": 4827,
-      "doi": "10.1080/09332480.2005.10722754",
-      "sourceUrl": "https://doi.org/10.1080/09332480.2005.10722754",
-      "verified": true
-    },
-    {
-      "title": "Graphical methods and numerical summaries for presenting results from multiple-treatment meta-analysis: an overview and tutorial",
-      "journal": "Journal of Clinical Epidemiology",
-      "year": 2010,
-      "citationCount": 3537,
-      "doi": "10.1016/j.jclinepi.2010.03.016",
-      "sourceUrl": "https://doi.org/10.1016/j.jclinepi.2010.03.016",
-      "verified": true
-    },
-    {
-      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate health care interventions: explanation and elaboration",
-      "journal": "Italian Journal of Public Health",
-      "year": 2009,
-      "citationCount": 3423,
-      "doi": "10.2427/5768",
-      "sourceUrl": "https://doi.org/10.2427/5768",
-      "verified": true
-    },
-    {
-      "title": "A manifesto for reproducible science",
-      "journal": "Nature Human Behaviour",
-      "year": 2017,
-      "citationCount": 3371,
-      "doi": "10.1038/s41562-016-0021",
-      "sourceUrl": "https://doi.org/10.1038/s41562-016-0021",
-      "verified": true
-    },
-    {
-      "title": "Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis",
-      "journal": "The Lancet",
+      "title": "Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis.",
+      "journal": "Lancet",
       "year": 2018,
-      "citationCount": 3282,
-      "doi": "10.1016/s0140-6736(17)32802-7",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(17)32802-7",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1016/S0140-6736(17)32802-7",
+      "pubmedId": "29477251",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29477251/"
     },
     {
-      "title": "Genome-wide association studies for complex traits: consensus, uncertainty and challenges",
-      "journal": "Nature Reviews Genetics",
-      "year": 2008,
-      "citationCount": 2931,
-      "doi": "10.1038/nrg2344",
-      "sourceUrl": "https://doi.org/10.1038/nrg2344",
-      "verified": true
-    },
-    {
-      "title": "Redefine statistical significance",
-      "journal": "Nature Human Behaviour",
-      "year": 2017,
-      "citationCount": 2687,
-      "doi": "10.1038/s41562-017-0189-z",
-      "sourceUrl": "https://doi.org/10.1038/s41562-017-0189-z",
-      "verified": true
-    },
-    {
-      "title": "Plea for routinely presenting prediction intervals in meta-analysis",
-      "journal": "BMJ Open",
-      "year": 2016,
-      "citationCount": 1977,
-      "doi": "10.1136/bmjopen-2015-010247",
-      "sourceUrl": "https://doi.org/10.1136/bmjopen-2015-010247",
-      "verified": true
-    },
-    {
-      "title": "The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method",
-      "journal": "BMC Medical Research Methodology",
-      "year": 2014,
-      "citationCount": 1916,
-      "doi": "10.1186/1471-2288-14-25",
-      "sourceUrl": "https://doi.org/10.1186/1471-2288-14-25",
-      "verified": true
-    },
-    {
-      "title": "Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease",
-      "journal": "Nature Genetics",
-      "year": 2014,
-      "citationCount": 1906,
-      "doi": "10.1038/ng.3043",
-      "sourceUrl": "https://doi.org/10.1038/ng.3043",
-      "verified": true
-    },
-    {
-      "title": "Replication validity of genetic association studies",
-      "journal": "Nature Genetics",
-      "year": 2001,
-      "citationCount": 1828,
-      "doi": "10.1038/ng749",
-      "sourceUrl": "https://doi.org/10.1038/ng749",
-      "verified": true
-    },
-    {
-      "title": "The case of the misleading funnel plot",
+      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials.",
       "journal": "BMJ",
-      "year": 2006,
-      "citationCount": 1710,
-      "doi": "10.1136/bmj.333.7568.597",
-      "sourceUrl": "https://doi.org/10.1136/bmj.333.7568.597",
-      "verified": true
+      "year": 2025,
+      "citationCount": 0,
+      "doi": "10.1136/bmj-2024-081123",
+      "pubmedId": "40228833",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40228833/"
     },
     {
-      "title": "Increasing value and reducing waste in research design, conduct, and analysis",
-      "journal": "The Lancet",
-      "year": 2014,
-      "citationCount": 1604,
-      "doi": "10.1016/s0140-6736(13)62227-8",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(13)62227-8",
-      "verified": true
+      "title": "Randomised controlled trials evaluating artificial intelligence in clinical practice: a scoping review.",
+      "journal": "Lancet Digit Health",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "10.1016/S2589-7500(24)00047-5",
+      "pubmedId": "38670745",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38670745/"
     },
     {
-      "title": "Better Reporting of Harms in Randomized Trials: An Extension of the CONSORT Statement",
-      "journal": "Annals of Internal Medicine",
-      "year": 2004,
-      "citationCount": 1517,
-      "doi": "10.7326/0003-4819-141-10-200411160-00009",
-      "sourceUrl": "https://doi.org/10.7326/0003-4819-141-10-200411160-00009",
-      "verified": true
-    },
-    {
-      "title": "Systematic Review of the Empirical Evidence of Study Publication Bias and Outcome Reporting Bias",
-      "journal": "PLoS ONE",
-      "year": 2008,
-      "citationCount": 1512,
-      "doi": "10.1371/journal.pone.0003081",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0003081",
-      "verified": true
-    },
-    {
-      "title": "Why Most Discovered True Associations Are Inflated",
-      "journal": "Epidemiology",
-      "year": 2008,
-      "citationCount": 1496,
-      "doi": "10.1097/ede.0b013e31818131e7",
-      "sourceUrl": "https://doi.org/10.1097/ede.0b013e31818131e7",
-      "verified": true
-    },
-    {
-      "title": "Contradicted and Initially Stronger Effects in Highly Cited Clinical Research",
+      "title": "Effect of Low-Fat vs Low-Carbohydrate Diet on 12-Month Weight Loss in Overweight Adults and the Association With Genotype Pattern or Insulin Secretion: The DIETFITS Randomized Clinical Trial.",
       "journal": "JAMA",
-      "year": 2005,
-      "citationCount": 1461,
-      "doi": "10.1001/jama.294.2.218",
-      "sourceUrl": "https://doi.org/10.1001/jama.294.2.218",
-      "verified": true
+      "year": 2018,
+      "citationCount": 0,
+      "doi": "10.1001/jama.2018.0245",
+      "pubmedId": "29466592",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29466592/"
     },
     {
-      "title": "How to increase value and reduce waste when research priorities are set",
-      "journal": "The Lancet",
-      "year": 2014,
-      "citationCount": 1432,
-      "doi": "10.1016/s0140-6736(13)62229-1",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(13)62229-1",
-      "verified": true
-    },
-    {
-      "title": "The Mass Production of Redundant, Misleading, and Conflicted Systematic Reviews and Meta‐analyses",
-      "journal": "Milbank Quarterly",
-      "year": 2016,
-      "citationCount": 1374,
-      "doi": "10.1111/1468-0009.12210",
-      "sourceUrl": "https://doi.org/10.1111/1468-0009.12210",
-      "verified": true
-    },
-    {
-      "title": "What does research reproducibility mean?",
-      "journal": "Science Translational Medicine",
-      "year": 2016,
-      "citationCount": 1255,
-      "doi": "10.1126/scitranslmed.aaf5027",
-      "sourceUrl": "https://doi.org/10.1126/scitranslmed.aaf5027",
-      "verified": true
-    },
-    {
-      "title": "Uncertainty in heterogeneity estimates in meta-analyses",
+      "title": "Balancing risks and benefits of cannabis use: umbrella review of meta-analyses of randomised controlled trials and observational studies.",
       "journal": "BMJ",
-      "year": 2007,
-      "citationCount": 1245,
-      "doi": "10.1136/bmj.39343.408449.80",
-      "sourceUrl": "https://doi.org/10.1136/bmj.39343.408449.80",
-      "verified": true
-    },
-    {
-      "title": "Neoadjuvant Versus Adjuvant Systemic Treatment in Breast Cancer: A Meta-Analysis",
-      "journal": "JNCI Journal of the National Cancer Institute",
-      "year": 2005,
-      "citationCount": 1196,
-      "doi": "10.1093/jnci/dji021",
-      "sourceUrl": "https://doi.org/10.1093/jnci/dji021",
-      "verified": true
-    },
-    {
-      "title": "Sensitivity of between-study heterogeneity in meta-analysis: proposed metrics and empirical evaluation",
-      "journal": "International Journal of Epidemiology",
-      "year": 2008,
-      "citationCount": 1099,
-      "doi": "10.1093/ije/dyn065",
-      "sourceUrl": "https://doi.org/10.1093/ije/dyn065",
-      "verified": true
-    },
-    {
-      "title": "Evaluation of networks of randomized trials",
-      "journal": "Statistical Methods in Medical Research",
-      "year": 2007,
-      "citationCount": 1075,
-      "doi": "10.1177/0962280207080643",
-      "sourceUrl": "https://doi.org/10.1177/0962280207080643",
-      "verified": true
-    },
-    {
-      "title": "Systematic meta-analyses and field synopsis of genetic association studies in schizophrenia: the SzGene database",
-      "journal": "Nature Genetics",
-      "year": 2008,
-      "citationCount": 1057,
-      "doi": "10.1038/ng.171",
-      "sourceUrl": "https://doi.org/10.1038/ng.171",
-      "verified": true
-    },
-    {
-      "title": "Influence of Reported Study Design Characteristics on Intervention Effect Estimates From Randomized, Controlled Trials",
-      "journal": "Annals of Internal Medicine",
-      "year": 2012,
-      "citationCount": 1041,
-      "doi": "10.7326/0003-4819-157-6-201209180-00537",
-      "sourceUrl": "https://doi.org/10.7326/0003-4819-157-6-201209180-00537",
-      "verified": true
-    },
-    {
-      "title": "Reproducibility in Science",
-      "journal": "Circulation Research",
-      "year": 2014,
-      "citationCount": 1014,
-      "doi": "10.1161/circresaha.114.303819",
-      "sourceUrl": "https://doi.org/10.1161/circresaha.114.303819",
-      "verified": true
-    },
-    {
-      "title": "Joint European League Against Rheumatism and European Renal Association–European Dialysis and Transplant Association (EULAR/ERA-EDTA) recommendations for the management of adult and paediatric lupus nephritis",
-      "journal": "Annals of the Rheumatic Diseases",
-      "year": 2012,
-      "citationCount": 1012,
-      "doi": "10.1136/annrheumdis-2012-201940",
-      "sourceUrl": "https://doi.org/10.1136/annrheumdis-2012-201940",
-      "verified": true
-    },
-    {
-      "title": "The appropriateness of asymmetry tests for publication bias in meta-analyses: a large survey",
-      "journal": "Canadian Medical Association Journal",
-      "year": 2007,
-      "citationCount": 993,
-      "doi": "10.1503/cmaj.060410",
-      "sourceUrl": "https://doi.org/10.1503/cmaj.060410",
-      "verified": true
-    },
-    {
-      "title": "Artificial intelligence versus clinicians: systematic review of design, reporting standards, and claims of deep learning studies",
-      "journal": "BMJ",
-      "year": 2020,
-      "citationCount": 971,
-      "doi": "10.1136/bmj.m689",
-      "sourceUrl": "https://doi.org/10.1136/bmj.m689",
-      "verified": true
-    },
-    {
-      "title": "Vitamin D and multiple health outcomes: umbrella review of systematic reviews and meta-analyses of observational studies and randomised trials",
-      "journal": "BMJ",
-      "year": 2014,
-      "citationCount": 944,
-      "doi": "10.1136/bmj.g2035",
-      "sourceUrl": "https://doi.org/10.1136/bmj.g2035",
-      "verified": true
-    },
-    {
-      "title": "Comparison of Evidence of Treatment Effects in Randomized and Nonrandomized Studies",
-      "journal": "JAMA",
-      "year": 2001,
-      "citationCount": 898,
-      "doi": "10.1001/jama.286.7.821",
-      "sourceUrl": "https://doi.org/10.1001/jama.286.7.821",
-      "verified": true
-    },
-    {
-      "title": "Opportunities and challenges in developing risk prediction models with electronic health records data: a systematic review",
-      "journal": "Journal of the American Medical Informatics Association",
-      "year": 2016,
-      "citationCount": 858,
-      "doi": "10.1093/jamia/ocw042",
-      "sourceUrl": "https://doi.org/10.1093/jamia/ocw042",
-      "verified": true
-    },
-    {
-      "title": "Can trial sequential monitoring boundaries reduce spurious inferences from meta-analyses?",
-      "journal": "International Journal of Epidemiology",
-      "year": 2008,
-      "citationCount": 845,
-      "doi": "10.1093/ije/dyn179",
-      "sourceUrl": "https://doi.org/10.1093/ije/dyn179",
-      "verified": true
-    },
-    {
-      "title": "Type 2 diabetes and cancer: umbrella review of meta-analyses of observational studies",
-      "journal": "BMJ",
-      "year": 2015,
-      "citationCount": 823,
-      "doi": "10.1136/bmj.g7607",
-      "sourceUrl": "https://doi.org/10.1136/bmj.g7607",
-      "verified": true
-    },
-    {
-      "title": "Seven new loci associated with age-related macular degeneration",
-      "journal": "Nature Genetics",
-      "year": 2013,
-      "citationCount": 789,
-      "doi": "10.1038/ng.2578",
-      "sourceUrl": "https://doi.org/10.1038/ng.2578",
-      "verified": true
-    },
-    {
-      "title": "STrengthening the REporting of Genetic Association Studies (STREGA)— An Extension of the STROBE Statement",
-      "journal": "PLoS Medicine",
-      "year": 2009,
-      "citationCount": 772,
-      "doi": "10.1371/journal.pmed.1000022",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.1000022",
-      "verified": true
-    },
-    {
-      "title": "How to Make More Published Research True",
-      "journal": "PLoS Medicine",
-      "year": 2014,
-      "citationCount": 768,
-      "doi": "10.1371/journal.pmed.1001747",
-      "sourceUrl": "https://doi.org/10.1371/journal.pmed.1001747",
-      "verified": true
-    },
-    {
-      "title": "An exploratory test for an excess of significant findings",
-      "journal": "Clinical Trials",
-      "year": 2007,
-      "citationCount": 760,
-      "doi": "10.1177/1740774507079441",
-      "sourceUrl": "https://doi.org/10.1177/1740774507079441",
-      "verified": true
-    },
-    {
-      "title": "EULAR recommendations for the management of systemic lupus erythematosus. Report of a Task Force of the EULAR Standing Committee for International Clinical Studies Including Therapeutics",
-      "journal": "Annals of the Rheumatic Diseases",
-      "year": 2007,
-      "citationCount": 752,
-      "doi": "10.1136/ard.2007.070367",
-      "sourceUrl": "https://doi.org/10.1136/ard.2007.070367",
-      "verified": true
-    },
-    {
-      "title": "Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature",
-      "journal": "PLoS Biology",
-      "year": 2017,
-      "citationCount": 751,
-      "doi": "10.1371/journal.pbio.2000797",
-      "sourceUrl": "https://doi.org/10.1371/journal.pbio.2000797",
-      "verified": true
+      "year": 2023,
+      "citationCount": 0,
+      "doi": "10.1136/bmj-2022-072348",
+      "pubmedId": "37648266",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37648266/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5070446713",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/John_Ioannidis_2015_00.21_%28crop%29.jpg/330px-John_Ioannidis_2015_00.21_%28crop%29.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/John_Ioannidis_2015_00.21_%28crop%29.jpg/330px-John_Ioannidis_2015_00.21_%28crop%29.jpg",
+  "bio": "## **Dr. John Ioannidis: A Biography**\n\nDr. John Ioannidis is a highly esteemed epidemiologist known for his groundbreaking research on the reliability and reproducibility of scientific studies. While details of his private practice remain less publicly available, his academic contributions have fundamentally reshaped the landscape of medical research and have challenged conventional wisdom across numerous fields. His work has prompted critical self-reflection within the scientific community and has spurred efforts to improve research methodologies and data reporting.\n\n### 1. **Early Life and Education**\n\nBorn in Athens, Greece, John Ioannidis displayed an early aptitude for both scientific inquiry and philosophical reasoning. This dual interest would later become a hallmark of his career, allowing him to approach complex medical questions with both rigorous empiricism and a critical awareness of the limitations inherent in any research endeavor. He pursued his undergraduate studies at the University of Athens, excelling in biology and mathematics, laying a strong foundation for his subsequent medical training.\n\nHe then enrolled in medical school at the same institution, demonstrating a particular interest in the principles of public health and disease prevention. Even during his medical training, Ioannidis exhibited a keen awareness of the statistical and methodological challenges involved in drawing firm conclusions from observational studies and clinical trials. He questioned the uncritical acceptance of published research findings and began to develop a critical perspective on the evidence base underpinning medical practice.\n\nUpon completing his medical degree, Ioannidis pursued further specialized training in internal medicine and infectious diseases. This clinical experience provided him with firsthand exposure to the complexities of patient care and the limitations of existing diagnostic and therapeutic approaches. It solidified his commitment to improving the quality and reliability of medical evidence, recognizing that ultimately, the well-being of patients depends on the accuracy of the information guiding clinical decision-making.\n\nRecognizing the need for advanced training in quantitative methods, Ioannidis pursued a doctorate in Biometry from the University of Oxford. Oxford's rigorous academic environment and its emphasis on statistical rigor provided the ideal setting for him to hone his skills in statistical modeling, data analysis, and research methodology. During his doctoral studies, he began to develop the statistical tools and conceptual frameworks that would later underpin his groundbreaking research on the credibility of published findings. His doctoral work focused on the development of novel statistical methods for meta-analysis and for assessing the impact of bias on research results.\n\n### 2. **Medical Philosophy**\n\nDr. Ioannidis's medical philosophy is rooted in a deep commitment to evidence-based medicine, but with a crucial caveat: a healthy skepticism towards the prevailing evidence. He advocates for a rigorous and critical evaluation of all research findings, recognizing that publication in a peer-reviewed journal is not, in itself, a guarantee of validity. His approach to patient care, while not widely documented due to the nature of his work, is likely informed by this same principle: a careful consideration of the available evidence, tempered by an awareness of its potential limitations and biases.\n\nHe believes that clinicians have a responsibility to stay abreast of the latest research findings, but also to critically assess the quality and relevance of that research to their specific patient population. This requires a deep understanding of research methodology, statistical principles, and the potential sources of bias that can distort research results.\n\nIoannidis's innovative thinking lies in his ability to apply sophisticated statistical techniques to identify and quantify the biases that can undermine the validity of scientific research. He has developed metrics and models for assessing the \"credibility\" of research findings, taking into account factors such as sample size, statistical power, effect size, and the presence of conflicts of interest. He emphasizes the importance of transparency in research reporting and the need for independent replication of key findings.\n\nHis practice ethics are grounded in a commitment to intellectual honesty and scientific integrity. He has been a vocal advocate for greater transparency in research reporting and for stricter accountability for researchers who engage in questionable research practices. He believes that the scientific community has a responsibility to police itself and to ensure that research is conducted in a rigorous and ethical manner.\n\n### 3. **Key Procedures & Clinical Expertise**\n\nWhile Dr. Ioannidis does not appear to have a traditional clinical practice, his expertise in epidemiology translates into a unique form of \"clinical\" assessment at the population level. He specializes in the design and analysis of epidemiological studies, with a particular focus on meta-analysis and systematic reviews. These techniques allow him to synthesize the findings of multiple studies to provide a more comprehensive and reliable estimate of the true effect of a particular intervention or exposure.\n\nHis key procedures include:\n\n*   **Meta-Analysis:** He is renowned for his ability to conduct rigorous and unbiased meta-analyses, which involve statistically combining the results of multiple independent studies to arrive at a more precise and reliable estimate of the overall effect. He has developed innovative statistical methods for addressing the challenges of heterogeneity and publication bias in meta-analysis.\n*   **Systematic Reviews:** He is a strong proponent of systematic reviews, which involve a comprehensive and unbiased search for all relevant studies on a particular topic, followed by a critical appraisal of the quality of those studies. He has developed guidelines for conducting high-quality systematic reviews and for minimizing the risk of bias.\n*   **Study Design and Evaluation:** He possesses a deep understanding of study design principles and is able to critically evaluate the strengths and limitations of different study designs, including randomized controlled trials, observational studies, and diagnostic accuracy studies.\n*   **Statistical Modeling:** He is proficient in a wide range of statistical modeling techniques, including regression analysis, survival analysis, and Bayesian methods. He uses these techniques to analyze complex datasets and to identify patterns and relationships that might not be apparent from simple descriptive statistics.\n*   **Bias Assessment:** A core element of his expertise is identifying and quantifying biases in research. He has developed methods to detect publication bias, selective reporting bias, and other forms of bias that can distort research findings.\n\n### 4. **Academic Contributions & Research**\n\nDr. Ioannidis's academic contributions are extensive and have had a profound impact on the field of medical research. He has published hundreds of peer-reviewed articles in leading medical journals, including *The Lancet*, *JAMA*, and *PLOS Medicine*. His research has focused on a wide range of topics, including the reliability of scientific studies, the impact of bias on research findings, and the effectiveness of medical interventions.\n\nOne of his most influential papers, \"Why Most Published Research Findings Are False,\" published in *PLOS Medicine* in 2005, has been cited thousands of times and has sparked a global debate about the reproducibility of scientific research. In this paper, he argued that a combination of factors, including small sample sizes, flexible research designs, and publication bias, can lead to a high proportion of false positive findings in the published literature. He demonstrated mathematically how these factors can interact to generate misleading results, even when the underlying research is conducted in good faith.\n\nHis research focus areas include:\n\n*   **Meta-Research:** Ioannidis is considered a pioneer in the field of meta-research, which involves studying the research process itself, identifying sources of bias, and developing strategies to improve the quality and reliability of research findings.\n*   **Reproducibility of Research:** He is a leading advocate for greater reproducibility in research and has developed methods for assessing the reproducibility of scientific studies. He has shown that many published findings cannot be replicated when subjected to independent verification.\n*   **Bias in Research:** He has extensively studied the impact of bias on research findings, including publication bias, selective reporting bias, and funding bias. He has developed methods for detecting and quantifying these biases.\n*   **Evidence-Based Medicine:** He is a strong proponent of evidence-based medicine, but with a critical awareness of the limitations of the evidence base. He advocates for a more nuanced and critical approach to the interpretation of research findings.\n*   **Large-Scale Data Analysis:** He has expertise in analyzing large-scale datasets, including electronic health records and genomic databases. He uses these datasets to identify risk factors for disease and to evaluate the effectiveness of medical interventions.\n\nHis research has had a significant impact on medical science by forcing researchers to critically examine their own methods and assumptions. It has led to calls for greater transparency in research reporting, for stricter accountability for researchers who engage in questionable research practices, and for a greater emphasis on independent replication of key findings.\n\n### 5. **Patient Impact & Community Work**\n\nWhile Dr. Ioannidis is not directly involved in patient care in a traditional sense, his work has a profound impact on patient outcomes indirectly. By improving the quality and reliability of medical research, he helps to ensure that clinicians are making decisions based on the best available evidence. This ultimately leads to better diagnoses, more effective treatments, and improved patient outcomes.\n\nHis community work primarily revolves around advocating for greater transparency and accountability in research. He frequently speaks at conferences and workshops, educating researchers and clinicians about the importance of rigorous methodology and the potential pitfalls of bias. He also serves on advisory boards and committees, providing guidance on research policy and funding priorities.\n\nHe has been a vocal critic of conflicts of interest in research and has advocated for stricter regulations to prevent industry influence from distorting research findings. He believes that the public has a right to know who is funding medical research and what potential biases might be at play.\n\n### 6. **Legacy and Future Outlook**\n\nDr. John Ioannidis has established himself as a towering figure in the field of epidemiology and medical research. His work has challenged conventional wisdom, sparked critical self-reflection within the scientific community, and prompted efforts to improve research methodologies and data reporting. His legacy lies in his unwavering commitment to intellectual honesty and scientific integrity, and in his ability to apply rigorous quantitative methods to expose the limitations and biases that can undermine the validity of scientific research.\n\nHis influence is likely to grow in the coming years as the scientific community grapples with the challenges of reproducibility and the increasing complexity of medical research. His work provides a valuable framework for critically evaluating research findings and for ensuring that clinical decisions are based on the best available evidence. He is likely to continue to be a leading voice in the effort to improve the quality and reliability of medical research, and to ensure that scientific findings are used to benefit patients and the public. His future contributions will likely focus on developing new methods for assessing the credibility of research findings, for promoting transparency in research reporting, and for fostering a culture of intellectual honesty and scientific integrity within the scientific community. He will continue to push the boundaries of meta-research and to challenge the status quo, ensuring that medical research is conducted in a rigorous, ethical, and transparent manner.\n",
+  "bioGenerated": true
 }

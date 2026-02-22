@@ -1,42 +1,449 @@
 ---
+/**
+ * MDRPedia — Admin Login Page
+ * Premium authentication experience
+ */
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Admin Login — MDRPedia" description="Restricted Access">
-    <div class="container flex items-center justify-center min-h-[60vh]">
-        <div
-            class="bg-white/5 border border-white/10 p-8 rounded-2xl w-full max-w-md backdrop-blur-sm"
-        >
-            <h1 class="text-2xl font-bold text-white mb-2 text-center">
-                Admin Access
-            </h1>
-            <p class="text-white/40 text-center mb-8 text-sm">
-                Please enter your access key to continue.
-            </p>
+<Layout title="Admin Login — MDRPedia" description="Secure Admin Access">
+    <div class="login-page">
+        <!-- Background Elements -->
+        <div class="login-bg">
+            <div class="bg-gradient"></div>
+            <div class="bg-grid"></div>
+            <div class="bg-orb bg-orb--1"></div>
+            <div class="bg-orb bg-orb--2"></div>
+        </div>
 
-            <form id="loginForm" class="space-y-4">
-                <div>
-                    <label for="key" class="sr-only">Access Key</label>
-                    <input
-                        type="password"
-                        id="key"
-                        placeholder="Enter Access Key"
-                        class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-purple-500 transition-colors"
-                        required
-                    />
+        <div class="login-container">
+            <!-- Logo Section -->
+            <div class="login-logo">
+                <a href="/" class="logo-link">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path>
+                    </svg>
+                    <span>MDR<strong>Pedia</strong></span>
+                </a>
+            </div>
+
+            <!-- Login Card -->
+            <div class="login-card">
+                <div class="login-card__header">
+                    <div class="header-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h1>Admin Access</h1>
+                    <p>Enter your credentials to access the admin dashboard</p>
                 </div>
-                <button
-                    type="submit"
-                    class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-lg transition-colors"
-                >
-                    Access Dashboard
-                </button>
-            </form>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="key">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.778-7.778zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                            </svg>
+                            Access Key
+                        </label>
+                        <div class="input-wrapper">
+                            <input
+                                type="password"
+                                id="key"
+                                name="key"
+                                placeholder="Enter your access key"
+                                autocomplete="current-password"
+                                required
+                            />
+                            <button type="button" class="toggle-visibility" aria-label="Toggle password visibility">
+                                <svg class="eye-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <svg class="eye-closed" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/>
+                                    <line x1="1" y1="1" x2="23" y2="23"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        <span>Access Dashboard</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <div class="security-badges">
+                        <div class="badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            <span>256-bit SSL</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Secure Access</span>
+                        </div>
+                    </div>
+                    <p class="help-text">
+                        Need help? Contact <a href="mailto:admin@mdrpedia.com">admin@mdrpedia.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <a href="/" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to MDRPedia
+            </a>
         </div>
     </div>
 </Layout>
 
+<style>
+    .login-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Background */
+    .login-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .bg-gradient {
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 600px;
+        background: radial-gradient(ellipse, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        filter: blur(80px);
+    }
+
+    .bg-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 100%);
+    }
+
+    .bg-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        animation: float 15s ease-in-out infinite;
+    }
+
+    .bg-orb--1 {
+        width: 300px;
+        height: 300px;
+        background: rgba(139, 92, 246, 0.1);
+        top: 10%;
+        right: 15%;
+    }
+
+    .bg-orb--2 {
+        width: 250px;
+        height: 250px;
+        background: rgba(16, 185, 129, 0.08);
+        bottom: 15%;
+        left: 10%;
+        animation-delay: -7s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-25px) rotate(3deg); }
+    }
+
+    /* Container */
+    .login-container {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* Logo */
+    .login-logo {
+        text-align: center;
+    }
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .logo-link svg {
+        color: #8b5cf6;
+    }
+
+    .logo-link strong {
+        font-weight: 800;
+    }
+
+    /* Card */
+    .login-card {
+        width: 100%;
+        background: rgba(20, 20, 35, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 2.5rem;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-card__header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .header-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(16, 185, 129, 0.1));
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        color: #a78bfa;
+    }
+
+    .login-card__header h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0 0 0.5rem;
+    }
+
+    .login-card__header p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+    }
+
+    /* Form */
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+    }
+
+    .form-group label svg {
+        color: var(--text-muted);
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .input-wrapper input {
+        width: 100%;
+        padding: 1rem 3rem 1rem 1.25rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        font-size: 1rem;
+        color: var(--text-primary);
+        transition: all 0.2s;
+    }
+
+    .input-wrapper input::placeholder {
+        color: var(--text-muted);
+    }
+
+    .input-wrapper input:focus {
+        outline: none;
+        border-color: #8b5cf6;
+        background: rgba(139, 92, 246, 0.05);
+        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+    }
+
+    .toggle-visibility {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        padding: 4px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .toggle-visibility:hover {
+        color: var(--text-secondary);
+    }
+
+    .login-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    }
+
+    .login-btn:active {
+        transform: translateY(0);
+    }
+
+    /* Footer */
+    .login-footer {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .security-badges {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .badge {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .badge svg {
+        color: #10b981;
+    }
+
+    .help-text {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-align: center;
+        margin: 0;
+    }
+
+    .help-text a {
+        color: #8b5cf6;
+        text-decoration: none;
+    }
+
+    .help-text a:hover {
+        text-decoration: underline;
+    }
+
+    /* Back Link */
+    .back-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: var(--text-secondary);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+        .login-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .security-badges {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+</style>
+
 <script>
+    // Password visibility toggle
+    const toggleBtn = document.querySelector('.toggle-visibility');
+    const passwordInput = document.getElementById('key') as HTMLInputElement;
+    const eyeOpen = document.querySelector('.eye-open') as SVGElement;
+    const eyeClosed = document.querySelector('.eye-closed') as SVGElement;
+
+    toggleBtn?.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeOpen.style.display = 'none';
+            eyeClosed.style.display = 'block';
+        } else {
+            passwordInput.type = 'password';
+            eyeOpen.style.display = 'block';
+            eyeClosed.style.display = 'none';
+        }
+    });
+
+    // Form submission
     const form = document.getElementById("loginForm");
     form?.addEventListener("submit", (e) => {
         e.preventDefault();

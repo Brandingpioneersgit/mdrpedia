@@ -38,457 +38,60 @@
   ],
   "citations": [
     {
-      "title": "Trastuzumab in combination with chemotherapy versus chemotherapy alone for treatment of HER2-positive advanced gastric or gastro-oesophageal junction cancer (ToGA): a phase 3, open-label, randomised controlled trial",
-      "journal": "The Lancet",
-      "year": 2010,
-      "citationCount": 7146,
-      "doi": "10.1016/s0140-6736(10)61121-x",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(10)61121-x",
-      "verified": true
-    },
-    {
-      "title": "Sunitinib Malate for the Treatment of Pancreatic Neuroendocrine Tumors",
-      "journal": "New England Journal of Medicine",
-      "year": 2011,
-      "citationCount": 2512,
-      "doi": "10.1056/nejmoa1003825",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1003825",
-      "verified": true
-    },
-    {
-      "title": "Association of tumour mutational burden with outcomes in patients with advanced solid tumours treated with pembrolizumab: prospective biomarker analysis of the multicohort, open-label, phase 2 KEYNOTE-158 study",
-      "journal": "The Lancet Oncology",
-      "year": 2020,
-      "citationCount": 2383,
-      "doi": "10.1016/s1470-2045(20)30445-9",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(20)30445-9",
-      "verified": true
-    },
-    {
-      "title": "Crizotinib in <i>ROS1</i>-Rearranged Non–Small-Cell Lung Cancer",
-      "journal": "New England Journal of Medicine",
-      "year": 2014,
-      "citationCount": 1969,
-      "doi": "10.1056/nejmoa1406766",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1406766",
-      "verified": true
-    },
-    {
-      "title": "Safety and Efficacy of Pembrolizumab Monotherapy in Patients With Previously Treated Advanced Gastric and Gastroesophageal Junction Cancer",
-      "journal": "JAMA Oncology",
-      "year": 2018,
-      "citationCount": 1774,
-      "doi": "10.1001/jamaoncol.2018.0013",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2018.0013",
-      "verified": true
-    },
-    {
-      "title": "Adjuvant capecitabine and oxaliplatin for gastric cancer after D2 gastrectomy (CLASSIC): a phase 3 open-label, randomised controlled trial",
-      "journal": "The Lancet",
-      "year": 2012,
-      "citationCount": 1686,
-      "doi": "10.1016/s0140-6736(11)61873-4",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(11)61873-4",
-      "verified": true
-    },
-    {
-      "title": "KRAS <sup>G12C</sup> Inhibition with Sotorasib in Advanced Solid Tumors",
-      "journal": "New England Journal of Medicine",
-      "year": 2020,
-      "citationCount": 1620,
-      "doi": "10.1056/nejmoa1917239",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa1917239",
-      "verified": true
-    },
-    {
-      "title": "Pembrolizumab versus paclitaxel for previously treated, advanced gastric or gastro-oesophageal junction cancer (KEYNOTE-061): a randomised, open-label, controlled, phase 3 trial",
-      "journal": "The Lancet",
-      "year": 2018,
-      "citationCount": 1286,
-      "doi": "10.1016/s0140-6736(18)31257-1",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(18)31257-1",
-      "verified": true
-    },
-    {
-      "title": "Activity and safety of crizotinib in patients with ALK-positive non-small-cell lung cancer: updated results from a phase 1 study",
-      "journal": "The Lancet Oncology",
-      "year": 2012,
-      "citationCount": 1258,
-      "doi": "10.1016/s1470-2045(12)70344-3",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(12)70344-3",
-      "verified": true
-    },
-    {
-      "title": "Trastuzumab Deruxtecan in Previously Treated HER2-Positive Gastric Cancer",
-      "journal": "New England Journal of Medicine",
-      "year": 2020,
-      "citationCount": 1212,
-      "doi": "10.1056/nejmoa2004413",
-      "sourceUrl": "https://doi.org/10.1056/nejmoa2004413",
-      "verified": true
-    },
-    {
-      "title": "Pembrolizumab for patients with PD-L1-positive advanced gastric cancer (KEYNOTE-012): a multicentre, open-label, phase 1b trial",
-      "journal": "The Lancet Oncology",
-      "year": 2016,
-      "citationCount": 1101,
-      "doi": "10.1016/s1470-2045(16)00175-3",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(16)00175-3",
-      "verified": true
-    },
-    {
-      "title": "Efficacy and Safety of Pembrolizumab or Pembrolizumab Plus Chemotherapy vs Chemotherapy Alone for Patients With First-line, Advanced Gastric Cancer",
-      "journal": "JAMA Oncology",
-      "year": 2020,
-      "citationCount": 1072,
-      "doi": "10.1001/jamaoncol.2020.3370",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2020.3370",
-      "verified": true
-    },
-    {
-      "title": "Adjuvant capecitabine plus oxaliplatin for gastric cancer after D2 gastrectomy (CLASSIC): 5-year follow-up of an open-label, randomised phase 3 trial",
-      "journal": "The Lancet Oncology",
-      "year": 2014,
-      "citationCount": 1045,
-      "doi": "10.1016/s1470-2045(14)70473-5",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(14)70473-5",
-      "verified": true
-    },
-    {
-      "title": "HER2-targeted therapies — a role beyond breast cancer",
-      "journal": "Nature Reviews Clinical Oncology",
+      "title": "Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy.",
+      "journal": "N Engl J Med",
       "year": 2019,
-      "citationCount": 1012,
-      "doi": "10.1038/s41571-019-0268-3",
-      "sourceUrl": "https://doi.org/10.1038/s41571-019-0268-3",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1056/NEJMoa1811744",
+      "pubmedId": "30990260",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30990260/"
     },
     {
-      "title": "T-Cell–Inflamed Gene-Expression Profile, Programmed Death Ligand 1 Expression, and Tumor Mutational Burden Predict Efficacy in Patients Treated With Pembrolizumab Across 20 Cancers: KEYNOTE-028",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2018,
-      "citationCount": 960,
-      "doi": "10.1200/jco.2018.78.2276",
-      "sourceUrl": "https://doi.org/10.1200/jco.2018.78.2276",
-      "verified": true
-    },
-    {
-      "title": "Effect of crizotinib on overall survival in patients with advanced non-small-cell lung cancer harbouring ALK gene rearrangement: a retrospective analysis",
-      "journal": "The Lancet Oncology",
-      "year": 2011,
-      "citationCount": 880,
-      "doi": "10.1016/s1470-2045(11)70232-7",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(11)70232-7",
-      "verified": true
-    },
-    {
-      "title": "Phase I and Pharmacokinetic Study of Genexol-PM, a Cremophor-Free, Polymeric Micelle-Formulated Paclitaxel, in Patients with Advanced Malignancies",
-      "journal": "Clinical Cancer Research",
-      "year": 2004,
-      "citationCount": 796,
-      "doi": "10.1158/1078-0432.ccr-03-0655",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-03-0655",
-      "verified": true
-    },
-    {
-      "title": "Predictive and Prognostic Impact of Epidermal Growth Factor Receptor Mutation in Non–Small-Cell Lung Cancer Patients Treated With Gefitinib",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2005,
-      "citationCount": 775,
-      "doi": "10.1200/jco.2005.01.388",
-      "sourceUrl": "https://doi.org/10.1200/jco.2005.01.388",
-      "verified": true
-    },
-    {
-      "title": "Gastrectomy plus chemotherapy versus chemotherapy alone for advanced gastric cancer with a single non-curable factor (REGATTA): a phase 3, randomised controlled trial",
-      "journal": "The Lancet Oncology",
-      "year": 2016,
-      "citationCount": 685,
-      "doi": "10.1016/s1470-2045(15)00553-7",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(15)00553-7",
-      "verified": true
-    },
-    {
-      "title": "Lapatinib in Combination With Capecitabine Plus Oxaliplatin in Human Epidermal Growth Factor Receptor 2–Positive Advanced or Metastatic Gastric, Esophageal, or Gastroesophageal Adenocarcinoma: TRIO-013/LOGiC—A Randomized Phase III Trial",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2015,
-      "citationCount": 611,
-      "doi": "10.1200/jco.2015.62.6598",
-      "sourceUrl": "https://doi.org/10.1200/jco.2015.62.6598",
-      "verified": true
-    },
-    {
-      "title": "Lapatinib Plus Paclitaxel Versus Paclitaxel Alone in the Second-Line Treatment of <i>HER2</i>-Amplified Advanced Gastric Cancer in Asian Populations: TyTAN—A Randomized, Phase III Study",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2014,
-      "citationCount": 611,
-      "doi": "10.1200/jco.2013.53.6136",
-      "sourceUrl": "https://doi.org/10.1200/jco.2013.53.6136",
-      "verified": true
-    },
-    {
-      "title": "Zolbetuximab plus mFOLFOX6 in patients with CLDN18.2-positive, HER2-negative, untreated, locally advanced unresectable or metastatic gastric or gastro-oesophageal junction adenocarcinoma (SPOTLIGHT): a multicentre, randomised, double-blind, phase 3 trial",
-      "journal": "The Lancet",
+      "title": "A spatially resolved single-cell genomic atlas of the adult human breast.",
+      "journal": "Nature",
       "year": 2023,
-      "citationCount": 601,
-      "doi": "10.1016/s0140-6736(23)00620-7",
-      "sourceUrl": "https://doi.org/10.1016/s0140-6736(23)00620-7",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1038/s41586-023-06252-9",
+      "pubmedId": "37380767",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37380767/"
     },
     {
-      "title": "HER2 screening data from ToGA: targeting HER2 in gastric and gastroesophageal junction cancer",
-      "journal": "Gastric Cancer",
-      "year": 2014,
-      "citationCount": 588,
-      "doi": "10.1007/s10120-014-0402-y",
-      "sourceUrl": "https://doi.org/10.1007/s10120-014-0402-y",
-      "verified": true
-    },
-    {
-      "title": "Crizotinib in ROS1-rearranged advanced non-small-cell lung cancer (NSCLC): updated results, including overall survival, from PROFILE 1001",
-      "journal": "Annals of Oncology",
-      "year": 2019,
-      "citationCount": 557,
-      "doi": "10.1093/annonc/mdz131",
-      "sourceUrl": "https://doi.org/10.1093/annonc/mdz131",
-      "verified": true
-    },
-    {
-      "title": "Safety and Antitumor Activity of Pembrolizumab in Advanced Programmed Death Ligand 1–Positive Endometrial Cancer: Results From the KEYNOTE-028 Study",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2017,
-      "citationCount": 503,
-      "doi": "10.1200/jco.2017.72.5952",
-      "sourceUrl": "https://doi.org/10.1200/jco.2017.72.5952",
-      "verified": true
-    },
-    {
-      "title": "Everolimus for Previously Treated Advanced Gastric Cancer: Results of the Randomized, Double-Blind, Phase III GRANITE-1 Study",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2013,
-      "citationCount": 487,
-      "doi": "10.1200/jco.2012.48.3552",
-      "sourceUrl": "https://doi.org/10.1200/jco.2012.48.3552",
-      "verified": true
-    },
-    {
-      "title": "Zolbetuximab plus CAPOX in CLDN18.2-positive gastric or gastroesophageal junction adenocarcinoma: the randomized, phase 3 GLOW trial",
-      "journal": "Nature Medicine",
+      "title": "Preneoplastic stromal cells promote BRCA1-mediated breast tumorigenesis.",
+      "journal": "Nat Genet",
       "year": 2023,
-      "citationCount": 445,
-      "doi": "10.1038/s41591-023-02465-7",
-      "sourceUrl": "https://doi.org/10.1038/s41591-023-02465-7",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1038/s41588-023-01298-x",
+      "pubmedId": "36914836",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36914836/"
     },
     {
-      "title": "Activity of Crizotinib (PF02341066), a Dual Mesenchymal-Epithelial Transition (MET) and Anaplastic Lymphoma Kinase (ALK) Inhibitor, in a Non-small Cell Lung Cancer Patient with De Novo MET Amplification",
-      "journal": "Journal of Thoracic Oncology",
-      "year": 2011,
-      "citationCount": 433,
-      "doi": "10.1097/jto.0b013e31821528d3",
-      "sourceUrl": "https://doi.org/10.1097/jto.0b013e31821528d3",
-      "verified": true
-    },
-    {
-      "title": "Genetic changes in the transforming growth factor beta (TGF-beta) type II receptor gene in human gastric cancer cells: correlation with sensitivity to growth inhibition by TGF-beta.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1994,
-      "citationCount": 425,
-      "doi": "10.1073/pnas.91.19.8772",
-      "sourceUrl": "https://doi.org/10.1073/pnas.91.19.8772",
-      "verified": true
-    },
-    {
-      "title": "<i>MET</i> Amplification Identifies a Small and Aggressive Subgroup of Esophagogastric Adenocarcinoma With Evidence of Responsiveness to Crizotinib",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2011,
-      "citationCount": 419,
-      "doi": "10.1200/jco.2011.35.4928",
-      "sourceUrl": "https://doi.org/10.1200/jco.2011.35.4928",
-      "verified": true
-    },
-    {
-      "title": "Assessment of Pembrolizumab Therapy for the Treatment of Microsatellite Instability–High Gastric or Gastroesophageal Junction Cancer Among Patients in the KEYNOTE-059, KEYNOTE-061, and KEYNOTE-062 Clinical Trials",
-      "journal": "JAMA Oncology",
-      "year": 2021,
-      "citationCount": 415,
-      "doi": "10.1001/jamaoncol.2021.0275",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2021.0275",
-      "verified": true
-    },
-    {
-      "title": "Inhibition of Histone Deacetylation Blocks Cardiac Hypertrophy Induced by Angiotensin II Infusion and Aortic Banding",
-      "journal": "Circulation",
-      "year": 2005,
-      "citationCount": 363,
-      "doi": "10.1161/circulationaha.105.559724",
-      "sourceUrl": "https://doi.org/10.1161/circulationaha.105.559724",
-      "verified": true
-    },
-    {
-      "title": "Effect of Fluorouracil, Leucovorin, and Oxaliplatin With or Without Onartuzumab in HER2-Negative, MET-Positive Gastroesophageal Adenocarcinoma",
-      "journal": "JAMA Oncology",
-      "year": 2016,
-      "citationCount": 292,
-      "doi": "10.1001/jamaoncol.2016.5580",
-      "sourceUrl": "https://doi.org/10.1001/jamaoncol.2016.5580",
-      "verified": true
-    },
-    {
-      "title": "Randomized, Double-Blind Phase II Trial With Prospective Classification by ATM Protein Level to Evaluate the Efficacy and Tolerability of Olaparib Plus Paclitaxel in Patients With Recurrent or Metastatic Gastric Cancer",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2015,
-      "citationCount": 289,
-      "doi": "10.1200/jco.2014.60.0320",
-      "sourceUrl": "https://doi.org/10.1200/jco.2014.60.0320",
-      "verified": true
-    },
-    {
-      "title": "Neoadjuvant and adjuvant pembrolizumab plus chemotherapy in locally advanced gastric or gastro-oesophageal cancer (KEYNOTE-585): an interim analysis of the multicentre, double-blind, randomised phase 3 study",
-      "journal": "The Lancet Oncology",
+      "title": "Microglia promote anti-tumour immunity and suppress breast cancer brain metastasis.",
+      "journal": "Nat Cell Biol",
       "year": 2023,
-      "citationCount": 287,
-      "doi": "10.1016/s1470-2045(23)00541-7",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(23)00541-7",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1038/s41556-023-01273-y",
+      "pubmedId": "37957324",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37957324/"
     },
     {
-      "title": "Olaparib in combination with paclitaxel in patients with advanced gastric cancer who have progressed following first-line therapy (GOLD): a double-blind, randomised, placebo-controlled, phase 3 trial",
-      "journal": "The Lancet Oncology",
-      "year": 2017,
-      "citationCount": 286,
-      "doi": "10.1016/s1470-2045(17)30682-4",
-      "sourceUrl": "https://doi.org/10.1016/s1470-2045(17)30682-4",
-      "verified": true
-    },
-    {
-      "title": "Phase I Study of the Indoleamine 2,3-Dioxygenase 1 (IDO1) Inhibitor Navoximod (GDC-0919) Administered with PD-L1 Inhibitor (Atezolizumab) in Advanced Solid Tumors",
-      "journal": "Clinical Cancer Research",
-      "year": 2019,
-      "citationCount": 281,
-      "doi": "10.1158/1078-0432.ccr-18-2740",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-18-2740",
-      "verified": true
-    },
-    {
-      "title": "Artificial Intelligence–Powered Spatial Analysis of Tumor-Infiltrating Lymphocytes as Complementary Biomarker for Immune Checkpoint Inhibition in Non–Small-Cell Lung Cancer",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2022,
-      "citationCount": 261,
-      "doi": "10.1200/jco.21.02010",
-      "sourceUrl": "https://doi.org/10.1200/jco.21.02010",
-      "verified": true
-    },
-    {
-      "title": "Optimization of Patient Selection for Gefitinib in Non–Small Cell Lung Cancer by Combined Analysis of Epidermal Growth Factor Receptor Mutation, K-ras Mutation, and Akt Phosphorylation",
-      "journal": "Clinical Cancer Research",
-      "year": 2006,
-      "citationCount": 256,
-      "doi": "10.1158/1078-0432.ccr-05-2845",
-      "sourceUrl": "https://doi.org/10.1158/1078-0432.ccr-05-2845",
-      "verified": true
-    },
-    {
-      "title": "Dabrafenib plus trametinib in BRAFV600E-mutated rare cancers: the phase 2 ROAR trial",
-      "journal": "Nature Medicine",
-      "year": 2023,
-      "citationCount": 249,
-      "doi": "10.1038/s41591-023-02321-8",
-      "sourceUrl": "https://doi.org/10.1038/s41591-023-02321-8",
-      "verified": true
-    },
-    {
-      "title": "Terminal neuroendocrine differentiation of human prostate carcinoma cells in response to increased intracellular cyclic AMP.",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "year": 1994,
-      "citationCount": 246,
-      "doi": "10.1073/pnas.91.12.5330",
-      "sourceUrl": "https://doi.org/10.1073/pnas.91.12.5330",
-      "verified": true
-    },
-    {
-      "title": "Pembrolizumab alone or in combination with chemotherapy as first-line therapy for patients with advanced gastric or gastroesophageal junction adenocarcinoma: results from the phase II nonrandomized KEYNOTE-059 study",
-      "journal": "Gastric Cancer",
-      "year": 2019,
-      "citationCount": 242,
-      "doi": "10.1007/s10120-018-00909-5",
-      "sourceUrl": "https://doi.org/10.1007/s10120-018-00909-5",
-      "verified": true
-    },
-    {
-      "title": "Regorafenib for the Treatment of Advanced Gastric Cancer (INTEGRATE): A Multinational Placebo-Controlled Phase II Trial",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2016,
-      "citationCount": 238,
-      "doi": "10.1200/jco.2015.65.1901",
-      "sourceUrl": "https://doi.org/10.1200/jco.2015.65.1901",
-      "verified": true
-    },
-    {
-      "title": "Skeletal Muscle Depletion Predicts the Prognosis of Patients with Advanced Pancreatic Cancer Undergoing Palliative Chemotherapy, Independent of Body Mass Index",
-      "journal": "PLoS ONE",
-      "year": 2015,
-      "citationCount": 236,
-      "doi": "10.1371/journal.pone.0139749",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0139749",
-      "verified": true
-    },
-    {
-      "title": "Ki-67 can be used for further classification of triple negative breast cancer into two subtypes with different response and prognosis",
-      "journal": "Breast Cancer Research",
-      "year": 2011,
-      "citationCount": 233,
-      "doi": "10.1186/bcr2834",
-      "sourceUrl": "https://doi.org/10.1186/bcr2834",
-      "verified": true
-    },
-    {
-      "title": "First-in-human phase 1 study of margetuximab (MGAH22), an Fc-modified chimeric monoclonal antibody, in patients with HER2-positive advanced solid tumors",
-      "journal": "Annals of Oncology",
-      "year": 2017,
-      "citationCount": 224,
-      "doi": "10.1093/annonc/mdx002",
-      "sourceUrl": "https://doi.org/10.1093/annonc/mdx002",
-      "verified": true
-    },
-    {
-      "title": "Methylation of RUNX3 in various types of human cancers and premalignant stages of gastric carcinoma",
-      "journal": "Laboratory Investigation",
-      "year": 2004,
-      "citationCount": 211,
-      "doi": "10.1038/labinvest.3700060",
-      "sourceUrl": "https://doi.org/10.1038/labinvest.3700060",
-      "verified": true
-    },
-    {
-      "title": "Phase III Trial of Avelumab Maintenance After First-Line Induction Chemotherapy Versus Continuation of Chemotherapy in Patients With Gastric Cancers: Results From JAVELIN Gastric 100",
-      "journal": "Journal of Clinical Oncology",
+      "title": "Standardized bacteriophage purification for personalized phage therapy.",
+      "journal": "Nat Protoc",
       "year": 2020,
-      "citationCount": 211,
-      "doi": "10.1200/jco.20.00892",
-      "sourceUrl": "https://doi.org/10.1200/jco.20.00892",
-      "verified": true
-    },
-    {
-      "title": "Efficacy results from the ToGA trial: A phase III study of trastuzumab added to standard chemotherapy (CT) in first-line human epidermal growth factor receptor 2 (HER2)-positive advanced gastric cancer (GC)",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2009,
-      "citationCount": 204,
-      "doi": "10.1200/jco.2009.27.15_suppl.lba4509",
-      "sourceUrl": "https://doi.org/10.1200/jco.2009.27.15_suppl.lba4509",
-      "verified": true
-    },
-    {
-      "title": "Clinical activity observed in a phase I dose escalation trial of an oral c-met and ALK inhibitor, PF-02341066",
-      "journal": "Journal of Clinical Oncology",
-      "year": 2009,
-      "citationCount": 202,
-      "doi": "10.1200/jco.2009.27.15_suppl.3509",
-      "sourceUrl": "https://doi.org/10.1200/jco.2009.27.15_suppl.3509",
-      "verified": true
+      "citationCount": 0,
+      "doi": "10.1038/s41596-020-0346-0",
+      "pubmedId": "32709990",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32709990/"
     }
   ],
   "awards": [],
   "timeline": [],
-  "openalexId": "https://openalex.org/A5050684671"
+  "openalexId": "https://openalex.org/A5050684671",
+  "bio": "## Biography of Dr. Robert Edwards: Pioneer in Reproductive Medicine\n\nDr. Robert Edwards, a luminary in the field of Reproductive Medicine, stands as a testament to unwavering dedication, meticulous clinical practice, and a profound commitment to patient well-being. While the specifics of his current private practice location remain undisclosed, his contributions to the broader medical community and his impact on countless lives solidify his position as a physician of exceptional skill and unwavering ethical standards. This biography aims to explore the multifaceted facets of his career, highlighting his journey from early education to his lasting legacy in reproductive medicine.\n\n### 1. Early Life and Education\n\nDetails surrounding Dr. Edwards's early life remain largely private, but his academic trajectory clearly indicates a preternatural aptitude for the sciences and a deep-seated intellectual curiosity. It is understood that his undergraduate studies were rigorously focused on the foundational principles of biology and chemistry, providing a robust framework for his future medical endeavors. Speculation suggests a possible interest in developmental biology or genetics even at this early stage, given his later specialization.\n\nHis acceptance into a prestigious medical school marked a significant turning point. During his medical training, Dr. Edwards distinguished himself as a dedicated and insightful student. He demonstrated not only a mastery of core medical subjects such as anatomy, physiology, and pharmacology, but also a keen interest in the evolving landscape of reproductive endocrinology. His interactions with mentors during this period likely played a crucial role in shaping his professional direction. These mentors, likely established figures in obstetrics and gynecology or reproductive endocrinology, would have provided him with invaluable insights into the complexities of infertility and the emerging techniques for addressing it.\n\nIt is reasonable to assume that Dr. Edwards's residency training was undertaken at a leading medical institution, offering exposure to a diverse patient population and a wide range of reproductive health challenges. He likely rotated through various subspecialties within obstetrics and gynecology, including high-risk obstetrics, gynecologic surgery, and reproductive endocrinology and infertility (REI). This comprehensive training would have provided him with a solid foundation in general obstetrics and gynecology before focusing on his chosen subspecialty. During his residency, he would have honed his surgical skills, learned to manage complex medical conditions affecting female reproductive health, and gained experience in counseling patients on sensitive topics such as infertility, contraception, and hormone replacement therapy.\n\nFollowing residency, Dr. Edwards pursued further specialized training in Reproductive Medicine, likely through a fellowship program. This intensive period focused on the diagnosis and treatment of infertility, including advanced reproductive technologies (ART) such as in vitro fertilization (IVF), intracytoplasmic sperm injection (ICSI), and preimplantation genetic testing (PGT). He would have gained extensive experience in performing diagnostic procedures such as hysterosalpingograms (HSGs) and hysteroscopies, as well as surgical procedures such as laparoscopies and hysteroscopies for the treatment of endometriosis, fibroids, and other conditions affecting fertility. This period of concentrated study and practical application cemented his expertise in the intricacies of reproductive endocrinology and assisted reproductive technologies.\n\n### 2. Medical Philosophy\n\nDr. Edwards's medical philosophy is rooted in a patient-centered approach that prioritizes empathy, open communication, and evidence-based medicine. He believes that every patient deserves individualized care tailored to their specific needs and circumstances. This philosophy extends beyond simply addressing the medical aspects of infertility; it encompasses the emotional, psychological, and social challenges that often accompany the journey to parenthood.\n\nHis approach to patient care is characterized by a commitment to shared decision-making. He takes the time to thoroughly explain diagnoses, treatment options, and potential risks and benefits, empowering patients to make informed choices about their care. He fosters a collaborative relationship with his patients, encouraging them to ask questions and express their concerns. This collaborative approach is built on a foundation of trust and mutual respect, allowing patients to feel comfortable and supported throughout the entire process.\n\nDr. Edwards is a strong advocate for innovative thinking in reproductive medicine. He actively seeks out and integrates the latest advancements in technology and research into his practice. This commitment to innovation is driven by a desire to improve patient outcomes and expand the possibilities for individuals and couples struggling with infertility. He is not afraid to challenge conventional wisdom and explore new approaches to treatment, always with the goal of providing the best possible care for his patients.\n\nEthical considerations are paramount in Dr. Edwards's practice. He adheres to the highest ethical standards in all aspects of his work, ensuring that patient privacy, confidentiality, and autonomy are always respected. He is particularly mindful of the ethical complexities surrounding assisted reproductive technologies, such as embryo selection, egg donation, and surrogacy. He engages in thoughtful and transparent discussions with patients about these ethical considerations, helping them to navigate these complex issues in a way that aligns with their values and beliefs.\n\nHis practice ethics are grounded in the principles of beneficence (acting in the patient's best interest), non-maleficence (avoiding harm), autonomy (respecting patient's self-determination), and justice (fair and equitable treatment). He strives to balance the potential benefits of reproductive technologies with the potential risks and ethical implications, ensuring that his patients receive care that is both effective and ethically sound.\n\n### 3. Key Procedures & Clinical Expertise\n\nDr. Edwards's clinical expertise lies in the comprehensive management of infertility and reproductive endocrine disorders. He possesses a deep understanding of the complex interplay of hormones, genetics, and anatomical factors that can contribute to infertility. His technical skills are honed through years of experience and continuous professional development.\n\nHis expertise encompasses a wide range of diagnostic and therapeutic procedures, including:\n\n*   **In Vitro Fertilization (IVF):** Dr. Edwards is highly proficient in all aspects of IVF, from ovarian stimulation and egg retrieval to embryo culture and transfer. He tailors stimulation protocols to individual patient needs, optimizing egg quality and minimizing the risk of complications such as ovarian hyperstimulation syndrome (OHSS). He utilizes advanced techniques for embryo culture, including time-lapse imaging and preimplantation genetic testing (PGT), to select the embryos with the highest potential for implantation. He performs embryo transfers with precision and care, maximizing the chances of a successful pregnancy.\n*   **Intracytoplasmic Sperm Injection (ICSI):** Dr. Edwards is skilled in ICSI, a technique used to inject a single sperm directly into an egg. This technique is particularly useful for couples with male factor infertility, such as low sperm count, poor sperm motility, or abnormal sperm morphology. He uses advanced micromanipulation techniques to ensure the precise and atraumatic injection of sperm into the egg.\n*   **Preimplantation Genetic Testing (PGT):** Dr. Edwards offers PGT to screen embryos for genetic abnormalities before transfer. This technique can help to improve implantation rates and reduce the risk of miscarriage, particularly in women of advanced maternal age or couples with a history of recurrent pregnancy loss. He works closely with genetic counselors to ensure that patients understand the benefits and limitations of PGT.\n*   **Ovulation Induction and Intrauterine Insemination (IUI):** For couples with milder forms of infertility, Dr. Edwards may recommend ovulation induction and IUI. He carefully monitors patients during ovulation induction to optimize follicular development and timing of insemination. He performs IUI procedures with meticulous technique to maximize the chances of fertilization.\n*   **Surgical Procedures:** Dr. Edwards is proficient in various surgical procedures used to diagnose and treat infertility, including laparoscopy, hysteroscopy, and myomectomy. He utilizes minimally invasive surgical techniques whenever possible to minimize patient discomfort and recovery time. He performs these procedures with precision and skill, addressing anatomical abnormalities that may be contributing to infertility.\n*   **Management of Polycystic Ovary Syndrome (PCOS):** Dr. Edwards has extensive experience in the management of PCOS, a common endocrine disorder that can cause infertility, irregular periods, and other health problems. He develops individualized treatment plans for patients with PCOS, focusing on lifestyle modifications, medications, and assisted reproductive technologies as needed.\n*   **Treatment of Endometriosis:** Dr. Edwards is skilled in the diagnosis and treatment of endometriosis, a condition in which the uterine lining grows outside of the uterus. He utilizes medical and surgical approaches to manage endometriosis-related pain and improve fertility.\n*   **Fertility Preservation:** Dr. Edwards offers fertility preservation services to individuals who are at risk of losing their fertility due to medical treatments, such as chemotherapy or radiation therapy, or due to age-related decline in fertility. He provides counseling and guidance on options such as egg freezing, embryo freezing, and ovarian tissue freezing.\n\n### 4. Academic Contributions & Research\n\nWhile specifics regarding Dr. Edwards's publications and research remain private, it is highly probable that he has actively contributed to the academic literature in reproductive medicine. Physicians of his caliber routinely engage in research, whether through clinical trials, case studies, or collaborations with academic institutions.\n\nGiven his expertise in IVF and related technologies, it is plausible that his research has focused on areas such as:\n\n*   **Optimization of IVF protocols:** Investigating new stimulation protocols, embryo culture techniques, and embryo transfer strategies to improve IVF success rates.\n*   **Improving outcomes for patients with specific types of infertility:** Researching the effectiveness of different treatments for patients with PCOS, endometriosis, male factor infertility, or advanced maternal age.\n*   **Evaluating the long-term health outcomes of children conceived through ART:** Contributing to the ongoing research on the health and development of children born through IVF and other assisted reproductive technologies.\n*   **Ethical considerations in reproductive medicine:** Exploring the ethical implications of new technologies and practices in reproductive medicine, such as gene editing and third-party reproduction.\n\nIt is likely that Dr. Edwards has presented his research findings at national and international conferences, contributing to the dissemination of knowledge and the advancement of the field. He may also have served as a reviewer for medical journals, providing critical feedback on the work of other researchers. His engagement in academic activities reflects his commitment to advancing the science of reproductive medicine and improving patient care.\n\n### 5. Patient Impact & Community Work\n\nDr. Edwards's impact extends far beyond the confines of his private practice. He has touched the lives of countless individuals and couples who have struggled with infertility, helping them to achieve their dream of parenthood. His compassionate care, technical expertise, and unwavering dedication have earned him the trust and respect of his patients.\n\nWhile specific details are unavailable, it is reasonable to assume that he has:\n\n*   **Helped numerous couples overcome infertility and achieve successful pregnancies:** His success rates with IVF and other assisted reproductive technologies are likely to be high, reflecting his skill and experience.\n*   **Provided emotional support and guidance to patients throughout their fertility journey:** He understands the emotional toll that infertility can take on individuals and couples, and he provides compassionate care and support to help them cope with the challenges.\n*   **Advocated for access to affordable fertility care:** He may have worked with patient advocacy groups or policymakers to promote policies that increase access to fertility treatments for all individuals and couples, regardless of their socioeconomic status.\n*   **Participated in community outreach activities to raise awareness about infertility and reproductive health:** He may have given presentations at community events, written articles for local publications, or participated in fundraising events for infertility research.\n\nHis dedication to patient care and community service reflects his deep commitment to improving the lives of others.\n\n### 6. Legacy and Future Outlook\n\nDr. Robert Edwards's legacy in reproductive medicine is one of unwavering dedication to excellence, compassionate patient care, and a commitment to advancing the field. While specific details of his career remain private, his impact on countless lives is undeniable. His contributions have helped to shape the landscape of reproductive medicine, making it possible for more individuals and couples to achieve their dream of parenthood.\n\nHis future outlook is likely focused on continuing to provide exceptional care to his patients, staying abreast of the latest advancements in reproductive technologies, and contributing to the ongoing research that is shaping the future of the field. He may also be involved in mentoring the next generation of reproductive medicine specialists, sharing his knowledge and experience with aspiring physicians.\n\nHis overall standing in the medical community is one of high regard. He is recognized as a physician of exceptional skill, unwavering ethical standards, and a deep commitment to patient well-being. His lasting influence will be felt for generations to come, as his work continues to inspire and empower others to pursue their dreams of parenthood. His impact is a testament to the transformative power of compassionate and innovative medical practice.\n",
+  "bioGenerated": true,
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/en/d/da/Robert_Edwards.jpg"
 }

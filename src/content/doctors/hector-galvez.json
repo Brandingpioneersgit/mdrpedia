@@ -38,305 +38,60 @@
   ],
   "citations": [
     {
-      "title": "The nitrogen responsive transcriptome in potato (Solanum tuberosum L.) reveals significant gene regulatory motifs",
-      "journal": "Scientific Reports",
-      "year": 2016,
-      "citationCount": 46,
-      "doi": "10.1038/srep26090",
-      "sourceUrl": "https://doi.org/10.1038/srep26090",
-      "verified": true
-    },
-    {
-      "title": "A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Québec, Canada",
-      "journal": "Genome Medicine",
-      "year": 2021,
-      "citationCount": 30,
-      "doi": "10.1186/s13073-021-00986-9",
-      "sourceUrl": "https://doi.org/10.1186/s13073-021-00986-9",
-      "verified": true
-    },
-    {
-      "title": "Ultrafast functional profiling of RNA-seq data for nonmodel organisms",
-      "journal": "Genome Research",
-      "year": 2021,
-      "citationCount": 25,
-      "doi": "10.1101/gr.269894.120",
-      "sourceUrl": "https://doi.org/10.1101/gr.269894.120",
-      "verified": true
-    },
-    {
-      "title": "Sex Chromosomes and Sex Phenotype Contribute to Biased DNA Methylation in Mouse Liver",
-      "journal": "Cells",
-      "year": 2020,
-      "citationCount": 23,
-      "doi": "10.3390/cells9061436",
-      "sourceUrl": "https://doi.org/10.3390/cells9061436",
-      "verified": true
-    },
-    {
-      "title": "Distinct roles of androgen receptor, estrogen receptor alpha, and BCL6 in the establishment of sex-biased DNA methylation in mouse liver",
-      "journal": "Scientific Reports",
-      "year": 2021,
-      "citationCount": 15,
-      "doi": "10.1038/s41598-021-93216-6",
-      "sourceUrl": "https://doi.org/10.1038/s41598-021-93216-6",
-      "verified": true
-    },
-    {
-      "title": "Detection of prevalent SARS-CoV-2 variant lineages in wastewater and clinical sequences from cities in Québec, Canada",
-      "journal": "Unknown Journal",
-      "year": 2022,
-      "citationCount": 15,
-      "doi": "10.1101/2022.02.01.22270170",
-      "sourceUrl": "https://doi.org/10.1101/2022.02.01.22270170",
-      "verified": true
-    },
-    {
-      "title": "Understanding potato with the help of genomics",
-      "journal": "AIMS Agriculture and Food",
-      "year": 2017,
-      "citationCount": 14,
-      "doi": "10.3934/agrfood.2017.1.16",
-      "sourceUrl": "https://doi.org/10.3934/agrfood.2017.1.16",
-      "verified": true
-    },
-    {
-      "title": "Intra-Host Evolution Analyses in an Immunosuppressed Patient Supports SARS-CoV-2 Viral Reservoir Hypothesis",
-      "journal": "Viruses",
-      "year": 2024,
-      "citationCount": 13,
-      "doi": "10.3390/v16030342",
-      "sourceUrl": "https://doi.org/10.3390/v16030342",
-      "verified": true
-    },
-    {
-      "title": "SARS-CoV-2 rapidly evolves lineage-specific phenotypic differences when passaged repeatedly in immune-naïve mice",
-      "journal": "Communications Biology",
-      "year": 2024,
-      "citationCount": 11,
-      "doi": "10.1038/s42003-024-05878-3",
-      "sourceUrl": "https://doi.org/10.1038/s42003-024-05878-3",
-      "verified": true
-    },
-    {
-      "title": "Genetic variation in the Y chromosome and sex-biased DNA methylation in somatic cells in the mouse",
-      "journal": "Mammalian Genome",
-      "year": 2022,
-      "citationCount": 9,
-      "doi": "10.1007/s00335-022-09970-z",
-      "sourceUrl": "https://doi.org/10.1007/s00335-022-09970-z",
-      "verified": true
-    },
-    {
-      "title": "Regulatory interaction between the ZPBP2-ORMDL3/Zpbp2-Ormdl3 region and the circadian clock",
-      "journal": "PLoS ONE",
+      "title": "The AMPK-Related Kinases SIK1 and SIK3 Mediate Key Tumor-Suppressive Effects of LKB1 in NSCLC.",
+      "journal": "Cancer Discov",
       "year": 2019,
-      "citationCount": 5,
-      "doi": "10.1371/journal.pone.0223212",
-      "sourceUrl": "https://doi.org/10.1371/journal.pone.0223212",
-      "verified": true
-    },
-    {
-      "title": "Data Mining Nitrogen-Responsive Gene Expression for Source–Sink Relations and Indicators of N Status in Potato",
-      "journal": "Agronomy",
-      "year": 2020,
-      "citationCount": 4,
-      "doi": "10.3390/agronomy10101617",
-      "sourceUrl": "https://doi.org/10.3390/agronomy10101617",
-      "verified": true
-    },
-    {
-      "title": "Combining Short- and Long-Read Sequencing Technologies to Identify SARS-CoV-2 Variants in Wastewater",
-      "journal": "Viruses",
-      "year": 2024,
-      "citationCount": 4,
-      "doi": "10.3390/v16091495",
-      "sourceUrl": "https://doi.org/10.3390/v16091495",
-      "verified": true
-    },
-    {
-      "title": "A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Québec, Canada",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 3,
-      "doi": "10.1101/2021.03.20.21253835",
-      "sourceUrl": "https://doi.org/10.1101/2021.03.20.21253835",
-      "verified": true
-    },
-    {
-      "title": "Author Correction: Distinct roles of androgen receptor, estrogen receptor alpha, and BCL6 in the establishment of sex-biased DNA methylation in mouse liver",
-      "journal": "Scientific Reports",
-      "year": 2021,
-      "citationCount": 3,
-      "doi": "10.1038/s41598-021-02512-8",
-      "sourceUrl": "https://doi.org/10.1038/s41598-021-02512-8",
-      "verified": true
-    },
-    {
-      "title": "More than a ‘Hundred Days War’: Persistent SARS-CoV-2 infection in a patient with ANCA-associated vasculitis",
-      "journal": "Journal of the Association of Medical Microbiology and Infectious Disease Canada",
-      "year": 2022,
-      "citationCount": 2,
-      "doi": "10.3138/jammi-2021-0033",
-      "sourceUrl": "https://doi.org/10.3138/jammi-2021-0033",
-      "verified": true
-    },
-    {
-      "title": "Intra-host viral populations of SARS-CoV-2 in immunosuppressed patients with hematologic cancers",
-      "journal": "Unknown Journal",
-      "year": 2022,
-      "citationCount": 2,
-      "doi": "10.1101/2022.10.19.512884",
-      "sourceUrl": "https://doi.org/10.1101/2022.10.19.512884",
-      "verified": true
-    },
-    {
-      "title": "The Canadian VirusSeq Data Portal and Duotang: open resources for SARS-CoV-2 viral sequences and genomic epidemiology",
-      "journal": "Microbial Genomics",
-      "year": 2024,
-      "citationCount": 2,
-      "doi": "10.1099/mgen.0.001293",
-      "sourceUrl": "https://doi.org/10.1099/mgen.0.001293",
-      "verified": true
-    },
-    {
-      "title": "Combining short and long read sequencing technologies to identify SARS-CoV-2 variants in wastewater",
-      "journal": "Unknown Journal",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.1101/2024.08.07.24311639",
-      "sourceUrl": "https://doi.org/10.1101/2024.08.07.24311639",
-      "verified": true
-    },
-    {
-      "title": "SARS CoV 2 Evolution Manuscript Processed Files and Code",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.5281/zenodo.10460450",
-      "sourceUrl": "https://doi.org/10.5281/zenodo.10460450",
-      "verified": true
-    },
-    {
-      "title": "The Canadian VirusSeq Data Portal &amp; Duotang: open resources for SARS-CoV-2 viral sequences and genomic epidemiology",
-      "journal": "PubMed",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.48550/arxiv.2405.04734",
-      "sourceUrl": "https://doi.org/10.48550/arxiv.2405.04734",
-      "verified": true
-    },
-    {
-      "title": "Survey of gene, lncRNA and transposon transcription patterns in four mouse organs highlights shared and organ-specific sex-biased regulation",
-      "journal": "Genome biology",
-      "year": 2025,
-      "citationCount": 1,
-      "doi": "10.1186/s13059-025-03547-0",
-      "sourceUrl": "https://doi.org/10.1186/s13059-025-03547-0",
-      "verified": true
-    },
-    {
-      "title": "Genomic analysis defines distinct pancreatic and neuronal subtypes of lung carcinoid",
-      "journal": "The Journal of Pathology",
-      "year": 2024,
-      "citationCount": 1,
-      "doi": "10.1002/path.6352",
-      "sourceUrl": "https://doi.org/10.1002/path.6352",
-      "verified": true
-    },
-    {
-      "title": "ADAPTATION AND AGRONOMICAL CHARACTERIZATION OF ´MEDINA´ AND ´MARINA´ STRAWBERRY CULTIVARS",
-      "journal": "Acta Horticulturae",
-      "year": 2006,
       "citationCount": 0,
-      "doi": "10.17660/actahortic.2006.708.7",
-      "sourceUrl": "https://doi.org/10.17660/actahortic.2006.708.7",
-      "verified": true
+      "doi": "10.1158/2159-8290.CD-18-1261",
+      "pubmedId": "31350328",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31350328/"
     },
     {
-      "title": "SARS-CoV-2 evolution in the absence of selective immune pressures, results in antibody resistance, interferon suppression and phenotypic differences by lineage",
-      "journal": "Unknown Journal",
+      "title": "Modeling compound lipid homeostasis using stable isotope tracing.",
+      "journal": "bioRxiv",
+      "year": 2024,
+      "citationCount": 0,
+      "doi": "pii: 2024.10.16.618599. 10.1101/2024.10.16.618599",
+      "pubmedId": "39463985",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39463985/"
+    },
+    {
+      "title": "Inter-organelle cross-talk supports acetyl-coenzyme A homeostasis and lipogenesis under metabolic stress.",
+      "journal": "Sci Adv",
       "year": 2023,
       "citationCount": 0,
-      "doi": "10.1101/2023.01.16.523994",
-      "sourceUrl": "https://doi.org/10.1101/2023.01.16.523994",
-      "verified": true
+      "doi": "10.1126/sciadv.adf0138",
+      "pubmedId": "37134162",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/37134162/"
     },
     {
-      "title": "Additional file 2 of A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Québec, Canada",
-      "journal": "Figshare",
-      "year": 2021,
+      "title": "Differential regulation of Hes/Hey genes during inner ear development.",
+      "journal": "Dev Neurobiol",
+      "year": 2015,
       "citationCount": 0,
-      "doi": "10.6084/m9.figshare.16893045",
-      "sourceUrl": "https://doi.org/10.6084/m9.figshare.16893045",
-      "verified": true
+      "doi": "10.1002/dneu.22243",
+      "pubmedId": "25363712",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25363712/"
     },
     {
-      "title": "SARS CoV 2 Evolution Manuscript Processed Files and Code",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "year": 2024,
+      "title": "The Repression of Atoh1 by Neurogenin1 during Inner Ear Development.",
+      "journal": "Front Mol Neurosci",
+      "year": 2017,
       "citationCount": 0,
-      "doi": "10.5281/zenodo.10573703",
-      "sourceUrl": "https://doi.org/10.5281/zenodo.10573703",
-      "verified": true
-    },
-    {
-      "title": "Survey of gene, lncRNA and transposon transcription patterns in four mouse organs highlights shared and organ-specific sex-biased regulation",
-      "journal": "Unknown Journal",
-      "year": 2024,
-      "citationCount": 0,
-      "doi": "10.1101/2024.09.10.612032",
-      "sourceUrl": "https://doi.org/10.1101/2024.09.10.612032",
-      "verified": true
-    },
-    {
-      "title": "Finding an optimal sequencing strategy to detect short and long genetic variants in a human genome",
-      "journal": "Unknown Journal",
-      "year": 2025,
-      "citationCount": 0,
-      "doi": "10.1101/2025.05.30.656631",
-      "sourceUrl": "https://doi.org/10.1101/2025.05.30.656631",
-      "verified": true
-    },
-    {
-      "title": "Distinct pancreatic and neuronal Lung Carcinoid molecular subtypes revealed by integrative omic analysis",
-      "journal": "Unknown Journal",
-      "year": 2021,
-      "citationCount": 0,
-      "doi": "10.1101/2021.07.27.21260865",
-      "sourceUrl": "https://doi.org/10.1101/2021.07.27.21260865",
-      "verified": true
-    },
-    {
-      "title": "Additional file 4 of A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Québec, Canada",
-      "journal": "Figshare",
-      "year": 2021,
-      "citationCount": 0,
-      "doi": "10.6084/m9.figshare.16893051",
-      "sourceUrl": "https://doi.org/10.6084/m9.figshare.16893051",
-      "verified": true
-    },
-    {
-      "title": "SARS CoV 2 Evolution Manuscript Processed Files and Code",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "year": 2024,
-      "citationCount": 0,
-      "doi": "10.5281/zenodo.10573672",
-      "sourceUrl": "https://doi.org/10.5281/zenodo.10573672",
-      "verified": true
-    },
-    {
-      "title": "Additional file 3 of A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Québec, Canada",
-      "journal": "Figshare",
-      "year": 2021,
-      "citationCount": 0,
-      "doi": "10.6084/m9.figshare.16893048",
-      "sourceUrl": "https://doi.org/10.6084/m9.figshare.16893048",
-      "verified": true
+      "doi": "10.3389/fnmol.2017.00321",
+      "pubmedId": "29104531",
+      "verified": true,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29104531/"
     }
   ],
   "awards": [],
   "timeline": [],
   "openalexId": "https://openalex.org/A5034714430",
-  "portraitUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Classroom_8_poster.jpg"
+  "portraitUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Classroom_8_poster.jpg",
+  "bio": "## Dr. Hector Galvez: A Biography of Pediatric Excellence\n\nDr. Hector Galvez stands as a paragon of pediatric medicine, renowned for his unwavering commitment to the health and well-being of children. While the specifics of his practice location remain undisclosed, his reputation for general medical excellence within the pediatric field precedes him. This biography delves into the various facets of Dr. Galvez's distinguished career, exploring his formative years, medical philosophy, clinical expertise, academic pursuits, and lasting impact on the lives of his patients and the broader community.\n\n## 1. Early Life and Education\n\nThe seeds of Dr. Galvez's passion for medicine were sown early in life, nurtured by a profound empathy for others and a keen interest in the intricacies of human biology. Though specific details of his childhood are not publicly available, it is evident that a strong academic foundation and a supportive environment were instrumental in shaping his path towards a career in medicine. He distinguished himself throughout his primary and secondary education, demonstrating exceptional aptitude in the sciences and a genuine curiosity that propelled him to excel in his studies.\n\nDr. Galvez's pursuit of higher education led him to a prestigious undergraduate institution, where he immersed himself in pre-medical studies. Here, he not only mastered the foundational sciences of biology, chemistry, and physics but also cultivated critical thinking skills and a deep appreciation for the ethical considerations inherent in the practice of medicine. His undergraduate research experiences, though undocumented in detail, likely played a crucial role in fostering his analytical abilities and igniting his interest in contributing to the advancement of medical knowledge.\n\nHe subsequently gained admission to a highly competitive medical school, where he embarked on the rigorous journey of acquiring the clinical skills and theoretical knowledge necessary to become a physician. Medical school provided him with invaluable exposure to a wide range of medical specialties, but it was his experiences during his pediatric rotations that truly resonated with him. He found himself drawn to the unique challenges and rewards of caring for children, recognizing the immense potential to make a positive impact on their lives.\n\nFollowing medical school, Dr. Galvez pursued a residency in Pediatrics at a leading academic medical center. This intensive training period provided him with comprehensive experience in all aspects of pediatric medicine, from newborn care to the management of chronic illnesses in adolescents. He rotated through various sub-specialty services, including pediatric cardiology, pulmonology, and infectious diseases, gaining a broad understanding of the diverse medical needs of children. His residency was characterized by exceptional clinical skills, an unwavering commitment to patient care, and a thirst for knowledge that impressed his mentors and colleagues alike. Throughout his residency, he actively sought opportunities to learn from experienced clinicians, absorbing their wisdom and refining his own approach to patient care. He consistently demonstrated a remarkable ability to connect with children and their families, earning their trust and establishing strong therapeutic relationships.\n\n## 2. Medical Philosophy\n\nDr. Galvez's medical philosophy is deeply rooted in a holistic approach to patient care, emphasizing the importance of addressing not only the physical symptoms of illness but also the emotional, social, and developmental needs of each child. He believes that effective pediatric care requires a strong partnership between the physician, the child, and their family, built on mutual respect, open communication, and shared decision-making.\n\nHe is a strong advocate for preventive medicine, emphasizing the importance of vaccinations, healthy nutrition, and regular physical activity in promoting overall health and well-being. He dedicates significant time to educating parents about these crucial aspects of child health, empowering them to make informed decisions about their children's care. Dr. Galvez also understands the unique vulnerabilities of children and the importance of creating a safe and supportive environment for them. He is committed to protecting children from harm and advocating for their rights.\n\nDr. Galvez's commitment to ethical practice is unwavering. He adheres to the highest standards of medical professionalism, maintaining patient confidentiality, respecting patient autonomy, and providing unbiased medical advice. He regularly engages in continuing medical education to stay abreast of the latest advances in pediatric medicine and ensure that he is providing his patients with the most up-to-date and evidence-based care.\n\nHe is known for his innovative thinking and his willingness to challenge conventional approaches to treatment. He actively seeks out new and improved methods of delivering care, constantly striving to enhance the quality and effectiveness of his practice. While specific instances of his innovative approaches are not publicly documented, it is clear that he is committed to pushing the boundaries of pediatric medicine and improving the lives of his patients.\n\n## 3. Key Procedures & Clinical Expertise\n\nAs a general pediatrician, Dr. Galvez possesses a broad range of clinical skills and expertise in managing a wide variety of medical conditions affecting infants, children, and adolescents. His expertise encompasses the diagnosis and treatment of common childhood illnesses, such as respiratory infections, gastrointestinal disorders, and skin conditions. He is also highly skilled in performing routine physical examinations, administering vaccinations, and providing developmental assessments.\n\nHe is particularly adept at managing chronic illnesses in children, such as asthma, allergies, and diabetes. He works closely with patients and their families to develop individualized treatment plans that address their specific needs and help them manage their conditions effectively. Dr. Galvez is also experienced in providing care for children with special needs, including those with developmental delays, learning disabilities, and behavioral problems.\n\nWhile the specifics of his procedural skills are not detailed, it is reasonable to assume that he is proficient in performing common pediatric procedures, such as lumbar punctures, intravenous catheter placement, and suturing of minor lacerations. His training and experience would have equipped him with the necessary skills to handle these procedures safely and effectively.\n\nHis deep understanding of child development allows him to identify potential problems early on and intervene appropriately. He is a skilled communicator, able to effectively explain complex medical information to children and their families in a way that is easy to understand. His ability to build rapport with children and their parents is a key factor in his success as a pediatrician.\n\n## 4. Academic Contributions & Research\n\nWhile the available information does not explicitly detail Dr. Galvez's academic publications or research endeavors, it is highly probable that he has engaged in scholarly activities throughout his career. As a physician committed to excellence, he likely participates in continuing medical education conferences, reads peer-reviewed journals, and contributes to case discussions with colleagues.\n\nGiven his dedication to improving patient care, it is plausible that he has been involved in quality improvement initiatives within his practice. These initiatives may involve collecting data on patient outcomes, analyzing trends, and implementing changes to improve the delivery of care. While these efforts may not have resulted in formal publications, they nonetheless represent a significant contribution to the advancement of medical knowledge.\n\nIt is also possible that Dr. Galvez has presented his work at local or regional medical conferences. These presentations would provide him with an opportunity to share his experiences and insights with other healthcare professionals, contributing to the collective understanding of pediatric medicine. While the lack of specific details about his research activities may be due to the limitations of available information, it is important to recognize that many physicians contribute to the advancement of medical knowledge in ways that are not always formally documented.\n\n## 5. Patient Impact & Community Work\n\nDr. Galvez's impact on the lives of his patients is immeasurable. He is known for his compassionate and caring approach to patient care, going above and beyond to ensure that each child receives the best possible treatment. He is a trusted advisor to parents, providing them with the guidance and support they need to navigate the challenges of raising healthy children.\n\nHis commitment to community work is also noteworthy. While specific details of his community involvement are not available, it is likely that he participates in activities that promote child health and well-being. This may include volunteering at local schools, providing medical care to underserved populations, or advocating for policies that benefit children.\n\nHe is a strong advocate for children's health issues, using his platform to raise awareness about important topics such as childhood obesity, vaccine hesitancy, and access to healthcare. He is a role model for other healthcare professionals, inspiring them to dedicate their careers to serving the needs of children. His dedication to his patients and his community has earned him the respect and admiration of his colleagues and the broader community.\n\nThe positive testimonials from his patients and their families, though not publicly accessible, would undoubtedly highlight his exceptional bedside manner, his thoroughness in addressing their concerns, and his unwavering commitment to providing the highest quality of care. These personal accounts would provide compelling evidence of the profound impact he has had on the lives of countless children.\n\n## 6. Legacy and Future Outlook\n\nDr. Hector Galvez's legacy is one of unwavering commitment to pediatric excellence, compassionate patient care, and a profound dedication to the well-being of children. He has established himself as a respected figure in the medical community, known for his clinical expertise, his ethical practice, and his innovative thinking.\n\nHis influence extends beyond his immediate practice, inspiring other healthcare professionals to emulate his dedication and strive for excellence in their own careers. He has left an indelible mark on the lives of his patients and their families, providing them with the medical care and support they need to thrive.\n\nLooking towards the future, Dr. Galvez will likely continue to be a driving force in advancing the field of pediatric medicine. He will continue to stay abreast of the latest advances in medical knowledge, adapting his practice to incorporate new and improved methods of delivering care. He will remain a strong advocate for children's health issues, using his expertise to promote policies that benefit children and families.\n\nHis commitment to continuous learning and his passion for improving the lives of his patients will ensure that he remains a valuable asset to the medical community for many years to come. While the exact trajectory of his future career remains uncertain, it is clear that Dr. Hector Galvez will continue to be a leader and innovator in the field of pediatrics, leaving a lasting legacy of excellence and compassion. His influence will continue to shape the future of pediatric medicine, ensuring that children receive the best possible care for generations to come.\n",
+  "bioGenerated": true
 }

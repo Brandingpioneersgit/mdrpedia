@@ -116,6 +116,7 @@ model Profile {
   tier_verifications      TierVerification[]
   views                   ProfileView[]               // Page view analytics
   media                   ProfileMedia[]              // Videos, images, documents
+  impact_votes            ImpactVote[]                // User impact testimonials
 
   @@index([specialty])
   @@index([tier])
@@ -556,4 +557,36 @@ enum MediaType {
   IMAGE
   VIDEO
   DOCUMENT
+}
+
+// ============================================
+// IMPACT VOTES (User testimonials/upvotes)
+// ============================================
+
+model ImpactVote {
+  id           String       @id @default(cuid())
+  profile_id   String
+  ip_hash      String       // SHA-256 hashed IP for privacy & rate limiting
+  vote_type    ImpactType   @default(LIFE_CHANGED)
+  message      String?      // Optional testimonial message
+  is_verified  Boolean      @default(false) // Verified patient/colleague
+  is_anonymous Boolean      @default(true)
+  voter_name   String?      // Optional name if not anonymous
+  voter_role   String?      // Patient, Colleague, Student, etc.
+  createdAt    DateTime     @default(now())
+  profile      Profile      @relation(fields: [profile_id], references: [id], onDelete: Cascade)
+
+  @@unique([profile_id, ip_hash]) // One vote per IP per profile
+  @@index([profile_id])
+  @@index([createdAt])
+  @@map("impact_votes")
+}
+
+enum ImpactType {
+  LIFE_CHANGED    // "This doctor changed my life"
+  SAVED_LIFE      // "This doctor saved my life"
+  EXCELLENT_CARE  // "Excellent care received"
+  HIGHLY_SKILLED  // "Highly skilled professional"
+  MENTOR          // "Great mentor" (for colleagues)
+  RESEARCHER      // "Important research contributions"
 }

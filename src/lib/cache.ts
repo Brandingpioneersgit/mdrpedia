@@ -1,232 +1,139 @@
 /**
- * MDRPedia — Caching Utilities
- * Simple in-memory cache with TTL support
- * For production, consider using Redis
+ * MDRPedia — In-Memory Cache Layer
+ * Caches expensive database queries with TTL support
  */
 
-import { createLogger } from './logger';
-
-const log = createLogger('Cache');
-
-// ─── Types ───────────────────────────────────────────────────────────────────
-
-interface CacheEntry<T> {
-    value: T;
-    expiresAt: number;
+interface CacheItem<T> {
+    data: T;
+    expires: number;
     createdAt: number;
 }
 
-interface CacheOptions {
-    /** Time to live in milliseconds */
-    ttl?: number;
-    /** Maximum number of entries */
-    maxSize?: number;
+interface CacheStats {
+    hits: number;
+    misses: number;
+    size: number;
 }
 
-// ─── In-Memory Cache Implementation ──────────────────────────────────────────
+class MemoryCache {
+    private cache = new Map<string, CacheItem<any>>();
+    private stats: CacheStats = { hits: 0, misses: 0, size: 0 };
+    private maxSize = 1000;
 
-class InMemoryCache<T = unknown> {
-    private cache: Map<string, CacheEntry<T>> = new Map();
-    private readonly defaultTTL: number;
-    private readonly maxSize: number;
-    private hits = 0;
-    private misses = 0;
-
-    constructor(options: CacheOptions = {}) {
-        this.defaultTTL = options.ttl ?? 60_000; // 1 minute default
-        this.maxSize = options.maxSize ?? 1000;
-
-        // Cleanup expired entries every minute
-        setInterval(() => this.cleanup(), 60_000);
-    }
-
-    /**
-     * Get a value from the cache
-     */
-    get(key: string): T | undefined {
-        const entry = this.cache.get(key);
-
-        if (!entry) {
-            this.misses++;
-            return undefined;
+    get<T>(key: string): T | null {
+        const item = this.cache.get(key);
+        if (!item) {
+            this.stats.misses++;
+            return null;
         }
-
-        // Check if expired
-        if (Date.now() > entry.expiresAt) {
+        if (Date.now() > item.expires) {
             this.cache.delete(key);
-            this.misses++;
-            return undefined;
+            this.stats.misses++;
+            return null;
         }
-
-        this.hits++;
-        return entry.value;
+        this.stats.hits++;
+        return item.data as T;
     }
 
-    /**
-     * Set a value in the cache
-     */
-    set(key: string, value: T, ttl?: number): void {
-        // Evict oldest entries if at capacity
+    set<T>(key: string, data: T, ttlMs = 60000): void {
         if (this.cache.size >= this.maxSize) {
             const oldestKey = this.cache.keys().next().value;
             if (oldestKey) this.cache.delete(oldestKey);
         }
-
-        const now = Date.now();
         this.cache.set(key, {
-            value,
-            expiresAt: now + (ttl ?? this.defaultTTL),
-            createdAt: now,
+            data,
+            expires: Date.now() + ttlMs,
+            createdAt: Date.now()
         });
+        this.stats.size = this.cache.size;
     }
 
-    /**
-     * Get or compute a value
-     */
-    async getOrSet(key: string, compute: () => Promise<T>, ttl?: number): Promise<T> {
-        const cached = this.get(key);
-        if (cached !== undefined) {
-            return cached;
-        }
-
-        const value = await compute();
-        this.set(key, value, ttl);
-        return value;
+    async getOrFetch<T>(key: string, fetcher: () => Promise<T>, ttlMs = 60000): Promise<T> {
+        const cached = this.get<T>(key);
+        if (cached !== null) return cached;
+        const data = await fetcher();
+        this.set(key, data, ttlMs);
+        return data;
     }
 
-    /**
-     * Delete a value from the cache
-     */
-    delete(key: string): boolean {
+    invalidate(key: string): boolean {
         return this.cache.delete(key);
     }
 
-    /**
-     * Clear all entries matching a pattern
-     */
-    invalidate(pattern: string | RegExp): number {
+    invalidatePattern(pattern: string): number {
         let count = 0;
-        const regex = typeof pattern === 'string' ? new RegExp(pattern) : pattern;
-
+        const regex = new RegExp(pattern);
         for (const key of this.cache.keys()) {
             if (regex.test(key)) {
                 this.cache.delete(key);
                 count++;
             }
         }
-
         return count;
     }
 
-    /**
-     * Clear the entire cache
-     */
     clear(): void {
         this.cache.clear();
-        this.hits = 0;
-        this.misses = 0;
+        this.stats.size = 0;
     }
 
-    /**
-     * Get cache statistics
-     */
-    stats(): { size: number; hits: number; misses: number; hitRate: number } {
-        const total = this.hits + this.misses;
-        return {
-            size: this.cache.size,
-            hits: this.hits,
-            misses: this.misses,
-            hitRate: total > 0 ? this.hits / total : 0,
-        };
+    getStats(): CacheStats & { hitRate: string } {
+        const total = this.stats.hits + this.stats.misses;
+        const hitRate = total > 0 ? ((this.stats.hits / total) * 100).toFixed(1) + '%' : '0%';
+        return { ...this.stats, hitRate };
     }
 
-    /**
-     * Clean up expired entries
-     */
-    private cleanup(): void {
-        const now = Date.now();
+    cleanup(): number {
         let cleaned = 0;
-
-        for (const [key, entry] of this.cache.entries()) {
-            if (now > entry.expiresAt) {
+        const now = Date.now();
+        for (const [key, item] of this.cache.entries()) {
+            if (now > item.expires) {
                 this.cache.delete(key);
                 cleaned++;
             }
         }
-
-        if (cleaned > 0) {
-            log.debug('Cache cleanup', { cleaned, remaining: this.cache.size });
-        }
+        this.stats.size = this.cache.size;
+        return cleaned;
     }
 }
 
-// ─── Cache Instances ─────────────────────────────────────────────────────────
+export const cache = new MemoryCache();
 
-/** Search results cache - 30 second TTL */
-export const searchCache = new InMemoryCache<unknown>({
-    ttl: 30_000,
-    maxSize: 500,
-});
+export const CacheKeys = {
+    tierCounts: () => 'stats:tier_counts',
+    totalProfiles: () => 'stats:total_profiles',
+    totalCitations: () => 'stats:total_citations',
+    countryStats: () => 'stats:country_stats',
+    specialtyStats: () => 'stats:specialty_stats',
+    topDoctors: (limit: number) => 'doctors:top_' + limit,
+    doctorProfile: (slug: string) => 'doctor:' + slug,
+    rankings: () => 'rankings:all',
+    searchResults: (query: string) => 'search:' + query.toLowerCase().trim(),
+};
 
-/** Doctor profiles cache - 5 minute TTL */
-export const profileCache = new InMemoryCache<unknown>({
-    ttl: 300_000,
-    maxSize: 1000,
-});
+export const CacheTTL = {
+    SHORT: 30 * 1000,
+    MEDIUM: 5 * 60 * 1000,
+    LONG: 30 * 60 * 1000,
+    HOUR: 60 * 60 * 1000,
+};
 
-/** Rankings cache - 1 hour TTL */
-export const rankingsCache = new InMemoryCache<unknown>({
-    ttl: 3600_000,
-    maxSize: 10,
-});
+// ─── Search-specific Cache ───────────────────────────────────────────────────
+// Dedicated cache instance for search API results
 
-/** API response cache - 1 minute TTL */
-export const apiCache = new InMemoryCache<unknown>({
-    ttl: 60_000,
-    maxSize: 200,
-});
+export const searchCache = new MemoryCache();
 
-// ─── Cache Key Generators ────────────────────────────────────────────────────
-
-/**
- * Generate cache key for search queries
- */
-export function searchCacheKey(query: string, filters?: Record<string, string>): string {
-    const filterStr = filters ? Object.entries(filters).sort().map(([k, v]) => `${k}=${v}`).join('&') : '';
-    return `search:${query.toLowerCase()}:${filterStr}`;
+export function searchCacheKey(
+    query: string,
+    options: { country?: string; role?: string; specialty?: string; fuzzy?: string }
+): string {
+    const parts = [
+        'search',
+        query.toLowerCase().trim(),
+        options.country || '',
+        options.role || '',
+        options.specialty || '',
+        options.fuzzy || 'true',
+    ];
+    return parts.join(':');
 }
-
-/**
- * Generate cache key for doctor profiles
- */
-export function profileCacheKey(slug: string): string {
-    return `profile:${slug}`;
-}
-
-/**
- * Generate cache key for API responses
- */
-export function apiCacheKey(endpoint: string, params?: Record<string, string>): string {
-    const paramStr = params ? Object.entries(params).sort().map(([k, v]) => `${k}=${v}`).join('&') : '';
-    return `api:${endpoint}:${paramStr}`;
-}
-
-// ─── Memoization Helper ──────────────────────────────────────────────────────
-
-/**
- * Create a memoized version of an async function
- */
-export function memoize<TArgs extends unknown[], TResult>(
-    fn: (...args: TArgs) => Promise<TResult>,
-    keyFn: (...args: TArgs) => string,
-    ttl: number = 60_000
-): (...args: TArgs) => Promise<TResult> {
-    const cache = new InMemoryCache<TResult>({ ttl });
-
-    return async (...args: TArgs): Promise<TResult> => {
-        const key = keyFn(...args);
-        return cache.getOrSet(key, () => fn(...args), ttl);
-    };
-}
-
-export default InMemoryCache;
