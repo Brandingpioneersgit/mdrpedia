@@ -8,6 +8,8 @@ import { getCollection } from "astro:content";
 import TierBadge from "../../components/TierBadge.astro";
 import { HonorTier, classifyAward, getHonorStyle, GLOBAL_HONORS_DB } from "../../lib/global-honors";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
     const prizes = await getCollection("prizes");
     return prizes.map((prize) => ({

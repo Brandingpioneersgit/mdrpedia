@@ -7,8 +7,8 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://mdrpedia.com',
 
-  // Output mode: static (supports on-demand rendering with adapter)
-  output: 'static',
+  // Output mode: server for SSR with prerender for static pages
+  output: 'server',
 
   adapter: node({
     mode: 'standalone',
