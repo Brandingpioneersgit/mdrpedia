@@ -1188,162 +1188,556 @@ function slugifyInstitution(name: string): string {
         --accent-rgb: 74, 222, 128;
     }
     .tier-unranked {
-        --accent: #94a3b8;
-        --accent-glow: rgba(148, 163, 184, 0.1);
-        --accent-rgb: 148, 163, 184;
-        --card-bg: rgba(24, 24, 36, 0.95);
+        --accent: #60a5fa;
+        --accent-glow: rgba(96, 165, 250, 0.15);
+        --accent-rgb: 96, 165, 250;
+        --card-bg: #0c1222;
+        --unranked-text-primary: #f8fafc;
+        --unranked-text-secondary: #cbd5e1;
+        --unranked-text-muted: #94a3b8;
+        --unranked-border: rgba(148, 163, 184, 0.2);
+        --unranked-surface: #0f172a;
+        --unranked-surface-hover: #1e293b;
     }
 
-    /* UNRANKED Profile - Enhanced Visibility */
+    /* ═══════════════════════════════════════════════════════════════════════════
+       UNRANKED PROFILE - COMPLETE REDESIGN
+       Professional slate/blue theme with high contrast and distinctive identity
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    /* Hero Section - Dark slate with subtle blue accents */
     .tier-unranked .hero {
-        background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(20, 20, 35, 0.95) 100%) !important;
+        background: linear-gradient(180deg, #0f172a 0%, #020617 100%) !important;
+        border-bottom: 1px solid var(--unranked-border) !important;
+    }
+
+    .tier-unranked .hero::before {
+        background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(96, 165, 250, 0.08) 0%, transparent 70%) !important;
     }
 
     .tier-unranked .hero__name {
-        color: #f3f4f6;
+        color: var(--unranked-text-primary) !important;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #94a3b8 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
     }
 
     .tier-unranked .hero__specialty {
-        color: #d1d5db;
+        color: var(--unranked-text-secondary) !important;
     }
 
     .tier-unranked .hero__subspecialty {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
     }
 
     .tier-unranked .hero__location {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
     }
 
+    .tier-unranked .hero__location svg {
+        color: var(--accent) !important;
+        opacity: 0.7;
+    }
+
+    /* Metrics - Glassmorphism cards with blue tint */
     .tier-unranked .metric {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.1);
+        background: rgba(15, 23, 42, 0.8) !important;
+        border: 1px solid var(--unranked-border) !important;
+        backdrop-filter: blur(12px);
+    }
+
+    .tier-unranked .metric:hover {
+        background: rgba(30, 41, 59, 0.9) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(96, 165, 250, 0.1);
     }
 
     .tier-unranked .metric__value {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
+        font-weight: 700;
     }
 
     .tier-unranked .metric__label {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
     }
 
+    .tier-unranked .metric--impact {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(15, 23, 42, 0.9) 100%) !important;
+        border-color: rgba(96, 165, 250, 0.25) !important;
+    }
+
+    .tier-unranked .metric--impact .metric__value {
+        color: #60a5fa !important;
+    }
+
+    /* Hero Actions */
+    .tier-unranked .hero__actions {
+        border-top-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .btn--outline {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .btn--outline:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.4) !important;
+        color: var(--unranked-text-primary) !important;
+    }
+
+    /* Content Wrapper */
+    .tier-unranked .content-wrapper {
+        background: linear-gradient(180deg, #020617 0%, #0a0a12 100%);
+    }
+
+    /* Cards - Deep slate with visible borders */
     .tier-unranked .card {
-        background: rgba(25, 25, 40, 0.95);
-        border-color: rgba(255, 255, 255, 0.08);
+        background: var(--unranked-surface) !important;
+        border: 1px solid var(--unranked-border) !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .tier-unranked .card:hover {
+        background: var(--unranked-surface-hover) !important;
+        border-color: rgba(96, 165, 250, 0.25) !important;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(96, 165, 250, 0.05);
+    }
+
+    .tier-unranked .card--overview {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, var(--unranked-surface) 100%) !important;
+        border-color: rgba(96, 165, 250, 0.15) !important;
+    }
+
+    .tier-unranked .card--overview::before {
+        background: linear-gradient(180deg, #60a5fa 0%, rgba(96, 165, 250, 0.3) 100%) !important;
     }
 
     .tier-unranked .card__title {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
+        border-bottom-color: var(--unranked-border) !important;
     }
 
-    .tier-unranked .bio-text {
-        color: #d1d5db;
-    }
-
-    .tier-unranked .sidebar-card {
-        background: rgba(25, 25, 40, 0.95);
-    }
-
-    .tier-unranked .sidebar-card__title {
-        color: #e5e7eb;
+    .tier-unranked .card__title svg {
+        color: #60a5fa !important;
     }
 
     .tier-unranked .card__summary {
-        color: #d1d5db;
+        color: var(--unranked-text-secondary) !important;
+        line-height: 1.8;
     }
 
-    .tier-unranked .fact-row dt {
-        color: #9ca3af;
+    /* Biography */
+    .tier-unranked .bio-text {
+        color: var(--unranked-text-secondary) !important;
+        line-height: 1.85;
     }
 
-    .tier-unranked .fact-row dd {
-        color: #e5e7eb;
-    }
-
-    .tier-unranked .completeness-text {
-        color: #9ca3af;
-    }
-
-    .tier-unranked .credential-link {
-        color: #d1d5db;
-    }
-
-    .tier-unranked .suggest-text {
-        color: #9ca3af;
-    }
-
-    .tier-unranked .suggest-title {
-        color: #f3f4f6;
-    }
-
+    /* Prose content */
     .tier-unranked .prose,
     .tier-unranked .prose p,
     .tier-unranked .prose li,
-    .tier-unranked .prose span {
-        color: #d1d5db;
+    .tier-unranked .prose span,
+    .tier-unranked .prose strong {
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .prose a {
+        color: #60a5fa !important;
+    }
+
+    .tier-unranked .prose a:hover {
+        color: #93c5fd !important;
+    }
+
+    /* Sidebar Cards */
+    .tier-unranked .sidebar-card {
+        background: var(--unranked-surface) !important;
+        border: 1px solid var(--unranked-border) !important;
+    }
+
+    .tier-unranked .sidebar-card:hover {
+        border-color: rgba(96, 165, 250, 0.25) !important;
+    }
+
+    .tier-unranked .sidebar-card__title {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    /* Fact rows */
+    .tier-unranked .fact-row dt {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    .tier-unranked .fact-row dd {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    /* Profile completeness */
+    .tier-unranked .completeness-text {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    .tier-unranked .completeness-bar {
+        background: rgba(96, 165, 250, 0.2) !important;
+    }
+
+    .tier-unranked .completeness-fill {
+        background: linear-gradient(90deg, #60a5fa, #3b82f6) !important;
+    }
+
+    /* Credential links */
+    .tier-unranked .credential-link {
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .credential-link:hover {
+        color: #60a5fa !important;
+    }
+
+    /* Suggest card */
+    .tier-unranked .suggest-card {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.08) 0%, var(--unranked-surface) 100%) !important;
+        border-color: rgba(96, 165, 250, 0.2) !important;
+    }
+
+    .tier-unranked .suggest-title {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    .tier-unranked .suggest-text {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    .tier-unranked .suggest-icon svg {
+        color: #60a5fa !important;
+    }
+
+    .tier-unranked .suggest-option {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .suggest-option:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+        color: var(--unranked-text-primary) !important;
+    }
+
+    .tier-unranked .suggest-note {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Affiliations */
+    .tier-unranked .affiliation-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .affiliation-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
     }
 
     .tier-unranked .affiliation-card__name {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
     }
 
     .tier-unranked .affiliation-card__role {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
+    }
+
+    .tier-unranked .affiliation-card__location {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Research stats */
+    .tier-unranked .research-stat {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
     }
 
     .tier-unranked .research-stat__value {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
     }
 
     .tier-unranked .research-stat__label {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
     }
 
-    .tier-unranked .pub-title {
-        color: #e5e7eb;
+    /* Publications */
+    .tier-unranked .publication-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .publication-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+    }
+
+    .tier-unranked .pub-title,
+    .tier-unranked .publication__title {
+        color: var(--unranked-text-primary) !important;
     }
 
     .tier-unranked .pub-authors,
-    .tier-unranked .pub-journal {
-        color: #9ca3af;
-    }
-
-    .tier-unranked .publication__title {
-        color: #e5e7eb;
-    }
-
+    .tier-unranked .pub-journal,
     .tier-unranked .publication__meta {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
     }
 
     .tier-unranked .pub-link {
-        color: #d1d5db;
+        color: #60a5fa !important;
+    }
+
+    .tier-unranked .pub-link:hover {
+        color: #93c5fd !important;
+    }
+
+    .tier-unranked .pub-badge {
+        background: rgba(96, 165, 250, 0.15) !important;
+        color: #60a5fa !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+    }
+
+    /* Institution cards */
+    .tier-unranked .institution-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .institution-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
     }
 
     .tier-unranked .institution-card__name {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
     }
 
     .tier-unranked .institution-card__location {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Talks */
+    .tier-unranked .talk-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .talk-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
     }
 
     .tier-unranked .talk-card__title {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
     }
 
-    .tier-unranked .talk-card__venue {
-        color: #9ca3af;
+    .tier-unranked .talk-card__venue,
+    .tier-unranked .talk-card__date {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Awards */
+    .tier-unranked .award-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .award-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
     }
 
     .tier-unranked .award-name {
-        color: #e5e7eb;
+        color: var(--unranked-text-primary) !important;
     }
 
     .tier-unranked .award-year,
     .tier-unranked .award-issuer {
-        color: #9ca3af;
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Timeline */
+    .tier-unranked .timeline-item {
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .timeline-dot {
+        background: #60a5fa !important;
+        box-shadow: 0 0 12px rgba(96, 165, 250, 0.4) !important;
+    }
+
+    .tier-unranked .timeline-year {
+        color: #60a5fa !important;
+    }
+
+    .tier-unranked .timeline-title {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    .tier-unranked .timeline-description {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Tabs */
+    .tier-unranked .tab-btn {
+        color: var(--unranked-text-muted) !important;
+        border-color: transparent !important;
+    }
+
+    .tier-unranked .tab-btn:hover {
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .tab-btn.active {
+        color: #60a5fa !important;
+        border-color: #60a5fa !important;
+        background: rgba(96, 165, 250, 0.1) !important;
+    }
+
+    /* AI Content sections */
+    .tier-unranked .ai-section {
+        background: var(--unranked-surface) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .ai-section__title {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    .tier-unranked .ai-section__content {
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    /* Verification badges */
+    .tier-unranked .verify-badge {
+        background: rgba(96, 165, 250, 0.15) !important;
+        color: #60a5fa !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+    }
+
+    /* Portrait frame */
+    .tier-unranked .hero__frame {
+        border-color: var(--unranked-border) !important;
+        box-shadow: 0 0 40px rgba(96, 165, 250, 0.1) !important;
+    }
+
+    .tier-unranked .hero__frame::before {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), transparent) !important;
+    }
+
+    .tier-unranked .hero__initials {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+        color: #60a5fa !important;
+    }
+
+    /* Similar doctors section */
+    .tier-unranked .similar-card {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border-color: var(--unranked-border) !important;
+    }
+
+    .tier-unranked .similar-card:hover {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: rgba(96, 165, 250, 0.3) !important;
+    }
+
+    .tier-unranked .similar-card__name {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    .tier-unranked .similar-card__specialty {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    /* Quote/citation styling */
+    .tier-unranked blockquote {
+        border-left-color: #60a5fa !important;
+        background: rgba(96, 165, 250, 0.05) !important;
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    /* Links within content */
+    .tier-unranked a:not(.btn):not(.nav-link) {
+        color: #60a5fa;
+    }
+
+    .tier-unranked a:not(.btn):not(.nav-link):hover {
+        color: #93c5fd;
+    }
+
+    /* Section headers */
+    .tier-unranked h2,
+    .tier-unranked h3,
+    .tier-unranked h4 {
+        color: var(--unranked-text-primary) !important;
+    }
+
+    /* Lists */
+    .tier-unranked ul li,
+    .tier-unranked ol li {
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked ul li::marker {
+        color: #60a5fa !important;
+    }
+
+    /* Embed and share buttons */
+    .tier-unranked .embed-btn,
+    .tier-unranked .share-btn {
+        background: rgba(15, 23, 42, 0.8) !important;
+        border-color: var(--unranked-border) !important;
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    .tier-unranked .embed-btn:hover,
+    .tier-unranked .share-btn:hover {
+        background: rgba(30, 41, 59, 0.9) !important;
+        border-color: rgba(96, 165, 250, 0.4) !important;
+        color: var(--unranked-text-primary) !important;
+    }
+
+    /* Knowledge graph nodes */
+    .tier-unranked .kg-node {
+        background: var(--unranked-surface) !important;
+        border-color: var(--unranked-border) !important;
+        color: var(--unranked-text-secondary) !important;
+    }
+
+    /* Empty states */
+    .tier-unranked .empty-state {
+        color: var(--unranked-text-muted) !important;
+    }
+
+    .tier-unranked .empty-state__icon {
+        color: #60a5fa !important;
+        opacity: 0.5;
+    }
+
+    /* Loading skeletons */
+    .tier-unranked .skeleton {
+        background: linear-gradient(90deg, var(--unranked-surface) 25%, rgba(96, 165, 250, 0.1) 50%, var(--unranked-surface) 75%) !important;
+    }
+
+    /* Scrollbar styling */
+    .tier-unranked ::-webkit-scrollbar-track {
+        background: var(--unranked-surface);
+    }
+
+    .tier-unranked ::-webkit-scrollbar-thumb {
+        background: rgba(96, 165, 250, 0.3);
+        border-radius: 4px;
+    }
+
+    .tier-unranked ::-webkit-scrollbar-thumb:hover {
+        background: rgba(96, 165, 250, 0.5);
     }
 
     .container {
