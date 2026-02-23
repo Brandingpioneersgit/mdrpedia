@@ -12,6 +12,7 @@ import SimilarDoctors from "../components/SimilarDoctors.astro";
 import ShareProfileModal from "../components/ShareProfileModal";
 import ImpactVoteButton from "../components/ImpactVoteButton";
 import { generateAISummary } from "../lib/ai-summary";
+import ClaimProfile from "../components/ClaimProfile.astro";
 
 // Premium Components
 import MediaVault from "../components/MediaVault.astro";
@@ -434,7 +435,7 @@ function slugifyInstitution(name: string): string {
                             title={`MDRPedia: ${doctor.fullName}`}
                         />
                         {doctor.tier === "UNRANKED" && (
-                            <a href="/doctor/claim" class="btn btn--outline">Claim Profile</a>
+                            <a href="#claim-profile" class="btn btn--outline" onclick="document.getElementById('claim-profile').scrollIntoView({ behavior: 'smooth' }); return false;">Claim Profile</a>
                         )}
                     </div>
                 </div>
@@ -1147,6 +1148,10 @@ function slugifyInstitution(name: string): string {
                 </div>
             </div>
         </div>
+        
+        {doctor.tier === "UNRANKED" && (
+            <ClaimProfile doctorName={doctor.fullName} slug={slug} />
+        )}
     </article>
 </Layout>
 

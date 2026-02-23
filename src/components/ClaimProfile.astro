@@ -1,8 +1,7 @@
 ---
 /**
- * MDRPedia — Claim Profile Portal
- * Self-service portal for doctors to claim their profile
- * Includes Cloudinary Upload Widget for certificate uploads
+ * MDRPedia — Premium Claim Profile Portal
+ * Embedded into doctor profiles
  */
 interface Props {
     doctorName: string;
@@ -12,207 +11,476 @@ interface Props {
 const { doctorName, slug } = Astro.props;
 ---
 
-<section class="claim-profile" id="claim-profile">
-    <div class="claim-profile__card">
-        <div class="claim-profile__header">
-            <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class="claim-profile__icon"
-            >
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            <h3>Are you {doctorName}?</h3>
+<section class="claim-profile-premium" id="claim-profile">
+    <div class="claim-card">
+        <div class="claim-bg">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
         </div>
 
-        <p class="claim-profile__description">
-            If this is your profile, claim it to verify your credentials, update
-            your biography, and manage your citations. Verified profiles receive
-            a verified badge.
-        </p>
-
-        <form class="claim-profile__form" id="claimForm" data-slug={slug}>
-            <div class="claim-profile__field">
-                <label for="claimEmail">Professional Email</label>
-                <input
-                    type="email"
-                    id="claimEmail"
-                    placeholder="your.name@hospital.edu"
-                    required
-                />
-            </div>
-
-            <div class="claim-profile__field">
-                <label for="claimLicense">Medical License / NPI Number</label>
-                <input
-                    type="text"
-                    id="claimLicense"
-                    placeholder="e.g., NPI, GMC, or Medical Council ID"
-                    required
-                />
-            </div>
-
-            <!-- HoneyPot Field -->
-            <div style="display:none; opacity:0; visibility:hidden;">
-                <label for="website_url_hp">Website</label>
-                <input
-                    type="text"
-                    id="website_url_hp"
-                    name="website_url_hp"
-                    tabindex="-1"
-                    autocomplete="off"
-                />
-            </div>
-
-            <div class="claim-profile__field">
-                <label>Upload Verification Certificate</label>
-                <div class="claim-profile__upload" id="uploadArea">
+        <div class="claim-content">
+            <div class="claim-header">
+                <div class="icon-wrapper">
                     <svg
-                        width="24"
-                        height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="2"
                     >
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
                         ></path>
-                        <polyline points="17 8 12 3 7 8"></polyline>
-                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                        <path d="M9 12l2 2 4-4"></path>
                     </svg>
-                    <span>Click to upload or drag & drop</span>
-                    <span class="claim-profile__upload-hint"
-                        >PDF, JPG, PNG up to 10MB</span
-                    >
                 </div>
-                <input
-                    type="file"
-                    id="certUpload"
-                    accept=".pdf,.jpg,.jpeg,.png"
-                    class="sr-only"
-                />
+                <h3>Are you {doctorName}?</h3>
+                <p>
+                    Claim your MDRPedia profile to unlock analytics, manage your
+                    digital legacy, and receive your verified badge.
+                </p>
             </div>
 
-            <button
-                type="submit"
-                class="btn btn--primary claim-profile__submit"
-            >
-                Submit Claim Request
-            </button>
-        </form>
+            <form class="claim-form" id="claimForm" data-slug={slug}>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="claimEmail">Institutional Email</label>
+                        <div class="input-wrapper">
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                ></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <input
+                                type="email"
+                                id="claimEmail"
+                                placeholder="dr.name@hospital.edu"
+                                required
+                            />
+                        </div>
+                    </div>
 
-        <p class="claim-profile__footer">
-            Claims are reviewed within 48 hours by our verification team.
-        </p>
+                    <div class="form-group">
+                        <label for="claimLicense"
+                            >Medical License / NPI Number</label
+                        >
+                        <div class="input-wrapper">
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <rect
+                                    x="3"
+                                    y="11"
+                                    width="18"
+                                    height="11"
+                                    rx="2"
+                                    ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                            </svg>
+                            <input
+                                type="text"
+                                id="claimLicense"
+                                placeholder="National Provider Identifier"
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Verification Document</label>
+                    <div class="upload-zone" id="uploadArea">
+                        <div class="upload-icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                ></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <div class="upload-text">
+                            <strong>Click to upload</strong> or drag and drop
+                            <span>PDF, JPG or PNG (max. 10MB)</span>
+                        </div>
+                    </div>
+                    <input
+                        type="file"
+                        id="certUpload"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        class="sr-only"
+                    />
+                </div>
+
+                <div style="display:none; opacity:0; visibility:hidden;">
+                    <input
+                        type="text"
+                        id="website_url_hp"
+                        name="website_url_hp"
+                        tabindex="-1"
+                        autocomplete="off"
+                    />
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Submit Verification Request</span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="trust-footer">
+                <div class="trust-badge">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                    </svg>
+                    256-bit Secure
+                </div>
+                <div class="trust-badge">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Fast Review (48h)
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
-    .claim-profile {
-        margin: var(--space-3xl) 0;
-        padding: var(--space-2xl) 0;
-        border-top: 1px solid var(--border-subtle);
+    .claim-profile-premium {
+        margin: 4rem auto;
+        max-width: 800px;
+        position: relative;
     }
 
-    .claim-profile__card {
-        max-width: 580px;
-        margin: 0 auto;
-        background: var(--bg-card);
-        border: 1px solid var(--border-medium);
-        border-radius: var(--radius-lg);
-        padding: var(--space-2xl);
+    .claim-card {
+        background: linear-gradient(
+            145deg,
+            rgba(30, 30, 45, 0.95),
+            rgba(20, 20, 35, 0.98)
+        );
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        box-shadow:
+            0 25px 50px -12px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(139, 92, 246, 0.1),
+            0 0 80px -20px rgba(139, 92, 246, 0.2);
+        backdrop-filter: blur(20px);
     }
 
-    .claim-profile__header {
+    .claim-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .glow {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.15;
+    }
+
+    .glow-1 {
+        background: #8b5cf6;
+        top: -100px;
+        left: -100px;
+        animation: pulse 8s ease-in-out infinite alternate;
+    }
+
+    .glow-2 {
+        background: #ec4899;
+        bottom: -100px;
+        right: -100px;
+        animation: pulse 8s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.15;
+        }
+        100% {
+            transform: scale(1.2);
+            opacity: 0.25;
+        }
+    }
+
+    .claim-content {
+        position: relative;
+        z-index: 1;
+        padding: 3rem;
+    }
+
+    .claim-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.2),
+            rgba(236, 72, 153, 0.1)
+        );
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
         display: flex;
         align-items: center;
-        gap: var(--space-md);
-        margin-bottom: var(--space-lg);
+        justify-content: center;
+        margin: 0 auto 1.5rem;
     }
 
-    .claim-profile__header h3 {
-        font-family: var(--font-serif);
-        font-size: 1.5rem;
-        color: var(--text-primary);
+    .icon-wrapper svg {
+        width: 32px;
+        height: 32px;
+        color: #a855f7;
     }
 
-    .claim-profile__icon {
-        color: var(--accent-purple);
-        flex-shrink: 0;
+    .claim-header h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 0.75rem;
+        background: linear-gradient(135deg, white, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    .claim-profile__description {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        margin-bottom: var(--space-xl);
+    .claim-header p {
+        color: #9ca3af;
+        font-size: 1.05rem;
         line-height: 1.6;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
-    .claim-profile__form {
+    .claim-form {
         display: flex;
         flex-direction: column;
-        gap: var(--space-lg);
+        gap: 1.5rem;
     }
 
-    .claim-profile__field label {
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+        .claim-content {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    .form-group label {
         display: block;
         font-size: 0.8rem;
         font-weight: 600;
-        color: var(--text-secondary);
-        margin-bottom: var(--space-xs);
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        color: #d1d5db;
+        margin-bottom: 0.5rem;
     }
 
-    .claim-profile__field input[type="email"],
-    .claim-profile__field input[type="text"] {
+    .input-wrapper {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        color: #6b7280;
+        transition: color 0.3s;
+    }
+
+    .input-wrapper input {
         width: 100%;
-        padding: var(--space-md);
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-subtle);
-        border-radius: var(--radius-md);
-        color: var(--text-primary);
-        font-family: var(--font-sans);
-        font-size: 0.95rem;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 12px;
+        padding: 1rem 1rem 1rem 3rem;
+        color: white;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+
+    .input-wrapper input:focus {
         outline: none;
-        transition: border-color var(--transition-fast);
+        border-color: #a855f7;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
     }
 
-    .claim-profile__field input:focus {
-        border-color: var(--accent-purple);
-        box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+    .input-wrapper input:focus + .input-icon {
+        color: #a855f7;
     }
 
-    .claim-profile__upload {
+    .upload-zone {
+        border: 2px dashed rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.02);
+        cursor: pointer;
+        transition: all 0.3s;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--space-sm);
-        padding: var(--space-xl);
-        border: 2px dashed var(--border-medium);
-        border-radius: var(--radius-md);
-        cursor: pointer;
-        color: var(--text-muted);
-        transition: all var(--transition-base);
-        text-align: center;
+        gap: 1rem;
     }
 
-    .claim-profile__upload:hover {
-        border-color: var(--accent-purple);
-        color: var(--text-secondary);
+    .upload-zone:hover,
+    .upload-zone.dragover {
+        border-color: #a855f7;
         background: rgba(139, 92, 246, 0.05);
+        transform: translateY(-2px);
     }
 
-    .claim-profile__upload-hint {
-        font-size: 0.75rem;
-        opacity: 0.7;
+    .upload-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(168, 85, 247, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a855f7;
+    }
+
+    .upload-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .upload-text {
+        color: #d1d5db;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .upload-text span {
+        font-size: 0.8rem;
+        color: #6b7280;
+    }
+
+    .upload-text strong {
+        color: #a855f7;
+    }
+
+    .submit-btn {
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        color: white;
+        border: none;
+        padding: 1.25rem;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5);
+        margin-top: 1rem;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.6);
+    }
+
+    .submit-btn svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s;
+    }
+
+    .submit-btn:hover svg {
+        transform: translateX(4px);
+    }
+
+    .submit-btn.success {
+        background: linear-gradient(135deg, #10b981, #059669);
+        pointer-events: none;
+        box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
+    }
+
+    .trust-footer {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #9ca3af;
+    }
+
+    .trust-badge svg {
+        width: 16px;
+        height: 16px;
+        color: #10b981;
     }
 
     .sr-only {
@@ -224,20 +492,6 @@ const { doctorName, slug } = Astro.props;
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         border: 0;
-    }
-
-    .claim-profile__submit {
-        width: 100%;
-        justify-content: center;
-        padding: var(--space-md) var(--space-xl);
-        font-size: 1rem;
-    }
-
-    .claim-profile__footer {
-        margin-top: var(--space-lg);
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        text-align: center;
     }
 </style>
 
@@ -253,31 +507,32 @@ const { doctorName, slug } = Astro.props;
         // Drag & drop
         uploadArea?.addEventListener("dragover", (e) => {
             e.preventDefault();
-            uploadArea.style.borderColor = "var(--accent-purple)";
+            uploadArea.classList.add("dragover");
         });
 
         uploadArea?.addEventListener("dragleave", () => {
-            uploadArea.style.borderColor = "";
+            uploadArea.classList.remove("dragover");
         });
 
         uploadArea?.addEventListener("drop", (e) => {
             e.preventDefault();
-            uploadArea.style.borderColor = "";
+            uploadArea.classList.remove("dragover");
             const files = (e as DragEvent).dataTransfer?.files;
             if (files && files.length > 0 && fileInput) {
                 const dt = new DataTransfer();
                 dt.items.add(files[0]);
                 fileInput.files = dt.files;
-                const span = uploadArea.querySelector("span");
-                if (span) span.textContent = `Selected: ${files[0].name}`;
+                const text = uploadArea.querySelector(".upload-text");
+                if (text)
+                    text.innerHTML = `<strong>Selected:</strong><br/><span>${files[0].name}</span>`;
             }
         });
 
         fileInput?.addEventListener("change", () => {
             if (fileInput.files && fileInput.files.length > 0) {
-                const span = uploadArea?.querySelector("span");
-                if (span)
-                    span.textContent = `Selected: ${fileInput.files[0].name}`;
+                const text = uploadArea?.querySelector(".upload-text");
+                if (text)
+                    text.innerHTML = `<strong>Selected:</strong><br/><span>${fileInput.files[0].name}</span>`;
             }
         });
 
@@ -285,9 +540,8 @@ const { doctorName, slug } = Astro.props;
         const form = document.getElementById("claimForm");
         form?.addEventListener("submit", (e) => {
             e.preventDefault();
-            const btn = form.querySelector("button");
+            const btn = document.getElementById("submitBtn");
             if (btn) {
-                // Check honeypot
                 const hp = document.getElementById(
                     "website_url_hp",
                 ) as HTMLInputElement;
@@ -296,9 +550,13 @@ const { doctorName, slug } = Astro.props;
                     return;
                 }
 
-                btn.textContent = "Claim Submitted!";
-                btn.setAttribute("disabled", "true");
-                btn.style.opacity = "0.7";
+                btn.classList.add("success");
+                btn.innerHTML = `
+                    <span>Request Submitted Successfully</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                `;
             }
         });
     });

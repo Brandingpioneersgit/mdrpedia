@@ -205,7 +205,8 @@ function getTierBadge(tier: string) {
             <div class="container">
                 <div class="institutions-grid" id="institutions-grid">
                     {institutions.map((institution, index) => (
-                        <article
+                        <a
+                            href={`/institutions/${institution.slug}`}
                             class="institution-card"
                             data-name={institution.name.toLowerCase()}
                             data-countries={[...institution.countries].join(',').toLowerCase()}
@@ -307,7 +308,7 @@ function getTierBadge(tier: string) {
                                 </div>
                             )}
 
-                        </article>
+                        </a>
                     ))}
                 </div>
 
@@ -595,17 +596,22 @@ function getTierBadge(tier: string) {
     }
 
     .institution-card {
+        display: block;
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 20px;
         padding: 24px;
         transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
     }
 
     .institution-card:hover {
         background: rgba(255, 255, 255, 0.04);
         border-color: rgba(59, 130, 246, 0.3);
         transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
     }
 
     .card-header {
