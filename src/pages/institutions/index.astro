@@ -12,6 +12,7 @@ const url = new URL(Astro.request.url);
 const filterCountry = url.searchParams.get('country');
 const filterSector = url.searchParams.get('sector');
 const searchQuery = url.searchParams.get('q');
+const errorParam = url.searchParams.get('error');
 
 // Build where clause
 const whereClause: any = {};
@@ -25,42 +26,51 @@ if (searchQuery) {
     whereClause.name = { contains: searchQuery, mode: 'insensitive' };
 }
 
-// Fetch institutions with affiliated doctor counts
-const institutions = await prisma.hospital.findMany({
-    where: whereClause,
-    include: {
-        geography: true,
-        affiliations: {
-            include: {
-                profile: {
-                    select: { tier: true }
+let institutions: any[] = [];
+let countries: any[] = [];
+let dbError = false;
+
+try {
+    // Fetch institutions with affiliated doctor counts
+    institutions = await prisma.hospital.findMany({
+        where: whereClause,
+        include: {
+            geography: true,
+            affiliations: {
+                include: {
+                    profile: {
+                        select: { tier: true }
+                    }
                 }
             }
-        }
-    },
-    orderBy: [
-        { ranking_position: 'asc' },
-        { name: 'asc' }
-    ],
-    take: 100
-});
+        },
+        orderBy: [
+            { ranking_position: 'asc' },
+            { name: 'asc' }
+        ],
+        take: 100
+    });
 
-// Get unique countries for filter
-const countries = await prisma.geography.findMany({
-    where: {
-        hospitals: { some: {} }
-    },
-    select: { country: true },
-    distinct: ['country'],
-    orderBy: { country: 'asc' }
-});
+    // Get unique countries for filter
+    countries = await prisma.geography.findMany({
+        where: {
+            hospitals: { some: {} }
+        },
+        select: { country: true },
+        distinct: ['country'],
+        orderBy: { country: 'asc' }
+    });
+} catch (e) {
+    console.error('Institutions page database error:', e);
+    dbError = true;
+}
 
 // Process institutions with stats
 const processedInstitutions = institutions.map(inst => {
     const tierCounts = { TITAN: 0, ELITE: 0, MASTER: 0, UNRANKED: 0 };
-    inst.affiliations.forEach(aff => {
+    inst.affiliations.forEach((aff: any) => {
         if (aff.profile?.tier) {
-            tierCounts[aff.profile.tier]++;
+            tierCounts[aff.profile.tier as keyof typeof tierCounts]++;
         }
     });
 
@@ -83,6 +93,27 @@ const sectorLabels: Record<string, string> = {
             <h1>Medical Institutions</h1>
             <p class="page-desc">Explore hospitals and research institutions where leading physicians practice.</p>
         </header>
+
+        {/* Error Messages */}
+        {errorParam === 'not_found' && (
+            <div class="error-banner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4M12 16h.01"/>
+                </svg>
+                <span>Institution not found. It may have been removed or the URL is incorrect.</span>
+            </div>
+        )}
+
+        {dbError && (
+            <div class="error-banner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4M12 16h.01"/>
+                </svg>
+                <span>Unable to load institutions. Please try again later.</span>
+            </div>
+        )}
 
         <!-- Search & Filters -->
         <div class="filters-bar">
@@ -218,6 +249,22 @@ const sectorLabels: Record<string, string> = {
     .institutions-page {
         padding: 60px 20px;
         max-width: 1400px;
+    }
+
+    .error-banner {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 10px;
+        color: #f87171;
+        margin-bottom: 24px;
+    }
+
+    .error-banner svg {
+        flex-shrink: 0;
     }
 
     .page-header {

@@ -66,20 +66,20 @@ const tierConfig: Record<string, {
 };
 
 const quickLinks = [
-    { href: '/rankings', icon: '🏆', label: 'Rankings', desc: 'Browse top-rated physicians worldwide', color: '#fbbf24' },
-    { href: '/rare-diseases', icon: '🧬', label: 'Rare Diseases', desc: 'Expert database for rare conditions', color: '#a78bfa' },
-    { href: '/hospitals', icon: '🏥', label: 'Institutions', desc: 'Leading medical centers globally', color: '#38bdf8' },
-    { href: '/prizes', icon: '🎖️', label: 'Awards', desc: 'Nobel, Lasker & major honors', color: '#4ade80' },
-    { href: '/news', icon: '📰', label: 'Medical News', desc: 'Latest breakthroughs & research', color: '#f472b6' },
-    { href: '/doctor/claim', icon: '✓', label: 'Claim Profile', desc: 'Verify your physician identity', color: '#22d3ee' },
+    { href: '/rankings', icon: '', label: 'Rankings', desc: 'Browse top-rated physicians worldwide', color: '#fbbf24' },
+    { href: '/rare-diseases', icon: '', label: 'Rare Diseases', desc: 'Expert database for rare conditions', color: '#a78bfa' },
+    { href: '/hospitals', icon: '', label: 'Institutions', desc: 'Leading medical centers globally', color: '#38bdf8' },
+    { href: '/prizes', icon: '', label: 'Awards', desc: 'Nobel, Lasker & major honors', color: '#4ade80' },
+    { href: '/news', icon: '', label: 'Medical News', desc: 'Latest breakthroughs & research', color: '#f472b6' },
+    { href: '/doctor/claim', icon: '', label: 'Claim Profile', desc: 'Verify your physician identity', color: '#22d3ee' },
 ];
 
 const categories = [
-    { id: 'all', label: 'All', icon: '🔍' },
-    { id: 'titan', label: 'Titan', icon: '👑' },
-    { id: 'cardiology', label: 'Cardiology', icon: '❤️' },
-    { id: 'neurology', label: 'Neurology', icon: '🧠' },
-    { id: 'oncology', label: 'Oncology', icon: '🎗️' },
+    { id: 'all', label: 'All', icon: '' },
+    { id: 'titan', label: 'Titan', icon: '' },
+    { id: 'cardiology', label: 'Cardiology', icon: '' },
+    { id: 'neurology', label: 'Neurology', icon: '' },
+    { id: 'oncology', label: 'Oncology', icon: '' },
 ];
 
 export default function GlobalSearchModal() {

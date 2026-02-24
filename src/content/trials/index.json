@@ -4,31 +4,26 @@
     {
       "id": "vaccines",
       "name": "Vaccines & Immunization",
-      "icon": "💉",
       "description": "Next-generation vaccine platforms and novel immunization strategies"
     },
     {
       "id": "oncology",
       "name": "Oncology & Cancer Treatment",
-      "icon": "🎗️",
       "description": "Breakthrough cancer therapies including CAR-T, checkpoint inhibitors, and targeted treatments"
     },
     {
       "id": "neurology",
       "name": "Neurology & Brain Health",
-      "icon": "🧠",
       "description": "Treatments for Alzheimer's, Parkinson's, and other neurological conditions"
     },
     {
       "id": "rare-diseases",
       "name": "Rare & Orphan Diseases",
-      "icon": "🧬",
       "description": "Gene therapies and treatments for rare genetic conditions"
     },
     {
       "id": "infectious",
       "name": "Infectious Diseases",
-      "icon": "🦠",
       "description": "Antivirals, antibiotics, and treatments for emerging pathogens"
     }
   ],

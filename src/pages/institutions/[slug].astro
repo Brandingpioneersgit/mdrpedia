@@ -14,30 +14,38 @@ const { slug } = Astro.params;
 if (!slug) return Astro.redirect("/institutions");
 
 // Fetch institution with all related data
-const institution = await prisma.hospital.findUnique({
-    where: { slug },
-    include: {
-        geography: true,
-        affiliations: {
-            include: {
-                profile: {
-                    select: {
-                        id: true,
-                        slug: true,
-                        full_name: true,
-                        specialty: true,
-                        tier: true,
-                        h_index: true,
-                        portrait_url: true
+let institution = null;
+let dbError = false;
+
+try {
+    institution = await prisma.hospital.findUnique({
+        where: { slug },
+        include: {
+            geography: true,
+            affiliations: {
+                include: {
+                    profile: {
+                        select: {
+                            id: true,
+                            slug: true,
+                            full_name: true,
+                            specialty: true,
+                            tier: true,
+                            h_index: true,
+                            portrait_url: true
+                        }
                     }
+                },
+                orderBy: {
+                    profile: { h_index: 'desc' }
                 }
-            },
-            orderBy: {
-                profile: { h_index: 'desc' }
             }
         }
-    }
-});
+    });
+} catch (e) {
+    console.error('Institution page database error:', e);
+    dbError = true;
+}
 
 if (!institution) {
     return Astro.redirect("/institutions?error=not_found");
