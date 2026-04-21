@@ -8,7 +8,7 @@
 set -e
 
 REPO_URL="https://github.com/YOUR_USERNAME/mdrpedia.git"  # <-- Update this
-APP_DIR="/var/www/mdrpedia"
+APP_DIR="/home/mdrpedia.com/public_html"
 NODE_VERSION="20"
 
 echo "=========================================="
@@ -41,7 +41,7 @@ ufw status
 
 # --- 5. Clone Repository ---
 echo "[5/9] Cloning repository to $APP_DIR..."
-mkdir -p /var/www
+mkdir -p /home/mdrpedia.com
 if [ -d "$APP_DIR" ]; then
     echo "Directory exists, pulling latest..."
     cd "$APP_DIR" && git pull
