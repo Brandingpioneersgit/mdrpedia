@@ -63,6 +63,7 @@ jobs:
         env:
           # Provide dummy env vars for build (won't connect to real DB)
           DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
+          DIRECT_DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
           ADMIN_ACCESS_KEY: "ci-build-key"
           PUBLIC_SUPABASE_URL: "https://example.supabase.co"
           PUBLIC_SUPABASE_ANON_KEY: "dummy-key"
@@ -118,9 +119,15 @@ jobs:
 
       - name: Validate Prisma Schema
         run: npx prisma validate
+        env:
+          DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
+          DIRECT_DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
 
       - name: Check for Prisma format issues
         run: npx prisma format --check
+        env:
+          DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
+          DIRECT_DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
         continue-on-error: true
 
   # ─── Security Audit ─────────────────────────────────────────────────────────
